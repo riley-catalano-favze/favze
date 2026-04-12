@@ -4,7 +4,7 @@
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
 <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; script-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none';">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; script-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; frame-ancestors 'none';">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Why Choose Favze | Northern Indiana's Local Digital Marketing Agency | Zero Hidden Fees</title>
@@ -13,6 +13,8 @@
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name="author" content="Riley Catalano, Favze Digital Marketing">
 <link rel="canonical" href="https://favze.com/why-choose-us">
+<link rel="icon" type="image/svg+xml" href="https://favze.com/hubfs/favze-favicon.svg">
+<link rel="shortcut icon" href="https://favze.com/hubfs/favze-favicon.ico">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://favze.com/why-choose-us">
 <meta property="og:title" content="Why Choose Favze | Northern Indiana's Local Digital Marketing Agency">
@@ -24,7 +26,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
 {
@@ -139,9 +141,38 @@
         {"@type": "ListItem", "position": 1, "name": "Zero Hidden Fees", "description": "Every cost is explained clearly before you commit. No surprises. No fine print. What you see is what you pay."},
         {"@type": "ListItem", "position": 2, "name": "Local Expertise", "description": "Deep knowledge of Northern Indiana and Michiana customers, search behavior, and competitive landscape."},
         {"@type": "ListItem", "position": 3, "name": "Founder-Led Strategy", "description": "Direct access to Riley Catalano, a certified strategist with 100+ credentials and real-world manufacturing industry experience."},
-        {"@type": "ListItem", "position": 4, "name": "AI-Ready Marketing", "description": "Optimized for ChatGPT, Gemini, Perplexity, Copilot, Grok, Claude, and Google AI Overviews — not just Google Search."},
+        {"@type": "ListItem", "position": 4, "name": "AI-Ready Marketing", "description": "Optimized for ChatGPT, Gemini, Perplexity, Copilot, Grok, Claude, and Google AI Overviews, not just Google Search."},
         {"@type": "ListItem", "position": 5, "name": "Custom Strategies Only", "description": "No cookie-cutter packages. Every strategy is built around your goals, your audience, and your budget."},
-        {"@type": "ListItem", "position": 6, "name": "Transparent Reporting", "description": "Plain-language reports you can actually read, understand, and act on — not dashboards designed to confuse you."}
+        {"@type": "ListItem", "position": 6, "name": "Transparent Reporting", "description": "Plain-language reports you can actually read, understand, and act on, not dashboards designed to confuse you."}
+      ]
+    },
+    {
+      "@type": "Blog",
+      "@id": "https://favze.com/favze-insights#blog",
+      "name": "Favze Insights",
+      "description": "Expert digital marketing articles on SEO, AEO, GEO, local search, and AI optimization for Northern Indiana businesses.",
+      "blogPost": [
+        {
+          "@type": "BlogPosting",
+          "headline": "Blog and Article Hierarchy: Pillars, Clusters, and Internal Linking",
+          "url": "https://favze.com/favze-insights/blog-article-hierarchy",
+          "author": {"@id": "https://favze.com/#riley-catalano"},
+          "publisher": {"@id": "https://favze.com/#organization"}
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Local Service Ads: Fast Track To The Top Of Google",
+          "url": "https://favze.com/favze-insights/local-service-ads",
+          "author": {"@id": "https://favze.com/#riley-catalano"},
+          "publisher": {"@id": "https://favze.com/#organization"}
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "The New Rules Of Online Visibility: For SEO, AEO, and GEO Mastery",
+          "url": "https://favze.com/favze-insights/new-rules-online-visibility",
+          "author": {"@id": "https://favze.com/#riley-catalano"},
+          "publisher": {"@id": "https://favze.com/#organization"}
+        }
       ]
     }
   ]
@@ -154,13 +185,20 @@
   --navy: #064187;
   --teal: #0A89A3;
   --dark: #0a0a0a;
+  --dark2: #111111;
   --white: #ffffff;
   --off-white: #f4f4f0;
   --mid-gray: #eee;
+  --border-dark: rgba(255,255,255,0.07);
+  --border-light: #e2e2e2;
   --text-muted: rgba(255,255,255,0.58);
   --text-dim: rgba(255,255,255,0.35);
   --font-display: 'Barlow Condensed', sans-serif;
   --font-body: 'DM Sans', sans-serif;
+  --radius-card: 20px;
+  --radius-sm: 10px;
+  --section-pad: 96px 5%;
+  --inner-max: 1160px;
 }
 html { scroll-behavior: smooth; }
 body {
@@ -169,329 +207,958 @@ body {
   color: var(--white);
   line-height: 1.6;
   overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 a { color: inherit; text-decoration: none; }
-img { max-width: 100%; height: auto; }
+img { max-width: 100%; height: auto; display: block; }
+button { font-family: var(--font-body); cursor: pointer; }
+.sec-inner, .hero-inner, .ft-inner, .cta-strip-inner, .fq { width: 100%; }
 
-/* ---- NAV ---- */
+/* ===================== NAV ===================== */
 nav {
   position: sticky; top: 0; z-index: 100;
-  background: #fff; border-bottom: 1.5px solid #eee;
-  padding: 0 5%; display: flex; align-items: center;
-  justify-content: space-between; height: 68px;
+  background: #fff;
+  border-bottom: 1.5px solid #e8e8e8;
+  padding: 0 5%;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 68px;
+  min-width: 0;
 }
-.nl { display: flex; align-items: center; gap: 6px; list-style: none; }
-.nl a { font-family: var(--font-body); font-weight: 500; font-size: 0.88rem; padding: 6px 11px; border-radius: 8px; color: #0a0a0a; transition: background .2s; }
-.nl a:hover { background: #eee; }
-.nc { background: #064187!important; color: #fff!important; padding: 8px 16px!important; border-radius: 8px!important; font-weight: 700!important; transition: background .2s!important; }
-.nc:hover { background: #0A89A3!important; }
-.hb { display: none; flex-direction: column; gap: 5px; cursor: pointer; border: none; background: none; padding: 6px; }
-.hb span { display: block; width: 24px; height: 2px; background: #0a0a0a; border-radius: 2px; transition: .25s; }
+.nl { display: flex; align-items: center; gap: 4px; list-style: none; }
+.nl a {
+  font-family: var(--font-body); font-weight: 500; font-size: 0.875rem;
+  padding: 7px 12px; border-radius: 8px; color: #0a0a0a; transition: background .2s;
+}
+.nl a:hover { background: #f0f0f0; }
+.nl a.active { color: var(--navy); font-weight: 700; }
+.nc {
+  background: var(--navy) !important; color: #fff !important;
+  padding: 9px 18px !important; border-radius: 9px !important;
+  font-weight: 700 !important; transition: background .2s !important;
+}
+.nc:hover { background: var(--teal) !important; }
+.hb {
+  display: none; flex-direction: column; gap: 5px;
+  cursor: pointer; border: none; background: none; padding: 6px;
+}
+.hb span {
+  display: block; width: 24px; height: 2px;
+  background: #0a0a0a; border-radius: 2px; transition: .25s;
+}
 .hb.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .hb.open span:nth-child(2) { opacity: 0; }
 .hb.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-.mm { display: none; position: fixed; top: 68px; left: 0; right: 0; background: #fff; border-bottom: 1.5px solid #eee; padding: 20px 5%; z-index: 99; flex-direction: column; gap: 4px; box-shadow: 0 8px 32px rgba(10,61,163,.12); }
+.mm {
+  display: none; position: fixed; top: 68px; left: 0; right: 0;
+  background: #fff; border-bottom: 1.5px solid #e8e8e8;
+  padding: 18px 5% 22px; z-index: 99;
+  flex-direction: column; gap: 2px;
+  box-shadow: 0 16px 48px rgba(0,0,0,.12);
+}
 .mm.open { display: flex; }
-.mm a { font-weight: 500; font-size: 1rem; padding: 12px 14px; border-radius: 8px; display: block; color: #0a0a0a; transition: background .2s; }
-.mm a:hover { background: #eee; }
-.mc { background: #064187!important; color: #fff!important; text-align: center; margin-top: 8px; font-weight: 700!important; }
+.mm a {
+  font-weight: 500; font-size: 1rem; padding: 12px 14px;
+  border-radius: 8px; display: block; color: #0a0a0a; transition: background .2s;
+}
+.mm a:hover { background: #f0f0f0; }
+.mc { background: var(--navy) !important; color: #fff !important; text-align: center; margin-top: 8px; font-weight: 700 !important; }
 .nav-logo-img { height: 30px; width: auto; object-fit: contain; }
 
-/* ---- HERO ---- */
+/* ===================== HERO ===================== */
 .hero {
   position: relative; overflow: hidden;
   background: var(--dark);
-  padding: 100px 5% 90px;
-  min-height: 70vh; display: flex; align-items: center;
+  padding: 100px 5% 88px;
+  min-height: 76vh; display: flex; align-items: center;
 }
 .hero-grid {
   position: absolute; inset: 0;
-  background-image: linear-gradient(rgba(6,65,135,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(6,65,135,.07) 1px,transparent 1px);
-  background-size: 48px 48px;
+  background-image:
+    linear-gradient(rgba(6,65,135,.065) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6,65,135,.065) 1px, transparent 1px);
+  background-size: 52px 52px;
   pointer-events: none;
 }
 .hero-glow {
   position: absolute; inset: 0;
-  background: radial-gradient(ellipse 55% 60% at 70% 30%, rgba(10,137,163,.25) 0%, transparent 70%),
-              radial-gradient(ellipse 40% 40% at 20% 80%, rgba(6,65,135,.3) 0%, transparent 60%);
+  background:
+    radial-gradient(ellipse 60% 70% at 80% 20%, rgba(10,137,163,.2) 0%, transparent 65%),
+    radial-gradient(ellipse 40% 50% at 15% 85%, rgba(6,65,135,.28) 0%, transparent 60%);
   pointer-events: none;
 }
 .hero-inner {
-  position: relative; max-width: 1160px; margin: 0 auto; width: 100%;
+  position: relative; max-width: var(--inner-max); margin: 0 auto; width: 100%;
+  display: grid; grid-template-columns: 1fr 480px; gap: 56px; align-items: center;
 }
+.hero-left { min-width: 0; }
 .hero-badge {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: rgba(10,137,163,.15); border: 1px solid rgba(10,137,163,.4);
-  border-radius: 100px; padding: 6px 16px;
-  font-size: 0.73rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
-  color: var(--teal); margin-bottom: 22px;
+  display: inline-flex; align-items: center; gap: 9px;
+  background: rgba(10,137,163,.14); border: 1px solid rgba(10,137,163,.38);
+  border-radius: 100px; padding: 6px 18px;
+  font-size: 0.72rem; font-weight: 700; letter-spacing: .11em; text-transform: uppercase;
+  color: var(--teal); margin-bottom: 26px;
 }
-.hdot { width: 8px; height: 8px; background: var(--teal); border-radius: 50%; animation: pulse 2.2s ease-in-out infinite; }
+.hdot {
+  width: 8px; height: 8px; background: var(--teal);
+  border-radius: 50%; animation: pulse 2.2s ease-in-out infinite;
+}
 @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(.7)} }
+
 .hero h1 {
   font-family: var(--font-display);
-  font-size: clamp(3.2rem, 7vw, 6.5rem);
-  font-weight: 900; line-height: 0.95; letter-spacing: -0.02em;
-  text-transform: uppercase; margin-bottom: 28px;
+  font-weight: 900; text-transform: uppercase;
+  line-height: 1.0; letter-spacing: -0.01em;
+  margin-bottom: 28px;
 }
-.hero h1 em { color: var(--teal); font-style: normal; }
-.hero h1 span { color: var(--navy); background: var(--white); padding: 0 8px; }
+.hero-h1-line {
+  display: block;
+  font-size: clamp(3rem, 5.5vw, 6rem);
+}
+.hero-h1-line.teal { color: var(--teal); }
+.hero-h1-line.boxed {
+  display: inline-block;
+  color: var(--navy);
+  background: var(--white);
+  padding: 2px 14px 4px;
+  border-radius: 6px;
+  line-height: 1.05;
+  margin-top: 4px;
+}
 .hero-sub {
-  font-size: 1.15rem; color: rgba(255,255,255,.65); line-height: 1.7;
-  max-width: 580px; margin-bottom: 40px;
+  font-size: 1.08rem; color: rgba(255,255,255,.62);
+  line-height: 1.75; max-width: 540px; margin-bottom: 40px;
 }
 .hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; }
 .btn-primary {
   background: var(--navy); color: #fff; font-weight: 700;
-  padding: 14px 28px; border-radius: 10px;
-  display: inline-flex; align-items: center; gap: 8px;
-  font-size: 0.95rem; border: none; cursor: pointer; transition: background .2s;
-  font-family: var(--font-body);
+  padding: 14px 28px; border-radius: var(--radius-sm);
+  display: inline-flex; align-items: center; gap: 9px;
+  font-size: 0.95rem; border: none; cursor: pointer;
+  transition: background .2s; font-family: var(--font-body);
 }
 .btn-primary:hover { background: var(--teal); }
 .btn-ghost {
   background: transparent; color: #fff; font-weight: 700;
-  padding: 13px 26px; border-radius: 10px;
-  display: inline-flex; align-items: center; gap: 8px;
-  font-size: 0.95rem; border: 1.5px solid rgba(255,255,255,.28);
+  padding: 13px 26px; border-radius: var(--radius-sm);
+  display: inline-flex; align-items: center; gap: 9px;
+  font-size: 0.95rem; border: 1.5px solid rgba(255,255,255,.25);
   transition: .2s; font-family: var(--font-body);
 }
-.btn-ghost:hover { background: rgba(255,255,255,.08); }
+.btn-ghost:hover { background: rgba(255,255,255,.07); }
+
 .hero-stats {
-  display: flex; flex-wrap: wrap; gap: 32px; margin-top: 52px;
-  padding-top: 38px; border-top: 1px solid rgba(255,255,255,.1);
+  display: flex; flex-wrap: wrap; gap: 36px;
+  margin-top: 48px; padding-top: 36px;
+  border-top: 1px solid rgba(255,255,255,.09);
 }
 .hstat-num {
-  font-family: var(--font-display); font-size: 2.6rem; font-weight: 900;
-  color: var(--teal); line-height: 1;
+  font-family: var(--font-display); font-size: 2.6rem;
+  font-weight: 900; color: var(--teal); line-height: 1;
 }
-.hstat-label { font-size: 0.82rem; color: rgba(255,255,255,.5); margin-top: 3px; line-height: 1.4; }
+.hstat-label { font-size: 0.81rem; color: rgba(255,255,255,.48); margin-top: 4px; line-height: 1.45; }
 
-/* ---- MARQUEE ---- */
-.mq { background: #eee; overflow: hidden; border-bottom: 1.5px solid #d0d0d0; }
-.mt { display: flex; align-items: center; white-space: nowrap; animation: scroll 36s linear infinite; width: max-content; }
+/* ===================== HERO VISUAL WIDGET ===================== */
+.hero-visual {
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* Outer orbit ring */
+.hv-orbit-wrap {
+  position: relative;
+  width: 420px; height: 420px;
+  flex-shrink: 0;
+}
+
+/* Central brand bubble */
+.hv-center {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 110px; height: 110px;
+  background: linear-gradient(135deg, var(--navy), var(--teal));
+  border-radius: 28px;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 4px;
+  box-shadow: 0 0 0 12px rgba(10,137,163,.1), 0 0 40px rgba(10,137,163,.25);
+  z-index: 4;
+  animation: centerPulse 3s ease-in-out infinite;
+}
+@keyframes centerPulse {
+  0%,100% { box-shadow: 0 0 0 12px rgba(10,137,163,.1), 0 0 40px rgba(10,137,163,.25); }
+  50%      { box-shadow: 0 0 0 20px rgba(10,137,163,.06), 0 0 60px rgba(10,137,163,.35); }
+}
+.hv-center-label {
+  font-family: var(--font-display); font-weight: 900;
+  font-size: 1.1rem; color: #fff; letter-spacing: .08em; text-transform: uppercase;
+}
+.hv-center-sub {
+  font-size: 0.62rem; color: rgba(255,255,255,.65);
+  font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+}
+
+/* Orbit rings (decorative circles) */
+.hv-ring {
+  position: absolute; top: 50%; left: 50%;
+  border-radius: 50%; border: 1px dashed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.hv-ring-1 {
+  width: 200px; height: 200px;
+  border-color: rgba(6,65,135,.35);
+  animation: spinRing 18s linear infinite;
+}
+.hv-ring-2 {
+  width: 320px; height: 320px;
+  border-color: rgba(10,137,163,.22);
+  animation: spinRing 28s linear infinite reverse;
+}
+.hv-ring-3 {
+  width: 400px; height: 400px;
+  border-color: rgba(6,65,135,.12);
+  animation: spinRing 40s linear infinite;
+}
+@keyframes spinRing { from { transform: translate(-50%,-50%) rotate(0deg); } to { transform: translate(-50%,-50%) rotate(360deg); } }
+
+/* Platform nodes */
+.hv-node {
+  position: absolute;
+  width: 72px; height: 72px;
+  border-radius: 18px;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 3px;
+  font-size: 0.58rem; font-weight: 700; letter-spacing: .05em;
+  text-transform: uppercase; color: rgba(255,255,255,.8);
+  backdrop-filter: blur(8px);
+  transition: transform .3s, box-shadow .3s;
+  cursor: default; z-index: 3;
+}
+.hv-node:hover { transform: scale(1.12); }
+.hv-node svg { flex-shrink: 0; }
+
+/* Node positions — inner ring (r=100) */
+.hv-node-google  { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14);
+  top: calc(50% - 100px - 36px); left: calc(50% - 36px);
+  box-shadow: 0 4px 20px rgba(0,0,0,.3); }
+.hv-node-maps    { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14);
+  top: calc(50% - 36px); left: calc(50% + 100px - 36px);
+  box-shadow: 0 4px 20px rgba(0,0,0,.3); }
+
+/* Node positions — outer ring (r=160) */
+.hv-node-chatgpt { background: rgba(16,163,127,.12); border: 1px solid rgba(16,163,127,.3);
+  top: calc(50% - 160px - 36px); left: calc(50% - 36px);
+  box-shadow: 0 4px 20px rgba(16,163,127,.15); }
+.hv-node-gemini  { background: rgba(66,133,244,.12); border: 1px solid rgba(66,133,244,.3);
+  top: calc(50% + 60px); left: calc(50% + 130px - 36px);
+  box-shadow: 0 4px 20px rgba(66,133,244,.15); }
+.hv-node-perp    { background: rgba(162,89,255,.12); border: 1px solid rgba(162,89,255,.28);
+  top: calc(50% + 60px); left: calc(50% - 130px - 36px);
+  box-shadow: 0 4px 20px rgba(162,89,255,.15); }
+.hv-node-bing    { background: rgba(0,153,255,.1); border: 1px solid rgba(0,153,255,.25);
+  top: calc(50% - 36px); left: calc(50% - 160px - 36px);
+  box-shadow: 0 4px 20px rgba(0,153,255,.12); }
+
+/* Connector lines from center to nodes */
+.hv-lines {
+  position: absolute; inset: 0;
+  pointer-events: none; z-index: 1;
+}
+
+/* Status bar at bottom of widget */
+.hv-status {
+  position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+  background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.1);
+  border-radius: 100px; padding: 7px 18px;
+  display: flex; align-items: center; gap: 8px;
+  white-space: nowrap; font-size: 0.72rem; font-weight: 700;
+  color: rgba(255,255,255,.7); letter-spacing: .06em; text-transform: uppercase;
+}
+.hv-status-dot {
+  width: 7px; height: 7px; border-radius: 50%; background: #22c55e;
+  animation: pulse 1.8s ease-in-out infinite; flex-shrink: 0;
+}
+
+/* Animated signal lines */
+.hv-signal {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 2px; height: 2px;
+  border-radius: 50%;
+  background: var(--teal);
+  transform: translate(-50%, -50%);
+  pointer-events: none; z-index: 2;
+}
+/* Individual signals animate along each axis */
+.hv-sig-1 { animation: sigUp 2.4s ease-in-out infinite; }
+.hv-sig-2 { animation: sigRight 2.4s ease-in-out infinite 0.4s; }
+.hv-sig-3 { animation: sigUpRight 2.6s ease-in-out infinite 0.8s; }
+.hv-sig-4 { animation: sigUpLeft 2.8s ease-in-out infinite 1.2s; }
+.hv-sig-5 { animation: sigLeft 2.4s ease-in-out infinite 1.6s; }
+.hv-sig-6 { animation: sigDownRight 2.6s ease-in-out infinite 2s; }
+
+@keyframes sigUp        { 0%,100%{opacity:0;transform:translate(-50%,-50%)} 20%{opacity:1} 80%{opacity:0;transform:translate(-50%, calc(-50% - 100px))} }
+@keyframes sigRight     { 0%,100%{opacity:0;transform:translate(-50%,-50%)} 20%{opacity:1} 80%{opacity:0;transform:translate(calc(-50% + 100px), -50%)} }
+@keyframes sigUpRight   { 0%,100%{opacity:0;transform:translate(-50%,-50%)} 20%{opacity:1} 80%{opacity:0;transform:translate(calc(-50% + 130px), calc(-50% - 160px))} }
+@keyframes sigUpLeft    { 0%,100%{opacity:0;transform:translate(-50%,-50%)} 20%{opacity:1} 80%{opacity:0;transform:translate(calc(-50% - 130px), calc(-50% - 160px))} }
+@keyframes sigLeft      { 0%,100%{opacity:0;transform:translate(-50%,-50%)} 20%{opacity:1} 80%{opacity:0;transform:translate(calc(-50% - 160px), -50%)} }
+@keyframes sigDownRight { 0%,100%{opacity:0;transform:translate(-50%,-50%)} 20%{opacity:1} 80%{opacity:0;transform:translate(calc(-50% + 130px), calc(-50% + 96px))} }
+
+/* ===================== MARQUEE ===================== */
+.mq { background: #ebebeb; overflow: hidden; border-bottom: 1.5px solid #d4d4d4; }
+.mt { display: flex; align-items: center; white-space: nowrap; animation: scroll 38s linear infinite; width: max-content; }
 .mt:hover { animation-play-state: paused; }
 @keyframes scroll { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
-.mp { display: inline-flex; align-items: center; gap: 9px; padding: 13px 24px; font-size: 0.84rem; font-weight: 700; white-space: nowrap; border-right: 1.5px solid #d0d0d0; color: #0a0a0a; }
-.mp .dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
-.c-b .dot { background: #064187; } .c-t .dot { background: #0A89A3; }
-
-/* ---- SECTIONS ---- */
-.sec { padding: 90px 5%; }
-.sec-inner { max-width: 1160px; margin: 0 auto; }
-.lbl { font-size: 0.72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--teal); margin-bottom: 10px; display: block; }
-.lbl-dark { color: var(--navy); }
-.ttl { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 900; line-height: 1.05; text-transform: uppercase; }
-.ttl-dark { color: var(--dark); }
-.sub { font-size: 1rem; color: rgba(255,255,255,.6); line-height: 1.75; max-width: 600px; }
-.sub-dark { color: #555; }
-
-/* ---- WHY GRID ---- */
-.why-section { background: var(--dark); }
-.why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 60px; border: 2px solid rgba(255,255,255,.06); border-radius: 24px; overflow: hidden; }
-.why-card {
-  background: rgba(255,255,255,.03); padding: 38px 32px;
-  border-right: 2px solid rgba(255,255,255,.06);
-  border-bottom: 2px solid rgba(255,255,255,.06);
-  transition: background .25s;
-  position: relative; overflow: hidden;
+.mp {
+  display: inline-flex; align-items: center; gap: 9px;
+  padding: 13px 26px; font-size: 0.83rem; font-weight: 700;
+  white-space: nowrap; border-right: 1.5px solid #d4d4d4; color: #0a0a0a;
 }
-.why-card:hover { background: rgba(255,255,255,.06); }
+.mp .dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+.c-b .dot { background: var(--navy); }
+.c-t .dot { background: var(--teal); }
+
+/* ===================== SHARED SECTION STYLES ===================== */
+.sec { padding: var(--section-pad); }
+.sec-inner { max-width: var(--inner-max); margin: 0 auto; }
+.lbl {
+  font-size: 0.71rem; font-weight: 700; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--teal); margin-bottom: 10px; display: block;
+}
+.lbl-dark { color: var(--navy); }
+.ttl {
+  font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.1rem);
+  font-weight: 900; line-height: 1.05; text-transform: uppercase;
+}
+.ttl-dark { color: var(--dark); }
+.sub { font-size: 0.98rem; color: rgba(255,255,255,.58); line-height: 1.78; max-width: 600px; }
+.sub-dark { color: #5a5a5a; }
+
+/* ===================== WHY GRID ===================== */
+.why-section { background: var(--dark2); }
+.why-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 1.5px; margin-top: 56px;
+  background: rgba(255,255,255,.065);
+  border-radius: var(--radius-card); overflow: hidden;
+  border: 1.5px solid rgba(255,255,255,.065);
+}
+.why-card {
+  background: var(--dark2); padding: 38px 32px;
+  transition: background .25s; position: relative; overflow: hidden;
+}
+.why-card:hover { background: #161616; }
 .why-card::before {
-  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
   background: linear-gradient(90deg, var(--navy), var(--teal));
   transform: scaleX(0); transform-origin: left; transition: transform .35s;
 }
 .why-card:hover::before { transform: scaleX(1); }
-.why-icon { width: 52px; height: 52px; border-radius: 12px; background: rgba(6,65,135,.25); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
-.why-card h3 { font-family: var(--font-display); font-size: 1.35rem; font-weight: 900; text-transform: uppercase; color: #fff; margin-bottom: 10px; letter-spacing: .02em; }
-.why-card p { font-size: 0.88rem; color: rgba(255,255,255,.55); line-height: 1.7; }
-.why-card .why-tag { display: inline-block; margin-top: 14px; background: rgba(10,137,163,.15); border: 1px solid rgba(10,137,163,.3); border-radius: 100px; padding: 3px 12px; font-size: 0.72rem; font-weight: 700; color: var(--teal); letter-spacing: .06em; text-transform: uppercase; }
+.why-icon {
+  width: 52px; height: 52px; border-radius: 13px;
+  background: rgba(6,65,135,.22); display: flex;
+  align-items: center; justify-content: center; margin-bottom: 20px;
+}
+.why-icon.teal-bg { background: rgba(10,137,163,.18); }
+.why-card h3 {
+  font-family: var(--font-display); font-size: 1.32rem; font-weight: 900;
+  text-transform: uppercase; color: #fff; margin-bottom: 10px; letter-spacing: .025em;
+}
+.why-card p { font-size: 0.875rem; color: rgba(255,255,255,.52); line-height: 1.72; }
+.why-tag {
+  display: inline-block; margin-top: 16px;
+  background: rgba(10,137,163,.14); border: 1px solid rgba(10,137,163,.28);
+  border-radius: 100px; padding: 3px 13px; font-size: 0.71rem;
+  font-weight: 700; color: var(--teal); letter-spacing: .06em; text-transform: uppercase;
+}
 
-/* ---- PAIN POINTS ---- */
-.pain-section { background: #f4f4f0; }
-.pain-header { margin-bottom: 56px; }
-.pain-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+/* ===================== PAIN POINTS ===================== */
+.pain-section { background: var(--off-white); }
+.pain-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 52px; }
 .pain-card {
-  background: #fff; border-radius: 18px; padding: 32px 28px;
-  border: 1.5px solid transparent; transition: border-color .25s, transform .25s, box-shadow .25s;
-  display: grid; grid-template-columns: 52px 1fr; gap: 20px; align-items: start;
+  background: #fff; border-radius: 18px; padding: 0;
+  border: 1.5px solid transparent;
+  transition: border-color .25s, transform .25s, box-shadow .25s;
+  overflow: hidden;
 }
-.pain-card:hover { border-color: var(--navy); transform: translateY(-3px); box-shadow: 0 12px 40px rgba(6,65,135,.1); }
-.pain-num {
-  font-family: var(--font-display); font-size: 2.2rem; font-weight: 900;
-  color: rgba(6,65,135,.15); line-height: 1;
+.pain-card:hover {
+  border-color: var(--navy);
+  transform: translateY(-3px);
+  box-shadow: 0 14px 44px rgba(6,65,135,.11);
 }
-.pain-card h3 { font-family: var(--font-display); font-size: 1.15rem; font-weight: 900; color: #0a0a0a; text-transform: uppercase; margin-bottom: 6px; letter-spacing: .03em; }
-.pain-problem { font-size: 0.84rem; color: #888; line-height: 1.65; font-style: italic; margin-bottom: 10px; padding-left: 12px; border-left: 2px solid #eee; }
-.pain-solution { font-size: 0.84rem; color: #0a0a0a; line-height: 1.65; }
+/* Numbered header bar */
+.pain-header-bar {
+  display: flex; align-items: center; gap: 14px;
+  padding: 20px 24px 18px;
+  border-bottom: 1.5px solid #f0f0f0;
+}
+.pain-num-badge {
+  width: 38px; height: 38px; flex-shrink: 0;
+  border-radius: 10px;
+  background: var(--navy);
+  color: #fff;
+  font-family: var(--font-display); font-size: 1rem; font-weight: 900;
+  display: flex; align-items: center; justify-content: center;
+  letter-spacing: .02em;
+}
+.pain-card h3 {
+  font-family: var(--font-display); font-size: 1.12rem; font-weight: 900;
+  color: #0a0a0a; text-transform: uppercase; letter-spacing: .03em;
+  line-height: 1.15;
+}
+.pain-body { padding: 18px 24px 22px; }
+/* Problem pill */
+.pain-problem-row {
+  display: flex; align-items: flex-start; gap: 10px; margin-bottom: 16px;
+}
+.pain-icon-wrap {
+  width: 32px; height: 32px; flex-shrink: 0;
+  border-radius: 8px; background: #fff3e8; border: 1.5px solid #ffd9b8;
+  display: flex; align-items: center; justify-content: center; margin-top: 1px;
+}
+.pain-problem {
+  font-size: 0.875rem; color: #b85e00; line-height: 1.62;
+  font-style: italic; flex: 1;
+}
+/* Solution */
+.pain-solution-row {
+  display: flex; align-items: flex-start; gap: 10px; margin-bottom: 16px;
+}
+.pain-check-wrap {
+  width: 32px; height: 32px; flex-shrink: 0;
+  border-radius: 8px; background: #e8f5ee; border: 1.5px solid #b3d9c4;
+  display: flex; align-items: center; justify-content: center; margin-top: 1px;
+}
+.pain-solution { font-size: 0.875rem; color: #333; line-height: 1.68; flex: 1; }
 .pain-fix {
-  display: inline-flex; align-items: center; gap: 6px; margin-top: 12px;
+  display: inline-flex; align-items: center; gap: 6px;
   background: var(--navy); color: #fff; border-radius: 100px;
-  padding: 4px 14px; font-size: 0.72rem; font-weight: 700; letter-spacing: .06em;
-  text-transform: uppercase;
+  padding: 6px 16px; font-size: 0.72rem; font-weight: 700;
+  letter-spacing: .06em; text-transform: uppercase;
+  transition: background .2s;
+}
+.pain-fix:hover { background: var(--teal); }
+
+/* ===================== COMPARISON ===================== */
+.cmp-section { background: var(--dark); }
+.cmp-wrap {
+  overflow-x: auto; border-radius: var(--radius-card);
+  border: 1.5px solid rgba(255,255,255,.09); margin-top: 48px;
+}
+table { width: 100%; border-collapse: collapse; min-width: 580px; }
+.th-cat {
+  width: 25%; background: rgba(255,255,255,.035); color: rgba(255,255,255,.45);
+  font-weight: 700; font-size: 0.8rem; padding: 18px 20px; text-align: left;
+  font-family: var(--font-body); text-transform: uppercase; letter-spacing: .09em;
+}
+.th-fv {
+  width: 45%; background: linear-gradient(135deg, var(--navy), var(--teal));
+  color: #fff; padding: 18px 20px; text-align: left;
+}
+.th-fn {
+  display: block; font-family: var(--font-display); font-weight: 900;
+  font-size: 1.1rem; text-transform: uppercase; letter-spacing: .05em;
+}
+.th-ft {
+  display: inline-block; margin-top: 5px;
+  background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.3);
+  border-radius: 100px; padding: 2px 12px; font-size: 0.68rem; font-weight: 700; letter-spacing: .05em;
+}
+.th-bg {
+  width: 30%; background: rgba(255,255,255,.025); color: rgba(255,255,255,.38);
+  font-weight: 700; font-size: 0.8rem; padding: 18px 20px; text-align: left;
+  font-family: var(--font-body); text-transform: uppercase; letter-spacing: .09em;
+}
+tbody tr { border-bottom: 1px solid rgba(255,255,255,.055); }
+tbody tr:last-child { border-bottom: none; }
+.td-cat {
+  padding: 16px 20px; font-weight: 700; font-size: 0.8rem;
+  color: rgba(255,255,255,.45); vertical-align: top;
+  background: rgba(255,255,255,.018);
+  border-right: 1px solid rgba(255,255,255,.065);
+  text-transform: uppercase; letter-spacing: .05em; font-family: var(--font-body);
+}
+.td-fv {
+  padding: 16px 20px; font-size: 0.86rem; color: rgba(255,255,255,.84);
+  vertical-align: top; line-height: 1.62; background: rgba(6,65,135,.045); font-weight: 500;
+}
+.td-bg {
+  padding: 16px 20px; font-size: 0.86rem; color: rgba(255,255,255,.35);
+  vertical-align: top; line-height: 1.62;
+}
+.chk {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 20px; height: 20px; background: var(--navy); color: #fff;
+  border-radius: 50%; font-size: 0.65rem; font-weight: 900;
+  margin-right: 8px; flex-shrink: 0; vertical-align: middle;
+}
+.chk-t { background: var(--teal); }
+.ex {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 20px; height: 20px; background: rgba(255,255,255,.1);
+  color: rgba(255,255,255,.3); border-radius: 50%; font-size: 0.65rem;
+  font-weight: 900; margin-right: 8px; flex-shrink: 0; vertical-align: middle;
 }
 
-/* ---- COMPARISON ---- */
-.cmp-section { background: var(--dark); }
-.cmp-wrap { overflow-x: auto; border-radius: 20px; border: 1.5px solid rgba(255,255,255,.1); margin-top: 48px; }
-table { width: 100%; border-collapse: collapse; min-width: 580px; }
-.th-cat { width: 25%; background: rgba(255,255,255,.04); color: rgba(255,255,255,.5); font-weight: 700; font-size: 0.82rem; padding: 18px; text-align: left; font-family: var(--font-body); text-transform: uppercase; letter-spacing: .08em; }
-.th-fv { width: 45%; background: linear-gradient(135deg, var(--navy), var(--teal)); color: #fff; padding: 18px; text-align: left; }
-.th-fn { display: block; font-family: var(--font-display); font-weight: 900; font-size: 1.1rem; text-transform: uppercase; letter-spacing: .05em; }
-.th-ft { display: inline-block; margin-top: 4px; background: rgba(255,255,255,.18); border: 1px solid rgba(255,255,255,.3); border-radius: 100px; padding: 2px 11px; font-size: 0.68rem; font-weight: 700; letter-spacing: .05em; }
-.th-bg { width: 30%; background: rgba(255,255,255,.03); color: rgba(255,255,255,.4); font-weight: 700; font-size: 0.82rem; padding: 18px; text-align: left; font-family: var(--font-body); text-transform: uppercase; letter-spacing: .08em; }
-tbody tr { border-bottom: 1px solid rgba(255,255,255,.06); }
-tbody tr:last-child { border-bottom: none; }
-.td-cat { padding: 16px 18px; font-weight: 700; font-size: 0.82rem; color: rgba(255,255,255,.5); vertical-align: top; background: rgba(255,255,255,.02); border-right: 1px solid rgba(255,255,255,.07); text-transform: uppercase; letter-spacing: .05em; font-family: var(--font-body); }
-.td-fv { padding: 16px 18px; font-size: 0.85rem; color: rgba(255,255,255,.85); vertical-align: top; line-height: 1.6; background: rgba(6,65,135,.05); font-weight: 500; }
-.td-bg { padding: 16px 18px; font-size: 0.85rem; color: rgba(255,255,255,.38); vertical-align: top; line-height: 1.6; }
-.chk { display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: var(--navy); color: #fff; border-radius: 50%; font-size: 0.68rem; font-weight: 900; margin-right: 7px; flex-shrink: 0; vertical-align: middle; }
-.chk-t { background: var(--teal); }
-.ex { display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; background: rgba(255,255,255,.12); color: rgba(255,255,255,.35); border-radius: 50%; font-size: 0.68rem; font-weight: 900; margin-right: 7px; flex-shrink: 0; vertical-align: middle; }
-
-/* ---- FOUNDER ---- */
-.founder-section { background: rgba(255,255,255,.025); border-top: 1px solid rgba(255,255,255,.08); border-bottom: 1px solid rgba(255,255,255,.08); }
-.founder-inner { display: grid; grid-template-columns: 320px 1fr; gap: 72px; align-items: center; max-width: 1160px; margin: 0 auto; }
+/* ===================== FOUNDER ===================== */
+.founder-section {
+  background: rgba(255,255,255,.022);
+  border-top: 1px solid var(--border-dark);
+  border-bottom: 1px solid var(--border-dark);
+  padding: var(--section-pad);
+}
+.founder-inner {
+  display: grid; grid-template-columns: 320px 1fr;
+  gap: 72px; align-items: center;
+  max-width: var(--inner-max); margin: 0 auto;
+}
 .founder-img-wrap { position: relative; }
 .founder-img-frame {
   background: linear-gradient(135deg, var(--navy), var(--teal));
-  border-radius: 20px; padding: 4px;
+  border-radius: 22px; padding: 4px;
 }
 .founder-img-inner {
-  border-radius: 17px; overflow: hidden; background: var(--dark);
+  border-radius: 19px; overflow: hidden; background: var(--dark);
 }
-.founder-img-inner img { width: 100%; display: block; object-fit: cover; object-position: center top; max-height: 380px; }
+.founder-img-inner img {
+  width: 100%; display: block;
+  object-fit: cover; object-position: center top; max-height: 380px;
+}
 .founder-badge-float {
   position: absolute; bottom: -16px; left: 50%; transform: translateX(-50%);
-  background: var(--dark); border: 1.5px solid rgba(10,137,163,.4);
+  background: var(--dark); border: 1.5px solid rgba(10,137,163,.38);
   border-radius: 100px; padding: 8px 20px;
-  display: flex; align-items: center; gap: 8px; white-space: nowrap;
-  font-size: 0.75rem; font-weight: 700; color: var(--teal);
+  display: flex; align-items: center; gap: 9px; white-space: nowrap;
+  font-size: 0.74rem; font-weight: 700; color: var(--teal);
 }
-.founder-content h2 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.4rem); font-weight: 900; text-transform: uppercase; line-height: 1.0; margin-bottom: 20px; }
+.founder-content h2 {
+  font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.3rem);
+  font-weight: 900; text-transform: uppercase; line-height: 1.02; margin-bottom: 20px;
+}
 .founder-content h2 em { color: var(--teal); font-style: normal; }
-.founder-content p { font-size: 0.97rem; color: rgba(255,255,255,.62); line-height: 1.8; margin-bottom: 14px; }
+.founder-content p {
+  font-size: 0.96rem; color: rgba(255,255,255,.6);
+  line-height: 1.8; margin-bottom: 14px;
+}
 .certs { display: flex; flex-wrap: wrap; gap: 7px; margin: 22px 0 28px; }
-.cert { background: rgba(6,65,135,.25); border: 1px solid rgba(6,65,135,.45); border-radius: 6px; padding: 4px 12px; font-size: 0.74rem; font-weight: 700; color: var(--teal); }
-.founder-contact { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin-bottom: 26px; }
-.founder-contact a { color: rgba(255,255,255,.5); font-size: 0.85rem; transition: color .2s; display: flex; align-items: center; gap: 6px; }
+.cert {
+  background: rgba(6,65,135,.22); border: 1px solid rgba(6,65,135,.42);
+  border-radius: 7px; padding: 4px 13px; font-size: 0.73rem; font-weight: 700; color: var(--teal);
+}
+.founder-contact {
+  display: flex; flex-wrap: wrap; gap: 16px;
+  align-items: center; margin-bottom: 26px;
+}
+.founder-contact a {
+  color: rgba(255,255,255,.48); font-size: 0.85rem;
+  transition: color .2s; display: flex; align-items: center; gap: 6px;
+}
 .founder-contact a:hover { color: #fff; }
 .founder-btns { display: flex; flex-wrap: wrap; gap: 12px; }
-.btn-teal { background: var(--teal); color: #fff; font-weight: 700; padding: 13px 24px; border-radius: 10px; display: inline-flex; align-items: center; gap: 8px; font-size: 0.9rem; font-family: var(--font-body); transition: background .2s; }
+.btn-teal {
+  background: var(--teal); color: #fff; font-weight: 700;
+  padding: 13px 24px; border-radius: var(--radius-sm);
+  display: inline-flex; align-items: center; gap: 9px;
+  font-size: 0.9rem; font-family: var(--font-body); transition: background .2s;
+}
 .btn-teal:hover { background: #0878910; }
-.btn-outline { background: transparent; color: rgba(255,255,255,.7); font-weight: 700; padding: 12px 22px; border-radius: 10px; display: inline-flex; align-items: center; gap: 8px; font-size: 0.9rem; border: 1.5px solid rgba(255,255,255,.2); font-family: var(--font-body); transition: .2s; }
-.btn-outline:hover { border-color: rgba(255,255,255,.5); color: #fff; }
+.btn-outline {
+  background: transparent; color: rgba(255,255,255,.68); font-weight: 700;
+  padding: 12px 22px; border-radius: var(--radius-sm);
+  display: inline-flex; align-items: center; gap: 9px;
+  font-size: 0.9rem; border: 1.5px solid rgba(255,255,255,.2);
+  font-family: var(--font-body); transition: .2s;
+}
+.btn-outline:hover { border-color: rgba(255,255,255,.48); color: #fff; }
 
-/* ---- PROCESS ---- */
+/* ===================== PROCESS ===================== */
 .process-section { background: var(--dark); }
-.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative; margin-top: 56px; }
-.steps::before { content: ''; position: absolute; top: 40px; left: calc(12.5% + 26px); right: calc(12.5% + 26px); height: 2px; background: linear-gradient(90deg, var(--navy), var(--teal), var(--navy)); z-index: 0; }
+.steps {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 0; position: relative; margin-top: 56px;
+}
+.steps::before {
+  content: ''; position: absolute;
+  top: 27px; left: calc(12.5% + 28px); right: calc(12.5% + 28px);
+  height: 2px;
+  background: linear-gradient(90deg, var(--navy), var(--teal), var(--navy));
+  z-index: 0;
+}
 .step { text-align: center; padding: 0 20px; position: relative; z-index: 1; }
 .step-num {
   width: 56px; height: 56px; border-radius: 50%;
   background: var(--navy); color: #fff;
   font-family: var(--font-display); font-weight: 900; font-size: 1.25rem;
   display: flex; align-items: center; justify-content: center;
-  margin: 0 auto 20px;
+  margin: 0 auto 22px;
   box-shadow: 0 0 0 6px var(--dark), 0 0 0 8px var(--navy);
   position: relative; z-index: 2;
 }
-.step:nth-child(even) .step-num { background: var(--teal); box-shadow: 0 0 0 6px var(--dark), 0 0 0 8px var(--teal); }
-.step h3 { font-family: var(--font-display); font-size: 1rem; font-weight: 900; text-transform: uppercase; color: #fff; margin-bottom: 8px; letter-spacing: .04em; }
-.step p { font-size: 0.82rem; color: rgba(255,255,255,.5); line-height: 1.6; }
+.step:nth-child(even) .step-num {
+  background: var(--teal);
+  box-shadow: 0 0 0 6px var(--dark), 0 0 0 8px var(--teal);
+}
+.step h3 {
+  font-family: var(--font-display); font-size: 1.02rem; font-weight: 900;
+  text-transform: uppercase; color: #fff; margin-bottom: 9px; letter-spacing: .04em;
+}
+.step p { font-size: 0.82rem; color: rgba(255,255,255,.48); line-height: 1.62; }
 
-/* ---- CTA STRIP ---- */
+/* ===================== BLOG ===================== */
+.blog-section { background: var(--off-white); }
+.blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 52px; }
+.blog-card {
+  background: #fff; border-radius: 18px; overflow: hidden;
+  border: 1.5px solid transparent;
+  transition: border-color .25s, transform .25s, box-shadow .25s;
+  display: flex; flex-direction: column;
+}
+.blog-card:hover {
+  border-color: var(--navy);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(6,65,135,.11);
+}
+.blog-cat-bar {
+  padding: 18px 22px 14px;
+  border-bottom: 1.5px solid #f0f0f0;
+  display: flex; align-items: center; gap: 9px;
+}
+.blog-cat-badge {
+  font-size: 0.69rem; font-weight: 700; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--navy);
+  background: rgba(6,65,135,.08); border: 1px solid rgba(6,65,135,.18);
+  border-radius: 100px; padding: 3px 12px;
+}
+.blog-read-time { font-size: 0.75rem; color: #999; font-weight: 500; }
+.blog-body { padding: 18px 22px 22px; flex: 1; display: flex; flex-direction: column; }
+.blog-card h3 {
+  font-family: var(--font-display); font-size: 1.2rem; font-weight: 900;
+  color: #0a0a0a; text-transform: uppercase; letter-spacing: .025em;
+  line-height: 1.2; margin-bottom: 12px;
+}
+.blog-card p { font-size: 0.855rem; color: #666; line-height: 1.7; flex: 1; }
+.blog-cta {
+  display: inline-flex; align-items: center; gap: 6px;
+  margin-top: 18px; color: var(--navy); font-size: 0.82rem;
+  font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
+  transition: color .2s;
+}
+.blog-cta:hover { color: var(--teal); }
+.blog-footer-link {
+  text-align: center; margin-top: 40px;
+}
+
+/* ===================== CTA STRIP ===================== */
 .cta-strip {
-  background: linear-gradient(135deg, var(--navy) 0%, var(--teal) 60%, var(--navy) 100%);
-  padding: 80px 5%; text-align: center; position: relative; overflow: hidden;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--teal) 62%, var(--navy) 100%);
+  padding: 84px 5%; text-align: center; position: relative; overflow: hidden;
 }
 .cta-strip::before {
   content: ''; position: absolute; inset: 0;
-  background-image: linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);
-  background-size: 40px 40px;
+  background-image:
+    linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+  background-size: 42px 42px;
 }
 .cta-strip-inner { position: relative; max-width: 720px; margin: 0 auto; }
-.cta-strip h2 { font-family: var(--font-display); font-size: clamp(2.2rem, 5vw, 4rem); font-weight: 900; color: #fff; text-transform: uppercase; line-height: 1.0; margin-bottom: 16px; letter-spacing: .02em; }
-.cta-strip p { color: rgba(255,255,255,.75); font-size: 1rem; margin-bottom: 34px; line-height: 1.65; }
+.cta-strip h2 {
+  font-family: var(--font-display); font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-weight: 900; color: #fff; text-transform: uppercase;
+  line-height: 1.02; margin-bottom: 16px; letter-spacing: .02em;
+}
+.cta-strip p { color: rgba(255,255,255,.74); font-size: 1rem; margin-bottom: 34px; line-height: 1.68; }
 .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-.btn-white { background: #fff; color: var(--navy); font-weight: 700; padding: 14px 28px; border-radius: 10px; display: inline-flex; align-items: center; gap: 8px; font-size: 0.95rem; font-family: var(--font-body); transition: .2s; }
+.btn-white {
+  background: #fff; color: var(--navy); font-weight: 700;
+  padding: 14px 28px; border-radius: var(--radius-sm);
+  display: inline-flex; align-items: center; gap: 9px;
+  font-size: 0.95rem; font-family: var(--font-body); transition: .2s;
+}
 .btn-white:hover { background: #eee; }
-.btn-ghost-white { background: rgba(255,255,255,.12); color: #fff; font-weight: 700; padding: 13px 26px; border-radius: 10px; display: inline-flex; align-items: center; gap: 8px; font-size: 0.95rem; border: 1.5px solid rgba(255,255,255,.3); font-family: var(--font-body); transition: .2s; }
+.btn-ghost-white {
+  background: rgba(255,255,255,.12); color: #fff; font-weight: 700;
+  padding: 13px 26px; border-radius: var(--radius-sm);
+  display: inline-flex; align-items: center; gap: 9px;
+  font-size: 0.95rem; border: 1.5px solid rgba(255,255,255,.28);
+  font-family: var(--font-body); transition: .2s;
+}
 .btn-ghost-white:hover { background: rgba(255,255,255,.22); }
 
-/* ---- FAQ ---- */
-.faq-section { background: #f4f4f0; }
+/* ===================== FAQ ===================== */
+.faq-section { background: var(--off-white); }
 .fq { max-width: 800px; margin: 0 auto; }
-.fq-int { text-align: center; margin-bottom: 50px; }
+.fq-int { text-align: center; margin-bottom: 48px; }
 .fqi { border-bottom: 1.5px solid #ddd; }
 .fqi:first-child { border-top: 1.5px solid #ddd; }
-.fqb { width: 100%; background: none; border: none; text-align: left; padding: 20px 0; font-weight: 700; font-size: 0.97rem; color: #0a0a0a; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 14px; font-family: var(--font-body); transition: color .2s; }
+.fqb {
+  width: 100%; background: none; border: none; text-align: left;
+  padding: 20px 0; font-weight: 700; font-size: 0.97rem; color: #0a0a0a;
+  cursor: pointer; display: flex; align-items: center;
+  justify-content: space-between; gap: 14px; font-family: var(--font-body); transition: color .2s;
+}
 .fqb:hover { color: var(--navy); }
-.fqi-ic { flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%; background: #e0e0e0; display: flex; align-items: center; justify-content: center; transition: background .2s, transform .2s; }
+.fqi-ic {
+  flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%;
+  background: #e2e2e2; display: flex; align-items: center; justify-content: center;
+  transition: background .2s, transform .2s;
+}
 .fqi.open .fqi-ic { background: var(--navy); transform: rotate(45deg); }
-.fqa { display: none; padding: 0 0 20px; font-size: 0.93rem; color: #666; line-height: 1.75; }
-.fqi.open .fqa { display: block; }
+.fqa { padding: 0 0 20px; font-size: 0.93rem; color: #666; line-height: 1.78; }
 .fq-ft { text-align: center; margin-top: 48px; }
 .fq-ft p { color: #777; margin-bottom: 18px; }
 .fq-bts { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-.btn-dark { background: var(--navy); color: #fff; font-weight: 700; padding: 13px 26px; border-radius: 10px; display: inline-flex; align-items: center; gap: 8px; font-size: 0.9rem; font-family: var(--font-body); transition: .2s; }
+.btn-dark {
+  background: var(--navy); color: #fff; font-weight: 700;
+  padding: 13px 26px; border-radius: var(--radius-sm);
+  display: inline-flex; align-items: center; gap: 9px;
+  font-size: 0.9rem; font-family: var(--font-body); transition: .2s;
+}
 .btn-dark:hover { background: var(--teal); }
-.btn-outline-dark { background: transparent; color: var(--navy); font-weight: 700; padding: 12px 24px; border-radius: 10px; display: inline-flex; align-items: center; gap: 8px; font-size: 0.9rem; border: 2px solid var(--navy); font-family: var(--font-body); transition: .2s; }
+.btn-outline-dark {
+  background: transparent; color: var(--navy); font-weight: 700;
+  padding: 12px 24px; border-radius: var(--radius-sm);
+  display: inline-flex; align-items: center; gap: 9px;
+  font-size: 0.9rem; border: 2px solid var(--navy);
+  font-family: var(--font-body); transition: .2s;
+}
 .btn-outline-dark:hover { background: var(--navy); color: #fff; }
 
-/* ---- FOOTER ---- */
-footer { background: var(--dark); padding: 56px 5% 0; border-top: 1px solid rgba(255,255,255,.08); }
-.ft-inner { max-width: 1160px; margin: 0 auto; }
-.ft-top { display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 46px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,.1); }
-.fb-desc { font-size: 0.84rem; color: rgba(255,255,255,.45); line-height: 1.7; margin-top: 14px; max-width: 300px; }
-.fc h4 { font-weight: 900; font-size: 0.78rem; color: #fff; margin-bottom: 16px; letter-spacing: .08em; text-transform: uppercase; }
+/* ===================== FOOTER ===================== */
+footer {
+  background: var(--dark); padding: 56px 5% 0;
+  border-top: 1px solid var(--border-dark);
+}
+.ft-inner { max-width: var(--inner-max); margin: 0 auto; }
+.ft-top {
+  display: grid; grid-template-columns: 1.6fr 1fr 1fr;
+  gap: 46px; padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255,255,255,.09);
+}
+.fb-desc {
+  font-size: 0.84rem; color: rgba(255,255,255,.42);
+  line-height: 1.72; margin-top: 14px; max-width: 300px;
+}
+.fc h4 {
+  font-weight: 900; font-size: 0.78rem; color: #fff;
+  margin-bottom: 16px; letter-spacing: .09em; text-transform: uppercase;
+}
 .fc ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-.fc ul li a { font-size: 0.83rem; color: rgba(255,255,255,.45); transition: color .2s; }
+.fc ul li a { font-size: 0.83rem; color: rgba(255,255,255,.42); transition: color .2s; }
 .fc ul li a:hover { color: #fff; }
 .fcon { display: flex; flex-direction: column; gap: 9px; }
-.fcon a { font-size: 0.83rem; color: rgba(255,255,255,.45); display: flex; align-items: center; gap: 7px; transition: color .2s; }
+.fcon a {
+  font-size: 0.83rem; color: rgba(255,255,255,.42);
+  display: flex; align-items: center; gap: 7px; transition: color .2s;
+}
 .fcon a:hover { color: #fff; }
-.fb-bot { padding: 18px 0 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; }
-.fb-bot p { font-size: 0.78rem; color: rgba(255,255,255,.28); }
-.fb-bot a { color: rgba(255,255,255,.35); font-size: 0.78rem; transition: color .2s; }
+.fb-bot {
+  padding: 18px 0 24px;
+  display: flex; flex-wrap: wrap; align-items: center;
+  justify-content: space-between; gap: 10px;
+}
+.fb-bot p { font-size: 0.78rem; color: rgba(255,255,255,.26); }
+.fb-bot a { color: rgba(255,255,255,.32); font-size: 0.78rem; transition: color .2s; }
 .fb-bot a:hover { color: #fff; }
 
-/* ---- RESPONSIVE ---- */
-@media(max-width: 1024px) {
+/* ===================== RESPONSIVE ===================== */
+
+/* Tablet: 1024px and below */
+@media (max-width: 1024px) {
+  :root { --section-pad: 80px 5%; }
+
+  /* Hero: stack vertically, hide widget */
+  .hero-inner { grid-template-columns: 1fr; gap: 48px; }
+  .hv-orbit-wrap { width: 340px; height: 340px; }
+  .hv-ring-3 { width: 320px; height: 320px; }
+  .hv-ring-2 { width: 240px; height: 240px; }
+  .hv-ring-1 { width: 160px; height: 160px; }
+  .hv-node-chatgpt { top: calc(50% - 120px - 36px); left: calc(50% - 36px); }
+  .hv-node-gemini  { top: calc(50% + 50px); left: calc(50% + 100px - 36px); }
+  .hv-node-perp    { top: calc(50% + 50px); left: calc(50% - 100px - 36px); }
+  .hv-node-bing    { top: calc(50% - 36px); left: calc(50% - 120px - 36px); }
+  .hv-node-google  { top: calc(50% - 80px - 36px); left: calc(50% - 36px); }
+  .hv-node-maps    { top: calc(50% - 36px); left: calc(50% + 80px - 36px); }
+
+  /* Why grid: 2 columns */
   .why-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Pain grid: 1 column */
   .pain-grid { grid-template-columns: 1fr; }
-  .founder-inner { grid-template-columns: 1fr; gap: 40px; }
-  .founder-img-wrap { max-width: 300px; margin: 0 auto; }
-  .steps { grid-template-columns: repeat(2, 1fr); }
+
+  /* Founder: stack vertically */
+  .founder-inner { grid-template-columns: 1fr; gap: 40px; padding: 0; }
+  .founder-img-wrap { max-width: 280px; margin: 0 auto; }
+
+  /* Process: 2 columns, hide connector line */
+  .steps { grid-template-columns: repeat(2, 1fr); gap: 40px; }
   .steps::before { display: none; }
-  .ft-top { grid-template-columns: 1fr 1fr; }
+  .step { padding: 0 12px; }
+
+  /* Blog: 2 columns */
+  .blog-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Footer: 2 columns */
+  .ft-top { grid-template-columns: 1fr 1fr; gap: 36px; }
 }
-@media(max-width: 768px) {
+
+/* Mobile landscape + large phones: 768px and below */
+@media (max-width: 768px) {
+  :root { --section-pad: 60px 4.5%; }
+
+  /* Nav */
   .nl { display: none; }
   .hb { display: flex; }
-  .hero { padding: 64px 5% 56px; min-height: auto; }
-  .hero h1 { font-size: 2.8rem; }
-  .hero-stats { gap: 20px; }
-  .hstat-num { font-size: 2rem; }
+
+  /* Hero */
+  .hero { padding: 72px 4.5% 56px; min-height: auto; }
+  .hero-inner { grid-template-columns: 1fr; gap: 0; }
+  .hero-visual { display: none; }
+  .hero-badge { font-size: 0.68rem; padding: 5px 14px; margin-bottom: 20px; }
+  .hero h1 { margin-bottom: 22px; }
+  .hero-h1-line { font-size: clamp(2.4rem, 8vw, 3rem); }
+  .hero-sub { font-size: 1rem; margin-bottom: 32px; }
+  .hero-ctas { gap: 10px; }
+  .hero-ctas .btn-primary,
+  .hero-ctas .btn-ghost { width: 100%; justify-content: center; }
+  .hero-stats {
+    gap: 16px 28px;
+    margin-top: 36px;
+    padding-top: 28px;
+  }
+  .hstat-num { font-size: 1.9rem; }
+  .hstat-label { font-size: 0.78rem; }
+
+  /* Section headers */
+  .ttl { font-size: clamp(1.7rem, 5.5vw, 2.4rem); }
+
+  /* Why grid: 1 column */
   .why-grid { grid-template-columns: 1fr; }
-  .pain-grid { grid-template-columns: 1fr; }
-  .steps { grid-template-columns: 1fr; }
-  .cmp-wrap { border-radius: 0; border-left: none; border-right: none; }
-  .ft-top { grid-template-columns: 1fr; gap: 28px; }
-  .cta-btns { flex-direction: column; align-items: center; }
-  .cta-btns a { width: 100%; justify-content: center; }
-  .fq-bts { flex-direction: column; }
-  .fq-bts a { width: 100%; justify-content: center; }
-  .founder-inner { padding: 0 5%; }
+  .why-card { padding: 28px 24px; }
+
+  /* Pain grid: 1 column */
+  .pain-grid { grid-template-columns: 1fr; gap: 14px; }
+  .pain-header-bar { padding: 16px 18px 14px; gap: 12px; }
+  .pain-body { padding: 14px 18px 18px; }
+
+  /* Comparison table */
+  .cmp-wrap {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    margin-left: -4.5%;
+    margin-right: -4.5%;
+  }
+  .th-cat, .th-fv, .th-bg,
+  .td-cat, .td-fv, .td-bg { padding: 12px 14px; font-size: 0.8rem; }
+
+  /* Founder */
+  .founder-section { padding: 60px 4.5%; }
+  .founder-inner { gap: 36px; }
+  .founder-img-wrap { max-width: 240px; }
+  .founder-content h2 { font-size: clamp(1.8rem, 6vw, 2.6rem); }
+  .founder-contact { gap: 12px; }
   .founder-btns { flex-direction: column; }
   .founder-btns a { width: 100%; justify-content: center; text-align: center; }
-  .sec { padding: 60px 5%; }
+
+  /* Process: 1 column */
+  .steps { grid-template-columns: 1fr; gap: 32px; }
+  .step { padding: 0; }
+  .step-num { margin-bottom: 14px; }
+
+  /* Blog: 1 column */
+  .blog-grid { grid-template-columns: 1fr; gap: 14px; }
+
+  /* CTA strip */
+  .cta-strip { padding: 64px 4.5%; }
+  .cta-btns { flex-direction: column; align-items: stretch; }
+  .cta-btns a { width: 100%; justify-content: center; }
+
+  /* FAQ */
+  .fq-bts { flex-direction: column; align-items: stretch; }
+  .fq-bts a { width: 100%; justify-content: center; }
+  .fqb { font-size: 0.92rem; }
+
+  /* Footer */
+  .ft-top { grid-template-columns: 1fr; gap: 28px; }
+  .fb-desc { max-width: 100%; }
+  footer { padding: 48px 4.5% 0; }
 }
-@media(max-width:480px) {
-  .hero h1 { font-size: 2.2rem; }
-  .pain-card { grid-template-columns: 36px 1fr; gap: 14px; }
-  .pain-num { font-size: 1.6rem; }
+
+/* Small phones: 480px and below */
+@media (max-width: 480px) {
+  :root { --section-pad: 52px 4%; }
+
+  /* Nav */
+  nav { padding: 0 4%; }
+  .mm { padding: 16px 4% 20px; }
+
+  /* Hero */
+  .hero { padding: 60px 4% 48px; }
+  .hero-h1-line { font-size: clamp(2rem, 9vw, 2.6rem); }
+  .hero-h1-line.boxed { padding: 2px 10px 4px; }
+  .hero-sub { font-size: 0.95rem; }
+  .hero-stats { gap: 14px 22px; }
+  .hstat-num { font-size: 1.7rem; }
+
+  /* Section padding - handled by --section-pad above */
+
+  /* Why cards */
+  .why-card { padding: 24px 20px; }
+  .why-icon { width: 44px; height: 44px; margin-bottom: 14px; }
+
+  /* Pain cards */
+  .pain-header-bar { padding: 14px 16px 12px; }
+  .pain-body { padding: 12px 16px 16px; }
+  .pain-num-badge { width: 34px; height: 34px; font-size: 0.9rem; border-radius: 8px; }
+  .pain-card h3 { font-size: 1rem; }
+
+  /* Table: hide category column on very small screens, show inline */
+  .th-cat, .td-cat { display: none; }
+  .th-fv, .td-fv { width: 60%; }
+  .th-bg, .td-bg { width: 40%; }
+
+  /* Comparison */
+  .cmp-wrap {
+    margin-left: -4%;
+    margin-right: -4%;
+  }
+
+  /* Founder */
+  .founder-section { padding: 52px 4%; }
+  .founder-img-wrap { max-width: 200px; }
+  .certs { gap: 5px; }
+  .cert { font-size: 0.68rem; padding: 3px 10px; }
+
+  /* Process */
+  .step-num { width: 48px; height: 48px; font-size: 1.1rem; }
+
+  /* Blog */
+  .blog-cat-bar { padding: 14px 16px 12px; }
+  .blog-body { padding: 14px 16px 18px; }
+  .blog-card h3 { font-size: 1.05rem; }
+
+  /* CTA strip */
+  .cta-strip { padding: 52px 4%; }
+
+  /* FAQ */
+  .faq-section .sec-inner { padding: 0; }
+  .fqb { padding: 16px 0; font-size: 0.88rem; }
+
+  /* Footer */
+  footer { padding: 40px 4% 0; }
+  .ft-top { gap: 24px; }
+}
+
+/* Very small phones: 360px and below */
+@media (max-width: 360px) {
+  .hero-h1-line { font-size: 1.85rem; }
+  .hero-h1-line.boxed { font-size: 1.85rem; }
+  .btn-primary, .btn-ghost, .btn-white, .btn-dark, .btn-teal,
+  .btn-outline, .btn-outline-dark, .btn-ghost-white {
+    padding: 12px 18px;
+    font-size: 0.85rem;
+  }
 }
 </style>
 </head>
@@ -500,18 +1167,21 @@ footer { background: var(--dark); padding: 56px 5% 0; border-top: 1px solid rgba
 <!-- NAV -->
 <nav>
   <a href="/" style="display:flex;align-items:center">
-    <img src="https://favze.com/hubfs/favze-logo-black-header.svg" alt="Favze Digital Marketing" class="nav-logo-img" onerror="this.style.display='none';this.nextSibling.style.display='flex'" loading="lazy">
-    <span style="display:none;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.4rem;color:#064187;letter-spacing:.04em;">FAVZE</span>
+    <img src="https://favze.com/hubfs/favze-logo-black-header.svg" alt="Favze Digital Marketing" class="nav-logo-img"
+      onerror="this.style.display='none';this.nextSibling.style.display='flex'">
+    <span style="display:none;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.45rem;color:#064187;letter-spacing:.04em;">FAVZE</span>
   </a>
   <ul class="nl">
     <li><a href="/services">Services</a></li>
     <li><a href="/favze-insights">Articles</a></li>
-    <li><a href="/why-choose-us" style="color:#064187;font-weight:700">Why Us</a></li>
+    <li><a href="/why-choose-us" class="active">Why Us</a></li>
     <li><a href="/about">About</a></li>
     <li><a href="/digital-marketing-faq">FAQ</a></li>
     <li><a href="/contact" class="nc">Free Consultation</a></li>
   </ul>
-  <button class="hb" id="hb" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  <button class="hb" id="hb" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 <div class="mm" id="mm">
   <a href="/services">Services</a>
@@ -527,35 +1197,170 @@ footer { background: var(--dark); padding: 56px 5% 0; border-top: 1px solid rgba
   <div class="hero-grid"></div>
   <div class="hero-glow"></div>
   <div class="hero-inner">
-    <div class="hero-badge"><span class="hdot"></span>Northern Indiana &amp; Michiana</div>
-    <h1>
-      Stop Being<br>
-      The <em>Best-Kept</em><br>
-      <span>Secret</span>
-    </h1>
-    <p class="hero-sub">Most businesses post content, run ads, and hope something sticks. Favze builds coordinated marketing systems that make you the obvious choice — across every search engine, every AI platform, and every channel your customers use.</p>
-    <div class="hero-ctas">
-      <a href="/contact" class="btn-primary">Start My Free Consultation <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      <a href="/services" class="btn-ghost">Explore All Services</a>
+
+    <!-- LEFT: copy -->
+    <div class="hero-left">
+      <div class="hero-badge"><span class="hdot"></span>Northern Indiana &amp; Michiana</div>
+      <h1>
+        <span class="hero-h1-line">Stop Being</span>
+        <span class="hero-h1-line teal">The Best-Kept</span>
+        <span class="hero-h1-line boxed">Secret</span>
+      </h1>
+      <p class="hero-sub">Most businesses post content, run ads, and hope something sticks. Favze builds coordinated marketing systems that make you the obvious choice across every search engine, every AI platform, and every channel your customers use.</p>
+      <div class="hero-ctas">
+        <a href="/contact" class="btn-primary">Start My Free Consultation
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="/services" class="btn-ghost">Explore All Services</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="hstat-num">100+</div>
+          <div class="hstat-label">Professional Certifications<br>Across Every Channel</div>
+        </div>
+        <div>
+          <div class="hstat-num">12</div>
+          <div class="hstat-label">Full-Service Digital<br>Marketing Services</div>
+        </div>
+        <div>
+          <div class="hstat-num">$0</div>
+          <div class="hstat-label">Hidden Fees.<br>Ever. Period.</div>
+        </div>
+        <div>
+          <div class="hstat-num">1</div>
+          <div class="hstat-label">Founder-Led Strategy.<br>Direct Access. Always.</div>
+        </div>
+      </div>
     </div>
-    <div class="hero-stats">
-      <div>
-        <div class="hstat-num">100+</div>
-        <div class="hstat-label">Professional Certifications<br>Across Every Channel</div>
+
+    <!-- RIGHT: animated brand visibility widget -->
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hv-orbit-wrap">
+
+        <!-- Decorative spinning rings -->
+        <div class="hv-ring hv-ring-1"></div>
+        <div class="hv-ring hv-ring-2"></div>
+        <div class="hv-ring hv-ring-3"></div>
+
+        <!-- SVG connector lines -->
+        <svg class="hv-lines" viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Center to Google (top, inner) -->
+          <line x1="210" y1="210" x2="210" y2="110" stroke="url(#lg1)" stroke-width="1" stroke-dasharray="4 4"/>
+          <!-- Center to Maps (right, inner) -->
+          <line x1="210" y1="210" x2="310" y2="210" stroke="url(#lg2)" stroke-width="1" stroke-dasharray="4 4"/>
+          <!-- Center to ChatGPT (top, outer) -->
+          <line x1="210" y1="210" x2="210" y2="50" stroke="url(#lg3)" stroke-width="1" stroke-dasharray="3 5" opacity=".7"/>
+          <!-- Center to Gemini (bottom-right, outer) -->
+          <line x1="210" y1="210" x2="340" y2="306" stroke="url(#lg4)" stroke-width="1" stroke-dasharray="3 5" opacity=".7"/>
+          <!-- Center to Perplexity (bottom-left, outer) -->
+          <line x1="210" y1="210" x2="80" y2="306" stroke="url(#lg5)" stroke-width="1" stroke-dasharray="3 5" opacity=".7"/>
+          <!-- Center to Bing/Copilot (left, outer) -->
+          <line x1="210" y1="210" x2="50" y2="210" stroke="url(#lg6)" stroke-width="1" stroke-dasharray="3 5" opacity=".7"/>
+          <defs>
+            <linearGradient id="lg1" x1="210" y1="210" x2="210" y2="110" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#0A89A3" stop-opacity=".8"/>
+              <stop offset="100%" stop-color="#0A89A3" stop-opacity=".15"/>
+            </linearGradient>
+            <linearGradient id="lg2" x1="210" y1="210" x2="310" y2="210" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#064187" stop-opacity=".8"/>
+              <stop offset="100%" stop-color="#064187" stop-opacity=".15"/>
+            </linearGradient>
+            <linearGradient id="lg3" x1="210" y1="210" x2="210" y2="50" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#10a37f" stop-opacity=".6"/>
+              <stop offset="100%" stop-color="#10a37f" stop-opacity=".1"/>
+            </linearGradient>
+            <linearGradient id="lg4" x1="210" y1="210" x2="340" y2="306" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#4285f4" stop-opacity=".6"/>
+              <stop offset="100%" stop-color="#4285f4" stop-opacity=".1"/>
+            </linearGradient>
+            <linearGradient id="lg5" x1="210" y1="210" x2="80" y2="306" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#a259ff" stop-opacity=".6"/>
+              <stop offset="100%" stop-color="#a259ff" stop-opacity=".1"/>
+            </linearGradient>
+            <linearGradient id="lg6" x1="210" y1="210" x2="50" y2="210" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#0099ff" stop-opacity=".6"/>
+              <stop offset="100%" stop-color="#0099ff" stop-opacity=".1"/>
+            </linearGradient>
+          </defs>
+        </svg>
+
+        <!-- Traveling signal dots -->
+        <div class="hv-signal hv-sig-1"></div>
+        <div class="hv-signal hv-sig-2"></div>
+        <div class="hv-signal hv-sig-3" style="background:#10a37f"></div>
+        <div class="hv-signal hv-sig-4" style="background:#a259ff"></div>
+        <div class="hv-signal hv-sig-5" style="background:#0099ff"></div>
+        <div class="hv-signal hv-sig-6" style="background:#4285f4"></div>
+
+        <!-- Center: YOUR BRAND -->
+        <div class="hv-center">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+            <path d="M13 3C9.13 3 6 6.13 6 10C6 15.25 13 23 13 23S20 15.25 20 10C20 6.13 16.87 3 13 3Z" fill="rgba(255,255,255,.18)" stroke="#fff" stroke-width="1.4"/>
+            <circle cx="13" cy="10" r="2.8" fill="#fff"/>
+          </svg>
+          <div class="hv-center-label">Your Brand</div>
+          <div class="hv-center-sub">Everywhere</div>
+        </div>
+
+        <!-- Inner ring nodes -->
+        <div class="hv-node hv-node-google">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+          </svg>
+          <span>Google</span>
+        </div>
+
+        <div class="hv-node hv-node-maps">
+          <svg width="20" height="22" viewBox="0 0 20 24" fill="none">
+            <path d="M10 1C6.13 1 3 4.13 3 8c0 5.25 7 14 7 14s7-8.75 7-14c0-3.87-3.13-7-7-7z" fill="#EA4335"/>
+            <circle cx="10" cy="8" r="2.8" fill="#fff"/>
+          </svg>
+          <span>Maps</span>
+        </div>
+
+        <!-- Outer ring nodes -->
+        <div class="hv-node hv-node-chatgpt">
+          <svg width="22" height="22" viewBox="0 0 41 41" fill="none">
+            <path d="M37.5 20.5a17 17 0 01-17 17 17 17 0 01-17-17 17 17 0 0117-17 17 17 0 0117 17z" stroke="#10a37f" stroke-width="2" fill="rgba(16,163,127,.15)"/>
+            <path d="M13 20.5h15M20.5 13v15" stroke="#10a37f" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span>ChatGPT</span>
+        </div>
+
+        <div class="hv-node hv-node-gemini">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2L9 9H2l5.5 4-2 7L12 16l6.5 4-2-7L22 9h-7L12 2z" fill="rgba(66,133,244,.25)" stroke="#4285f4" stroke-width="1.3" stroke-linejoin="round"/>
+          </svg>
+          <span>Gemini</span>
+        </div>
+
+        <div class="hv-node hv-node-perp">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="9" stroke="#a259ff" stroke-width="1.5" fill="rgba(162,89,255,.12)"/>
+            <path d="M8 12h8M12 8v8" stroke="#a259ff" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          <span>Perplexity</span>
+        </div>
+
+        <div class="hv-node hv-node-bing">
+          <svg width="18" height="22" viewBox="0 0 18 24" fill="none">
+            <path d="M3 2v20l5-2.5 7-5-4-2 1-6L3 2z" fill="rgba(0,153,255,.2)" stroke="#0099ff" stroke-width="1.3" stroke-linejoin="round"/>
+          </svg>
+          <span>Copilot</span>
+        </div>
+
+        <!-- Live status pill -->
+        <div class="hv-status">
+          <span class="hv-status-dot"></span>
+          Broadcasting Your Brand Live
+        </div>
+
       </div>
-      <div>
-        <div class="hstat-num">12</div>
-        <div class="hstat-label">Full-Service Digital<br>Marketing Services</div>
-      </div>
-      <div>
-        <div class="hstat-num">$0</div>
-        <div class="hstat-label">Hidden Fees.<br>Ever. Period.</div>
-      </div>
-      <div>
-        <div class="hstat-num">1</div>
-        <div class="hstat-label">Founder-Led Strategy.<br>Direct Access. Always.</div>
-      </div>
-    </div>
+    </div><!-- /hero-visual -->
+
   </div>
 </section>
 
@@ -589,49 +1394,61 @@ footer { background: var(--dark); padding: 56px 5% 0; border-top: 1px solid rgba
 <section class="sec why-section" aria-labelledby="why-heading">
   <div class="sec-inner">
     <span class="lbl">The Favze Difference</span>
-    <h2 class="ttl" id="why-heading" style="color:#fff;max-width:700px;">Six Things That Make Favze the Better Choice</h2>
-    <p class="sub" style="margin-top:14px;">Not every agency is the same. Here's what you actually get when you work with Favze — versus what you get almost everywhere else.</p>
+    <h2 class="ttl" id="why-heading" style="color:#fff;max-width:680px;">Six Things That Make Favze the Better Choice</h2>
+    <p class="sub" style="margin-top:14px;">Not every agency is the same. Here is what you actually get when you work with Favze versus what you get almost everywhere else.</p>
     <div class="why-grid">
 
       <div class="why-card">
-        <div class="why-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="10" stroke="#0A89A3" stroke-width="1.6"/><path d="M9 13l3 3 5-6" stroke="#0A89A3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="why-icon">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="10" stroke="#0A89A3" stroke-width="1.6"/><path d="M9 13l3 3 5-6" stroke="#0A89A3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
         <h3>Zero Hidden Fees</h3>
-        <p>Every cost is explained in plain language before you commit to anything. No fine print. No add-ons that appear after you sign. What you see is what you pay — always.</p>
+        <p>Every cost is explained in plain language before you commit to anything. No fine print. No add-ons that appear after you sign. What you see is what you pay, always.</p>
         <span class="why-tag">Total Transparency</span>
       </div>
 
       <div class="why-card">
-        <div class="why-icon" style="background:rgba(10,137,163,.2)"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M13 3C9.13 3 6 6.13 6 10C6 15.25 13 23 13 23S20 15.25 20 10C20 6.13 16.87 3 13 3Z" stroke="#0A89A3" stroke-width="1.6"/><circle cx="13" cy="10" r="2.5" stroke="#0A89A3" stroke-width="1.4"/></svg></div>
+        <div class="why-icon teal-bg">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M13 3C9.13 3 6 6.13 6 10C6 15.25 13 23 13 23S20 15.25 20 10C20 6.13 16.87 3 13 3Z" stroke="#0A89A3" stroke-width="1.6"/><circle cx="13" cy="10" r="2.5" stroke="#0A89A3" stroke-width="1.4"/></svg>
+        </div>
         <h3>Deep Local Expertise</h3>
         <p>We know which search terms are competitive in Elkhart County. Which directories matter for Michiana citations. How customers in Goshen and South Bend research and choose local businesses.</p>
         <span class="why-tag">Built for This Region</span>
       </div>
 
       <div class="why-card">
-        <div class="why-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><circle cx="13" cy="9" r="5" stroke="#064187" stroke-width="1.6"/><path d="M4 23c0-5 4-9 9-9s9 4 9 9" stroke="#064187" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div class="why-icon">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><circle cx="13" cy="9" r="5" stroke="#064187" stroke-width="1.6"/><path d="M4 23c0-5 4-9 9-9s9 4 9 9" stroke="#064187" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
         <h3>Direct Founder Access</h3>
         <p>You get Riley Catalano. Not a rotating account rep. Not a junior coordinator. The certified expert who built your strategy is the same person executing and refining it.</p>
         <span class="why-tag">Founder-Led</span>
       </div>
 
       <div class="why-card">
-        <div class="why-icon" style="background:rgba(10,137,163,.2)"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M5 6C5 4.9 5.9 4 7 4H19C20.1 4 21 4.9 21 6V16C21 17.1 20.1 18 19 18H14L10 22V18H7C5.9 18 5 17.1 5 16V6Z" stroke="#0A89A3" stroke-width="1.6"/><path d="M10 10h6M10 13h4" stroke="#0A89A3" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+        <div class="why-icon teal-bg">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M5 6C5 4.9 5.9 4 7 4H19C20.1 4 21 4.9 21 6V16C21 17.1 20.1 18 19 18H14L10 22V18H7C5.9 18 5 17.1 5 16V6Z" stroke="#0A89A3" stroke-width="1.6"/><path d="M10 10h6M10 13h4" stroke="#0A89A3" stroke-width="1.4" stroke-linecap="round"/></svg>
+        </div>
         <h3>AI-Ready Marketing</h3>
-        <p>Optimized for ChatGPT, Google Gemini, Perplexity, Microsoft Copilot, Grok, Claude, and Google AI Overviews — not just traditional search. Your business gets recommended when customers ask AI.</p>
+        <p>Optimized for ChatGPT, Google Gemini, Perplexity, Microsoft Copilot, Grok, Claude, and Google AI Overviews. Not just traditional search. Your business gets recommended when customers ask AI.</p>
         <span class="why-tag">AEO + GEO Ready</span>
       </div>
 
       <div class="why-card">
-        <div class="why-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><rect x="4" y="4" width="8" height="8" rx="2" stroke="#064187" stroke-width="1.5"/><rect x="14" y="4" width="8" height="8" rx="2" stroke="#064187" stroke-width="1.5"/><rect x="4" y="14" width="8" height="8" rx="2" stroke="#064187" stroke-width="1.5"/><rect x="14" y="14" width="8" height="8" rx="2" stroke="#064187" stroke-width="1.5"/></svg></div>
+        <div class="why-icon">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><rect x="4" y="4" width="8" height="8" rx="2" stroke="#064187" stroke-width="1.5"/><rect x="14" y="4" width="8" height="8" rx="2" stroke="#064187" stroke-width="1.5"/><rect x="4" y="14" width="8" height="8" rx="2" stroke="#064187" stroke-width="1.5"/><rect x="14" y="14" width="8" height="8" rx="2" stroke="#064187" stroke-width="1.5"/></svg>
+        </div>
         <h3>Custom Strategies Only</h3>
         <p>No cookie-cutter packages. No templates. Every strategy is built specifically around your goals, your audience, your competitive landscape, and what success actually looks like for your business.</p>
         <span class="why-tag">Nothing Generic</span>
       </div>
 
       <div class="why-card">
-        <div class="why-icon" style="background:rgba(10,137,163,.2)"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M4 18l5-7 4 5 4-9 5 11" stroke="#0A89A3" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="why-icon teal-bg">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M4 18l5-7 4 5 4-9 5 11" stroke="#0A89A3" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
         <h3>Reports You Can Read</h3>
-        <p>Plain-language reporting that shows you exactly what's working and what it means for your business. No confusing dashboards designed to make you feel like you need an agency to translate them.</p>
+        <p>Plain-language reporting that shows you exactly what is working and what it means for your business. No confusing dashboards designed to make you feel like you need an agency to translate them.</p>
         <span class="why-tag">Full Transparency</span>
       </div>
 
@@ -639,133 +1456,299 @@ footer { background: var(--dark); padding: 56px 5% 0; border-top: 1px solid rgba
   </div>
 </section>
 
-<!-- PAIN POINTS PER SERVICE -->
+<!-- PAIN POINTS -->
 <section class="sec pain-section" aria-labelledby="pain-heading">
   <div class="sec-inner">
-    <div class="pain-header">
-      <span class="lbl lbl-dark">The Questions We Hear Every Week</span>
-      <h2 class="ttl ttl-dark" id="pain-heading">We Know Exactly What's Frustrating You</h2>
-      <p class="sub sub-dark" style="margin-top:14px;">These are the real conversations Northern Indiana business owners have with us. We built every Favze service to solve exactly these problems.</p>
-    </div>
+    <span class="lbl lbl-dark">The Real Talk Section</span>
+    <h2 class="ttl ttl-dark" id="pain-heading">We Know Exactly What Is Frustrating You</h2>
+    <p class="sub sub-dark" style="margin-top:14px;">These are the real conversations Northern Indiana business owners bring to us. We built every Favze service to solve exactly these problems.</p>
     <div class="pain-grid">
 
       <article class="pain-card">
-        <div class="pain-num">01</div>
-        <div>
+        <div class="pain-header-bar">
+          <div class="pain-num-badge">01</div>
           <h3>Social Media Marketing</h3>
-          <p class="pain-problem">"We post every week but it's not bringing in customers."</p>
-          <p class="pain-solution">Consistency isn't strategy. Without positioning, funnel mapping, and conversion intent, social media becomes noise. Favze builds systems that turn attention into actual revenue — not just likes.</p>
-          <a href="/social-media-marketing" class="pain-fix">SMM Fixes This →</a>
+        </div>
+        <div class="pain-body">
+          <div class="pain-problem-row">
+            <div class="pain-icon-wrap">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="#c86a00" stroke-width="1.4"/><path d="M8 5v3.5M8 11v.1" stroke="#c86a00" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <p class="pain-problem">"We post every week but it is not bringing in customers."</p>
+          </div>
+          <div class="pain-solution-row">
+            <div class="pain-check-wrap">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7l3.5 3.5 5.5-7" stroke="#2e7d55" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <p class="pain-solution">Consistency is not strategy. Without positioning, funnel mapping, and conversion intent, social media becomes noise. Favze builds systems that turn attention into actual revenue, not just likes.</p>
+          </div>
+          <a href="/social-media-marketing" class="pain-fix">SMM Fixes This
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
         </div>
       </article>
 
       <article class="pain-card">
-        <div class="pain-num">02</div>
-        <div>
+        <div class="pain-header-bar">
+          <div class="pain-num-badge">02</div>
           <h3>Search Engine Optimization</h3>
-          <p class="pain-problem">"Our competitor ranks above us and they're not even better than us."</p>
-          <p class="pain-solution">Google doesn't reward quality alone. It rewards structure, authority, and intent alignment. Ranking requires technical precision and strategic depth most in-house teams don't have time to master.</p>
-          <a href="/search-engine-optimization" class="pain-fix">SEO Fixes This →</a>
+        </div>
+        <div class="pain-body">
+          <div class="pain-problem-row">
+            <div class="pain-icon-wrap">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="#c86a00" stroke-width="1.4"/><path d="M8 5v3.5M8 11v.1" stroke="#c86a00" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <p class="pain-problem">"Our competitor ranks above us and they are not even better than us."</p>
+          </div>
+          <div class="pain-solution-row">
+            <div class="pain-check-wrap">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7l3.5 3.5 5.5-7" stroke="#2e7d55" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <p class="pain-solution">Google does not reward quality alone. It rewards structure, authority, and intent alignment. Ranking requires technical precision and strategic depth most in-house teams do not have time to master.</p>
+          </div>
+          <a href="/search-engine-optimization" class="pain-fix">SEO Fixes This
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
         </div>
       </article>
 
       <article class="pain-card">
-        <div class="pain-num">03</div>
-        <div>
+        <div class="pain-header-bar">
+          <div class="pain-num-badge">03</div>
           <h3>Answer Engine Optimization</h3>
-          <p class="pain-problem">"We asked Google AI Overview for businesses like ours and we weren't even mentioned."</p>
-          <p class="pain-solution">AI doesn't list options — it selects answers. If your content isn't structured for retrieval, schema, and citation validation, you simply don't exist in AI-driven search.</p>
-          <a href="/answer-engine-optimization" class="pain-fix">AEO Fixes This →</a>
+        </div>
+        <div class="pain-body">
+          <div class="pain-problem-row">
+            <div class="pain-icon-wrap">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="#c86a00" stroke-width="1.4"/><path d="M8 5v3.5M8 11v.1" stroke="#c86a00" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <p class="pain-problem">"We asked Google AI Overview for businesses like ours and we were not even mentioned."</p>
+          </div>
+          <div class="pain-solution-row">
+            <div class="pain-check-wrap">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7l3.5 3.5 5.5-7" stroke="#2e7d55" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <p class="pain-solution">AI does not list options, it selects answers. If your content is not structured for retrieval, schema, and citation validation, you simply do not exist in AI-driven search.</p>
+          </div>
+          <a href="/answer-engine-optimization" class="pain-fix">AEO Fixes This
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
         </div>
       </article>
 
       <article class="pain-card">
-        <div class="pain-num">04</div>
-        <div>
+        <div class="pain-header-bar">
+          <div class="pain-num-badge">04</div>
           <h3>Generative Engine Optimization</h3>
-          <p class="pain-problem">"ChatGPT, Perplexity, and Grok recommend our competitors — not us."</p>
-          <p class="pain-solution">Generative engines prioritize recognized entities with digital authority. If your brand lacks semantic reinforcement across the web, AI cannot confidently recommend you.</p>
-          <a href="/generative-engine-optimization" class="pain-fix">GEO Fixes This →</a>
+        </div>
+        <div class="pain-body">
+          <div class="pain-problem-row">
+            <div class="pain-icon-wrap">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="#c86a00" stroke-width="1.4"/><path d="M8 5v3.5M8 11v.1" stroke="#c86a00" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <p class="pain-problem">"ChatGPT, Perplexity, and Grok recommend our competitors, not us."</p>
+          </div>
+          <div class="pain-solution-row">
+            <div class="pain-check-wrap">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7l3.5 3.5 5.5-7" stroke="#2e7d55" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <p class="pain-solution">Generative engines prioritize recognized entities with digital authority. If your brand lacks semantic reinforcement across the web, AI cannot confidently recommend you.</p>
+          </div>
+          <a href="/generative-engine-optimization" class="pain-fix">GEO Fixes This
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
         </div>
       </article>
 
       <article class="pain-card">
-        <div class="pain-num">05</div>
-        <div>
+        <div class="pain-header-bar">
+          <div class="pain-num-badge">05</div>
           <h3>Local SEO</h3>
-          <p class="pain-problem">"People say they can't find us on Google Maps."</p>
-          <p class="pain-solution">Local visibility depends on optimized profiles, category signals, proximity weighting, and review velocity. Most businesses underestimate how technical map rankings actually are.</p>
-          <a href="/local-seo" class="pain-fix">Local SEO Fixes This →</a>
+        </div>
+        <div class="pain-body">
+          <div class="pain-problem-row">
+            <div class="pain-icon-wrap">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="#c86a00" stroke-width="1.4"/><path d="M8 5v3.5M8 11v.1" stroke="#c86a00" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <p class="pain-problem">"People say they cannot find us on Google Maps."</p>
+          </div>
+          <div class="pain-solution-row">
+            <div class="pain-check-wrap">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7l3.5 3.5 5.5-7" stroke="#2e7d55" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <p class="pain-solution">Local visibility depends on optimized profiles, category signals, proximity weighting, and review velocity. Most businesses underestimate how technical map rankings actually are.</p>
+          </div>
+          <a href="/local-seo" class="pain-fix">Local SEO Fixes This
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
         </div>
       </article>
 
       <article class="pain-card">
-        <div class="pain-num">06</div>
-        <div>
+        <div class="pain-header-bar">
+          <div class="pain-num-badge">06</div>
           <h3>Paid Search Ads (SEM)</h3>
-          <p class="pain-problem">"We're paying for clicks but not getting calls."</p>
-          <p class="pain-solution">Ad platforms reward targeting precision and landing page alignment. Without conversion tracking and funnel structure, your budget disappears without results to show for it.</p>
-          <a href="/paid-search-ads-sem" class="pain-fix">Paid Search Fixes This →</a>
+        </div>
+        <div class="pain-body">
+          <div class="pain-problem-row">
+            <div class="pain-icon-wrap">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="#c86a00" stroke-width="1.4"/><path d="M8 5v3.5M8 11v.1" stroke="#c86a00" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <p class="pain-problem">"We are paying for clicks but not getting calls."</p>
+          </div>
+          <div class="pain-solution-row">
+            <div class="pain-check-wrap">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7l3.5 3.5 5.5-7" stroke="#2e7d55" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <p class="pain-solution">Ad platforms reward targeting precision and landing page alignment. Without conversion tracking and funnel structure, your budget disappears without results to show for it.</p>
+          </div>
+          <a href="/paid-search-ads-sem" class="pain-fix">Paid Search Fixes This
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
         </div>
       </article>
 
       <article class="pain-card">
-        <div class="pain-num">07</div>
-        <div>
+        <div class="pain-header-bar">
+          <div class="pain-num-badge">07</div>
           <h3>Paid Social Media Ads</h3>
-          <p class="pain-problem">"We boosted posts and absolutely nothing happened."</p>
-          <p class="pain-solution">Boosting is not advertising. Real performance requires audience segmentation, creative testing, retargeting architecture, and a full-funnel strategy — not a $20 boost on a regular post.</p>
-          <a href="/paid-social-media-ads" class="pain-fix">Social Ads Fix This →</a>
+        </div>
+        <div class="pain-body">
+          <div class="pain-problem-row">
+            <div class="pain-icon-wrap">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="#c86a00" stroke-width="1.4"/><path d="M8 5v3.5M8 11v.1" stroke="#c86a00" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <p class="pain-problem">"We boosted posts and absolutely nothing happened."</p>
+          </div>
+          <div class="pain-solution-row">
+            <div class="pain-check-wrap">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7l3.5 3.5 5.5-7" stroke="#2e7d55" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <p class="pain-solution">Boosting is not advertising. Real performance requires audience segmentation, creative testing, retargeting architecture, and a full-funnel strategy, not a $20 boost on a regular post.</p>
+          </div>
+          <a href="/paid-social-media-ads" class="pain-fix">Social Ads Fix This
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
         </div>
       </article>
 
       <article class="pain-card">
-        <div class="pain-num">08</div>
-        <div>
+        <div class="pain-header-bar">
+          <div class="pain-num-badge">08</div>
           <h3>Website Design</h3>
-          <p class="pain-problem">"Our website looks fine… but it doesn't convert."</p>
-          <p class="pain-solution">Design without conversion architecture fails. Your site must support SEO, paid traffic, AI visibility, and buyer psychology simultaneously — not just look good on a screen.</p>
-          <a href="/website-design" class="pain-fix">Website Design Fixes This →</a>
+        </div>
+        <div class="pain-body">
+          <div class="pain-problem-row">
+            <div class="pain-icon-wrap">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="#c86a00" stroke-width="1.4"/><path d="M8 5v3.5M8 11v.1" stroke="#c86a00" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <p class="pain-problem">"Our website looks fine but it does not convert."</p>
+          </div>
+          <div class="pain-solution-row">
+            <div class="pain-check-wrap">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7l3.5 3.5 5.5-7" stroke="#2e7d55" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <p class="pain-solution">Design without conversion architecture fails. Your site must support SEO, paid traffic, AI visibility, and buyer psychology simultaneously, not just look good on a screen.</p>
+          </div>
+          <a href="/website-design" class="pain-fix">Website Design Fixes This
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
         </div>
       </article>
 
       <article class="pain-card">
-        <div class="pain-num">09</div>
-        <div>
+        <div class="pain-header-bar">
+          <div class="pain-num-badge">09</div>
           <h3>Email Marketing</h3>
-          <p class="pain-problem">"We have an email list but nobody opens anything."</p>
-          <p class="pain-solution">Blasts don't build revenue. Segmentation, automation, and behavioral triggers do. Most businesses never build true lifecycle systems that turn subscribers into repeat buyers.</p>
-          <a href="/email-marketing" class="pain-fix">Email Marketing Fixes This →</a>
+        </div>
+        <div class="pain-body">
+          <div class="pain-problem-row">
+            <div class="pain-icon-wrap">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="#c86a00" stroke-width="1.4"/><path d="M8 5v3.5M8 11v.1" stroke="#c86a00" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <p class="pain-problem">"We have an email list but nobody opens anything."</p>
+          </div>
+          <div class="pain-solution-row">
+            <div class="pain-check-wrap">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7l3.5 3.5 5.5-7" stroke="#2e7d55" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <p class="pain-solution">Blasts do not build revenue. Segmentation, automation, and behavioral triggers do. Most businesses never build true lifecycle systems that turn subscribers into repeat buyers.</p>
+          </div>
+          <a href="/email-marketing" class="pain-fix">Email Marketing Fixes This
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
         </div>
       </article>
 
       <article class="pain-card">
-        <div class="pain-num">10</div>
-        <div>
+        <div class="pain-header-bar">
+          <div class="pain-num-badge">10</div>
           <h3>SMS Marketing</h3>
-          <p class="pain-problem">"Past customers just don't come back regularly."</p>
-          <p class="pain-solution">Retention isn't random reminders. It's structured timing, compelling offers, and automation sequences designed around real customer behavior — delivered directly to their phone.</p>
-          <a href="/short-message-service-sms" class="pain-fix">SMS Fixes This →</a>
+        </div>
+        <div class="pain-body">
+          <div class="pain-problem-row">
+            <div class="pain-icon-wrap">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="#c86a00" stroke-width="1.4"/><path d="M8 5v3.5M8 11v.1" stroke="#c86a00" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <p class="pain-problem">"Past customers just do not come back regularly."</p>
+          </div>
+          <div class="pain-solution-row">
+            <div class="pain-check-wrap">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7l3.5 3.5 5.5-7" stroke="#2e7d55" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <p class="pain-solution">Retention is not random reminders. It is structured timing, compelling offers, and automation sequences designed around real customer behavior, delivered directly to their phone.</p>
+          </div>
+          <a href="/short-message-service-sms" class="pain-fix">SMS Fixes This
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
         </div>
       </article>
 
       <article class="pain-card">
-        <div class="pain-num">11</div>
-        <div>
+        <div class="pain-header-bar">
+          <div class="pain-num-badge">11</div>
           <h3>HubSpot Setup</h3>
-          <p class="pain-problem">"We bought HubSpot and barely use 10% of it."</p>
-          <p class="pain-solution">Powerful CRM tools fail without correct pipeline architecture, automation setup, and attribution tracking. Most implementations are incomplete and never deliver what was promised.</p>
-          <a href="/hubspot-setup" class="pain-fix">HubSpot Setup Fixes This →</a>
+        </div>
+        <div class="pain-body">
+          <div class="pain-problem-row">
+            <div class="pain-icon-wrap">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="#c86a00" stroke-width="1.4"/><path d="M8 5v3.5M8 11v.1" stroke="#c86a00" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <p class="pain-problem">"We bought HubSpot and barely use 10% of it."</p>
+          </div>
+          <div class="pain-solution-row">
+            <div class="pain-check-wrap">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7l3.5 3.5 5.5-7" stroke="#2e7d55" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <p class="pain-solution">Powerful CRM tools fail without correct pipeline architecture, automation setup, and attribution tracking. Most implementations are incomplete and never deliver what was promised.</p>
+          </div>
+          <a href="/hubspot-setup" class="pain-fix">HubSpot Setup Fixes This
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
         </div>
       </article>
 
       <article class="pain-card">
-        <div class="pain-num">12</div>
-        <div>
+        <div class="pain-header-bar">
+          <div class="pain-num-badge">12</div>
           <h3>AI Optimization</h3>
-          <p class="pain-problem">"We're using AI tools but our growth hasn't changed."</p>
-          <p class="pain-solution">AI without integration creates speed, not leverage. Real results require workflow alignment, automation strategy, and visibility integration across search, AI platforms, and your full marketing stack.</p>
-          <a href="/ai-optimization" class="pain-fix">AI Optimization Fixes This →</a>
+        </div>
+        <div class="pain-body">
+          <div class="pain-problem-row">
+            <div class="pain-icon-wrap">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="#c86a00" stroke-width="1.4"/><path d="M8 5v3.5M8 11v.1" stroke="#c86a00" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <p class="pain-problem">"We are using AI tools but our growth has not changed."</p>
+          </div>
+          <div class="pain-solution-row">
+            <div class="pain-check-wrap">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7l3.5 3.5 5.5-7" stroke="#2e7d55" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <p class="pain-solution">AI without integration creates speed, not leverage. Real results require workflow alignment, automation strategy, and visibility integration across search, AI platforms, and your full marketing stack.</p>
+          </div>
+          <a href="/ai-optimization" class="pain-fix">AI Optimization Fixes This
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
         </div>
       </article>
 
@@ -778,7 +1761,7 @@ footer { background: var(--dark); padding: 56px 5% 0; border-top: 1px solid rgba
   <div class="sec-inner">
     <span class="lbl">Favze vs. Big Agencies</span>
     <h2 class="ttl" id="cmp-heading" style="color:#fff">See the Difference Side by Side</h2>
-    <p class="sub" style="margin-top:14px;">Affordable local marketing that actually converts — versus what you typically get from a larger agency that doesn't know your market.</p>
+    <p class="sub" style="margin-top:14px;">Affordable local marketing that actually converts versus what you typically get from a larger agency that does not know your market.</p>
     <div class="cmp-wrap">
       <table>
         <thead>
@@ -791,60 +1774,65 @@ footer { background: var(--dark); padding: 56px 5% 0; border-top: 1px solid rgba
         <tbody>
           <tr>
             <td class="td-cat">Local Knowledge</td>
-            <td class="td-fv"><span class="chk">✓</span>Deep knowledge of Northern Indiana and Michiana customers, culture, and competitive landscape</td>
-            <td class="td-bg"><span class="ex">✗</span>National focus with little understanding of your local market</td>
+            <td class="td-fv"><span class="chk">&#10003;</span>Deep knowledge of Northern Indiana and Michiana customers, culture, and competitive landscape</td>
+            <td class="td-bg"><span class="ex">&#10005;</span>National focus with little understanding of your local market</td>
           </tr>
           <tr>
             <td class="td-cat">Who You Work With</td>
-            <td class="td-fv"><span class="chk chk-t">✓</span>Direct access to your certified strategist every time — no handoffs, no rotating reps</td>
-            <td class="td-bg"><span class="ex">✗</span>Rotating account managers with less personal attention to your business</td>
+            <td class="td-fv"><span class="chk chk-t">&#10003;</span>Direct access to your certified strategist every time, no handoffs, no rotating reps</td>
+            <td class="td-bg"><span class="ex">&#10005;</span>Rotating account managers with less personal attention to your business</td>
           </tr>
           <tr>
             <td class="td-cat">Hidden Fees</td>
-            <td class="td-fv"><span class="chk">✓</span>Zero hidden fees. Every cost explained clearly before you sign anything</td>
-            <td class="td-bg"><span class="ex">✗</span>Extra charges and unclear billing are extremely common</td>
+            <td class="td-fv"><span class="chk">&#10003;</span>Zero hidden fees. Every cost explained clearly before you sign anything</td>
+            <td class="td-bg"><span class="ex">&#10005;</span>Extra charges and unclear billing are extremely common</td>
           </tr>
           <tr>
             <td class="td-cat">AI Visibility</td>
-            <td class="td-fv"><span class="chk chk-t">✓</span>AEO, GEO, and AI Optimization built in — ChatGPT, Gemini, Perplexity, Claude, Copilot, Grok</td>
-            <td class="td-bg"><span class="ex">✗</span>Rarely offered; most still focus only on traditional Google SEO</td>
+            <td class="td-fv"><span class="chk chk-t">&#10003;</span>AEO, GEO, and AI Optimization built in: ChatGPT, Gemini, Perplexity, Claude, Copilot, Grok</td>
+            <td class="td-bg"><span class="ex">&#10005;</span>Rarely offered; most still focus only on traditional Google SEO</td>
           </tr>
           <tr>
             <td class="td-cat">Strategy Flexibility</td>
-            <td class="td-fv"><span class="chk">✓</span>Custom strategies that adjust quickly to your goals, budget, and real-world results</td>
-            <td class="td-bg"><span class="ex">✗</span>Rigid packages that are slow to adapt and rarely fit your actual needs</td>
+            <td class="td-fv"><span class="chk">&#10003;</span>Custom strategies that adjust quickly to your goals, budget, and real-world results</td>
+            <td class="td-bg"><span class="ex">&#10005;</span>Rigid packages that are slow to adapt and rarely fit your actual needs</td>
           </tr>
           <tr>
             <td class="td-cat">Reporting</td>
-            <td class="td-fv"><span class="chk chk-t">✓</span>Plain-language reports you can actually read, understand, and use to make decisions</td>
-            <td class="td-bg"><span class="ex">✗</span>Complex dashboards that require an agency to interpret for you</td>
+            <td class="td-fv"><span class="chk chk-t">&#10003;</span>Plain-language reports you can actually read, understand, and use to make decisions</td>
+            <td class="td-bg"><span class="ex">&#10005;</span>Complex dashboards that require an agency to interpret for you</td>
           </tr>
           <tr>
             <td class="td-cat">Transparency</td>
-            <td class="td-fv"><span class="chk">✓</span>Every strategy, decision, and cost is explained openly at every step</td>
-            <td class="td-bg"><span class="ex">✗</span>Strategies often unclear with little explanation of what's actually being done</td>
+            <td class="td-fv"><span class="chk">&#10003;</span>Every strategy, decision, and cost is explained openly at every step</td>
+            <td class="td-bg"><span class="ex">&#10005;</span>Strategies often unclear with little explanation of what is actually being done</td>
           </tr>
           <tr>
             <td class="td-cat">Mission</td>
-            <td class="td-fv"><span class="chk chk-t">✓</span>Making your business the local favorite and growing your revenue — full stop</td>
-            <td class="td-bg"><span class="ex">✗</span>Focused on their own growth targets and client volume</td>
+            <td class="td-fv"><span class="chk chk-t">&#10003;</span>Making your business the local favorite and growing your revenue, full stop</td>
+            <td class="td-bg"><span class="ex">&#10005;</span>Focused on their own growth targets and client volume</td>
           </tr>
         </tbody>
       </table>
     </div>
     <div style="text-align:center;margin-top:40px">
-      <a href="/contact" class="btn-primary">Start My Free Consultation <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="/contact" class="btn-primary">Start My Free Consultation
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
     </div>
   </div>
 </section>
 
 <!-- FOUNDER -->
-<section class="sec founder-section" aria-labelledby="founder-heading">
+<section class="founder-section" aria-labelledby="founder-heading">
   <div class="founder-inner">
     <div class="founder-img-wrap">
       <div class="founder-img-frame">
         <div class="founder-img-inner">
-          <img src="https://favze.com/hubfs/riley-catalano-favze-founder.jpg" alt="Riley Catalano, Founder of Favze Digital Marketing, leaning against a tree in Northern Indiana" loading="lazy" onerror="this.style.background='#1a1a2e';this.style.minHeight='320px';this.alt='Riley Catalano - Founder, Favze';">
+          <img src="https://favze.com/hubfs/riley-catalano-favze-founder.jpg"
+            alt="Riley Catalano, Founder of Favze Digital Marketing, Northern Indiana"
+            loading="lazy"
+            onerror="this.style.background='#1a1a2e';this.style.minHeight='320px';">
         </div>
       </div>
       <div class="founder-badge-float">
@@ -855,8 +1843,8 @@ footer { background: var(--dark); padding: 56px 5% 0; border-top: 1px solid rgba
     <div class="founder-content">
       <span class="lbl">About the Founder</span>
       <h2 id="founder-heading">Strategy from <em>Inside</em> the Region You Serve</h2>
-      <p>Riley Catalano founded Favze Digital Marketing and, after launching the agency, brought her expertise to an international manufacturer in Mishawaka, Indiana. There she gained firsthand, ground-level insight into what regional businesses actually need to grow — not what agencies assume they need.</p>
-      <p>That real-world experience inside Northern Indiana's manufacturing and business community is baked into every strategy Favze delivers. Riley continues expanding expertise in PR, strategic category creation, and AI-first marketing — staying ahead of how customers discover and choose businesses in a rapidly changing landscape.</p>
+      <p>Riley Catalano founded Favze Digital Marketing and, after launching the agency, brought her expertise to an international manufacturer in Mishawaka, Indiana. There she gained firsthand, ground-level insight into what regional businesses actually need to grow, not what agencies assume they need.</p>
+      <p>That real-world experience inside Northern Indiana's manufacturing and business community is baked into every strategy Favze delivers. Riley continues expanding expertise in PR, strategic category creation, and AI-first marketing, staying ahead of how customers discover and choose businesses in a rapidly changing landscape.</p>
       <div class="certs">
         <span class="cert">SEO</span><span class="cert">AEO</span><span class="cert">GEO</span>
         <span class="cert">Paid Search</span><span class="cert">Paid Social</span>
@@ -866,13 +1854,27 @@ footer { background: var(--dark); padding: 56px 5% 0; border-top: 1px solid rgba
         <span class="cert">100+ Total</span>
       </div>
       <div class="founder-contact">
-        <a href="mailto:riley@favze.com"><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><rect x="1" y="2.5" width="13" height="10" rx="2" stroke="currentColor" stroke-width="1.3"/><path d="M1 5l6.5 4.5L14 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>riley@favze.com</a>
-        <a href="tel:+15747475012"><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 1.5s1-.5 2 1l1.5 2s.5 1-.5 2L5 7s-.5.5 0 1.5S6.5 11 8.5 12c1 .5 1 0 1 0l.5-.5c1-1 2-.5 2-.5L13.5 12.5c1.5 1 1 2 1 2-.5 1-2.5 1.5-4 .5" stroke="currentColor" stroke-width="1.2"/></svg>574-747-5012</a>
-        <a href="https://www.linkedin.com/in/rileycatalano/" target="_blank" rel="noopener noreferrer nofollow"><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><rect x="1" y="1" width="13" height="13" rx="2.5" stroke="currentColor" stroke-width="1.3"/><path d="M4 6v5M4 4v.1" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><path d="M7 11V8c0-1 .9-1.9 2-1.9s2 .9 2 1.9v3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>LinkedIn</a>
-        <a href="https://rileycatalano.com" target="_blank" rel="noopener noreferrer nofollow"><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><circle cx="7.5" cy="7.5" r="6.2" stroke="currentColor" stroke-width="1.3"/><path d="M7.5 1.3C5.8 3.2 4.8 5.3 4.8 7.5s1 4.3 2.7 6.2M7.5 1.3C9.2 3.2 10.2 5.3 10.2 7.5s-1 4.3-2.7 6.2M1.3 7.5h12.4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>rileycatalano.com</a>
+        <a href="mailto:riley@favze.com">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><rect x="1" y="2.5" width="13" height="10" rx="2" stroke="currentColor" stroke-width="1.3"/><path d="M1 5l6.5 4.5L14 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          riley@favze.com
+        </a>
+        <a href="tel:+15747475012">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 1.5s1-.5 2 1l1.5 2s.5 1-.5 2L5 7s-.5.5 0 1.5S6.5 11 8.5 12c1 .5 1 0 1 0l.5-.5c1-1 2-.5 2-.5L13.5 12.5c1.5 1 1 2 1 2-.5 1-2.5 1.5-4 .5" stroke="currentColor" stroke-width="1.2"/></svg>
+          574-747-5012
+        </a>
+        <a href="https://www.linkedin.com/in/rileycatalano/" target="_blank" rel="noopener noreferrer nofollow">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><rect x="1" y="1" width="13" height="13" rx="2.5" stroke="currentColor" stroke-width="1.3"/><path d="M4 6v5M4 4v.1" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><path d="M7 11V8c0-1 .9-1.9 2-1.9s2 .9 2 1.9v3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://rileycatalano.com" target="_blank" rel="noopener noreferrer nofollow">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><circle cx="7.5" cy="7.5" r="6.2" stroke="currentColor" stroke-width="1.3"/><path d="M7.5 1.3C5.8 3.2 4.8 5.3 4.8 7.5s1 4.3 2.7 6.2M7.5 1.3C9.2 3.2 10.2 5.3 10.2 7.5s-1 4.3-2.7 6.2M1.3 7.5h12.4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          rileycatalano.com
+        </a>
       </div>
       <div class="founder-btns">
-        <a href="/contact" class="btn-teal">Book a Free Consultation <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7h9M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="/contact" class="btn-teal">Book a Free Consultation
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7h9M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
         <a href="/about" class="btn-outline">Learn More About Favze</a>
       </div>
     </div>
@@ -896,18 +1898,77 @@ footer { background: var(--dark); padding: 56px 5% 0; border-top: 1px solid rgba
       <div class="step">
         <div class="step-num">2</div>
         <h3>Custom Strategy Proposal</h3>
-        <p>Favze builds a strategy tailored to your goals, your audience, and your budget — covering the right mix of channels with clear pricing and no hidden fees.</p>
+        <p>Favze builds a strategy tailored to your goals, your audience, and your budget, covering the right mix of channels with clear pricing and no hidden fees.</p>
       </div>
       <div class="step">
         <div class="step-num">3</div>
         <h3>Review and Approval</h3>
-        <p>You review everything, ask questions, refine the plan, and approve before anything moves forward. You're in control the whole time.</p>
+        <p>You review everything, ask questions, refine the plan, and approve before anything moves forward. You are in control the whole time.</p>
       </div>
       <div class="step">
         <div class="step-num">4</div>
         <h3>Launch and Report</h3>
-        <p>Campaigns go live. You get plain-language reporting that shows exactly what's happening, what it means, and what comes next.</p>
+        <p>Campaigns go live. You get plain-language reporting that shows exactly what is happening, what it means, and what comes next.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG SECTION -->
+<section class="sec blog-section" aria-labelledby="blog-heading">
+  <div class="sec-inner">
+    <span class="lbl lbl-dark">Favze Insights</span>
+    <h2 class="ttl ttl-dark" id="blog-heading">Expertise You Can Read</h2>
+    <p class="sub sub-dark" style="margin-top:14px;">We do not just talk about SEO, AEO, and GEO. We write the playbooks. Here is proof that Favze lives at the cutting edge of how customers find businesses in 2026.</p>
+    <div class="blog-grid">
+
+      <a href="/favze-insights/blog-article-hierarchy" class="blog-card">
+        <div class="blog-cat-bar">
+          <span class="blog-cat-badge">Content Strategy</span>
+          <span class="blog-read-time">8 min read</span>
+        </div>
+        <div class="blog-body">
+          <h3>Blog and Article Hierarchy: Pillars, Clusters, and Internal Linking</h3>
+          <p>Most businesses publish content with no architecture behind it. This article breaks down how to build a content system that signals authority to Google, earns citations from AI platforms, and drives real organic traffic month over month.</p>
+          <span class="blog-cta">Read Article
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 6.5h9M8 3l3.5 3.5L8 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <a href="/favze-insights/local-service-ads" class="blog-card">
+        <div class="blog-cat-bar">
+          <span class="blog-cat-badge">Paid Search</span>
+          <span class="blog-read-time">6 min read</span>
+        </div>
+        <div class="blog-body">
+          <h3>Local Service Ads: Fast Track To The Top Of Google</h3>
+          <p>Local Service Ads are the most underused weapon in local marketing. This article shows exactly how they work, who qualifies, what the Google Guaranteed badge actually means, and how to use LSAs to claim the very top of the search results page before organic rankings even appear.</p>
+          <span class="blog-cta">Read Article
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 6.5h9M8 3l3.5 3.5L8 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </div>
+      </a>
+
+      <a href="/favze-insights/new-rules-online-visibility" class="blog-card">
+        <div class="blog-cat-bar">
+          <span class="blog-cat-badge">SEO + AEO + GEO</span>
+          <span class="blog-read-time">10 min read</span>
+        </div>
+        <div class="blog-body">
+          <h3>The New Rules Of Online Visibility: For SEO, AEO, and GEO Mastery</h3>
+          <p>The rules of getting found online have changed fundamentally. This is the definitive guide for Northern Indiana businesses navigating traditional search, AI answer engines, and generative platforms simultaneously, so you show up everywhere your customers are looking.</p>
+          <span class="blog-cta">Read Article
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 6.5h9M8 3l3.5 3.5L8 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </div>
+      </a>
+
+    </div>
+    <div class="blog-footer-link">
+      <a href="/favze-insights" class="btn-outline-dark" style="margin-top:0;">View All Articles
+        <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 6.5h9M8 3l3.5 3.5L8 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
     </div>
   </div>
 </section>
@@ -918,7 +1979,9 @@ footer { background: var(--dark); padding: 56px 5% 0; border-top: 1px solid rgba
     <h2>Ready to Become the Obvious Choice?</h2>
     <p>Free consultation. Zero hidden fees. A custom strategy built around your business, your budget, and your community. No obligation to sign anything.</p>
     <div class="cta-btns">
-      <a href="/contact" class="btn-white">Start My Free Consultation <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="/contact" class="btn-white">Start My Free Consultation
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
       <a href="/services" class="btn-ghost-white">Explore All 12 Services</a>
     </div>
   </div>
@@ -935,37 +1998,58 @@ footer { background: var(--dark); padding: 56px 5% 0; border-top: 1px solid rgba
       </div>
 
       <div class="fqi">
-        <button class="fqb">Why should I choose Favze over a bigger agency?<span class="fqi-ic"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <button class="fqb" type="button" aria-expanded="false">
+          Why should I choose Favze over a bigger agency?
+          <span class="fqi-ic" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+        </button>
         <div class="fqa">Favze offers direct access to a certified strategist who knows Northern Indiana and Michiana, custom strategies built around your specific goals and budget, zero hidden fees, and reporting you can actually read and act on. Big agencies assign rotating account reps, use rigid packages, and prioritize their own revenue over your results. With Favze, the person who builds your strategy is the same person running it.</div>
       </div>
 
       <div class="fqi">
-        <button class="fqb">Does Favze really have zero hidden fees?<span class="fqi-ic"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
-        <div class="fqa">Yes. Every cost, every service, and every decision is explained clearly in plain language before you commit to anything. There are no add-ons that appear after you sign. No monthly fees buried in fine print. What you see is what you pay. That's a hard line, not a marketing claim.</div>
+        <button class="fqb" type="button" aria-expanded="false">
+          Does Favze really have zero hidden fees?
+          <span class="fqi-ic" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="fqa">Yes. Every cost, every service, and every decision is explained clearly in plain language before you commit to anything. There are no add-ons that appear after you sign. No monthly fees buried in fine print. What you see is what you pay. That is a hard line, not a marketing claim.</div>
       </div>
 
       <div class="fqi">
-        <button class="fqb">What makes Favze different from other Northern Indiana marketing agencies?<span class="fqi-ic"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <button class="fqb" type="button" aria-expanded="false">
+          What makes Favze different from other Northern Indiana marketing agencies?
+          <span class="fqi-ic" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+        </button>
         <div class="fqa">Favze is founded and led by Riley Catalano, who holds 100+ professional certifications and gained real-world inside experience at an international manufacturer in Mishawaka, Indiana. Every strategy is locally grounded, custom-built for your business, AI-optimized for platforms like ChatGPT and Google Gemini, and backed by complete pricing transparency.</div>
       </div>
 
       <div class="fqi">
-        <button class="fqb">Does Favze optimize for AI platforms like ChatGPT and Perplexity?<span class="fqi-ic"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
-        <div class="fqa">Yes. Favze offers AI Optimization, Answer Engine Optimization (AEO), and Generative Engine Optimization (GEO) — built specifically to help your business get cited and recommended by ChatGPT, Google Gemini, Perplexity, Microsoft Copilot, Grok, Claude, and Google AI Overviews when customers ask AI tools for local business recommendations. Most agencies don't offer this yet.</div>
+        <button class="fqb" type="button" aria-expanded="false">
+          Does Favze optimize for AI platforms like ChatGPT and Perplexity?
+          <span class="fqi-ic" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="fqa">Yes. Favze offers AI Optimization, Answer Engine Optimization (AEO), and Generative Engine Optimization (GEO), built specifically to help your business get cited and recommended by ChatGPT, Google Gemini, Perplexity, Microsoft Copilot, Grok, Claude, and Google AI Overviews when customers ask AI tools for local business recommendations. Most agencies do not offer this yet.</div>
       </div>
 
       <div class="fqi">
-        <button class="fqb">Do you work with small businesses or only established companies?<span class="fqi-ic"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
-        <div class="fqa">Favze works with businesses at every stage — from newer local businesses ready to build a foundation, to established brands wanting to scale visibility and conversions. Every strategy is built around your specific goals and budget. There's no minimum spend to work with Favze.</div>
+        <button class="fqb" type="button" aria-expanded="false">
+          Do you work with small businesses or only established companies?
+          <span class="fqi-ic" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+        </button>
+        <div class="fqa">Favze works with businesses at every stage, from newer local businesses ready to build a foundation, to established brands wanting to scale visibility and conversions. Every strategy is built around your specific goals and budget. There is no minimum spend to work with Favze.</div>
       </div>
 
       <div class="fqi">
-        <button class="fqb">How long before I see results?<span class="fqi-ic"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <button class="fqb" type="button" aria-expanded="false">
+          How long before I see results?
+          <span class="fqi-ic" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+        </button>
         <div class="fqa">It depends on the services. Paid search and SMS can show impact almost immediately. SEO, AEO, and GEO typically show measurable movement within 3 to 6 months and compound over time. Social media and email build momentum over weeks and months. During your free consultation, Riley will give you honest, realistic timelines specific to your situation.</div>
       </div>
 
       <div class="fqi">
-        <button class="fqb">What industries does Favze serve?<span class="fqi-ic"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <button class="fqb" type="button" aria-expanded="false">
+          What industries does Favze serve?
+          <span class="fqi-ic" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+        </button>
         <div class="fqa">Favze serves retail, e-commerce, health and wellness, medical practices, professional services, contractors, local services, hospitality, food businesses, home services, education, tech startups, nonprofits, manufacturers, and community organizations across Northern Indiana and Michiana.</div>
       </div>
 
@@ -1021,9 +2105,18 @@ footer { background: var(--dark); padding: 56px 5% 0; border-top: 1px solid rgba
         <div style="margin-top:22px">
           <h4>Contact</h4>
           <div class="fcon">
-            <a href="mailto:riley@favze.com"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="1" y="2" width="11" height="9" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M1 4.5l5.5 3.5L12 4.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>riley@favze.com</a>
-            <a href="tel:+15747475012"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 1.5s1-.5 2 1l1 1.5s.5 1-.5 1.9L4 6.4s-.4.4 0 1.3S5.6 9.8 7.5 10.8c1 .5 1 0 1 0l.5-.5c.9-.9 1.9-.5 1.9-.5L12.4 11c1.4 1 1 1.9 1 1.9-.5.9-2.4 1.4-3.8.5" stroke="currentColor" stroke-width="1.2"/></svg>574-747-5012</a>
-            <a href="/contact"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="1" y="1" width="11" height="11" rx="2" stroke="currentColor" stroke-width="1.2"/><path d="M3.5 5h6M3.5 7.5h4" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>Free Consultation</a>
+            <a href="mailto:riley@favze.com">
+              <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="1" y="2" width="11" height="9" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M1 4.5l5.5 3.5L12 4.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>
+              riley@favze.com
+            </a>
+            <a href="tel:+15747475012">
+              <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 1.5s1-.5 2 1l1 1.5s.5 1-.5 1.9L4 6.4s-.4.4 0 1.3S5.6 9.8 7.5 10.8c1 .5 1 0 1 0l.5-.5c.9-.9 1.9-.5 1.9-.5L12.4 11c1.4 1 1 1.9 1 1.9-.5.9-2.4 1.4-3.8.5" stroke="currentColor" stroke-width="1.2"/></svg>
+              574-747-5012
+            </a>
+            <a href="/contact">
+              <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="1" y="1" width="11" height="11" rx="2" stroke="currentColor" stroke-width="1.2"/><path d="M3.5 5h6M3.5 7.5h4" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>
+              Free Consultation
+            </a>
           </div>
         </div>
       </div>
@@ -1039,37 +2132,70 @@ footer { background: var(--dark); padding: 56px 5% 0; border-top: 1px solid rgba
 </footer>
 
 <script>
-// Mobile nav
-var hb=document.getElementById('hb'),mm=document.getElementById('mm');
-if(hb&&mm){
-  hb.addEventListener('click',function(){
-    var o=mm.classList.toggle('open');
-    hb.classList.toggle('open',o);
-  });
-  mm.querySelectorAll('a').forEach(function(a){
-    a.addEventListener('click',function(){
-      mm.classList.remove('open');
-      hb.classList.remove('open');
+document.addEventListener('DOMContentLoaded', function() {
+
+  // ---- Mobile nav ----
+  var hb = document.getElementById('hb');
+  var mm = document.getElementById('mm');
+
+  if (hb && mm) {
+    hb.addEventListener('click', function() {
+      var nowOpen = !mm.classList.contains('open');
+      mm.classList.toggle('open', nowOpen);
+      hb.classList.toggle('open', nowOpen);
     });
-  });
-}
-// FAQ accordion
-document.querySelectorAll('.fqi').forEach(function(item){
-  var btn=item.querySelector('.fqb'),ans=item.querySelector('.fqa');
-  if(!btn||!ans)return;
-  ans.style.display='none';
-  btn.addEventListener('click',function(){
-    var isOpen=item.classList.contains('open');
-    document.querySelectorAll('.fqi').forEach(function(i){
-      i.classList.remove('open');
-      var a=i.querySelector('.fqa');
-      if(a)a.style.display='none';
-    });
-    if(!isOpen){
-      item.classList.add('open');
-      ans.style.display='block';
+
+    var mmLinks = mm.querySelectorAll('a');
+    for (var i = 0; i < mmLinks.length; i++) {
+      mmLinks[i].addEventListener('click', function() {
+        mm.classList.remove('open');
+        hb.classList.remove('open');
+      });
     }
-  });
+  }
+
+  // ---- FAQ accordion ----
+  var fqItems = document.querySelectorAll('.fqi');
+
+  // Hide all answers on init via inline style
+  for (var j = 0; j < fqItems.length; j++) {
+    var initAns = fqItems[j].querySelector('.fqa');
+    if (initAns) {
+      initAns.style.display = 'none';
+    }
+  }
+
+  // Attach click handlers
+  for (var k = 0; k < fqItems.length; k++) {
+    (function(currentItem) {
+      var btn = currentItem.querySelector('.fqb');
+      if (!btn) return;
+
+      btn.addEventListener('click', function() {
+        var alreadyOpen = currentItem.classList.contains('open');
+
+        // Close all items
+        for (var m = 0; m < fqItems.length; m++) {
+          var otherItem = fqItems[m];
+          var otherAns = otherItem.querySelector('.fqa');
+          otherItem.classList.remove('open');
+          if (otherAns) {
+            otherAns.style.display = 'none';
+          }
+        }
+
+        // If this one was closed, open it now
+        if (!alreadyOpen) {
+          var thisAns = currentItem.querySelector('.fqa');
+          currentItem.classList.add('open');
+          if (thisAns) {
+            thisAns.style.display = 'block';
+          }
+        }
+      });
+    })(fqItems[k]);
+  }
+
 });
 </script>
 </body>
