@@ -200,13 +200,13 @@
   --section-pad: 96px 5%;
   --inner-max: 1160px;
 }
+html, body { overflow-x: clip; }
 html { scroll-behavior: smooth; }
 body {
   font-family: var(--font-body);
   background: var(--dark);
   color: var(--white);
   line-height: 1.6;
-  overflow-x: hidden;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
@@ -267,10 +267,15 @@ nav {
 
 /* ===================== HERO ===================== */
 .hero {
-  position: relative; overflow: hidden;
+  position: relative; overflow: visible;
   background: var(--dark);
   padding: 100px 5% 88px;
   min-height: 76vh; display: flex; align-items: center;
+}
+/* Contain the grid bg and glow without clipping nodes */
+.hero::after {
+  content: ''; position: absolute; inset: 0;
+  pointer-events: none; z-index: 0;
 }
 .hero-grid {
   position: absolute; inset: 0;
@@ -289,7 +294,8 @@ nav {
 }
 .hero-inner {
   position: relative; max-width: var(--inner-max); margin: 0 auto; width: 100%;
-  display: grid; grid-template-columns: 1fr 480px; gap: 56px; align-items: center;
+  display: grid; grid-template-columns: 1fr 460px; gap: 32px; align-items: center;
+  overflow: visible;
 }
 .hero-left { min-width: 0; }
 .hero-badge {
@@ -360,150 +366,13 @@ nav {
 
 /* ===================== HERO VISUAL WIDGET ===================== */
 .hero-visual {
-  position: relative;
   display: flex; align-items: center; justify-content: center;
+  width: 100%;
 }
-
-/* Outer orbit ring */
-.hv-orbit-wrap {
-  position: relative;
-  width: 420px; height: 420px;
-  flex-shrink: 0;
+.hv-svg {
+  width: 100%; max-width: 460px; height: auto;
+  display: block; overflow: visible;
 }
-
-/* Central brand bubble */
-.hv-center {
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  width: 110px; height: 110px;
-  background: linear-gradient(135deg, var(--navy), var(--teal));
-  border-radius: 28px;
-  display: flex; flex-direction: column;
-  align-items: center; justify-content: center; gap: 4px;
-  box-shadow: 0 0 0 12px rgba(10,137,163,.1), 0 0 40px rgba(10,137,163,.25);
-  z-index: 4;
-  animation: centerPulse 3s ease-in-out infinite;
-}
-@keyframes centerPulse {
-  0%,100% { box-shadow: 0 0 0 12px rgba(10,137,163,.1), 0 0 40px rgba(10,137,163,.25); }
-  50%      { box-shadow: 0 0 0 20px rgba(10,137,163,.06), 0 0 60px rgba(10,137,163,.35); }
-}
-.hv-center-label {
-  font-family: var(--font-display); font-weight: 900;
-  font-size: 1.1rem; color: #fff; letter-spacing: .08em; text-transform: uppercase;
-}
-.hv-center-sub {
-  font-size: 0.62rem; color: rgba(255,255,255,.65);
-  font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
-}
-
-/* Orbit rings (decorative circles) */
-.hv-ring {
-  position: absolute; top: 50%; left: 50%;
-  border-radius: 50%; border: 1px dashed;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-}
-.hv-ring-1 {
-  width: 200px; height: 200px;
-  border-color: rgba(6,65,135,.35);
-  animation: spinRing 18s linear infinite;
-}
-.hv-ring-2 {
-  width: 320px; height: 320px;
-  border-color: rgba(10,137,163,.22);
-  animation: spinRing 28s linear infinite reverse;
-}
-.hv-ring-3 {
-  width: 400px; height: 400px;
-  border-color: rgba(6,65,135,.12);
-  animation: spinRing 40s linear infinite;
-}
-@keyframes spinRing { from { transform: translate(-50%,-50%) rotate(0deg); } to { transform: translate(-50%,-50%) rotate(360deg); } }
-
-/* Platform nodes */
-.hv-node {
-  position: absolute;
-  width: 72px; height: 72px;
-  border-radius: 18px;
-  display: flex; flex-direction: column;
-  align-items: center; justify-content: center; gap: 3px;
-  font-size: 0.58rem; font-weight: 700; letter-spacing: .05em;
-  text-transform: uppercase; color: rgba(255,255,255,.8);
-  backdrop-filter: blur(8px);
-  transition: transform .3s, box-shadow .3s;
-  cursor: default; z-index: 3;
-}
-.hv-node:hover { transform: scale(1.12); }
-.hv-node svg { flex-shrink: 0; }
-
-/* Node positions — inner ring (r=100) */
-.hv-node-google  { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14);
-  top: calc(50% - 100px - 36px); left: calc(50% - 36px);
-  box-shadow: 0 4px 20px rgba(0,0,0,.3); }
-.hv-node-maps    { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14);
-  top: calc(50% - 36px); left: calc(50% + 100px - 36px);
-  box-shadow: 0 4px 20px rgba(0,0,0,.3); }
-
-/* Node positions — outer ring (r=160) */
-.hv-node-chatgpt { background: rgba(16,163,127,.12); border: 1px solid rgba(16,163,127,.3);
-  top: calc(50% - 160px - 36px); left: calc(50% - 36px);
-  box-shadow: 0 4px 20px rgba(16,163,127,.15); }
-.hv-node-gemini  { background: rgba(66,133,244,.12); border: 1px solid rgba(66,133,244,.3);
-  top: calc(50% + 60px); left: calc(50% + 130px - 36px);
-  box-shadow: 0 4px 20px rgba(66,133,244,.15); }
-.hv-node-perp    { background: rgba(162,89,255,.12); border: 1px solid rgba(162,89,255,.28);
-  top: calc(50% + 60px); left: calc(50% - 130px - 36px);
-  box-shadow: 0 4px 20px rgba(162,89,255,.15); }
-.hv-node-bing    { background: rgba(0,153,255,.1); border: 1px solid rgba(0,153,255,.25);
-  top: calc(50% - 36px); left: calc(50% - 160px - 36px);
-  box-shadow: 0 4px 20px rgba(0,153,255,.12); }
-
-/* Connector lines from center to nodes */
-.hv-lines {
-  position: absolute; inset: 0;
-  pointer-events: none; z-index: 1;
-}
-
-/* Status bar at bottom of widget */
-.hv-status {
-  position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
-  background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.1);
-  border-radius: 100px; padding: 7px 18px;
-  display: flex; align-items: center; gap: 8px;
-  white-space: nowrap; font-size: 0.72rem; font-weight: 700;
-  color: rgba(255,255,255,.7); letter-spacing: .06em; text-transform: uppercase;
-}
-.hv-status-dot {
-  width: 7px; height: 7px; border-radius: 50%; background: #22c55e;
-  animation: pulse 1.8s ease-in-out infinite; flex-shrink: 0;
-}
-
-/* Animated signal lines */
-.hv-signal {
-  position: absolute;
-  top: 50%; left: 50%;
-  width: 2px; height: 2px;
-  border-radius: 50%;
-  background: var(--teal);
-  transform: translate(-50%, -50%);
-  pointer-events: none; z-index: 2;
-}
-/* Individual signals animate along each axis */
-.hv-sig-1 { animation: sigUp 2.4s ease-in-out infinite; }
-.hv-sig-2 { animation: sigRight 2.4s ease-in-out infinite 0.4s; }
-.hv-sig-3 { animation: sigUpRight 2.6s ease-in-out infinite 0.8s; }
-.hv-sig-4 { animation: sigUpLeft 2.8s ease-in-out infinite 1.2s; }
-.hv-sig-5 { animation: sigLeft 2.4s ease-in-out infinite 1.6s; }
-.hv-sig-6 { animation: sigDownRight 2.6s ease-in-out infinite 2s; }
-
-@keyframes sigUp        { 0%,100%{opacity:0;transform:translate(-50%,-50%)} 20%{opacity:1} 80%{opacity:0;transform:translate(-50%, calc(-50% - 100px))} }
-@keyframes sigRight     { 0%,100%{opacity:0;transform:translate(-50%,-50%)} 20%{opacity:1} 80%{opacity:0;transform:translate(calc(-50% + 100px), -50%)} }
-@keyframes sigUpRight   { 0%,100%{opacity:0;transform:translate(-50%,-50%)} 20%{opacity:1} 80%{opacity:0;transform:translate(calc(-50% + 130px), calc(-50% - 160px))} }
-@keyframes sigUpLeft    { 0%,100%{opacity:0;transform:translate(-50%,-50%)} 20%{opacity:1} 80%{opacity:0;transform:translate(calc(-50% - 130px), calc(-50% - 160px))} }
-@keyframes sigLeft      { 0%,100%{opacity:0;transform:translate(-50%,-50%)} 20%{opacity:1} 80%{opacity:0;transform:translate(calc(-50% - 160px), -50%)} }
-@keyframes sigDownRight { 0%,100%{opacity:0;transform:translate(-50%,-50%)} 20%{opacity:1} 80%{opacity:0;transform:translate(calc(-50% + 130px), calc(-50% + 96px))} }
 
 /* ===================== MARQUEE ===================== */
 .mq { background: #ebebeb; overflow: hidden; border-bottom: 1.5px solid #d4d4d4; }
@@ -574,71 +443,137 @@ nav {
 }
 
 /* ===================== PAIN POINTS ===================== */
-.pain-section { background: var(--off-white); }
-.pain-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 52px; }
+.pain-section { background: var(--dark2); }
+
+.pain-section-header { margin-bottom: 64px; }
+
+.pain-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  margin-top: 0;
+  background: rgba(255,255,255,.06);
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1.5px solid rgba(255,255,255,.06);
+}
+
 .pain-card {
-  background: #fff; border-radius: 18px; padding: 0;
-  border: 1.5px solid transparent;
-  transition: border-color .25s, transform .25s, box-shadow .25s;
+  background: #0e1520;
+  padding: 0;
+  border: none;
+  transition: background .25s;
+  position: relative;
   overflow: hidden;
 }
-.pain-card:hover {
-  border-color: var(--navy);
-  transform: translateY(-3px);
-  box-shadow: 0 14px 44px rgba(6,65,135,.11);
+.pain-card:hover { background: #121d2e; }
+
+/* Accent bar slides in on hover */
+.pain-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--navy), var(--teal));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .35s ease;
 }
-/* Numbered header bar */
-.pain-header-bar {
-  display: flex; align-items: center; gap: 14px;
-  padding: 20px 24px 18px;
-  border-bottom: 1.5px solid #f0f0f0;
+.pain-card:hover::before { transform: scaleX(1); }
+
+/* Big number watermark */
+.pain-num-watermark {
+  position: absolute;
+  top: -10px; right: 16px;
+  font-family: var(--font-display);
+  font-size: 7rem;
+  font-weight: 900;
+  color: rgba(6,65,135,.12);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+  letter-spacing: -.02em;
 }
-.pain-num-badge {
-  width: 38px; height: 38px; flex-shrink: 0;
-  border-radius: 10px;
-  background: var(--navy);
-  color: #fff;
-  font-family: var(--font-display); font-size: 1rem; font-weight: 900;
-  display: flex; align-items: center; justify-content: center;
-  letter-spacing: .02em;
+
+.pain-inner { padding: 36px 32px 30px; position: relative; }
+
+/* Service name tag */
+.pain-service-tag {
+  display: inline-flex; align-items: center; gap: 7px;
+  margin-bottom: 20px;
+  background: rgba(6,65,135,.2);
+  border: 1px solid rgba(6,65,135,.45);
+  border-radius: 100px;
+  padding: 5px 14px;
+  font-size: 0.7rem; font-weight: 700;
+  letter-spacing: .1em; text-transform: uppercase;
+  color: rgba(255,255,255,.7);
 }
-.pain-card h3 {
-  font-family: var(--font-display); font-size: 1.12rem; font-weight: 900;
-  color: #0a0a0a; text-transform: uppercase; letter-spacing: .03em;
+.pain-service-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--teal); flex-shrink: 0;
+}
+
+/* The problem — BIG quote */
+.pain-quote {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 900;
   line-height: 1.15;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -.01em;
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 22px;
 }
-.pain-body { padding: 18px 24px 22px; }
-/* Problem pill */
-.pain-problem-row {
-  display: flex; align-items: flex-start; gap: 10px; margin-bottom: 16px;
+/* Left quote bar */
+.pain-quote::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 4px; bottom: 4px;
+  width: 4px;
+  background: linear-gradient(180deg, var(--teal), var(--navy));
+  border-radius: 4px;
 }
-.pain-icon-wrap {
-  width: 32px; height: 32px; flex-shrink: 0;
-  border-radius: 8px; background: #fff3e8; border: 1.5px solid #ffd9b8;
-  display: flex; align-items: center; justify-content: center; margin-top: 1px;
+
+/* Divider */
+.pain-divider {
+  height: 1px;
+  background: rgba(255,255,255,.07);
+  margin: 20px 0;
 }
-.pain-problem {
-  font-size: 0.875rem; color: #b85e00; line-height: 1.62;
-  font-style: italic; flex: 1;
+
+/* The fix */
+.pain-fix-label {
+  font-size: 0.68rem; font-weight: 700;
+  letter-spacing: .12em; text-transform: uppercase;
+  color: var(--teal); margin-bottom: 8px;
+  display: block;
 }
-/* Solution */
-.pain-solution-row {
-  display: flex; align-items: flex-start; gap: 10px; margin-bottom: 16px;
+.pain-solution {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,.55);
+  line-height: 1.72;
+  margin-bottom: 24px;
 }
-.pain-check-wrap {
-  width: 32px; height: 32px; flex-shrink: 0;
-  border-radius: 8px; background: #e8f5ee; border: 1.5px solid #b3d9c4;
-  display: flex; align-items: center; justify-content: center; margin-top: 1px;
-}
-.pain-solution { font-size: 0.875rem; color: #333; line-height: 1.68; flex: 1; }
+
 .pain-fix {
-  display: inline-flex; align-items: center; gap: 6px;
-  background: var(--navy); color: #fff; border-radius: 100px;
-  padding: 6px 16px; font-size: 0.72rem; font-weight: 700;
-  letter-spacing: .06em; text-transform: uppercase;
-  transition: background .2s;
+  display: inline-flex; align-items: center; gap: 8px;
+  background: transparent;
+  border: 1.5px solid rgba(255,255,255,.18);
+  color: rgba(255,255,255,.8);
+  border-radius: 100px;
+  padding: 8px 20px;
+  font-size: 0.75rem; font-weight: 700;
+  letter-spacing: .07em; text-transform: uppercase;
+  transition: background .2s, border-color .2s, color .2s;
 }
-.pain-fix:hover { background: var(--teal); }
+.pain-fix:hover {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: #fff;
+}
 
 /* ===================== COMPARISON ===================== */
 .cmp-section { background: var(--dark); }
@@ -967,24 +902,18 @@ footer {
 @media (max-width: 1024px) {
   :root { --section-pad: 80px 5%; }
 
-  /* Hero: stack vertically, hide widget */
-  .hero-inner { grid-template-columns: 1fr; gap: 48px; }
-  .hv-orbit-wrap { width: 340px; height: 340px; }
-  .hv-ring-3 { width: 320px; height: 320px; }
-  .hv-ring-2 { width: 240px; height: 240px; }
-  .hv-ring-1 { width: 160px; height: 160px; }
-  .hv-node-chatgpt { top: calc(50% - 120px - 36px); left: calc(50% - 36px); }
-  .hv-node-gemini  { top: calc(50% + 50px); left: calc(50% + 100px - 36px); }
-  .hv-node-perp    { top: calc(50% + 50px); left: calc(50% - 100px - 36px); }
-  .hv-node-bing    { top: calc(50% - 36px); left: calc(50% - 120px - 36px); }
-  .hv-node-google  { top: calc(50% - 80px - 36px); left: calc(50% - 36px); }
-  .hv-node-maps    { top: calc(50% - 36px); left: calc(50% + 80px - 36px); }
+  /* Hero: stack vertically at tablet */
+  .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+  .hero-visual { justify-content: center; }
+  .hv-svg { max-width: 380px; }
 
   /* Why grid: 2 columns */
   .why-grid { grid-template-columns: repeat(2, 1fr); }
 
   /* Pain grid: 1 column */
   .pain-grid { grid-template-columns: 1fr; }
+  .pain-inner { padding: 28px 24px 24px; }
+  .pain-quote { font-size: 1.5rem; }
 
   /* Founder: stack vertically */
   .founder-inner { grid-template-columns: 1fr; gap: 40px; padding: 0; }
@@ -1037,9 +966,10 @@ footer {
   .why-card { padding: 28px 24px; }
 
   /* Pain grid: 1 column */
-  .pain-grid { grid-template-columns: 1fr; gap: 14px; }
-  .pain-header-bar { padding: 16px 18px 14px; gap: 12px; }
-  .pain-body { padding: 14px 18px 18px; }
+  .pain-grid { grid-template-columns: 1fr; gap: 2px; }
+  .pain-inner { padding: 24px 20px 22px; }
+  .pain-quote { font-size: clamp(1.25rem, 4vw, 1.6rem); }
+  .pain-num-watermark { font-size: 5rem; }
 
   /* Comparison table */
   .cmp-wrap {
@@ -1108,10 +1038,9 @@ footer {
   .why-icon { width: 44px; height: 44px; margin-bottom: 14px; }
 
   /* Pain cards */
-  .pain-header-bar { padding: 14px 16px 12px; }
-  .pain-body { padding: 12px 16px 16px; }
-  .pain-num-badge { width: 34px; height: 34px; font-size: 0.9rem; border-radius: 8px; }
-  .pain-card h3 { font-size: 1rem; }
+  .pain-inner { padding: 20px 18px 20px; }
+  .pain-quote { font-size: 1.2rem; }
+  .pain-num-watermark { font-size: 4.5rem; }
 
   /* Table: hide category column on very small screens, show inline */
   .th-cat, .td-cat { display: none; }
@@ -1233,132 +1162,214 @@ footer {
       </div>
     </div>
 
-    <!-- RIGHT: animated brand visibility widget -->
+    <!-- RIGHT: pure SVG widget — zero clipping possible -->
     <div class="hero-visual" aria-hidden="true">
-      <div class="hv-orbit-wrap">
+      <svg class="hv-svg" viewBox="0 0 500 520" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="cg" x1="0" y1="0" x2="96" y2="96" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#064187"/>
+            <stop offset="100%" stop-color="#0A89A3"/>
+          </linearGradient>
+          <style>
+            .hv-svg { width:100%; max-width:460px; height:auto; display:block; }
+            .ri { animation: sp1 18s linear infinite; transform-origin:250px 250px; }
+            .rm { animation: sp2 28s linear infinite reverse; transform-origin:250px 250px; }
+            .ro { animation: sp3 40s linear infinite; transform-origin:250px 250px; }
+            @keyframes sp1 { to { transform:rotate(360deg); } }
+            @keyframes sp2 { to { transform:rotate(360deg); } }
+            @keyframes sp3 { to { transform:rotate(360deg); } }
+            .cg { animation: cglow 3s ease-in-out infinite; transform-origin:250px 250px; }
+            @keyframes cglow { 0%,100%{opacity:.15;r:56} 50%{opacity:.3;r:70} }
+            .sdot { animation: sdp 1.6s ease-in-out infinite; }
+            @keyframes sdp { 0%,100%{opacity:1} 50%{opacity:.25} }
+          </style>
+        </defs>
 
-        <!-- Decorative spinning rings -->
-        <div class="hv-ring hv-ring-1"></div>
-        <div class="hv-ring hv-ring-2"></div>
-        <div class="hv-ring hv-ring-3"></div>
+        <!-- Glow -->
+        <circle class="cg" cx="250" cy="250" r="56" fill="#0A89A3"/>
 
-        <!-- SVG connector lines -->
-        <svg class="hv-lines" viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- Center to Google (top, inner) -->
-          <line x1="210" y1="210" x2="210" y2="110" stroke="url(#lg1)" stroke-width="1" stroke-dasharray="4 4"/>
-          <!-- Center to Maps (right, inner) -->
-          <line x1="210" y1="210" x2="310" y2="210" stroke="url(#lg2)" stroke-width="1" stroke-dasharray="4 4"/>
-          <!-- Center to ChatGPT (top, outer) -->
-          <line x1="210" y1="210" x2="210" y2="50" stroke="url(#lg3)" stroke-width="1" stroke-dasharray="3 5" opacity=".7"/>
-          <!-- Center to Gemini (bottom-right, outer) -->
-          <line x1="210" y1="210" x2="340" y2="306" stroke="url(#lg4)" stroke-width="1" stroke-dasharray="3 5" opacity=".7"/>
-          <!-- Center to Perplexity (bottom-left, outer) -->
-          <line x1="210" y1="210" x2="80" y2="306" stroke="url(#lg5)" stroke-width="1" stroke-dasharray="3 5" opacity=".7"/>
-          <!-- Center to Bing/Copilot (left, outer) -->
-          <line x1="210" y1="210" x2="50" y2="210" stroke="url(#lg6)" stroke-width="1" stroke-dasharray="3 5" opacity=".7"/>
-          <defs>
-            <linearGradient id="lg1" x1="210" y1="210" x2="210" y2="110" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#0A89A3" stop-opacity=".8"/>
-              <stop offset="100%" stop-color="#0A89A3" stop-opacity=".15"/>
-            </linearGradient>
-            <linearGradient id="lg2" x1="210" y1="210" x2="310" y2="210" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#064187" stop-opacity=".8"/>
-              <stop offset="100%" stop-color="#064187" stop-opacity=".15"/>
-            </linearGradient>
-            <linearGradient id="lg3" x1="210" y1="210" x2="210" y2="50" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#10a37f" stop-opacity=".6"/>
-              <stop offset="100%" stop-color="#10a37f" stop-opacity=".1"/>
-            </linearGradient>
-            <linearGradient id="lg4" x1="210" y1="210" x2="340" y2="306" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#4285f4" stop-opacity=".6"/>
-              <stop offset="100%" stop-color="#4285f4" stop-opacity=".1"/>
-            </linearGradient>
-            <linearGradient id="lg5" x1="210" y1="210" x2="80" y2="306" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#a259ff" stop-opacity=".6"/>
-              <stop offset="100%" stop-color="#a259ff" stop-opacity=".1"/>
-            </linearGradient>
-            <linearGradient id="lg6" x1="210" y1="210" x2="50" y2="210" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stop-color="#0099ff" stop-opacity=".6"/>
-              <stop offset="100%" stop-color="#0099ff" stop-opacity=".1"/>
-            </linearGradient>
-          </defs>
-        </svg>
+        <!-- Rings -->
+        <circle class="ri" cx="250" cy="250" r="95"  fill="none" stroke="#064187" stroke-width="1" stroke-dasharray="6 6" opacity=".5"/>
+        <circle class="rm" cx="250" cy="250" r="158" fill="none" stroke="#0A89A3" stroke-width="1" stroke-dasharray="5 7" opacity=".3"/>
+        <circle class="ro" cx="250" cy="250" r="215" fill="none" stroke="#064187" stroke-width="1" stroke-dasharray="3 8" opacity=".15"/>
 
-        <!-- Traveling signal dots -->
-        <div class="hv-signal hv-sig-1"></div>
-        <div class="hv-signal hv-sig-2"></div>
-        <div class="hv-signal hv-sig-3" style="background:#10a37f"></div>
-        <div class="hv-signal hv-sig-4" style="background:#a259ff"></div>
-        <div class="hv-signal hv-sig-5" style="background:#0099ff"></div>
-        <div class="hv-signal hv-sig-6" style="background:#4285f4"></div>
+        <!-- Spokes inner r=95 -->
+        <line x1="250" y1="250" x2="250" y2="155" stroke="#0A89A3" stroke-width="1" stroke-dasharray="4 5" opacity=".6"/>
+        <line x1="250" y1="250" x2="345" y2="250" stroke="#064187" stroke-width="1" stroke-dasharray="4 5" opacity=".6"/>
+        <line x1="250" y1="250" x2="250" y2="345" stroke="#0A89A3" stroke-width="1" stroke-dasharray="4 5" opacity=".6"/>
+        <line x1="250" y1="250" x2="155" y2="250" stroke="#064187" stroke-width="1" stroke-dasharray="4 5" opacity=".6"/>
+        <!-- Spokes outer r=158 at 40deg: sin*158,cos*158 from 250,250 -->
+        <!-- 0:250,92  40:352,129  80:406,222  120:387,329  160:334,399
+             200:166,399 240:113,329 280:94,222 320:148,129 -->
+        <line x1="250" y1="250" x2="250" y2="92"  stroke="#0A89A3" stroke-width="1" stroke-dasharray="3 6" opacity=".45"/>
+        <line x1="250" y1="250" x2="352" y2="129" stroke="#064187" stroke-width="1" stroke-dasharray="3 6" opacity=".45"/>
+        <line x1="250" y1="250" x2="406" y2="222" stroke="#0A89A3" stroke-width="1" stroke-dasharray="3 6" opacity=".45"/>
+        <line x1="250" y1="250" x2="387" y2="329" stroke="#064187" stroke-width="1" stroke-dasharray="3 6" opacity=".45"/>
+        <line x1="250" y1="250" x2="334" y2="399" stroke="#0A89A3" stroke-width="1" stroke-dasharray="3 6" opacity=".45"/>
+        <line x1="250" y1="250" x2="166" y2="399" stroke="#064187" stroke-width="1" stroke-dasharray="3 6" opacity=".45"/>
+        <line x1="250" y1="250" x2="113" y2="329" stroke="#0A89A3" stroke-width="1" stroke-dasharray="3 6" opacity=".45"/>
+        <line x1="250" y1="250" x2="94"  y2="222" stroke="#064187" stroke-width="1" stroke-dasharray="3 6" opacity=".45"/>
+        <line x1="250" y1="250" x2="148" y2="129" stroke="#0A89A3" stroke-width="1" stroke-dasharray="3 6" opacity=".45"/>
 
-        <!-- Center: YOUR BRAND -->
-        <div class="hv-center">
-          <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
-            <path d="M13 3C9.13 3 6 6.13 6 10C6 15.25 13 23 13 23S20 15.25 20 10C20 6.13 16.87 3 13 3Z" fill="rgba(255,255,255,.18)" stroke="#fff" stroke-width="1.4"/>
-            <circle cx="13" cy="10" r="2.8" fill="#fff"/>
-          </svg>
-          <div class="hv-center-label">Your Brand</div>
-          <div class="hv-center-sub">Everywhere</div>
-        </div>
+        <!-- Signal dots animateMotion along each spoke -->
+        <circle r="4" fill="#0A89A3" opacity="0"><animateMotion dur="2s"   repeatCount="indefinite" begin="0s"    path="M250,250 L250,155"/><animate attributeName="opacity" dur="2s" repeatCount="indefinite" begin="0s" values="0;1;1;0;0" keyTimes="0;.1;.7;.9;1"/></circle>
+        <circle r="4" fill="#064187" opacity="0"><animateMotion dur="2s"   repeatCount="indefinite" begin="0.5s"  path="M250,250 L345,250"/><animate attributeName="opacity" dur="2s" repeatCount="indefinite" begin="0.5s" values="0;1;1;0;0" keyTimes="0;.1;.7;.9;1"/></circle>
+        <circle r="4" fill="#0A89A3" opacity="0"><animateMotion dur="2s"   repeatCount="indefinite" begin="1s"    path="M250,250 L250,345"/><animate attributeName="opacity" dur="2s" repeatCount="indefinite" begin="1s" values="0;1;1;0;0" keyTimes="0;.1;.7;.9;1"/></circle>
+        <circle r="4" fill="#064187" opacity="0"><animateMotion dur="2s"   repeatCount="indefinite" begin="1.5s"  path="M250,250 L155,250"/><animate attributeName="opacity" dur="2s" repeatCount="indefinite" begin="1.5s" values="0;1;1;0;0" keyTimes="0;.1;.7;.9;1"/></circle>
+        <circle r="4" fill="#0A89A3" opacity="0"><animateMotion dur="2.8s" repeatCount="indefinite" begin="0s"    path="M250,250 L250,92"/><animate  attributeName="opacity" dur="2.8s" repeatCount="indefinite" begin="0s" values="0;1;1;0;0" keyTimes="0;.1;.7;.9;1"/></circle>
+        <circle r="4" fill="#064187" opacity="0"><animateMotion dur="2.8s" repeatCount="indefinite" begin="0.31s" path="M250,250 L352,129"/><animate attributeName="opacity" dur="2.8s" repeatCount="indefinite" begin="0.31s" values="0;1;1;0;0" keyTimes="0;.1;.7;.9;1"/></circle>
+        <circle r="4" fill="#0A89A3" opacity="0"><animateMotion dur="2.8s" repeatCount="indefinite" begin="0.62s" path="M250,250 L406,222"/><animate attributeName="opacity" dur="2.8s" repeatCount="indefinite" begin="0.62s" values="0;1;1;0;0" keyTimes="0;.1;.7;.9;1"/></circle>
+        <circle r="4" fill="#064187" opacity="0"><animateMotion dur="2.8s" repeatCount="indefinite" begin="0.93s" path="M250,250 L387,329"/><animate attributeName="opacity" dur="2.8s" repeatCount="indefinite" begin="0.93s" values="0;1;1;0;0" keyTimes="0;.1;.7;.9;1"/></circle>
+        <circle r="4" fill="#0A89A3" opacity="0"><animateMotion dur="2.8s" repeatCount="indefinite" begin="1.24s" path="M250,250 L334,399"/><animate attributeName="opacity" dur="2.8s" repeatCount="indefinite" begin="1.24s" values="0;1;1;0;0" keyTimes="0;.1;.7;.9;1"/></circle>
+        <circle r="4" fill="#064187" opacity="0"><animateMotion dur="2.8s" repeatCount="indefinite" begin="1.55s" path="M250,250 L166,399"/><animate attributeName="opacity" dur="2.8s" repeatCount="indefinite" begin="1.55s" values="0;1;1;0;0" keyTimes="0;.1;.7;.9;1"/></circle>
+        <circle r="4" fill="#0A89A3" opacity="0"><animateMotion dur="2.8s" repeatCount="indefinite" begin="1.86s" path="M250,250 L113,329"/><animate attributeName="opacity" dur="2.8s" repeatCount="indefinite" begin="1.86s" values="0;1;1;0;0" keyTimes="0;.1;.7;.9;1"/></circle>
+        <circle r="4" fill="#064187" opacity="0"><animateMotion dur="2.8s" repeatCount="indefinite" begin="2.17s" path="M250,250 L94,222"/><animate  attributeName="opacity" dur="2.8s" repeatCount="indefinite" begin="2.17s" values="0;1;1;0;0" keyTimes="0;.1;.7;.9;1"/></circle>
+        <circle r="4" fill="#0A89A3" opacity="0"><animateMotion dur="2.8s" repeatCount="indefinite" begin="2.48s" path="M250,250 L148,129"/><animate attributeName="opacity" dur="2.8s" repeatCount="indefinite" begin="2.48s" values="0;1;1;0;0" keyTimes="0;.1;.7;.9;1"/></circle>
 
-        <!-- Inner ring nodes -->
-        <div class="hv-node hv-node-google">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
-            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
-            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
-            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
-          </svg>
-          <span>Google</span>
-        </div>
+        <!-- INNER NODES (64x64): Google(218,123) Maps(313,218) Email(218,313) SMS(123,218) -->
+        <!-- Google -->
+        <g transform="translate(218,123)">
+          <rect width="64" height="64" rx="13" fill="#081428" stroke="#064187" stroke-width="1.5" opacity=".95"/>
+          <rect width="64" height="64" rx="13" fill="#064187" fill-opacity=".22"/>
+          <text x="32" y="30" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" font-weight="900" fill="#fff">G</text>
+          <text x="32" y="54" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-weight="700" letter-spacing="1" fill="rgba(255,255,255,.7)">GOOGLE</text>
+        </g>
+        <!-- Maps -->
+        <g transform="translate(313,218)">
+          <rect width="64" height="64" rx="13" fill="#081428" stroke="#0A89A3" stroke-width="1.5" opacity=".95"/>
+          <rect width="64" height="64" rx="13" fill="#0A89A3" fill-opacity=".18"/>
+          <ellipse cx="32" cy="24" rx="9" ry="9" fill="none" stroke="#fff" stroke-width="1.5"/>
+          <circle cx="32" cy="24" r="3" fill="#fff"/>
+          <path d="M32 33 Q26 42 32 48 Q38 42 32 33Z" fill="#fff"/>
+          <text x="32" y="60" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-weight="700" letter-spacing="1" fill="rgba(255,255,255,.7)">MAPS</text>
+        </g>
+        <!-- Email -->
+        <g transform="translate(218,313)">
+          <rect width="64" height="64" rx="13" fill="#081428" stroke="#064187" stroke-width="1.5" opacity=".95"/>
+          <rect width="64" height="64" rx="13" fill="#064187" fill-opacity=".22"/>
+          <rect x="12" y="18" width="40" height="26" rx="3" fill="none" stroke="#fff" stroke-width="1.4"/>
+          <path d="M12 22l20 12 20-12" stroke="#fff" stroke-width="1.3" stroke-linecap="round" fill="none"/>
+          <text x="32" y="58" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-weight="700" letter-spacing="1" fill="rgba(255,255,255,.7)">EMAIL</text>
+        </g>
+        <!-- SMS -->
+        <g transform="translate(123,218)">
+          <rect width="64" height="64" rx="13" fill="#081428" stroke="#0A89A3" stroke-width="1.5" opacity=".95"/>
+          <rect width="64" height="64" rx="13" fill="#0A89A3" fill-opacity=".18"/>
+          <path d="M10 14h44a3 3 0 013 3v16a3 3 0 01-3 3H30l-8 8v-8H10a3 3 0 01-3-3V17a3 3 0 013-3z" fill="none" stroke="#fff" stroke-width="1.4"/>
+          <line x1="16" y1="23" x2="48" y2="23" stroke="#fff" stroke-width="1.2" stroke-linecap="round"/>
+          <line x1="16" y1="29" x2="40" y2="29" stroke="#fff" stroke-width="1.2" stroke-linecap="round"/>
+          <text x="32" y="58" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-weight="700" letter-spacing="1" fill="rgba(255,255,255,.7)">SMS</text>
+        </g>
 
-        <div class="hv-node hv-node-maps">
-          <svg width="20" height="22" viewBox="0 0 20 24" fill="none">
-            <path d="M10 1C6.13 1 3 4.13 3 8c0 5.25 7 14 7 14s7-8.75 7-14c0-3.87-3.13-7-7-7z" fill="#EA4335"/>
-            <circle cx="10" cy="8" r="2.8" fill="#fff"/>
-          </svg>
-          <span>Maps</span>
-        </div>
+        <!-- OUTER NODES (68x68, half=34): tx = nodeCX-34, ty = nodeCY-34
+             ChatGPT(250,92):  tx=216,ty=58
+             Gemini(352,129):  tx=318,ty=95
+             Perplexity(406,222): tx=372,ty=188
+             Social(387,329):  tx=353,ty=295
+             Grok(334,399):    tx=300,ty=365
+             DDG(166,399):     tx=132,ty=365
+             Copilot(113,329): tx=79,ty=295
+             Bing(94,222):     tx=60,ty=188
+             Claude(148,129):  tx=114,ty=95  -->
+        <!-- ChatGPT -->
+        <g transform="translate(216,58)">
+          <rect width="68" height="68" rx="14" fill="#081428" stroke="#0A89A3" stroke-width="1.5" opacity=".95"/>
+          <rect width="68" height="68" rx="14" fill="#064187" fill-opacity=".28"/>
+          <circle cx="34" cy="26" r="12" fill="none" stroke="#fff" stroke-width="1.5"/>
+          <line x1="26" y1="26" x2="42" y2="26" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="34" y1="18" x2="34" y2="34" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+          <text x="34" y="57" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" font-weight="700" letter-spacing=".5" fill="rgba(255,255,255,.8)">CHATGPT</text>
+        </g>
+        <!-- Gemini -->
+        <g transform="translate(318,95)">
+          <rect width="68" height="68" rx="14" fill="#081428" stroke="#064187" stroke-width="1.5" opacity=".95"/>
+          <rect width="68" height="68" rx="14" fill="#0A89A3" fill-opacity=".2"/>
+          <polygon points="34,12 38,24 50,24 41,31 44,44 34,37 24,44 27,31 18,24 30,24" fill="none" stroke="#fff" stroke-width="1.4" stroke-linejoin="round"/>
+          <text x="34" y="57" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" font-weight="700" letter-spacing=".5" fill="rgba(255,255,255,.8)">GEMINI</text>
+        </g>
+        <!-- Perplexity -->
+        <g transform="translate(372,188)">
+          <rect width="68" height="68" rx="14" fill="#081428" stroke="#0A89A3" stroke-width="1.5" opacity=".95"/>
+          <rect width="68" height="68" rx="14" fill="#064187" fill-opacity=".22"/>
+          <circle cx="34" cy="26" r="12" fill="none" stroke="#fff" stroke-width="1.4"/>
+          <line x1="26" y1="26" x2="42" y2="26" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/>
+          <line x1="34" y1="18" x2="34" y2="34" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/>
+          <circle cx="34" cy="26" r="3.5" fill="rgba(255,255,255,.3)"/>
+          <text x="34" y="57" text-anchor="middle" font-family="Arial,sans-serif" font-size="7" font-weight="700" letter-spacing=".3" fill="rgba(255,255,255,.8)">PERPLEXITY</text>
+        </g>
+        <!-- Social -->
+        <g transform="translate(353,295)">
+          <rect width="68" height="68" rx="14" fill="#081428" stroke="#064187" stroke-width="1.5" opacity=".95"/>
+          <rect width="68" height="68" rx="14" fill="#0A89A3" fill-opacity=".2"/>
+          <circle cx="16" cy="30" r="6" fill="none" stroke="#fff" stroke-width="1.4"/>
+          <circle cx="52" cy="16" r="6" fill="none" stroke="#fff" stroke-width="1.4"/>
+          <circle cx="52" cy="44" r="6" fill="none" stroke="#fff" stroke-width="1.4"/>
+          <line x1="22" y1="26" x2="46" y2="20" stroke="rgba(255,255,255,.8)" stroke-width="1.3" stroke-linecap="round"/>
+          <line x1="22" y1="34" x2="46" y2="40" stroke="rgba(255,255,255,.8)" stroke-width="1.3" stroke-linecap="round"/>
+          <text x="34" y="60" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" font-weight="700" letter-spacing=".5" fill="rgba(255,255,255,.8)">SOCIAL</text>
+        </g>
+        <!-- Grok -->
+        <g transform="translate(300,365)">
+          <rect width="68" height="68" rx="14" fill="#081428" stroke="#0A89A3" stroke-width="1.5" opacity=".95"/>
+          <rect width="68" height="68" rx="14" fill="#064187" fill-opacity=".22"/>
+          <path d="M14 46V16l30 15L14 46z" fill="rgba(255,255,255,.15)" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/>
+          <line x1="14" y1="31" x2="34" y2="31" stroke="#fff" stroke-width="1.3" stroke-linecap="round"/>
+          <text x="34" y="60" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" font-weight="700" letter-spacing=".5" fill="rgba(255,255,255,.8)">GROK</text>
+        </g>
+        <!-- DDG -->
+        <g transform="translate(132,365)">
+          <rect width="68" height="68" rx="14" fill="#081428" stroke="#064187" stroke-width="1.5" opacity=".95"/>
+          <rect width="68" height="68" rx="14" fill="#0A89A3" fill-opacity=".18"/>
+          <!-- Shield icon — privacy/no-tracking, DuckDuckGo's core identity -->
+          <path d="M34 10 L50 17 L50 30 C50 40 42 47 34 50 C26 47 18 40 18 30 L18 17 Z" fill="rgba(255,255,255,.15)" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/>
+          <!-- Checkmark inside shield -->
+          <path d="M27 30 L32 35 L42 24" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <text x="34" y="62" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" font-weight="700" letter-spacing=".5" fill="rgba(255,255,255,.8)">DDG</text>
+        </g>
+        <!-- Copilot -->
+        <g transform="translate(79,295)">
+          <rect width="68" height="68" rx="14" fill="#081428" stroke="#0A89A3" stroke-width="1.5" opacity=".95"/>
+          <rect width="68" height="68" rx="14" fill="#064187" fill-opacity=".22"/>
+          <rect x="14" y="13" width="16" height="16" rx="3" fill="none" stroke="#fff" stroke-width="1.3"/>
+          <rect x="38" y="13" width="16" height="16" rx="3" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="1.3"/>
+          <rect x="14" y="37" width="16" height="16" rx="3" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="1.3"/>
+          <rect x="38" y="37" width="16" height="16" rx="3" fill="none" stroke="#fff" stroke-width="1.3"/>
+          <text x="34" y="62" text-anchor="middle" font-family="Arial,sans-serif" font-size="7.5" font-weight="700" letter-spacing=".3" fill="rgba(255,255,255,.8)">COPILOT</text>
+        </g>
+        <!-- Bing -->
+        <g transform="translate(60,188)">
+          <rect width="68" height="68" rx="14" fill="#081428" stroke="#064187" stroke-width="1.5" opacity=".95"/>
+          <rect width="68" height="68" rx="14" fill="#0A89A3" fill-opacity=".18"/>
+          <path d="M20 8v40l12-7 12-9-12-6 2-18L20 8z" fill="rgba(255,255,255,.15)" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/>
+          <text x="34" y="60" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" font-weight="700" letter-spacing=".5" fill="rgba(255,255,255,.8)">BING</text>
+        </g>
+        <!-- Claude AI -->
+        <g transform="translate(114,95)">
+          <rect width="68" height="68" rx="14" fill="#081428" stroke="#0A89A3" stroke-width="1.5" opacity=".95"/>
+          <rect width="68" height="68" rx="14" fill="#064187" fill-opacity=".22"/>
+          <path d="M34 10C23 10 14 19 14 30c0 7 4 13 9 17L21 50l9-4a20 20 0 100-36z" fill="rgba(255,255,255,.12)" stroke="#fff" stroke-width="1.4"/>
+          <line x1="24" y1="29" x2="44" y2="29" stroke="#fff" stroke-width="1.3" stroke-linecap="round"/>
+          <line x1="24" y1="34" x2="40" y2="34" stroke="#fff" stroke-width="1.3" stroke-linecap="round"/>
+          <text x="34" y="58" text-anchor="middle" font-family="Arial,sans-serif" font-size="7.5" font-weight="700" letter-spacing=".3" fill="rgba(255,255,255,.8)">CLAUDE AI</text>
+        </g>
 
-        <!-- Outer ring nodes -->
-        <div class="hv-node hv-node-chatgpt">
-          <svg width="22" height="22" viewBox="0 0 41 41" fill="none">
-            <path d="M37.5 20.5a17 17 0 01-17 17 17 17 0 01-17-17 17 17 0 0117-17 17 17 0 0117 17z" stroke="#10a37f" stroke-width="2" fill="rgba(16,163,127,.15)"/>
-            <path d="M13 20.5h15M20.5 13v15" stroke="#10a37f" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-          <span>ChatGPT</span>
-        </div>
+        <!-- CENTER TILE -->
+        <g transform="translate(202,202)">
+          <rect width="96" height="96" rx="22" fill="url(#cg)"/>
+          <ellipse cx="48" cy="30" rx="10" ry="10" fill="rgba(255,255,255,.22)" stroke="#fff" stroke-width="1.5"/>
+          <circle cx="48" cy="30" r="3.5" fill="#fff"/>
+          <path d="M48 40 Q41 50 48 58 Q55 50 48 40Z" fill="#fff"/>
+          <text x="48" y="76" text-anchor="middle" font-family="'Barlow Condensed',Arial,sans-serif" font-size="12" font-weight="900" letter-spacing="2" fill="#fff">YOUR BRAND</text>
+          <text x="48" y="89" text-anchor="middle" font-family="'Barlow Condensed',Arial,sans-serif" font-size="8.5" font-weight="700" letter-spacing="2" fill="rgba(255,255,255,.68)">EVERYWHERE</text>
+        </g>
 
-        <div class="hv-node hv-node-gemini">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-            <path d="M12 2L9 9H2l5.5 4-2 7L12 16l6.5 4-2-7L22 9h-7L12 2z" fill="rgba(66,133,244,.25)" stroke="#4285f4" stroke-width="1.3" stroke-linejoin="round"/>
-          </svg>
-          <span>Gemini</span>
-        </div>
-
-        <div class="hv-node hv-node-perp">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-            <circle cx="12" cy="12" r="9" stroke="#a259ff" stroke-width="1.5" fill="rgba(162,89,255,.12)"/>
-            <path d="M8 12h8M12 8v8" stroke="#a259ff" stroke-width="1.5" stroke-linecap="round"/>
-          </svg>
-          <span>Perplexity</span>
-        </div>
-
-        <div class="hv-node hv-node-bing">
-          <svg width="18" height="22" viewBox="0 0 18 24" fill="none">
-            <path d="M3 2v20l5-2.5 7-5-4-2 1-6L3 2z" fill="rgba(0,153,255,.2)" stroke="#0099ff" stroke-width="1.3" stroke-linejoin="round"/>
-          </svg>
-          <span>Copilot</span>
-        </div>
-
-        <!-- Live status pill -->
-        <div class="hv-status">
-          <span class="hv-status-dot"></span>
-          Broadcasting Your Brand Live
-        </div>
-
-      </div>
+        <!-- STATUS PILL -->
+        <g transform="translate(115,482)">
+          <rect width="270" height="30" rx="15" fill="#064187" fill-opacity=".8" stroke="#0A89A3" stroke-width="1"/>
+          <circle class="sdot" cx="18" cy="15" r="5" fill="#5eeaa0"/>
+          <text x="30" y="20" font-family="Arial,sans-serif" font-size="9" font-weight="700" letter-spacing="1" fill="#fff">YOUR CUSTOMERS ARE SEARCHING NOW</text>
+        </g>
+      </svg>
     </div><!-- /hero-visual -->
 
   </div>
@@ -1459,296 +1470,154 @@ footer {
 <!-- PAIN POINTS -->
 <section class="sec pain-section" aria-labelledby="pain-heading">
   <div class="sec-inner">
-    <span class="lbl lbl-dark">The Real Talk Section</span>
-    <h2 class="ttl ttl-dark" id="pain-heading">We Know Exactly What Is Frustrating You</h2>
-    <p class="sub sub-dark" style="margin-top:14px;">These are the real conversations Northern Indiana business owners bring to us. We built every Favze service to solve exactly these problems.</p>
+    <div class="pain-section-header">
+      <span class="lbl" style="color:var(--teal)">The Real Talk Section</span>
+      <h2 class="ttl" id="pain-heading" style="color:#fff;max-width:760px;margin-top:8px;">Sound Familiar? You Are Not Alone.</h2>
+      <p class="sub" style="margin-top:14px;">Every one of these quotes came from a real Northern Indiana business owner. If you have said any of these out loud, keep reading.</p>
+    </div>
     <div class="pain-grid">
 
       <article class="pain-card">
-        <div class="pain-header-bar">
-          <div class="pain-num-badge">01</div>
-          <h3>Social Media Marketing</h3>
-        </div>
-        <div class="pain-body">
-          <div class="pain-problem-row">
-            <div class="pain-icon-wrap">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="#c86a00" stroke-width="1.4"/><path d="M8 5v3.5M8 11v.1" stroke="#c86a00" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </div>
-            <p class="pain-problem">"We post every week but it is not bringing in customers."</p>
-          </div>
-          <div class="pain-solution-row">
-            <div class="pain-check-wrap">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7l3.5 3.5 5.5-7" stroke="#2e7d55" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <p class="pain-solution">Consistency is not strategy. Without positioning, funnel mapping, and conversion intent, social media becomes noise. Favze builds systems that turn attention into actual revenue, not just likes.</p>
-          </div>
-          <a href="/social-media-marketing" class="pain-fix">SMM Fixes This
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
+        <div class="pain-num-watermark">01</div>
+        <div class="pain-inner">
+          <div class="pain-service-tag"><span class="pain-service-dot"></span>Social Media Marketing</div>
+          <p class="pain-quote">"We post every week but it is not bringing in customers."</p>
+          <div class="pain-divider"></div>
+          <span class="pain-fix-label">The Fix</span>
+          <p class="pain-solution">Consistency is not strategy. Without positioning, funnel mapping, and conversion intent, social media becomes noise. Favze builds systems that turn attention into actual revenue, not just likes.</p>
+          <a href="/social-media-marketing" class="pain-fix">SMM Fixes This <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
       </article>
 
       <article class="pain-card">
-        <div class="pain-header-bar">
-          <div class="pain-num-badge">02</div>
-          <h3>Search Engine Optimization</h3>
-        </div>
-        <div class="pain-body">
-          <div class="pain-problem-row">
-            <div class="pain-icon-wrap">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="#c86a00" stroke-width="1.4"/><path d="M8 5v3.5M8 11v.1" stroke="#c86a00" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </div>
-            <p class="pain-problem">"Our competitor ranks above us and they are not even better than us."</p>
-          </div>
-          <div class="pain-solution-row">
-            <div class="pain-check-wrap">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7l3.5 3.5 5.5-7" stroke="#2e7d55" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <p class="pain-solution">Google does not reward quality alone. It rewards structure, authority, and intent alignment. Ranking requires technical precision and strategic depth most in-house teams do not have time to master.</p>
-          </div>
-          <a href="/search-engine-optimization" class="pain-fix">SEO Fixes This
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
+        <div class="pain-num-watermark">02</div>
+        <div class="pain-inner">
+          <div class="pain-service-tag"><span class="pain-service-dot"></span>Search Engine Optimization</div>
+          <p class="pain-quote">"Our competitor ranks above us and they are not even better."</p>
+          <div class="pain-divider"></div>
+          <span class="pain-fix-label">The Fix</span>
+          <p class="pain-solution">Google does not reward quality alone. It rewards structure, authority, and intent alignment. Ranking requires technical precision most in-house teams do not have time to master.</p>
+          <a href="/search-engine-optimization" class="pain-fix">SEO Fixes This <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
       </article>
 
       <article class="pain-card">
-        <div class="pain-header-bar">
-          <div class="pain-num-badge">03</div>
-          <h3>Answer Engine Optimization</h3>
-        </div>
-        <div class="pain-body">
-          <div class="pain-problem-row">
-            <div class="pain-icon-wrap">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="#c86a00" stroke-width="1.4"/><path d="M8 5v3.5M8 11v.1" stroke="#c86a00" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </div>
-            <p class="pain-problem">"We asked Google AI Overview for businesses like ours and we were not even mentioned."</p>
-          </div>
-          <div class="pain-solution-row">
-            <div class="pain-check-wrap">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7l3.5 3.5 5.5-7" stroke="#2e7d55" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <p class="pain-solution">AI does not list options, it selects answers. If your content is not structured for retrieval, schema, and citation validation, you simply do not exist in AI-driven search.</p>
-          </div>
-          <a href="/answer-engine-optimization" class="pain-fix">AEO Fixes This
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
+        <div class="pain-num-watermark">03</div>
+        <div class="pain-inner">
+          <div class="pain-service-tag"><span class="pain-service-dot"></span>Answer Engine Optimization</div>
+          <p class="pain-quote">"We searched Google AI Overview and we were not even mentioned."</p>
+          <div class="pain-divider"></div>
+          <span class="pain-fix-label">The Fix</span>
+          <p class="pain-solution">AI does not list options, it selects answers. If your content is not structured for retrieval, schema, and citation validation, you simply do not exist in AI-driven search.</p>
+          <a href="/answer-engine-optimization" class="pain-fix">AEO Fixes This <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
       </article>
 
       <article class="pain-card">
-        <div class="pain-header-bar">
-          <div class="pain-num-badge">04</div>
-          <h3>Generative Engine Optimization</h3>
-        </div>
-        <div class="pain-body">
-          <div class="pain-problem-row">
-            <div class="pain-icon-wrap">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="#c86a00" stroke-width="1.4"/><path d="M8 5v3.5M8 11v.1" stroke="#c86a00" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </div>
-            <p class="pain-problem">"ChatGPT, Perplexity, and Grok recommend our competitors, not us."</p>
-          </div>
-          <div class="pain-solution-row">
-            <div class="pain-check-wrap">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7l3.5 3.5 5.5-7" stroke="#2e7d55" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <p class="pain-solution">Generative engines prioritize recognized entities with digital authority. If your brand lacks semantic reinforcement across the web, AI cannot confidently recommend you.</p>
-          </div>
-          <a href="/generative-engine-optimization" class="pain-fix">GEO Fixes This
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
+        <div class="pain-num-watermark">04</div>
+        <div class="pain-inner">
+          <div class="pain-service-tag"><span class="pain-service-dot"></span>Generative Engine Optimization</div>
+          <p class="pain-quote">"ChatGPT and Grok recommend our competitors, not us."</p>
+          <div class="pain-divider"></div>
+          <span class="pain-fix-label">The Fix</span>
+          <p class="pain-solution">Generative engines prioritize recognized entities with digital authority. If your brand lacks semantic reinforcement across the web, AI cannot confidently recommend you.</p>
+          <a href="/generative-engine-optimization" class="pain-fix">GEO Fixes This <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
       </article>
 
       <article class="pain-card">
-        <div class="pain-header-bar">
-          <div class="pain-num-badge">05</div>
-          <h3>Local SEO</h3>
-        </div>
-        <div class="pain-body">
-          <div class="pain-problem-row">
-            <div class="pain-icon-wrap">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="#c86a00" stroke-width="1.4"/><path d="M8 5v3.5M8 11v.1" stroke="#c86a00" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </div>
-            <p class="pain-problem">"People say they cannot find us on Google Maps."</p>
-          </div>
-          <div class="pain-solution-row">
-            <div class="pain-check-wrap">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7l3.5 3.5 5.5-7" stroke="#2e7d55" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <p class="pain-solution">Local visibility depends on optimized profiles, category signals, proximity weighting, and review velocity. Most businesses underestimate how technical map rankings actually are.</p>
-          </div>
-          <a href="/local-seo" class="pain-fix">Local SEO Fixes This
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
+        <div class="pain-num-watermark">05</div>
+        <div class="pain-inner">
+          <div class="pain-service-tag"><span class="pain-service-dot"></span>Local SEO</div>
+          <p class="pain-quote">"People say they cannot find us on Google Maps."</p>
+          <div class="pain-divider"></div>
+          <span class="pain-fix-label">The Fix</span>
+          <p class="pain-solution">Local visibility depends on optimized profiles, category signals, proximity weighting, and review velocity. Most businesses underestimate how technical map rankings actually are.</p>
+          <a href="/local-seo" class="pain-fix">Local SEO Fixes This <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
       </article>
 
       <article class="pain-card">
-        <div class="pain-header-bar">
-          <div class="pain-num-badge">06</div>
-          <h3>Paid Search Ads (SEM)</h3>
-        </div>
-        <div class="pain-body">
-          <div class="pain-problem-row">
-            <div class="pain-icon-wrap">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="#c86a00" stroke-width="1.4"/><path d="M8 5v3.5M8 11v.1" stroke="#c86a00" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </div>
-            <p class="pain-problem">"We are paying for clicks but not getting calls."</p>
-          </div>
-          <div class="pain-solution-row">
-            <div class="pain-check-wrap">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7l3.5 3.5 5.5-7" stroke="#2e7d55" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <p class="pain-solution">Ad platforms reward targeting precision and landing page alignment. Without conversion tracking and funnel structure, your budget disappears without results to show for it.</p>
-          </div>
-          <a href="/paid-search-ads-sem" class="pain-fix">Paid Search Fixes This
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
+        <div class="pain-num-watermark">06</div>
+        <div class="pain-inner">
+          <div class="pain-service-tag"><span class="pain-service-dot"></span>Paid Search Ads</div>
+          <p class="pain-quote">"We are paying for clicks but not getting calls."</p>
+          <div class="pain-divider"></div>
+          <span class="pain-fix-label">The Fix</span>
+          <p class="pain-solution">Ad platforms reward targeting precision and landing page alignment. Without conversion tracking and funnel structure, your budget disappears without results to show for it.</p>
+          <a href="/paid-search-ads-sem" class="pain-fix">Paid Search Fixes This <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
       </article>
 
       <article class="pain-card">
-        <div class="pain-header-bar">
-          <div class="pain-num-badge">07</div>
-          <h3>Paid Social Media Ads</h3>
-        </div>
-        <div class="pain-body">
-          <div class="pain-problem-row">
-            <div class="pain-icon-wrap">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="#c86a00" stroke-width="1.4"/><path d="M8 5v3.5M8 11v.1" stroke="#c86a00" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </div>
-            <p class="pain-problem">"We boosted posts and absolutely nothing happened."</p>
-          </div>
-          <div class="pain-solution-row">
-            <div class="pain-check-wrap">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7l3.5 3.5 5.5-7" stroke="#2e7d55" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <p class="pain-solution">Boosting is not advertising. Real performance requires audience segmentation, creative testing, retargeting architecture, and a full-funnel strategy, not a $20 boost on a regular post.</p>
-          </div>
-          <a href="/paid-social-media-ads" class="pain-fix">Social Ads Fix This
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
+        <div class="pain-num-watermark">07</div>
+        <div class="pain-inner">
+          <div class="pain-service-tag"><span class="pain-service-dot"></span>Paid Social Ads</div>
+          <p class="pain-quote">"We boosted posts and absolutely nothing happened."</p>
+          <div class="pain-divider"></div>
+          <span class="pain-fix-label">The Fix</span>
+          <p class="pain-solution">Boosting is not advertising. Real performance requires audience segmentation, creative testing, retargeting architecture, and a full-funnel strategy, not a $20 boost.</p>
+          <a href="/paid-social-media-ads" class="pain-fix">Social Ads Fix This <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
       </article>
 
       <article class="pain-card">
-        <div class="pain-header-bar">
-          <div class="pain-num-badge">08</div>
-          <h3>Website Design</h3>
-        </div>
-        <div class="pain-body">
-          <div class="pain-problem-row">
-            <div class="pain-icon-wrap">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="#c86a00" stroke-width="1.4"/><path d="M8 5v3.5M8 11v.1" stroke="#c86a00" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </div>
-            <p class="pain-problem">"Our website looks fine but it does not convert."</p>
-          </div>
-          <div class="pain-solution-row">
-            <div class="pain-check-wrap">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7l3.5 3.5 5.5-7" stroke="#2e7d55" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <p class="pain-solution">Design without conversion architecture fails. Your site must support SEO, paid traffic, AI visibility, and buyer psychology simultaneously, not just look good on a screen.</p>
-          </div>
-          <a href="/website-design" class="pain-fix">Website Design Fixes This
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
+        <div class="pain-num-watermark">08</div>
+        <div class="pain-inner">
+          <div class="pain-service-tag"><span class="pain-service-dot"></span>Website Design</div>
+          <p class="pain-quote">"Our website looks fine but it does not convert."</p>
+          <div class="pain-divider"></div>
+          <span class="pain-fix-label">The Fix</span>
+          <p class="pain-solution">Design without conversion architecture fails. Your site must support SEO, paid traffic, AI visibility, and buyer psychology simultaneously, not just look good on a screen.</p>
+          <a href="/website-design" class="pain-fix">Website Design Fixes This <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
       </article>
 
       <article class="pain-card">
-        <div class="pain-header-bar">
-          <div class="pain-num-badge">09</div>
-          <h3>Email Marketing</h3>
-        </div>
-        <div class="pain-body">
-          <div class="pain-problem-row">
-            <div class="pain-icon-wrap">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="#c86a00" stroke-width="1.4"/><path d="M8 5v3.5M8 11v.1" stroke="#c86a00" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </div>
-            <p class="pain-problem">"We have an email list but nobody opens anything."</p>
-          </div>
-          <div class="pain-solution-row">
-            <div class="pain-check-wrap">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7l3.5 3.5 5.5-7" stroke="#2e7d55" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <p class="pain-solution">Blasts do not build revenue. Segmentation, automation, and behavioral triggers do. Most businesses never build true lifecycle systems that turn subscribers into repeat buyers.</p>
-          </div>
-          <a href="/email-marketing" class="pain-fix">Email Marketing Fixes This
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
+        <div class="pain-num-watermark">09</div>
+        <div class="pain-inner">
+          <div class="pain-service-tag"><span class="pain-service-dot"></span>Email Marketing</div>
+          <p class="pain-quote">"We have an email list but nobody opens anything."</p>
+          <div class="pain-divider"></div>
+          <span class="pain-fix-label">The Fix</span>
+          <p class="pain-solution">Blasts do not build revenue. Segmentation, automation, and behavioral triggers do. Most businesses never build lifecycle systems that turn subscribers into repeat buyers.</p>
+          <a href="/email-marketing" class="pain-fix">Email Marketing Fixes This <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
       </article>
 
       <article class="pain-card">
-        <div class="pain-header-bar">
-          <div class="pain-num-badge">10</div>
-          <h3>SMS Marketing</h3>
-        </div>
-        <div class="pain-body">
-          <div class="pain-problem-row">
-            <div class="pain-icon-wrap">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="#c86a00" stroke-width="1.4"/><path d="M8 5v3.5M8 11v.1" stroke="#c86a00" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </div>
-            <p class="pain-problem">"Past customers just do not come back regularly."</p>
-          </div>
-          <div class="pain-solution-row">
-            <div class="pain-check-wrap">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7l3.5 3.5 5.5-7" stroke="#2e7d55" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <p class="pain-solution">Retention is not random reminders. It is structured timing, compelling offers, and automation sequences designed around real customer behavior, delivered directly to their phone.</p>
-          </div>
-          <a href="/short-message-service-sms" class="pain-fix">SMS Fixes This
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
+        <div class="pain-num-watermark">10</div>
+        <div class="pain-inner">
+          <div class="pain-service-tag"><span class="pain-service-dot"></span>SMS Marketing</div>
+          <p class="pain-quote">"Past customers just do not come back regularly."</p>
+          <div class="pain-divider"></div>
+          <span class="pain-fix-label">The Fix</span>
+          <p class="pain-solution">Retention is not random reminders. It is structured timing, compelling offers, and automation sequences designed around real customer behavior, delivered to their phone.</p>
+          <a href="/short-message-service-sms" class="pain-fix">SMS Fixes This <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
       </article>
 
       <article class="pain-card">
-        <div class="pain-header-bar">
-          <div class="pain-num-badge">11</div>
-          <h3>HubSpot Setup</h3>
-        </div>
-        <div class="pain-body">
-          <div class="pain-problem-row">
-            <div class="pain-icon-wrap">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="#c86a00" stroke-width="1.4"/><path d="M8 5v3.5M8 11v.1" stroke="#c86a00" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </div>
-            <p class="pain-problem">"We bought HubSpot and barely use 10% of it."</p>
-          </div>
-          <div class="pain-solution-row">
-            <div class="pain-check-wrap">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7l3.5 3.5 5.5-7" stroke="#2e7d55" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <p class="pain-solution">Powerful CRM tools fail without correct pipeline architecture, automation setup, and attribution tracking. Most implementations are incomplete and never deliver what was promised.</p>
-          </div>
-          <a href="/hubspot-setup" class="pain-fix">HubSpot Setup Fixes This
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
+        <div class="pain-num-watermark">11</div>
+        <div class="pain-inner">
+          <div class="pain-service-tag"><span class="pain-service-dot"></span>HubSpot Setup</div>
+          <p class="pain-quote">"We bought HubSpot and barely use 10% of it."</p>
+          <div class="pain-divider"></div>
+          <span class="pain-fix-label">The Fix</span>
+          <p class="pain-solution">Powerful CRM tools fail without correct pipeline architecture, automation setup, and attribution tracking. Most implementations are incomplete and never deliver what was promised.</p>
+          <a href="/hubspot-setup" class="pain-fix">HubSpot Setup Fixes This <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
       </article>
 
       <article class="pain-card">
-        <div class="pain-header-bar">
-          <div class="pain-num-badge">12</div>
-          <h3>AI Optimization</h3>
-        </div>
-        <div class="pain-body">
-          <div class="pain-problem-row">
-            <div class="pain-icon-wrap">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="#c86a00" stroke-width="1.4"/><path d="M8 5v3.5M8 11v.1" stroke="#c86a00" stroke-width="1.5" stroke-linecap="round"/></svg>
-            </div>
-            <p class="pain-problem">"We are using AI tools but our growth has not changed."</p>
-          </div>
-          <div class="pain-solution-row">
-            <div class="pain-check-wrap">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7l3.5 3.5 5.5-7" stroke="#2e7d55" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <p class="pain-solution">AI without integration creates speed, not leverage. Real results require workflow alignment, automation strategy, and visibility integration across search, AI platforms, and your full marketing stack.</p>
-          </div>
-          <a href="/ai-optimization" class="pain-fix">AI Optimization Fixes This
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
+        <div class="pain-num-watermark">12</div>
+        <div class="pain-inner">
+          <div class="pain-service-tag"><span class="pain-service-dot"></span>AI Optimization</div>
+          <p class="pain-quote">"We are using AI tools but our growth has not changed."</p>
+          <div class="pain-divider"></div>
+          <span class="pain-fix-label">The Fix</span>
+          <p class="pain-solution">AI without integration creates speed, not leverage. Real results require workflow alignment, automation strategy, and visibility integration across search, AI platforms, and your full stack.</p>
+          <a href="/ai-optimization" class="pain-fix">AI Optimization Fixes This <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
       </article>
 
@@ -1854,9 +1723,9 @@ footer {
         <span class="cert">100+ Total</span>
       </div>
       <div class="founder-contact">
-        <a href="mailto:riley@favze.com">
+        <a href="/cdn-cgi/l/email-protection#a5d7ccc9c0dce5c3c4d3dfc08bc6cac8">
           <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><rect x="1" y="2.5" width="13" height="10" rx="2" stroke="currentColor" stroke-width="1.3"/><path d="M1 5l6.5 4.5L14 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
-          riley@favze.com
+          <span class="__cf_email__" data-cfemail="7b0912171e023b1d1a0d011e55181416">[email&#160;protected]</span>
         </a>
         <a href="tel:+15747475012">
           <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 1.5s1-.5 2 1l1.5 2s.5 1-.5 2L5 7s-.5.5 0 1.5S6.5 11 8.5 12c1 .5 1 0 1 0l.5-.5c1-1 2-.5 2-.5L13.5 12.5c1.5 1 1 2 1 2-.5 1-2.5 1.5-4 .5" stroke="currentColor" stroke-width="1.2"/></svg>
@@ -2105,9 +1974,9 @@ footer {
         <div style="margin-top:22px">
           <h4>Contact</h4>
           <div class="fcon">
-            <a href="mailto:riley@favze.com">
+            <a href="/cdn-cgi/l/email-protection#7c0e151019053c1a1d0a0619521f1311">
               <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="1" y="2" width="11" height="9" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M1 4.5l5.5 3.5L12 4.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>
-              riley@favze.com
+              <span class="__cf_email__" data-cfemail="f2809b9e978bb29493848897dc919d9f">[email&#160;protected]</span>
             </a>
             <a href="tel:+15747475012">
               <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 1.5s1-.5 2 1l1 1.5s.5 1-.5 1.9L4 6.4s-.4.4 0 1.3S5.6 9.8 7.5 10.8c1 .5 1 0 1 0l.5-.5c.9-.9 1.9-.5 1.9-.5L12.4 11c1.4 1 1 1.9 1 1.9-.5.9-2.4 1.4-3.8.5" stroke="currentColor" stroke-width="1.2"/></svg>
@@ -2131,7 +2000,7 @@ footer {
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 document.addEventListener('DOMContentLoaded', function() {
 
   // ---- Mobile nav ----
@@ -2180,23 +2049,4 @@ document.addEventListener('DOMContentLoaded', function() {
           var otherAns = otherItem.querySelector('.fqa');
           otherItem.classList.remove('open');
           if (otherAns) {
-            otherAns.style.display = 'none';
-          }
-        }
-
-        // If this one was closed, open it now
-        if (!alreadyOpen) {
-          var thisAns = currentItem.querySelector('.fqa');
-          currentItem.classList.add('open');
-          if (thisAns) {
-            thisAns.style.display = 'block';
-          }
-        }
-      });
-    })(fqItems[k]);
-  }
-
-});
-</script>
-</body>
-</html>
+            otherAns.style.display = 'none
