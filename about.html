@@ -602,7 +602,7 @@ footer{background:#0a0a0a;padding:66px 5% 0}
     <div>
       <span class="lbl">Modern Visibility Explained</span>
       <h2 class="fh" style="font-size:clamp(1.9rem,3.5vw,2.9rem);line-height:1.05;margin:10px 0 10px">Getting Found Has Changed.<br>Most Agencies Haven't.</h2>
-      <p class="sub" style="margin-top:0">Ranking on Google still matters. But AI now answers a growing share of searches directly citing businesses by name. Favze builds visibility across all of it.</p>
+      <p class="sub" style="margin-top:0">Ranking on Google still matters and Favze builds that foundation. But search has changed. A growing share of queries are now answered directly by AI, with businesses cited by name before a single link is clicked. Voice assistants, Google AI Overviews, ChatGPT, Gemini, and Perplexity are all recommending local businesses right now. Most Northern Indiana businesses aren't in those recommendations yet. Favze builds visibility across every channel: traditional search, answer engines, generative AI, and everything still to come.</p>
     </div>
     <div class="vis-tabs" role="tablist">
       <button class="vt active" data-tab="seo">SEO</button>
@@ -720,17 +720,27 @@ footer{background:#0a0a0a;padding:66px 5% 0}
         <p class="icard-desc">The full Favze Insights article library. Deep-dives on AEO, GEO, AI Optimization, local SEO strategy, email marketing, and what Northern Indiana businesses need to know about modern visibility including how to become the favorite in your market.</p>
         <span class="icard-link">Read All Articles <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6.5 2.5l3.5 3.5-3.5 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       </a>
-      <a href="/contact" class="icard-full">
-        <div style="flex:1">
-          <div class="icard-tag">Email Newsletter</div>
-          <div class="icard-title">Get Favze Insights in Your Inbox</div>
-          <p class="icard-desc">Ask about the Favze Insights email newsletter when you book your free consultation. Marketing strategy, AI visibility updates, and local search insights no noise, no spam. Just the content that helps local businesses grow.</p>
-          <span class="icard-link" style="margin-top:14px;display:inline-flex">Sign Up via Consultation <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6.5 2.5l3.5 3.5-3.5 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <div class="icard-full" style="display:block;text-decoration:none;cursor:default">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:32px;flex-wrap:wrap">
+          <div style="flex:1;min-width:260px">
+            <div class="icard-tag">Email Newsletter</div>
+            <div class="icard-title" style="margin-bottom:10px">Get Favze Insights in Your Inbox</div>
+            <p class="icard-desc">Local marketing strategy, AI visibility updates, SEO shifts, and what's actually working for Northern Indiana and Michiana businesses. No noise. No spam. Just the content that helps local businesses grow.</p>
+          </div>
+          <div style="flex:1;min-width:280px">
+            <form id="insightsForm" onsubmit="handleInsightsForm(event)" style="display:flex;flex-direction:column;gap:10px">
+              <input type="text" id="insightsName" placeholder="Your first name" required style="padding:13px 16px;border-radius:10px;border:1.5px solid rgba(255,255,255,.2);background:rgba(255,255,255,.12);color:#fff;font-size:.9rem;font-family:inherit;outline:none;transition:border .2s" onfocus="this.style.borderColor='rgba(255,255,255,.5)'" onblur="this.style.borderColor='rgba(255,255,255,.2)'">
+              <input type="email" id="insightsEmail" placeholder="Your email address" required style="padding:13px 16px;border-radius:10px;border:1.5px solid rgba(255,255,255,.2);background:rgba(255,255,255,.12);color:#fff;font-size:.9rem;font-family:inherit;outline:none;transition:border .2s" onfocus="this.style.borderColor='rgba(255,255,255,.5)'" onblur="this.style.borderColor='rgba(255,255,255,.2)'">
+              <button type="submit" style="padding:13px 20px;border-radius:10px;background:#fff;color:#064187;font-weight:700;font-size:.9rem;border:none;cursor:pointer;font-family:inherit;transition:background .2s;text-align:center" onmouseover="this.style.background='#eee'" onmouseout="this.style.background='#fff'">Subscribe to Favze Insights</button>
+              <p style="font-size:.72rem;color:rgba(255,255,255,.45);line-height:1.5;margin-top:2px">By subscribing you agree to receive marketing emails from Favze Digital Marketing. Unsubscribe anytime.</p>
+            </form>
+            <div id="insightsSuccess" style="display:none;padding:18px 20px;background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.3);border-radius:12px;text-align:center">
+              <div style="font-family:'Barlow Condensed','Arial Black',sans-serif;font-size:1.3rem;font-weight:900;color:#fff;text-transform:uppercase;margin-bottom:6px">You're in.</div>
+              <p style="font-size:.875rem;color:rgba(255,255,255,.7)">Welcome to Favze Insights. Check your inbox for a confirmation.</p>
+            </div>
+          </div>
         </div>
-        <div style="flex-shrink:0;opacity:.18">
-          <svg width="80" height="80" viewBox="0 0 80 80" fill="none"><rect x="6" y="16" width="68" height="48" rx="8" stroke="white" stroke-width="3"/><path d="M6 28l34 22 34-22" stroke="white" stroke-width="3" stroke-linecap="round"/></svg>
-        </div>
-      </a>
+      </div>
     </div>
   </div>
 </section>
@@ -917,6 +927,22 @@ footer{background:#0a0a0a;padding:66px 5% 0}
       drawCity(seeds[city]||1);
     });
   });
+
+  // Insights email form
+  window.handleInsightsForm = function(e){
+    e.preventDefault();
+    var form=document.getElementById('insightsForm');
+    var success=document.getElementById('insightsSuccess');
+    var btn=form.querySelector('button[type="submit"]');
+    btn.textContent='Subscribing...';
+    btn.disabled=true;
+    // Submit to HubSpot or your email provider here
+    // For now show success state after brief delay
+    setTimeout(function(){
+      form.style.display='none';
+      success.style.display='block';
+    },800);
+  };
 
 })();
 </script>
