@@ -257,7 +257,658 @@ footer{background:var(--dark);padding:48px 5% 0;border-top:1px solid var(--borde
   .qm-tags{padding:14px 16px;gap:6px}
   .qm-tag{font-size:.62rem;padding:4px 10px}
 }
+
+/* ---- DEEP DIVE STRIPS ---- */
+.deep-strip{margin-top:28px;padding:20px 24px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:16px;display:flex;align-items:flex-start;gap:16px;flex-wrap:wrap}
+.deep-strip-icon{width:36px;height:36px;border-radius:10px;background:rgba(10,137,163,.18);border:1px solid rgba(10,137,163,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.deep-strip-body{flex:1;min-width:200px}
+.deep-strip-label{font-size:.65rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:6px}
+.deep-strip-text{font-size:.84rem;color:rgba(255,255,255,.5);line-height:1.6;margin-bottom:12px}
+.deep-links{display:flex;flex-wrap:wrap;gap:8px}
+.deep-link{display:inline-flex;align-items:center;gap:6px;font-size:.76rem;font-weight:700;color:rgba(255,255,255,.7);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:100px;padding:5px 14px;transition:background .2s,border-color .2s,color .2s;text-decoration:none}
+.deep-link:hover{background:rgba(10,137,163,.2);border-color:rgba(10,137,163,.45);color:#fff}
+.deep-link svg{flex-shrink:0;opacity:.6}
+@media(max-width:480px){
+  .deep-strip{padding:16px 18px;gap:12px}
+  .deep-strip-icon{width:32px;height:32px}
+  .deep-link{font-size:.72rem;padding:5px 12px}
+}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FAQPage",
+      "@id": "https://favze.com/digital-marketing-faq#faqpage",
+      "url": "https://favze.com/digital-marketing-faq",
+      "name": "Digital Marketing FAQ | Favze Digital Marketing | Northern Indiana",
+      "description": "Honest answers to every digital marketing question from Favze Digital Marketing, Northern Indiana and Michiana's full-service local digital marketing agency.",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://favze.com/#website"
+      },
+      "about": {
+        "@id": "https://favze.com/#organization"
+      },
+      "author": {
+        "@id": "https://favze.com/#riley-catalano"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://favze.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Digital Marketing FAQ",
+            "item": "https://favze.com/digital-marketing-faq"
+          }
+        ]
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Favze Digital Marketing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Favze Digital Marketing is Northern Indiana and Michiana's affordable, full-service local digital marketing agency. Founded and led by Riley Catalano, Favze is built around one idea: every business deserves a marketing strategy that is honest, custom, and actually works - without hidden fees or rotating account reps who don't know your market."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What makes Favze different from other agencies?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Three things. First, founder-led strategy - Riley Catalano builds your strategy, runs it, and answers your questions directly. No handoffs. Second, zero hidden fees - every cost is explained before you commit, with no surprises buried in fine print. Third, AI-ready marketing - Favze optimizes for ChatGPT, Google Gemini, Perplexity, and other AI platforms, not just traditional Google. Most agencies don't offer this yet."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who does Favze work with?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Favze works with businesses at every stage - from local shops and service providers just getting started, to established brands looking to scale. Retail, health and wellness, medical practices, contractors, professional services, hospitality, food businesses, nonprofits, manufacturers, and more. There is no minimum spend. If you need real marketing, Favze can build a strategy around your goals and budget."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you only serve Northern Indiana and Michiana?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Favze is rooted in Northern Indiana and Michiana and specializes in this region's customers, search behavior, and competitive landscape. However, many services - SEO, AEO, GEO, email marketing, paid ads, website design - can serve businesses anywhere. If you're outside the region and curious whether Favze is a fit, reach out and Riley will tell you honestly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is digital marketing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Digital marketing is how businesses attract, engage, and convert customers through online channels - search engines, social media, email, paid ads, and increasingly, AI platforms. It replaces or supplements traditional advertising (flyers, billboards, print) with measurable, targeted strategies that reach people where they actually spend their time: on their phones and computers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is digital marketing important today?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Because that is where your customers are making decisions. Studies show the average consumer uses 5.8 different sources before making a purchase - search engines, social media, reviews, maps, and increasingly AI tools. If your business doesn't show up across those channels, a competitor does. Digital marketing is how you stay visible at every step of that journey."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What services does my business actually need?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "That depends entirely on your goals, your current visibility, and how customers find businesses like yours. A new restaurant needs Local SEO and Google Business Profile. A contractor needs map pack visibility and reviews. An e-commerce brand needs paid ads and email. Favze builds a custom recommendation based on your specific situation - not a package that fits every business the same."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is digital marketing worth it for small businesses?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - and for small businesses especially. Digital marketing levels the playing field. A well-optimized Google Business Profile and Local SEO strategy can put a small local shop above big-box competitors in map searches. Targeted paid ads let you compete with larger brands at a fraction of the cost of traditional advertising. The key is building the right strategy for your budget, not the biggest strategy available."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What services does Favze offer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Favze offers 12 full-service digital marketing services: Social Media Marketing, SEO, Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), AI Optimization, Local SEO, Email Marketing, SMS Marketing, Paid Search Ads (SEM), Paid Social Ads, HubSpot CRM Setup, and Website Design. Every service can be used standalone or combined into a coordinated multi-channel strategy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between SEO, AEO, and GEO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SEO (Search Engine Optimization) gets your website ranked higher on Google and Bing. AEO (Answer Engine Optimization) optimizes your content to appear in AI-generated answers - like when someone asks Google AI Overview or ChatGPT for a recommendation. GEO (Generative Engine Optimization) is the broader discipline of making your brand recommended and cited by generative AI tools like Gemini, Perplexity, Copilot, and Grok. Today, you need all three to be fully visible."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is social media marketing and what does Favze do differently?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Social media marketing is using platforms like Facebook, Instagram, and LinkedIn to build brand awareness, engage your audience, and drive customers. Most businesses post consistently and see little return. That's because posting is not strategy. Favze builds social systems with audience targeting, funnel mapping, and conversion intent - so attention actually turns into revenue, not just likes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is paid advertising and how does it work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Paid advertising means paying to put your business in front of customers who are actively searching (Google Ads / Paid Search) or matching your ideal buyer profile (Facebook, Instagram / Paid Social). Unlike organic strategies that take time, paid ads can generate visibility and leads quickly. The key is targeting precision, landing page alignment, and conversion tracking - without these, your budget evaporates without results."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Favze build websites?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Favze's website design service focuses on conversion architecture - not just a site that looks good, but one that supports SEO, paid traffic, AI visibility, and buyer psychology simultaneously. A website that just \"looks fine\" but doesn't rank, doesn't load fast, or doesn't push visitors toward action is a liability, not an asset."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What marketing strategy is best for my business?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There's no universal answer - and any agency that gives you one without learning about your business first is guessing. The right strategy depends on your goals, your industry, your current visibility, how your customers make decisions, and your budget. Favze starts every relationship with a free consultation specifically to answer this question for your situation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I start with SEO, ads, or social media?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A general rule: if you need customers now, paid ads give the fastest results. If you want sustainable, compounding visibility over time, SEO is the foundation. Social media builds brand awareness and validation. In most cases, the best answer is a coordinated combination - not one channel in isolation. Local SEO plus Google Business Profile is often the highest-ROI starting point for local service businesses."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Favze create a custom strategy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "After your free consultation, Riley audits your current visibility, competitive landscape, and customer behavior in your specific market. From there, Favze builds a strategy proposal that identifies the right channels, sets measurable goals, and maps out a clear plan with transparent pricing - no cookie-cutter packages, no assumptions about what you need."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer personalized marketing plans?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "That is all Favze offers. Every strategy is built around your goals, your audience, and your competitive landscape. Favze does not sell packages - it builds plans. Nothing generic ever leaves the agency."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How will Favze help me get more customers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "By making your business the most visible, most trusted, and most recommended option in your market - across every channel your customers use. That means search engines, maps, AI platforms, social, email, and paid ads, all working together. More visibility across more touchpoints means more people find you, trust you, and choose you before they even call your competitor."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you generate leads online?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lead generation online works by getting in front of customers who are already looking for what you offer (search and map optimization) or matching your ideal customer profile (targeted paid ads), then converting that attention into action through optimized landing pages, compelling offers, clear calls to action, and follow-up systems like email and SMS automation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is my business not getting leads from marketing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usually one of four reasons: you're not visible enough (people can't find you), your message isn't landing (people see you but aren't compelled), your conversion path is broken (website doesn't turn visitors into leads), or you're on the wrong channel (you're investing where your customers aren't). Favze audits which of these is true for your business before recommending anything."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the fastest way to grow my business online?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The fastest results typically come from paid search and local service ads - they put you in front of people actively searching for what you offer right now. But \"fastest\" and \"best long-term\" aren't always the same. Favze pairs fast-start channels with foundation-building strategies like SEO and GEO so your growth is sustainable, not dependent on ongoing ad spend forever."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to see results from digital marketing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on the channel, your market, your competition, and your starting point - which is exactly why Favze builds a custom strategy for every business rather than making blanket promises. Paid ads can generate results faster than organic channels because you're paying for immediate placement. SEO and Local SEO build authority over time - search engines reward consistency, not shortcuts. AEO and GEO depend on how well your brand is already established online. Email and SMS work as fast as your existing audience allows. Riley will give you an honest picture of what to expect for your specific situation during the free consultation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What kind of results can I expect?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Favze doesn't make generic promises like \"rank #1 on Google\" because those claims are meaningless without context. What Favze commits to: a custom strategy built around measurable goals, transparent reporting you can actually track, and continuous optimization based on what the data shows. Results depend on your market, your budget, your competition, and your starting point - and Favze will be honest with you about all of it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you measure success?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Success is measured against the goals you set at the start - more leads, more website traffic, more map visibility, better conversion rates, higher return on ad spend. Favze tracks what matters to your business, not vanity metrics like social followers or impressions that don't translate to revenue."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I know if my marketing is actually working?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Through Favze's plain-language reporting. Every report explains what happened, why it matters, and what changes are being made. You won't need an agency to translate it for you. If a channel is working, you'll see it clearly. If something needs adjustment, Riley will tell you directly - and tell you what's being done about it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does digital marketing cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "At Favze, pricing is built around your specific strategy - not fixed packages. That means you pay for what your business actually needs, not for services bundled in to justify a price tier. During the free consultation, Riley explains exactly what each component of your strategy will cost, with no surprises afterward. There are no hidden fees. What you see is what you pay."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's a good starting budget for digital marketing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on your goals and channels. Local SEO and Google Business Profile optimization have a lower cost of entry and high ROI for local businesses. Paid ads require an ongoing ad budget in addition to management costs. Email and SMS marketing are typically very cost-efficient for customer retention. Favze will give you honest recommendations for what budget makes sense for your situation - not upsell you on more than you need."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can small businesses afford Favze's services?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - and this is specifically why Favze was built. Big agency pricing and rigid packages price out the businesses that need marketing help most. Favze's custom approach means strategies are built around your actual budget. There is no minimum spend to work with Favze."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is digital marketing an expense or an investment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Done right, it's an investment with a measurable return. Done wrong - through agencies with no accountability, generic strategies, and no tracking - it's an expense. The difference is a strategy built around clear goals, honest pricing, and real reporting that shows you whether the spend is generating returns. That's what Favze is built to deliver."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you help local businesses rank on Google?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Through a combination of technical SEO, content strategy, Google Business Profile optimization, local citation building, and review velocity. Google's local algorithm is more technical than most businesses realize - category signals, proximity weighting, structured data, and review patterns all factor in. Favze builds the full system, not just the surface-level fixes most agencies deliver."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Local SEO and why does it matter?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Local SEO is the process of optimizing your online presence so your business appears in local search results - Google Maps, the \"local 3-pack,\" and \"near me\" searches. For any business that serves a specific geographic area, Local SEO is often the highest-ROI marketing investment available. It puts your business in front of customers who are actively looking for exactly what you offer, right now, nearby."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I show up in \"near me\" searches?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "\"Near me\" rankings are driven by your Google Business Profile, local citations (consistent name, address, phone across directories), on-page local signals in your website content, proximity to the searcher, and review quality and recency. Favze builds and optimizes all of these systematically, so your business appears when and where it matters most."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you help my business dominate its local area?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "That's the Favze framework. \"Dominating your local area\" means being the most visible, most trusted, most recommended business in your category - across search, maps, AI platforms, and social. Favze has deep knowledge of Elkhart County, Goshen, South Bend, Mishawaka, and surrounding Michiana communities: how customers search, which directories matter, and what competitors are or aren't doing. That local expertise is a real advantage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why isn't SEO alone enough anymore?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Because the way customers find businesses has fractured into three completely distinct ecosystems - traditional search, AI-powered answer surfaces, and generative AI platforms. A brand can hold strong Google rankings and still experience declining traffic because users are getting answers directly from Google AI Overviews, ChatGPT, Perplexity, and Gemini without ever clicking a link. SEO is the foundation, but AEO and GEO have become non-negotiable layers on top of it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is SEO and what does it actually cover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SEO - Search Engine Optimization - is optimizing your website so traditional search engines like Google and Bing rank your pages highly and send you clicks. It has three pillars that must all work together. Technical SEO is the infrastructure: site speed, mobile responsiveness, crawl health, Core Web Vitals, structured data, and architecture. On-page SEO is the content and relevance layer: keyword strategy, heading structure, content depth, and topical authority. Off-page SEO is the authority layer: backlinks from credible sources, digital PR, and brand signals across the web. Without a clean technical foundation, the rest of your SEO investment underperforms."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is AEO - Answer Engine Optimization?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AEO is optimizing your content to be extracted and presented as the direct answer in AI-powered search features - Google AI Overviews, featured snippets, People Also Ask boxes, and voice search through Siri, Alexa, and Google Assistant. In SEO, you optimize to be found. In AEO, you optimize to be the answer. That requires question-based headings that mirror how people actually ask, concise direct answers immediately after each question, and proper schema markup - especially FAQ schema - so Google can machine-read your content as structured Q&A pairs. Vague or hedging answers do not get extracted. Direct, declarative answers do."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is GEO - Generative Engine Optimization?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "GEO is building your brand's content authority so that generative AI platforms - ChatGPT, Claude, Perplexity, Google Gemini, Microsoft Copilot, Meta AI - incorporate your brand and your expertise into the synthesized responses they generate for users. These platforms do not show a list of links. They generate an answer. If your brand isn't in their training data or retrieval systems as a credible, frequently-cited authority, you don't exist in those responses regardless of your Google rankings. GEO is the most misunderstood of the three disciplines and the one where most businesses currently have the widest gap."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between AEO and GEO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AEO targets AI-enhanced features inside traditional search engines - primarily Google AI Overviews and Bing Copilot search results. GEO targets standalone generative AI platforms like ChatGPT, Claude, Perplexity, and Gemini, where users conduct entire research sessions through conversational AI rather than through a search engine at all. AEO is about extraction from search results. GEO is about inclusion in synthesized intelligence. They require overlapping but distinct strategies."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is E-E-A-T and why does it matter for AI search?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "E-E-A-T stands for Experience, Expertise, Authoritativeness, and Trustworthiness. Google formalized this framework for evaluating content quality, and generative AI systems use the same underlying logic to determine which sources deserve to be surfaced. Experience signals firsthand knowledge. Expertise signals deep domain command. Authoritativeness signals external validation from credible sources. Trustworthiness signals accuracy and integrity. In GEO, E-E-A-T is not one factor among many - it is the primary determinant of whether a brand gets cited or ignored. Building genuine E-E-A-T is a long-term investment, not a content trick."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Favze actually optimize for AI platforms?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Favze approaches AI visibility across all three layers simultaneously. For AEO, we restructure content with question-format headings and direct answers, implement FAQ schema and HowTo schema, and build an answer-optimized content architecture. For GEO, we build E-E-A-T authority through original research, digital PR placements in authoritative publications, consistent brand entity management across the web, and deep content that generative AI systems weight as a primary source. We also monitor your brand's presence directly inside ChatGPT, Gemini, Perplexity, and Claude to measure where you appear, in what context, and how that changes over time. Most agencies don't offer any of this yet."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can the same content serve SEO, AEO, and GEO at once?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - but only with deliberate multi-layer architecture. Content built for all three combines long-form depth and keyword optimization for SEO, embedded FAQ sections with schema markup and concise direct answers for AEO, and original research with expert voice for GEO citation potential. Content that achieves all three simultaneously is the highest-leverage investment in search visibility a business can make. It is exactly the kind of content architecture Favze specializes in building."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which platforms should my business be on?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The platforms where your specific customers make decisions. A B2B professional services firm needs LinkedIn. A restaurant needs Instagram and Google Maps. A contractor needs Google Business Profile and the local 3-pack. An e-commerce brand needs Facebook, Instagram, and Google Shopping. Favze doesn't recommend platforms generically - it recommends the ones that match how your target customer actually researches and buys."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I focus on Google or social media first?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For most local businesses, Google first. People who search Google for your services are in buying mode - they're ready to act. Social media builds awareness and brand trust over time, but it captures people before they're actively searching. A strategy that covers both - search intent through Google and SEO, brand trust through social - outperforms either alone."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is email marketing still effective?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - email consistently delivers the highest ROI of any digital channel when done correctly. The key distinction is that sending blasts does not equal email marketing. Effective email requires list segmentation, behavioral automation, lifecycle sequences, and personalization. Businesses that have \"tried email\" and seen nothing usually haven't built the system - they've just been hitting send."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to be on every platform?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Being present on every platform and doing none of them well is worse than being excellent on two or three. Favze identifies the channels where your investment will generate the highest return and builds depth there first - then expands strategically. Spreading your budget thin across every platform is one of the most common and costly mistakes businesses make."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why isn't my marketing working?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In most cases: wrong channels, wrong message, no tracking, or a broken conversion path. Marketing can fail at any stage - getting visible, compelling people to act, or converting them once they arrive. Without clear attribution tracking, you won't know where it's breaking down. Favze diagnoses the actual problem before recommending solutions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why isn't my website converting visitors into leads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A website that doesn't convert typically has one or more of these problems: unclear or weak calls to action, slow load time, poor mobile experience, messaging that doesn't match what visitors searched for, or a trust gap (no reviews, no credentials, no proof). Design without conversion architecture fails. Favze builds sites that are engineered to convert, not just look good."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the biggest marketing mistakes businesses make?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The most common: posting on social without a strategy, running ads without conversion tracking, neglecting Google Business Profile, using a cookie-cutter agency that doesn't know your market, spreading budget across too many channels too early, and treating marketing as an expense instead of tracking ROI. Most are fixable - once you know where the problem is."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "We tried digital marketing before and it didn't work. Why would Favze be different?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usually past marketing failed because of one or more of these reasons: the strategy wasn't built for your specific market, the agency didn't track results honestly, you were sold a generic package, or there was no consistent accountability. Favze is different because: every strategy is custom, every cost is transparent upfront, and Riley is directly accountable for the results - not a rotating account team with no stake in your success."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens after I sign up with Favze?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "After your free consultation and strategy approval, onboarding begins - access credentials are collected, accounts are set up or audited, and campaigns are built before anything goes live. Nothing launches until you've reviewed and approved it. The entire process is explained step by step, and you're never kept in the dark about what's happening or why."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does onboarding take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Onboarding depends entirely on which services are being set up, the complexity of your existing accounts, and how much groundwork needs to be done before anything launches. Every business is different - a straightforward campaign setup looks nothing like a full website build or a HubSpot implementation. Favze will always give you a realistic timeline based on your actual situation, not a generic estimate designed to close the deal. Nothing goes live until you have reviewed and approved it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often will we communicate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Favze builds communication schedules around your preferences. Regular reporting, check-ins, and strategy updates are standard. If something important changes - a platform update, a competitor move, an optimization opportunity - Riley communicates proactively, not reactively. You will never have to chase your agency for updates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I get reports and performance updates?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - and they're written in plain language, not agency jargon. Every Favze report tells you what happened, what the numbers mean for your business, and what adjustments are being made. No dashboards designed to confuse you into thinking you need the agency to interpret them for you. You should always understand exactly what is happening with your marketing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are there long-term contracts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Favze does not lock businesses into contracts designed to trap them regardless of performance. Contract terms are discussed openly during the consultation and clearly explained before anything is signed. Some services have recommended minimum timeframes to produce results (SEO, for example, takes months to build authority) - but those timeframes are explained honestly, not buried in fine print."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I'm not happy with the results?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Riley will tell you directly. If a strategy isn't generating the expected results, Favze diagnoses why and adjusts - not deflects. You will always know what is happening and why. If there's a genuine issue, it will be addressed head-on. Favze's reputation depends on your results, not just your monthly payment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I own my website and marketing data?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Your website, your Google accounts, your ad accounts, your email lists - all of it belongs to you. Favze never holds your assets hostage. This is a non-negotiable principle. Every account is set up with you as the owner, with Favze having managed access only. You can always take your assets and walk away, no strings attached."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are there really zero hidden fees?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Every cost, every service, and every decision is explained clearly in plain language before you commit to anything. No add-ons that appear after you sign. No monthly fees buried in fine print. No surprise charges at renewal. What you see is what you pay. That is a hard line, not a marketing claim. If you ever have a question about a charge, Riley will explain it instantly - because every cost was discussed upfront."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why should I choose Favze over a bigger, more established agency?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bigger agencies assign rotating account reps who don't know your market, use rigid packages that don't fit your goals, and charge fees that prioritize their revenue over your results. Favze gives you direct access to a certified strategist who knows Northern Indiana, a custom strategy built around your specific business, zero hidden fees, and AI-ready marketing most agencies haven't built yet. The person who builds your strategy is the same person running it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What makes Favze's approach genuinely different?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Three things most agencies don't offer: real local expertise (deep knowledge of how Northern Indiana customers search and decide), AI-first visibility (GEO and AEO optimization for ChatGPT, Gemini, and other AI tools), and founder-led accountability (Riley Catalano is directly responsible for your strategy and results - not a layer of account managers). These aren't marketing claims. They're structural differences in how Favze operates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is Favze ahead of other marketing agencies?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most agencies are still optimizing for how people used to search - chasing Google rankings, social media followers, and display ads in isolation. Favze is built for how customers actually make decisions now and into the future: AI-driven search, answer engine visibility, generative AI citations, voice search, and coordinated multi-channel discovery. The agencies that don't adapt will leave their clients invisible where the next generation of customers is already looking."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does local expertise matter when hiring a marketing agency?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Because local search behavior is highly specific. The keywords people use in Elkhart County are different from what they search in Indianapolis. The directories that matter for Goshen citations are not the same as national SEO. Which competitors you're actually fighting for map positions, what reviews say in your community, how local media coverage affects AI citations - these are things a national agency guesses and a local agency knows. Favze knows this market."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I get started with Favze?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Book a free consultation at favze.com/contact or call Riley directly at 574-747-5012. That's it. No forms to fill out, no questionnaires to complete before you can talk to a human. Just a real conversation about your business and what you need."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the consultation really free with no obligation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes - completely free, zero obligation. The consultation is a real conversation about your business, your goals, and your frustrations. Riley will give you honest insight into what you actually need, even if the answer is something Favze doesn't offer. There is no pitch at the end. If you decide Favze isn't the right fit, that's a good outcome too."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How quickly can marketing campaigns begin?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "After the consultation and strategy approval, onboarding begins and builds toward launch - but the timeline depends completely on your business, the services involved, and what needs to be built or set up. Favze never rushes a build to hit an arbitrary start date, because a campaign launched correctly always outperforms one that was forced out the door before it was ready. Riley will give you a clear, honest picture of what the timeline looks like for your specific situation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What do you need from me to start?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "To start, just your time for the consultation. Afterward, onboarding typically requires access to your Google account, any existing ad accounts, your website, and whatever marketing platforms you're currently using. Favze will walk you through exactly what's needed, step by step. Nothing is assumed. Nothing is taken without your knowledge or approval."
+          }
+        }
+      ]
+    },
+    {
+      "@type": [
+        "LocalBusiness",
+        "MarketingAgency"
+      ],
+      "@id": "https://favze.com/#organization",
+      "name": "Favze Digital Marketing",
+      "alternateName": [
+        "Favze",
+        "Favze Agency"
+      ],
+      "url": "https://favze.com",
+      "description": "Northern Indiana and Michiana's affordable, full-service local digital marketing agency with zero hidden fees and 100+ certifications. Founded by Riley Catalano in Middlebury, Elkhart County, Indiana.",
+      "slogan": "Become Your Customer's Favorite Brand",
+      "foundingDate": "2025",
+      "founder": {
+        "@id": "https://favze.com/#riley-catalano"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Middlebury",
+        "addressRegion": "IN",
+        "postalCode": "46540",
+        "addressCountry": "US"
+      },
+      "telephone": "+15747475012",
+      "email": "riley@favze.com",
+      "priceRange": "$$",
+      "areaServed": [
+        {
+          "@type": "AdministrativeArea",
+          "name": "Northern Indiana"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Michiana"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Elkhart County, Indiana"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "St. Joseph County, Indiana"
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://favze.com/#riley-catalano",
+      "name": "Riley Catalano",
+      "jobTitle": "Founder and Digital Marketing Strategist",
+      "url": "https://rileycatalano.com",
+      "worksFor": {
+        "@id": "https://favze.com/#organization"
+      },
+      "email": "riley@favze.com",
+      "telephone": "+15747475012",
+      "sameAs": [
+        "https://rileycatalano.com",
+        "https://www.linkedin.com/in/rileycatalano/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://favze.com/#website",
+      "url": "https://favze.com",
+      "name": "Favze Digital Marketing",
+      "publisher": {
+        "@id": "https://favze.com/#organization"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -383,8 +1034,8 @@ footer{background:var(--dark);padding:48px 5% 0;border-top:1px solid var(--borde
       <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="9" stroke="#0A89A3" stroke-width="1.6"/><path d="M11 7v4.5M11 14v.1" stroke="#0A89A3" stroke-width="1.7" stroke-linecap="round"/></svg>
     </div>
     <div class="callout-text">
-      <h3>Can't find your answer?</h3>
-      <p>These are the questions Favze hears most. But every business is different. If your question isn't here, <a href="/contact">book a free consultation</a> and Riley will answer it directly  -  no obligation, no pitch, just a real conversation about your business.</p>
+      <h3>This page answers the broad questions.</h3>
+      <p>Each of Favze's 12 service pages goes deeper on that specific channel  -  with its own FAQ section covering the technical, strategic, and decision-stage questions that belong there. Use this page to understand Favze and digital marketing broadly. Then head to the service page that matches what you're trying to solve. Can't find your answer anywhere? <a href="/contact">Book a free consultation</a> and Riley will answer it directly.</p>
     </div>
   </div>
 
@@ -459,6 +1110,7 @@ footer{background:var(--dark);padding:48px 5% 0;border-top:1px solid var(--borde
       <div class="section-meta">
         <span class="section-num">03  -  Services We Offer</span>
         <h2 class="section-title">What Favze Does</h2>
+        <p style="font-size:.8rem;color:rgba(255,255,255,.38);margin-top:6px;font-weight:500;">Broad overviews only. Each service page goes deeper.</p>
       </div>
     </div>
     <div class="faq-list">
@@ -481,6 +1133,29 @@ footer{background:var(--dark);padding:48px 5% 0;border-top:1px solid var(--borde
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">Does Favze build websites?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
         <div class="faq-a">Yes. Favze's website design service focuses on conversion architecture  -  not just a site that looks good, but one that supports SEO, paid traffic, AI visibility, and buyer psychology simultaneously. A website that just "looks fine" but doesn't rank, doesn't load fast, or doesn't push visitors toward action is a liability, not an asset.</div>
+      </div>
+    </div>
+
+    <!-- deep dive: all 12 services -->
+    <div class="deep-strip">
+      <div class="deep-strip-icon"><svg width="14" height="14" viewBox="0 0 10 10" fill="none"><path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="deep-strip-body">
+        <span class="deep-strip-label">Go deeper on each service</span>
+        <p class="deep-strip-text">This section covers what each service does at a high level. Every service page has its own FAQ section with specific questions answered for that channel.</p>
+        <div class="deep-links">
+          <a href="/social-media-marketing" class="deep-link"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Social Media</a>
+          <a href="/search-engine-optimization" class="deep-link"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> SEO</a>
+          <a href="/answer-engine-optimization" class="deep-link"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> AEO</a>
+          <a href="/generative-engine-optimization" class="deep-link"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> GEO</a>
+          <a href="/ai-optimization" class="deep-link"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> AI Optimization</a>
+          <a href="/local-seo" class="deep-link"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Local SEO</a>
+          <a href="/email-marketing" class="deep-link"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Email</a>
+          <a href="/short-message-service-sms" class="deep-link"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> SMS</a>
+          <a href="/paid-search-ads-sem" class="deep-link"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Paid Search</a>
+          <a href="/paid-social-media-ads" class="deep-link"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Paid Social</a>
+          <a href="/hubspot-setup" class="deep-link"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> HubSpot</a>
+          <a href="/website-design" class="deep-link"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Website Design</a>
+        </div>
       </div>
     </div>
   </section>
@@ -638,35 +1313,88 @@ footer{background:var(--dark);padding:48px 5% 0;border-top:1px solid var(--borde
         <div class="faq-a">That's the Favze framework. "Dominating your local area" means being the most visible, most trusted, most recommended business in your category  -  across search, maps, AI platforms, and social. Favze has deep knowledge of Elkhart County, Goshen, South Bend, Mishawaka, and surrounding Michiana communities: how customers search, which directories matter, and what competitors are or aren't doing. That local expertise is a real advantage.</div>
       </div>
     </div>
+
+    <div class="deep-strip">
+      <div class="deep-strip-icon"><svg width="14" height="14" viewBox="0 0 10 10" fill="none"><path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="deep-strip-body">
+        <span class="deep-strip-label">Local SEO in depth</span>
+        <p class="deep-strip-text">The Local SEO service page covers exactly how Favze builds map pack visibility, citation authority, and review systems for Northern Indiana businesses.</p>
+        <div class="deep-links">
+          <a href="/local-seo" class="deep-link"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Local SEO Service Page</a>
+          <a href="/areas-served" class="deep-link"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Areas Favze Serves</a>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- 9: AI & GEO -->
+  <!-- 9: AI - SEO, AEO & GEO -->
   <section class="faq-section" id="ai">
     <div class="section-header">
       <div class="section-icon teal-bg">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#0A89A3" stroke-width="1.6" fill="rgba(10,137,163,.12)"/><path d="M9 12h6M12 9v6" stroke="#0A89A3" stroke-width="1.7" stroke-linecap="round"/></svg>
       </div>
       <div class="section-meta">
-        <span class="section-num">09  -  AI, GEO &amp; Future Optimization</span>
-        <h2 class="section-title">The AI Advantage</h2>
+        <span class="section-num">09 - AI Search Visibility: SEO, AEO &amp; GEO</span>
+        <h2 class="section-title">The Three Layers of Modern Search</h2>
+        <p style="font-size:.82rem;color:rgba(255,255,255,.4);margin-top:7px;font-weight:500;line-height:1.55;">SEO alone is no longer enough. Favze covers all three ecosystems. <a href="/favze-insights/rules-for-seo-aeo-geo-mastery" style="color:var(--teal);text-decoration:underline;text-underline-offset:3px;">Read the full breakdown in Favze Insights.</a></p>
       </div>
     </div>
     <div class="faq-list">
+
       <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">What is Generative Engine Optimization (GEO)?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
-        <div class="faq-a">GEO is the process of optimizing your brand's digital presence so that generative AI tools  -  ChatGPT, Google Gemini, Perplexity, Microsoft Copilot, Grok, and others  -  recognize, understand, and recommend your business when users ask for recommendations. Traditional SEO gets you ranked on Google. GEO gets you cited by AI. As more customers use AI for local business decisions, GEO is becoming essential.</div>
+        <button class="faq-q" aria-expanded="false">Why isn't SEO alone enough anymore?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">Because the way customers find businesses has fractured into three completely distinct ecosystems - traditional search, AI-powered answer surfaces, and generative AI platforms. A brand can hold strong Google rankings and still experience declining traffic because users are getting answers directly from Google AI Overviews, ChatGPT, Perplexity, and Gemini without ever clicking a link. SEO is the foundation, but AEO and GEO have become non-negotiable layers on top of it.</div>
       </div>
+
       <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">What is Answer Engine Optimization (AEO)?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
-        <div class="faq-a">AEO is optimizing your content specifically to appear in AI-generated answer formats  -  Google AI Overviews, featured snippets, voice search responses, and direct AI answers. Instead of just ranking on a results page, you become the source that the AI cites. This requires structured content, proper schema markup, citation-worthy authority signals, and a fundamentally different approach to content than traditional SEO.</div>
+        <button class="faq-q" aria-expanded="false">What is SEO and what does it actually cover?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">SEO - Search Engine Optimization - is optimizing your website so traditional search engines like Google and Bing rank your pages highly and send you clicks. It has three pillars that must all work together. <strong>Technical SEO</strong> is the infrastructure: site speed, mobile responsiveness, crawl health, Core Web Vitals, structured data, and architecture. <strong>On-page SEO</strong> is the content and relevance layer: keyword strategy, heading structure, content depth, and topical authority. <strong>Off-page SEO</strong> is the authority layer: backlinks from credible sources, digital PR, and brand signals across the web. Without a clean technical foundation, the rest of your SEO investment underperforms.</div>
       </div>
+
       <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">How do AI tools like ChatGPT and Gemini impact search?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
-        <div class="faq-a">AI is fundamentally changing how customers find businesses. Instead of clicking through 10 blue links, people increasingly ask AI tools directly: "What's the best plumber near Goshen, Indiana?" or "Which marketing agency should I use in the South Bend area?" AI tools don't show a list of options  -  they pick an answer. If your business isn't structured to be cited, you simply don't exist in those results.</div>
+        <button class="faq-q" aria-expanded="false">What is AEO - Answer Engine Optimization?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">AEO is optimizing your content to be extracted and presented as the direct answer in AI-powered search features - Google AI Overviews, featured snippets, People Also Ask boxes, and voice search through Siri, Alexa, and Google Assistant. In SEO, you optimize to be found. In AEO, you optimize to <em>be the answer</em>. That requires question-based headings that mirror how people actually ask, concise direct answers immediately after each question, and proper schema markup - especially FAQ schema - so Google can machine-read your content as structured Q&amp;A pairs. Vague or hedging answers do not get extracted. Direct, declarative answers do.</div>
       </div>
+
       <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">Can you help my business show up in ChatGPT and Perplexity recommendations?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
-        <div class="faq-a">Yes  -  and this is one of Favze's most significant differentiators. Favze directly trains AI systems how to categorize your business, what it does, who it serves, and why it should be recommended. Through structured AEO and GEO strategies, Favze helps businesses appear in recommendations from <strong>ChatGPT, Google Gemini, Google AI Overviews, Perplexity, Microsoft Copilot, Grok, Claude, Siri, and Alexa</strong>. Most agencies don't offer this yet.</div>
+        <button class="faq-q" aria-expanded="false">What is GEO - Generative Engine Optimization?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">GEO is building your brand's content authority so that generative AI platforms - ChatGPT, Claude, Perplexity, Google Gemini, Microsoft Copilot, Meta AI - incorporate your brand and your expertise into the synthesized responses they generate for users. These platforms do not show a list of links. They generate an answer. If your brand isn't in their training data or retrieval systems as a credible, frequently-cited authority, you don't exist in those responses regardless of your Google rankings. GEO is the most misunderstood of the three disciplines and the one where most businesses currently have the widest gap.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">What is the difference between AEO and GEO?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">AEO targets AI-enhanced features <em>inside</em> traditional search engines - primarily Google AI Overviews and Bing Copilot search results. GEO targets standalone generative AI platforms like ChatGPT, Claude, Perplexity, and Gemini, where users conduct entire research sessions through conversational AI rather than through a search engine at all. AEO is about <strong>extraction from search results</strong>. GEO is about <strong>inclusion in synthesized intelligence</strong>. They require overlapping but distinct strategies.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">What is E-E-A-T and why does it matter for AI search?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">E-E-A-T stands for Experience, Expertise, Authoritativeness, and Trustworthiness. Google formalized this framework for evaluating content quality, and generative AI systems use the same underlying logic to determine which sources deserve to be surfaced. <strong>Experience</strong> signals firsthand knowledge. <strong>Expertise</strong> signals deep domain command. <strong>Authoritativeness</strong> signals external validation from credible sources. <strong>Trustworthiness</strong> signals accuracy and integrity. In GEO, E-E-A-T is not one factor among many - it is the primary determinant of whether a brand gets cited or ignored. Building genuine E-E-A-T is a long-term investment, not a content trick.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">How does Favze actually optimize for AI platforms?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">Favze approaches AI visibility across all three layers simultaneously. For AEO, we restructure content with question-format headings and direct answers, implement FAQ schema and HowTo schema, and build an answer-optimized content architecture. For GEO, we build E-E-A-T authority through original research, digital PR placements in authoritative publications, consistent brand entity management across the web, and deep content that generative AI systems weight as a primary source. We also monitor your brand's presence directly inside ChatGPT, Gemini, Perplexity, and Claude to measure where you appear, in what context, and how that changes over time. Most agencies don't offer any of this yet.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Can the same content serve SEO, AEO, and GEO at once?<span class="faq-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button>
+        <div class="faq-a">Yes - but only with deliberate multi-layer architecture. Content built for all three combines long-form depth and keyword optimization for SEO, embedded FAQ sections with schema markup and concise direct answers for AEO, and original research with expert voice for GEO citation potential. Content that achieves all three simultaneously is the highest-leverage investment in search visibility a business can make. It is exactly the kind of content architecture Favze specializes in building.</div>
+      </div>
+
+    </div>
+
+    <div class="deep-strip">
+      <div class="deep-strip-icon"><svg width="14" height="14" viewBox="0 0 10 10" fill="none"><path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="deep-strip-body">
+        <span class="deep-strip-label">Go deeper on SEO, AEO &amp; GEO</span>
+        <p class="deep-strip-text">Riley's full breakdown of all three ecosystems - definitions, technical requirements, how they overlap, and exactly what winning brands are doing right now - is in Favze Insights. Each service also has its own dedicated page with specific questions answered.</p>
+        <div class="deep-links">
+          <a href="/favze-insights/rules-for-seo-aeo-geo-mastery" class="deep-link"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Full Article: SEO, AEO &amp; GEO Mastery</a>
+          <a href="/answer-engine-optimization" class="deep-link"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> AEO Service Page</a>
+          <a href="/generative-engine-optimization" class="deep-link"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> GEO Service Page</a>
+          <a href="/ai-optimization" class="deep-link"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> AI Optimization Page</a>
+          <a href="/search-engine-optimization" class="deep-link"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5h6M5 2l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> SEO Service Page</a>
+        </div>
       </div>
     </div>
   </section>
