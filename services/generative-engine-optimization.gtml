@@ -1,0 +1,1683 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="https://schema.org/WebPage">
+<head>
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Generative Engine Optimization (GEO) | Northern Indiana & Michiana | Favze</title>
+<meta name="description" content="Favze provides expert Generative Engine Optimization (GEO) for Northern Indiana and Michiana businesses. Get cited in ChatGPT, Perplexity, Google AI Overviews, and Copilot. Free consultation. Zero hidden fees.">
+<meta name="keywords" content="generative engine optimization, GEO, AI SEO, AI search optimization, ChatGPT visibility, Perplexity optimization, Google AI Overviews, Northern Indiana digital marketing, Michiana marketing, Goshen SEO, Elkhart marketing, South Bend SEO">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Riley Catalano, Favze Digital Marketing">
+<link rel="canonical" href="https://favze.com/generative-engine-optimization">
+<link rel="icon" type="image/svg+xml" href="https://favze.com/hubfs/favze-favicon.svg">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://favze.com/generative-engine-optimization">
+<meta property="og:title" content="Generative Engine Optimization (GEO) | Northern Indiana | Favze">
+<meta property="og:description" content="Expert GEO for Northern Indiana & Michiana businesses. Get cited in ChatGPT, Perplexity, and Google AI Overviews. Zero hidden fees. Free consultation.">
+<meta property="og:site_name" content="Favze Digital Marketing">
+<meta property="og:image" content="https://favze.com/hubfs/favze-og-geo.jpg">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Generative Engine Optimization (GEO) | Favze — Northern Indiana">
+<meta name="twitter:description" content="Get your Northern Indiana business cited in ChatGPT, Perplexity, Google AI Overviews, and every major AI search platform. Free consultation.">
+
+<meta name="geo.region" content="US-IN">
+<meta name="geo.placename" content="Middlebury, Elkhart County, Indiana">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://favze.com/#organization",
+      "name": "Favze Digital Marketing",
+      "url": "https://favze.com",
+      "telephone": "+15747475012",
+      "email": "riley@favze.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://favze.com/hubfs/favze-logo.png"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Middlebury",
+        "addressRegion": "IN",
+        "postalCode": "46540",
+        "addressCountry": "US"
+      },
+      "areaServed": ["Goshen IN","Elkhart IN","South Bend IN","Mishawaka IN","Warsaw IN","Northern Indiana","Michiana"]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://favze.com/generative-engine-optimization#service",
+      "name": "Generative Engine Optimization (GEO)",
+      "alternateName": ["AI SEO","AI Search Optimization","Generative AI SEO","AI-Ready SEO","Conversational SEO"],
+      "serviceType": "Generative Engine Optimization & AI Search Visibility",
+      "description": "Favze provides Generative Engine Optimization (GEO) for Northern Indiana and Michiana businesses — helping them appear as cited sources in ChatGPT, Perplexity, Microsoft Copilot, Google AI Overviews, and every major AI-powered search platform. Every GEO engagement includes AI-ready content strategy, entity authority building, structured data implementation, conversational query optimization, citation signal development, and full integration with local SEO.",
+      "provider": {"@id": "https://favze.com/#organization"},
+      "areaServed": ["Goshen IN","Elkhart IN","South Bend IN","Mishawaka IN","Warsaw IN","Northern Indiana","Michiana"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "GEO Services",
+        "itemListElement": [
+          {"@type": "Offer", "name": "AI Content Strategy & Creation"},
+          {"@type": "Offer", "name": "Entity Authority Building"},
+          {"@type": "Offer", "name": "Structured Data & Schema Markup"},
+          {"@type": "Offer", "name": "Conversational Query Optimization"},
+          {"@type": "Offer", "name": "Citation Signal Development"},
+          {"@type": "Offer", "name": "Google AI Overviews Optimization"},
+          {"@type": "Offer", "name": "ChatGPT & Perplexity Visibility"},
+          {"@type": "Offer", "name": "Local GEO Integration"},
+          {"@type": "Offer", "name": "AI Platform Monitoring & Reporting"}
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://favze.com/generative-engine-optimization#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Generative Engine Optimization (GEO)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Generative Engine Optimization (GEO) is the process of optimizing your business's online presence so that AI-powered tools — including ChatGPT, Perplexity, Microsoft Copilot, Google AI Overviews, and Google Gemini — cite your business as a trusted, authoritative source in their AI-generated responses. Unlike traditional SEO which targets blue-link rankings, GEO targets the AI-generated summaries and cited recommendations that increasingly appear before any organic results. For Northern Indiana and Michiana businesses, GEO is how you get recommended by AI when local customers ask questions like 'Who is the best HVAC company in Goshen?' or 'What digital marketing agency should I use in Elkhart?'"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is GEO different from SEO and AEO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SEO, AEO, and GEO target three different but overlapping surfaces. SEO targets blue-link rankings in traditional search results. AEO (Answer Engine Optimization) targets featured snippets, People Also Ask boxes, and position zero — the answer blocks displayed above organic results in Google and Bing. GEO targets AI-generated responses — the summaries and recommendations produced by ChatGPT, Perplexity, Microsoft Copilot, and Google AI Overviews. These AI tools generate original prose that cites sources, rather than displaying ranked links. GEO optimizes your content, entity signals, and authority to be chosen as a cited source in those AI-generated answers. All three work together: strong SEO creates the domain authority that supports both AEO and GEO, while AEO and GEO visibility builds the brand authority that reinforces SEO rankings."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which AI platforms does Favze's GEO service target?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Favze's GEO strategy targets every major AI search and answer platform including: Google AI Overviews (formerly SGE) — appearing as a cited source in Google's AI-generated summaries at the top of search results; Perplexity AI — one of the fastest-growing AI search engines that cites sources in real time; ChatGPT with Browse — OpenAI's GPT-4 with web access, increasingly used for local business research; Microsoft Copilot — powered by GPT-4, integrated into Bing and Windows, used by millions of businesses; Google Gemini — Google's conversational AI assistant with web access; Apple Intelligence — Apple's AI system drawing from Siri and web data; and emerging AI search tools as the landscape evolves. The same core GEO signals — entity authority, structured content, factual accuracy, citation signals — work across all these platforms."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do AI tools decide which businesses to cite or recommend?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AI tools use several signals to determine which sources to cite: (1) Entity authority — how well-established and consistently documented your business is across the web, including your website, Google Business Profile, directories, and press mentions; (2) Content quality and factual accuracy — AI tools prioritize sources with clear, authoritative, factual content that directly answers questions; (3) Structured data — schema markup helps AI tools understand exactly what your business does, where you're located, and what questions you answer; (4) Citation patterns — sources that are referenced and linked by other authoritative sites are more trusted by AI tools; (5) Topical depth — businesses that comprehensively cover a topic with depth and specificity are more likely to be cited than those with thin content; (6) Local relevance signals — for local queries, businesses with strong local entity signals including consistent NAP data, local citations, and geo-specific content get prioritized in AI responses to location-based questions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I track whether AI tools are recommending my business?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, though AI visibility tracking is more complex than traditional SEO reporting. Favze monitors your GEO performance through: manual query testing across all major AI platforms (running your target queries in ChatGPT, Perplexity, Copilot, and Gemini and documenting whether your business is cited); Google Search Console data for AI Overview appearances and click attribution; third-party AI visibility tools that track brand mentions across AI platforms; and month-over-month trending to identify which GEO optimizations are producing citation increases. We provide plain-language reporting so you as a Northern Indiana business owner can clearly see your AI visibility progress — not just abstract metrics."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is entity authority and why does it matter for GEO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Entity authority is how clearly and consistently your business is understood as a distinct, trustworthy entity by AI systems and search engines. AI tools don't just crawl individual pages — they build a knowledge model of entities (businesses, people, places, products) based on signals from across the web. A business with strong entity authority has: a consistent business name, address, phone number, and description across all online profiles; structured data on their website that explicitly defines what the business is and does; mentions and citations from local news, industry publications, and authoritative directories; a verified Google Business Profile with complete information; and reviews that mention specific services, locations, and attributes. Favze's GEO work systematically builds your Northern Indiana business's entity authority so AI tools recognize your business as the authoritative local source in your industry."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does GEO take to show results?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "GEO results depend on your business's starting point, the competitiveness of your market, and the specific AI platforms targeted. For businesses with existing authority signals (page one rankings, established reviews, local citations), initial AI citation appearances can occur within 6-12 weeks of GEO optimization. For businesses starting from a weaker baseline, 3-6 months is a realistic timeline for measurable AI visibility gains. Google AI Overviews tend to respond to optimization faster than standalone AI tools like Perplexity, since Google already indexes and crawls your site regularly. Favze prioritizes quick-win GEO optimizations first — entity signal cleanup, schema implementation, conversational content — before building toward the longer-term authority signals that drive sustained AI citation across all platforms."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does my business need to already rank well on Google for GEO to work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A baseline of organic visibility helps GEO, but it's not always a strict requirement. AI tools like ChatGPT and Perplexity crawl the web independently and can cite sources that don't rank #1 in Google — they prioritize content quality, entity authority, and topical relevance. However, Google AI Overviews do show a stronger correlation with organic rankings, since Google is more likely to cite sources it already trusts. Favze integrates GEO with your broader SEO and AEO strategy to create a compound effect: as your organic rankings improve, your GEO citation probability increases simultaneously. For local Northern Indiana queries, the competition for AI citations is significantly lower than national terms, giving local businesses a strong opportunity to earn AI visibility even without dominant national domain authority."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What content changes are needed for GEO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "GEO requires content that is written to be understood, trusted, and cited by AI systems — which is different from content written purely for keyword rankings. Specific changes Favze makes include: rewriting key pages to lead with direct, factual answers to the questions your customers are asking; adding conversational Q&A sections that mirror how people ask questions to AI tools; implementing structured data so AI can machine-read your business's information accurately; creating topical authority content that demonstrates depth of expertise in your industry; adding geo-specific content that signals local relevance for Northern Indiana and Michiana queries; and ensuring factual accuracy throughout — AI tools penalize inconsistent or outdated information by deprioritizing those sources."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is GEO worth investing in if I already do SEO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — GEO addresses a growing search surface that traditional SEO doesn't cover. AI-generated responses in Google AI Overviews, Perplexity, and ChatGPT are increasingly the first result users see, and they operate differently from blue-link rankings. Being on page one of Google doesn't guarantee you'll be cited in AI Overviews. GEO fills that gap. Additionally, GEO work directly reinforces your SEO: the entity authority signals, structured data, and high-quality conversational content that GEO requires also strengthen your traditional rankings. For Northern Indiana businesses, most competitors are investing in neither GEO nor AEO — meaning the opportunity window to own AI citations in your local market is wide open right now, and businesses that act first will hold those positions for significantly longer before competition catches up."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What industries benefit most from GEO in Northern Indiana?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "GEO delivers the strongest results for businesses whose customers research extensively before buying or contacting. In the Northern Indiana and Michiana market, these include: home services (HVAC, plumbing, roofing, electrical — customers increasingly ask AI 'who should I call for X in Goshen/Elkhart?'); healthcare and dental practices (patients research providers and treatments in AI tools before booking); legal and financial services (high-consideration decisions where AI recommendations carry significant weight); professional services (accountants, consultants, agencies — where 'who is the best X in Northern Indiana?' is a natural AI query); manufacturing and industrial suppliers (B2B buyers research suppliers using AI research tools); and real estate (buyers and sellers increasingly use AI to identify local agents and agencies). Any business where trust and expertise matter to the buying decision benefits from being the AI-recommended authority in their local market."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does GEO work with local SEO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "GEO and local SEO are deeply complementary. Local SEO signals — your Google Business Profile, local citations, consistent NAP data, local reviews — are also core entity authority signals that AI tools use to understand and trust your business. Favze integrates GEO with local SEO so both strategies reinforce each other: local citations boost entity authority that helps AI citations; geo-specific content targets both local search rankings and local AI queries; review management builds the trust signals both Google Maps and AI tools use; and local schema markup serves both featured snippet eligibility and AI comprehension. For Northern Indiana and Michiana businesses, this integrated approach means a single investment produces results across Google Maps, traditional organic rankings, featured snippets, and AI-generated responses simultaneously."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does Favze's GEO process look like from start to finish?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Favze's GEO process: (1) Free consultation — understanding your business, goals, and competitive landscape in Northern Indiana and Michiana. (2) GEO audit — assessing your current entity authority, content quality, schema implementation, and AI citation baseline across major platforms. (3) Entity signal cleanup — ensuring your business name, address, phone, description, and service information is accurate and consistent across all online profiles. (4) AI-ready content creation — writing conversational, factual, structured content that AI tools can extract and cite. (5) Schema implementation — structured data that explicitly signals your business's identity, services, location, and authority. (6) Citation signal development — building the web presence breadcrumbs that AI tools use to verify and trust your business. (7) Ongoing monitoring and expansion — tracking AI citations, identifying new query opportunities, and continuously updating content as the AI landscape evolves."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does GEO cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Favze prices GEO based on your business's starting point, the number of AI platforms and query clusters targeted, and whether GEO is implemented alongside SEO, AEO, or other Favze services. All pricing is transparent with zero hidden fees — scope and investment are explained clearly in plain language before you commit to anything. The best first step is a free consultation where Riley will audit your current AI citation baseline, identify your highest-opportunity GEO targets in the Northern Indiana market, and give you a clear picture of what the work involves and what results are realistic for your business and budget."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What areas does Favze serve for GEO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Favze serves businesses across Northern Indiana and Michiana for Generative Engine Optimization including Goshen, Elkhart, South Bend, Mishawaka, Warsaw, Plymouth, Middlebury, Nappanee, Shipshewana, Granger, Walkerton, Bremen, Wakarusa, New Paris, Millersburg, Ligonier, and surrounding communities in Elkhart County, St. Joseph County, Kosciusko County, Marshall County, LaPorte County, Noble County, Whitley County, Starke County, LaGrange County, and Berrien County, Michigan."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://favze.com/generative-engine-optimization#breadcrumb",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://favze.com"},
+        {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://favze.com/services"},
+        {"@type": "ListItem", "position": 3, "name": "Generative Engine Optimization", "item": "https://favze.com/generative-engine-optimization"}
+      ]
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://favze.com/#localbusiness",
+      "name": "Favze Digital Marketing",
+      "url": "https://favze.com",
+      "telephone": "+15747475012",
+      "email": "riley@favze.com",
+      "priceRange": "$$",
+      "description": "Favze is Northern Indiana and Michiana's full-service digital marketing agency specializing in GEO, AEO, SEO, local SEO, and AI search optimization for local businesses.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Middlebury",
+        "addressRegion": "IN",
+        "postalCode": "46540",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 41.6745,
+        "longitude": -85.7058
+      },
+      "areaServed": [
+        {"@type": "City", "name": "Goshen", "containedInPlace": {"@type": "State", "name": "Indiana"}},
+        {"@type": "City", "name": "Elkhart", "containedInPlace": {"@type": "State", "name": "Indiana"}},
+        {"@type": "City", "name": "South Bend", "containedInPlace": {"@type": "State", "name": "Indiana"}},
+        {"@type": "City", "name": "Mishawaka", "containedInPlace": {"@type": "State", "name": "Indiana"}},
+        {"@type": "City", "name": "Warsaw", "containedInPlace": {"@type": "State", "name": "Indiana"}},
+        {"@type": "City", "name": "Middlebury", "containedInPlace": {"@type": "State", "name": "Indiana"}}
+      ],
+      "knowsAbout": ["Generative Engine Optimization","GEO","AI SEO","AI Search Optimization","ChatGPT Visibility","Perplexity Optimization","Google AI Overviews","Microsoft Copilot SEO","Entity Authority","Structured Data","Local SEO Northern Indiana","AI Content Strategy"]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://favze.com/generative-engine-optimization",
+      "url": "https://favze.com/generative-engine-optimization",
+      "name": "Generative Engine Optimization (GEO) | Northern Indiana & Michiana | Favze",
+      "description": "Favze provides expert Generative Engine Optimization (GEO) for Northern Indiana and Michiana businesses — helping them get cited in ChatGPT, Perplexity, Google AI Overviews, Microsoft Copilot, and every major AI search platform.",
+      "inLanguage": "en-US",
+      "isPartOf": {"@id": "https://favze.com/#organization"},
+      "about": {"@id": "https://favze.com/generative-engine-optimization#service"},
+      "breadcrumb": {"@id": "https://favze.com/generative-engine-optimization#breadcrumb"}
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --navy: #064187;
+  --teal: #0A89A3;
+  --dark: #0a0a0a;
+  --dark2: #111111;
+  --white: #ffffff;
+  --off-white: #f4f4f0;
+  --border-dark: rgba(255,255,255,0.07);
+  --border-light: #e2e2e2;
+  --text-muted: rgba(255,255,255,0.58);
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --radius-card: 20px;
+  --radius-sm: 10px;
+  --section-pad: 96px 5%;
+  --inner-max: 1160px;
+}
+html, body { overflow-x: clip; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); background: var(--dark); color: var(--white); line-height: 1.6; }
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; height: auto; display: block; }
+button { font-family: var(--font-body); cursor: pointer; }
+
+/* NAV */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: #fff; border-bottom: 1.5px solid #e8e8e8;
+  padding: 0 5%; display: flex; align-items: center; justify-content: space-between;
+  height: 68px;
+}
+.nl { display: flex; align-items: center; gap: 4px; list-style: none; }
+.nl a { font-family: var(--font-body); font-weight: 500; font-size: 0.875rem; padding: 7px 12px; border-radius: 8px; color: #0a0a0a; transition: background .2s; }
+.nl a:hover { background: #f0f0f0; }
+.nl a.active { color: var(--navy); font-weight: 700; }
+.nc { background: var(--navy) !important; color: #fff !important; padding: 9px 18px !important; border-radius: 9px !important; font-weight: 700 !important; transition: background .2s !important; }
+.nc:hover { background: var(--teal) !important; }
+.hb { display: none; flex-direction: column; gap: 5px; cursor: pointer; border: none; background: none; padding: 6px; }
+.hb span { display: block; width: 24px; height: 2px; background: #0a0a0a; border-radius: 2px; transition: .25s; }
+.hb.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hb.open span:nth-child(2) { opacity: 0; }
+.hb.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.mm { display: none; position: fixed; top: 68px; left: 0; right: 0; background: #fff; border-bottom: 1.5px solid #e8e8e8; padding: 18px 5% 22px; z-index: 99; flex-direction: column; gap: 2px; box-shadow: 0 16px 48px rgba(0,0,0,.12); }
+.mm.open { display: flex; }
+.mm a { font-weight: 500; font-size: 1rem; padding: 12px 14px; border-radius: 8px; display: block; color: #0a0a0a; transition: background .2s; }
+.mm a:hover { background: #f0f0f0; }
+.mc { background: var(--navy) !important; color: #fff !important; text-align: center; margin-top: 8px; font-weight: 700 !important; }
+.nav-wordmark { font-family: var(--font-display); font-weight: 900; font-size: 1.5rem; color: var(--navy); letter-spacing: .04em; }
+
+/* SERVICE NAV STRIP */
+.svc-nav {
+  background: var(--dark2);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+  overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none;
+}
+.svc-nav::-webkit-scrollbar { display: none; }
+.svc-nav-inner { display: flex; align-items: center; padding: 0 5%; white-space: nowrap; min-width: max-content; }
+.svc-pill {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 11px 18px; font-size: 12px; font-weight: 700;
+  letter-spacing: .06em; text-transform: uppercase;
+  color: rgba(255,255,255,.45);
+  border-right: 1px solid rgba(255,255,255,.06);
+  transition: all .15s; cursor: pointer;
+}
+.svc-pill:hover { background: rgba(255,255,255,.04); color: rgba(255,255,255,.85); }
+.svc-pill.active { background: linear-gradient(135deg, var(--navy), var(--teal)); color: #fff; }
+.svc-pill-dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; opacity: .6; }
+.svc-pill.active .svc-pill-dot { opacity: 1; background: rgba(255,255,255,.9); }
+
+/* HERO */
+.hero {
+  position: relative; overflow: visible;
+  background: var(--dark); padding: 100px 5% 88px;
+  min-height: 76vh; display: flex; align-items: center;
+}
+.hero-grid {
+  position: absolute; inset: 0;
+  background-image: linear-gradient(rgba(6,65,135,.065) 1px, transparent 1px), linear-gradient(90deg, rgba(6,65,135,.065) 1px, transparent 1px);
+  background-size: 52px 52px; pointer-events: none;
+}
+.hero-glow {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 60% 70% at 80% 20%, rgba(10,137,163,.2) 0%, transparent 65%), radial-gradient(ellipse 40% 50% at 15% 85%, rgba(6,65,135,.28) 0%, transparent 60%);
+  pointer-events: none;
+}
+.hero-inner { position: relative; max-width: var(--inner-max); margin: 0 auto; width: 100%; display: grid; grid-template-columns: 1fr 460px; gap: 56px; align-items: center; }
+.hero-badge { display: inline-flex; align-items: center; gap: 9px; background: rgba(10,137,163,.14); border: 1px solid rgba(10,137,163,.38); border-radius: 100px; padding: 6px 18px; font-size: 0.72rem; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; color: var(--teal); margin-bottom: 26px; }
+.hdot { width: 8px; height: 8px; background: var(--teal); border-radius: 50%; animation: pulse 2.2s ease-in-out infinite; }
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(.7)} }
+.hero h1 { font-family: var(--font-display); font-weight: 900; text-transform: uppercase; line-height: 1.0; letter-spacing: -0.01em; margin-bottom: 28px; }
+.hero-h1-line { display: block; font-size: clamp(3rem, 5.5vw, 6rem); }
+.hero-h1-line.teal { color: var(--teal); }
+.hero-h1-line.boxed { display: inline-block; color: var(--navy); background: var(--white); padding: 2px 14px 4px; border-radius: 6px; line-height: 1.05; margin-top: 4px; }
+.hero-sub { font-size: 1.08rem; color: rgba(255,255,255,.62); line-height: 1.75; max-width: 540px; margin-bottom: 40px; }
+.hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; }
+.btn-primary { background: var(--navy); color: #fff; font-weight: 700; padding: 14px 28px; border-radius: var(--radius-sm); display: inline-flex; align-items: center; gap: 9px; font-size: 0.95rem; border: none; cursor: pointer; transition: background .2s; font-family: var(--font-body); }
+.btn-primary:hover { background: var(--teal); }
+.btn-ghost { background: transparent; color: #fff; font-weight: 700; padding: 13px 26px; border-radius: var(--radius-sm); display: inline-flex; align-items: center; gap: 9px; font-size: 0.95rem; border: 1.5px solid rgba(255,255,255,.25); transition: .2s; font-family: var(--font-body); }
+.btn-ghost:hover { background: rgba(255,255,255,.07); }
+.hero-stats { display: flex; flex-wrap: wrap; gap: 36px; margin-top: 48px; padding-top: 36px; border-top: 1px solid rgba(255,255,255,.09); }
+.hstat-num { font-family: var(--font-display); font-size: 2.6rem; font-weight: 900; color: var(--teal); line-height: 1; }
+.hstat-label { font-size: 0.81rem; color: rgba(255,255,255,.48); margin-top: 4px; line-height: 1.45; }
+
+/* HERO VISUAL — AI Platform Cards */
+.hero-visual { display: flex; align-items: center; justify-content: center; width: 100%; }
+.ai-platforms { width: 100%; max-width: 460px; display: flex; flex-direction: column; gap: 10px; }
+.platform-card {
+  background: rgba(255,255,255,.04); border: 1.5px solid rgba(255,255,255,.07);
+  border-radius: 14px; padding: 16px 20px;
+  display: flex; align-items: center; gap: 16px;
+  transition: background .2s;
+}
+.platform-card:hover { background: rgba(255,255,255,.07); }
+.platform-card.featured { border-color: rgba(10,137,163,.45); background: rgba(10,137,163,.07); }
+.plat-icon { width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 18px; }
+.pi-g { background: rgba(255,186,8,.14); border: 1.5px solid rgba(255,186,8,.35); }
+.pi-c { background: rgba(16,163,127,.18); border: 1.5px solid rgba(16,163,127,.35); }
+.pi-p { background: rgba(110,86,207,.18); border: 1.5px solid rgba(110,86,207,.35); }
+.pi-m { background: rgba(0,120,212,.15); border: 1.5px solid rgba(0,120,212,.35); }
+.pi-gem { background: rgba(52,168,83,.18); border: 1.5px solid rgba(52,168,83,.35); }
+.plat-name { font-family: var(--font-display); font-size: 1.05rem; font-weight: 900; text-transform: uppercase; color: #fff; letter-spacing: .04em; line-height: 1.1; }
+.plat-desc { font-size: 0.78rem; color: rgba(255,255,255,.5); margin-top: 2px; line-height: 1.4; }
+.plat-badge { margin-left: auto; flex-shrink: 0; font-size: 0.65rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; padding: 4px 10px; border-radius: 100px; white-space: nowrap; }
+.badge-live { background: rgba(10,137,163,.2); border: 1px solid rgba(10,137,163,.45); color: var(--teal); }
+.badge-new { background: rgba(255,186,8,.15); border: 1px solid rgba(255,186,8,.4); color: #ffba08; }
+.badge-grow { background: rgba(52,168,83,.15); border: 1px solid rgba(52,168,83,.4); color: #34A853; }
+
+/* MARQUEE */
+.mq { background: #ebebeb; overflow: hidden; border-bottom: 1.5px solid #d4d4d4; }
+.mt { display: flex; align-items: center; white-space: nowrap; animation: scroll 38s linear infinite; width: max-content; }
+.mt:hover { animation-play-state: paused; }
+@keyframes scroll { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+.mp { display: inline-flex; align-items: center; gap: 9px; padding: 13px 26px; font-size: 0.83rem; font-weight: 700; white-space: nowrap; border-right: 1.5px solid #d4d4d4; color: #0a0a0a; }
+.mp .dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+.c-b .dot { background: var(--navy); }
+.c-t .dot { background: var(--teal); }
+
+/* SHARED SECTIONS */
+.sec { padding: var(--section-pad); }
+.sec-inner { max-width: var(--inner-max); margin: 0 auto; }
+.lbl { font-size: 0.71rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--teal); margin-bottom: 10px; display: block; }
+.lbl-dark { color: var(--navy); }
+.ttl { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.1rem); font-weight: 900; line-height: 1.05; text-transform: uppercase; }
+.ttl-dark { color: var(--dark); }
+.sub { font-size: 0.98rem; color: rgba(255,255,255,.58); line-height: 1.78; max-width: 600px; }
+.sub-dark { color: #5a5a5a; }
+
+/* WHAT IS GEO EXPLAINER */
+.explainer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 56px; background: rgba(255,255,255,.06); border-radius: var(--radius-card); overflow: hidden; border: 1.5px solid rgba(255,255,255,.06); }
+.exp-card {
+  background: #0e1520; padding: 40px 36px;
+  position: relative; overflow: hidden;
+  transition: background .2s;
+}
+.exp-card:hover { background: #121d2e; }
+.exp-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--navy), var(--teal)); transform: scaleX(0); transform-origin: left; transition: transform .35s; }
+.exp-card:hover::before { transform: scaleX(1); }
+.exp-watermark { position: absolute; top: -10px; right: 16px; font-family: var(--font-display); font-size: 6.5rem; font-weight: 900; color: rgba(6,65,135,.12); line-height: 1; pointer-events: none; user-select: none; }
+.exp-icon { width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
+.exp-icon.t1 { background: rgba(255,186,8,.14); border: 1.5px solid rgba(255,186,8,.35); }
+.exp-icon.t2 { background: rgba(10,137,163,.18); border: 1.5px solid rgba(10,137,163,.35); }
+.exp-icon.t3 { background: rgba(52,168,83,.18); border: 1.5px solid rgba(52,168,83,.35); }
+.exp-icon.t4 { background: rgba(6,65,135,.22); border: 1.5px solid rgba(6,65,135,.45); }
+.exp-tag { font-size: 0.68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--teal); margin-bottom: 8px; display: block; }
+.exp-name { font-family: var(--font-display); font-size: 1.5rem; font-weight: 900; text-transform: uppercase; color: #fff; letter-spacing: .03em; line-height: 1.05; margin-bottom: 14px; }
+.exp-desc { font-size: 0.9rem; color: rgba(255,255,255,.55); line-height: 1.75; margin-bottom: 20px; }
+.exp-checklist { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+.exp-checklist li { font-size: 0.875rem; color: rgba(255,255,255,.7); display: flex; align-items: flex-start; gap: 9px; line-height: 1.5; }
+.chk { width: 18px; height: 18px; min-width: 18px; border-radius: 50%; background: var(--teal); display: flex; align-items: center; justify-content: center; margin-top: 1px; flex-shrink: 0; }
+.chk-navy { background: var(--navy); }
+.exp-key-fact { margin-top: 22px; padding: 14px 16px; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.07); border-radius: 10px; border-left: 3px solid var(--teal); }
+.exp-key-fact p { font-size: 0.83rem; color: rgba(255,255,255,.65); line-height: 1.6; }
+.exp-key-fact strong { color: #fff; font-weight: 600; }
+
+/* GEO vs SEO vs AEO COMPARISON */
+.compare-table-wrap { margin-top: 52px; border-radius: var(--radius-card); overflow: hidden; border: 1.5px solid rgba(255,255,255,.07); }
+.compare-table { width: 100%; border-collapse: collapse; }
+.compare-table th { padding: 18px 20px; text-align: left; font-family: var(--font-display); font-size: 0.95rem; font-weight: 900; text-transform: uppercase; letter-spacing: .06em; background: #0e1520; border-bottom: 1.5px solid rgba(255,255,255,.08); }
+.compare-table th:first-child { color: rgba(255,255,255,.5); }
+.compare-table th.col-seo { color: rgba(255,255,255,.6); }
+.compare-table th.col-aeo { color: #6fa3ff; }
+.compare-table th.col-geo { color: var(--teal); }
+.compare-table td { padding: 15px 20px; font-size: 0.86rem; line-height: 1.55; border-bottom: 1px solid rgba(255,255,255,.05); vertical-align: top; }
+.compare-table tr:last-child td { border-bottom: none; }
+.compare-table tr:nth-child(even) td { background: rgba(255,255,255,.02); }
+.compare-table td:first-child { color: rgba(255,255,255,.55); font-weight: 600; font-size: 0.82rem; text-transform: uppercase; letter-spacing: .07em; }
+.compare-table td.col-seo { color: rgba(255,255,255,.48); }
+.compare-table td.col-aeo { color: rgba(255,255,255,.65); }
+.compare-table td.col-geo { color: rgba(255,255,255,.85); }
+.compare-table td.col-geo.highlight { color: #fff; font-weight: 600; }
+.col-geo-head { background: rgba(10,137,163,.06) !important; }
+.td-geo-row { background: rgba(10,137,163,.04) !important; }
+
+/* AI PLATFORM CARDS */
+.platforms-section { background: var(--dark2); }
+.platforms-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; margin-top: 52px; background: rgba(255,255,255,.06); border-radius: var(--radius-card); overflow: hidden; border: 1.5px solid rgba(255,255,255,.06); }
+.plat-detail-card { background: #0e1520; padding: 32px 28px; transition: background .2s; position: relative; overflow: hidden; }
+.plat-detail-card:hover { background: #121d2e; }
+.plat-detail-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--navy), var(--teal)); transform: scaleX(0); transform-origin: left; transition: transform .35s; }
+.plat-detail-card:hover::before { transform: scaleX(1); }
+.plat-badge-wrap { margin-bottom: 16px; }
+.plat-type-badge { display: inline-flex; align-items: center; gap: 7px; border-radius: 100px; padding: 5px 14px; font-size: 0.68rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.ptb-yellow { background: rgba(255,186,8,.14); border: 1px solid rgba(255,186,8,.35); color: #ffba08; }
+.ptb-teal { background: rgba(10,137,163,.18); border: 1px solid rgba(10,137,163,.4); color: var(--teal); }
+.ptb-green { background: rgba(52,168,83,.18); border: 1px solid rgba(52,168,83,.4); color: #34A853; }
+.ptb-navy { background: rgba(6,65,135,.22); border: 1px solid rgba(6,65,135,.5); color: #6fa3ff; }
+.ptb-purple { background: rgba(139,92,246,.18); border: 1px solid rgba(139,92,246,.4); color: #a78bfa; }
+.ptb-orange { background: rgba(255,122,0,.15); border: 1px solid rgba(255,122,0,.35); color: #ff7a00; }
+.plat-detail-name { font-family: var(--font-display); font-size: 1.2rem; font-weight: 900; text-transform: uppercase; color: #fff; margin-bottom: 10px; letter-spacing: .04em; line-height: 1.1; }
+.plat-detail-desc { font-size: 0.875rem; color: rgba(255,255,255,.52); line-height: 1.65; }
+.plat-detail-example { margin-top: 14px; padding: 12px 14px; background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.07); border-radius: 8px; border-left: 3px solid var(--teal); }
+.plat-detail-example p { font-size: 0.8rem; color: rgba(255,255,255,.55); line-height: 1.55; }
+.plat-detail-example strong { color: var(--teal); font-weight: 600; }
+
+/* HOW GEO WORKS */
+.how-section { background: var(--dark); }
+.steps-row { display: grid; grid-template-columns: repeat(5,1fr); gap: 0; position: relative; margin-top: 56px; }
+.steps-row::before { content: ''; position: absolute; top: 27px; left: calc(10% + 28px); right: calc(10% + 28px); height: 2px; background: linear-gradient(90deg, var(--navy), var(--teal), var(--navy)); z-index: 0; }
+.step-item { text-align: center; padding: 0 12px; position: relative; z-index: 1; }
+.step-num { width: 56px; height: 56px; border-radius: 50%; background: var(--navy); color: #fff; font-family: var(--font-display); font-weight: 900; font-size: 1.25rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; box-shadow: 0 0 0 6px var(--dark), 0 0 0 8px var(--navy); position: relative; z-index: 2; }
+.step-item:nth-child(even) .step-num { background: var(--teal); box-shadow: 0 0 0 6px var(--dark), 0 0 0 8px var(--teal); }
+.step-item h3 { font-family: var(--font-display); font-size: 1rem; font-weight: 900; text-transform: uppercase; color: #fff; margin-bottom: 8px; letter-spacing: .04em; }
+.step-item p { font-size: 0.8rem; color: rgba(255,255,255,.48); line-height: 1.6; }
+
+/* WHAT FAVZE DELIVERS */
+.delivers-section { background: var(--dark2); }
+.delivers-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 2px; margin-top: 52px; background: rgba(255,255,255,.06); border-radius: var(--radius-card); overflow: hidden; border: 1.5px solid rgba(255,255,255,.06); }
+.deliver-card { background: #0e1520; padding: 36px 32px; position: relative; overflow: hidden; transition: background .2s; }
+.deliver-card:hover { background: #121d2e; }
+.deliver-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--navy), var(--teal)); transform: scaleX(0); transform-origin: left; transition: transform .35s; }
+.deliver-card:hover::before { transform: scaleX(1); }
+.deliver-watermark { position: absolute; top: -10px; right: 16px; font-family: var(--font-display); font-size: 6.5rem; font-weight: 900; color: rgba(6,65,135,.1); line-height: 1; pointer-events: none; user-select: none; }
+.deliver-header { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+.deliver-icon { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.di-1 { background: rgba(255,186,8,.14); border: 1.5px solid rgba(255,186,8,.35); }
+.di-2 { background: rgba(10,137,163,.18); border: 1.5px solid rgba(10,137,163,.35); }
+.di-3 { background: rgba(52,168,83,.18); border: 1.5px solid rgba(52,168,83,.35); }
+.di-4 { background: rgba(6,65,135,.22); border: 1.5px solid rgba(6,65,135,.45); }
+.di-5 { background: rgba(139,92,246,.18); border: 1.5px solid rgba(139,92,246,.4); }
+.di-6 { background: rgba(255,122,0,.15); border: 1.5px solid rgba(255,122,0,.35); }
+.deliver-label { font-size: 0.65rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--teal); margin-bottom: 3px; }
+.deliver-name { font-family: var(--font-display); font-size: 1.35rem; font-weight: 900; text-transform: uppercase; color: #fff; letter-spacing: .03em; line-height: 1.05; }
+.deliver-desc { font-size: 0.88rem; color: rgba(255,255,255,.52); line-height: 1.72; margin-bottom: 18px; }
+.deliver-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.deliver-list li { font-size: 0.85rem; color: rgba(255,255,255,.68); display: flex; align-items: flex-start; gap: 8px; line-height: 1.5; }
+
+/* ENTITY AUTHORITY — ALSO KNOWN AS */
+.aka-section { background: var(--dark2); }
+.aka-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 36px; }
+.aka-tag { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,.04); border: 1.5px solid rgba(255,255,255,.08); border-radius: 100px; padding: 9px 20px; font-size: 0.82rem; font-weight: 600; color: rgba(255,255,255,.65); transition: .2s; }
+.aka-tag:hover { background: rgba(10,137,163,.1); border-color: rgba(10,137,163,.35); color: #fff; }
+.aka-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); opacity: .7; flex-shrink: 0; }
+
+/* WHO IT'S FOR */
+.who-section { background: var(--dark); }
+.who-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; margin-top: 52px; background: rgba(255,255,255,.06); border-radius: var(--radius-card); overflow: hidden; border: 1.5px solid rgba(255,255,255,.06); }
+.who-card { background: #0e1520; padding: 32px 28px; display: flex; align-items: flex-start; gap: 18px; transition: background .2s; position: relative; overflow: hidden; }
+.who-card:hover { background: #121d2e; }
+.who-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--navy), var(--teal)); transform: scaleX(0); transform-origin: left; transition: transform .35s; }
+.who-card:hover::before { transform: scaleX(1); }
+.who-icon { width: 52px; height: 52px; border-radius: 13px; background: rgba(6,65,135,.22); border: 1.5px solid rgba(6,65,135,.45); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.who-card h3 { font-family: var(--font-display); font-size: 1.2rem; font-weight: 900; text-transform: uppercase; color: #fff; margin-bottom: 7px; letter-spacing: .04em; }
+.who-card p { font-size: 0.875rem; color: rgba(255,255,255,.52); line-height: 1.65; }
+
+/* DECISION STATEMENTS */
+.decision-section { background: var(--dark); padding: 0; overflow: hidden; }
+.decision-label { text-align: center; padding: 72px 5% 0; max-width: var(--inner-max); margin: 0 auto; }
+.decision-statements { display: flex; flex-direction: column; gap: 0; margin-top: 48px; }
+.decision-stmt { display: flex; align-items: center; min-height: 130px; padding: 32px 5%; position: relative; overflow: hidden; }
+.decision-stmt-1 { background: var(--navy); }
+.decision-stmt-2 { background: var(--teal); }
+.decision-stmt-3 { background: var(--navy); }
+.decision-num { font-family: var(--font-display); font-size: clamp(5rem, 11vw, 9rem); font-weight: 900; line-height: 1; color: rgba(255,255,255,.08); position: absolute; right: 5%; top: 50%; transform: translateY(-50%); letter-spacing: -.04em; user-select: none; pointer-events: none; }
+.decision-text-wrap { max-width: var(--inner-max); width: 100%; margin: 0 auto; display: flex; align-items: center; gap: 28px; }
+.decision-stmt-icon { width: 52px; height: 52px; flex-shrink: 0; border-radius: 14px; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,.12); border: 1.5px solid rgba(255,255,255,.2); }
+.decision-stmt-2 .decision-stmt-icon { background: rgba(6,65,135,.25); border: 1.5px solid rgba(6,65,135,.45); }
+.decision-text { font-family: var(--font-display); font-size: clamp(1.8rem, 3.5vw, 3.2rem); font-weight: 900; text-transform: uppercase; letter-spacing: -.01em; line-height: 1.05; color: #fff; }
+.decision-text em { font-style: normal; color: var(--teal); }
+.decision-stmt-2 .decision-text em { color: var(--navy); }
+.decision-payoff { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 28px; padding: 72px 5% 80px; background: var(--dark); position: relative; }
+.decision-payoff::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--navy), var(--teal), var(--navy)); }
+.decision-payoff-eyebrow { font-size: 0.72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--teal); }
+.decision-payoff-text { font-family: var(--font-display); font-size: clamp(2.6rem, 5.5vw, 5rem); font-weight: 900; text-transform: uppercase; letter-spacing: -.02em; line-height: 0.97; color: #fff; }
+.decision-payoff-text span { color: var(--teal); }
+
+/* PAIN POINTS */
+.pain-section { background: var(--dark); }
+.pain-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 2px; margin-top: 48px; background: rgba(255,255,255,.06); border-radius: 24px; overflow: hidden; border: 1.5px solid rgba(255,255,255,.06); }
+.pain-card { background: #0e1520; transition: background .25s; position: relative; overflow: hidden; }
+.pain-card:hover { background: #121d2e; }
+.pain-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--navy), var(--teal)); transform: scaleX(0); transform-origin: left; transition: transform .35s; }
+.pain-card:hover::before { transform: scaleX(1); }
+.pain-num-watermark { position: absolute; top: -10px; right: 16px; font-family: var(--font-display); font-size: 7rem; font-weight: 900; color: rgba(6,65,135,.12); line-height: 1; pointer-events: none; user-select: none; }
+.pain-inner { padding: 36px 32px 30px; position: relative; }
+.pain-tag { display: inline-flex; align-items: center; gap: 7px; margin-bottom: 18px; background: rgba(6,65,135,.2); border: 1px solid rgba(6,65,135,.45); border-radius: 100px; padding: 5px 14px; font-size: 0.7rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.7); }
+.pain-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); flex-shrink: 0; }
+.pain-quote { font-family: var(--font-display); font-size: clamp(1.4rem, 2.2vw, 1.8rem); font-weight: 900; line-height: 1.15; color: #fff; text-transform: uppercase; letter-spacing: -.01em; margin-bottom: 18px; padding-left: 20px; position: relative; }
+.pain-quote::before { content: ''; position: absolute; left: 0; top: 4px; bottom: 4px; width: 4px; background: linear-gradient(180deg, var(--teal), var(--navy)); border-radius: 4px; }
+.pain-divider { height: 1px; background: rgba(255,255,255,.07); margin: 18px 0; }
+.pain-fix-label { font-size: 0.68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--teal); margin-bottom: 8px; display: block; }
+.pain-solution { font-size: 0.88rem; color: rgba(255,255,255,.55); line-height: 1.72; margin-bottom: 22px; }
+.pain-fix-btn { display: inline-flex; align-items: center; gap: 8px; background: transparent; border: 1.5px solid rgba(255,255,255,.18); color: rgba(255,255,255,.8); border-radius: 100px; padding: 8px 20px; font-size: 0.75rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; transition: .2s; cursor: pointer; font-family: var(--font-body); }
+.pain-fix-btn:hover { background: var(--navy); border-color: var(--navy); color: #fff; }
+
+/* CTA STRIP */
+.cta-strip { background: linear-gradient(135deg, var(--navy) 0%, var(--teal) 62%, var(--navy) 100%); padding: 84px 5%; text-align: center; position: relative; overflow: hidden; }
+.cta-strip::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px); background-size: 42px 42px; }
+.cta-strip-inner { position: relative; max-width: 720px; margin: 0 auto; }
+.cta-strip h2 { font-family: var(--font-display); font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 900; color: #fff; text-transform: uppercase; line-height: 1.02; margin-bottom: 16px; }
+.cta-strip p { color: rgba(255,255,255,.74); font-size: 1rem; margin-bottom: 34px; line-height: 1.68; }
+.cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.btn-white { background: #fff; color: var(--navy); font-weight: 700; padding: 14px 28px; border-radius: var(--radius-sm); display: inline-flex; align-items: center; gap: 9px; font-size: 0.95rem; font-family: var(--font-body); transition: .2s; }
+.btn-white:hover { background: #eee; }
+.btn-ghost-white { background: rgba(255,255,255,.12); color: #fff; font-weight: 700; padding: 13px 26px; border-radius: var(--radius-sm); display: inline-flex; align-items: center; gap: 9px; font-size: 0.95rem; border: 1.5px solid rgba(255,255,255,.28); font-family: var(--font-body); transition: .2s; }
+.btn-ghost-white:hover { background: rgba(255,255,255,.22); }
+
+/* FAQ */
+.faq-section { background: var(--off-white); }
+
+/* OTHER SERVICES */
+.other-section { background: var(--off-white); }
+.other-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5px; margin-top: 52px; background: #d4d4d4; border-radius: var(--radius-card); overflow: hidden; border: 1.5px solid #d4d4d4; }
+.other-card { background: var(--white); padding: 22px 20px; text-decoration: none; color: var(--dark); transition: background .15s; display: flex; flex-direction: column; gap: 5px; position: relative; overflow: hidden; }
+.other-card:hover { background: #f4f2ec; }
+.other-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--navy), var(--teal)); transform: scaleX(0); transform-origin: left; transition: transform .3s; }
+.other-card:hover::before { transform: scaleX(1); }
+.other-card-tag { font-size: 0.68rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--teal); margin-bottom: 2px; }
+.other-card-name { font-family: var(--font-display); font-size: 1.05rem; font-weight: 900; text-transform: uppercase; letter-spacing: .03em; color: var(--dark); line-height: 1.2; }
+.other-card-desc { font-size: 0.78rem; color: #777; line-height: 1.4; margin-top: 2px; }
+.other-card-arrow { font-size: 14px; color: var(--navy); margin-top: auto; padding-top: 10px; font-weight: 700; }
+
+/* FOOTER */
+footer { background: var(--dark); padding: 56px 5% 0; border-top: 1px solid var(--border-dark); }
+.ft-inner { max-width: var(--inner-max); margin: 0 auto; }
+.ft-top { display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,.09); }
+.fb-desc { font-size: 0.84rem; color: rgba(255,255,255,.42); line-height: 1.72; margin-top: 14px; max-width: 300px; }
+.fc h4 { font-weight: 900; font-size: 0.78rem; color: #fff; margin-bottom: 16px; letter-spacing: .09em; text-transform: uppercase; }
+.fc ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.fc ul li a { font-size: 0.83rem; color: rgba(255,255,255,.42); transition: color .2s; }
+.fc ul li a:hover { color: #fff; }
+.fcon { display: flex; flex-direction: column; gap: 9px; }
+.fcon a { font-size: 0.83rem; color: rgba(255,255,255,.42); display: flex; align-items: center; gap: 7px; transition: color .2s; }
+.fcon a:hover { color: #fff; }
+.ft-serving-strip { border-top: 1px solid rgba(255,255,255,.07); border-bottom: 1px solid rgba(255,255,255,.07); padding: 13px 0; }
+.ft-serving-inner { max-width: var(--inner-max); margin: 0 auto; padding: 0 5%; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+.ft-serving-left { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.ft-serving-label { font-size: 0.62rem; font-weight: 700; letter-spacing: .16em; color: var(--teal); white-space: nowrap; }
+.ft-serving-locations { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.ft-serving-locations a { font-size: 0.78rem; color: rgba(255,255,255,.48); text-decoration: none; white-space: nowrap; transition: color .2s; }
+.ft-serving-locations a:hover { color: rgba(255,255,255,.85); }
+.ft-serving-dot { width: 3px; height: 3px; border-radius: 50%; background: rgba(255,255,255,.18); flex-shrink: 0; display: inline-block; }
+.ft-serving-muted { font-size: 0.78rem; color: rgba(255,255,255,.28); white-space: nowrap; }
+.ft-serving-right { display: flex; align-items: center; gap: 7px; white-space: nowrap; flex-shrink: 0; }
+.ft-serving-right span { font-size: 0.62rem; font-weight: 700; letter-spacing: .1em; color: var(--teal); text-transform: uppercase; }
+.fb-bot { padding: 18px 0 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; }
+.fb-bot p { font-size: 0.78rem; color: rgba(255,255,255,.26); }
+.fb-bot a { color: rgba(255,255,255,.32); font-size: 0.78rem; transition: color .2s; }
+.fb-bot a:hover { color: #fff; }
+
+/* SIGNAL STRIP */
+.signal-strip { background: var(--dark); border-top: 1px solid rgba(255,255,255,.06); border-bottom: 1px solid rgba(255,255,255,.06); padding: 36px 5%; }
+.signal-strip-inner { max-width: var(--inner-max); margin: 0 auto; display: grid; grid-template-columns: repeat(4,1fr); gap: 2px; }
+.signal-item { text-align: center; padding: 24px 20px; background: rgba(255,255,255,.02); border-radius: 12px; }
+.signal-num { font-family: var(--font-display); font-size: 2.4rem; font-weight: 900; color: var(--teal); line-height: 1; margin-bottom: 6px; }
+.signal-label { font-size: 0.8rem; color: rgba(255,255,255,.45); line-height: 1.4; }
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  :root { --section-pad: 80px 5%; }
+  .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+  .explainer-grid { grid-template-columns: 1fr; }
+  .delivers-grid { grid-template-columns: 1fr; }
+  .platforms-grid { grid-template-columns: repeat(2,1fr); }
+  .steps-row { grid-template-columns: repeat(3,1fr); gap: 36px; }
+  .steps-row::before { display: none; }
+  .other-grid { grid-template-columns: repeat(3,1fr); }
+  .ft-top { grid-template-columns: 1fr 1fr; }
+  .signal-strip-inner { grid-template-columns: repeat(2,1fr); gap: 12px; }
+}
+@media (max-width: 768px) {
+  :root { --section-pad: 60px 4.5%; }
+  .nl { display: none; }
+  .hb { display: flex; }
+  .hero { padding: 72px 4.5% 56px; min-height: auto; }
+  .hero-visual { display: none; }
+  .who-grid { grid-template-columns: 1fr; }
+  .pain-grid { grid-template-columns: 1fr; }
+  .platforms-grid { grid-template-columns: 1fr; }
+  .steps-row { grid-template-columns: 1fr; gap: 28px; }
+  .other-grid { grid-template-columns: repeat(2,1fr); }
+  .cta-btns { flex-direction: column; align-items: stretch; }
+  .cta-btns a { width: 100%; justify-content: center; }
+  .ft-top { grid-template-columns: 1fr; }
+  .decision-stmt { min-height: 100px; padding: 24px 4.5%; }
+  .decision-text { font-size: clamp(1.4rem, 4.5vw, 2rem); }
+  .compare-table-wrap { overflow-x: auto; }
+  .signal-strip-inner { grid-template-columns: repeat(2,1fr); }
+}
+@media (max-width: 480px) {
+  .other-grid { grid-template-columns: repeat(2,1fr); }
+  .pain-inner { padding: 24px 20px; }
+  .signal-strip-inner { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav role="navigation" aria-label="Main site navigation">
+  <a href="https://favze.com" style="display:flex;align-items:center">
+    <span class="nav-wordmark">FAVZE</span>
+  </a>
+  <ul class="nl">
+    <li><a href="https://favze.com/services" class="active">Services</a></li>
+    <li><a href="https://favze.com/favze-insights">Articles</a></li>
+    <li><a href="https://favze.com/why-choose-us">Why Us</a></li>
+    <li><a href="https://favze.com/about">About</a></li>
+    <li><a href="https://favze.com/digital-marketing-faq">FAQ</a></li>
+    <li><a href="https://favze.com/contact" class="nc">Free Consultation</a></li>
+  </ul>
+  <button class="hb" id="hb" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mm" id="mm">
+  <a href="https://favze.com/services">Services</a>
+  <a href="https://favze.com/favze-insights">Articles</a>
+  <a href="https://favze.com/why-choose-us">Why Us</a>
+  <a href="https://favze.com/about">About</a>
+  <a href="https://favze.com/digital-marketing-faq">FAQ</a>
+  <a href="https://favze.com/contact" class="mc">Start Free Consultation</a>
+</div>
+
+<!-- SERVICE NAV STRIP -->
+<div class="svc-nav" aria-label="All Favze services">
+  <div class="svc-nav-inner">
+    <a href="https://favze.com/social-media-marketing" class="svc-pill"><span class="svc-pill-dot"></span>Social Media</a>
+    <a href="https://favze.com/ai-optimization" class="svc-pill"><span class="svc-pill-dot"></span>AI Optimization</a>
+    <a href="https://favze.com/search-engine-optimization" class="svc-pill"><span class="svc-pill-dot"></span>SEO</a>
+    <a href="https://favze.com/answer-engine-optimization" class="svc-pill"><span class="svc-pill-dot"></span>AEO</a>
+    <a href="https://favze.com/generative-engine-optimization" class="svc-pill active"><span class="svc-pill-dot"></span>GEO</a>
+    <a href="https://favze.com/short-message-service-sms" class="svc-pill"><span class="svc-pill-dot"></span>SMS</a>
+    <a href="https://favze.com/email-marketing" class="svc-pill"><span class="svc-pill-dot"></span>Email</a>
+    <a href="https://favze.com/local-seo" class="svc-pill"><span class="svc-pill-dot"></span>Local SEO</a>
+    <a href="https://favze.com/hubspot-setup" class="svc-pill"><span class="svc-pill-dot"></span>HubSpot</a>
+    <a href="https://favze.com/website-design" class="svc-pill"><span class="svc-pill-dot"></span>Website Design</a>
+    <a href="https://favze.com/paid-search-ads-sem" class="svc-pill"><span class="svc-pill-dot"></span>Paid Search</a>
+    <a href="https://favze.com/paid-social-media-ads" class="svc-pill"><span class="svc-pill-dot"></span>Paid Social</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" aria-label="Generative Engine Optimization — Northern Indiana & Michiana">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge"><span class="hdot"></span>ChatGPT · Perplexity · Google AI Overviews · Microsoft Copilot · Gemini</div>
+      <h1>
+        <span class="hero-h1-line">Get Cited By AI.</span>
+        <span class="hero-h1-line teal">Not Just Ranked.</span>
+        <span class="hero-h1-line boxed">Every Platform.</span>
+      </h1>
+      <p class="hero-sub">Favze optimizes Northern Indiana and Michiana businesses to be cited as trusted sources in ChatGPT, Perplexity, Google AI Overviews, Microsoft Copilot, and every major AI search platform — so when customers ask AI who to call, your business is the answer they get.</p>
+      <div class="hero-ctas">
+        <a href="https://favze.com/contact" class="btn-primary">Start Free Consultation <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="#what-is-geo" class="btn-ghost">What Is GEO?</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="hstat-num">6+</div>
+          <div class="hstat-label">AI Platforms<br>Targeted</div>
+        </div>
+        <div>
+          <div class="hstat-num">AI</div>
+          <div class="hstat-label">Cited as the<br>Trusted Source</div>
+        </div>
+        <div>
+          <div class="hstat-num">$0</div>
+          <div class="hstat-label">Hidden Fees.<br>Ever. Period.</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="ai-platforms">
+        <div class="platform-card featured">
+          <div class="plat-icon pi-g">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M18.5 10c0 4.69-3.81 8.5-8.5 8.5S1.5 14.69 1.5 10 5.31 1.5 10 1.5" stroke="#ffba08" stroke-width="1.5" stroke-linecap="round"/><path d="M10 5.5V10l3 2" stroke="#ffba08" stroke-width="1.4" stroke-linecap="round"/><circle cx="15" cy="4" r="3" fill="rgba(255,186,8,.3)" stroke="#ffba08" stroke-width="1.2"/></svg>
+          </div>
+          <div>
+            <div class="plat-name">Google AI Overviews</div>
+            <div class="plat-desc">Cited in AI summaries at the top of every search</div>
+          </div>
+          <div class="plat-badge badge-new">★ Priority</div>
+        </div>
+        <div class="platform-card">
+          <div class="plat-icon pi-c">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="2" y="4" width="16" height="12" rx="2.5" stroke="#10a37f" stroke-width="1.5"/><path d="M6 9h8M6 12h5" stroke="#10a37f" stroke-width="1.3" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <div class="plat-name">ChatGPT Browse</div>
+            <div class="plat-desc">OpenAI cites your business in real-time responses</div>
+          </div>
+          <div class="plat-badge badge-live">High Value</div>
+        </div>
+        <div class="platform-card">
+          <div class="plat-icon pi-p">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7.5" stroke="#6e56cf" stroke-width="1.5"/><path d="M7 10.5s.5-3 3-3 3 3 3 3" stroke="#6e56cf" stroke-width="1.4" stroke-linecap="round"/><circle cx="10" cy="13" r="1" fill="#6e56cf"/></svg>
+          </div>
+          <div>
+            <div class="plat-name">Perplexity AI</div>
+            <div class="plat-desc">The fastest-growing AI search engine</div>
+          </div>
+          <div class="plat-badge badge-grow">Growing</div>
+        </div>
+        <div class="platform-card">
+          <div class="plat-icon pi-m">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 6h14l-2 8H5L3 6z" stroke="#0078d4" stroke-width="1.4" stroke-linejoin="round"/><path d="M3 6l-1-3H1" stroke="#0078d4" stroke-width="1.4" stroke-linecap="round"/><circle cx="7.5" cy="17" r="1" fill="#0078d4"/><circle cx="13.5" cy="17" r="1" fill="#0078d4"/></svg>
+          </div>
+          <div>
+            <div class="plat-name">Microsoft Copilot</div>
+            <div class="plat-desc">Bing-powered AI used by millions of businesses</div>
+          </div>
+          <div class="plat-badge badge-live">B2B Key</div>
+        </div>
+        <div class="platform-card">
+          <div class="plat-icon pi-gem">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2l2.5 5.5L18 9l-4 3.9 1 5.6L10 16l-5 2.5 1-5.6L2 9l5.5-1.5L10 2z" stroke="#34A853" stroke-width="1.4" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <div class="plat-name">Google Gemini</div>
+            <div class="plat-desc">Google's conversational AI assistant with web access</div>
+          </div>
+          <div class="plat-badge badge-new">Rising</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="mq" aria-hidden="true">
+  <div class="mt">
+    <span class="mp c-b"><span class="dot"></span>Generative Engine Optimization</span>
+    <span class="mp c-t"><span class="dot"></span>AI Citation Optimization</span>
+    <span class="mp c-b"><span class="dot"></span>ChatGPT Visibility</span>
+    <span class="mp c-t"><span class="dot"></span>Google AI Overviews</span>
+    <span class="mp c-b"><span class="dot"></span>Perplexity Optimization</span>
+    <span class="mp c-t"><span class="dot"></span>Entity Authority Building</span>
+    <span class="mp c-b"><span class="dot"></span>AI-Ready Content Strategy</span>
+    <span class="mp c-t"><span class="dot"></span>Microsoft Copilot SEO</span>
+    <span class="mp c-b"><span class="dot"></span>Northern Indiana Specialists</span>
+    <span class="mp c-t"><span class="dot"></span>Structured Data & Schema</span>
+    <span class="mp c-b"><span class="dot"></span>Conversational Query Optimization</span>
+    <span class="mp c-t"><span class="dot"></span>Local GEO Strategy</span>
+    <span class="mp c-b"><span class="dot"></span>Generative Engine Optimization</span>
+    <span class="mp c-t"><span class="dot"></span>AI Citation Optimization</span>
+    <span class="mp c-b"><span class="dot"></span>ChatGPT Visibility</span>
+    <span class="mp c-t"><span class="dot"></span>Google AI Overviews</span>
+    <span class="mp c-b"><span class="dot"></span>Perplexity Optimization</span>
+    <span class="mp c-t"><span class="dot"></span>Entity Authority Building</span>
+    <span class="mp c-b"><span class="dot"></span>AI-Ready Content Strategy</span>
+    <span class="mp c-t"><span class="dot"></span>Microsoft Copilot SEO</span>
+    <span class="mp c-b"><span class="dot"></span>Northern Indiana Specialists</span>
+    <span class="mp c-t"><span class="dot"></span>Structured Data & Schema</span>
+    <span class="mp c-b"><span class="dot"></span>Conversational Query Optimization</span>
+    <span class="mp c-t"><span class="dot"></span>Local GEO Strategy</span>
+  </div>
+</div>
+
+<!-- WHAT IS GEO -->
+<section class="sec" id="what-is-geo" style="background:var(--dark);" aria-labelledby="geo-def-heading">
+  <div class="sec-inner">
+    <span class="lbl">The Plain-English Definition</span>
+    <h2 class="ttl" id="geo-def-heading" style="color:#fff;max-width:860px;">GEO: The Art of Being <span style="color:var(--teal)">Cited By AI</span> — Not Just Ranked By Google</h2>
+    <p class="sub" style="margin-top:14px;max-width:740px;">Traditional SEO gets your business into blue-link rankings. Generative Engine Optimization gets your business <em>cited</em> inside the AI-generated answers that now appear above those rankings — in ChatGPT, Perplexity, Google AI Overviews, and Copilot. When AI answers a question, your business should be the source it quotes.</p>
+
+    <div class="explainer-grid">
+      <!-- Card 1: What GEO Is -->
+      <div class="exp-card">
+        <div class="exp-watermark">GEO</div>
+        <div class="exp-icon t1">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#ffba08" stroke-width="1.7"/><path d="M8 12l3 3 5-5" stroke="#ffba08" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <span class="exp-tag">What GEO Is</span>
+        <div class="exp-name">Your Business Becomes The Source AI Trusts</div>
+        <p class="exp-desc">GEO is the process of building the content quality, entity authority, and structured signals that make AI tools choose your Northern Indiana business as a cited source in their responses. AI doesn't just link to you — it recommends you, by name, as the trusted answer to your customers' questions.</p>
+        <ul class="exp-checklist">
+          <li><span class="chk chk-navy"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Content architected for AI comprehension — factual, direct, comprehensive, well-structured</li>
+          <li><span class="chk chk-navy"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Entity authority signals that tell AI systems exactly who your business is and what you do</li>
+          <li><span class="chk chk-navy"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Schema markup that machine-reads your services, location, and expertise to AI crawlers</li>
+          <li><span class="chk chk-navy"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Conversational content that mirrors how customers phrase questions to AI tools</li>
+          <li><span class="chk chk-navy"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Citation signals that build trust with AI models across the open web</li>
+        </ul>
+        <div class="exp-key-fact">
+          <p><strong>The AI recommendation effect:</strong> When an AI tool tells a customer "For HVAC service in Goshen, [your business] is a trusted local provider" — that carries more weight than any ad. It's the AI vouching for you by name, before the customer even opens a browser tab.</p>
+        </div>
+      </div>
+
+      <!-- Card 2: Why It Matters Now -->
+      <div class="exp-card">
+        <div class="exp-watermark">NOW</div>
+        <div class="exp-icon t2">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 17l5-6 4 4 5-8 4 4" stroke="#0A89A3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><rect x="2" y="20" width="20" height="1.5" rx="0.75" fill="#0A89A3" opacity=".35"/></svg>
+        </div>
+        <span class="exp-tag">Why GEO Matters More Now Than Ever</span>
+        <div class="exp-name">AI Search Is Replacing Traditional Search — Fast.</div>
+        <p class="exp-desc">ChatGPT reached 100 million users faster than any platform in history. Perplexity grew 3,400% in a single year. Google AI Overviews now appear on more than half of all searches. Customers aren't just Googling anymore — they're asking AI. If your business isn't optimized to be cited, you're invisible to an enormous and growing portion of your market.</p>
+        <ul class="exp-checklist">
+          <li><span class="chk"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Google AI Overviews appear on 50%+ of all searches — and growing every month</li>
+          <li><span class="chk"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>AI-powered searches have higher buying intent — users asking AI are ready to act</li>
+          <li><span class="chk"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Northern Indiana competitors are almost universally NOT doing GEO — the window is open now</li>
+          <li><span class="chk"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Being cited by AI carries implicit credibility — it's the AI publicly recommending your business</li>
+          <li><span class="chk"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>B2B buyers increasingly use AI research tools to shortlist vendors and service providers</li>
+        </ul>
+        <div class="exp-key-fact">
+          <p><strong>The first-mover advantage:</strong> Local GEO is a wide-open opportunity in Northern Indiana and Michiana. Businesses that build AI citation authority now will hold those positions for months before competitors realize what's happening — exactly the same window that existed for local SEO fifteen years ago. The businesses that moved early dominated for years.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SIGNAL STRIP -->
+<div class="signal-strip" aria-hidden="true">
+  <div class="signal-strip-inner">
+    <div class="signal-item">
+      <div class="signal-num">50%+</div>
+      <div class="signal-label">Of Google searches now include AI Overviews</div>
+    </div>
+    <div class="signal-item">
+      <div class="signal-num">6</div>
+      <div class="signal-label">Major AI platforms Favze targets for every GEO client</div>
+    </div>
+    <div class="signal-item">
+      <div class="signal-num">$0</div>
+      <div class="signal-label">Hidden fees. Ever. Full transparency on every engagement.</div>
+    </div>
+    <div class="signal-item">
+      <div class="signal-num">0</div>
+      <div class="signal-label">Northern Indiana GEO competitors doing this well. Yet.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ALSO KNOWN AS -->
+<section class="sec aka-section" aria-labelledby="aka-heading">
+  <div class="sec-inner">
+    <span class="lbl">GEO Has Many Names</span>
+    <h2 class="ttl" id="aka-heading" style="color:#fff;max-width:700px;">All Roads Lead To <span style="color:var(--teal)">The Same Goal</span></h2>
+    <p class="sub" style="margin-top:14px;max-width:660px;">You might hear Generative Engine Optimization referred to by different names depending on who you're talking to. They all describe overlapping strategies aimed at the same thing: making your business the cited, recommended source in AI-generated answers.</p>
+    <div class="aka-tags">
+      <div class="aka-tag"><span class="aka-dot"></span>Generative Engine Optimization (GEO)</div>
+      <div class="aka-tag"><span class="aka-dot"></span>AI SEO</div>
+      <div class="aka-tag"><span class="aka-dot"></span>AI Search Optimization</div>
+      <div class="aka-tag"><span class="aka-dot"></span>Generative AI SEO</div>
+      <div class="aka-tag"><span class="aka-dot"></span>AI-Ready SEO</div>
+      <div class="aka-tag"><span class="aka-dot"></span>AI-Friendly SEO</div>
+      <div class="aka-tag"><span class="aka-dot"></span>Conversational SEO</div>
+      <div class="aka-tag"><span class="aka-dot"></span>Prompt SEO</div>
+      <div class="aka-tag"><span class="aka-dot"></span>Semantic AI SEO</div>
+      <div class="aka-tag"><span class="aka-dot"></span>Chatbot Optimization</div>
+      <div class="aka-tag"><span class="aka-dot"></span>AI Citation Optimization</div>
+      <div class="aka-tag"><span class="aka-dot"></span>LLM Optimization</div>
+      <div class="aka-tag"><span class="aka-dot"></span>AI Content Optimization</div>
+      <div class="aka-tag"><span class="aka-dot"></span>AI-Driven SEO</div>
+      <div class="aka-tag"><span class="aka-dot"></span>Entity Authority Optimization</div>
+    </div>
+  </div>
+</section>
+
+<!-- SEO vs AEO vs GEO COMPARISON -->
+<section class="sec" style="background:var(--dark);" aria-labelledby="compare-heading">
+  <div class="sec-inner">
+    <span class="lbl">SEO vs. AEO vs. GEO</span>
+    <h2 class="ttl" id="compare-heading" style="color:#fff;max-width:820px;">Three Layers of Search Dominance — <span style="color:var(--teal)">GEO Is The Newest</span></h2>
+    <p class="sub" style="margin-top:14px;max-width:700px;">SEO, AEO, and GEO aren't competing — they're stacked. Each targets a different part of how your customers find you. Here's how all three differ and why GEO is the most underused opportunity in Northern Indiana right now.</p>
+    <div class="compare-table-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th style="width:18%">Focus Area</th>
+            <th class="col-seo" style="width:27%">Traditional SEO</th>
+            <th class="col-aeo" style="width:27%">AEO (Answer Engine Optimization)</th>
+            <th class="col-geo col-geo-head" style="width:28%">GEO (Generative Engine Optimization)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Primary Goal</td>
+            <td class="col-seo">Rank in top-10 blue links for target keywords</td>
+            <td class="col-aeo">Earn featured snippets and position zero above blue links</td>
+            <td class="col-geo td-geo-row highlight">Be cited as a source in AI-generated responses by name</td>
+          </tr>
+          <tr>
+            <td>Where It Appears</td>
+            <td class="col-seo">Google & Bing organic results pages</td>
+            <td class="col-aeo">Featured snippets, PAA boxes, Knowledge Panels</td>
+            <td class="col-geo td-geo-row">ChatGPT, Perplexity, Copilot, Google AI Overviews, Gemini</td>
+          </tr>
+          <tr>
+            <td>Content Type</td>
+            <td class="col-seo">Keyword-optimized pages, blog posts, service pages</td>
+            <td class="col-aeo">Direct-answer paragraphs, Q&A blocks, structured lists</td>
+            <td class="col-geo td-geo-row">Factual, authoritative, conversational — built for AI comprehension</td>
+          </tr>
+          <tr>
+            <td>Technical Layer</td>
+            <td class="col-seo">Title tags, meta descriptions, internal links, site speed</td>
+            <td class="col-aeo">FAQPage, HowTo, Speakable schema markup</td>
+            <td class="col-geo td-geo-row highlight">Entity signals, citation breadcrumbs, full structured data ecosystem</td>
+          </tr>
+          <tr>
+            <td>Query Type</td>
+            <td class="col-seo">Keyword-based: "plumber Goshen IN"</td>
+            <td class="col-aeo">Question-based: "What does a plumber charge in Goshen?"</td>
+            <td class="col-geo td-geo-row">Conversational: "Who's the best plumber in Goshen I should call?"</td>
+          </tr>
+          <tr>
+            <td>Brand Effect</td>
+            <td class="col-seo">Rankings signal relevance to searchers</td>
+            <td class="col-aeo">Featured placement signals authority</td>
+            <td class="col-geo td-geo-row highlight">AI citing your business by name is the strongest brand endorsement in modern search</td>
+          </tr>
+          <tr>
+            <td>B2B Impact</td>
+            <td class="col-seo">Moderate — buyers Google service providers</td>
+            <td class="col-aeo">Good — buyers find your answers before competitors</td>
+            <td class="col-geo td-geo-row">Highest — B2B buyers increasingly research vendors in AI tools before shortlisting</td>
+          </tr>
+          <tr>
+            <td>Competition Level</td>
+            <td class="col-seo">Highly competitive — most businesses invest in SEO</td>
+            <td class="col-aeo">Moderate — most local businesses haven't optimized for AEO</td>
+            <td class="col-geo td-geo-row highlight">Very low — almost no Northern Indiana businesses are doing GEO yet</td>
+          </tr>
+          <tr>
+            <td>Works Best With</td>
+            <td class="col-seo">AEO and GEO compound the authority SEO builds</td>
+            <td class="col-aeo">SEO provides the rankings that enable AEO; GEO extends to AI platforms</td>
+            <td class="col-geo td-geo-row">SEO + AEO create the foundation; GEO captures AI-first customers</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="margin-top:24px;padding:20px 24px;background:rgba(10,137,163,.08);border:1.5px solid rgba(10,137,163,.25);border-radius:14px;">
+      <p style="font-size:0.9rem;color:rgba(255,255,255,.75);line-height:1.72;"><strong style="color:#fff;">The triple-layer advantage:</strong> Favze builds all three simultaneously. SEO creates domain authority. AEO earns answer boxes. GEO earns AI citations. Most Northern Indiana businesses are doing only partial SEO, no AEO, and zero GEO — which means there's a significant discovery gap your competitors aren't filling. Favze fills it for you across every layer.</p>
+    </div>
+  </div>
+</section>
+
+<!-- AI PLATFORMS -->
+<section class="sec platforms-section" id="platforms" aria-labelledby="platforms-heading">
+  <div class="sec-inner">
+    <span class="lbl">The 6 AI Platforms Favze Targets</span>
+    <h2 class="ttl" id="platforms-heading" style="color:#fff;max-width:820px;">Every AI Search Surface — <span style="color:var(--teal)">We Put You There</span></h2>
+    <p class="sub" style="margin-top:14px;">GEO isn't one platform — it's a multi-surface strategy. Favze builds your AI citation presence across every major platform where Northern Indiana customers are researching and deciding.</p>
+    <div class="platforms-grid">
+
+      <div class="plat-detail-card">
+        <div class="plat-badge-wrap"><div class="plat-type-badge ptb-yellow">★ Priority</div></div>
+        <div class="plat-detail-name">Google AI Overviews</div>
+        <p class="plat-detail-desc">Formerly Search Generative Experience (SGE), Google AI Overviews now appear at the top of over 50% of all searches — above every organic result, every ad, and every featured snippet. Google's AI generates a summary, cites 3-5 sources by name, and links to them. Being one of those cited sources puts your business at the absolute top of the modern search experience. This is the highest-value GEO target for most Northern Indiana businesses.</p>
+        <div class="plat-detail-example"><p><strong>Real example:</strong> Someone searches "best HVAC company in Goshen Indiana" → Google AI Overview summarizes local options and cites your business by name with a link — before any other result is visible.</p></div>
+      </div>
+
+      <div class="plat-detail-card">
+        <div class="plat-badge-wrap"><div class="plat-type-badge ptb-teal">High Value</div></div>
+        <div class="plat-detail-name">ChatGPT (with Browse)</div>
+        <p class="plat-detail-desc">OpenAI's ChatGPT now has web browsing capability, allowing it to search and cite current web content in real time when answering questions. With over 100 million active users — and growing rapidly — ChatGPT is increasingly used by both consumers and B2B buyers to research local services, products, and vendors before making contact. Being a cited source in ChatGPT responses to local Northern Indiana queries is one of the most powerful new discovery channels available to local businesses.</p>
+        <div class="plat-detail-example"><p><strong>Real example:</strong> A business owner asks ChatGPT "What digital marketing agencies in Northern Indiana specialize in AI search?" → Your business is named and linked as a top local source.</p></div>
+      </div>
+
+      <div class="plat-detail-card">
+        <div class="plat-badge-wrap"><div class="plat-type-badge ptb-purple">Fast-Growing</div></div>
+        <div class="plat-detail-name">Perplexity AI</div>
+        <p class="plat-detail-desc">Perplexity is the world's fastest-growing AI search engine — purpose-built to answer questions with cited sources rather than ranked links. Users trust Perplexity specifically because it shows its work: every answer cites the sources it pulled from, making those citations highly visible and credible. Perplexity is especially popular with researchers, B2B buyers, and high-intent consumers. Favze's GEO strategy targets the question clusters most likely to earn Perplexity citations for your Northern Indiana business.</p>
+        <div class="plat-detail-example"><p><strong>Real example:</strong> A homeowner asks Perplexity "who does roofing inspections in Elkhart County Indiana?" → Your roofing business is cited with a direct link in Perplexity's sourced answer.</p></div>
+      </div>
+
+      <div class="plat-detail-card">
+        <div class="plat-badge-wrap"><div class="plat-type-badge ptb-navy">B2B Key</div></div>
+        <div class="plat-detail-name">Microsoft Copilot</div>
+        <p class="plat-detail-desc">Microsoft Copilot is powered by GPT-4 and deeply integrated into Bing Search, Windows 11, Microsoft 365, and Microsoft Edge — making it the AI tool that millions of business professionals encounter daily without even seeking it out. For B2B businesses in the Northern Indiana manufacturing, professional services, and industrial sectors, Copilot is an especially important GEO target because it's the AI reaching buyers inside their existing Microsoft workflow. The same structured content and entity signals that work for Google AI Overviews also power Copilot citations.</p>
+        <div class="plat-detail-example"><p><strong>Real example:</strong> A procurement manager researching vendors asks Copilot inside Microsoft Edge "who are reliable industrial suppliers in Northern Indiana?" → Your business appears as a cited local source.</p></div>
+      </div>
+
+      <div class="plat-detail-card">
+        <div class="plat-badge-wrap"><div class="plat-type-badge ptb-green">Rising Fast</div></div>
+        <div class="plat-detail-name">Google Gemini</div>
+        <p class="plat-detail-desc">Google Gemini is Google's conversational AI assistant — accessible via Google Search, the Gemini app, and Android devices. As Google continues to integrate Gemini deeper into its search and assistant ecosystem, Gemini citations will become increasingly important for local business visibility. Because Gemini is deeply integrated with Google's existing knowledge graph and index, businesses with strong structured data, verified Google Business Profiles, and high-authority content are best positioned to earn Gemini citations in local response queries.</p>
+        <div class="plat-detail-example"><p><strong>Real example:</strong> An Android user asks Gemini "find me a dentist near Mishawaka taking new patients" → Your dental practice is surfaced by Gemini as a local result with contact information.</p></div>
+      </div>
+
+      <div class="plat-detail-card">
+        <div class="plat-badge-wrap"><div class="plat-type-badge ptb-orange">Emerging</div></div>
+        <div class="plat-detail-name">Apple Intelligence & Siri</div>
+        <p class="plat-detail-desc">Apple Intelligence — Apple's on-device AI system — is integrating Siri with ChatGPT and web-sourced answers, extending AI-cited responses to every iPhone, iPad, and Mac. As Apple Intelligence matures, local business citations through Siri will increasingly come from structured, authoritative web content rather than simple directory listings. Businesses that build strong GEO signals now will be positioned to capture Apple Intelligence citations as the platform scales across Apple's 2+ billion active devices worldwide — including the significant iPhone market share in Northern Indiana and Michiana.</p>
+        <div class="plat-detail-example"><p><strong>Real example:</strong> An iPhone user asks Siri "is there a good Italian restaurant in Goshen open for dinner tonight?" → Your restaurant is cited by Apple Intelligence as a local recommendation.</p></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="sec how-section" aria-labelledby="how-heading">
+  <div class="sec-inner">
+    <div style="text-align:center;margin-bottom:8px">
+      <span class="lbl">The Process</span>
+      <h2 class="ttl" id="how-heading" style="color:#fff;margin-top:4px;">From First Call to <span style="color:var(--teal)">AI Citation</span></h2>
+      <p class="sub" style="margin:14px auto 0;text-align:center;">A clear, systematic GEO implementation — no jargon, no mystery, just a proven process for getting your Northern Indiana business cited by AI.</p>
+    </div>
+    <div class="steps-row">
+      <div class="step-item">
+        <div class="step-num">1</div>
+        <h3>Free Consultation</h3>
+        <p>Talk with Riley about your business, your target customers in Northern Indiana, and the questions they're asking AI. Audit your current AI citation baseline across all major platforms.</p>
+      </div>
+      <div class="step-item">
+        <div class="step-num">2</div>
+        <h3>GEO Audit & Research</h3>
+        <p>We map your entity signals, content gaps, and AI visibility baseline — identifying exactly where your business is invisible in AI responses and which queries represent your best citation opportunities.</p>
+      </div>
+      <div class="step-item">
+        <div class="step-num">3</div>
+        <h3>Entity & Content Build</h3>
+        <p>AI-ready content created in conversational, factual formats. Entity signals cleaned and strengthened across your website, Google Business Profile, and key directories. Schema markup implemented for every relevant data type.</p>
+      </div>
+      <div class="step-item">
+        <div class="step-num">4</div>
+        <h3>Citation Signal Development</h3>
+        <p>We build the web presence breadcrumbs — local citations, industry mentions, authoritative references — that AI tools use to verify and trust your business as a credible source worth recommending.</p>
+      </div>
+      <div class="step-item">
+        <div class="step-num">5</div>
+        <h3>Monitor, Report & Expand</h3>
+        <p>Track AI citations across all platforms. Plain-language reporting. Continuous content and signal updates as AI platforms evolve. Expand into new query clusters as your citation authority grows.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:52px">
+      <a href="https://favze.com/contact" class="btn-primary" style="display:inline-flex;align-items:center;gap:10px;font-size:1rem;">Start My Free GEO Consultation <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <p style="margin-top:14px;font-size:0.85rem;color:rgba(255,255,255,.38);">Free. No obligation. No pitch. Just a real conversation.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT FAVZE DELIVERS -->
+<section class="sec delivers-section" aria-labelledby="delivers-heading">
+  <div class="sec-inner">
+    <span class="lbl">What Favze Delivers</span>
+    <h2 class="ttl" id="delivers-heading" style="color:#fff;max-width:820px;">Every Component of a Complete <span style="color:var(--teal)">GEO Strategy</span></h2>
+    <p class="sub" style="margin-top:14px;">Full GEO isn't one tactic — it's a coordinated system of content, entity signals, technical markup, and ongoing platform monitoring. Here's what Favze builds for every Northern Indiana GEO client.</p>
+    <div class="delivers-grid">
+
+      <div class="deliver-card">
+        <div class="deliver-watermark">E</div>
+        <div class="deliver-header">
+          <div class="deliver-icon di-1">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="9" r="5" stroke="#ffba08" stroke-width="1.6"/><path d="M11 14v4" stroke="#ffba08" stroke-width="1.5" stroke-linecap="round"/><path d="M8 17h6" stroke="#ffba08" stroke-width="1.3" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <div class="deliver-label">Foundation</div>
+            <div class="deliver-name">Entity Authority Building</div>
+          </div>
+        </div>
+        <p class="deliver-desc">AI tools don't just crawl individual pages — they build knowledge models of entities (businesses, people, places) from signals across the entire web. Favze systematically builds every entity signal that makes AI tools recognize, trust, and recommend your Northern Indiana business as the authoritative local source in your industry.</p>
+        <ul class="deliver-list">
+          <li><span class="chk chk-navy"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Google Business Profile optimization — complete, verified, and regularly updated with posts, photos, and Q&A</li>
+          <li><span class="chk chk-navy"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>NAP consistency audit — your business name, address, and phone number exactly consistent across all online profiles</li>
+          <li><span class="chk chk-navy"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Directory and local citation building — authoritative local and industry-specific citations that reinforce entity signals</li>
+          <li><span class="chk chk-navy"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Review management guidance — reviews that mention specific services and locations strengthen entity relevance signals for AI</li>
+          <li><span class="chk chk-navy"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>About page and team page optimization — clear, factual business description that AI can parse and use confidently</li>
+        </ul>
+      </div>
+
+      <div class="deliver-card">
+        <div class="deliver-watermark">C</div>
+        <div class="deliver-header">
+          <div class="deliver-icon di-2">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="3" y="4" width="16" height="14" rx="2" stroke="#0A89A3" stroke-width="1.6"/><path d="M7 9h8M7 13h5" stroke="#0A89A3" stroke-width="1.4" stroke-linecap="round"/><path d="M7 5V3M15 5V3" stroke="#0A89A3" stroke-width="1.3" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <div class="deliver-label">Content</div>
+            <div class="deliver-name">AI-Ready Content Creation</div>
+          </div>
+        </div>
+        <p class="deliver-desc">AI tools cite content that is factual, comprehensive, clearly structured, and written in the natural language patterns of the questions being asked. Favze writes and restructures your content specifically to be understood and cited by AI models — going far beyond keyword-optimized pages into the conversational depth that generative AI demands.</p>
+        <ul class="deliver-list">
+          <li><span class="chk"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Conversational Q&A content that mirrors how customers phrase questions to AI — natural language, not keyword-stuffed</li>
+          <li><span class="chk"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Topical depth pages — AI tools cite sources that cover topics comprehensively, not thin service pages</li>
+          <li><span class="chk"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Factual accuracy and citation-readiness — specific statistics, credentials, and verifiable claims AI tools can confidently cite</li>
+          <li><span class="chk"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Geo-specific content — Northern Indiana and Michiana context woven throughout to capture local AI query intent</li>
+          <li><span class="chk"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Clear business descriptions that consistently describe what you do, who you serve, and why you're the best choice</li>
+          <li><span class="chk"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Expertise signals — author bios, credentials, experience statements that AI tools use to assess source trustworthiness</li>
+        </ul>
+      </div>
+
+      <div class="deliver-card">
+        <div class="deliver-watermark">{}</div>
+        <div class="deliver-header">
+          <div class="deliver-icon di-3">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 6h14v2H4zM6 8v10l5-3 5 3V8" stroke="#34A853" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <div class="deliver-label">Technical</div>
+            <div class="deliver-name">Schema Markup & Structured Data</div>
+          </div>
+        </div>
+        <p class="deliver-desc">Structured data is the technical bridge between your website's content and what AI tools can machine-read about your business. Favze implements the full schema ecosystem required for GEO — going beyond basic LocalBusiness schema to the complete data architecture that makes AI tools recognize your business as a comprehensive, trustworthy entity.</p>
+        <ul class="deliver-list">
+          <li><span class="chk"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>LocalBusiness schema — complete business entity data with geo-coordinates, hours, services, and service area</li>
+          <li><span class="chk"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>FAQPage schema — question-and-answer pairs that AI can extract and use in conversational responses</li>
+          <li><span class="chk"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Service schema — explicit markup of every service your business provides, with descriptions and service areas</li>
+          <li><span class="chk"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Person and Organization schema — founder, team, and business identity signals that anchor your entity</li>
+          <li><span class="chk"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>HowTo, Speakable, and Article schema where applicable — expanding the AI-readable surface area of your site</li>
+          <li><span class="chk"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Full Rich Results Test validation — every schema implementation verified against Google's structured data standards</li>
+        </ul>
+      </div>
+
+      <div class="deliver-card">
+        <div class="deliver-watermark">↑</div>
+        <div class="deliver-header">
+          <div class="deliver-icon di-4">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 15l4-5 4 3 4-7 4 4" stroke="#6fa3ff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><rect x="2" y="19" width="18" height="1.2" rx="0.6" fill="#6fa3ff" opacity=".4"/></svg>
+          </div>
+          <div>
+            <div class="deliver-label">Ongoing</div>
+            <div class="deliver-name">AI Platform Monitoring & Reporting</div>
+          </div>
+        </div>
+        <p class="deliver-desc">GEO visibility shifts as AI platforms update their models, citation patterns evolve, and new query opportunities emerge. Favze monitors your AI citation presence across all major platforms continuously — tracking where your business is being cited, where it isn't, and what optimizations are driving results — then reporting in plain language, not confusing dashboards.</p>
+        <ul class="deliver-list">
+          <li><span class="chk chk-navy"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Monthly manual testing across ChatGPT, Perplexity, Copilot, Google AI Overviews, and Gemini for your target queries</li>
+          <li><span class="chk chk-navy"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Google Search Console AI Overview impression and click tracking — quantifying AI-driven traffic</li>
+          <li><span class="chk chk-navy"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Citation gap analysis — identifying which competitors are being cited for queries your business should own</li>
+          <li><span class="chk chk-navy"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Content freshness updates — AI tools deprioritize outdated information; Favze keeps your content current and accurate</li>
+          <li><span class="chk chk-navy"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Quarterly strategy reviews — adjusting GEO priorities as your market evolves and new AI platforms emerge</li>
+          <li><span class="chk chk-navy"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Plain-language reporting every business owner can understand — what's working, what changed, what's next</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHO IT'S FOR -->
+<section class="sec who-section" aria-labelledby="who-heading">
+  <div class="sec-inner">
+    <span class="lbl">Who GEO Is For</span>
+    <h2 class="ttl" id="who-heading" style="color:#fff;max-width:740px;">Northern Indiana Businesses That Want to Be <span style="color:var(--teal)">Recommended By AI</span></h2>
+    <p class="sub" style="margin-top:14px;">GEO delivers results for any business whose customers research before they buy — which is nearly every business in the modern market. If people are asking AI about your industry, Favze makes sure your business is the answer they get.</p>
+    <div class="who-grid">
+      <div class="who-card">
+        <div class="who-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 3C7.13 3 4 6.13 4 10c0 4.75 7 12 7 12s7-7.25 7-12c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" stroke="#fff" stroke-width="1.5" fill="none"/></svg></div>
+        <div>
+          <h3>Home Services</h3>
+          <p>HVAC, plumbing, roofing, electrical — customers increasingly ask AI "who should I call in Goshen for X?" before dialing. GEO puts your service business as the AI-recommended answer before the phone rings.</p>
+        </div>
+      </div>
+      <div class="who-card">
+        <div class="who-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 3a7 7 0 100 14A7 7 0 0011 3z" stroke="#fff" stroke-width="1.5"/><path d="M11 7v4l3 2" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+        <div>
+          <h3>Healthcare & Dental</h3>
+          <p>Patients research symptoms, treatments, and providers in AI tools before booking. GEO positions your practice as the AI-recommended local healthcare authority in Elkhart County, St. Joseph County, and across Michiana.</p>
+        </div>
+      </div>
+      <div class="who-card">
+        <div class="who-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="3" y="5" width="16" height="12" rx="2" stroke="#fff" stroke-width="1.5"/><path d="M3 9h16" stroke="#fff" stroke-width="1.5"/></svg></div>
+        <div>
+          <h3>Professional Services</h3>
+          <p>Lawyers, accountants, financial advisors, consultants — high-consideration purchases where AI recommendations carry enormous weight. Being the AI-cited expert in your Northern Indiana market builds instant trust before the first call.</p>
+        </div>
+      </div>
+      <div class="who-card">
+        <div class="who-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 18V9l7-6 7 6v9H4z" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/><rect x="8" y="13" width="6" height="5" rx="0.5" stroke="#fff" stroke-width="1.3"/></svg></div>
+        <div>
+          <h3>Manufacturing & B2B</h3>
+          <p>Northern Indiana's industrial sector is strong — and B2B buyers increasingly shortlist vendors using AI research tools. GEO ensures your manufacturing, industrial, or B2B service business is cited when procurement teams research local suppliers.</p>
+        </div>
+      </div>
+      <div class="who-card">
+        <div class="who-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 5h16l-1.5 9H4.5L3 5z" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/><circle cx="8" cy="18" r="1.2" fill="#fff"/><circle cx="14" cy="18" r="1.2" fill="#fff"/></svg></div>
+        <div>
+          <h3>Retail & eCommerce</h3>
+          <p>Shoppers ask AI for product recommendations, local store comparisons, and "best of" queries before buying. GEO places your Goshen, Elkhart, or South Bend retail business in AI recommendations at the moment purchase intent is highest.</p>
+        </div>
+      </div>
+      <div class="who-card">
+        <div class="who-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 14l4-5 3 3 4-6 4 4" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div>
+          <h3>Any Research-Driven Business</h3>
+          <p>If your customers research before buying — real estate, restaurants, education, automotive, personal services — GEO is for you. The more questions people ask before contacting you, the more AI citation opportunity exists for your business.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DECISION STATEMENTS -->
+<section class="decision-section" aria-labelledby="decision-heading">
+  <div>
+    <div class="decision-label">
+      <span class="lbl" style="color:var(--teal)">What Favze GEO Delivers</span>
+    </div>
+    <div class="decision-statements">
+      <div class="decision-stmt decision-stmt-1">
+        <span class="decision-num" aria-hidden="true">01</span>
+        <div class="decision-text-wrap">
+          <div class="decision-stmt-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="10" stroke="#fff" stroke-width="1.6"/><path d="M9 13l3 3 5-6" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <p class="decision-text">AI cites <em>your business.</em> By name.</p>
+        </div>
+      </div>
+      <div class="decision-stmt decision-stmt-2">
+        <span class="decision-num" aria-hidden="true">02</span>
+        <div class="decision-text-wrap">
+          <div class="decision-stmt-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="10" stroke="#064187" stroke-width="1.6"/><path d="M8.5 13.5l3 3 6-7" stroke="#064187" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <p class="decision-text">Customers ask AI. <em>You're the answer.</em></p>
+        </div>
+      </div>
+      <div class="decision-stmt decision-stmt-3">
+        <span class="decision-num" aria-hidden="true">03</span>
+        <div class="decision-text-wrap">
+          <div class="decision-stmt-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><rect x="5" y="5" width="16" height="16" rx="3" stroke="#fff" stroke-width="1.6"/><path d="M9 13h8M13 9v8" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+          <p class="decision-text">Every platform. <em>Your business.</em></p>
+        </div>
+      </div>
+    </div>
+    <div class="decision-payoff">
+      <span class="decision-payoff-eyebrow">The Favze GEO Result</span>
+      <h2 class="decision-payoff-text" id="decision-heading">AI recommends you.<br><span>Customers trust you.</span></h2>
+      <a href="https://favze.com/contact" class="btn-primary" style="margin-top:8px;">Start My Free GEO Consultation <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN POINTS -->
+<section class="sec pain-section" aria-labelledby="pain-heading">
+  <div class="sec-inner">
+    <span class="lbl">Sound Familiar?</span>
+    <h2 class="ttl" id="pain-heading" style="color:#fff;max-width:760px;margin-top:8px;">The Real Reasons Northern Indiana Businesses Need GEO Now</h2>
+    <p class="sub" style="margin-top:14px;">These are the situations we hear from business owners across Goshen, Elkhart, and South Bend. Every single one has a direct GEO solution.</p>
+    <div class="pain-grid">
+      <article class="pain-card">
+        <div class="pain-num-watermark">01</div>
+        <div class="pain-inner">
+          <div class="pain-tag"><span class="pain-dot"></span>AI Visibility</div>
+          <p class="pain-quote">"When customers ask ChatGPT or Perplexity who to call, it's never us."</p>
+          <div class="pain-divider"></div>
+          <span class="pain-fix-label">The GEO Fix</span>
+          <p class="pain-solution">AI tools cite businesses with strong entity authority, factual content, and structured data — not necessarily the biggest brand. Favze builds exactly those signals for your Northern Indiana business, making you the cited recommendation when local customers ask AI who to call in your industry.</p>
+          <button class="pain-fix-btn" onclick="window.location.href='https://favze.com/contact'">GEO Fixes This <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </article>
+      <article class="pain-card">
+        <div class="pain-num-watermark">02</div>
+        <div class="pain-inner">
+          <div class="pain-tag"><span class="pain-dot"></span>Competitor Advantage</div>
+          <p class="pain-quote">"Our competitors keep getting mentioned in AI answers even though we're better."</p>
+          <div class="pain-divider"></div>
+          <span class="pain-fix-label">The GEO Fix</span>
+          <p class="pain-solution">Competitors appearing in AI results have stronger entity signals, better-structured content, or more authoritative citation breadcrumbs — whether intentionally or accidentally. Favze audits exactly what signals are making them appear and builds stronger versions of those signals around your business so you displace them.</p>
+          <button class="pain-fix-btn" onclick="window.location.href='https://favze.com/contact'">GEO Fixes This <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </article>
+      <article class="pain-card">
+        <div class="pain-num-watermark">03</div>
+        <div class="pain-inner">
+          <div class="pain-tag"><span class="pain-dot"></span>B2B Research</div>
+          <p class="pain-quote">"We're losing RFP opportunities to companies we can't figure out how buyers are finding."</p>
+          <div class="pain-divider"></div>
+          <span class="pain-fix-label">The GEO Fix</span>
+          <p class="pain-solution">B2B procurement is increasingly driven by AI research tools. Buyers shortlist vendors using Perplexity, ChatGPT, and Copilot before issuing RFPs or making contact. If your Northern Indiana business isn't appearing in those AI-generated shortlists, you're losing opportunities before you even know they exist. GEO puts you on those lists.</p>
+          <button class="pain-fix-btn" onclick="window.location.href='https://favze.com/contact'">GEO Fixes This <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </article>
+      <article class="pain-card">
+        <div class="pain-num-watermark">04</div>
+        <div class="pain-inner">
+          <div class="pain-tag"><span class="pain-dot"></span>Future-Proofing</div>
+          <p class="pain-quote">"We know AI search is the future but we have no idea where to start."</p>
+          <div class="pain-divider"></div>
+          <span class="pain-fix-label">The GEO Fix</span>
+          <p class="pain-solution">GEO is still genuinely new — which means most Northern Indiana businesses have zero AI citation presence and the opportunity to be first is wide open. Favze provides a clear, plain-language GEO strategy built specifically for your business and market. No jargon, no confusion. Just a systematic plan to become the AI-recommended local authority in your industry before competitors wake up to what's happening.</p>
+          <button class="pain-fix-btn" onclick="window.location.href='https://favze.com/contact'">GEO Builds This <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CTA STRIP -->
+<section class="cta-strip" aria-label="Start your free GEO consultation">
+  <div class="cta-strip-inner">
+    <h2>Be The Business AI Recommends in Northern Indiana</h2>
+    <p>Favze builds complete Generative Engine Optimization strategies for Northern Indiana and Michiana businesses — entity authority, AI-ready content, full schema markup, citation signal development, and ongoing platform monitoring across ChatGPT, Perplexity, Google AI Overviews, Copilot, and Gemini. Custom strategy. Zero hidden fees. Free consultation — no obligation, just a real conversation about your GEO opportunity.</p>
+    <div class="cta-btns">
+      <a href="https://favze.com/contact" class="btn-white">Start My Free GEO Consultation <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="https://favze.com/why-choose-us" class="btn-ghost-white">Why Choose Favze</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec faq-section" aria-labelledby="faq-heading" itemscope itemtype="https://schema.org/FAQPage">
+  <div class="sec-inner">
+    <div style="max-width:820px;margin:0 auto;">
+      <span class="lbl lbl-dark">Frequently Asked Questions</span>
+      <h2 class="ttl ttl-dark" id="faq-heading" style="margin-top:6px;">Everything Northern Indiana Business Owners Ask About GEO</h2>
+      <p class="sub sub-dark" style="margin:12px 0 48px;">Straight answers to every real question Elkhart County, St. Joseph County, and Michiana business owners ask about Generative Engine Optimization, AI search visibility, and how to get cited by ChatGPT, Perplexity, and Google AI Overviews.</p>
+      <div style="display:flex;flex-direction:column;gap:0;">
+
+        <!-- FAQ 1 -->
+        <div class="fq-item" style="border-top:1.5px solid #ddd;border-bottom:1.5px solid #ddd;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="fqb" type="button" aria-expanded="false" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-weight:700;font-size:0.97rem;color:#0a0a0a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:14px;font-family:var(--font-body);">
+            <span itemprop="name">What is Generative Engine Optimization (GEO)?</span>
+            <span class="fq-ic" style="flex-shrink:0;width:26px;height:26px;border-radius:50%;background:#e2e2e2;display:flex;align-items:center;justify-content:center;transition:background .2s,transform .2s;" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+          </button>
+          <div class="fq-ans" style="display:none;padding:0 0 20px;font-size:0.93rem;color:#555;line-height:1.78;" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">Generative Engine Optimization (GEO) is the process of optimizing your business's online presence so that AI-powered tools — including ChatGPT, Perplexity, Microsoft Copilot, Google AI Overviews, and Google Gemini — cite your business as a trusted, authoritative source in their AI-generated responses. Unlike traditional SEO which targets blue-link rankings, GEO targets the AI-generated summaries and cited recommendations that increasingly appear before any organic results. For Northern Indiana and Michiana businesses, GEO is how you get recommended by AI when local customers ask questions like "Who is the best HVAC company in Goshen?" or "What digital marketing agency should I use in Elkhart?"</div>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="fq-item" style="border-bottom:1.5px solid #ddd;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="fqb" type="button" aria-expanded="false" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-weight:700;font-size:0.97rem;color:#0a0a0a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:14px;font-family:var(--font-body);">
+            <span itemprop="name">How is GEO different from traditional SEO and AEO?</span>
+            <span class="fq-ic" style="flex-shrink:0;width:26px;height:26px;border-radius:50%;background:#e2e2e2;display:flex;align-items:center;justify-content:center;transition:background .2s,transform .2s;" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+          </button>
+          <div class="fq-ans" style="display:none;padding:0 0 20px;font-size:0.93rem;color:#555;line-height:1.78;" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">SEO, AEO, and GEO target three different but overlapping surfaces. SEO targets blue-link rankings in traditional search results. AEO (Answer Engine Optimization) targets featured snippets, People Also Ask boxes, and position zero — the answer blocks displayed above organic results in Google and Bing. GEO targets AI-generated responses — the summaries and recommendations produced by ChatGPT, Perplexity, Microsoft Copilot, and Google AI Overviews. AI tools generate original prose that cites sources, rather than displaying ranked links. GEO optimizes your content, entity signals, and authority to be chosen as a cited source in those AI-generated answers. All three work together: strong SEO creates the domain authority that supports both AEO and GEO, while AEO and GEO visibility builds the brand authority that reinforces SEO rankings. Favze offers all three services and helps you understand which combination is right for your Northern Indiana business.</div>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="fq-item" style="border-bottom:1.5px solid #ddd;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="fqb" type="button" aria-expanded="false" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-weight:700;font-size:0.97rem;color:#0a0a0a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:14px;font-family:var(--font-body);">
+            <span itemprop="name">Which AI platforms does Favze's GEO service target?</span>
+            <span class="fq-ic" style="flex-shrink:0;width:26px;height:26px;border-radius:50%;background:#e2e2e2;display:flex;align-items:center;justify-content:center;transition:background .2s,transform .2s;" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+          </button>
+          <div class="fq-ans" style="display:none;padding:0 0 20px;font-size:0.93rem;color:#555;line-height:1.78;" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">Favze's GEO strategy targets every major AI search and answer platform: Google AI Overviews — the AI-generated summaries now appearing at the top of over 50% of all Google searches; Perplexity AI — one of the fastest-growing AI search engines that cites sources in every answer; ChatGPT with Browse — OpenAI's GPT-4 with web access, increasingly used for local business research; Microsoft Copilot — integrated into Bing and Windows, heavily used in B2B environments; Google Gemini — Google's conversational AI assistant with web access; and Apple Intelligence / Siri — Apple's AI system drawing from web sources. The same core GEO signals — entity authority, structured content, factual accuracy, citation signals — work across all these platforms.</div>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="fq-item" style="border-bottom:1.5px solid #ddd;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="fqb" type="button" aria-expanded="false" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-weight:700;font-size:0.97rem;color:#0a0a0a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:14px;font-family:var(--font-body);">
+            <span itemprop="name">How do AI tools decide which businesses to cite or recommend?</span>
+            <span class="fq-ic" style="flex-shrink:0;width:26px;height:26px;border-radius:50%;background:#e2e2e2;display:flex;align-items:center;justify-content:center;transition:background .2s,transform .2s;" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+          </button>
+          <div class="fq-ans" style="display:none;padding:0 0 20px;font-size:0.93rem;color:#555;line-height:1.78;" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">AI tools use several signals to determine which sources to cite: (1) Entity authority — how well-established and consistently documented your business is across the web, including your website, Google Business Profile, directories, and press mentions; (2) Content quality and factual accuracy — AI tools prioritize sources with clear, authoritative, factual content that directly answers questions; (3) Structured data — schema markup helps AI tools understand exactly what your business does, where you're located, and what questions you answer; (4) Citation patterns — sources that are referenced and linked by other authoritative sites are more trusted; (5) Topical depth — businesses that comprehensively cover a topic are cited more than those with thin content; (6) Local relevance signals — for local queries, businesses with strong local entity signals get prioritized. Favze's GEO work systematically builds every one of these signals for your Northern Indiana business.</div>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="fq-item" style="border-bottom:1.5px solid #ddd;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="fqb" type="button" aria-expanded="false" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-weight:700;font-size:0.97rem;color:#0a0a0a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:14px;font-family:var(--font-body);">
+            <span itemprop="name">What is entity authority and why does it matter for GEO?</span>
+            <span class="fq-ic" style="flex-shrink:0;width:26px;height:26px;border-radius:50%;background:#e2e2e2;display:flex;align-items:center;justify-content:center;transition:background .2s,transform .2s;" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+          </button>
+          <div class="fq-ans" style="display:none;padding:0 0 20px;font-size:0.93rem;color:#555;line-height:1.78;" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">Entity authority is how clearly and consistently your business is understood as a distinct, trustworthy entity by AI systems. AI tools don't just crawl individual pages — they build knowledge models of entities (businesses, people, places) based on signals from across the web. A business with strong entity authority has: a consistent name, address, phone number, and description across all online profiles; structured data that explicitly defines what the business is and does; mentions and citations from local news, industry publications, and authoritative directories; a verified Google Business Profile with complete information; and reviews that mention specific services and locations. Favze's GEO work systematically builds your Northern Indiana business's entity authority so AI tools recognize and recommend you as the authoritative local source in your industry.</div>
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="fq-item" style="border-bottom:1.5px solid #ddd;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="fqb" type="button" aria-expanded="false" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-weight:700;font-size:0.97rem;color:#0a0a0a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:14px;font-family:var(--font-body);">
+            <span itemprop="name">Can I track whether AI tools are recommending my business?</span>
+            <span class="fq-ic" style="flex-shrink:0;width:26px;height:26px;border-radius:50%;background:#e2e2e2;display:flex;align-items:center;justify-content:center;transition:background .2s,transform .2s;" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+          </button>
+          <div class="fq-ans" style="display:none;padding:0 0 20px;font-size:0.93rem;color:#555;line-height:1.78;" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">Yes, though AI visibility tracking is more nuanced than traditional SEO reporting. Favze monitors GEO performance through: manual query testing across all major AI platforms (running your target queries in ChatGPT, Perplexity, Copilot, and Gemini and documenting whether your business is cited); Google Search Console data for AI Overview appearances and click attribution; third-party AI visibility tools that track brand mentions; and month-over-month trending to identify which GEO optimizations are producing citation increases. We provide plain-language reporting so you as a Northern Indiana business owner can clearly see your AI visibility progress — not just abstract metrics, but real documentation of when and where your business is appearing in AI responses.</div>
+          </div>
+        </div>
+
+        <!-- FAQ 7 -->
+        <div class="fq-item" style="border-bottom:1.5px solid #ddd;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="fqb" type="button" aria-expanded="false" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-weight:700;font-size:0.97rem;color:#0a0a0a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:14px;font-family:var(--font-body);">
+            <span itemprop="name">How long does GEO take to show results?</span>
+            <span class="fq-ic" style="flex-shrink:0;width:26px;height:26px;border-radius:50%;background:#e2e2e2;display:flex;align-items:center;justify-content:center;transition:background .2s,transform .2s;" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+          </button>
+          <div class="fq-ans" style="display:none;padding:0 0 20px;font-size:0.93rem;color:#555;line-height:1.78;" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">GEO results depend on your business's starting point, the competitiveness of your market, and the specific AI platforms targeted. For businesses with existing authority signals (page one rankings, established reviews, local citations), initial AI citation appearances can occur within 6-12 weeks of GEO optimization. For businesses starting from a weaker baseline, 3-6 months is a realistic timeline for measurable AI visibility gains. Google AI Overviews tend to respond to optimization faster than standalone AI tools, since Google already indexes and crawls your site regularly. Favze prioritizes quick-win GEO optimizations first — entity signal cleanup, schema implementation, conversational content — before building toward the longer-term authority signals that drive sustained AI citation across all platforms in Northern Indiana and Michiana.</div>
+          </div>
+        </div>
+
+        <!-- FAQ 8 -->
+        <div class="fq-item" style="border-bottom:1.5px solid #ddd;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="fqb" type="button" aria-expanded="false" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-weight:700;font-size:0.97rem;color:#0a0a0a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:14px;font-family:var(--font-body);">
+            <span itemprop="name">Does my business need to rank on page one for GEO to work?</span>
+            <span class="fq-ic" style="flex-shrink:0;width:26px;height:26px;border-radius:50%;background:#e2e2e2;display:flex;align-items:center;justify-content:center;transition:background .2s,transform .2s;" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+          </button>
+          <div class="fq-ans" style="display:none;padding:0 0 20px;font-size:0.93rem;color:#555;line-height:1.78;" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">A baseline of organic visibility helps GEO, but it's not always a strict requirement. AI tools like ChatGPT and Perplexity crawl the web independently and can cite sources that don't rank #1 in Google — they prioritize content quality, entity authority, and topical relevance. However, Google AI Overviews do show a stronger correlation with organic rankings. Favze integrates GEO with your broader SEO and AEO strategy to create a compound effect: as your organic rankings improve, your GEO citation probability increases simultaneously. For local Northern Indiana queries, the competition for AI citations is significantly lower than national terms, giving local businesses a strong opportunity to earn AI visibility even without dominant national domain authority.</div>
+          </div>
+        </div>
+
+        <!-- FAQ 9 -->
+        <div class="fq-item" style="border-bottom:1.5px solid #ddd;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="fqb" type="button" aria-expanded="false" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-weight:700;font-size:0.97rem;color:#0a0a0a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:14px;font-family:var(--font-body);">
+            <span itemprop="name">Is GEO worth investing in if I already do SEO?</span>
+            <span class="fq-ic" style="flex-shrink:0;width:26px;height:26px;border-radius:50%;background:#e2e2e2;display:flex;align-items:center;justify-content:center;transition:background .2s,transform .2s;" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+          </button>
+          <div class="fq-ans" style="display:none;padding:0 0 20px;font-size:0.93rem;color:#555;line-height:1.78;" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">Yes — GEO addresses a growing search surface that traditional SEO doesn't cover. AI-generated responses in Google AI Overviews, Perplexity, and ChatGPT are increasingly the first result users see, and they operate differently from blue-link rankings. Being on page one of Google doesn't guarantee you'll be cited in AI Overviews. GEO fills that gap. GEO work also directly reinforces your SEO: the entity authority signals, structured data, and high-quality conversational content that GEO requires also strengthen traditional rankings. For Northern Indiana businesses, most competitors are investing in neither GEO nor AEO — meaning the opportunity window to own AI citations in your local market is wide open, and businesses that act first will hold those positions significantly longer before competition catches up.</div>
+          </div>
+        </div>
+
+        <!-- FAQ 10 -->
+        <div class="fq-item" style="border-bottom:1.5px solid #ddd;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="fqb" type="button" aria-expanded="false" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-weight:700;font-size:0.97rem;color:#0a0a0a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:14px;font-family:var(--font-body);">
+            <span itemprop="name">What industries benefit most from GEO in Northern Indiana?</span>
+            <span class="fq-ic" style="flex-shrink:0;width:26px;height:26px;border-radius:50%;background:#e2e2e2;display:flex;align-items:center;justify-content:center;transition:background .2s,transform .2s;" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+          </button>
+          <div class="fq-ans" style="display:none;padding:0 0 20px;font-size:0.93rem;color:#555;line-height:1.78;" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">GEO delivers the strongest results for businesses whose customers research extensively before buying. In Northern Indiana and Michiana, these include: home services (HVAC, plumbing, roofing, electrical — customers ask AI who to call before dialing); healthcare and dental practices (patients research providers in AI tools before booking); legal and financial services (high-consideration decisions where AI recommendations carry significant weight); manufacturing and B2B suppliers (procurement teams research vendors using AI research tools); professional services like agencies, consultants, and accountants; retail and eCommerce; real estate; and automotive. Any business where trust, expertise, and local reputation matter to the buying decision benefits from being the AI-recommended authority in their Northern Indiana or Michiana market.</div>
+          </div>
+        </div>
+
+        <!-- FAQ 11 -->
+        <div class="fq-item" style="border-bottom:1.5px solid #ddd;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="fqb" type="button" aria-expanded="false" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-weight:700;font-size:0.97rem;color:#0a0a0a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:14px;font-family:var(--font-body);">
+            <span itemprop="name">How does GEO work with local SEO?</span>
+            <span class="fq-ic" style="flex-shrink:0;width:26px;height:26px;border-radius:50%;background:#e2e2e2;display:flex;align-items:center;justify-content:center;transition:background .2s,transform .2s;" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+          </button>
+          <div class="fq-ans" style="display:none;padding:0 0 20px;font-size:0.93rem;color:#555;line-height:1.78;" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">GEO and local SEO are deeply complementary. Local SEO signals — your Google Business Profile, local citations, consistent NAP data, local reviews — are also core entity authority signals that AI tools use to understand and trust your business. Favze integrates GEO with local SEO so both strategies reinforce each other: local citations boost entity authority that helps AI citations; geo-specific content targets both local search rankings and local AI queries; review management builds trust signals both Google Maps and AI tools use; and local schema markup serves both featured snippet eligibility and AI comprehension. For Northern Indiana and Michiana businesses, this integrated approach means a single investment produces results across Google Maps, traditional organic rankings, featured snippets, and AI-generated responses simultaneously.</div>
+          </div>
+        </div>
+
+        <!-- FAQ 12 -->
+        <div class="fq-item" style="border-bottom:1.5px solid #ddd;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="fqb" type="button" aria-expanded="false" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-weight:700;font-size:0.97rem;color:#0a0a0a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:14px;font-family:var(--font-body);">
+            <span itemprop="name">What does Favze's GEO process look like from start to finish?</span>
+            <span class="fq-ic" style="flex-shrink:0;width:26px;height:26px;border-radius:50%;background:#e2e2e2;display:flex;align-items:center;justify-content:center;transition:background .2s,transform .2s;" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+          </button>
+          <div class="fq-ans" style="display:none;padding:0 0 20px;font-size:0.93rem;color:#555;line-height:1.78;" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">Favze's GEO process: (1) Free consultation — understanding your business, goals, and competitive landscape in Northern Indiana and Michiana. (2) GEO audit — assessing your current entity authority, content quality, schema implementation, and AI citation baseline across major platforms. (3) Entity signal cleanup — ensuring your business information is accurate and consistent across all online profiles. (4) AI-ready content creation — conversational, factual, structured content that AI tools can extract and cite. (5) Schema implementation — structured data that explicitly signals your business's identity, services, location, and authority. (6) Citation signal development — building the web presence breadcrumbs that AI tools use to verify and trust your business. (7) Ongoing monitoring and expansion — tracking AI citations, identifying new query opportunities, and updating content as the AI landscape evolves. No hidden steps, no mystery, no confusing jargon — just a clear process that gets your Northern Indiana business cited by AI.</div>
+          </div>
+        </div>
+
+        <!-- FAQ 13 -->
+        <div class="fq-item" style="border-bottom:1.5px solid #ddd;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="fqb" type="button" aria-expanded="false" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-weight:700;font-size:0.97rem;color:#0a0a0a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:14px;font-family:var(--font-body);">
+            <span itemprop="name">How much does GEO cost?</span>
+            <span class="fq-ic" style="flex-shrink:0;width:26px;height:26px;border-radius:50%;background:#e2e2e2;display:flex;align-items:center;justify-content:center;transition:background .2s,transform .2s;" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+          </button>
+          <div class="fq-ans" style="display:none;padding:0 0 20px;font-size:0.93rem;color:#555;line-height:1.78;" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">Favze prices GEO based on your business's starting point, the number of AI platforms and query clusters targeted, and whether GEO is implemented alongside SEO, AEO, or other Favze services. All pricing is transparent with zero hidden fees — scope and investment are explained clearly in plain language before you commit to anything. The best first step is a free consultation where Riley will audit your current AI citation baseline, identify your highest-opportunity GEO targets in the Northern Indiana market, and give you a clear picture of what the work involves and what results are realistic for your specific business and budget.</div>
+          </div>
+        </div>
+
+        <!-- FAQ 14 -->
+        <div class="fq-item" style="border-bottom:1.5px solid #ddd;" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="fqb" type="button" aria-expanded="false" style="width:100%;background:none;border:none;text-align:left;padding:20px 0;font-weight:700;font-size:0.97rem;color:#0a0a0a;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:14px;font-family:var(--font-body);">
+            <span itemprop="name">What areas does Favze serve for GEO?</span>
+            <span class="fq-ic" style="flex-shrink:0;width:26px;height:26px;border-radius:50%;background:#e2e2e2;display:flex;align-items:center;justify-content:center;transition:background .2s,transform .2s;" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+          </button>
+          <div class="fq-ans" style="display:none;padding:0 0 20px;font-size:0.93rem;color:#555;line-height:1.78;" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">Favze serves businesses across Northern Indiana and Michiana for Generative Engine Optimization including Goshen, Elkhart, South Bend, Mishawaka, Warsaw, Plymouth, Middlebury, Nappanee, Shipshewana, Granger, Walkerton, Bremen, Wakarusa, New Paris, Millersburg, Ligonier, and surrounding communities in Elkhart County, St. Joseph County, Kosciusko County, Marshall County, LaPorte County, Noble County, Whitley County, Starke County, LaGrange County, and Berrien County, Michigan.</div>
+          </div>
+        </div>
+
+      </div>
+      <div style="text-align:center;margin-top:52px;">
+        <p style="color:#777;margin-bottom:18px;">Still have questions? Start with a free, no-obligation GEO consultation.</p>
+        <a href="https://favze.com/contact" class="btn-primary" style="display:inline-flex;align-items:center;gap:9px;">Book Free Consultation <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OTHER SERVICES -->
+<section class="sec other-section" aria-labelledby="other-heading">
+  <div class="sec-inner">
+    <span class="lbl lbl-dark">All Favze Services</span>
+    <h2 class="ttl ttl-dark" id="other-heading">Pair GEO With The Right Marketing</h2>
+    <p class="sub sub-dark" style="margin-top:14px;">GEO earns AI citations. Pair it with AEO, SEO, Local SEO, and Paid Search to dominate every discovery surface — organic rankings, answer boxes, AI citations, maps, and paid placements all working together for your Northern Indiana business.</p>
+    <div class="other-grid">
+      <a href="https://favze.com/answer-engine-optimization" class="other-card"><div class="other-card-tag">AEO</div><div class="other-card-name">Answer Engine Optimization</div><div class="other-card-desc">Featured snippets and position zero — GEO's closest partner</div><div class="other-card-arrow">→</div></a>
+      <a href="https://favze.com/search-engine-optimization" class="other-card"><div class="other-card-tag">SEO</div><div class="other-card-name">Search Engine Optimization</div><div class="other-card-desc">The domain authority that supports GEO and AEO</div><div class="other-card-arrow">→</div></a>
+      <a href="https://favze.com/local-seo" class="other-card"><div class="other-card-tag">Local SEO</div><div class="other-card-name">Local SEO</div><div class="other-card-desc">Entity signals that reinforce GEO across the web</div><div class="other-card-arrow">→</div></a>
+      <a href="https://favze.com/ai-optimization" class="other-card"><div class="other-card-tag">AI</div><div class="other-card-name">AI Optimization</div><div class="other-card-desc">Full AI ecosystem visibility — GEO and beyond</div><div class="other-card-arrow">→</div></a>
+      <a href="https://favze.com/website-design" class="other-card"><div class="other-card-tag">Web</div><div class="other-card-name">Website Design</div><div class="other-card-desc">The structured foundation GEO content lives on</div><div class="other-card-arrow">→</div></a>
+      <a href="https://favze.com/paid-search-ads-sem" class="other-card"><div class="other-card-tag">PPC</div><div class="other-card-name">Paid Search Ads</div><div class="other-card-desc">Capture intent while GEO builds organic citations</div><div class="other-card-arrow">→</div></a>
+      <a href="https://favze.com/email-marketing" class="other-card"><div class="other-card-tag">Email</div><div class="other-card-name">Email Marketing</div><div class="other-card-desc">Nurture the leads GEO citations bring in</div><div class="other-card-arrow">→</div></a>
+      <a href="https://favze.com/hubspot-setup" class="other-card"><div class="other-card-tag">CRM</div><div class="other-card-name">HubSpot Setup</div><div class="other-card-desc">Capture and convert every GEO-sourced lead</div><div class="other-card-arrow">→</div></a>
+      <a href="https://favze.com/social-media-marketing" class="other-card"><div class="other-card-tag">SMM</div><div class="other-card-name">Social Media Marketing</div><div class="other-card-desc">Brand presence that reinforces AI authority signals</div><div class="other-card-arrow">→</div></a>
+      <a href="https://favze.com/paid-social-media-ads" class="other-card"><div class="other-card-tag">Paid Social</div><div class="other-card-name">Paid Social Ads</div><div class="other-card-desc">Retarget GEO visitors across every platform</div><div class="other-card-arrow">→</div></a>
+      <a href="https://favze.com/short-message-service-sms" class="other-card"><div class="other-card-tag">SMS</div><div class="other-card-name">SMS Marketing</div><div class="other-card-desc">Convert GEO leads with direct text outreach</div><div class="other-card-arrow">→</div></a>
+      <a href="https://favze.com/services" class="other-card" style="background:#f4f2ec;"><div class="other-card-tag">All</div><div class="other-card-name">View All Services</div><div class="other-card-desc">Full digital marketing suite</div><div class="other-card-arrow">→</div></a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-inner">
+    <div class="ft-top">
+      <div>
+        <span class="nav-wordmark" style="font-size:1.6rem;color:#fff;">FAVZE</span>
+        <p class="fb-desc">Favze Digital Marketing is Northern Indiana and Michiana's affordable, full-service local digital marketing agency. Founded by Riley Catalano. Based in Middlebury, Elkhart County, Indiana.</p>
+      </div>
+      <div class="fc">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="https://favze.com/generative-engine-optimization">Generative Engine Optimization</a></li>
+          <li><a href="https://favze.com/answer-engine-optimization">Answer Engine Optimization</a></li>
+          <li><a href="https://favze.com/ai-optimization">AI Optimization</a></li>
+          <li><a href="https://favze.com/search-engine-optimization">SEO</a></li>
+          <li><a href="https://favze.com/local-seo">Local SEO</a></li>
+          <li><a href="https://favze.com/paid-search-ads-sem">Paid Search Ads</a></li>
+          <li><a href="https://favze.com/website-design">Website Design</a></li>
+          <li><a href="https://favze.com/hubspot-setup">HubSpot Setup</a></li>
+          <li><a href="https://favze.com/services">View All →</a></li>
+        </ul>
+      </div>
+      <div class="fc">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="https://favze.com/why-choose-us">Why Choose Favze</a></li>
+          <li><a href="https://favze.com/about">About</a></li>
+          <li><a href="https://favze.com/digital-marketing-faq">FAQ</a></li>
+          <li><a href="https://favze.com/favze-insights">Articles</a></li>
+          <li><a href="https://favze.com/areas-served">Areas Served</a></li>
+        </ul>
+        <div style="margin-top:22px">
+          <h4>Contact</h4>
+          <div class="fcon">
+            <a href="mailto:riley@favze.com"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="1" y="2" width="11" height="9" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M1 4.5l5.5 3.5L12 4.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>riley@favze.com</a>
+            <a href="tel:+15747475012"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 1.5s1-.5 2 1l1 1.5s.5 1-.5 1.9L4 6.4s-.4.4 0 1.3S5.6 9.8 7.5 10.8c1 .5 1 0 1 0l.5-.5c.9-.9 1.9-.5 1.9-.5L12.4 11c1.4 1 1 1.9 1 1.9-.5.9-2.4 1.4-3.8.5" stroke="currentColor" stroke-width="1.2"/></svg>574-747-5012</a>
+            <a href="https://favze.com/contact"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="1" y="1" width="11" height="11" rx="2" stroke="currentColor" stroke-width="1.2"/><path d="M3.5 5h6M3.5 7.5h4" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>Free Consultation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ft-serving-strip">
+      <div class="ft-serving-inner">
+        <div class="ft-serving-left">
+          <span class="ft-serving-label">SERVING</span>
+          <div class="ft-serving-locations">
+            <a href="https://favze.com/northern-indiana-michiana-marketing-agency">Northern Indiana</a>
+            <span class="ft-serving-dot"></span>
+            <a href="https://favze.com/michiana-marketing-agency">Michiana</a>
+            <span class="ft-serving-dot"></span>
+            <a href="https://favze.com/elkhart-county-marketing-agency">Elkhart County</a>
+            <span class="ft-serving-dot"></span>
+            <a href="https://favze.com/goshen-marketing-agency">Goshen</a>
+            <span class="ft-serving-dot"></span>
+            <a href="https://favze.com/south-bend-marketing-agency">South Bend</a>
+            <span class="ft-serving-dot"></span>
+            <span class="ft-serving-muted">and Surrounding Areas</span>
+          </div>
+        </div>
+        <div class="ft-serving-right">
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 0.5C3.07 0.5 1.5 2.07 1.5 4c0 2.52 3.5 5.5 3.5 5.5s3.5-2.98 3.5-5.5C8.5 2.07 6.93 0.5 5 0.5z" fill="rgba(10,137,163,.6)" stroke="#0A89A3" stroke-width="0.9"/><circle cx="5" cy="4" r="1.1" fill="#0A89A3"/></svg>
+          <span>BASED IN MIDDLEBURY, ELKHART COUNTY, INDIANA</span>
+        </div>
+      </div>
+    </div>
+    <div class="fb-bot">
+      <p>&copy; 2026 Favze Digital Marketing. All rights reserved.</p>
+      <div style="display:flex;gap:18px;flex-wrap:wrap"><a href="https://favze.com/privacy-policy">Privacy Policy</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var hb = document.getElementById('hb');
+  var mm = document.getElementById('mm');
+  if (hb && mm) {
+    hb.addEventListener('click', function() {
+      var nowOpen = !mm.classList.contains('open');
+      mm.classList.toggle('open', nowOpen);
+      hb.classList.toggle('open', nowOpen);
+    });
+    mm.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        mm.classList.remove('open');
+        hb.classList.remove('open');
+      });
+    });
+  }
+  var activePill = document.querySelector('.svc-pill.active');
+  if (activePill) {
+    setTimeout(function() {
+      activePill.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    }, 300);
+  }
+  var fqItems = document.querySelectorAll('.fq-item');
+  fqItems.forEach(function(item) {
+    var btn = item.querySelector('.fqb');
+    var ans = item.querySelector('.fq-ans');
+    var ic = item.querySelector('.fq-ic');
+    if (!btn || !ans) return;
+    btn.addEventListener('click', function() {
+      var open = ans.style.display !== 'none';
+      fqItems.forEach(function(i) {
+        var a = i.querySelector('.fq-ans');
+        var b = i.querySelector('.fqb');
+        var ic2 = i.querySelector('.fq-ic');
+        if (a) a.style.display = 'none';
+        if (b) b.setAttribute('aria-expanded', 'false');
+        if (ic2) { ic2.style.background = '#e2e2e2'; ic2.style.transform = 'rotate(0deg)'; }
+      });
+      if (!open) {
+        ans.style.display = 'block';
+        btn.setAttribute('aria-expanded', 'true');
+        if (ic) { ic.style.background = '#064187'; ic.style.transform = 'rotate(45deg)'; }
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>
