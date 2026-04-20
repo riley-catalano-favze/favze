@@ -216,6 +216,9 @@ footer { background: var(--dark); padding: 56px 5% 0; border-top: 1px solid rgba
   .articles-layout { padding: 32px 4% 52px; }
   footer { padding: 40px 4% 0; }
 }
+/* VIEW ALL LINK */
+.view-all-link { display: inline-flex; align-items: center; gap: 6px; font-size: 0.78rem; font-weight: 700; color: var(--navy); margin-top: 20px; padding: 8px 16px; border: 1.5px solid rgba(6,65,135,.2); border-radius: 8px; transition: background .2s, color .2s, border-color .2s; }
+.view-all-link:hover { background: var(--navy); color: #fff; border-color: var(--navy); }
 </style>
 </head>
 <body>
@@ -462,14 +465,13 @@ var searchQuery = '';
 // ============================================================
 // FETCH articles.json — the only file you ever edit
 // ============================================================
-fetch('./articles.json')
+fetch('/articles.json')
   .then(function(r){ return r.json(); })
   .then(function(data){
     allArticles = data;
     init();
   })
   .catch(function(){
-    // Fallback if running locally without server
     allArticles = [];
     init();
   });
@@ -566,6 +568,7 @@ function render() {
       html += sectionHeaderHTML(cfg.label, arts.length, p);
       if (arts.length > 0) {
         html += '<div class="articles-list">' + arts.map(articleCardHTML).join('') + '</div>';
+        html += '<a href="/articles/' + p + '" class="view-all-link">View all ' + cfg.label + ' articles <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>';
       } else {
         html += emptyStateHTML(cfg.empty.title, cfg.empty.body);
       }
