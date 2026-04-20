@@ -10,5 +10,17 @@
     "date": "2025-01-01",
     "slug": "blog-and-article-hierarchy-pillars-clusters-internal-linking",
     "featured": true
+  },
+  {
+    "id": "how-to-create-evergreen-content",
+    "title": "How to Create Evergreen Content That Brings Customers for Years",
+    "description": "Most businesses create content that disappears into the feed within hours. This guide covers exactly what evergreen content is, why it compounds in ways other marketing cannot, and precisely how to create it so it brings customers for years.",
+    "pillar": "content-marketing",
+    "pillarLabel": "Content Marketing",
+    "readTime": 22,
+    "author": "Riley Catalano",
+    "date": "2025-02-01",
+    "slug": "how-to-create-evergreen-content",
+    "featured": false
   }
 ]
