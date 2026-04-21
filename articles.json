@@ -58,5 +58,17 @@
     "date": "2026-03-01",
     "slug": "new-rules-online-visibility-seo-aeo-geo",
     "featured": true
+  },
+  {
+    "id": "local-service-ads-fast-track-top-google",
+    "title": "Local Service Ads: Fast Track to the Top of Google",
+    "description": "Google Local Service Ads appear above everything else \u2014 the map, paid ads, organic results. Here is exactly how LSAs work, how the ranking algorithm decides who shows up, and how to build a profile that wins leads before competitors even know the game has changed.",
+    "pillar": "search-visibility",
+    "pillarLabel": "Search Visibility & Local Discovery",
+    "readTime": 23,
+    "author": "Riley Catalano",
+    "date": "2026-04-01",
+    "slug": "local-service-ads-fast-track-top-google",
+    "featured": true
   }
 ]
