@@ -1,3 +1,4 @@
+ [
   {
     "id": "blog-and-article-hierarchy-pillars-clusters-internal-linking",
     "title": "Blog and Article Hierarchy: Pillars, Clusters, and Internal Linking",
@@ -81,5 +82,17 @@
     "date": "2026-01-18",
     "slug": "your-cute-captions-arent-searchable",
     "featured": true
+  },
+  {
+    "id": "complete-google-business-profile-checklist",
+    "title": "The Complete Google Business Profile Checklist",
+    "description": "Your Google Business Profile is not just a listing \u2014 it is your most powerful local search asset. Every missing photo, unlisted service, or unanswered review is lost revenue. This checklist covers everything: setup, categories, services, photos, reviews, posts, Q&A, and analytics.",
+    "pillar": "search-visibility",
+    "pillarLabel": "Search Visibility & Local Discovery",
+    "readTime": 12,
+    "author": "Riley Catalano",
+    "date": "2026-01-11",
+    "slug": "complete-google-business-profile-checklist",
+    "featured": true
   }
-
+]
