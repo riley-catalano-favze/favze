@@ -909,7 +909,21 @@ var searchQuery = '';
 // ============================================================
 // FETCH articles.json
 // ============================================================
-fetch('/favze/articles.json')
+// URL map: maps article id to its real canonical URL
+var URL_MAP = {
+  'blog-and-article-hierarchy-pillars-clusters-internal-linking': '/articles/content-marketing/blog-and-article-hierarchy-pillars-clusters-internal-linking.html',
+  'how-to-create-evergreen-content': '/articles/content-marketing/how-to-create-evergreen-content.html',
+  'content-repurposing-mastery-ai-era': '/articles/content-marketing/content-repurposing-mastery-ai-era.html',
+  'what-makes-google-trust-a-website': '/articles/search-visibility/what-makes-google-trust-a-website.html',
+  'new-rules-online-visibility-seo-aeo-geo': '/articles/search-visibility/new-rules-online-visibility-seo-aeo-geo.html',
+  'local-service-ads-fast-track-top-google': '/articles/search-visibility/local-service-ads-fast-track-top-google.html',
+  'your-cute-captions-arent-searchable': '/articles/social-media-strategy/your-cute-captions-arent-searchable.html',
+  'complete-google-business-profile-checklist': '/articles/search-visibility/google-business-profile-checklist.html',
+  'how-to-create-highly-engaging-social-media-posts': '/articles/social-media-strategy/how-to-create-highly-engaging-social-media-posts.html',
+  'how-to-become-local-favorite-northern-indiana-michiana': '/articles/brand-positioning/how-to-make-business-local-favorite.html'
+};
+
+fetch('/articles.json')
   .then(function(r){ return r.json(); })
   .then(function(data){
     allArticles = data;
@@ -1039,7 +1053,7 @@ function render() {
 // ============================================================
 function articleCardHTML(a) {
   var initials = a.author.split(' ').map(function(w){ return w[0]; }).join('');
-  var url = '/articles/' + a.pillar + '/' + a.slug;
+  var url = URL_MAP[a.id] || ('/articles/' + a.pillar + '/' + a.slug + '.html');
   return '<a href="' + url + '" class="article-card">'
     + '<div class="article-card-top">'
     + '<span class="a-tag">' + a.pillarLabel + '</span>'
