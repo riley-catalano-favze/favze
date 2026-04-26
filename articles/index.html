@@ -909,30 +909,119 @@ var searchQuery = '';
 // ============================================================
 // FETCH articles.json
 // ============================================================
-// URL map: maps article id to its real canonical URL
-var URL_MAP = {
-  'blog-and-article-hierarchy-pillars-clusters-internal-linking': '/articles/content-marketing/blog-and-article-hierarchy-pillars-clusters-internal-linking.html',
-  'how-to-create-evergreen-content': '/articles/content-marketing/how-to-create-evergreen-content.html',
-  'content-repurposing-mastery-ai-era': '/articles/content-marketing/content-repurposing-mastery-ai-era.html',
-  'what-makes-google-trust-a-website': '/articles/search-visibility/what-makes-google-trust-a-website.html',
-  'new-rules-online-visibility-seo-aeo-geo': '/articles/search-visibility/new-rules-online-visibility-seo-aeo-geo.html',
-  'local-service-ads-fast-track-top-google': '/articles/search-visibility/local-service-ads-fast-track-top-google.html',
-  'your-cute-captions-arent-searchable': '/articles/social-media-strategy/your-cute-captions-arent-searchable.html',
-  'complete-google-business-profile-checklist': '/articles/search-visibility/google-business-profile-checklist.html',
-  'how-to-create-highly-engaging-social-media-posts': '/articles/social-media-strategy/how-to-create-highly-engaging-social-media-posts.html',
-  'how-to-become-local-favorite-northern-indiana-michiana': '/articles/brand-positioning/how-to-make-business-local-favorite.html'
-};
-
-fetch('/articles.json')
-  .then(function(r){ return r.json(); })
-  .then(function(data){
-    allArticles = data;
-    init();
-  })
-  .catch(function(){
-    allArticles = [];
-    init();
-  });
+allArticles = [
+  {
+    "id": "blog-and-article-hierarchy-pillars-clusters-internal-linking",
+    "title": "Blog and Article Hierarchy: Pillars, Clusters, and Internal Linking",
+    "description": "Most businesses write articles one by one and wonder why their site never ranks. The issue isn't article quality — it's the lack of structure. This guide covers the three-level content hierarchy, topical authority, and the internal linking architecture that makes it all work.",
+    "pillar": "content-marketing",
+    "pillarLabel": "Content Marketing",
+    "readTime": 17,
+    "author": "Riley Catalano",
+    "date": "2025-01-01",
+    "url": "/articles/content-marketing/blog-and-article-hierarchy-pillars-clusters-internal-linking.html"
+  },
+  {
+    "id": "how-to-create-evergreen-content",
+    "title": "How to Create Evergreen Content That Brings Customers for Years",
+    "description": "Most businesses create content that disappears into the feed within hours. This guide covers exactly what evergreen content is, why it compounds in ways other marketing cannot, and precisely how to create it so it brings customers for years.",
+    "pillar": "content-marketing",
+    "pillarLabel": "Content Marketing",
+    "readTime": 22,
+    "author": "Riley Catalano",
+    "date": "2025-02-01",
+    "url": "/articles/content-marketing/how-to-create-evergreen-content.html"
+  },
+  {
+    "id": "content-repurposing-mastery-ai-era",
+    "title": "Content Repurposing Mastery: For the AI Era",
+    "description": "Most businesses publish content once and move on. The businesses dominating search and AI-generated answers are doing something smarter — producing one piece of content and turning it into ten. This is exactly how to build a repurposing system that works for SEO, AEO, and GEO.",
+    "pillar": "content-marketing",
+    "pillarLabel": "Content Marketing",
+    "readTime": 20,
+    "author": "Riley Catalano",
+    "date": "2026-03-01",
+    "url": "/articles/content-marketing/content-repurposing-mastery-ai-era.html"
+  },
+  {
+    "id": "what-makes-google-trust-a-website",
+    "title": "What Makes Google Trust a Website",
+    "description": "Google doesn't use a single trust score. It uses a complex, multi-layered system of signals — E-E-A-T, backlinks, technical performance, authorship, user behavior, and more. This guide breaks down every signal that builds Google's trust in your website and what destroys it.",
+    "pillar": "search-visibility",
+    "pillarLabel": "Search Visibility & Local Discovery",
+    "readTime": 18,
+    "author": "Riley Catalano",
+    "date": "2026-03-22",
+    "url": "/articles/search-visibility/what-makes-google-trust-a-website.html"
+  },
+  {
+    "id": "new-rules-online-visibility-seo-aeo-geo",
+    "title": "The New Rules of Online Visibility: SEO, AEO & GEO Mastery",
+    "description": "Search engine optimization alone is no longer a viable strategy. AEO and GEO have become non-negotiable layers of modern search visibility. The most complete breakdown of all three — and the exact framework to build compounding visibility across every search ecosystem at once.",
+    "pillar": "search-visibility",
+    "pillarLabel": "Search Visibility & Local Discovery",
+    "readTime": 28,
+    "author": "Riley Catalano",
+    "date": "2026-03-01",
+    "url": "/articles/search-visibility/new-rules-online-visibility-seo-aeo-geo.html"
+  },
+  {
+    "id": "local-service-ads-fast-track-top-google",
+    "title": "Local Service Ads: Fast Track to the Top of Google",
+    "description": "Google Local Service Ads appear above everything else — the map, paid ads, organic results. Here is exactly how LSAs work, how the ranking algorithm decides who shows up, and how to build a profile that wins leads before competitors even know the game has changed.",
+    "pillar": "search-visibility",
+    "pillarLabel": "Search Visibility & Local Discovery",
+    "readTime": 23,
+    "author": "Riley Catalano",
+    "date": "2026-04-01",
+    "url": "/articles/search-visibility/local-service-ads-fast-track-top-google.html"
+  },
+  {
+    "id": "complete-google-business-profile-checklist",
+    "title": "The Complete Google Business Profile Checklist",
+    "description": "Your Google Business Profile is not just a listing — it is your most powerful local search asset. Every missing photo, unlisted service, or unanswered review is lost revenue. This checklist covers everything: setup, categories, services, photos, reviews, posts, Q&A, and analytics.",
+    "pillar": "search-visibility",
+    "pillarLabel": "Search Visibility & Local Discovery",
+    "readTime": 12,
+    "author": "Riley Catalano",
+    "date": "2026-01-11",
+    "url": "/articles/search-visibility/google-business-profile-checklist.html"
+  },
+  {
+    "id": "your-cute-captions-arent-searchable",
+    "title": "Your Cute Captions Aren't Searchable",
+    "description": "If your caption sounds clever but can't be searched, indexed, or matched to intent, it isn't helping your business. This is a discoverability problem — and here is exactly how to fix it across every platform you post on.",
+    "pillar": "social-media-strategy",
+    "pillarLabel": "Social Media Strategy",
+    "readTime": 8,
+    "author": "Riley Catalano",
+    "date": "2026-01-18",
+    "url": "/articles/social-media-strategy/your-cute-captions-arent-searchable.html"
+  },
+  {
+    "id": "how-to-create-highly-engaging-social-media-posts",
+    "title": "How Businesses Can Create Highly-Engaging Social Media Posts",
+    "description": "Most business owners treat social media like a megaphone. The businesses winning right now are smarter — they understand that people don't engage with content, they engage with content that makes them feel something. Here is how to build that, systematically.",
+    "pillar": "social-media-strategy",
+    "pillarLabel": "Social Media Strategy",
+    "readTime": 10,
+    "author": "Riley Catalano",
+    "date": "2026-02-14",
+    "url": "/articles/social-media-strategy/how-to-create-highly-engaging-social-media-posts.html"
+  },
+  {
+    "id": "how-to-become-local-favorite-northern-indiana-michiana",
+    "title": "How to Make Your Business the Favorite in Northern Indiana & Michiana",
+    "description": "Being known is not the same as being chosen. This is the exact playbook for building a brand that Northern Indiana and Michiana customers trust, recommend, and return to — without a national budget or a marketing department.",
+    "pillar": "brand-positioning",
+    "pillarLabel": "Brand Positioning & Community Authority",
+    "readTime": 14,
+    "author": "Riley Catalano",
+    "date": "2026-04-01",
+    "url": "/articles/brand-positioning/how-to-make-business-local-favorite.html"
+  }
+];
+init();
 
 function init() {
   updateCounts();
@@ -1053,7 +1142,7 @@ function render() {
 // ============================================================
 function articleCardHTML(a) {
   var initials = a.author.split(' ').map(function(w){ return w[0]; }).join('');
-  var url = URL_MAP[a.id] || ('/articles/' + a.pillar + '/' + a.slug + '.html');
+  var url = a.url;
   return '<a href="' + url + '" class="article-card">'
     + '<div class="article-card-top">'
     + '<span class="a-tag">' + a.pillarLabel + '</span>'
