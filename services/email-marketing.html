@@ -8,12 +8,12 @@
 <meta name="description" content="Favze delivers AI-optimized email marketing for Northern Indiana, Michiana, and Elkhart County businesses. Inbox placement, list building, segmentation, automation, and full analytics. Free consultation.">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Riley Catalano, Favze Digital Marketing">
-<link rel="canonical" href="https://favze.com/email-marketing">
+<link rel="canonical" href="https://favze.com/services/email-marketing">
 <link rel="icon" type="image/svg+xml" href="https://favze.com/hubfs/favze-favicon.svg">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://favze.com/email-marketing">
+<meta property="og:url" content="https://favze.com/services/email-marketing">
 <meta property="og:title" content="Email Marketing — AI-Optimized Campaigns | Northern Indiana | Favze">
 <meta property="og:description" content="AI-optimized email marketing for Northern Indiana and Michiana businesses. Inbox placement, list segmentation, automation, and full analytics. Zero hidden fees. Free consultation.">
 <meta property="og:site_name" content="Favze Digital Marketing">
@@ -103,12 +103,12 @@
     },
     {
       "@type": "Service",
-      "@id": "https://favze.com/email-marketing#service",
+      "@id": "https://favze.com/services/email-marketing#service",
       "name": "AI-Optimized Email Marketing — Northern Indiana & Michiana",
       "serviceType": "Email Marketing Management",
       "description": "Favze delivers AI-optimized email marketing for businesses in Northern Indiana, Michiana, and Elkhart County. Services include email list building, audience segmentation, automated campaign workflows, inbox deliverability optimization, subject line testing, content optimization, multi-channel integration, and full campaign analytics. Every campaign is designed to increase engagement, generate qualified leads, drive repeat purchases, and build long-term brand trust with local customers.",
       "provider": {"@id": "https://favze.com/#organization"},
-      "url": "https://favze.com/email-marketing",
+      "url": "https://favze.com/services/email-marketing",
       "areaServed": [
         "Goshen IN",
         "Elkhart IN",
@@ -148,18 +148,18 @@
     },
     {
       "@type": "WebPage",
-      "@id": "https://favze.com/email-marketing#webpage",
-      "url": "https://favze.com/email-marketing",
+      "@id": "https://favze.com/services/email-marketing#webpage",
+      "url": "https://favze.com/services/email-marketing",
       "name": "Email Marketing — AI-Optimized Campaigns for Northern Indiana & Michiana | Favze",
       "description": "Favze delivers AI-optimized email marketing for Northern Indiana, Michiana, and Elkhart County businesses. Inbox placement, list building, segmentation, automation, and full analytics.",
       "isPartOf": {"@id": "https://favze.com/#website"},
-      "about": {"@id": "https://favze.com/email-marketing#service"},
+      "about": {"@id": "https://favze.com/services/email-marketing#service"},
       "breadcrumb": {
         "@type": "BreadcrumbList",
         "itemListElement": [
           {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://favze.com"},
-          {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://favze.com/services"},
-          {"@type": "ListItem", "position": 3, "name": "Email Marketing", "item": "https://favze.com/email-marketing"}
+          {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://favze.com/services/},
+          {"@type": "ListItem", "position": 3, "name": "Email Marketing", "item": "https://favze.com/services/email-marketing"}
         ]
       }
     },
@@ -188,7 +188,7 @@
     },
     {
       "@type": "FAQPage",
-      "@id": "https://favze.com/email-marketing#faq",
+      "@id": "https://favze.com/services/email-marketing#faq",
       "mainEntity": [
         {
           "@type": "Question",
@@ -314,7 +314,7 @@
     },
     {
       "@type": "ItemList",
-      "@id": "https://favze.com/email-marketing#client-compatibility",
+      "@id": "https://favze.com/services/email-marketing#client-compatibility",
       "name": "Email Clients and Devices Favze Tests Every Campaign On",
       "description": "Favze builds and tests every email template across all major email clients and devices before any campaign is sent, ensuring zero wasted budget from broken rendering.",
       "numberOfItems": 18,
@@ -341,7 +341,7 @@
     },
     {
       "@type": "ItemList",
-      "@id": "https://favze.com/email-marketing#services-list",
+      "@id": "https://favze.com/services/email-marketing#services-list",
       "name": "Favze Email Marketing Services for Northern Indiana Businesses",
       "description": "Complete list of AI-optimized email marketing services offered by Favze Digital Marketing to businesses in Northern Indiana, Michiana, and Elkhart County.",
       "numberOfItems": 9,
@@ -359,7 +359,7 @@
     },
     {
       "@type": "TechArticle",
-      "@id": "https://favze.com/email-marketing#technical-guide",
+      "@id": "https://favze.com/services/email-marketing#technical-guide",
       "headline": "How AI-Optimized Email Marketing Works for Northern Indiana Businesses",
       "description": "A comprehensive guide to AI-optimized email marketing including inbox deliverability, cross-client rendering, SPF/DKIM/DMARC authentication, audience segmentation, and automated campaign workflows for businesses in Northern Indiana and Michiana.",
       "author": {"@id": "https://favze.com/#organization"},
@@ -387,7 +387,7 @@
     },
     {
       "@type": "HowTo",
-      "@id": "https://favze.com/email-marketing#howto",
+      "@id": "https://favze.com/services/email-marketing#howto",
       "name": "How Favze Builds AI-Optimized Email Marketing Campaigns for Northern Indiana Businesses",
       "description": "The step-by-step process Favze uses to plan, build, launch, and continuously optimize email marketing campaigns for businesses in Northern Indiana and Michiana.",
       "step": [
@@ -993,6 +993,108 @@ footer { background: var(--dark); padding: 56px 5% 0; border-top: 1px solid var(
   .cta-strip { padding: 40px 3.5%; }
   footer { padding: 32px 3.5% 0; }
 }
+
+/* ── Drop-down nav ── */
+.nav-logo-img { height: 30px; width: auto; object-fit: contain; }
+.drop-trigger {
+  font-family: var(--font-body); font-weight: 500; font-size: 0.875rem;
+  padding: 8px 12px; border-radius: 8px; color: #0a0a0a;
+  background: none; border: none; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 4px;
+  transition: background .15s; white-space: nowrap;
+}
+.drop-trigger:hover { background: #f0f0f0; }
+.drop-trigger[aria-expanded="true"] { background: #f0f0f0; }
+.drop-trigger[aria-expanded="true"] svg { transform: rotate(180deg); }
+.drop-trigger svg { transition: transform .2s; flex-shrink: 0; }
+.nl-link {
+  font-weight: 500; font-size: 0.875rem; padding: 8px 12px;
+  border-radius: 8px; color: #0a0a0a;
+  display: inline-flex; align-items: center;
+  transition: background .15s; white-space: nowrap;
+}
+.nl-link:hover { background: #f0f0f0; }
+.nl-link.active { color: var(--navy); font-weight: 700; }
+.nl-cta {
+  font-family: var(--font-body); font-weight: 700; font-size: 0.875rem;
+  padding: 9px 18px; border-radius: 9px;
+  background: var(--navy); color: #fff !important;
+  display: inline-flex; align-items: center;
+  transition: background .15s; white-space: nowrap;
+}
+.nl-cta:hover { background: var(--teal); }
+.nl > li { position: relative; }
+.drop-panel {
+  position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%) translateY(-6px);
+  background: #fff; border: 1.5px solid #e8e8e8;
+  border-radius: 14px; box-shadow: 0 16px 48px rgba(0,0,0,.13);
+  padding: 12px; z-index: 300; min-width: 240px; width: max-content;
+  opacity: 0; visibility: hidden; pointer-events: none;
+  transition: opacity .18s ease, transform .18s ease, visibility .18s ease;
+}
+.drop-panel.open {
+  opacity: 1; visibility: visible; pointer-events: auto; transform: translateX(-50%) translateY(0);
+}
+.drop-panel.center { left: 50%; }
+.drop-panel.center.open { transform: translateX(-50%) translateY(0); }
+.drop-label {
+  font-size: 0.65rem; font-weight: 800; letter-spacing: .1em;
+  text-transform: uppercase; color: #aaa;
+  padding: 0 12px 8px; border-bottom: 1px solid #f0f0f0; margin-bottom: 4px;
+  white-space: nowrap;
+}
+.drop-panel a {
+  display: flex; align-items: center; justify-content: space-between;
+  font-size: 0.83rem; font-weight: 500; color: #333;
+  padding: 8px 12px; border-radius: 8px;
+  transition: background .12s, color .12s;
+  white-space: nowrap; gap: 8px; text-decoration: none;
+}
+.drop-panel a:hover { background: rgba(6,65,135,.07); color: var(--navy); }
+.drop-abbr { font-size: 0.65rem; font-weight: 700; color: #aaa; margin-left: 4px; }
+.drop-divider { height: 1px; background: #f0f0f0; margin: 8px 0; }
+.drop-view-all { font-weight: 700 !important; color: var(--navy) !important; margin-top: 4px; }
+/* Mobile menu extras */
+.mm-toggle {
+  width: 100%; text-align: left; background: none; border: none;
+  font-family: var(--font-body); font-size: 1rem; font-weight: 500; color: #0a0a0a;
+  padding: 12px 14px; border-radius: 8px; cursor: pointer;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.mm-toggle:hover { background: #f5f5f5; }
+.mm-toggle svg { transition: transform .2s; flex-shrink: 0; }
+.mm-toggle.open svg { transform: rotate(180deg); }
+.mm-sub { display: none; flex-direction: column; gap: 1px; padding: 0 8px 8px 20px; }
+.mm-sub.open { display: flex; }
+.mm-sub a { font-size: 0.88rem; font-weight: 500; color: #444; padding: 8px 10px; border-radius: 7px; display: block; }
+.mm-sub a:hover { background: rgba(6,65,135,.07); color: var(--navy); }
+.mm-cta { background: var(--navy) !important; color: #fff !important; text-align: center; margin-top: 8px; font-weight: 700 !important; border-radius: 9px; }
+.mm-cta:hover { background: var(--teal) !important; }
+/* Footer scroll strip */
+.ft-scroll-strip { border-top: 1px solid rgba(255,255,255,.07); border-bottom: 1px solid rgba(255,255,255,.07); padding: 11px 0; display: flex; align-items: center; overflow: hidden; }
+.ft-scroll-label { font-size: 0.62rem; font-weight: 700; letter-spacing: .16em; color: var(--teal); white-space: nowrap; padding: 0 20px 0 5%; flex-shrink: 0; }
+.ft-scroll-track-wrap { flex: 1; overflow: hidden; position: relative; }
+.ft-scroll-track-wrap::before, .ft-scroll-track-wrap::after { content: ''; position: absolute; top: 0; bottom: 0; width: 40px; z-index: 2; pointer-events: none; }
+.ft-scroll-track-wrap::before { left: 0; background: linear-gradient(to right, var(--dark), transparent); }
+.ft-scroll-track-wrap::after { right: 0; background: linear-gradient(to left, var(--dark), transparent); }
+.ft-scroll-track { display: flex; align-items: center; white-space: nowrap; animation: ftScroll 40s linear infinite; }
+.ft-scroll-track:hover { animation-play-state: paused; }
+.ft-scroll-track a { font-size: 0.78rem; color: rgba(255,255,255,.45); padding: 0 4px; transition: color .2s; flex-shrink: 0; }
+.ft-scroll-track a:hover { color: rgba(255,255,255,.85); }
+.ft-scroll-dot { font-size: 0.78rem; color: rgba(255,255,255,.18); padding: 0 6px; flex-shrink: 0; }
+@keyframes ftScroll { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+.ft-scroll-right { display: flex; align-items: center; gap: 6px; white-space: nowrap; flex-shrink: 0; padding: 0 5% 0 16px; font-size: 0.62rem; font-weight: 700; letter-spacing: .1em; color: var(--teal); text-transform: uppercase; }
+/* Footer trust bar */
+.ft-trust-bar { border-bottom: 1px solid rgba(255,255,255,.07); padding: 12px 5%; }
+.ft-trust-inner { max-width: var(--inner-max); margin: 0 auto; display: flex; align-items: center; flex-wrap: wrap; justify-content: center; }
+.ft-trust-item { display: flex; align-items: center; gap: 7px; font-size: 0.72rem; font-weight: 600; color: rgba(255,255,255,.45); padding: 4px 20px; }
+.ft-trust-sep { width: 1px; height: 16px; background: rgba(255,255,255,.1); flex-shrink: 0; }
+/* Footer social icons */
+.ft-social { display: grid; grid-template-columns: repeat(3, 34px); gap: 8px; margin-top: 18px; }
+.ft-social a { width: 34px; height: 34px; border-radius: 8px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,.45); transition: background .2s, color .2s, border-color .2s; }
+.ft-social a:hover { background: var(--navy); border-color: var(--navy); color: #fff; }
+/* Footer 4-col grid */
+.ft-top { grid-template-columns: 1.4fr 1fr 1fr 1fr !important; }
 </style>
 </head>
 <body>
@@ -1000,47 +1102,114 @@ footer { background: var(--dark); padding: 56px 5% 0; border-top: 1px solid var(
 <!-- ═══════════════════════════════════════════
      NAV
 ═══════════════════════════════════════════ -->
-<nav role="navigation" aria-label="Main site navigation">
-  <a href="https://favze.com" style="display:flex;align-items:center">
-    <img src="https://favze.com/hubfs/favze-logo-black-header.svg" alt="Favze Digital Marketing" class="nav-logo-img" onerror="this.style.display='none';this.nextSibling.style.display='flex'">
+<nav>
+  <a href="https://favze.com/" style="display:flex;align-items:center">
+    <img src="https://favze.com/hubfs/favze-logo-black-header.svg" alt="Favze Digital Marketing" class="nav-logo-img"
+      onerror="this.style.display='none';this.nextSibling.style.display='flex'">
     <span style="display:none;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.45rem;color:#064187;letter-spacing:.04em;">FAVZE</span>
   </a>
   <ul class="nl">
-    <li><a href="https://favze.com/services" class="active">Services</a></li>
-    <li><a href="https://favze.com/favze-insights">Articles</a></li>
-    <li><a href="https://favze.com/why-choose-us">Why Us</a></li>
-    <li><a href="https://favze.com/about">About</a></li>
-    <li><a href="https://favze.com/digital-marketing-faq">FAQ</a></li>
-    <li><a href="https://favze.com/contact" class="nc">Free Consultation</a></li>
+    <li>
+      <button class="drop-trigger" id="trigServices" aria-expanded="false" aria-controls="panServices">
+        Services
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="drop-panel" id="panServices" role="menu">
+        <div class="drop-label">All Services</div>
+        <a href="https://favze.com/services/social-media-marketing" role="menuitem">Social Media Marketing <span class="drop-abbr">SMM</span></a>
+        <a href="https://favze.com/services/search-engine-optimization" role="menuitem">Search Engine Optimization <span class="drop-abbr">SEO</span></a>
+        <a href="https://favze.com/services/answer-engine-optimization" role="menuitem">Answer Engine Optimization <span class="drop-abbr">AEO</span></a>
+        <a href="https://favze.com/services/generative-engine-optimization" role="menuitem">Generative Engine Optimization <span class="drop-abbr">GEO</span></a>
+        <a href="https://favze.com/services/ai-optimization" role="menuitem">AI Optimization</a>
+        <a href="https://favze.com/services/local-seo" role="menuitem">Local SEO</a>
+        <a href="https://favze.com/services/email-marketing" role="menuitem" style="font-weight:700;color:var(--navy);">Email Marketing</a>
+        <a href="https://favze.com/services/short-message-service-sms" role="menuitem">SMS Marketing</a>
+        <a href="https://favze.com/services/hubspot-setup" role="menuitem">HubSpot Setup</a>
+        <a href="https://favze.com/services/website-design" role="menuitem">Website Design</a>
+        <a href="https://favze.com/services/paid-search-ads" role="menuitem">Paid Search Ads <span class="drop-abbr">SEM</span></a>
+        <a href="https://favze.com/services/paid-social-media-ads" role="menuitem">Paid Social Media Ads</a>
+        <div class="drop-divider"></div>
+        <a href="https://favze.com/services/" class="drop-view-all" role="menuitem">View All Services &rarr;</a>
+      </div>
+    </li>
+    <li>
+      <button class="drop-trigger" id="trigArticles" aria-expanded="false" aria-controls="panArticles">
+        Articles
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="drop-panel center" id="panArticles" role="menu">
+        <div class="drop-label">Browse by Pillar</div>
+        <a href="https://favze.com/articles/content-marketing/" role="menuitem">Content Marketing</a>
+        <a href="https://favze.com/articles/social-media-strategy/" role="menuitem">Social Media Strategy</a>
+        <a href="https://favze.com/articles/search-visibility/" role="menuitem">Search Visibility &amp; Local Discovery</a>
+        <a href="https://favze.com/articles/brand-positioning/" role="menuitem">Brand Positioning &amp; Community Authority</a>
+        <div class="drop-divider"></div>
+        <a href="https://favze.com/articles/" class="drop-view-all" role="menuitem">All Articles &rarr;</a>
+      </div>
+    </li>
+    <li><a href="https://favze.com/why-us" class="nl-link">Why Us</a></li>
+    <li><a href="https://favze.com/about" class="nl-link">About</a></li>
+    <li><a href="https://favze.com/faq" class="nl-link">FAQ</a></li>
+    <li><a href="https://favze.com/free-consultation" class="nl-cta">Free Consultation</a></li>
   </ul>
-  <button class="hb" id="hb" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  <button class="hb" id="hb" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
-<div class="mm" id="mm">
-  <a href="https://favze.com/services">Services</a>
-  <a href="https://favze.com/favze-insights">Articles</a>
-  <a href="https://favze.com/why-choose-us">Why Us</a>
-  <a href="https://favze.com/about">About</a>
-  <a href="https://favze.com/digital-marketing-faq">FAQ</a>
-  <a href="https://favze.com/contact" class="mc">Start Free Consultation</a>
+<!-- Mobile menu -->
+<div class="mm" id="mm" aria-hidden="true">
+  <button class="mm-toggle" id="mmServTrig" aria-expanded="false">
+    Services
+    <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <div class="mm-sub" id="mmServSub">
+    <a href="https://favze.com/services/social-media-marketing">Social Media Marketing</a>
+    <a href="https://favze.com/services/search-engine-optimization">SEO</a>
+    <a href="https://favze.com/services/answer-engine-optimization">AEO</a>
+    <a href="https://favze.com/services/generative-engine-optimization">GEO</a>
+    <a href="https://favze.com/services/ai-optimization">AI Optimization</a>
+    <a href="https://favze.com/services/local-seo">Local SEO</a>
+    <a href="https://favze.com/services/email-marketing" style="font-weight:700;color:var(--navy);">Email Marketing</a>
+    <a href="https://favze.com/services/short-message-service-sms">SMS Marketing</a>
+    <a href="https://favze.com/services/hubspot-setup">HubSpot Setup</a>
+    <a href="https://favze.com/services/website-design">Website Design</a>
+    <a href="https://favze.com/services/paid-search-ads">Paid Search Ads</a>
+    <a href="https://favze.com/services/paid-social-media-ads">Paid Social Media Ads</a>
+    <a href="https://favze.com/services/" style="font-weight:700;color:var(--navy);">All Services</a>
+  </div>
+  <button class="mm-toggle" id="mmArtTrig" aria-expanded="false">
+    Articles
+    <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <div class="mm-sub" id="mmArtSub">
+    <a href="https://favze.com/articles/content-marketing/">Content Marketing</a>
+    <a href="https://favze.com/articles/social-media-strategy/">Social Media Strategy</a>
+    <a href="https://favze.com/articles/search-visibility/">Search Visibility &amp; Local Discovery</a>
+    <a href="https://favze.com/articles/brand-positioning/">Brand Positioning &amp; Community Authority</a>
+    <a href="https://favze.com/articles/" style="font-weight:700;color:var(--navy);">All Articles</a>
+  </div>
+  <a href="https://favze.com/why-us" class="mm-link">Why Us</a>
+  <a href="https://favze.com/about" class="mm-link">About</a>
+  <a href="https://favze.com/faq" class="mm-link">FAQ</a>
+  <a href="https://favze.com/free-consultation" class="mm-link mm-cta">Start Free Consultation</a>
 </div>
-
 <!-- ═══════════════════════════════════════════
      SERVICE NAV STRIP
 ═══════════════════════════════════════════ -->
 <div class="svc-nav" aria-label="All Favze services">
   <div class="svc-nav-inner">
-    <a href="https://favze.com/social-media-marketing" class="svc-pill"><span class="svc-pill-dot"></span>Social Media</a>
-    <a href="https://favze.com/ai-optimization" class="svc-pill"><span class="svc-pill-dot"></span>AI Optimization</a>
-    <a href="https://favze.com/search-engine-optimization" class="svc-pill"><span class="svc-pill-dot"></span>SEO</a>
-    <a href="https://favze.com/answer-engine-optimization" class="svc-pill"><span class="svc-pill-dot"></span>AEO</a>
-    <a href="https://favze.com/generative-engine-optimization" class="svc-pill"><span class="svc-pill-dot"></span>GEO</a>
-    <a href="https://favze.com/short-message-service-sms" class="svc-pill"><span class="svc-pill-dot"></span>SMS</a>
-    <a href="https://favze.com/email-marketing" class="svc-pill active"><span class="svc-pill-dot"></span>Email</a>
-    <a href="https://favze.com/local-seo" class="svc-pill"><span class="svc-pill-dot"></span>Local SEO</a>
-    <a href="https://favze.com/hubspot-setup" class="svc-pill"><span class="svc-pill-dot"></span>HubSpot</a>
-    <a href="https://favze.com/website-design" class="svc-pill"><span class="svc-pill-dot"></span>Website Design</a>
-    <a href="https://favze.com/paid-search-ads-sem" class="svc-pill"><span class="svc-pill-dot"></span>Paid Search</a>
-    <a href="https://favze.com/paid-social-media-ads" class="svc-pill"><span class="svc-pill-dot"></span>Paid Social</a>
+    <a href="https://favze.com/services/social-media-marketing" class="svc-pill"><span class="svc-pill-dot"></span>Social Media</a>
+    <a href="https://favze.com/services/ai-optimization" class="svc-pill"><span class="svc-pill-dot"></span>AI Optimization</a>
+    <a href="https://favze.com/services/search-engine-optimization" class="svc-pill"><span class="svc-pill-dot"></span>SEO</a>
+    <a href="https://favze.com/services/answer-engine-optimization" class="svc-pill"><span class="svc-pill-dot"></span>AEO</a>
+    <a href="https://favze.com/services/generative-engine-optimization" class="svc-pill"><span class="svc-pill-dot"></span>GEO</a>
+    <a href="https://favze.com/services/short-message-service-sms" class="svc-pill"><span class="svc-pill-dot"></span>SMS</a>
+    <a href="https://favze.com/services/email-marketing" class="svc-pill active"><span class="svc-pill-dot"></span>Email</a>
+    <a href="https://favze.com/services/local-seo" class="svc-pill"><span class="svc-pill-dot"></span>Local SEO</a>
+    <a href="https://favze.com/services/hubspot-setup" class="svc-pill"><span class="svc-pill-dot"></span>HubSpot</a>
+    <a href="https://favze.com/services/website-design" class="svc-pill"><span class="svc-pill-dot"></span>Website Design</a>
+    <a href="https://favze.com/services/paid-search-ads" class="svc-pill"><span class="svc-pill-dot"></span>Paid Search</a>
+    <a href="https://favze.com/services/paid-social-media-ads" class="svc-pill"><span class="svc-pill-dot"></span>Paid Social</a>
   </div>
 </div>
 
@@ -1060,7 +1229,7 @@ footer { background: var(--dark); padding: 56px 5% 0; border-top: 1px solid var(
       </h1>
       <p class="hero-sub">Favze builds AI-optimized email marketing campaigns for Northern Indiana and Michiana businesses. From inbox placement and list building to automated sequences and full campaign analytics — every email is engineered to generate revenue, build loyalty, and make your business the obvious local choice.</p>
       <div class="hero-ctas">
-        <a href="https://favze.com/contact" class="btn-primary">Start Free Consultation <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="https://favze.com/free-consultation" class="btn-primary">Start Free Consultation <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         <a href="#services" class="btn-ghost">See Every Service</a>
       </div>
       <div class="hero-stats">
@@ -1249,7 +1418,7 @@ footer { background: var(--dark); padding: 56px 5% 0; border-top: 1px solid var(
         <h2>Without AI Optimization, <span>Your Emails Don't Even Exist.</span></h2>
         <p>An email that lands in spam is an email that was never sent. Gmail's AI filters block millions of legitimate business emails every day — not because they're spam, but because they look like spam to the algorithm. Sender authentication, list hygiene, engagement rates, and content signals all feed the filter.</p>
         <p>Favze sets up and maintains SPF, DKIM, and DMARC authentication records, monitors sender reputation scores, keeps your list clean through active hygiene management, and writes content structured to pass machine learning filters — ensuring your messages reach real inboxes in Goshen, Elkhart, South Bend, and across Northern Indiana.</p>
-        <a href="https://favze.com/contact" class="btn-primary" style="margin-top:8px;display:inline-flex;">Get Inbox-Ready <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="https://favze.com/free-consultation" class="btn-primary" style="margin-top:8px;display:inline-flex;">Get Inbox-Ready <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
       <div>
         <div class="inbox-visual">
@@ -1593,7 +1762,10 @@ footer { background: var(--dark); padding: 56px 5% 0; border-top: 1px solid var(
       </div>
     </div>
     <div style="text-align:center;margin-top:52px">
-      <a href="https://favze.com/contact" class="btn-primary" style="display:inline-flex;align-items:center;gap:10px;font-size:1rem;">Start My Free Consultation <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;">
+        <a href="https://favze.com/free-consultation" class="btn-primary" style="display:inline-flex;align-items:center;gap:10px;font-size:1rem;">Start My Free Consultation <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="https://favze.com/our-process" class="btn-ghost" style="display:inline-flex;align-items:center;gap:10px;font-size:1rem;">See Our Full Process <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
       <p style="margin-top:14px;font-size:0.85rem;color:rgba(255,255,255,.38);">Free. No obligation. No pitch. Just a real conversation.</p>
     </div>
   </div>
@@ -1639,7 +1811,7 @@ footer { background: var(--dark); padding: 56px 5% 0; border-top: 1px solid var(
     <div class="decision-payoff">
       <span class="decision-payoff-eyebrow">The Favze Email Marketing Result</span>
       <h2 class="decision-payoff-text" id="decision-heading">More opens.<br><span>More revenue.</span></h2>
-      <a href="https://favze.com/contact" class="btn-primary" style="margin-top:8px;">Start My Free Consultation <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="https://favze.com/free-consultation" class="btn-primary" style="margin-top:8px;">Start My Free Consultation <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
   </div>
 </section>
@@ -1661,7 +1833,7 @@ footer { background: var(--dark); padding: 56px 5% 0; border-top: 1px solid var(
           <div class="pain-divider"></div>
           <span class="pain-fix-label">The Fix</span>
           <p class="pain-solution">Spam folder placement is almost always a sender reputation or authentication problem — missing SPF/DKIM/DMARC records, high bounce rates, or flagged content. Favze audits and fixes the root cause, not just the symptom. Once authentication is correct and list hygiene is maintained, inbox placement improves dramatically.</p>
-          <button class="pain-fix-btn" onclick="window.location.href='https://favze.com/contact'">Email Marketing Fixes This <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button class="pain-fix-btn" onclick="window.location.href='https://favze.com/free-consultation'">Email Marketing Fixes This <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
       </article>
 
@@ -1673,7 +1845,7 @@ footer { background: var(--dark); padding: 56px 5% 0; border-top: 1px solid var(
           <div class="pain-divider"></div>
           <span class="pain-fix-label">The Fix</span>
           <p class="pain-solution">Declining open rates point to one of three issues: wrong subject lines, wrong send frequency, or the wrong message to the wrong audience. Favze rebuilds your campaign strategy with AI-tested subject lines, audience segmentation, and optimized send timing — the three variables that move open rate more than anything else.</p>
-          <button class="pain-fix-btn" onclick="window.location.href='https://favze.com/contact'">Email Marketing Fixes This <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button class="pain-fix-btn" onclick="window.location.href='https://favze.com/free-consultation'">Email Marketing Fixes This <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
       </article>
 
@@ -1685,7 +1857,7 @@ footer { background: var(--dark); padding: 56px 5% 0; border-top: 1px solid var(
           <div class="pain-divider"></div>
           <span class="pain-fix-label">The Fix</span>
           <p class="pain-solution">Opens without conversions mean the offer, CTA, or landing page isn't converting — not a deliverability problem. Favze diagnoses the drop-off point and rebuilds the conversion path: clearer offers, stronger CTAs, better-matched landing pages, and automated sequences that follow up with non-converters automatically.</p>
-          <button class="pain-fix-btn" onclick="window.location.href='https://favze.com/contact'">Email Marketing Fixes This <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button class="pain-fix-btn" onclick="window.location.href='https://favze.com/free-consultation'">Email Marketing Fixes This <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
       </article>
 
@@ -1697,7 +1869,7 @@ footer { background: var(--dark); padding: 56px 5% 0; border-top: 1px solid var(
           <div class="pain-divider"></div>
           <span class="pain-fix-label">The Fix</span>
           <p class="pain-solution">This is exactly why Favze exists for Northern Indiana businesses. We handle campaign planning, copywriting, design, scheduling, and optimization — so you get results without adding email marketing to your already-full plate. Automation handles the consistency. We handle the strategy. You focus on your business.</p>
-          <button class="pain-fix-btn" onclick="window.location.href='https://favze.com/contact'">Email Marketing Fixes This <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button class="pain-fix-btn" onclick="window.location.href='https://favze.com/free-consultation'">Email Marketing Fixes This <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
         </div>
       </article>
     </div>
@@ -1712,8 +1884,8 @@ footer { background: var(--dark); padding: 56px 5% 0; border-top: 1px solid var(
     <h2>Your Subscribers Want to Hear From You. Make Sure They Do.</h2>
     <p>Favze builds AI-optimized email marketing campaigns for Northern Indiana and Michiana businesses. Inbox placement, list building, segmentation, automation, multi-channel integration, and full analytics — custom-built for your business, your customers, and your local market. Zero hidden fees. Free consultation.</p>
     <div class="cta-btns">
-      <a href="https://favze.com/contact" class="btn-white">Start My Free Consultation <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      <a href="https://favze.com/why-choose-us" class="btn-ghost-white">Why Choose Favze</a>
+      <a href="https://favze.com/free-consultation" class="btn-white">Start My Free Consultation <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="https://favze.com/why-us" class="btn-ghost-white">Why Choose Favze</a>
     </div>
   </div>
 </section>
@@ -1950,7 +2122,7 @@ footer { background: var(--dark); padding: 56px 5% 0; border-top: 1px solid var(
       </div>
       <div style="text-align:center;margin-top:52px;">
         <p style="color:#888;font-size:0.9rem;margin-bottom:18px;">Still have questions? Start with a free, no-obligation consultation.</p>
-        <a href="https://favze.com/contact" class="btn-primary" style="display:inline-flex;align-items:center;gap:9px;">Book Free Consultation <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="https://favze.com/free-consultation" class="btn-primary" style="display:inline-flex;align-items:center;gap:9px;">Book Free Consultation <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
     </div>
   </div>
@@ -1965,18 +2137,18 @@ footer { background: var(--dark); padding: 56px 5% 0; border-top: 1px solid var(
     <h2 class="ttl ttl-dark" id="other-heading">Pair Email Marketing With the Right Channels</h2>
     <p class="sub sub-dark" style="margin-top:14px;">Email marketing drives the highest ROI per dollar spent. Pair it with SMS, paid search, and SEO to dominate every channel your Northern Indiana customers use.</p>
     <div class="other-grid">
-      <a href="https://favze.com/short-message-service-sms" class="other-card"><div class="other-card-tag">SMS</div><div class="other-card-name">SMS Marketing</div><div class="other-card-desc">Pair email with direct text campaigns</div><div class="other-card-arrow">→</div></a>
-      <a href="https://favze.com/paid-search-ads-sem" class="other-card"><div class="other-card-tag">Paid Search</div><div class="other-card-name">Paid Search Ads</div><div class="other-card-desc">Capture customers the moment they search</div><div class="other-card-arrow">→</div></a>
-      <a href="https://favze.com/search-engine-optimization" class="other-card"><div class="other-card-tag">SEO</div><div class="other-card-name">SEO</div><div class="other-card-desc">Rank higher in Google organically</div><div class="other-card-arrow">→</div></a>
-      <a href="https://favze.com/local-seo" class="other-card"><div class="other-card-tag">Local SEO</div><div class="other-card-name">Local SEO</div><div class="other-card-desc">Get found by customers near you</div><div class="other-card-arrow">→</div></a>
-      <a href="https://favze.com/ai-optimization" class="other-card"><div class="other-card-tag">AI</div><div class="other-card-name">AI Optimization</div><div class="other-card-desc">Show up in ChatGPT & AI search</div><div class="other-card-arrow">→</div></a>
-      <a href="https://favze.com/answer-engine-optimization" class="other-card"><div class="other-card-tag">AEO</div><div class="other-card-name">Answer Engine Optimization</div><div class="other-card-desc">Get cited in AI-generated answers</div><div class="other-card-arrow">→</div></a>
-      <a href="https://favze.com/social-media-marketing" class="other-card"><div class="other-card-tag">SMM</div><div class="other-card-name">Social Media Marketing</div><div class="other-card-desc">Facebook, Instagram, TikTok & more</div><div class="other-card-arrow">→</div></a>
-      <a href="https://favze.com/paid-social-media-ads" class="other-card"><div class="other-card-tag">Paid Social</div><div class="other-card-name">Paid Social Ads</div><div class="other-card-desc">Targeted ads across social platforms</div><div class="other-card-arrow">→</div></a>
-      <a href="https://favze.com/hubspot-setup" class="other-card"><div class="other-card-tag">CRM</div><div class="other-card-name">HubSpot Setup</div><div class="other-card-desc">CRM, automation & email integration</div><div class="other-card-arrow">→</div></a>
-      <a href="https://favze.com/website-design" class="other-card"><div class="other-card-tag">Web</div><div class="other-card-name">Website Design</div><div class="other-card-desc">The foundation that converts your traffic</div><div class="other-card-arrow">→</div></a>
-      <a href="https://favze.com/generative-engine-optimization" class="other-card"><div class="other-card-tag">GEO</div><div class="other-card-name">Generative Engine Optimization</div><div class="other-card-desc">Appear in AI chatbots & assistants</div><div class="other-card-arrow">→</div></a>
-      <a href="https://favze.com/services" class="other-card" style="background:#f4f2ec;"><div class="other-card-tag">All</div><div class="other-card-name">View All Services</div><div class="other-card-desc">Full digital marketing suite</div><div class="other-card-arrow">→</div></a>
+      <a href="https://favze.com/services/short-message-service-sms" class="other-card"><div class="other-card-tag">SMS</div><div class="other-card-name">SMS Marketing</div><div class="other-card-desc">Pair email with direct text campaigns</div><div class="other-card-arrow">→</div></a>
+      <a href="https://favze.com/services/paid-search-ads" class="other-card"><div class="other-card-tag">Paid Search</div><div class="other-card-name">Paid Search Ads</div><div class="other-card-desc">Capture customers the moment they search</div><div class="other-card-arrow">→</div></a>
+      <a href="https://favze.com/services/search-engine-optimization" class="other-card"><div class="other-card-tag">SEO</div><div class="other-card-name">SEO</div><div class="other-card-desc">Rank higher in Google organically</div><div class="other-card-arrow">→</div></a>
+      <a href="https://favze.com/services/local-seo" class="other-card"><div class="other-card-tag">Local SEO</div><div class="other-card-name">Local SEO</div><div class="other-card-desc">Get found by customers near you</div><div class="other-card-arrow">→</div></a>
+      <a href="https://favze.com/services/ai-optimization" class="other-card"><div class="other-card-tag">AI</div><div class="other-card-name">AI Optimization</div><div class="other-card-desc">Show up in ChatGPT & AI search</div><div class="other-card-arrow">→</div></a>
+      <a href="https://favze.com/services/answer-engine-optimization" class="other-card"><div class="other-card-tag">AEO</div><div class="other-card-name">Answer Engine Optimization</div><div class="other-card-desc">Get cited in AI-generated answers</div><div class="other-card-arrow">→</div></a>
+      <a href="https://favze.com/services/social-media-marketing" class="other-card"><div class="other-card-tag">SMM</div><div class="other-card-name">Social Media Marketing</div><div class="other-card-desc">Facebook, Instagram, TikTok & more</div><div class="other-card-arrow">→</div></a>
+      <a href="https://favze.com/services/paid-social-media-ads" class="other-card"><div class="other-card-tag">Paid Social</div><div class="other-card-name">Paid Social Ads</div><div class="other-card-desc">Targeted ads across social platforms</div><div class="other-card-arrow">→</div></a>
+      <a href="https://favze.com/services/hubspot-setup" class="other-card"><div class="other-card-tag">CRM</div><div class="other-card-name">HubSpot Setup</div><div class="other-card-desc">CRM, automation & email integration</div><div class="other-card-arrow">→</div></a>
+      <a href="https://favze.com/services/website-design" class="other-card"><div class="other-card-tag">Web</div><div class="other-card-name">Website Design</div><div class="other-card-desc">The foundation that converts your traffic</div><div class="other-card-arrow">→</div></a>
+      <a href="https://favze.com/services/generative-engine-optimization" class="other-card"><div class="other-card-tag">GEO</div><div class="other-card-name">Generative Engine Optimization</div><div class="other-card-desc">Appear in AI chatbots & assistants</div><div class="other-card-arrow">→</div></a>
+      <a href="https://favze.com/services/" class="other-card" style="background:#f4f2ec;"><div class="other-card-tag">All</div><div class="other-card-name">View All Services</div><div class="other-card-desc">Full digital marketing suite</div><div class="other-card-arrow">→</div></a>
     </div>
   </div>
 </section>
@@ -1988,109 +2160,174 @@ footer { background: var(--dark); padding: 56px 5% 0; border-top: 1px solid var(
   <div class="ft-inner">
     <div class="ft-top">
       <div>
-        <div style="display:inline-flex;align-items:center;background:#fff;border-radius:8px;padding:5px 12px">
-          <img src="https://favze.com/hubfs/favze-logo-black-header.svg" alt="Favze Digital Marketing" style="height:26px;width:auto;" onerror="this.style.display='none'">
+        <a href="https://favze.com/"><div style="display:inline-flex;align-items:center;background:#fff;border-radius:8px;padding:5px 12px"><span style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.35rem;color:#064187;letter-spacing:.04em;">FAVZE</span></div></a>
+        <p class="fb-desc"><a href="https://favze.com/services/email-marketing" style="color:inherit;">Favze Digital Marketing</a> is <a href="https://favze.com/areas-served/northern-indiana" style="color:inherit;">Northern Indiana</a> and <a href="https://favze.com/areas-served/michiana" style="color:inherit;">Michiana's</a> affordable, full-service local digital marketing agency. Founded by <a href="https://favze.com/about" style="color:inherit;">Riley Catalano</a>. Based in Middlebury, <a href="https://favze.com/areas-served/elkhart-county" style="color:inherit;">Elkhart County</a>, Indiana.</p>
+        <div class="ft-social">
+          <a href="https://www.facebook.com/profile.php?id=61581511343836" aria-label="Facebook" target="_blank" rel="noopener noreferrer nofollow"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.514c-1.491 0-1.956.93-1.956 1.884v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg></a>
+          <a href="https://www.instagram.com/favzemarketing/" aria-label="Instagram" target="_blank" rel="noopener noreferrer nofollow"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+          <a href="https://www.linkedin.com/company/favze-digital-marketing/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer nofollow"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <a href="https://x.com/favzemarketing" aria-label="X (Twitter)" target="_blank" rel="noopener noreferrer nofollow"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          <a href="https://www.youtube.com/@Favze" aria-label="YouTube" target="_blank" rel="noopener noreferrer nofollow"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+          <a href="https://www.threads.com/@favzemarketing" aria-label="Threads" target="_blank" rel="noopener noreferrer nofollow"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16.3 11.3c-.1 0-.2-.1-.2-.1-.1-2.6-1.5-4-3.9-4-1.4 0-2.6.6-3.3 1.7l1.3.9c.5-.8 1.4-1 2-1 .8 0 1.4.2 1.7.7.3.3.5.8.5 1.3-.7-.1-1.4-.2-2.2-.1-2.2.1-3.7 1.4-3.6 3.2 0 .9.5 1.7 1.3 2.2.7.4 1.5.6 2.4.6 1.2-.1 2.1-.5 2.7-1.3.5-.6.8-1.4.9-2.4.6.3 1 .8 1.2 1.3.4.9.4 2.4-.8 3.6-1.1 1.1-2.3 1.5-4.3 1.5-2.1 0-3.8-.7-4.8-2S5.7 14.3 5.7 12c0-2.3.5-4.1 1.5-5.4 1.1-1.3 2.7-2 4.8-2 2.2 0 3.8.7 4.9 2 .5.7.9 1.5 1.2 2.5l1.5-.4c-.3-1.2-.8-2.2-1.5-3.1-1.3-1.7-3.3-2.6-6-2.6-2.6 0-4.7.9-6 2.6C4.9 7.2 4.3 9.3 4.3 12s.6 4.8 1.9 6.4c1.4 1.7 3.4 2.6 6 2.6 2.3 0 4-.6 5.3-2 1.8-1.8 1.7-4 1.1-5.4-.4-.9-1.2-1.7-2.3-2.3zm-4 3.8c-1 .1-2-.4-2-1.3 0-.7.5-1.5 2.1-1.6h.5c.6 0 1.1.1 1.6.2-.2 2.3-1.3 2.7-2.2 2.7z"/></svg></a>
+          <a href="https://www.pinterest.com/favzemarketing/" aria-label="Pinterest" target="_blank" rel="noopener noreferrer nofollow"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg></a>
+          <a href="https://www.google.com/maps/place/Favze+Digital+Marketing/@41.5724463,-87.3245301,8z/data=!3m1!4b1!4m6!3m5!1s0x8fd1e3cba3bc4677:0x44492c880fb69085!8m2!3d41.579986!4d-86.005348!16s%2Fg%2F11yv5nhx0f" aria-label="Google Business Profile" target="_blank" rel="noopener noreferrer nofollow"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21.805 10.023H12v3.954h5.617c-.242 1.322-.99 2.443-2.12 3.198v2.652h3.425c2.005-1.842 3.162-4.553 3.162-7.757 0-.772-.074-1.517-.279-2.047zM12 22c2.655 0 4.883-.879 6.511-2.38l-3.425-2.652c-.878.591-2.01.94-3.086.94-2.372 0-4.385-1.601-5.104-3.752H3.37v2.741C4.987 19.81 8.245 22 12 22zM6.896 14.156A5.865 5.865 0 016.5 12c0-.748.137-1.47.396-2.156V7.103H3.37A9.988 9.988 0 002 12c0 1.614.392 3.14 1.37 4.897l3.526-2.741zM12 6.092c1.338 0 2.535.46 3.479 1.36l2.607-2.607C16.476 3.337 14.393 2.5 12 2.5 8.245 2.5 4.987 4.69 3.37 7.897l3.526 2.747C7.615 7.693 9.628 6.092 12 6.092z"/></svg></a>
+          <a href="https://nextdoor.com/page/favze-digital-marketing/" aria-label="Nextdoor" target="_blank" rel="noopener noreferrer nofollow"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6 2h3v3.5L12 3l10 9h-2v9H4v-9H2l4-3.6V2zm1.5 1.5v3.8L12 4.8l-4.5 3.5zM14 21v-5h-4v5H5.5v-7.5h13V21H14z"/></svg></a>
         </div>
-        <p class="fb-desc">Favze Digital Marketing is Northern Indiana and Michiana's affordable, full-service local digital marketing agency. Founded by Riley Catalano. Based in Middlebury, Elkhart County, Indiana.</p>
       </div>
       <div class="fc">
         <h4>Services</h4>
         <ul>
-          <li><a href="https://favze.com/email-marketing">Email Marketing</a></li>
-          <li><a href="https://favze.com/short-message-service-sms">SMS Marketing</a></li>
-          <li><a href="https://favze.com/paid-search-ads-sem">Paid Search Ads</a></li>
-          <li><a href="https://favze.com/website-design">Website Design</a></li>
-          <li><a href="https://favze.com/search-engine-optimization">SEO</a></li>
-          <li><a href="https://favze.com/local-seo">Local SEO</a></li>
-          <li><a href="https://favze.com/ai-optimization">AI Optimization</a></li>
-          <li><a href="https://favze.com/social-media-marketing">Social Media</a></li>
-          <li><a href="https://favze.com/hubspot-setup">HubSpot</a></li>
-          <li><a href="https://favze.com/services">View All →</a></li>
+          <li><a href="https://favze.com/services/social-media-marketing">Social Media Marketing</a></li>
+          <li><a href="https://favze.com/services/search-engine-optimization">SEO</a></li>
+          <li><a href="https://favze.com/services/answer-engine-optimization">AEO</a></li>
+          <li><a href="https://favze.com/services/generative-engine-optimization">GEO</a></li>
+          <li><a href="https://favze.com/services/ai-optimization">AI Optimization</a></li>
+          <li><a href="https://favze.com/services/local-seo">Local SEO</a></li>
+          <li><a href="https://favze.com/services/email-marketing" style="font-weight:700;color:var(--teal);">Email Marketing</a></li>
+          <li><a href="https://favze.com/services/paid-search-ads">Paid Search Ads</a></li>
+          <li><a href="https://favze.com/services/paid-social-media-ads">Paid Social Ads</a></li>
+          <li><a href="https://favze.com/services/website-design">Website Design</a></li>
+          <li><a href="https://favze.com/services/hubspot-setup">HubSpot Setup</a></li>
+          <li><a href="https://favze.com/services/short-message-service-sms">SMS Marketing</a></li>
+        </ul>
+      </div>
+      <div class="fc">
+        <h4>Articles</h4>
+        <ul>
+          <li><a href="https://favze.com/articles/content-marketing/">Content Marketing</a></li>
+          <li><a href="https://favze.com/articles/social-media-strategy/">Social Media Strategy</a></li>
+          <li><a href="https://favze.com/articles/search-visibility/">Search Visibility</a></li>
+          <li><a href="https://favze.com/articles/brand-positioning/">Brand Positioning</a></li>
+          <li><a href="https://favze.com/articles/">All Articles</a></li>
         </ul>
       </div>
       <div class="fc">
         <h4>Explore</h4>
         <ul>
-          <li><a href="https://favze.com/why-choose-us">Why Choose Favze</a></li>
+          <li><a href="https://favze.com/">Home</a></li>
+          <li><a href="https://favze.com/why-us">Why Choose Favze</a></li>
           <li><a href="https://favze.com/about">About</a></li>
-          <li><a href="https://favze.com/digital-marketing-faq">FAQ</a></li>
-          <li><a href="https://favze.com/favze-insights">Articles</a></li>
-          <li><a href="https://favze.com/areas-served">Areas Served</a></li>
+          <li><a href="https://favze.com/our-process">Our Process</a></li>
+          <li><a href="https://favze.com/services/">All Services</a></li>
+          <li><a href="https://favze.com/faq">FAQ</a></li>
+          <li><a href="https://favze.com/areas-served/">Areas Served</a></li>
+          <li><a href="https://favze.com/free-consultation">Free Consultation</a></li>
         </ul>
         <div style="margin-top:22px">
           <h4>Contact</h4>
           <div class="fcon">
             <a href="mailto:riley@favze.com"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="1" y="2" width="11" height="9" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M1 4.5l5.5 3.5L12 4.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>riley@favze.com</a>
             <a href="tel:+15747475012"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 1.5s1-.5 2 1l1 1.5s.5 1-.5 1.9L4 6.4s-.4.4 0 1.3S5.6 9.8 7.5 10.8c1 .5 1 0 1 0l.5-.5c.9-.9 1.9-.5 1.9-.5L12.4 11c1.4 1 1 1.9 1 1.9-.5.9-2.4 1.4-3.8.5" stroke="currentColor" stroke-width="1.2"/></svg>574-747-5012</a>
-            <a href="https://favze.com/contact"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="1" y="1" width="11" height="11" rx="2" stroke="currentColor" stroke-width="1.2"/><path d="M3.5 5h6M3.5 7.5h4" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>Free Consultation</a>
+            <a href="https://favze.com/free-consultation"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="1" y="1" width="11" height="11" rx="2" stroke="currentColor" stroke-width="1.2"/><path d="M3.5 5h6M3.5 7.5h4" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>Free Consultation</a>
           </div>
         </div>
       </div>
     </div>
-    <div class="ft-serving-strip">
-      <div class="ft-serving-inner">
-        <div class="ft-serving-left">
-          <span class="ft-serving-label">SERVING</span>
-          <div class="ft-serving-locations">
-            <a href="https://favze.com/northern-indiana-michiana-marketing-agency">Northern Indiana</a>
-            <span class="ft-serving-dot"></span>
-            <a href="https://favze.com/michiana-marketing-agency">Michiana</a>
-            <span class="ft-serving-dot"></span>
-            <a href="https://favze.com/elkhart-county-marketing-agency">Elkhart County</a>
-            <span class="ft-serving-dot"></span>
-            <a href="https://favze.com/goshen-marketing-agency">Goshen</a>
-            <span class="ft-serving-dot"></span>
-            <a href="https://favze.com/south-bend-marketing-agency">South Bend</a>
-            <span class="ft-serving-dot"></span>
-            <span class="ft-serving-muted">and Surrounding Areas</span>
-          </div>
+    <!-- Serving scroll strip -->
+    <div class="ft-scroll-strip">
+      <div class="ft-scroll-label">SERVING</div>
+      <div class="ft-scroll-track-wrap">
+        <div class="ft-scroll-track">
+          <a href="https://favze.com/areas-served/elkhart-county">Elkhart</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/elkhart-county">Goshen</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/elkhart-county">Middlebury</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/elkhart-county">Nappanee</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/st-joseph-county">South Bend</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/st-joseph-county">Mishawaka</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/st-joseph-county">Granger</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/lagrange-county">Shipshewana</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/marshall-county">Plymouth</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/kosciusko-county">Warsaw</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/laporte-county">La Porte</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/laporte-county">Michigan City</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/allen-county">Fort Wayne</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/noble-county">Kendallville</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/steuben-county">Angola</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/dekalb-county">Auburn</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/whitley-county">Columbia City</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/lake-county">Hammond</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/porter-county">Valparaiso</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/berrien-county">Niles</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/berrien-county">Benton Harbor</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/howard-county">Kokomo</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/cass-county-michigan">Cassopolis</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/northern-indiana">Northern Indiana</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/michiana">Michiana</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/elkhart-county">Elkhart</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/elkhart-county">Goshen</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/elkhart-county">Middlebury</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/elkhart-county">Nappanee</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/st-joseph-county">South Bend</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/st-joseph-county">Mishawaka</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/st-joseph-county">Granger</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/lagrange-county">Shipshewana</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/marshall-county">Plymouth</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/kosciusko-county">Warsaw</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/laporte-county">La Porte</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/laporte-county">Michigan City</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/allen-county">Fort Wayne</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/noble-county">Kendallville</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/steuben-county">Angola</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/dekalb-county">Auburn</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/whitley-county">Columbia City</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/lake-county">Hammond</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/porter-county">Valparaiso</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/berrien-county">Niles</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/berrien-county">Benton Harbor</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/howard-county">Kokomo</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/cass-county-michigan">Cassopolis</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/northern-indiana">Northern Indiana</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/michiana">Michiana</a><span class="ft-scroll-dot">·</span>
         </div>
-        <div class="ft-serving-right">
-          <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 0.5C3.07 0.5 1.5 2.07 1.5 4c0 2.52 3.5 5.5 3.5 5.5s3.5-2.98 3.5-5.5C8.5 2.07 6.93 0.5 5 0.5z" fill="rgba(10,137,163,.6)" stroke="#0A89A3" stroke-width="0.9"/><circle cx="5" cy="4" r="1.1" fill="#0A89A3"/></svg>
-          <span>BASED IN MIDDLEBURY, ELKHART COUNTY, INDIANA</span>
-        </div>
+      </div>
+      <div class="ft-scroll-right">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 0.5C3.07 0.5 1.5 2.07 1.5 4c0 2.52 3.5 5.5 3.5 5.5s3.5-2.98 3.5-5.5C8.5 2.07 6.93 0.5 5 0.5z" fill="rgba(10,137,163,.6)" stroke="#0A89A3" stroke-width="0.9"/><circle cx="5" cy="4" r="1.1" fill="#0A89A3"/></svg>
+        <span>MIDDLEBURY, IN</span>
+      </div>
+    </div>
+    <!-- Trust bar -->
+    <div class="ft-trust-bar">
+      <div class="ft-trust-inner">
+        <div class="ft-trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z" stroke="var(--teal)" stroke-width="1.8" stroke-linejoin="round"/></svg><a href="https://www.linkedin.com/in/rileycatalano/details/certifications/" target="_blank" rel="noopener noreferrer nofollow" style="color:rgba(255,255,255,.45);">100+ Industry Certifications</a></div>
+        <div class="ft-trust-sep"></div>
+        <div class="ft-trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="var(--teal)" stroke-width="1.8"/><circle cx="12" cy="9" r="2.5" stroke="var(--teal)" stroke-width="1.6"/></svg><a href="https://favze.com/about" style="color:rgba(255,255,255,.45);">Locally Owned &amp; Operated</a></div>
+        <div class="ft-trust-sep"></div>
+        <div class="ft-trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="var(--teal)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="var(--teal)" stroke-width="1.8"/></svg><span>No Long-Term Contracts</span></div>
+        <div class="ft-trust-sep"></div>
+        <div class="ft-trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="var(--teal)" stroke-width="1.8"/><path d="M8 12h8M12 8v8" stroke="var(--teal)" stroke-width="2" stroke-linecap="round"/></svg><a href="https://favze.com/free-consultation" style="color:rgba(255,255,255,.45);">Free Consultation Available</a></div>
       </div>
     </div>
     <div class="fb-bot">
       <p>&copy; 2026 Favze Digital Marketing. All rights reserved.</p>
-      <div style="display:flex;gap:18px;flex-wrap:wrap"><a href="https://favze.com/privacy-policy">Privacy Policy</a></div>
+      <div style="display:flex;gap:18px;flex-wrap:wrap"><a href="https://favze.com/privacy-policy">Privacy Policy</a><a href="https://favze.com/terms-of-use">Terms of Use</a></div>
     </div>
   </div>
 </footer>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  // Mobile nav
+  // ── Dropdown nav ──
+  var drops = [
+    { trig: document.getElementById('trigServices'), pan: document.getElementById('panServices') },
+    { trig: document.getElementById('trigArticles'), pan: document.getElementById('panArticles') }
+  ];
+  function openPanel(trig, pan) { pan.classList.add('open'); trig.setAttribute('aria-expanded','true'); }
+  function closePanel(trig, pan) { pan.classList.remove('open'); trig.setAttribute('aria-expanded','false'); }
+  drops.forEach(function(d) {
+    if (!d.trig || !d.pan) return;
+    d.trig.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var isOpen = d.pan.classList.contains('open');
+      drops.forEach(function(x) { closePanel(x.trig, x.pan); });
+      if (!isOpen) openPanel(d.trig, d.pan);
+    });
+    d.pan.addEventListener('click', function(e) {
+      // Only stop propagation if not clicking a link — links must navigate freely
+      if (e.target.tagName !== 'A' && !e.target.closest('a')) {
+        e.stopPropagation();
+      }
+    });
+  });
+  document.addEventListener('click', function() { drops.forEach(function(d) { closePanel(d.trig, d.pan); }); });
+  document.addEventListener('keydown', function(e) { if (e.key==='Escape') drops.forEach(function(d) { closePanel(d.trig, d.pan); }); });
+
+  // ── Mobile menu ──
   var hb = document.getElementById('hb');
   var mm = document.getElementById('mm');
   if (hb && mm) {
     hb.addEventListener('click', function() {
-      var nowOpen = !mm.classList.contains('open');
-      mm.classList.toggle('open', nowOpen);
-      hb.classList.toggle('open', nowOpen);
+      var open = mm.classList.toggle('open');
+      hb.classList.toggle('open', open);
+      hb.setAttribute('aria-expanded', open);
+      mm.setAttribute('aria-hidden', !open);
     });
     mm.querySelectorAll('a').forEach(function(a) {
       a.addEventListener('click', function() {
-        mm.classList.remove('open');
-        hb.classList.remove('open');
+        mm.classList.remove('open'); hb.classList.remove('open');
+        hb.setAttribute('aria-expanded','false'); mm.setAttribute('aria-hidden','true');
       });
     });
   }
 
-  // Scroll active service pill into view
+  // ── Mobile sub-accordions ──
+  function bindAccordion(trigId, subId) {
+    var trig = document.getElementById(trigId);
+    var sub  = document.getElementById(subId);
+    if (!trig || !sub) return;
+    trig.addEventListener('click', function() {
+      var open = sub.classList.toggle('open');
+      trig.classList.toggle('open', open);
+      trig.setAttribute('aria-expanded', open);
+    });
+  }
+  bindAccordion('mmServTrig','mmServSub');
+  bindAccordion('mmArtTrig','mmArtSub');
+
+  // ── Scroll active service pill into view ──
   var activePill = document.querySelector('.svc-pill.active');
   if (activePill) {
     setTimeout(function() {
-      activePill.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      activePill.scrollIntoView({ behavior:'smooth', block:'nearest', inline:'center' });
     }, 300);
   }
 
-  // FAQ accordion
+  // ── FAQ accordion ──
   var fqItems = document.querySelectorAll('.fq-item');
   fqItems.forEach(function(item) {
     var btn = item.querySelector('.fqb');
     var ans = item.querySelector('.fq-ans');
-    var ic = item.querySelector('.fq-ic');
+    var ic  = item.querySelector('.fq-ic');
     if (!btn || !ans) return;
     btn.addEventListener('click', function() {
       var open = ans.style.display !== 'none';
@@ -2099,13 +2336,13 @@ document.addEventListener('DOMContentLoaded', function() {
         var b = i.querySelector('.fqb');
         var ic2 = i.querySelector('.fq-ic');
         if (a) a.style.display = 'none';
-        if (b) b.setAttribute('aria-expanded', 'false');
-        if (ic2) { ic2.style.background = '#e2e2e2'; ic2.style.transform = 'rotate(0deg)'; }
+        if (b) b.setAttribute('aria-expanded','false');
+        if (ic2) { ic2.style.background='#e2e2e2'; ic2.style.transform='rotate(0deg)'; }
       });
       if (!open) {
         ans.style.display = 'block';
-        btn.setAttribute('aria-expanded', 'true');
-        if (ic) { ic.style.background = '#064187'; ic.style.transform = 'rotate(45deg)'; }
+        btn.setAttribute('aria-expanded','true');
+        if (ic) { ic.style.background='#064187'; ic.style.transform='rotate(45deg)'; }
       }
     });
   });
