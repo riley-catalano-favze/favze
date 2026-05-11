@@ -6,6 +6,7 @@
 <title>Social Media Strategy for Local Businesses | Favze Insights</title>
 <meta name="description" content="The master resource for local business social media strategy. Platform selection, content systems, community building, paid social, and how to turn followers into customers in your local market.">
 <link rel="canonical" href="https://favze.com/articles/social-media-strategy">
+<link rel="icon" type="image/svg+xml" href="https://favze.com/hubfs/favze-logo-mark-only-black-300x300.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -17,27 +18,55 @@
 </script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--navy:#064187;--teal:#0A89A3;--gold:#0A89A3;--dark:#0a0a0a;--font-display:'Barlow Condensed',sans-serif;--font-body:'DM Sans',sans-serif;--radius-card:16px;--inner-max:1200px}
+:root{--navy:#064187;--teal:#0A89A3;--dark:#0a0a0a;--font-display:'Barlow Condensed',sans-serif;--font-body:'DM Sans',sans-serif;--radius-card:16px;--inner-max:1200px}
 html{scroll-behavior:smooth;overflow-x:clip}
 body{font-family:var(--font-body);background:#fff;color:var(--dark);line-height:1.6;-webkit-text-size-adjust:100%}
 a{color:inherit;text-decoration:none}
-nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1.5px solid #e8e8e8;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:68px}
-.nav-logo{font-family:var(--font-display);font-weight:900;font-size:1.5rem;color:var(--navy);letter-spacing:.04em}
-.nl{display:flex;align-items:center;gap:4px;list-style:none}
-.nl a{font-weight:500;font-size:.875rem;padding:7px 12px;border-radius:8px;color:#0a0a0a;transition:background .2s}
-.nl a:hover{background:#f0f0f0}
-.nl a.active{color:var(--navy);font-weight:700}
-.nc{background:var(--navy)!important;color:#fff!important;padding:9px 18px!important;border-radius:9px!important;font-weight:700!important}
-.nc:hover{background:var(--teal)!important}
+nav{position:sticky;top:0;z-index:200;background:#fff;border-bottom:1.5px solid #e8e8e8;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:68px;min-width:0}
+.nav-logo-img{height:30px;width:auto;object-fit:contain}
+.nl{display:flex;align-items:center;gap:2px;list-style:none}
+.nl>li{position:relative}
+.nl>li>a.nl-link{font-weight:500;font-size:.875rem;padding:8px 12px;border-radius:8px;color:#0a0a0a;display:inline-flex;align-items:center;gap:3px;transition:background .15s;white-space:nowrap}
+.nl>li>a.nl-link:hover{background:#f0f0f0}
+.nl>li>a.nl-link.active{color:var(--navy);font-weight:700}
+.drop-trigger{font-family:var(--font-body);font-weight:500;font-size:.875rem;padding:8px 12px;border-radius:8px;color:#0a0a0a;background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:4px;transition:background .15s;white-space:nowrap}
+.drop-trigger:hover{background:#f0f0f0}
+.drop-trigger[aria-expanded="true"]{background:#f0f0f0}
+.drop-trigger[aria-expanded="true"] svg{transform:rotate(180deg)}
+.drop-trigger svg{transition:transform .2s;flex-shrink:0}
+.nl-cta{font-family:var(--font-body);font-weight:700;font-size:.875rem;padding:9px 18px;border-radius:9px;background:var(--navy);color:#fff!important;display:inline-flex;align-items:center;transition:background .15s;white-space:nowrap}
+.nl-cta:hover{background:var(--teal)}
+.drop-panel{position:absolute;top:calc(100% + 6px);left:0;background:#fff;border:1.5px solid #e8e8e8;border-radius:14px;box-shadow:0 16px 48px rgba(0,0,0,.13);padding:16px;z-index:300;min-width:320px;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(-6px);transition:opacity .15s ease,transform .15s ease;transition-property:opacity,transform}
+.drop-panel.open{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.drop-panel.open a{pointer-events:auto;cursor:pointer}
+.drop-panel.center{left:50%;transform:translateX(-50%) translateY(-6px)}
+.drop-panel.center.open{transform:translateX(-50%) translateY(0)}
+.drop-label{font-size:.65rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#aaa;padding:0 8px 8px;border-bottom:1px solid #f0f0f0;margin-bottom:6px}
+.drop-panel a{display:block;font-size:.83rem;font-weight:500;color:#333;padding:7px 10px;border-radius:8px;transition:background .12s,color .12s}
+.drop-panel a:hover{background:rgba(6,65,135,.07);color:var(--navy)}
+.drop-abbr{font-size:.65rem;font-weight:700;color:#aaa;margin-left:4px}
+.drop-divider{height:1px;background:#f0f0f0;margin:8px 0}
+.drop-view-all{font-weight:700!important;color:var(--navy)!important;margin-top:4px}
 .hb{display:none;flex-direction:column;gap:5px;cursor:pointer;border:none;background:none;padding:6px}
 .hb span{display:block;width:24px;height:2px;background:#0a0a0a;border-radius:2px;transition:.25s}
 .hb.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .hb.open span:nth-child(2){opacity:0}
 .hb.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-.mm{display:none;position:fixed;top:68px;left:0;right:0;background:#fff;border-bottom:1.5px solid #e8e8e8;padding:18px 5% 22px;z-index:99;flex-direction:column;gap:2px;box-shadow:0 16px 48px rgba(0,0,0,.12)}
+.mm{display:none;position:fixed;top:68px;left:0;right:0;background:#fff;border-bottom:1.5px solid #e8e8e8;padding:16px 5% 20px;z-index:190;flex-direction:column;gap:2px;box-shadow:0 16px 48px rgba(0,0,0,.12);max-height:calc(100vh - 68px);overflow-y:auto}
 .mm.open{display:flex}
-.mm a{font-weight:500;font-size:1rem;padding:12px 14px;border-radius:8px;display:block;color:#0a0a0a}
-.mc{background:var(--navy)!important;color:#fff!important;text-align:center;margin-top:8px;font-weight:700!important}
+.mm-link{font-weight:500;font-size:1rem;padding:12px 14px;border-radius:8px;display:block;color:#0a0a0a}
+.mm-link:hover{background:#f5f5f5}
+.mm-link.active{color:var(--navy);font-weight:700}
+.mm-toggle{width:100%;text-align:left;background:none;border:none;font-family:var(--font-body);font-size:1rem;font-weight:500;color:#0a0a0a;padding:12px 14px;border-radius:8px;cursor:pointer;display:flex;align-items:center;justify-content:space-between}
+.mm-toggle:hover{background:#f5f5f5}
+.mm-toggle svg{transition:transform .2s;flex-shrink:0}
+.mm-toggle.open svg{transform:rotate(180deg)}
+.mm-sub{display:none;flex-direction:column;gap:1px;padding:0 8px 8px 20px}
+.mm-sub.open{display:flex}
+.mm-sub a{font-size:.88rem;font-weight:500;color:#444;padding:8px 10px;border-radius:7px;display:block}
+.mm-sub a:hover{background:rgba(6,65,135,.07);color:var(--navy)}
+.mm-cta{background:var(--navy)!important;color:#fff!important;text-align:center;margin-top:8px;font-weight:700!important;border-radius:9px}
+.mm-cta:hover{background:var(--teal)!important}
 .progress-bar{position:fixed;top:68px;left:0;right:0;height:3px;background:rgba(0,0,0,.06);z-index:99}
 .progress-fill{height:100%;background:linear-gradient(90deg,var(--teal),var(--navy));width:0%;transition:width .1s linear}
 .pillar-hero{background:var(--dark);padding:72px 5% 64px;position:relative;overflow:hidden}
@@ -64,15 +93,15 @@ nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1.5px solid 
 .pillar-body strong{font-weight:700;color:var(--dark)}
 .pillar-body ul,.pillar-body ol{margin-bottom:20px;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:8px}
 .pillar-body ul li,.pillar-body ol li{font-size:.94rem;color:#333;line-height:1.78;padding-left:20px;position:relative}
-.pillar-body ul li::before{content:'';position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:#e8b84b}
+.pillar-body ul li::before{content:'';position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:var(--teal)}
 .pillar-body ol{counter-reset:ol-counter}
 .pillar-body ol li{counter-increment:ol-counter}
 .pillar-body ol li::before{content:counter(ol-counter);position:absolute;left:0;top:0;font-family:var(--font-display);font-weight:900;font-size:.82rem;color:var(--navy);line-height:1.78}
 .callout{border-left:3px solid var(--navy);background:rgba(6,65,135,.04);border-radius:0 10px 10px 0;padding:18px 20px;margin:28px 0}
-.callout-gold{border-left-color:#0A89A3;background:rgba(10,137,163,.04)}
+.callout-teal{border-left-color:var(--teal);background:rgba(10,137,163,.04)}
 .callout p{margin-bottom:0;font-size:.92rem}
 .callout strong{color:var(--navy)}
-.callout-gold strong{color:#0A89A3}
+.callout-teal strong{color:var(--teal)}
 .insight-box{background:var(--dark);border-radius:var(--radius-card);padding:24px 22px;margin:28px 0;position:relative;overflow:hidden}
 .insight-box::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(10,137,163,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(10,137,163,.06) 1px,transparent 1px);background-size:28px 28px;pointer-events:none}
 .insight-box-label{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#0A89A3;margin-bottom:8px;display:block;position:relative}
@@ -80,14 +109,8 @@ nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1.5px solid 
 .stat-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:28px 0}
 .stat-box{background:#fafafa;border:1.5px solid #efefef;border-radius:12px;padding:18px 16px}
 .stat-box-num{font-family:var(--font-display);font-weight:900;font-size:1.8rem;color:var(--navy);line-height:1;margin-bottom:5px}
-.stat-box-num.gold{color:#0A89A3}
 .stat-box-num.teal{color:var(--teal)}
 .stat-box-label{font-size:.76rem;color:#666;line-height:1.4}
-.brand-pillars{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:24px 0}
-.brand-pillar-card{background:#fafafa;border:1.5px solid #efefef;border-radius:12px;padding:20px 18px;position:relative;overflow:hidden}
-.brand-pillar-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--navy),#e8b84b)}
-.brand-pillar-name{font-family:var(--font-display);font-weight:900;font-size:1.05rem;text-transform:uppercase;letter-spacing:.04em;color:var(--dark);margin-bottom:8px}
-.brand-pillar-desc{font-size:.8rem;color:#555;line-height:1.65}
 .platform-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:24px 0}
 .platform-card{background:#fafafa;border:1.5px solid #efefef;border-radius:12px;padding:20px 18px;position:relative;overflow:hidden}
 .platform-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
@@ -107,7 +130,6 @@ nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1.5px solid 
 .phase-card{border:1.5px solid #efefef;border-radius:var(--radius-card);overflow:hidden}
 .phase-card-header{padding:14px 20px;display:flex;align-items:center;gap:12px;background:#fafafa;border-bottom:1px solid #efefef}
 .phase-num{width:30px;height:30px;border-radius:8px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:900;font-size:.85rem;flex-shrink:0}
-.phase-num.gold{background:#064187}
 .phase-num.teal{background:var(--teal)}
 .phase-title{font-family:var(--font-display);font-weight:900;font-size:1rem;text-transform:uppercase;letter-spacing:.04em;color:var(--dark)}
 .phase-time{font-size:.72rem;font-weight:600;color:#aaa;margin-left:auto}
@@ -138,7 +160,7 @@ nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1.5px solid 
 .empty-state h4{font-family:var(--font-display);font-size:1.05rem;font-weight:900;text-transform:uppercase;color:#333;letter-spacing:.04em}
 .empty-state p{font-size:.85rem;color:#888;line-height:1.65;max-width:320px}
 .empty-cta{display:inline-flex;align-items:center;gap:6px;margin-top:8px;background:var(--navy);color:#fff;font-size:.8rem;font-weight:700;padding:9px 18px;border-radius:8px;transition:background .2s}
-.empty-cta:hover{background:#064187}
+.empty-cta:hover{background:var(--teal)}
 .coming-more{background:#f9f9f9;border:1.5px solid #efefef;border-radius:var(--radius-card);padding:22px;display:none;align-items:center;gap:14px;margin-top:28px}
 .coming-more-icon{width:40px;height:40px;background:rgba(10,137,163,.08);border:1.5px solid rgba(10,137,163,.2);border-radius:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .coming-more h4{font-family:var(--font-display);font-weight:900;font-size:.9rem;text-transform:uppercase;letter-spacing:.04em;color:var(--dark);margin-bottom:3px}
@@ -152,7 +174,7 @@ nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1.5px solid 
 .sidebar-toc a:hover{background:#f5f5f5;color:#0A89A3}
 .sidebar-toc a.active{color:#0A89A3;font-weight:700;border-left-color:#0A89A3;background:rgba(10,137,163,.05)}
 .pillar-links{display:flex;flex-direction:column;gap:3px}
-.pillar-link{display:flex;align-items:center;gap:10px;padding:9px 11px;border-radius:9px;font-size:.81rem;font-weight:600;color:#444;transition:background .2s;text-decoration:none}
+.pillar-link{display:flex;align-items:center;gap:10px;padding:9px 11px;border-radius:9px;font-size:.81rem;font-weight:600;color:#444;transition:background .2s}
 .pillar-link:hover{background:#f5f5f5;color:var(--navy)}
 .pillar-link.active{background:rgba(10,137,163,.07);color:#0A89A3}
 .pl-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
@@ -163,8 +185,8 @@ nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1.5px solid 
 .sc-lbl{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#0A89A3;margin-bottom:8px;display:block;position:relative}
 .sidebar-cta h3{font-family:var(--font-display);font-weight:900;font-size:1.2rem;text-transform:uppercase;color:#fff;line-height:1.1;margin-bottom:9px;position:relative}
 .sidebar-cta p{font-size:.78rem;color:rgba(255,255,255,.58);line-height:1.65;margin-bottom:14px;position:relative}
-.sidebar-cta a{display:flex;align-items:center;gap:7px;background:#064187;color:#fff;font-size:.76rem;font-weight:700;padding:9px 14px;border-radius:8px;position:relative;transition:opacity .2s}
-.sidebar-cta a:hover{opacity:.88}
+.sc-btn{display:flex;align-items:center;gap:7px;background:var(--teal);color:#fff;font-size:.76rem;font-weight:700;padding:9px 14px;border-radius:8px;position:relative;transition:opacity .2s}
+.sc-btn:hover{opacity:.88}
 .about-mini{display:flex;flex-direction:column;gap:8px}
 .about-mini-name{font-family:var(--font-display);font-weight:900;font-size:1rem;text-transform:uppercase;color:var(--dark);letter-spacing:.04em}
 .about-mini-role{font-size:.76rem;color:#888}
@@ -174,11 +196,11 @@ nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1.5px solid 
 .about-mini-link:hover{background:var(--navy);color:#fff}
 footer{background:var(--dark);padding:56px 5% 0;border-top:1px solid rgba(255,255,255,.07)}
 .ft-inner{max-width:var(--inner-max);margin:0 auto}
-.ft-top{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.09)}
+.ft-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.09)}
 .fb-desc{font-size:.84rem;color:rgba(255,255,255,.42);line-height:1.72;margin-top:14px;max-width:300px}
-.ft-social{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
-.ft-social a{width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.45);transition:background .2s,color .2s}
-.ft-social a:hover{background:var(--navy);color:#fff}
+.ft-social{display:grid;grid-template-columns:repeat(3,34px);gap:8px;margin-top:18px}
+.ft-social a{width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.45);transition:background .2s,color .2s,border-color .2s;flex-shrink:0}
+.ft-social a:hover{background:var(--navy);border-color:var(--navy);color:#fff}
 .fc h4{font-weight:900;font-size:.78rem;color:#fff;margin-bottom:16px;letter-spacing:.09em;text-transform:uppercase}
 .fc ul{list-style:none;display:flex;flex-direction:column;gap:8px}
 .fc ul li a{font-size:.83rem;color:rgba(255,255,255,.42);transition:color .2s}
@@ -186,52 +208,125 @@ footer{background:var(--dark);padding:56px 5% 0;border-top:1px solid rgba(255,25
 .fcon{display:flex;flex-direction:column;gap:9px}
 .fcon a{font-size:.83rem;color:rgba(255,255,255,.42);display:flex;align-items:center;gap:7px;transition:color .2s}
 .fcon a:hover{color:#fff}
-.ft-serving-strip{border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);padding:13px 0}
-.ft-serving-inner{max-width:var(--inner-max);margin:0 auto;padding:0 5%;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
-.ft-serving-label{font-size:.62rem;font-weight:700;letter-spacing:.16em;color:#0A89A3;white-space:nowrap}
-.ft-serving-locations{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-.ft-serving-locations a{font-size:.78rem;color:rgba(255,255,255,.48);white-space:nowrap;transition:color .2s}
-.ft-serving-locations a:hover{color:rgba(255,255,255,.85)}
-.ft-serving-dot{width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,.18);flex-shrink:0;display:inline-block}
-.ft-serving-muted{font-size:.78rem;color:rgba(255,255,255,.28);white-space:nowrap}
-.ft-serving-right{display:flex;align-items:center;gap:7px;white-space:nowrap;flex-shrink:0}
-.ft-serving-right span{font-size:.62rem;font-weight:700;letter-spacing:.1em;color:#0A89A3;text-transform:uppercase}
+.ft-scroll-strip{border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);padding:11px 0;display:flex;align-items:center;overflow:hidden}
+.ft-scroll-label{font-size:.62rem;font-weight:700;letter-spacing:.16em;color:var(--teal);white-space:nowrap;padding:0 20px 0 5%;flex-shrink:0}
+.ft-scroll-track-wrap{flex:1;overflow:hidden;position:relative}
+.ft-scroll-track-wrap::before,.ft-scroll-track-wrap::after{content:'';position:absolute;top:0;bottom:0;width:40px;z-index:2;pointer-events:none}
+.ft-scroll-track-wrap::before{left:0;background:linear-gradient(to right,#0a0a0a,transparent)}
+.ft-scroll-track-wrap::after{right:0;background:linear-gradient(to left,#0a0a0a,transparent)}
+.ft-scroll-track{display:flex;align-items:center;white-space:nowrap;animation:ftScroll 40s linear infinite}
+.ft-scroll-track:hover{animation-play-state:paused}
+.ft-scroll-track a{font-size:.78rem;color:rgba(255,255,255,.45);padding:0 4px;transition:color .2s;flex-shrink:0}
+.ft-scroll-track a:hover{color:rgba(255,255,255,.85)}
+.ft-scroll-dot{font-size:.78rem;color:rgba(255,255,255,.18);padding:0 6px;flex-shrink:0}
+@keyframes ftScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ft-scroll-right{display:flex;align-items:center;gap:6px;white-space:nowrap;flex-shrink:0;padding:0 5% 0 16px;font-size:.62rem;font-weight:700;letter-spacing:.1em;color:var(--teal);text-transform:uppercase}
+.ft-trust-bar{border-bottom:1px solid rgba(255,255,255,.07);padding:12px 5%}
+.ft-trust-inner{max-width:var(--inner-max);margin:0 auto;display:flex;align-items:center;flex-wrap:wrap;justify-content:center}
+.ft-trust-item{display:flex;align-items:center;gap:7px;font-size:.72rem;font-weight:600;color:rgba(255,255,255,.45);padding:4px 20px}
+.ft-trust-sep{width:1px;height:16px;background:rgba(255,255,255,.1);flex-shrink:0}
 .fb-bot{padding:18px 0 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px}
 .fb-bot p{font-size:.78rem;color:rgba(255,255,255,.26)}
 .fb-bot a{color:rgba(255,255,255,.32);font-size:.78rem;transition:color .2s}
 .fb-bot a:hover{color:#fff}
-@media(max-width:1024px){.page-layout{grid-template-columns:1fr}.sidebar{position:static;display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:40px}.sidebar-toc-card{display:none}}
+@media(max-width:1024px){.page-layout{grid-template-columns:1fr}.sidebar{position:static;display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:40px}.sidebar-toc-card{display:none}.ft-top{grid-template-columns:1fr 1fr;gap:28px}}
 @media(max-width:768px){.nl{display:none}.hb{display:flex}.pillar-hero{padding:52px 4.5% 44px}.page-layout{padding:36px 4.5% 60px}.ft-top{grid-template-columns:1fr;gap:28px}.sidebar{grid-template-columns:1fr}.toc-grid{grid-template-columns:1fr}.platform-grid{grid-template-columns:1fr}.stat-row{grid-template-columns:1fr}.coming-more{flex-direction:column;align-items:flex-start}}
 @media(max-width:480px){nav{padding:0 4%}.page-layout{padding:28px 4% 48px}footer{padding:40px 4% 0}}
 </style>
 </head>
 <body>
 <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+
+<!-- NAV -->
 <nav>
-  <a href="https://favze.com" class="nav-logo">FAVZE</a>
+  <a href="https://favze.com/" style="display:flex;align-items:center">
+    <img src="https://favze.com/hubfs/favze-logo-black-header.svg" alt="Favze Digital Marketing" class="nav-logo-img" onerror="this.style.display='none';this.nextSibling.style.display='flex'">
+    <span style="display:none;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.45rem;color:#064187;letter-spacing:.04em;">FAVZE</span>
+  </a>
   <ul class="nl">
-    <li><a href="https://favze.com/services">Services</a></li>
-    <li><a href="https://favze.com/favze-insights" class="active">Articles</a></li>
-    <li><a href="https://favze.com/why-choose-us">Why Us</a></li>
-    <li><a href="https://favze.com/about">About</a></li>
-    <li><a href="https://favze.com/digital-marketing-faq">FAQ</a></li>
-    <li><a href="https://favze.com/contact" class="nc">Free Consultation</a></li>
+    <li>
+      <button class="drop-trigger" id="trigServices" aria-expanded="false" aria-controls="panServices">
+        Services
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="drop-panel" id="panServices" role="menu">
+        <div class="drop-label">All Services</div>
+        <a href="https://favze.com/services/social-media-marketing" role="menuitem">Social Media Marketing <span class="drop-abbr">SMM</span></a>
+        <a href="https://favze.com/services/search-engine-optimization" role="menuitem">Search Engine Optimization <span class="drop-abbr">SEO</span></a>
+        <a href="https://favze.com/services/answer-engine-optimization" role="menuitem">Answer Engine Optimization <span class="drop-abbr">AEO</span></a>
+        <a href="https://favze.com/services/generative-engine-optimization" role="menuitem">Generative Engine Optimization <span class="drop-abbr">GEO</span></a>
+        <a href="https://favze.com/services/ai-optimization" role="menuitem">AI Optimization</a>
+        <a href="https://favze.com/services/local-seo" role="menuitem">Local SEO</a>
+        <a href="https://favze.com/services/email-marketing" role="menuitem">Email Marketing</a>
+        <a href="https://favze.com/services/short-message-service-sms" role="menuitem">SMS Marketing</a>
+        <a href="https://favze.com/services/hubspot-setup" role="menuitem">HubSpot Setup</a>
+        <a href="https://favze.com/services/website-design" role="menuitem">Website Design</a>
+        <a href="https://favze.com/services/paid-search-ads" role="menuitem">Paid Search Ads <span class="drop-abbr">SEM</span></a>
+        <a href="https://favze.com/services/paid-social-media-ads" role="menuitem">Paid Social Media Ads</a>
+        <div class="drop-divider"></div>
+        <a href="https://favze.com/services" class="drop-view-all" role="menuitem">View All Services &rarr;</a>
+      </div>
+    </li>
+    <li>
+      <button class="drop-trigger" id="trigArticles" aria-expanded="false" aria-controls="panArticles">
+        Articles
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="drop-panel center" id="panArticles" role="menu">
+        <div class="drop-label">Browse by Pillar</div>
+        <a href="https://favze.com/articles/content-marketing" role="menuitem">Content Marketing</a>
+        <a href="https://favze.com/articles/social-media-strategy" role="menuitem">Social Media Strategy</a>
+        <a href="https://favze.com/articles/search-visibility" role="menuitem">Search Visibility &amp; Local Discovery</a>
+        <a href="https://favze.com/articles/brand-positioning" role="menuitem">Brand Positioning &amp; Community Authority</a>
+        <div class="drop-divider"></div>
+        <a href="https://favze.com/articles" class="drop-view-all" role="menuitem">All Articles &rarr;</a>
+      </div>
+    </li>
+    <li><a href="https://favze.com/why-us" class="nl-link">Why Us</a></li>
+    <li><a href="https://favze.com/about" class="nl-link">About</a></li>
+    <li><a href="https://favze.com/faq" class="nl-link">FAQ</a></li>
+    <li><a href="https://favze.com/free-consultation" class="nl-cta">Free Consultation</a></li>
   </ul>
-  <button class="hb" id="hb" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  <button class="hb" id="hb" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </nav>
-<div class="mm" id="mm">
-  <a href="https://favze.com/services">Services</a>
-  <a href="https://favze.com/favze-insights">Articles</a>
-  <a href="https://favze.com/why-choose-us">Why Us</a>
-  <a href="https://favze.com/about">About</a>
-  <a href="https://favze.com/digital-marketing-faq">FAQ</a>
-  <a href="https://favze.com/contact" class="mc">Start Free Consultation</a>
+
+<!-- Mobile menu -->
+<div class="mm" id="mm" aria-hidden="true">
+  <button class="mm-toggle" id="mmServTrig" aria-expanded="false">Services<svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  <div class="mm-sub" id="mmServSub">
+    <a href="https://favze.com/services/social-media-marketing">Social Media Marketing</a>
+    <a href="https://favze.com/services/search-engine-optimization">SEO</a>
+    <a href="https://favze.com/services/answer-engine-optimization">AEO</a>
+    <a href="https://favze.com/services/generative-engine-optimization">GEO</a>
+    <a href="https://favze.com/services/ai-optimization">AI Optimization</a>
+    <a href="https://favze.com/services/local-seo">Local SEO</a>
+    <a href="https://favze.com/services/email-marketing">Email Marketing</a>
+    <a href="https://favze.com/services/short-message-service-sms">SMS Marketing</a>
+    <a href="https://favze.com/services/hubspot-setup">HubSpot Setup</a>
+    <a href="https://favze.com/services/website-design">Website Design</a>
+    <a href="https://favze.com/services/paid-search-ads">Paid Search Ads</a>
+    <a href="https://favze.com/services/paid-social-media-ads">Paid Social Media Ads</a>
+    <a href="https://favze.com/services" style="font-weight:700;color:var(--navy);">All Services</a>
+  </div>
+  <button class="mm-toggle" id="mmArtTrig" aria-expanded="false">Articles<svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  <div class="mm-sub" id="mmArtSub">
+    <a href="https://favze.com/articles/content-marketing">Content Marketing</a>
+    <a href="https://favze.com/articles/social-media-strategy" style="font-weight:700;color:var(--navy);">Social Media Strategy</a>
+    <a href="https://favze.com/articles/search-visibility">Search Visibility &amp; Local Discovery</a>
+    <a href="https://favze.com/articles/brand-positioning">Brand Positioning &amp; Community Authority</a>
+    <a href="https://favze.com/articles" style="font-weight:700;color:var(--navy);">All Articles</a>
+  </div>
+  <a href="https://favze.com/why-us" class="mm-link">Why Us</a>
+  <a href="https://favze.com/about" class="mm-link">About</a>
+  <a href="https://favze.com/faq" class="mm-link">FAQ</a>
+  <a href="https://favze.com/free-consultation" class="mm-link mm-cta">Start Free Consultation</a>
 </div>
+
 <section class="pillar-hero">
   <div class="pillar-hero-inner">
-    <div class="pillar-badge">Pillar 02 — Social Media Strategy</div>
+    <div class="pillar-badge">Pillar 02 - Social Media Strategy</div>
     <h1>Stop Posting.<br>Start <span>Connecting.</span></h1>
-    <p class="pillar-hero-sub">Posting without strategy is just noise. This pillar covers platform selection, content systems, community engagement, paid social, and how to turn local followers into loyal, paying customers — without burning out or wasting budget.</p>
+    <p class="pillar-hero-sub">Posting without strategy is just noise. This pillar covers platform selection, content systems, community engagement, paid social, and how to turn local followers into loyal, paying customers - without burning out or wasting budget.</p>
     <div class="pillar-meta-row">
       <span class="pillar-meta-pill"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.3"/><path d="M7 4v3.5l2 1.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>~38 min read</span>
       <span class="pillar-meta-pill"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="1.5" y="1.5" width="11" height="11" rx="2" stroke="currentColor" stroke-width="1.3"/><path d="M4 7h6M4 4.5h6M4 9.5h4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Pillar Page</span>
@@ -240,6 +335,7 @@ footer{background:var(--dark);padding:56px 5% 0;border-top:1px solid rgba(255,25
     </div>
   </div>
 </section>
+
 <div class="page-layout">
   <main>
     <div class="toc-card">
@@ -267,209 +363,204 @@ footer{background:var(--dark);padding:56px 5% 0;border-top:1px solid rgba(255,25
         <a href="#roadmap"><span class="toc-num">20</span>The Social Media Strategy Roadmap</a>
       </div>
     </div>
-    <div class="pillar-body">
 
+    <div class="pillar-body">
       <h2 id="why-social-matters">1. Why Social Media Strategy Is Not Optional for Local Businesses</h2>
-      <p>Most local businesses treat social media as an afterthought — something to check off the marketing list alongside a business card and a website. They post sporadically, chase vanity metrics, and wonder why nothing converts. The local businesses that win on social do something fundamentally different: they treat it as a systematic community-building channel with a deliberate strategy tied directly to business outcomes.</p>
-      <p>For local businesses specifically, social media has a unique power that national brands cannot replicate: the ability to show up in the daily digital lives of the exact neighborhood, town, or county you serve. When a resident of Goshen, Indiana sees a familiar local business consistently showing up in their feed with genuinely useful, genuinely local content — not polished corporate posts but real people doing real work in their community — that business is building familiarity, trust, and preference at a scale that no amount of paid advertising could buy.</p>
+      <p>Most local businesses treat <a href="https://favze.com/services/social-media-marketing" style="color:var(--teal);font-weight:600;">social media</a> as an afterthought - something to check off the marketing list alongside a business card and a website. They post sporadically, chase vanity metrics, and wonder why nothing converts. The local businesses that win on social do something fundamentally different: they treat it as a systematic community-building channel with a deliberate strategy tied directly to business outcomes.</p>
+      <p>For local businesses specifically, social media has a unique power that national brands cannot replicate: the ability to show up in the daily digital lives of the exact neighborhood, town, or county you serve. When a resident of Goshen, Indiana sees a familiar local business consistently showing up in their feed with genuinely useful, genuinely local content - not polished corporate posts but real people doing real work in their community - that business is building familiarity, trust, and preference at a scale that no amount of paid advertising could buy.</p>
       <div class="stat-row">
         <div class="stat-box"><div class="stat-box-num">78%</div><div class="stat-box-label">of local consumers check a business's social media before making a purchasing decision in their community</div></div>
-        <div class="stat-box"><div class="stat-box-num gold">4x</div><div class="stat-box-label">Higher engagement rates for locally-specific content compared to generic industry content from the same business account</div></div>
-        <div class="stat-box"><div class="stat-box-num teal">60%</div><div class="stat-box-label">of local purchases are influenced by social media discovery — either direct or through a community recommendation</div></div>
+        <div class="stat-box"><div class="stat-box-num teal">4x</div><div class="stat-box-label">Higher engagement rates for locally-specific content compared to generic industry content from the same business account</div></div>
+        <div class="stat-box"><div class="stat-box-num">60%</div><div class="stat-box-label">of local purchases are influenced by social media discovery - either direct or through a community recommendation</div></div>
       </div>
       <p>The threshold for standing out in most local social media markets is surprisingly low. The majority of local business accounts are inconsistent, impersonal, and disconnected from anything their community actually cares about. A business willing to show up consistently with genuine local relevance occupies a category that most of its competitors have abandoned.</p>
 
       <h2 id="platform-selection">2. Platform Selection: Where Your Local Customers Actually Are</h2>
-      <p>The single biggest mistake local businesses make on social media is trying to be everywhere. Spreading thin across six platforms produces mediocre, inconsistent content on all of them. The discipline of platform selection — choosing two or three platforms where your specific customer base is concentrated and doing those well — produces dramatically better results than a scattered multi-platform approach.</p>
+      <p>The single biggest mistake local businesses make on social media is trying to be everywhere. Spreading thin across six platforms produces mediocre, inconsistent content on all of them. The discipline of platform selection - choosing two or three platforms where your specific customer base is concentrated and doing those well - produces dramatically better results than a scattered multi-platform approach.</p>
       <h3>The Local Platform Landscape</h3>
-      <p>For most Northern Indiana and Michiana local businesses, the platform decision comes down to understanding where your specific customers spend their time, what type of content those platforms favor, and what your team is realistically able to produce with consistency. Not every platform is a fit for every local business — and committing to the wrong platforms is worse than committing to fewer right ones.</p>
+      <p>For most <a href="https://favze.com/areas-served/northern-indiana" style="color:var(--teal);font-weight:600;">Northern Indiana</a> and <a href="https://favze.com/areas-served/michiana" style="color:var(--teal);font-weight:600;">Michiana</a> local businesses, the platform decision comes down to understanding where your specific customers spend their time, what type of content those platforms favor, and what your team is realistically able to produce with consistency. Not every platform is a fit for every local business - and committing to the wrong platforms is worse than committing to fewer right ones.</p>
       <div class="platform-grid">
         <div class="platform-card facebook">
           <div class="platform-name">Facebook</div>
-          <div class="platform-fit high">High fit — most local businesses</div>
+          <div class="platform-fit high">High fit - most local businesses</div>
           <p class="platform-desc">Still the dominant local community platform for ages 30+. Groups, Events, and Marketplace give local businesses native community tools no other platform matches. Essential for B2C local businesses targeting established community members.</p>
         </div>
         <div class="platform-card instagram">
           <div class="platform-name">Instagram</div>
-          <div class="platform-fit high">High fit — visual & lifestyle businesses</div>
+          <div class="platform-fit high">High fit - visual &amp; lifestyle businesses</div>
           <p class="platform-desc">Strongest for businesses with a visual component: food, home improvement, fitness, beauty, retail. Reels and local hashtags extend reach beyond existing followers. Best paired with Facebook via Meta's cross-posting tools.</p>
         </div>
         <div class="platform-card linkedin">
           <div class="platform-name">LinkedIn</div>
-          <div class="platform-fit medium">Best fit — B2B and professional services</div>
+          <div class="platform-fit medium">Best fit - B2B and professional services</div>
           <p class="platform-desc">The primary platform for local B2B service businesses: accounting, legal, HR, manufacturing suppliers, staffing, and commercial contractors. Publishing articles here builds thought leadership that reaches local decision-makers directly.</p>
         </div>
         <div class="platform-card nextdoor">
           <div class="platform-name">Nextdoor</div>
-          <div class="platform-fit high">High fit — hyperlocal service businesses</div>
+          <div class="platform-fit high">High fit - hyperlocal service businesses</div>
           <p class="platform-desc">The most underutilized local platform. Neighborhood-level targeting means your content reaches people within a specific radius of your service area. Plumbers, landscapers, cleaners, and home service businesses see exceptional organic reach here.</p>
         </div>
         <div class="platform-card google">
           <div class="platform-name">Google Business</div>
-          <div class="platform-fit high">Essential — every local business</div>
-          <p class="platform-desc">Often overlooked as a social channel, Google Business Profile posts appear in Maps and Search results at the exact moment someone is looking for your category. Weekly posts here create search-visible content with zero organic reach limitations.</p>
+          <div class="platform-fit high">Essential - every local business</div>
+          <p class="platform-desc">Often overlooked as a social channel, <a href="https://favze.com/services/local-seo" style="color:var(--teal);font-weight:600;">Google Business Profile</a> posts appear in Maps and Search results at the exact moment someone is looking for your category. Weekly posts here create search-visible content with zero organic reach limitations.</p>
         </div>
         <div class="platform-card tiktok">
           <div class="platform-name">TikTok / Reels</div>
-          <div class="platform-fit niche">Niche fit — younger audiences, viral potential</div>
+          <div class="platform-fit niche">Niche fit - younger audiences, viral potential</div>
           <p class="platform-desc">Worth exploring for businesses targeting under-35 customers or those with behind-the-scenes content that naturally lends itself to short video. High ceiling, high effort. Not a priority for most local B2B or professional services.</p>
         </div>
       </div>
-      <div class="callout callout-gold">
-        <p><strong>The two-platform rule for local businesses:</strong> Pick your primary platform — the one where your core customer is most active — and commit to posting there 4–5 times per week. Add one secondary platform and cross-post selectively. Everything else is optional until those two are running efficiently.</p>
+      <div class="callout callout-teal">
+        <p><strong>The two-platform rule for local businesses:</strong> Pick your primary platform - the one where your core customer is most active - and commit to posting there 4-5 times per week. Add one secondary platform and cross-post selectively. Everything else is optional until those two are running efficiently.</p>
       </div>
 
       <h2 id="local-content-strategy">3. Building a Local Content Strategy</h2>
-      <p>A local content strategy is not a list of post ideas — it is a systematic answer to three questions: What does your community actually care about? What does your business have genuine authority to say? And what content format best communicates both of those things on the platforms you have chosen? A content strategy that does not start with those questions produces content that fills a feed without building a business.</p>
+      <p>A local content strategy is not a list of post ideas - it is a systematic answer to three questions: What does your community actually care about? What does your business have genuine authority to say? And what content format best communicates both of those things on the platforms you have chosen? A content strategy that does not start with those questions produces content that fills a feed without building a business.</p>
       <h3>The Local Relevance Test</h3>
-      <p>Before any piece of content goes out, it should pass a simple test: would this content be meaningfully different if it came from a business in Atlanta instead of Goshen? If the answer is no — if the content is generic industry advice, a reposted national trend, or a stock photo with a caption that could apply to any market — it fails the local relevance test. Local content references local places, local events, local customers, and local concerns. That specificity is what makes it worth pausing for in a feed full of interchangeable posts.</p>
+      <p>Before any piece of content goes out, it should pass a simple test: would this content be meaningfully different if it came from a business in Atlanta instead of Goshen? If the answer is no - if the content is generic industry advice, a reposted national trend, or a stock photo with a caption that could apply to any market - it fails the local relevance test. Local content references local places, local events, local customers, and local concerns. That specificity is what makes it worth pausing for in a feed full of interchangeable posts.</p>
       <h3>Content That Serves the Community</h3>
-      <p>The most effective local social media content is not primarily promotional — it is genuinely useful to the community the business serves. A local HVAC company that posts about how to winterize pipes before the first Michiana freeze. A local financial planner who shares what the latest Federal Reserve decision means for Northern Indiana homeowners. A local restaurant that highlights local farms in their supply chain. Each of these pieces of content is useful, locally specific, and builds the kind of goodwill that eventually converts to customers without a single direct promotion.</p>
+      <p>The most effective local social media content is not primarily promotional - it is genuinely useful to the community the business serves. A local HVAC company that posts about how to winterize pipes before the first <a href="https://favze.com/areas-served/michiana" style="color:var(--teal);font-weight:600;">Michiana</a> freeze. A local financial planner who shares what the latest Federal Reserve decision means for <a href="https://favze.com/areas-served/northern-indiana" style="color:var(--teal);font-weight:600;">Northern Indiana</a> homeowners. A local restaurant that highlights local farms in their supply chain. Each of these pieces of content is useful, locally specific, and builds the kind of goodwill that eventually converts to customers without a single direct promotion.</p>
 
       <h2 id="content-pillars">4. Content Pillars for Local Businesses</h2>
-      <p>Content pillars are the recurring themes that organize your social media content into a coherent, purposeful system rather than a random stream of posts. For local businesses, content pillars should map directly to the reasons customers choose you — and the concerns they have before they do.</p>
+      <p>Content pillars are the recurring themes that organize your social media content into a coherent, purposeful system rather than a random stream of posts. For local businesses, content pillars should map directly to the reasons customers choose you - and the concerns they have before they do.</p>
       <h3>The Five Core Local Content Pillars</h3>
       <p>Most local businesses can organize their content around five types of posts that together build trust, demonstrate expertise, create community connection, and convert interest into action. The proportion of each will vary by business type, but all five should appear in any well-rounded local content calendar.</p>
-      <p>The first is <strong>education and expertise</strong> — content that teaches your audience something genuinely useful about your field. This is the most direct way to demonstrate that you know what you are doing, before anyone has paid you a dollar. The second is <strong>behind the scenes</strong> — content that shows your process, your team, your workspace, and the real work behind the finished product. This humanizes your business and builds the kind of familiarity that local preference is built on. The third is <strong>community connection</strong> — content that references local events, local landmarks, local customers, and local causes. This signals that you are genuinely part of the community, not just operating in it. The fourth is <strong>social proof</strong> — customer stories, reviews, project spotlights, and before-and-after content that demonstrates the real outcomes you deliver. The fifth is <strong>offers and calls to action</strong> — the promotional content that converts the trust you have built into actual customer inquiries, kept to no more than 20 percent of total content.</p>
+      <p>The first is <strong>education and expertise</strong> - content that teaches your audience something genuinely useful about your field. This is the most direct way to demonstrate that you know what you are doing, before anyone has paid you a dollar. The second is <strong>behind the scenes</strong> - content that shows your process, your team, your workspace, and the real work behind the finished product. This humanizes your business and builds the kind of familiarity that local preference is built on. The third is <strong>community connection</strong> - content that references local events, local landmarks, local customers, and local causes. This signals that you are genuinely part of the community, not just operating in it. The fourth is <strong>social proof</strong> - customer stories, reviews, project spotlights, and before-and-after content that demonstrates the real outcomes you deliver. The fifth is <strong>offers and calls to action</strong> - the promotional content that converts the trust you have built into actual customer inquiries, kept to no more than 20 percent of total content.</p>
 
       <h2 id="content-calendar">5. The Local Content Calendar System</h2>
-      <p>The most common reason local businesses fall off their social media strategy is not lack of ideas — it is lack of a system. A content calendar is the infrastructure that makes consistency possible regardless of how busy the week gets, how much is happening in the business, or how uninspired the person responsible for posting happens to feel on a given Tuesday.</p>
+      <p>The most common reason local businesses fall off their social media strategy is not lack of ideas - it is lack of a system. A content calendar is the infrastructure that makes consistency possible regardless of how busy the week gets, how much is happening in the business, or how uninspired the person responsible for posting happens to feel on a given Tuesday.</p>
       <h3>Building the Calendar Around Local Rhythms</h3>
       <p>Local businesses have natural content calendar anchors that national brands do not: the local events calendar, the agricultural and seasonal rhythms of the region, the school year schedule, the local sports seasons, and the recurring community events that define the local calendar. Building a content plan around these local anchors generates content ideas that are inherently timely and locally relevant, and that customers are already paying attention to.</p>
       <div class="insight-box">
         <span class="insight-box-label">The Batch-and-Schedule Method</span>
-        <p>The businesses with the most consistent social media presence are almost never posting in real time every day. They are batching content creation — spending two to three hours once a week planning, creating, and scheduling the week's content in advance. This approach produces more consistent quality, eliminates the daily decision of "what do I post today," and ensures that busy weeks don't result in dropped posting schedules. One focused weekly content session beats seven scattered daily attempts every time.</p>
+        <p>The businesses with the most consistent social media presence are almost never posting in real time every day. They are batching content creation - spending two to three hours once a week planning, creating, and scheduling the week's content in advance. This approach produces more consistent quality, eliminates the daily decision of "what do I post today," and ensures that busy weeks don't result in dropped posting schedules. One focused weekly content session beats seven scattered daily attempts every time.</p>
       </div>
       <h3>Seasonal Content Planning for Northern Indiana</h3>
-      <p>Northern Indiana's distinct seasons create natural content opportunities that local businesses in other markets do not have. The transition to winter, spring planting season, summer tourism around the lakes, fall harvest season — each creates genuinely local content opportunities that businesses attuned to the regional calendar can capitalize on months ahead of time. A business that plans its content calendar three months out can create timely, seasonal, locally resonant content without ever scrambling for ideas at the last minute.</p>
+      <p><a href="https://favze.com/areas-served/northern-indiana" style="color:var(--teal);font-weight:600;">Northern Indiana's</a> distinct seasons create natural content opportunities that local businesses in other markets do not have. The transition to winter, spring planting season, summer tourism around the lakes, fall harvest season - each creates genuinely local content opportunities that businesses attuned to the regional calendar can capitalize on months ahead of time.</p>
 
       <h2 id="community-engagement">6. Community Engagement on Social Media</h2>
-      <p>Posting is half the work. Engagement — responding to comments, participating in local community groups, interacting with other local businesses and community organizations — is the half that most local businesses skip. And it is the half that turns a business's social presence from a billboard into a relationship.</p>
+      <p>Posting is half the work. Engagement - responding to comments, participating in local community groups, interacting with other local businesses and community organizations - is the half that most local businesses skip. And it is the half that turns a business's social presence from a billboard into a relationship.</p>
       <h3>The Engagement-First Mindset</h3>
-      <p>The algorithm logic on every major social platform rewards accounts that generate engagement. A post that receives ten comments in the first hour will reach ten times the audience of a post that receives none. Generating early engagement — by asking genuine questions, tagging community members, posting content that invites response — is the single most effective organic reach strategy available to local businesses without a paid media budget.</p>
-      <p>More importantly, responding to every comment and message — promptly, personally, and specifically — signals to both the algorithm and the human reader that there is a real person behind this account who genuinely cares about their community. That signal is one of the most powerful trust builders available to a local business in the digital space.</p>
+      <p>The algorithm logic on every major social platform rewards accounts that generate engagement. A post that receives ten comments in the first hour will reach ten times the audience of a post that receives none. Generating early engagement - by asking genuine questions, tagging community members, posting content that invites response - is the single most effective organic reach strategy available to local businesses without a paid media budget.</p>
       <h3>Engaging in Local Groups Without Spamming</h3>
-      <p>Local Facebook groups, Nextdoor neighborhoods, and community forums are spaces where local businesses can build enormous goodwill — or destroy their reputation — based entirely on how they show up. Promotional posts in community groups are almost universally resented. Genuinely helpful participation — answering a question about contractors, sharing a useful local resource, acknowledging a community concern — builds exactly the kind of goodwill that eventually turns into referrals, even without a single promotional mention of your business.</p>
+      <p>Local Facebook groups, Nextdoor neighborhoods, and community forums are spaces where local businesses can build enormous goodwill - or destroy their reputation - based entirely on how they show up. Promotional posts in community groups are almost universally resented. Genuinely helpful participation - answering a question about contractors, sharing a useful local resource, acknowledging a community concern - builds exactly the kind of goodwill that eventually turns into referrals, even without a single promotional mention of your business.</p>
 
       <h2 id="facebook-local">7. Facebook Strategy for Local Businesses</h2>
-      <p>Despite predictions of its decline, Facebook remains the most powerful platform for reaching established community members in markets like Northern Indiana and Michiana. Its combination of local groups, event functionality, targeted paid advertising, and the demographic concentration of the 35-65 age range — which includes a majority of local purchasing decision-makers — makes it the platform most local businesses should prioritize first.</p>
+      <p>Despite predictions of its decline, Facebook remains the most powerful platform for reaching established community members in markets like <a href="https://favze.com/areas-served/northern-indiana" style="color:var(--teal);font-weight:600;">Northern Indiana</a> and <a href="https://favze.com/areas-served/michiana" style="color:var(--teal);font-weight:600;">Michiana</a>. Its combination of local groups, event functionality, targeted paid advertising, and the demographic concentration of the 35-65 age range - which includes a majority of local purchasing decision-makers - makes it the platform most local businesses should prioritize first.</p>
       <h3>Facebook Groups as a Community Tool</h3>
-      <p>Creating or actively participating in a local Facebook group is one of the highest-leverage community-building moves a local business can make. A group owned by your business — focused on a topic that genuinely matters to your target audience, not on promoting your business — builds a captive community of your ideal customers and gives you a platform to demonstrate expertise, share content, and be present at the exact moment a community member needs what you offer.</p>
+      <p>Creating or actively participating in a local Facebook group is one of the highest-leverage community-building moves a local business can make. A group owned by your business - focused on a topic that genuinely matters to your target audience, not on promoting your business - builds a captive community of your ideal customers and gives you a platform to demonstrate expertise, share content, and be present at the exact moment a community member needs what you offer.</p>
       <h3>Facebook Events for Local Businesses</h3>
-      <p>Facebook Events remain one of the most underutilized local marketing tools on the platform. Workshops, open houses, community meetups, or even informal Q&A sessions can be promoted through Facebook Events and reach people specifically interested in events near them. A business that runs quarterly events — even small-scale ones — creates recurring community touchpoints that no amount of passive posting can replicate.</p>
+      <p>Facebook Events remain one of the most underutilized local marketing tools on the platform. Workshops, open houses, community meetups, or even informal Q&A sessions can be promoted through Facebook Events and reach people specifically interested in events near them. A business that runs quarterly events - even small-scale ones - creates recurring community touchpoints that no amount of passive posting can replicate.</p>
 
       <h2 id="instagram-local">8. Instagram Strategy for Local Businesses</h2>
-      <p>Instagram's strength for local businesses lies in its visual format and its Reels algorithm, which continues to push short-form video content to new audiences beyond existing followers. For businesses with a visual component to their work — contractors, restaurants, retailers, beauty businesses, home services — Instagram provides an organic discovery opportunity that Facebook's algorithm increasingly restricts to existing followers.</p>
+      <p>Instagram's strength for local businesses lies in its visual format and its Reels algorithm, which continues to push short-form video content to new audiences beyond existing followers. For businesses with a visual component to their work - contractors, restaurants, retailers, beauty businesses, home services - Instagram provides an organic discovery opportunity that Facebook's algorithm increasingly restricts to existing followers.</p>
       <h3>Local Hashtags and Geotags</h3>
-      <p>Instagram's location and hashtag features make it possible to reach people specifically searching for businesses in your area. Geotagging posts to specific local locations and using local hashtags — #GoshenIndiana, #ElkhartCounty, #MichianaSmallBusiness — puts your content in front of people actively looking for local businesses in your category. This is simple, consistently overlooked, and reliably effective for local discovery.</p>
+      <p>Instagram's location and hashtag features make it possible to reach people specifically searching for businesses in your area. Geotagging posts to specific local locations and using local hashtags - #GoshenIndiana, #ElkhartCounty, #MichianaSmallBusiness - puts your content in front of people actively looking for local businesses in your category. This is simple, consistently overlooked, and reliably effective for local discovery.</p>
       <h3>The Reels Opportunity for Local Businesses</h3>
-      <p>Short-form video is the single fastest way for a local business to grow its Instagram following organically in 2025 and beyond. The Reels algorithm actively pushes content to non-followers — meaning a 30-second video showing a before-and-after of a renovation project, or a quick tutorial from a local expert, can reach thousands of local community members who have never heard of your business. The entry point is low: a smartphone, good lighting, and a genuine subject are sufficient.</p>
+      <p>Short-form video is the single fastest way for a local business to grow its Instagram following organically in 2025 and beyond. The Reels algorithm actively pushes content to non-followers - meaning a 30-second video showing a before-and-after of a renovation project, or a quick tutorial from a local expert, can reach thousands of local community members who have never heard of your business. The entry point is low: a smartphone, good lighting, and a genuine subject are sufficient.</p>
 
       <h2 id="linkedin-local">9. LinkedIn for Local B2B and Professional Service Businesses</h2>
-      <p>LinkedIn is the most underutilized platform for local B2B businesses in markets like Elkhart County. While most local professional service firms have dormant LinkedIn pages and inactive personal profiles, the few that publish consistently — sharing genuine industry perspectives, local business insights, and expert commentary on the issues facing their specific clients — build an audience of exactly the kind of decision-makers they are trying to reach.</p>
+      <p>LinkedIn is the most underutilized platform for local B2B businesses in markets like <a href="https://favze.com/areas-served/elkhart-county" style="color:var(--teal);font-weight:600;">Elkhart County</a>. While most local professional service firms have dormant LinkedIn pages and inactive personal profiles, the few that publish consistently - sharing genuine industry perspectives, local business insights, and expert commentary on the issues facing their specific clients - build an audience of exactly the kind of decision-makers they are trying to reach.</p>
       <h3>The LinkedIn Content Opportunity in Local Markets</h3>
       <p>The competitive density on LinkedIn for local market content is far lower than for consumer-facing platforms. A Goshen accountant who publishes a weekly LinkedIn article about tax strategy for Elkhart County manufacturers will, within six to twelve months, be the most recognizable professional in their category in the local LinkedIn network. That recognition translates directly into referrals, speaking opportunities, and inbound inquiries from the exact client profile they are trying to attract.</p>
-      <h3>Connecting Locally on LinkedIn</h3>
-      <p>LinkedIn's search features allow local businesses to connect specifically with business owners, operations managers, HR directors, and other decision-makers in a specific geographic area. A deliberate strategy of connecting with relevant local professionals — commenting genuinely on their content, engaging with their posts before sending a connection request — builds a local professional network that generates business through relationship, not through cold outreach.</p>
 
       <h2 id="nextdoor-strategy">10. Nextdoor and Neighborhood Platform Strategy</h2>
-      <p>Nextdoor is the most direct community platform available to local home service businesses, and it is almost entirely ignored by the businesses that would benefit from it most. The platform's neighborhood-level feed means that a landscaping company, plumber, electrician, or cleaning service that posts genuinely helpful content on Nextdoor is reaching homeowners in specific neighborhoods within their service area — people who are, by definition, potential customers in the most immediate geographic sense.</p>
+      <p>Nextdoor is the most direct community platform available to local home service businesses, and it is almost entirely ignored by the businesses that would benefit from it most. The platform's neighborhood-level feed means that a landscaping company, plumber, electrician, or cleaning service that posts genuinely helpful content on Nextdoor is reaching homeowners in specific neighborhoods within their service area - people who are, by definition, potential customers in the most immediate geographic sense.</p>
       <h3>Business Pages vs. Personal Participation</h3>
-      <p>Nextdoor allows businesses to create Business Pages and run paid ads, but the most effective Nextdoor strategy for most local businesses involves the owner or a team member participating as a community member — answering questions in their area of expertise, responding to recommendation requests, and being the knowledgeable neighbor who just happens to run the relevant business. This approach builds trust that no paid placement can replicate, because it is genuine community participation rather than advertising.</p>
+      <p>Nextdoor allows businesses to create Business Pages and run paid ads, but the most effective Nextdoor strategy for most local businesses involves the owner or a team member participating as a community member - answering questions in their area of expertise, responding to recommendation requests, and being the knowledgeable neighbor who just happens to run the relevant business. This approach builds trust that no paid placement can replicate, because it is genuine community participation rather than advertising.</p>
 
       <h2 id="google-business">11. Google Business Profile as a Social Media Channel</h2>
-      <p>Google Business Profile is the most overlooked social media channel available to local businesses — and arguably the most valuable, because posts appear directly in Google Maps and Search results at the exact moment a potential customer is actively looking for what you offer. A business that posts to its Google Business Profile weekly is creating search-visible social content that reaches people in active buying intent, not just passive scrolling.</p>
+      <p><a href="https://favze.com/services/local-seo" style="color:var(--teal);font-weight:600;">Google Business Profile</a> is the most overlooked social media channel available to local businesses - and arguably the most valuable, because posts appear directly in Google Maps and Search results at the exact moment a potential customer is actively looking for what you offer. A business that posts to its Google Business Profile weekly is creating search-visible social content that reaches people in active buying intent, not just passive scrolling.</p>
       <h3>What to Post on Google Business Profile</h3>
-      <p>Google Business Profile posts should be specific, timely, and tied to a clear call to action. New services, seasonal offers, completed projects, team updates, and community involvement are all appropriate. Unlike Instagram or Facebook, Google Business Profile posts are indexed by search engines — meaning the keywords in your posts can contribute to local search visibility for your business. Posts expire after seven days, making weekly posting the minimum effective cadence for maintaining a visible Google Business presence.</p>
+      <p>Google Business Profile posts should be specific, timely, and tied to a clear call to action. New services, seasonal offers, completed projects, team updates, and community involvement are all appropriate. Unlike Instagram or Facebook, Google Business Profile posts are indexed by search engines - meaning the keywords in your posts can contribute to <a href="https://favze.com/services/local-seo" style="color:var(--teal);font-weight:600;">local search visibility</a> for your business. Posts expire after seven days, making weekly posting the minimum effective cadence for maintaining a visible Google Business presence.</p>
 
       <h2 id="short-form-video">12. Short-Form Video for Local Businesses</h2>
-      <p>Short-form video — Reels, TikTok, YouTube Shorts — represents the single highest organic reach opportunity available to local businesses on social media today. The platforms actively push short video content to non-followers, giving local businesses with no existing audience the ability to reach thousands of community members with zero paid budget. The businesses that capitalize on this opportunity in 2025 and 2026 are building audiences that will compound in value for years.</p>
+      <p>Short-form video - Reels, TikTok, YouTube Shorts - represents the single highest organic reach opportunity available to local businesses on social media today. The platforms actively push short video content to non-followers, giving local businesses with no existing audience the ability to reach thousands of community members with zero paid budget. The businesses that capitalize on this opportunity in 2025 and 2026 are building audiences that will compound in value for years.</p>
       <h3>What Makes Local Video Content Work</h3>
       <p>The local video content that performs best for small businesses is not highly produced. It is genuine: real people, real work, real results. A 30-second time-lapse of a landscaping transformation. A quick "three things to look for when hiring a plumber" from an actual plumber. A behind-the-scenes of how a local restaurant prepares its signature dish. These formats require no professional production equipment and build exactly the kind of authentic connection that polished corporate video never does.</p>
       <h3>Repurposing Video Across Platforms</h3>
-      <p>The most efficient local video strategy creates content once and distributes it everywhere. A video filmed vertically on a smartphone can be posted to Instagram Reels, Facebook Reels, TikTok, YouTube Shorts, and used as a Google Business Profile video — all in one session. The local businesses that maximize their video investment treat a single filming session as raw material for a week of cross-platform content.</p>
+      <p>The most efficient local video strategy creates content once and distributes it everywhere. A video filmed vertically on a smartphone can be posted to Instagram Reels, Facebook Reels, TikTok, YouTube Shorts, and used as a Google Business Profile video - all in one session. The local businesses that maximize their video investment treat a single filming session as raw material for a week of cross-platform content. This connects directly to a strong <a href="https://favze.com/articles/content-marketing" style="color:var(--teal);font-weight:600;">content repurposing strategy</a>.</p>
 
       <h2 id="paid-social">13. Paid Social Advertising for Local Markets</h2>
-      <p>Organic social media builds relationships over time. Paid social accelerates that process by putting your content in front of specifically targeted local audiences before the organic relationship has time to develop. For local businesses, paid social advertising — particularly on Facebook and Instagram — offers targeting capabilities that allow you to reach people by zip code, age, interests, income level, and behaviors in ways that traditional local advertising cannot match.</p>
+      <p>Organic social media builds relationships over time. <a href="https://favze.com/services/paid-social-media-ads" style="color:var(--teal);font-weight:600;">Paid social</a> accelerates that process by putting your content in front of specifically targeted local audiences before the organic relationship has time to develop. For local businesses, paid social advertising - particularly on Facebook and Instagram - offers targeting capabilities that allow you to reach people by zip code, age, interests, income level, and behaviors in ways that traditional local advertising cannot match.</p>
       <h3>The Local Targeting Advantage</h3>
-      <p>Meta's geographic targeting allows local businesses to show ads specifically to people within a defined radius of their location, or within specific zip codes that match their service area. For a Goshen business that serves Elkhart County, this means paying to reach only the 50,000 households in the relevant geography — not the entire Indiana market. The result is dramatically more efficient ad spend than any broadcast or regional advertising channel can offer.</p>
-      <div class="callout callout-gold">
-        <p><strong>The local paid social starting point:</strong> Before running lead generation or conversion campaigns, run a 30-day brand awareness campaign targeted to your local geography with your best organic content. This builds the recognition and familiarity that makes subsequent conversion campaigns dramatically more effective — and costs a fraction of what most local businesses assume.</p>
+      <p>Meta's geographic targeting allows local businesses to show ads specifically to people within a defined radius of their location, or within specific zip codes that match their service area. For a <a href="https://favze.com/areas-served/elkhart-county" style="color:var(--teal);font-weight:600;">Goshen business that serves Elkhart County</a>, this means paying to reach only the 50,000 households in the relevant geography - not the entire Indiana market. The result is dramatically more efficient ad spend than any broadcast or regional advertising channel can offer.</p>
+      <div class="callout callout-teal">
+        <p><strong>The local paid social starting point:</strong> Before running lead generation or conversion campaigns, run a 30-day brand awareness campaign targeted to your local geography with your best organic content. This builds the recognition and familiarity that makes subsequent conversion campaigns dramatically more effective - and costs a fraction of what most local businesses assume.</p>
       </div>
       <h3>Retargeting for Local Businesses</h3>
-      <p>Retargeting — showing ads specifically to people who have visited your website, watched your videos, or interacted with your social profiles — is one of the highest-converting paid social strategies available to local businesses. A local customer who has already shown interest by visiting your website is three to five times more likely to convert on a retargeted ad than a cold audience member. Building and targeting warm retargeting audiences should be the foundation of any local paid social strategy.</p>
+      <p>Retargeting - showing ads specifically to people who have visited your <a href="https://favze.com/services/website-design" style="color:var(--teal);font-weight:600;">website</a>, watched your videos, or interacted with your social profiles - is one of the highest-converting paid social strategies available to local businesses. A local customer who has already shown interest by visiting your website is three to five times more likely to convert on a retargeted ad than a cold audience member.</p>
 
       <h2 id="social-proof">14. Social Proof and User-Generated Content</h2>
-      <p>The most persuasive social media content a local business can publish is content it did not create — the authentic posts, reviews, and stories that real customers share about their experience with the business. User-generated content carries a credibility that brand-created content can never replicate, because readers understand that it represents an unfiltered customer perspective rather than a marketing message.</p>
+      <p>The most persuasive social media content a local business can publish is content it did not create - the authentic posts, reviews, and stories that real customers share about their experience with the business. User-generated content carries a credibility that brand-created content can never replicate, because readers understand that it represents an unfiltered customer perspective rather than a marketing message.</p>
       <h3>Systematically Generating UGC</h3>
-      <p>User-generated content does not appear by accident. It is generated by creating experiences worth sharing, and by making it easy and natural for customers to share those experiences. A local restaurant with a photogenic dish and a branded hashtag generates more Instagram content from customers than it could ever create on its own. A local contractor that sends a follow-up text linking to a simple photo review request gets more tagged content than one that simply hopes customers will post. The UGC strategy starts with the customer experience design and extends to the specific ask and the systems that make sharing easy.</p>
+      <p>User-generated content does not appear by accident. It is generated by creating experiences worth sharing, and by making it easy and natural for customers to share those experiences. A local restaurant with a photogenic dish and a branded hashtag generates more Instagram content from customers than it could ever create on its own. A local contractor that sends a follow-up text linking to a simple photo review request gets more tagged content than one that simply hopes customers will post.</p>
 
       <h2 id="storytelling">15. Storytelling That Builds Local Trust</h2>
-      <p>Every local business has stories worth telling — customer transformations, team member journeys, community impact moments, before-and-afters, and origin stories that reveal why the business exists and what it believes. The businesses with the strongest local social media presence are not the ones with the most followers or the best production quality. They are the ones with the best stories, told consistently and specifically.</p>
+      <p>Every local business has stories worth telling - customer transformations, team member journeys, community impact moments, before-and-afters, and origin stories that reveal why the business exists and what it believes. The businesses with the strongest local social media presence are not the ones with the most followers or the best production quality. They are the ones with the best stories, told consistently and specifically.</p>
       <h3>The Customer Story Format</h3>
-      <p>The most effective storytelling format for local business social media is the customer story — a narrative that begins with a specific local customer facing a specific problem, describes how the business helped solve it, and concludes with a specific, verifiable outcome. This format works because it is local, specific, and human. It is not a testimonial — it is a story, with a real person at the center of it. And stories, as every local business that has tested this knows, consistently outperform promotional content in engagement, reach, and conversion.</p>
+      <p>The most effective storytelling format for local business social media is the customer story - a narrative that begins with a specific local customer facing a specific problem, describes how the business helped solve it, and concludes with a specific, verifiable outcome. This format works because it is local, specific, and human. Stories consistently outperform promotional content in engagement, reach, and conversion. Read more in our <a href="https://favze.com/articles/brand-positioning" style="color:var(--teal);font-weight:600;">Brand Positioning pillar</a>.</p>
 
       <h2 id="social-seo">16. The Social Media and Local SEO Connection</h2>
-      <p>Social media and local search are more connected than most local businesses realize. While social media links do not directly boost search rankings, the indirect effects are significant: branded search volume driven by social media presence, the link-building that results from social content being shared and referenced, the Google Business Profile activity that is partly fueled by social engagement, and the review generation that social presence accelerates all contribute to local search performance.</p>
+      <p>Social media and local search are more connected than most local businesses realize. While social media links do not directly boost search rankings, the indirect effects are significant: branded search volume driven by social media presence, the link-building that results from social content being shared and referenced, the Google Business Profile activity that is partly fueled by social engagement, and the review generation that social presence accelerates all contribute to <a href="https://favze.com/services/search-engine-optimization" style="color:var(--teal);font-weight:600;">local search performance</a>.</p>
       <h3>Keywords in Social Content</h3>
-      <p>Social media posts that include the same local keyword phrases that potential customers use to search for your category — "Goshen plumber," "Elkhart County landscaping," "Northern Indiana financial planning" — create additional indexed content associated with your business across platforms that AI discovery systems and search engines can reference. This is a simple, underutilized SEO benefit of consistent, locally specific social content.</p>
+      <p>Social media posts that include the same local keyword phrases that potential customers use to search for your category - "Goshen plumber," "<a href="https://favze.com/areas-served/elkhart-county" style="color:var(--teal);font-weight:600;">Elkhart County</a> landscaping," "Northern Indiana financial planning" - create additional indexed content associated with your business across platforms that AI discovery systems and search engines can reference. This is a simple, underutilized benefit of consistent, locally specific social content.</p>
 
       <h2 id="analytics">17. Analytics That Actually Matter Locally</h2>
-      <p>Most local businesses that track social media metrics at all track the wrong ones. Follower count, likes, and impressions are vanity metrics — they feel good and mean little. The metrics that indicate whether social media is actually driving business outcomes for a local business are different, and almost none of the standard social media management tools surface them clearly.</p>
+      <p>Most local businesses that track social media metrics at all track the wrong ones. Follower count, likes, and impressions are vanity metrics - they feel good and mean little. The metrics that indicate whether social media is actually driving business outcomes for a local business are different, and almost none of the standard social media management tools surface them clearly.</p>
       <h3>The Local Business Metrics That Matter</h3>
-      <p>Profile visits and website clicks from social media indicate whether content is driving people to take the next step toward doing business. Direct messages and phone calls attributed to social media indicate whether the platform is generating direct inquiry. Reach growth in the local area indicates whether the business is expanding its share of the local community's attention. Review mentions of social media indicate whether social presence is influencing customer decisions. And revenue attributed to social-sourced leads — tracked through a simple intake question of how customers found you — is the ultimate metric that tells whether the investment is paying for itself.</p>
+      <p>Profile visits and website clicks from social media indicate whether content is driving people to take the next step toward doing business. Direct messages and phone calls attributed to social media indicate whether the platform is generating direct inquiry. Reach growth in the local area indicates whether the business is expanding its share of the local community's attention. Revenue attributed to social-sourced leads - tracked through a simple intake question of how customers found you - is the ultimate metric that tells whether the investment is paying for itself.</p>
 
       <h2 id="consistency-system">18. Building a Sustainable Consistency System</h2>
       <p>The most common failure mode in local business social media is inconsistency driven by competing demands. The business gets busy, the posting schedule slips, the account goes quiet for two weeks, and the momentum built by consistent content evaporates. Building a system that makes consistency possible regardless of how busy the business gets is more valuable than any individual piece of content strategy.</p>
       <h3>The Minimum Viable Posting Schedule</h3>
-      <p>For most local businesses, the minimum posting frequency to maintain meaningful social presence is three times per week on one primary platform, plus weekly posts on Google Business Profile. This is achievable for any local business with a one-hour weekly investment in content planning and creation. Below that threshold, the algorithm treats the account as inactive and dramatically limits its reach. Above it, the returns increase roughly linearly with additional posts up to about five or six per week, after which diminishing returns set in for most local audiences.</p>
+      <p>For most local businesses, the minimum posting frequency to maintain meaningful social presence is three times per week on one primary platform, plus weekly posts on Google Business Profile. This is achievable for any local business with a one-hour weekly investment in content planning and creation. Below that threshold, the algorithm treats the account as inactive and dramatically limits its reach.</p>
       <div class="insight-box">
         <span class="insight-box-label">The Content Bank System</span>
-        <p>The businesses with the most consistent local social media presence almost all use some version of a content bank — a folder of photos, videos, and post ideas collected continuously throughout the week that can be drawn on when it is time to create and schedule content. A team member who photographs a completed project, saves a customer quote from an email, or captures a before-and-after with their phone is building the content bank that makes consistent posting possible without starting from scratch every week.</p>
+        <p>The businesses with the most consistent local social media presence almost all use some version of a content bank - a folder of photos, videos, and post ideas collected continuously throughout the week that can be drawn on when it is time to create and schedule content. A team member who photographs a completed project, saves a customer quote from an email, or captures a before-and-after with their phone is building the content bank that makes consistent posting possible without starting from scratch every week.</p>
       </div>
 
       <h2 id="social-dm">19. Converting Followers Into Customers Through DMs and Comments</h2>
-      <p>The conversion that social media enables most directly is not through a post to a landing page to a form — it is through the direct message conversation that happens when a local customer sees your content, recognizes that you might be the answer to their problem, and reaches out. Managing those conversations well — responding quickly, personally, and with a clear next step — is one of the highest-leverage sales activities a local business engages in on social media.</p>
+      <p>The conversion that social media enables most directly is not through a post to a landing page to a form - it is through the direct message conversation that happens when a local customer sees your content, recognizes that you might be the answer to their problem, and reaches out. Managing those conversations well - responding quickly, personally, and with a clear next step - is one of the highest-leverage sales activities a local business engages in on social media.</p>
       <h3>The Response Speed Advantage</h3>
-      <p>Local businesses that respond to social media messages within one hour convert at dramatically higher rates than businesses that respond within a day. This is partly because the local customer who messages a business is often also messaging two or three competitors simultaneously, and the first business to respond with a genuine, helpful reply wins the conversation. Setting up mobile notifications for social media messages and treating them with the same urgency as a phone call is one of the simplest conversion rate improvements available to any local business with an active social presence.</p>
+      <p>Local businesses that respond to social media messages within one hour convert at dramatically higher rates than businesses that respond within a day. The local customer who messages a business is often also messaging two or three competitors simultaneously, and the first business to respond with a genuine, helpful reply wins the conversation. Setting up mobile notifications for social media messages and treating them with the same urgency as a phone call is one of the simplest conversion rate improvements available to any local business with an active social presence.</p>
 
       <h2 id="roadmap">20. The Social Media Strategy Roadmap for Local Businesses</h2>
-      <p>For local businesses building or rebuilding their social media presence, sequence matters. This roadmap structures the investment so each phase builds on the last — and so that consistency compounds rather than collapses under its own weight.</p>
+      <p>For local businesses building or rebuilding their <a href="https://favze.com/services/social-media-marketing" style="color:var(--teal);font-weight:600;">social media presence</a>, sequence matters. This roadmap structures the investment so each phase builds on the last - and so that consistency compounds rather than collapses under its own weight.</p>
       <div class="phase-grid">
         <div class="phase-card">
-          <div class="phase-card-header"><div class="phase-num">01</div><div class="phase-title">Foundation and Platform Selection</div><span class="phase-time">Weeks 1–2</span></div>
+          <div class="phase-card-header"><div class="phase-num">01</div><div class="phase-title">Foundation and Platform Selection</div><span class="phase-time">Phase One</span></div>
           <div class="phase-card-body"><p>Choose your primary and secondary platforms based on where your specific local customer is concentrated. Fully optimize your profiles with local keywords, service area, and a clear brand voice. Audit your existing content and delete anything inconsistent with your current brand. Set up Google Business Profile for weekly posting. Define your five content pillars and begin building your content bank.</p></div>
         </div>
         <div class="phase-card">
-          <div class="phase-card-header"><div class="phase-num">02</div><div class="phase-title">Consistency and Content System</div><span class="phase-time">Months 1–2</span></div>
+          <div class="phase-card-header"><div class="phase-num">02</div><div class="phase-title">Consistency and Content System</div><span class="phase-time">Phase Two</span></div>
           <div class="phase-card-body"><p>Establish your minimum viable posting schedule and batch-and-schedule workflow. Build a 30-day content calendar anchored to local events and seasonal rhythms. Begin collecting customer stories and UGC systematically. Start posting short-form video, even at minimal production quality. Track all direct messages and comment inquiries with a response-time target of under one hour.</p></div>
         </div>
         <div class="phase-card">
-          <div class="phase-card-header"><div class="phase-num gold">03</div><div class="phase-title">Community and Engagement</div><span class="phase-time">Months 2–4</span></div>
-          <div class="phase-card-body"><p>Join and actively participate in two or three local Facebook groups and your relevant Nextdoor neighborhoods. Begin engaging with local community organizations, other businesses, and local events on social. Develop your first thought leadership content series — a recurring format built around your specific local expertise. Start building local LinkedIn connections if you serve a B2B market.</p></div>
+          <div class="phase-card-header"><div class="phase-num">03</div><div class="phase-title">Community and Engagement</div><span class="phase-time">Phase Three</span></div>
+          <div class="phase-card-body"><p>Join and actively participate in two or three local Facebook groups and your relevant Nextdoor neighborhoods. Begin engaging with local community organizations, other businesses, and local events on social. Develop your first thought leadership content series - a recurring format built around your specific local expertise. Start building local LinkedIn connections if you serve a B2B market.</p></div>
         </div>
         <div class="phase-card">
-          <div class="phase-card-header"><div class="phase-num gold">04</div><div class="phase-title">Paid Social and Amplification</div><span class="phase-time">Months 3–6</span></div>
+          <div class="phase-card-header"><div class="phase-num">04</div><div class="phase-title">Paid Social and Amplification</div><span class="phase-time">Phase Four</span></div>
           <div class="phase-card-body"><p>Launch a 30-day brand awareness campaign using your best-performing organic content, targeted to your local geography. Build retargeting audiences from website visitors and video viewers. Test one lead generation campaign format with a compelling local offer. Set up conversion tracking so you can connect social ad spend to actual leads and revenue. Review analytics monthly and double down on what is resonating.</p></div>
         </div>
         <div class="phase-card">
-          <div class="phase-card-header"><div class="phase-num teal">05</div><div class="phase-title">Compounding Local Authority</div><span class="phase-time">Month 9+</span></div>
-          <div class="phase-card-body"><p>By month nine, your social presence should be generating consistent inbound inquiries, recognizable community presence, and organic referrals from followers who share your content with friends. Begin cross-promoting with complementary local businesses. Expand your video presence. Develop a UGC program that systematically generates customer content. Measure what percentage of new customers discovered or validated your business through social media — this is your social ROI indicator.</p></div>
+          <div class="phase-card-header"><div class="phase-num teal">05</div><div class="phase-title">Compounding Local Authority</div><span class="phase-time">Phase Five</span></div>
+          <div class="phase-card-body"><p>By phase five, your social presence should be generating consistent inbound inquiries, recognizable community presence, and organic referrals from followers who share your content with friends. Begin cross-promoting with complementary local businesses. Expand your video presence. Develop a UGC program that systematically generates customer content. Measure what percentage of new customers discovered or validated your business through social media - this is your social ROI indicator.</p></div>
         </div>
       </div>
-      <div class="callout-gold callout">
-        <p><strong>The compounding principle for local social media:</strong> Social media authority builds slowly and then all at once. The local business that posts consistently for twelve months will have built an audience, a content library, a community presence, and a search footprint that took twelve months to build — and is nearly impossible for a competitor to replicate quickly. The competitive moat of a consistent, locally embedded social media presence is one of the most durable advantages in local business. Start earlier than feels necessary, and stay consistent longer than feels immediately rewarding.</p>
+      <div class="callout callout-teal">
+        <p><strong>The compounding principle for local social media:</strong> Social media authority builds slowly and then all at once. The local business that posts consistently for twelve months will have built an audience, a content library, a community presence, and a search footprint that took twelve months to build - and is nearly impossible for a competitor to replicate quickly. Start earlier than feels necessary, and stay consistent longer than feels immediately rewarding.</p>
       </div>
 
       <div class="section-divider"></div>
+
       <div class="articles-section-header">
-        <div class="articles-section-icon">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2l2.5 5L18 7.8l-4 3.9.95 5.5L10 14.7l-4.95 2.5.95-5.5L2 7.8l5.5-.8z" stroke="#0A89A3" stroke-width="1.5" stroke-linejoin="round"/></svg>
-        </div>
+        <div class="articles-section-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2l2.5 5L18 7.8l-4 3.9.95 5.5L10 14.7l-4.95 2.5.95-5.5L2 7.8l5.5-.8z" stroke="#0A89A3" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
         <h2 class="articles-section-title" style="margin-top:0;border-top:none;padding-top:0">Social Media Strategy Articles</h2>
-        <span class="articles-section-count" id="articleCount">Loading…</span>
+        <span class="articles-section-count" id="articleCount">Loading...</span>
       </div>
-      <div id="noResults" style="display:none"></div>
       <div id="articleFeed"></div>
       <div class="coming-more" id="comingMore">
         <div class="coming-more-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2l2.5 5L18 7.8l-4 3.9.95 5.5L10 14.7l-4.95 2.5.95-5.5L2 7.8l5.5-.8z" stroke="#0A89A3" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
@@ -478,10 +569,11 @@ footer{background:var(--dark);padding:56px 5% 0;border-top:1px solid rgba(255,25
       <div id="emptyState" style="display:none;" class="empty-state">
         <h4>Social Media Strategy Articles Coming Soon</h4>
         <p>Tactical guides on Facebook, Instagram, Nextdoor, paid social, short-form video, and building a local social presence that actually converts.</p>
-        <a href="https://favze.com/contact" class="empty-cta">Get Notified <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="https://favze.com/free-consultation" class="empty-cta">Get Notified <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
     </div>
   </main>
+
   <aside class="sidebar">
     <div class="sidebar-card sidebar-toc-card">
       <div class="sidebar-card-hd">On This Page</div>
@@ -500,9 +592,9 @@ footer{background:var(--dark);padding:56px 5% 0;border-top:1px solid rgba(255,25
           <a href="#google-business">Google Business Profile</a>
           <a href="#short-form-video">Short-Form Video</a>
           <a href="#paid-social">Paid Social Ads</a>
-          <a href="#social-proof">Social Proof & UGC</a>
+          <a href="#social-proof">Social Proof &amp; UGC</a>
           <a href="#storytelling">Storytelling</a>
-          <a href="#social-seo">Social & SEO Connection</a>
+          <a href="#social-seo">Social &amp; SEO Connection</a>
           <a href="#analytics">Analytics That Matter</a>
           <a href="#consistency-system">Consistency System</a>
           <a href="#social-dm">Converting Through DMs</a>
@@ -510,16 +602,19 @@ footer{background:var(--dark);padding:56px 5% 0;border-top:1px solid rgba(255,25
         </div>
       </div>
     </div>
+
     <div class="sidebar-cta">
       <span class="sc-lbl">Free. No Obligation.</span>
       <h3>Ready to Stop Posting and Start Connecting?</h3>
-      <p>Talk directly to Riley. Get a social media strategy built around your business and your Northern Indiana community.</p>
-      <a href="https://favze.com/contact">Book Free Consultation <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 6.5h9M7.5 3l3.5 3.5L7.5 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <p>Talk directly to Riley. Get a <a href="https://favze.com/services/social-media-marketing" style="color:rgba(255,255,255,.75);text-decoration:underline;text-underline-offset:2px;display:inline;background:none;padding:0;border-radius:0;font-size:inherit;font-weight:inherit;">social media strategy</a> built around your business and your <a href="https://favze.com/areas-served/northern-indiana" style="color:rgba(255,255,255,.75);text-decoration:underline;text-underline-offset:2px;display:inline;background:none;padding:0;border-radius:0;font-size:inherit;font-weight:inherit;">Northern Indiana</a> community.</p>
+      <a href="https://favze.com/free-consultation" class="sc-btn">Book Free Consultation <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 6.5h9M7.5 3l3.5 3.5L7.5 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
+
     <div class="sidebar-card">
       <div class="sidebar-card-hd">Browse All Pillars</div>
       <div class="sidebar-card-bd"><div class="pillar-links" id="sidebarPillarList"></div></div>
     </div>
+
     <div class="sidebar-card">
       <div class="sidebar-card-hd">Written By</div>
       <div class="sidebar-card-bd">
@@ -536,87 +631,193 @@ footer{background:var(--dark);padding:56px 5% 0;border-top:1px solid rgba(255,25
     </div>
   </aside>
 </div>
+
+<!-- FOOTER -->
 <footer>
   <div class="ft-inner">
     <div class="ft-top">
       <div>
-        <div style="display:inline-flex;align-items:center;background:#fff;border-radius:8px;padding:5px 12px"><span style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.35rem;color:#064187;letter-spacing:.04em">FAVZE</span></div>
-        <p class="fb-desc">Favze Digital Marketing is Northern Indiana and Michiana's affordable, full-service local digital marketing agency. Founded by Riley Catalano. Based in Middlebury, Elkhart County, Indiana.</p>
+        <a href="https://favze.com/" style="display:inline-flex;align-items:center;background:#fff;border-radius:8px;padding:5px 12px">
+          <img src="https://favze.com/hubfs/favze-logo-black-header.svg" alt="Favze Digital Marketing" style="height:26px;width:auto" onerror="this.style.display='none';this.nextSibling.style.display='block'">
+          <span style="display:none;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.35rem;color:#064187;letter-spacing:.04em;">FAVZE</span>
+        </a>
+        <p class="fb-desc"><a href="https://favze.com/" style="color:rgba(255,255,255,.42)">Favze Digital Marketing</a> is <a href="https://favze.com/areas-served/northern-indiana" style="color:rgba(255,255,255,.42)">Northern Indiana</a> and <a href="https://favze.com/areas-served/michiana" style="color:rgba(255,255,255,.42)">Michiana's</a> affordable, full-service <a href="https://favze.com/services" style="color:rgba(255,255,255,.42)">local digital marketing agency</a>. Founded by Riley Catalano. Based in <a href="https://favze.com/areas-served/elkhart-county" style="color:rgba(255,255,255,.42)">Middlebury, Elkhart County</a>, Indiana.</p>
         <div class="ft-social">
-          <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer nofollow"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.514c-1.491 0-1.956.93-1.956 1.884v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg></a>
-          <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer nofollow"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
-          <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer nofollow"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=61581511343836" target="_blank" rel="noopener noreferrer nofollow" aria-label="Favze on Facebook"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.514c-1.491 0-1.956.93-1.956 1.884v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg></a>
+          <a href="https://www.instagram.com/favzemarketing/" target="_blank" rel="noopener noreferrer nofollow" aria-label="Favze on Instagram"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+          <a href="https://www.linkedin.com/company/favze-digital-marketing/" target="_blank" rel="noopener noreferrer nofollow" aria-label="Favze on LinkedIn"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <a href="https://x.com/favzemarketing" target="_blank" rel="noopener noreferrer nofollow" aria-label="Favze on X"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          <a href="https://www.youtube.com/@Favze" target="_blank" rel="noopener noreferrer nofollow" aria-label="Favze on YouTube"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+          <a href="https://www.threads.com/@favzemarketing" target="_blank" rel="noopener noreferrer nofollow" aria-label="Favze on Threads"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16.3 11.3c-.1 0-.2-.1-.2-.1-.1-2.6-1.5-4-3.9-4-1.4 0-2.6.6-3.3 1.7l1.3.9c.5-.8 1.4-1 2-1 .8 0 1.4.2 1.7.7.3.3.5.8.5 1.3-.7-.1-1.4-.2-2.2-.1-2.2.1-3.7 1.4-3.6 3.2 0 .9.5 1.7 1.3 2.2.7.4 1.5.6 2.4.6 1.2-.1 2.1-.5 2.7-1.3.5-.6.8-1.4.9-2.4.6.3 1 .8 1.2 1.3.4.9.4 2.4-.8 3.6-1.1 1.1-2.3 1.5-4.3 1.5-2.1 0-3.8-.7-4.8-2S5.7 14.3 5.7 12c0-2.3.5-4.1 1.5-5.4 1.1-1.3 2.7-2 4.8-2 2.2 0 3.8.7 4.9 2 .5.7.9 1.5 1.2 2.5l1.5-.4c-.3-1.2-.8-2.2-1.5-3.1-1.3-1.7-3.3-2.6-6-2.6-2.6 0-4.7.9-6 2.6C4.9 7.2 4.3 9.3 4.3 12s.6 4.8 1.9 6.4c1.4 1.7 3.4 2.6 6 2.6 2.3 0 4-.6 5.3-2 1.8-1.8 1.7-4 1.1-5.4-.4-.9-1.2-1.7-2.3-2.3zm-4 3.8c-1 .1-2-.4-2-1.3 0-.7.5-1.5 2.1-1.6h.5c.6 0 1.1.1 1.6.2-.2 2.3-1.3 2.7-2.2 2.7z"/></svg></a>
+          <a href="https://www.pinterest.com/favzemarketing/" target="_blank" rel="noopener noreferrer nofollow" aria-label="Favze on Pinterest"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg></a>
+          <a href="https://www.google.com/maps/place/Favze+Digital+Marketing/@41.5780944,-86.6661199,9z/data=!3m1!4b1!4m6!3m5!1s0x8fd1e3cba3bc4677:0x44492c880fb69085!8m2!3d41.579986!4d-86.005348!16s%2Fg%2F11yv5nhx0f?entry=ttu&g_ep=EgoyMDI2MDQyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer nofollow" aria-label="Google Business Profile"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21.805 10.023H12v3.954h5.617c-.242 1.322-.99 2.443-2.12 3.198v2.652h3.425c2.005-1.842 3.162-4.553 3.162-7.757 0-.772-.074-1.517-.279-2.047zM12 22c2.655 0 4.883-.879 6.511-2.38l-3.425-2.652c-.878.591-2.01.94-3.086.94-2.372 0-4.385-1.601-5.104-3.752H3.37v2.741C4.987 19.81 8.245 22 12 22zM6.896 14.156A5.865 5.865 0 016.5 12c0-.748.137-1.47.396-2.156V7.103H3.37A9.988 9.988 0 002 12c0 1.614.392 3.14 1.37 4.897l3.526-2.741zM12 6.092c1.338 0 2.535.46 3.479 1.36l2.607-2.607C16.476 3.337 14.393 2.5 12 2.5 8.245 2.5 4.987 4.69 3.37 7.897l3.526 2.747C7.615 7.693 9.628 6.092 12 6.092z"/></svg></a>
+          <a href="https://nextdoor.com/page/favze-digital-marketing/" target="_blank" rel="noopener noreferrer nofollow" aria-label="Favze on Nextdoor"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6 2h3v3.5L12 3l10 9h-2v9H4v-9H2l4-3.6V2zm1.5 1.5v3.8L12 4.8l-4.5 3.5zM14 21v-5h-4v5H5.5v-7.5h13V21H14z"/></svg></a>
         </div>
       </div>
       <div class="fc">
-        <h4>Services</h4>
+        <h4>Affordable Services</h4>
         <ul>
-          <li><a href="https://favze.com/social-media-marketing">Social Media Marketing</a></li>
-          <li><a href="https://favze.com/search-engine-optimization">SEO</a></li>
-          <li><a href="https://favze.com/answer-engine-optimization">AEO</a></li>
-          <li><a href="https://favze.com/generative-engine-optimization">GEO</a></li>
-          <li><a href="https://favze.com/ai-optimization">AI Optimization</a></li>
-          <li><a href="https://favze.com/local-seo">Local SEO</a></li>
-          <li><a href="https://favze.com/email-marketing">Email Marketing</a></li>
-          <li><a href="https://favze.com/paid-search-ads-sem">Paid Search Ads</a></li>
-          <li><a href="https://favze.com/website-design">Website Design</a></li>
+          <li><a href="https://favze.com/services/social-media-marketing">Social Media Marketing</a></li>
+          <li><a href="https://favze.com/services/search-engine-optimization">SEO</a></li>
+          <li><a href="https://favze.com/services/answer-engine-optimization">AEO</a></li>
+          <li><a href="https://favze.com/services/generative-engine-optimization">GEO</a></li>
+          <li><a href="https://favze.com/services/ai-optimization">AI Optimization</a></li>
+          <li><a href="https://favze.com/services/local-seo">Local SEO</a></li>
+          <li><a href="https://favze.com/services/email-marketing">Email Marketing</a></li>
+          <li><a href="https://favze.com/services/paid-search-ads">Paid Search Ads</a></li>
+          <li><a href="https://favze.com/services/paid-social-media-ads">Paid Social Ads</a></li>
+          <li><a href="https://favze.com/services/website-design">Website Design</a></li>
+          <li><a href="https://favze.com/services/hubspot-setup">HubSpot Setup</a></li>
+          <li><a href="https://favze.com/services/short-message-service-sms">SMS Marketing</a></li>
+        </ul>
+      </div>
+      <div class="fc">
+        <h4>Articles</h4>
+        <ul>
+          <li><a href="https://favze.com/articles/content-marketing">Content Marketing</a></li>
+          <li><a href="https://favze.com/articles/social-media-strategy">Social Media Strategy</a></li>
+          <li><a href="https://favze.com/articles/search-visibility">Search Visibility &amp; Local Discovery</a></li>
+          <li><a href="https://favze.com/articles/brand-positioning">Brand Positioning &amp; Community Authority</a></li>
+          <li><a href="https://favze.com/articles">All Articles</a></li>
         </ul>
       </div>
       <div class="fc">
         <h4>Explore</h4>
         <ul>
-          <li><a href="https://favze.com">Home</a></li>
-          <li><a href="https://favze.com/why-choose-us">Why Choose Favze</a></li>
+          <li><a href="https://favze.com/">Home</a></li>
+          <li><a href="https://favze.com/why-us">Why Choose Favze</a></li>
           <li><a href="https://favze.com/about">About</a></li>
           <li><a href="https://favze.com/services">All Services</a></li>
-          <li><a href="https://favze.com/digital-marketing-faq">FAQ</a></li>
-          <li><a href="https://favze.com/favze-insights">Articles</a></li>
+          <li><a href="https://favze.com/faq">FAQ</a></li>
+          <li><a href="https://favze.com/articles">Articles</a></li>
           <li><a href="https://favze.com/areas-served">Areas Served</a></li>
+          <li><a href="https://favze.com/free-consultation">Free Consultation</a></li>
         </ul>
         <div style="margin-top:22px">
           <h4>Contact</h4>
           <div class="fcon">
             <a href="mailto:riley@favze.com"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="1" y="2" width="11" height="9" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M1 4.5l5.5 3.5L12 4.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>riley@favze.com</a>
             <a href="tel:+15747475012"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 1.5s1-.5 2 1l1 1.5s.5 1-.5 1.9L4 6.4s-.4.4 0 1.3S5.6 9.8 7.5 10.8c1 .5 1 0 1 0l.5-.5c.9-.9 1.9-.5 1.9-.5L12.4 11c1.4 1 1 1.9 1 1.9-.5.9-2.4 1.4-3.8.5" stroke="currentColor" stroke-width="1.2"/></svg>574-747-5012</a>
-            <a href="https://favze.com/contact"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="1" y="1" width="11" height="11" rx="2" stroke="currentColor" stroke-width="1.2"/><path d="M3.5 5h6M3.5 7.5h4" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>Free Consultation</a>
+            <a href="https://favze.com/free-consultation"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="1" y="1" width="11" height="11" rx="2" stroke="currentColor" stroke-width="1.2"/><path d="M3.5 5h6M3.5 7.5h4" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>Free Consultation</a>
           </div>
         </div>
       </div>
     </div>
-    <div class="ft-serving-strip">
-      <div class="ft-serving-inner">
-        <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
-          <span class="ft-serving-label">SERVING</span>
-          <div class="ft-serving-locations">
-            <a href="https://favze.com/northern-indiana-michiana-marketing-agency">Northern Indiana</a><span class="ft-serving-dot"></span>
-            <a href="https://favze.com/michiana-marketing-agency">Michiana</a><span class="ft-serving-dot"></span>
-            <a href="https://favze.com/elkhart-county-marketing-agency">Elkhart County</a><span class="ft-serving-dot"></span>
-            <a href="https://favze.com/goshen-marketing-agency">Goshen</a><span class="ft-serving-dot"></span>
-            <a href="https://favze.com/south-bend-marketing-agency">South Bend</a><span class="ft-serving-dot"></span>
-            <span class="ft-serving-muted">and Surrounding Areas</span>
-          </div>
-        </div>
-        <div class="ft-serving-right">
-          <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 0.5C3.07 0.5 1.5 2.07 1.5 4c0 2.52 3.5 5.5 3.5 5.5s3.5-2.98 3.5-5.5C8.5 2.07 6.93 0.5 5 0.5z" fill="rgba(10,137,163,.6)" stroke="#0A89A3" stroke-width="0.9"/><circle cx="5" cy="4" r="1.1" fill="#0A89A3"/></svg>
-          <span>BASED IN MIDDLEBURY, ELKHART COUNTY, INDIANA</span>
+
+    <div class="ft-scroll-strip">
+      <div class="ft-scroll-label">SERVING</div>
+      <div class="ft-scroll-track-wrap">
+        <div class="ft-scroll-track">
+          <a href="https://favze.com/areas-served/elkhart-county">Elkhart</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/elkhart-county">Goshen</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/elkhart-county">Middlebury</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/elkhart-county">Nappanee</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/st-joseph-county">South Bend</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/st-joseph-county">Mishawaka</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/st-joseph-county">Granger</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/lagrange-county">Shipshewana</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/marshall-county">Plymouth</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/kosciusko-county">Warsaw</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/allen-county">Fort Wayne</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/noble-county">Kendallville</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/berrien-county">Niles</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/berrien-county">Benton Harbor</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/cass-county-michigan">Cassopolis</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/howard-county">Kokomo</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/elkhart-county">Elkhart</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/elkhart-county">Goshen</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/st-joseph-county">South Bend</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/st-joseph-county">Mishawaka</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/marshall-county">Plymouth</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/kosciusko-county">Warsaw</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/allen-county">Fort Wayne</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/berrien-county">Niles</a><span class="ft-scroll-dot">·</span><a href="https://favze.com/areas-served/cass-county-michigan">Cassopolis</a><span class="ft-scroll-dot">·</span>
         </div>
       </div>
+      <div class="ft-scroll-right">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 0.5C3.07 0.5 1.5 2.07 1.5 4c0 2.52 3.5 5.5 3.5 5.5s3.5-2.98 3.5-5.5C8.5 2.07 6.93 0.5 5 0.5z" fill="rgba(10,137,163,.6)" stroke="#0A89A3" stroke-width="0.9"/><circle cx="5" cy="4" r="1.1" fill="#0A89A3"/></svg>
+        <span>MIDDLEBURY, IN</span>
+      </div>
     </div>
+
+    <div class="ft-trust-bar">
+      <div class="ft-trust-inner">
+        <div class="ft-trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z" stroke="var(--teal)" stroke-width="1.8" stroke-linejoin="round"/></svg><span>100+ Industry Certifications</span></div>
+        <div class="ft-trust-sep"></div>
+        <div class="ft-trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="var(--teal)" stroke-width="1.8"/><circle cx="12" cy="9" r="2.5" stroke="var(--teal)" stroke-width="1.6"/></svg><span>Locally Owned &amp; Operated</span></div>
+        <div class="ft-trust-sep"></div>
+        <div class="ft-trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="var(--teal)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="var(--teal)" stroke-width="1.8"/></svg><span>No Long-Term Contracts</span></div>
+        <div class="ft-trust-sep"></div>
+        <div class="ft-trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="var(--teal)" stroke-width="1.8"/><path d="M8 12h8M12 8v8" stroke="var(--teal)" stroke-width="2" stroke-linecap="round"/></svg><a href="https://favze.com/free-consultation" style="color:rgba(255,255,255,.5)">Free Consultation Available</a></div>
+      </div>
+    </div>
+
     <div class="fb-bot">
       <p>&copy; 2026 Favze Digital Marketing. All rights reserved.</p>
-      <div style="display:flex;gap:18px;flex-wrap:wrap"><a href="https://favze.com/privacy-policy">Privacy Policy</a><a href="https://favze.com/terms-of-use">Terms of Use</a></div>
+      <div style="display:flex;gap:18px;flex-wrap:wrap">
+        <a href="https://favze.com/privacy-policy">Privacy Policy</a>
+        <a href="https://favze.com/terms-of-use">Terms of Use</a>
+      </div>
     </div>
   </div>
 </footer>
+
 <script>
-var ALL_PILLARS={'content-marketing':{label:'Content Marketing',dot:'#064187'},'social-media-strategy':{label:'Social Media Strategy',dot:'#0A89A3'},'search-visibility':{label:'Search Visibility & Local Discovery',dot:'#064187'},'brand-positioning':{label:'Brand Positioning & Community Authority',dot:'#0A89A3'}};
-var THIS_PILLAR='social-media-strategy';
-var allArticles=[];
-fetch('https://favze.com/articles.json').then(function(r){return r.json();}).then(function(data){allArticles=data;init();}).catch(function(){allArticles=[];init();});
-function init(){renderFeed();renderSidebar();bindEvents();}
-function renderFeed(){var arts=allArticles.filter(function(a){return a.pillar===THIS_PILLAR;});var countEl=document.getElementById('articleCount');var feed=document.getElementById('articleFeed');var coming=document.getElementById('comingMore');var empty=document.getElementById('emptyState');countEl.textContent=arts.length+' Article'+(arts.length!==1?'s':'');if(arts.length===0){feed.innerHTML='';coming.style.display='none';empty.style.display='flex';return;}empty.style.display='none';feed.innerHTML='<div class="articles-list">'+arts.map(function(a){var initials=a.author.split(' ').map(function(w){return w[0];}).join('');var url='https://favze.com/articles/'+a.pillar+'/'+a.slug;return '<a href="'+url+'" class="article-card"><div class="article-card-top"><span class="a-tag">Social Media Strategy</span><span class="a-dot"></span><span class="a-read-time">'+a.readTime+' min read</span></div><h3>'+a.title+'</h3><p class="desc">'+a.description+'</p><div class="a-footer"><div class="a-author"><div class="a-author-avatar">'+initials+'</div><span class="a-author-name">'+a.author+'</span></div><span class="a-read-link">Read Article <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div></a>';}).join('')+'</div>';coming.style.display='flex';}
-function renderSidebar(){var list=document.getElementById('sidebarPillarList');if(!list)return;var total=allArticles.length;var html='<a href="https://favze.com/favze-insights" class="pillar-link"><span class="pl-dot" style="background:#333"></span>All Articles<span class="pl-count">'+total+'</span></a>';Object.keys(ALL_PILLARS).forEach(function(p){var cfg=ALL_PILLARS[p];var count=allArticles.filter(function(a){return a.pillar===p;}).length;html+='<a href="https://favze.com/articles/'+p+'" class="pillar-link'+(p===THIS_PILLAR?' active':'')+'"><span class="pl-dot" style="background:'+cfg.dot+'"></span>'+cfg.label+'<span class="pl-count">'+count+'</span></a>';});list.innerHTML=html;}
-function bindEvents(){var fill=document.getElementById('progressFill');if(fill){window.addEventListener('scroll',function(){var doc=document.documentElement;var s=doc.scrollTop||document.body.scrollTop;var t=doc.scrollHeight-doc.clientHeight;fill.style.width=(t>0?(s/t*100):0)+'%';},{passive:true});}var sections=document.querySelectorAll('.pillar-body h2[id]');var tocLinks=document.querySelectorAll('.sidebar-toc a');if(sections.length&&tocLinks.length){var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){tocLinks.forEach(function(l){l.classList.remove('active');});var a=document.querySelector('.sidebar-toc a[href="#'+e.target.id+'"]');if(a)a.classList.add('active');}});},{rootMargin:'-15% 0px -75% 0px'});sections.forEach(function(s){obs.observe(s);});}var hb=document.getElementById('hb'),mm=document.getElementById('mm');if(hb&&mm){hb.addEventListener('click',function(){var o=!mm.classList.contains('open');mm.classList.toggle('open',o);hb.classList.toggle('open',o);});mm.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mm.classList.remove('open');hb.classList.remove('open');});});}}
+var ALL_PILLARS = {
+  'content-marketing': { label: 'Content Marketing', dot: '#064187' },
+  'social-media-strategy': { label: 'Social Media Strategy', dot: '#0A89A3' },
+  'search-visibility': { label: 'Search Visibility & Local Discovery', dot: '#064187' },
+  'brand-positioning': { label: 'Brand Positioning & Community Authority', dot: '#0A89A3' }
+};
+var THIS_PILLAR = 'social-media-strategy';
+var FALLBACK_ARTICLES = [{"id":"blog-and-article-hierarchy-pillars-clusters-internal-linking","title":"Blog and Article Hierarchy: Pillars, Clusters, and Internal Linking","description":"Most businesses write articles one by one and wonder why their site never ranks. The issue isn't article quality - it's the lack of structure. This guide covers the three-level content hierarchy, topical authority, and the internal linking architecture that makes it all work.","pillar":"content-marketing","pillarLabel":"Content Marketing","readTime":17,"author":"Riley Catalano","date":"2025-01-01","slug":"blog-and-article-hierarchy-pillars-clusters-internal-linking","featured":true},{"id":"how-to-create-evergreen-content","title":"How to Create Evergreen Content That Brings Customers for Years","description":"Most businesses create content that disappears into the feed within hours. This guide covers exactly what evergreen content is, why it compounds in ways other marketing cannot, and precisely how to create it so it brings customers for years.","pillar":"content-marketing","pillarLabel":"Content Marketing","readTime":22,"author":"Riley Catalano","date":"2025-02-01","slug":"how-to-create-evergreen-content","featured":false},{"id":"content-repurposing-mastery-ai-era","title":"Content Repurposing Mastery: For the AI Era","description":"Most businesses publish content once and move on. The businesses dominating search and AI-generated answers are doing something smarter - producing one piece of content and turning it into ten.","pillar":"content-marketing","pillarLabel":"Content Marketing","readTime":20,"author":"Riley Catalano","date":"2026-03-01","slug":"content-repurposing-mastery-ai-era","featured":false},{"id":"what-makes-google-trust-a-website","title":"What Makes Google Trust a Website","description":"Google doesn't use a single trust score. It uses a complex, multi-layered system of signals - E-E-A-T, backlinks, technical performance, authorship, user behavior, and more.","pillar":"search-visibility","pillarLabel":"Search Visibility & Local Discovery","readTime":18,"author":"Riley Catalano","date":"2026-03-22","slug":"what-makes-google-trust-a-website","featured":true},{"id":"new-rules-online-visibility-seo-aeo-geo","title":"The New Rules of Online Visibility: SEO, AEO & GEO Mastery","description":"Search engine optimization alone is no longer a viable strategy. AEO and GEO have become non-negotiable layers of modern search visibility.","pillar":"search-visibility","pillarLabel":"Search Visibility & Local Discovery","readTime":28,"author":"Riley Catalano","date":"2026-03-01","slug":"new-rules-online-visibility-seo-aeo-geo","featured":true},{"id":"local-service-ads-fast-track-top-google","title":"Local Service Ads: Fast Track to the Top of Google","description":"Google Local Service Ads appear above everything else - the map, paid ads, organic results. Here is exactly how LSAs work.","pillar":"search-visibility","pillarLabel":"Search Visibility & Local Discovery","readTime":23,"author":"Riley Catalano","date":"2026-04-01","slug":"local-service-ads-fast-track-top-google","featured":true},{"id":"your-cute-captions-arent-searchable","title":"Your Cute Captions Aren't Searchable","description":"If your caption sounds clever but can't be searched, indexed, or matched to intent, it isn't helping your business. This is a discoverability problem - and here is exactly how to fix it across every platform you post on.","pillar":"social-media-strategy","pillarLabel":"Social Media Strategy","readTime":8,"author":"Riley Catalano","date":"2026-01-18","slug":"your-cute-captions-arent-searchable","featured":true},{"id":"complete-google-business-profile-checklist","title":"The Complete Google Business Profile Checklist","description":"Your Google Business Profile is not just a listing - it is your most powerful local search asset. Every missing photo, unlisted service, or unanswered review is lost revenue.","pillar":"search-visibility","pillarLabel":"Search Visibility & Local Discovery","readTime":12,"author":"Riley Catalano","date":"2026-01-11","slug":"complete-google-business-profile-checklist","featured":true},{"id":"how-to-create-highly-engaging-social-media-posts","title":"How Businesses Can Create Highly-Engaging Social Media Posts","description":"Most business owners treat social media like a megaphone. The businesses winning right now are smarter - they understand that people don't engage with content, they engage with content that makes them feel something. Here is how to build that, systematically.","pillar":"social-media-strategy","pillarLabel":"Social Media Strategy","readTime":10,"author":"Riley Catalano","date":"2026-02-14","slug":"how-to-create-highly-engaging-social-media-posts","featured":true},{"id":"how-to-become-local-favorite-northern-indiana-michiana","title":"How to Make Your Business the Favorite in Northern Indiana & Michiana","description":"Being known is not the same as being chosen. This is the exact playbook for building a brand that Northern Indiana and Michiana customers trust, recommend, and return to - without a national budget or a marketing department.","pillar":"brand-positioning","pillarLabel":"Brand Positioning & Community Authority","readTime":14,"author":"Riley Catalano","date":"2026-04-01","slug":"how-to-become-local-favorite-northern-indiana-michiana","featured":true}];
+var allArticles = [];
+
+fetch('https://favze.com/articles.json')
+  .then(function(r) { return r.json(); })
+  .then(function(data) { allArticles = data; init(); })
+  .catch(function() { allArticles = FALLBACK_ARTICLES; init(); });
+
+function init() { renderFeed(); renderSidebar(); bindEvents(); }
+
+function renderFeed() {
+  var arts = allArticles.filter(function(a) { return a.pillar === THIS_PILLAR; });
+  var countEl = document.getElementById('articleCount');
+  var feed = document.getElementById('articleFeed');
+  var coming = document.getElementById('comingMore');
+  var empty = document.getElementById('emptyState');
+  countEl.textContent = arts.length + ' Article' + (arts.length !== 1 ? 's' : '');
+  if (arts.length === 0) { feed.innerHTML = ''; coming.style.display = 'none'; empty.style.display = 'flex'; return; }
+  empty.style.display = 'none';
+  feed.innerHTML = '<div class="articles-list">' + arts.map(function(a) {
+    var initials = a.author.split(' ').map(function(w) { return w[0]; }).join('');
+    var url = 'https://favze.com/articles/' + a.pillar + '/' + a.slug;
+    return '<a href="' + url + '" class="article-card"><div class="article-card-top"><span class="a-tag">Social Media Strategy</span><span class="a-dot"></span><span class="a-read-time">' + a.readTime + ' min read</span></div><h3>' + a.title + '</h3><p class="desc">' + a.description + '</p><div class="a-footer"><div class="a-author"><div class="a-author-avatar">' + initials + '</div><span class="a-author-name">' + a.author + '</span></div><span class="a-read-link">Read Article <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div></a>';
+  }).join('') + '</div>';
+  coming.style.display = 'flex';
+}
+
+function renderSidebar() {
+  var list = document.getElementById('sidebarPillarList');
+  if (!list) return;
+  var total = allArticles.length;
+  var html = '<a href="https://favze.com/articles" class="pillar-link"><span class="pl-dot" style="background:#333"></span>All Articles<span class="pl-count">' + total + '</span></a>';
+  Object.keys(ALL_PILLARS).forEach(function(p) {
+    var cfg = ALL_PILLARS[p];
+    var count = allArticles.filter(function(a) { return a.pillar === p; }).length;
+    html += '<a href="https://favze.com/articles/' + p + '" class="pillar-link' + (p === THIS_PILLAR ? ' active' : '') + '"><span class="pl-dot" style="background:' + cfg.dot + '"></span>' + cfg.label + '<span class="pl-count">' + count + '</span></a>';
+  });
+  list.innerHTML = html;
+}
+
+function bindEvents() {
+  var fill = document.getElementById('progressFill');
+  if (fill) { window.addEventListener('scroll', function() { var doc = document.documentElement; var s = doc.scrollTop || document.body.scrollTop; var t = doc.scrollHeight - doc.clientHeight; fill.style.width = (t > 0 ? (s / t * 100) : 0) + '%'; }, { passive: true }); }
+  var sections = document.querySelectorAll('.pillar-body h2[id]');
+  var tocLinks = document.querySelectorAll('.sidebar-toc a');
+  if (sections.length && tocLinks.length) {
+    var obs = new IntersectionObserver(function(entries) { entries.forEach(function(e) { if (e.isIntersecting) { tocLinks.forEach(function(l) { l.classList.remove('active'); }); var a = document.querySelector('.sidebar-toc a[href="#' + e.target.id + '"]'); if (a) a.classList.add('active'); } }); }, { rootMargin: '-15% 0px -75% 0px' });
+    sections.forEach(function(s) { obs.observe(s); });
+  }
+  var drops = [{ trig: document.getElementById('trigServices'), pan: document.getElementById('panServices') }, { trig: document.getElementById('trigArticles'), pan: document.getElementById('panArticles') }];
+  function openPanel(trig, pan) { pan.classList.add('open'); trig.setAttribute('aria-expanded', 'true'); }
+  function closePanel(trig, pan) { pan.classList.remove('open'); trig.setAttribute('aria-expanded', 'false'); }
+  drops.forEach(function(d) {
+    if (!d.trig || !d.pan) return;
+    d.trig.addEventListener('click', function(e) { e.stopPropagation(); var isOpen = d.pan.classList.contains('open'); drops.forEach(function(x) { closePanel(x.trig, x.pan); }); if (!isOpen) openPanel(d.trig, d.pan); });
+  });
+  document.addEventListener('mousedown', function(e) { drops.forEach(function(d) { if (!d.pan.contains(e.target) && !d.trig.contains(e.target)) closePanel(d.trig, d.pan); }); });
+  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') drops.forEach(function(d) { closePanel(d.trig, d.pan); }); });
+  var hb = document.getElementById('hb'), mm = document.getElementById('mm');
+  if (hb && mm) {
+    hb.addEventListener('click', function() { var open = mm.classList.toggle('open'); hb.classList.toggle('open', open); hb.setAttribute('aria-expanded', open); mm.setAttribute('aria-hidden', !open); });
+    mm.querySelectorAll('a').forEach(function(a) { a.addEventListener('click', function() { mm.classList.remove('open'); hb.classList.remove('open'); hb.setAttribute('aria-expanded', 'false'); mm.setAttribute('aria-hidden', 'true'); }); });
+  }
+  function bindAccordion(trigId, subId) {
+    var trig = document.getElementById(trigId), sub = document.getElementById(subId);
+    if (!trig || !sub) return;
+    trig.addEventListener('click', function() { var open = sub.classList.toggle('open'); trig.classList.toggle('open', open); trig.setAttribute('aria-expanded', open); });
+  }
+  bindAccordion('mmServTrig', 'mmServSub');
+  bindAccordion('mmArtTrig', 'mmArtSub');
+}
 </script>
 </body>
 </html>
