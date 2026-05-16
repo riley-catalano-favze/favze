@@ -11,10 +11,102 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://favze.com"},{"@type":"ListItem","position":2,"name":"Articles","item":"https://favze.com/articles"},{"@type":"ListItem","position":3,"name":"Brand Positioning & Community Authority","item":"https://favze.com/articles/brand-positioning"}]}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"Brand Positioning & Community Authority for Local Businesses","description":"The master resource for brand positioning and community authority.","url":"https://favze.com/articles/brand-positioning","author":{"@type":"Person","name":"Riley Catalano","url":"https://favze.com/about"},"publisher":{"@type":"Organization","name":"Favze Digital Marketing","url":"https://favze.com"}}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://favze.com" },
+        { "@type": "ListItem", "position": 2, "name": "Articles", "item": "https://favze.com/articles" },
+        { "@type": "ListItem", "position": 3, "name": "Brand Positioning & Community Authority", "item": "https://favze.com/articles/brand-positioning" }
+      ]
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://favze.com/articles/brand-positioning",
+      "name": "Brand Positioning & Community Authority for Local Businesses | Favze Insights",
+      "headline": "Brand Positioning & Community Authority for Local Businesses",
+      "description": "The master resource for brand positioning and community authority. Category design, reputation strategy, community presence, digital PR, and how to build a brand that local customers choose by name - not by comparison.",
+      "url": "https://favze.com/articles/brand-positioning",
+      "inLanguage": "en-US",
+      "datePublished": "2025-01-01",
+      "dateModified": "2026-04-01",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://favze.com/#website",
+        "name": "Favze Insights",
+        "url": "https://favze.com/articles"
+      },
+      "publisher": { "@type": "Organization", "@id": "https://favze.com/#organization" },
+      "author": { "@type": "Person", "@id": "https://favze.com/#riley-catalano" },
+      "about": [
+        { "@type": "Thing", "name": "Brand Positioning" },
+        { "@type": "Thing", "name": "Community Authority" },
+        { "@type": "Thing", "name": "Category Design" },
+        { "@type": "Thing", "name": "Reputation Management" },
+        { "@type": "Thing", "name": "Digital PR" },
+        { "@type": "Thing", "name": "Thought Leadership" },
+        { "@type": "Thing", "name": "Local Brand Strategy" },
+        { "@type": "Thing", "name": "Referral Marketing" }
+      ],
+      "keywords": "brand positioning, community authority, category design, local brand strategy, reputation management, digital PR, thought leadership, Northern Indiana marketing, referral culture, brand equity",
+      "hasPart": [
+        {
+          "@type": "Article",
+          "name": "How to Make Your Business the Favorite in Northern Indiana & Michiana",
+          "url": "https://favze.com/articles/brand-positioning/how-to-become-local-favorite-northern-indiana-michiana"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://favze.com/articles/brand-positioning#webpage",
+      "url": "https://favze.com/articles/brand-positioning",
+      "name": "Brand Positioning & Community Authority for Local Businesses | Favze Insights",
+      "description": "The master resource for brand positioning and community authority. Category design, reputation strategy, community presence, digital PR, and how to build a brand that local customers choose by name - not by comparison.",
+      "inLanguage": "en-US",
+      "isPartOf": { "@id": "https://favze.com/#website" },
+      "publisher": { "@id": "https://favze.com/#organization" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://favze.com/#organization",
+      "name": "Favze Digital Marketing",
+      "url": "https://favze.com",
+      "logo": { "@type": "ImageObject", "url": "https://favze.com/hubfs/favze-logo-black-header.svg" },
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61581511343836",
+        "https://www.instagram.com/favzemarketing/",
+        "https://www.linkedin.com/company/favze-digital-marketing/",
+        "https://x.com/favzemarketing",
+        "https://www.youtube.com/@Favze",
+        "https://www.threads.com/@favzemarketing",
+        "https://www.pinterest.com/favzemarketing/"
+      ],
+      "founder": { "@id": "https://favze.com/#riley-catalano" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Middlebury",
+        "addressRegion": "IN",
+        "postalCode": "46540",
+        "addressCountry": "US"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://favze.com/#riley-catalano",
+      "name": "Riley Catalano",
+      "url": "https://favze.com/about",
+      "jobTitle": "Founder",
+      "worksFor": { "@id": "https://favze.com/#organization" },
+      "sameAs": [
+        "https://www.linkedin.com/in/rileycatalano/",
+        "https://rileycatalano.com"
+      ]
+    }
+  ]
+}
 </script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -22,8 +114,6 @@
 html{scroll-behavior:smooth;overflow-x:clip}
 body{font-family:var(--font-body);background:#fff;color:var(--dark);line-height:1.6;-webkit-text-size-adjust:100%}
 a{color:inherit;text-decoration:none}
-
-/* ── NAV ── */
 nav{position:sticky;top:0;z-index:200;background:#fff;border-bottom:1.5px solid #e8e8e8;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:68px;min-width:0}
 .nav-logo-img{height:30px;width:auto;object-fit:contain}
 .nl{display:flex;align-items:center;gap:2px;list-style:none}
@@ -69,10 +159,8 @@ nav{position:sticky;top:0;z-index:200;background:#fff;border-bottom:1.5px solid 
 .mm-sub a:hover{background:rgba(6,65,135,.07);color:var(--navy)}
 .mm-cta{background:var(--navy)!important;color:#fff!important;text-align:center;margin-top:8px;font-weight:700!important;border-radius:9px}
 .mm-cta:hover{background:var(--teal)!important}
-
 .progress-bar{position:fixed;top:68px;left:0;right:0;height:3px;background:rgba(0,0,0,.06);z-index:99}
 .progress-fill{height:100%;background:linear-gradient(90deg,var(--teal),var(--navy));width:0%;transition:width .1s linear}
-
 .pillar-hero{background:var(--dark);padding:72px 5% 64px;position:relative;overflow:hidden}
 .pillar-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(10,137,163,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(10,137,163,.04) 1px,transparent 1px);background-size:52px 52px;pointer-events:none}
 .pillar-hero::after{content:'';position:absolute;top:-80px;right:-60px;width:460px;height:460px;background:radial-gradient(circle,rgba(10,137,163,.12) 0%,transparent 65%);pointer-events:none}
@@ -83,16 +171,13 @@ nav{position:sticky;top:0;z-index:200;background:#fff;border-bottom:1.5px solid 
 .pillar-hero-sub{font-size:1rem;color:rgba(255,255,255,.55);line-height:1.75;max-width:600px;margin-bottom:28px}
 .pillar-meta-row{display:flex;flex-wrap:wrap;gap:24px;padding-top:24px;border-top:1px solid rgba(255,255,255,.09);align-items:center}
 .pillar-meta-pill{display:inline-flex;align-items:center;gap:6px;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.45)}
-
 .page-layout{max-width:var(--inner-max);margin:0 auto;padding:56px 5% 80px;display:grid;grid-template-columns:1fr 280px;gap:56px;align-items:start}
-
 .toc-card{background:#fafafa;border:1.5px solid #efefef;border-radius:var(--radius-card);padding:22px;margin-bottom:40px}
 .toc-title{font-family:var(--font-display);font-weight:900;font-size:.9rem;text-transform:uppercase;letter-spacing:.07em;color:var(--dark);margin-bottom:14px}
 .toc-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px 16px}
 .toc-grid a{font-size:.79rem;font-weight:500;color:#555;padding:5px 8px;border-radius:6px;display:flex;align-items:baseline;gap:7px;transition:background .2s,color .2s;line-height:1.4}
 .toc-grid a:hover{background:#efefef;color:var(--navy)}
 .toc-num{font-family:var(--font-display);font-weight:900;font-size:.68rem;color:#0A89A3;flex-shrink:0}
-
 .pillar-body h2{font-family:var(--font-display);font-weight:900;font-size:1.75rem;text-transform:uppercase;letter-spacing:.03em;color:var(--dark);margin-top:60px;margin-bottom:16px;line-height:1.05;scroll-margin-top:100px;padding-top:8px;border-top:2px solid #f0f0f0}
 .pillar-body h2:first-child{margin-top:0;border-top:none;padding-top:0}
 .pillar-body h3{font-family:var(--font-display);font-weight:900;font-size:1.2rem;text-transform:uppercase;letter-spacing:.03em;color:var(--dark);margin-top:32px;margin-bottom:10px;scroll-margin-top:100px}
@@ -164,7 +249,6 @@ nav{position:sticky;top:0;z-index:200;background:#fff;border-bottom:1.5px solid 
 .coming-more-icon{width:40px;height:40px;background:rgba(10,137,163,.08);border:1.5px solid rgba(10,137,163,.2);border-radius:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .coming-more h4{font-family:var(--font-display);font-weight:900;font-size:.9rem;text-transform:uppercase;letter-spacing:.04em;color:var(--dark);margin-bottom:3px}
 .coming-more p{font-size:.78rem;color:#777;line-height:1.55}
-
 .sidebar{position:sticky;top:calc(68px + 24px);display:flex;flex-direction:column;gap:20px}
 .sidebar-card{background:#fff;border:1.5px solid #efefef;border-radius:var(--radius-card);overflow:hidden}
 .sidebar-card-hd{padding:14px 20px;border-bottom:1px solid #efefef;font-family:var(--font-display);font-weight:900;font-size:.88rem;text-transform:uppercase;letter-spacing:.06em;color:var(--dark)}
@@ -194,8 +278,6 @@ nav{position:sticky;top:0;z-index:200;background:#fff;border-bottom:1.5px solid 
 .about-mini-links{display:flex;gap:7px;flex-wrap:wrap;margin-top:3px}
 .about-mini-link{display:inline-flex;align-items:center;gap:5px;font-size:.7rem;font-weight:700;color:var(--navy);border:1.5px solid rgba(6,65,135,.22);padding:4px 10px;border-radius:100px;transition:.2s}
 .about-mini-link:hover{background:var(--navy);color:#fff}
-
-/* ── FOOTER ── */
 footer{background:var(--dark);padding:56px 5% 0;border-top:1px solid rgba(255,255,255,.07)}
 .ft-inner{max-width:var(--inner-max);margin:0 auto}
 .ft-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.09)}
@@ -210,13 +292,13 @@ footer{background:var(--dark);padding:56px 5% 0;border-top:1px solid rgba(255,25
 .fcon{display:flex;flex-direction:column;gap:9px}
 .fcon a{font-size:.83rem;color:rgba(255,255,255,.42);display:flex;align-items:center;gap:7px;transition:color .2s}
 .fcon a:hover{color:#fff}
-.ft-scroll-strip{border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);padding:11px 0;display:flex;align-items:center;gap:0;overflow:hidden}
+.ft-scroll-strip{border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);padding:11px 0;display:flex;align-items:center;overflow:hidden}
 .ft-scroll-label{font-size:.62rem;font-weight:700;letter-spacing:.16em;color:var(--teal);white-space:nowrap;padding:0 20px 0 5%;flex-shrink:0}
 .ft-scroll-track-wrap{flex:1;overflow:hidden;position:relative}
 .ft-scroll-track-wrap::before,.ft-scroll-track-wrap::after{content:'';position:absolute;top:0;bottom:0;width:40px;z-index:2;pointer-events:none}
 .ft-scroll-track-wrap::before{left:0;background:linear-gradient(to right,#0a0a0a,transparent)}
 .ft-scroll-track-wrap::after{right:0;background:linear-gradient(to left,#0a0a0a,transparent)}
-.ft-scroll-track{display:flex;align-items:center;gap:0;white-space:nowrap;animation:ftScroll 40s linear infinite}
+.ft-scroll-track{display:flex;align-items:center;white-space:nowrap;animation:ftScroll 40s linear infinite}
 .ft-scroll-track:hover{animation-play-state:paused}
 .ft-scroll-track a{font-size:.78rem;color:rgba(255,255,255,.45);padding:0 4px;transition:color .2s;flex-shrink:0}
 .ft-scroll-track a:hover{color:rgba(255,255,255,.85)}
@@ -224,14 +306,13 @@ footer{background:var(--dark);padding:56px 5% 0;border-top:1px solid rgba(255,25
 @keyframes ftScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 .ft-scroll-right{display:flex;align-items:center;gap:6px;white-space:nowrap;flex-shrink:0;padding:0 5% 0 16px;font-size:.62rem;font-weight:700;letter-spacing:.1em;color:var(--teal);text-transform:uppercase}
 .ft-trust-bar{border-bottom:1px solid rgba(255,255,255,.07);padding:12px 5%}
-.ft-trust-inner{max-width:var(--inner-max);margin:0 auto;display:flex;align-items:center;gap:0;flex-wrap:wrap;justify-content:center}
+.ft-trust-inner{max-width:var(--inner-max);margin:0 auto;display:flex;align-items:center;flex-wrap:wrap;justify-content:center}
 .ft-trust-item{display:flex;align-items:center;gap:7px;font-size:.72rem;font-weight:600;color:rgba(255,255,255,.45);padding:4px 20px}
 .ft-trust-sep{width:1px;height:16px;background:rgba(255,255,255,.1);flex-shrink:0}
 .fb-bot{padding:18px 0 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px}
 .fb-bot p{font-size:.78rem;color:rgba(255,255,255,.26)}
 .fb-bot a{color:rgba(255,255,255,.32);font-size:.78rem;transition:color .2s}
 .fb-bot a:hover{color:#fff}
-
 @media(max-width:1024px){.page-layout{grid-template-columns:1fr}.sidebar{position:static;display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:40px}.sidebar-toc-card{display:none}.ft-top{grid-template-columns:1fr 1fr;gap:28px}}
 @media(max-width:768px){.nl{display:none}.hb{display:flex}.pillar-hero{padding:52px 4.5% 44px}.page-layout{padding:36px 4.5% 60px}.ft-top{grid-template-columns:1fr;gap:28px}.sidebar{grid-template-columns:1fr}.toc-grid{grid-template-columns:1fr}.brand-pillars{grid-template-columns:1fr}.stat-row{grid-template-columns:1fr}.coming-more{flex-direction:column;align-items:flex-start}}
 @media(max-width:480px){nav{padding:0 4%}.page-layout{padding:28px 4% 48px}footer{padding:40px 4% 0}}
@@ -239,8 +320,6 @@ footer{background:var(--dark);padding:56px 5% 0;border-top:1px solid rgba(255,25
 </head>
 <body>
 <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
-
-<!-- NAV -->
 <nav>
   <a href="https://favze.com/" style="display:flex;align-items:center">
     <img src="https://favze.com/hubfs/favze-logo-black-header.svg" alt="Favze Digital Marketing" class="nav-logo-img" onerror="this.style.display='none';this.nextSibling.style.display='flex'">
@@ -248,10 +327,7 @@ footer{background:var(--dark);padding:56px 5% 0;border-top:1px solid rgba(255,25
   </a>
   <ul class="nl">
     <li>
-      <button class="drop-trigger" id="trigServices" aria-expanded="false" aria-controls="panServices">
-        Services
-        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
+      <button class="drop-trigger" id="trigServices" aria-expanded="false" aria-controls="panServices">Services <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
       <div class="drop-panel" id="panServices" role="menu">
         <div class="drop-label">All Services</div>
         <a href="https://favze.com/services/social-media-marketing" role="menuitem">Social Media Marketing <span class="drop-abbr">SMM</span></a>
@@ -271,10 +347,7 @@ footer{background:var(--dark);padding:56px 5% 0;border-top:1px solid rgba(255,25
       </div>
     </li>
     <li>
-      <button class="drop-trigger" id="trigArticles" aria-expanded="false" aria-controls="panArticles">
-        Articles
-        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
+      <button class="drop-trigger" id="trigArticles" aria-expanded="false" aria-controls="panArticles">Articles <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
       <div class="drop-panel center" id="panArticles" role="menu">
         <div class="drop-label">Browse by Pillar</div>
         <a href="https://favze.com/articles/content-marketing" role="menuitem">Content Marketing</a>
@@ -290,17 +363,10 @@ footer{background:var(--dark);padding:56px 5% 0;border-top:1px solid rgba(255,25
     <li><a href="https://favze.com/faq" class="nl-link">FAQ</a></li>
     <li><a href="https://favze.com/free-consultation" class="nl-cta">Free Consultation</a></li>
   </ul>
-  <button class="hb" id="hb" aria-label="Toggle menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
+  <button class="hb" id="hb" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </nav>
-
-<!-- Mobile menu -->
 <div class="mm" id="mm" aria-hidden="true">
-  <button class="mm-toggle" id="mmServTrig" aria-expanded="false">
-    Services
-    <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  </button>
+  <button class="mm-toggle" id="mmServTrig" aria-expanded="false">Services <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
   <div class="mm-sub" id="mmServSub">
     <a href="https://favze.com/services/social-media-marketing">Social Media Marketing</a>
     <a href="https://favze.com/services/search-engine-optimization">SEO</a>
@@ -316,10 +382,7 @@ footer{background:var(--dark);padding:56px 5% 0;border-top:1px solid rgba(255,25
     <a href="https://favze.com/services/paid-social-media-ads">Paid Social Media Ads</a>
     <a href="https://favze.com/services" style="font-weight:700;color:var(--navy);">All Services</a>
   </div>
-  <button class="mm-toggle" id="mmArtTrig" aria-expanded="false">
-    Articles
-    <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  </button>
+  <button class="mm-toggle" id="mmArtTrig" aria-expanded="false">Articles <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
   <div class="mm-sub" id="mmArtSub">
     <a href="https://favze.com/articles/content-marketing">Content Marketing</a>
     <a href="https://favze.com/articles/social-media-strategy">Social Media Strategy</a>
@@ -332,7 +395,6 @@ footer{background:var(--dark);padding:56px 5% 0;border-top:1px solid rgba(255,25
   <a href="https://favze.com/faq" class="mm-link">FAQ</a>
   <a href="https://favze.com/free-consultation" class="mm-link mm-cta">Start Free Consultation</a>
 </div>
-
 <section class="pillar-hero">
   <div class="pillar-hero-inner">
     <div class="pillar-badge">Pillar 04 - Brand Positioning &amp; Community Authority</div>
@@ -346,7 +408,6 @@ footer{background:var(--dark);padding:56px 5% 0;border-top:1px solid rgba(255,25
     </div>
   </div>
 </section>
-
 <div class="page-layout">
   <main>
     <div class="toc-card">
@@ -374,7 +435,6 @@ footer{background:var(--dark);padding:56px 5% 0;border-top:1px solid rgba(255,25
         <a href="#roadmap"><span class="toc-num">20</span>The Brand Positioning Roadmap</a>
       </div>
     </div>
-
     <div class="pillar-body">
       <h2 id="why-positioning-matters">1. Why Brand Positioning Is the Leverage Point Local Businesses Miss</h2>
       <p>Most local businesses compete on tactics. They run ads, post on social media, update their website, and hope that enough activity generates enough leads to keep the pipeline moving. The businesses that win their local markets do something fundamentally different: they build a brand that removes the need for the customer to compare at all.</p>
@@ -385,7 +445,6 @@ footer{background:var(--dark);padding:56px 5% 0;border-top:1px solid rgba(255,25
         <div class="stat-box"><div class="stat-box-num teal">3yr</div><div class="stat-box-label">Typical timeline to establish genuine community authority that functions as a structural competitive moat</div></div>
       </div>
       <p>For local businesses, positioning has a geographic dimension that national brands cannot replicate. You can claim a specific community, a specific local expertise, and a specific relationship with the people and places in your market that no outsider can authentically match. That local specificity is the foundation on which the strongest local brands are built.</p>
-
       <h2 id="category-design">2. Category Design: Define the Game You Win</h2>
       <p>The most powerful brand positioning strategy available to a local business is not to compete better within an existing category - it is to define a new category in which your business is the obvious leader. This concept, known as category design, shifts the competitive dynamic from "who is best" to "who is the only one doing this."</p>
       <h3>The Category Design Principle</h3>
@@ -396,7 +455,6 @@ footer{background:var(--dark);padding:56px 5% 0;border-top:1px solid rgba(255,25
       </div>
       <h3>Local Category Opportunities</h3>
       <p>Local markets are full of category design opportunities precisely because most local businesses have never thought about this. The local accountant who becomes the tax strategist for <a href="https://favze.com/areas-served/elkhart-county" style="color:var(--teal);font-weight:600;">Elkhart County</a> manufacturers. The local gym that becomes the performance training center for Northern Indiana athletes over 40. The local insurance agency that becomes the risk management partner for <a href="https://favze.com/areas-served/michiana" style="color:var(--teal);font-weight:600;">Michiana</a> family businesses. Each of these is a category that did not exist before the business claimed it - and in each case, the business that claims it first and builds a content and community presence around it is extraordinarily difficult to displace.</p>
-
       <h2 id="positioning-statement">3. Building Your Local Positioning Statement</h2>
       <p>A positioning statement is the internal document that guides every external communication your brand makes. It defines who you serve, what problem you solve, how you solve it differently, and why that difference matters. It is not a tagline or a mission statement - it is the strategic foundation from which both emerge.</p>
       <h3>The Four Components</h3>
@@ -404,7 +462,6 @@ footer{background:var(--dark);padding:56px 5% 0;border-top:1px solid rgba(255,25
       <p>For a local business, the geographic specificity of the positioning statement is as important as the customer and problem definition. "We serve small business owners in Elkhart County, Indiana who are overwhelmed by financial complexity" is a positioning statement with geographic specificity that creates immediate local relevance. "We serve small business owners" does not.</p>
       <h3>Testing Your Positioning</h3>
       <p>A positioning statement passes the test when it simultaneously attracts your ideal customer and repels customers who are not a good fit. Positioning that tries to appeal to everyone repels no one and attracts no one in particular. The specificity that makes ideal customers feel immediately understood is the same specificity that makes poor-fit customers self-select out. Both outcomes are valuable.</p>
-
       <h2 id="brand-identity">4. Brand Identity for Local Businesses</h2>
       <p>Brand identity is the visual and sensory system through which your positioning is communicated - your name, logo, colors, typography, photography style, and the overall aesthetic that customers encounter at every touchpoint. For local businesses, brand identity carries additional significance because it signals professionalism, investment, and permanence in a way that customers consciously and unconsciously evaluate.</p>
       <h3>The Professional Signal</h3>
@@ -412,7 +469,6 @@ footer{background:var(--dark);padding:56px 5% 0;border-top:1px solid rgba(255,25
       <p>This does not mean expensive. It means deliberate and consistent. A small local business with a clear, simple, well-executed visual identity consistently outperforms a larger business with a cluttered, inconsistent one in the customer's initial trust assessment.</p>
       <h3>Local Identity Elements</h3>
       <p>The strongest local brand identities incorporate elements that signal genuine community rootedness. A color palette that references the local landscape, a logo mark that nods to a local landmark or symbol, photography that features recognizable local environments - these details communicate to local customers that this business is genuinely part of their community, not a franchise or an import. They are not necessary, but when executed well they create a depth of local identification that generic brand identities cannot achieve.</p>
-
       <h2 id="brand-story">5. The Local Brand Story</h2>
       <p>Every business has a story. Most local businesses never tell it. This is a significant missed opportunity, because the story of why a local business exists - why the founder started it, what problem they saw that needed solving, what they believe about how things should be done - is one of the most powerful differentiating assets a local brand has.</p>
       <h3>Why Stories Work in Local Markets</h3>
@@ -420,7 +476,6 @@ footer{background:var(--dark);padding:56px 5% 0;border-top:1px solid rgba(255,25
       <p>In local markets, this relational dimension is especially powerful because customers have genuine options and often make decisions based on factors that go beyond price and technical quality. Story is one of the most direct pathways to the trust and preference that drives those decisions.</p>
       <h3>The Elements of a Powerful Local Brand Story</h3>
       <p>A powerful local brand story contains a genuine origin - what brought the founder to this work and this community, not a polished corporate narrative. It contains a clear belief about how things should be done differently - a genuine point of view that sets the business apart. It contains specific local references that demonstrate community embeddedness. And it contains an honest acknowledgment of who the business is for and who it is not for, which signals confidence and authenticity rather than the desperation to please everyone.</p>
-
       <h2 id="community-presence">6. Community Presence Strategy</h2>
       <p>Community presence is the systematic practice of showing up where your local customers gather - not primarily to sell, but to contribute, to connect, and to build the kind of familiarity that makes your business the first call when a need arises.</p>
       <h3>Where Your Customers Gather</h3>
@@ -432,7 +487,6 @@ footer{background:var(--dark);padding:56px 5% 0;border-top:1px solid rgba(255,25
       <h3>Digital Community Presence</h3>
       <p>Local digital communities - neighborhood Facebook groups, local business forums, community Reddit threads, Nextdoor networks - are gathering spaces where local customers discuss recommendations, share experiences, and make decisions. A business that is genuinely helpful in these spaces - answering questions, sharing relevant expertise, acknowledging community members - builds visibility and trust at the specific moment those community members are forming opinions about local businesses in its category.</p>
       <p>The key word is genuinely. Promotional content in local community groups is recognized as such and resented. Genuine helpfulness - answering a question about what to do when a pipe freezes, without a sales pitch attached - builds exactly the kind of goodwill that eventually turns into calls, referrals, and long-term customers.</p>
-
       <h2 id="thought-leadership">7. Thought Leadership for Local Business Experts</h2>
       <p>Thought leadership is the practice of sharing distinctive perspectives on topics relevant to your business category in a way that builds recognition, trust, and authority. For local business owners, thought leadership occupies a nearly empty space in most markets - very few local business owners publish genuinely useful perspectives on their areas of expertise, which means those who do have an almost clear field.</p>
       <h3>What Local Thought Leadership Looks Like</h3>
@@ -441,7 +495,6 @@ footer{background:var(--dark);padding:56px 5% 0;border-top:1px solid rgba(255,25
       <h3>The Point of View Requirement</h3>
       <p>The thing that makes thought leadership is the point of view. Content that summarizes commonly known information or confirms what everyone already believes is not thought leadership - it is content marketing. Thought leadership takes a position that is specific enough to be disagreed with, that reflects genuine expertise and genuine conviction, and that advances the conversation in the field rather than just adding to the noise.</p>
       <p>For local business owners, this often means sharing honest assessments of how their industry operates, calling out practices that serve vendors rather than customers, or articulating a different philosophy about how the work should be done. Content with that kind of conviction generates the engagement and sharing that content without conviction never does.</p>
-
       <h2 id="personal-brand">8. Personal Brand and Business Brand: How They Work Together</h2>
       <p>For most local businesses - especially those with a single founder or principal practitioner - the personal brand of the owner and the brand of the business are inseparable. Customers who choose a local attorney, a local financial planner, a local contractor, or a local specialist of any kind are choosing a person as much as they are choosing a business. The personal brand of that person is a central component of the business's overall brand equity.</p>
       <h3>When Personal Brand Leads</h3>
@@ -449,7 +502,6 @@ footer{background:var(--dark);padding:56px 5% 0;border-top:1px solid rgba(255,25
       <p>The practical result is that when someone searches for the best financial planner in <a href="https://favze.com/areas-served/elkhart-county" style="color:var(--teal);font-weight:600;">Goshen, Indiana</a>, they find not just the business website but a person - with published articles, a LinkedIn presence, a recognizable perspective - who feels knowable before the first conversation happens.</p>
       <h3>Protecting the Business From Personal Brand Dependency</h3>
       <p>The risk of a business that is entirely identified with its owner is that the business's value is inseparable from the owner's continued presence. The businesses that manage this well build the personal brand of the owner as the primary trust signal while simultaneously developing the institutional processes, team members, and company culture that can carry the brand forward even as the owner's direct involvement evolves.</p>
-
       <h2 id="reputation-strategy">9. Reputation Strategy</h2>
       <p>Reputation is what people say about your business when you are not in the room - in conversations with friends, in online reviews, in the recommendations they give or withhold to people who ask. It is the cumulative result of every experience every customer has had with your business, filtered through the way those customers describe and share those experiences.</p>
       <h3>Proactive vs. Reactive Reputation Management</h3>
@@ -457,7 +509,6 @@ footer{background:var(--dark);padding:56px 5% 0;border-top:1px solid rgba(255,25
       <p>Proactive reputation management starts with customer experience design - systematically ensuring that every touchpoint your customers encounter is designed to produce an experience they will want to talk about and share. It continues with active review generation - making it easy and natural for satisfied customers to leave reviews in the places where potential customers will find them. And it extends to the stories customers tell about your business in conversation - which are shaped by whether they feel genuinely valued, distinctly served, and specifically appreciated.</p>
       <h3>The Reputation-Brand Connection</h3>
       <p>Reputation and brand are mutually reinforcing. A strong brand sets expectations that the business then needs to consistently meet or exceed. When the business meets those expectations, reputation reinforces brand. When reputation is strong, it validates brand claims that the business makes about itself. Businesses that invest in both simultaneously build a feedback loop where each strengthens the other continuously.</p>
-
       <h2 id="digital-pr">10. Digital PR for Local Businesses</h2>
       <p>Digital PR for local businesses means earning coverage, mentions, and links from local media outlets, regional publications, community platforms, and industry-specific resources. It is distinct from traditional PR in that the primary goal is not just coverage but digital presence - the links, mentions, and online authority signals that strengthen both traditional search rankings and AI-generated recommendation visibility.</p>
       <h3>Why Local Media Coverage Is Uniquely Valuable</h3>
@@ -465,66 +516,56 @@ footer{background:var(--dark);padding:56px 5% 0;border-top:1px solid rgba(255,25
       <p>Local media coverage also generates backlinks from high-authority local domains, which are among the most valuable links available to a local business for both traditional <a href="https://favze.com/services/search-engine-optimization" style="color:var(--teal);font-weight:600;">SEO</a> and AI discoverability.</p>
       <h3>How to Earn Local Media Coverage</h3>
       <p>Local journalists need expert sources, local angles on national stories, and human interest stories about businesses and people in their communities. A local business owner who has established a content presence, who is known for a distinctive perspective on their industry, and who is genuinely embedded in the community, is exactly the kind of source local journalists look for. The path to media coverage starts with being worth covering - which comes from the thought leadership, community presence, and distinctive positioning work described throughout this pillar.</p>
-
       <h2 id="community-partnerships">11. Community Partnerships and Strategic Alliances</h2>
       <p>Strategic partnerships with complementary local businesses are one of the most underutilized brand-building tools available to local businesses. When two businesses with overlapping but non-competing customer bases recommend each other, both benefit from the trust transfer that comes with a trusted referral source.</p>
       <h3>Identifying Partnership Opportunities</h3>
       <p>The ideal partnership partner serves the same customer profile at a different stage of their journey or for a different need. A local real estate agent naturally partners with local mortgage brokers, local home inspectors, local contractors, and local attorneys who handle real estate transactions. A local pediatric dentist naturally partners with pediatricians, child psychologists, and school health programs. Mapping your customer's complete journey and identifying every other professional or business they interact with along the way reveals the partnership landscape.</p>
       <h3>Making Partnerships Structural</h3>
       <p>The partnerships that generate lasting brand and referral value are structural - built into how each business operates - rather than occasional. A formal referral relationship that includes regular communication, shared content, joint events, and mutual visibility across each other's audiences creates brand benefits that a casual "we refer each other when it comes up" relationship never generates.</p>
-
       <h2 id="sponsorship">12. Sponsorship as Brand Strategy</h2>
       <p>Sponsorship of local events, organizations, sports teams, and community initiatives is one of the most visible expressions of community investment available to a local business. When done strategically - aligned with the business's positioning, targeting the right community contexts, and executed with genuine commitment rather than logo placement - sponsorship builds both brand awareness and community authority simultaneously.</p>
       <h3>Strategic vs. Tactical Sponsorship</h3>
       <p>Tactical sponsorship puts a logo on a banner and considers the obligation fulfilled. Strategic sponsorship treats each sponsorship as a community relationship that generates brand-building opportunities beyond the logo - speaking opportunities, content creation around the event, relationships with the community leaders who run the organization, and visibility with an audience that the business could not reach through paid channels alone.</p>
       <p>The most valuable sponsorships for brand building are those where the business's involvement is visible and active, not passive. A business that sponsors a youth sports team and has a team member who coaches the team builds a deeper community relationship than a business whose logo appears on the team's jersey and nothing more.</p>
-
       <h2 id="brand-consistency">13. Brand Consistency Across Touchpoints</h2>
       <p>Every touchpoint a customer has with your business - your <a href="https://favze.com/services/website-design" style="color:var(--teal);font-weight:600;">website</a>, your signage, your vehicles, your invoices, your email signatures, your <a href="https://favze.com/services/social-media-marketing" style="color:var(--teal);font-weight:600;">social media profiles</a>, the way your phone is answered, the way your team members introduce themselves - is an expression of your brand. Consistency across all of these touchpoints is what separates a brand from a collection of marketing materials.</p>
       <h3>The Consistency Audit</h3>
       <p>Most local businesses have never conducted a systematic audit of their brand touchpoints. The result is typically significant inconsistency - different logos on different materials, different colors in different contexts, different tone of voice in different channels, different promises on the website than what customers actually experience. Each inconsistency is a small erosion of the trust and coherence that strong brands require.</p>
       <p>A brand consistency audit maps every customer touchpoint, evaluates each against the positioning and brand identity standards, and identifies the specific inconsistencies that most directly undermine the brand's credibility. Fixing these is not glamorous work, but it is foundational - because a brand that is inconsistent in its presentation cannot be consistently trusted.</p>
-
       <h2 id="customer-experience">14. Customer Experience as Brand Building</h2>
       <p>The most powerful brand building available to any local business happens not in marketing but in service delivery. Every interaction a customer has with your business is either building or eroding your brand. The sum of those interactions, over time, across every customer, is your reputation - and reputation is the most durable form of brand equity a local business can build.</p>
       <h3>Designing for Memorability</h3>
       <p>Most customer experiences are forgettable - competent but unremarkable. The businesses that build the strongest local brands design specific moments of their customer experience to be memorable - not expensive or elaborate, but specific and intentional. A handwritten thank-you note after a completed project. A follow-up call three months later asking if everything is still working well. A referral to a trusted partner for a problem outside your scope. These are small investments with disproportionate brand-building returns because they create genuine stories that customers tell to others.</p>
       <h3>The Net Promoter Reality</h3>
       <p>Net Promoter Score - the measure of how likely customers are to recommend your business - is one of the most direct measures of brand strength available to a local business. Businesses with high NPS scores have customers who are actively doing their marketing for them, which compounds brand awareness and authority in ways that no paid marketing can replicate. Building NPS requires designing the customer experience to be worth recommending, and then removing every friction that might prevent a willing recommender from actually following through.</p>
-
       <h2 id="brand-voice">15. Brand Voice and Messaging</h2>
       <p>Brand voice is how your business sounds - the specific language, tone, and personality that comes through in everything you write and say. For local businesses, brand voice is one of the clearest signals of whether a business is genuinely community-embedded or generically professional.</p>
       <h3>Finding the Right Voice</h3>
       <p>The right brand voice for a local business is authentic to its owner and team, appropriate to its positioning, and resonant with its specific local audience. A local business serving blue-collar tradespeople in a manufacturing community sounds different from a local business serving young professionals in a university town - and both sound different from a local business serving retired agricultural families in a rural county.</p>
       <p>The most common brand voice mistake local businesses make is defaulting to a generic professional voice that sounds like every other business in their category. The businesses that build the strongest local brands have a voice that is immediately recognizable as theirs - specific, human, and genuinely expressive of what makes them different.</p>
-
       <h2 id="local-pr">16. Getting Featured in Local Media</h2>
       <p>Local media coverage - newspapers, regional magazines, local television, community podcasts, local newsletters - is one of the most credible forms of brand exposure available to a local business. Unlike paid advertising, media coverage carries the implicit endorsement of an independent editorial judgment that this business, this story, or this perspective is worth the community's attention.</p>
       <h3>The Story Angle Framework</h3>
       <p>Local journalists respond to story angles, not promotional pitches. The angle that works is not "our business is good and you should write about us" - it is "here is a story about something happening in our community that your readers will care about, and our business is part of that story." Community trend stories, local economic impact angles, human interest stories about how a business serves a specific community need, and expert commentary on local issues are all angles that work. Promotional press releases rarely do.</p>
       <h3>Building Media Relationships</h3>
       <p>The most reliable path to consistent local media coverage is being a genuinely useful source - a business owner who is accessible, knowledgeable, and willing to comment on topics beyond their immediate self-interest. Local journalists remember sources who gave them useful quotes for one story and call them again for the next relevant story. A relationship with even one local journalist who sees you as a credible community source is worth more than any press release campaign.</p>
-
       <h2 id="referral-culture">17. Building a Referral Culture</h2>
       <p>Referrals are the highest-quality leads available to a local business - they arrive with pre-built trust, higher close rates, and greater lifetime value than leads from any other source. Building a referral culture means systematically creating the conditions in which referrals happen naturally and frequently, not just occasionally when a satisfied customer spontaneously mentions you to a friend.</p>
       <h3>The Referral Infrastructure</h3>
       <p>A referral culture requires three things working together. First, an experience worth referring - customers will only refer a business that they are genuinely proud to recommend. Second, a culture of asking - most satisfied customers will give a referral when asked in the right way at the right moment, but do not spontaneously think to give one without the prompt. Third, a system for acknowledging and rewarding referral behavior - not necessarily financial incentives, but genuine appreciation expressed specifically and promptly when a referral is given.</p>
       <h3>Referral Partnerships vs. Customer Referrals</h3>
       <p>There are two distinct referral channels: customer referrals from satisfied clients, and professional referrals from strategic partners. Both are valuable and require different cultivation strategies. Customer referrals are generated by the quality of the experience and the culture of asking. Professional referrals are generated by the quality of the relationship with the referring partner and the track record of delivering excellent outcomes to the clients referred. Both should be actively developed as part of a comprehensive referral strategy.</p>
-
       <h2 id="competitive-positioning">18. Competitive Positioning Analysis</h2>
       <p>Understanding how your competitors are positioned - what they stand for, who they serve, how they communicate - is essential for identifying the specific territory your brand can own that they are not occupying. The goal is not to respond to competitors but to identify the positioning opportunities they have left open.</p>
       <h3>The Positioning Landscape Audit</h3>
       <p>A positioning landscape audit evaluates every significant competitor in your local market across the same dimensions: their target customer, their primary message, their apparent positioning territory, the tone and character of their brand, the community presence they have built, and the reputation they have earned. This analysis almost always reveals significant white space - positioning territories that no competitor is occupying, customer segments that no one is specifically serving, or brand voices that no one is using.</p>
       <p>The most valuable finding in a positioning landscape audit is not where competitors are strong but where they are absent. The gap that no competitor is filling is the territory where your positioning can establish itself without a fight.</p>
-
       <h2 id="measuring-brand">19. Measuring Brand Equity for Local Businesses</h2>
       <p>Brand equity is difficult to measure directly, but its effects are measurable in ways that give local businesses meaningful indicators of whether their brand-building investment is compounding. The challenge is that most of the metrics that matter for brand equity are not the metrics that most local businesses track.</p>
       <h3>The Metrics That Indicate Brand Equity</h3>
       <p>Unaided brand recall - whether your business comes to mind when a potential customer thinks of your category without being prompted - is the purest measure of brand awareness but requires surveying to measure accurately. Referral rate - what percentage of new customers came through referral - is a practical proxy for both brand strength and customer satisfaction. Direct search volume - how many people search specifically for your business name - indicates the degree to which your brand is being sought out rather than just discovered. Review velocity and sentiment trend - how quickly new reviews are coming in and whether sentiment is improving over time - indicates whether the customer experience is consistently delivering on the brand promise.</p>
       <h3>The Long View on Brand Measurement</h3>
       <p>Brand equity builds slowly and compounds invisibly until it reaches a threshold at which its effects become undeniable. The businesses that measure brand equity quarterly and expect to see dramatic changes will consistently underestimate what they are building. The businesses that measure annually, track trend direction rather than point-in-time metrics, and connect brand investment to customer lifetime value rather than just immediate lead generation get an accurate picture of the return on brand-building investment.</p>
-
       <h2 id="roadmap">20. The Brand Positioning and Community Authority Roadmap</h2>
       <p>For local businesses building or rebuilding their brand position, the sequence of investment matters. This roadmap provides the right order - structured so that each phase builds on the previous one.</p>
       <div class="phase-grid">
@@ -537,15 +578,12 @@ footer{background:var(--dark);padding:56px 5% 0;border-top:1px solid rgba(255,25
       <div class="callout-gold callout">
         <p><strong>The compounding principle:</strong> Brand authority does not grow linearly. Each community relationship, each published piece of thought leadership, each media mention, each customer who refers a friend reinforces every previous investment. The businesses that achieve genuine community authority - being the obvious choice in their category, recommended by name by people who have never used them - do so through consistent, specific, community-embedded effort over two to three years. There are no shortcuts. But the competitive moat that results is one of the most durable advantages in local business.</p>
       </div>
-
       <div class="section-divider"></div>
-
       <div class="articles-section-header">
         <div class="articles-section-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2l2.5 5L18 7.8l-4 3.9.95 5.5L10 14.7l-4.95 2.5.95-5.5L2 7.8l5.5-.8z" stroke="#0A89A3" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
         <h2 class="articles-section-title" style="margin-top:0;border-top:none;padding-top:0">Brand Positioning Articles</h2>
-        <span class="articles-section-count" id="articleCount">Loading…</span>
+        <span class="articles-section-count" id="articleCount">Loading...</span>
       </div>
-      <div id="noResults" style="display:none"></div>
       <div id="articleFeed"></div>
       <div class="coming-more" id="comingMore">
         <div class="coming-more-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2l2.5 5L18 7.8l-4 3.9.95 5.5L10 14.7l-4.95 2.5.95-5.5L2 7.8l5.5-.8z" stroke="#0A89A3" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
@@ -558,7 +596,6 @@ footer{background:var(--dark);padding:56px 5% 0;border-top:1px solid rgba(255,25
       </div>
     </div>
   </main>
-
   <aside class="sidebar">
     <div class="sidebar-card sidebar-toc-card">
       <div class="sidebar-card-hd">On This Page</div>
@@ -587,19 +624,16 @@ footer{background:var(--dark);padding:56px 5% 0;border-top:1px solid rgba(255,25
         </div>
       </div>
     </div>
-
     <div class="sidebar-cta">
       <span class="sc-lbl">Free. No Obligation.</span>
       <h3>Ready to Get Chosen?</h3>
       <p>Talk directly to Riley. Get a custom brand positioning strategy built around your business and <a href="https://favze.com/areas-served/northern-indiana" style="color:rgba(255,255,255,.75);text-decoration:underline;text-underline-offset:2px;">Northern Indiana</a> market.</p>
       <a href="https://favze.com/free-consultation">Book Free Consultation <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 6.5h9M7.5 3l3.5 3.5L7.5 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
-
     <div class="sidebar-card">
       <div class="sidebar-card-hd">Browse All Pillars</div>
       <div class="sidebar-card-bd"><div class="pillar-links" id="sidebarPillarList"></div></div>
     </div>
-
     <div class="sidebar-card">
       <div class="sidebar-card-hd">Written By</div>
       <div class="sidebar-card-bd">
@@ -616,8 +650,6 @@ footer{background:var(--dark);padding:56px 5% 0;border-top:1px solid rgba(255,25
     </div>
   </aside>
 </div>
-
-<!-- FOOTER -->
 <footer>
   <div class="ft-inner">
     <div class="ft-top">
@@ -634,7 +666,7 @@ footer{background:var(--dark);padding:56px 5% 0;border-top:1px solid rgba(255,25
           <a href="https://x.com/favzemarketing" target="_blank" rel="noopener noreferrer nofollow" aria-label="Favze on X"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
           <a href="https://www.youtube.com/@Favze" target="_blank" rel="noopener noreferrer nofollow" aria-label="Favze on YouTube"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
           <a href="https://www.threads.com/@favzemarketing" target="_blank" rel="noopener noreferrer nofollow" aria-label="Favze on Threads"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16.3 11.3c-.1 0-.2-.1-.2-.1-.1-2.6-1.5-4-3.9-4-1.4 0-2.6.6-3.3 1.7l1.3.9c.5-.8 1.4-1 2-1 .8 0 1.4.2 1.7.7.3.3.5.8.5 1.3-.7-.1-1.4-.2-2.2-.1-2.2.1-3.7 1.4-3.6 3.2 0 .9.5 1.7 1.3 2.2.7.4 1.5.6 2.4.6 1.2-.1 2.1-.5 2.7-1.3.5-.6.8-1.4.9-2.4.6.3 1 .8 1.2 1.3.4.9.4 2.4-.8 3.6-1.1 1.1-2.3 1.5-4.3 1.5-2.1 0-3.8-.7-4.8-2S5.7 14.3 5.7 12c0-2.3.5-4.1 1.5-5.4 1.1-1.3 2.7-2 4.8-2 2.2 0 3.8.7 4.9 2 .5.7.9 1.5 1.2 2.5l1.5-.4c-.3-1.2-.8-2.2-1.5-3.1-1.3-1.7-3.3-2.6-6-2.6-2.6 0-4.7.9-6 2.6C4.9 7.2 4.3 9.3 4.3 12s.6 4.8 1.9 6.4c1.4 1.7 3.4 2.6 6 2.6 2.3 0 4-.6 5.3-2 1.8-1.8 1.7-4 1.1-5.4-.4-.9-1.2-1.7-2.3-2.3zm-4 3.8c-1 .1-2-.4-2-1.3 0-.7.5-1.5 2.1-1.6h.5c.6 0 1.1.1 1.6.2-.2 2.3-1.3 2.7-2.2 2.7z"/></svg></a>
-          <a href="https://www.google.com/maps/place/Favze+Digital+Marketing/@41.5780944,-86.6661199,9z/data=!3m1!4b1!4m6!3m5!1s0x8fd1e3cba3bc4677:0x44492c880fb69085!8m2!3d41.579986!4d-86.005348!16s%2Fg%2F11yv5nhx0f?entry=ttu&g_ep=EgoyMDI2MDQyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer nofollow" aria-label="Google Business Profile"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21.805 10.023H12v3.954h5.617c-.242 1.322-.99 2.443-2.12 3.198v2.652h3.425c2.005-1.842 3.162-4.553 3.162-7.757 0-.772-.074-1.517-.279-2.047zM12 22c2.655 0 4.883-.879 6.511-2.38l-3.425-2.652c-.878.591-2.01.94-3.086.94-2.372 0-4.385-1.601-5.104-3.752H3.37v2.741C4.987 19.81 8.245 22 12 22zM6.896 14.156A5.865 5.865 0 016.5 12c0-.748.137-1.47.396-2.156V7.103H3.37A9.988 9.988 0 002 12c0 1.614.392 3.14 1.37 4.897l3.526-2.741zM12 6.092c1.338 0 2.535.46 3.479 1.36l2.607-2.607C16.476 3.337 14.393 2.5 12 2.5 8.245 2.5 4.987 4.69 3.37 7.897l3.526 2.747C7.615 7.693 9.628 6.092 12 6.092z"/></svg></a>
+          <a href="https://www.google.com/maps/place/Favze+Digital+Marketing/@41.5780944,-86.6661199,9z/data=!3m1!4b1!4m6!3m5!1s0x8fd1e3cba3bc4677:0x44492c880fb69085!8m2!3d41.579986!4d-86.005348!16s%2Fg%2F11yv5nhx0f" target="_blank" rel="noopener noreferrer nofollow" aria-label="Google Business Profile"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M21.805 10.023H12v3.954h5.617c-.242 1.322-.99 2.443-2.12 3.198v2.652h3.425c2.005-1.842 3.162-4.553 3.162-7.757 0-.772-.074-1.517-.279-2.047zM12 22c2.655 0 4.883-.879 6.511-2.38l-3.425-2.652c-.878.591-2.01.94-3.086.94-2.372 0-4.385-1.601-5.104-3.752H3.37v2.741C4.987 19.81 8.245 22 12 22zM6.896 14.156A5.865 5.865 0 016.5 12c0-.748.137-1.47.396-2.156V7.103H3.37A9.988 9.988 0 002 12c0 1.614.392 3.14 1.37 4.897l3.526-2.741zM12 6.092c1.338 0 2.535.46 3.479 1.36l2.607-2.607C16.476 3.337 14.393 2.5 12 2.5 8.245 2.5 4.987 4.69 3.37 7.897l3.526 2.747C7.615 7.693 9.628 6.092 12 6.092z"/></svg></a>
           <a href="https://www.pinterest.com/favzemarketing/" target="_blank" rel="noopener noreferrer nofollow" aria-label="Favze on Pinterest"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg></a>
           <a href="https://nextdoor.com/page/favze-digital-marketing/" target="_blank" rel="noopener noreferrer nofollow" aria-label="Favze on Nextdoor"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6 2h3v3.5L12 3l10 9h-2v9H4v-9H2l4-3.6V2zm1.5 1.5v3.8L12 4.8l-4.5 3.5zM14 21v-5h-4v5H5.5v-7.5h13V21H14z"/></svg></a>
         </div>
@@ -688,7 +720,6 @@ footer{background:var(--dark);padding:56px 5% 0;border-top:1px solid rgba(255,25
         </div>
       </div>
     </div>
-
     <div class="ft-scroll-strip">
       <div class="ft-scroll-label">SERVING</div>
       <div class="ft-scroll-track-wrap">
@@ -701,7 +732,6 @@ footer{background:var(--dark);padding:56px 5% 0;border-top:1px solid rgba(255,25
         <span>MIDDLEBURY, IN</span>
       </div>
     </div>
-
     <div class="ft-trust-bar">
       <div class="ft-trust-inner">
         <div class="ft-trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z" stroke="var(--teal)" stroke-width="1.8" stroke-linejoin="round"/></svg><span>100+ Industry Certifications</span></div>
@@ -713,7 +743,6 @@ footer{background:var(--dark);padding:56px 5% 0;border-top:1px solid rgba(255,25
         <div class="ft-trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="var(--teal)" stroke-width="1.8"/><path d="M8 12h8M12 8v8" stroke="var(--teal)" stroke-width="2" stroke-linecap="round"/></svg><a href="https://favze.com/free-consultation" style="color:rgba(255,255,255,.5)">Free Consultation Available</a></div>
       </div>
     </div>
-
     <div class="fb-bot">
       <p>&copy; 2026 Favze Digital Marketing. All rights reserved.</p>
       <div style="display:flex;gap:18px;flex-wrap:wrap">
@@ -723,7 +752,6 @@ footer{background:var(--dark);padding:56px 5% 0;border-top:1px solid rgba(255,25
     </div>
   </div>
 </footer>
-
 <script>
 var ALL_PILLARS = {
   'content-marketing': { label: 'Content Marketing', dot: '#064187' },
@@ -732,33 +760,30 @@ var ALL_PILLARS = {
   'brand-positioning': { label: 'Brand Positioning & Community Authority', dot: '#0A89A3' }
 };
 var THIS_PILLAR = 'brand-positioning';
-var FALLBACK_ARTICLES = [{"id":"blog-and-article-hierarchy-pillars-clusters-internal-linking","title":"Blog and Article Hierarchy: Pillars, Clusters, and Internal Linking","description":"Most businesses write articles one by one and wonder why their site never ranks. The issue isn't article quality - it's the lack of structure. This guide covers the three-level content hierarchy, topical authority, and the internal linking architecture that makes it all work.","pillar":"content-marketing","pillarLabel":"Content Marketing","readTime":17,"author":"Riley Catalano","date":"2025-01-01","slug":"blog-and-article-hierarchy-pillars-clusters-internal-linking","featured":true},{"id":"how-to-create-evergreen-content","title":"How to Create Evergreen Content That Brings Customers for Years","description":"Most businesses create content that disappears into the feed within hours. This guide covers exactly what evergreen content is, why it compounds in ways other marketing cannot, and precisely how to create it so it brings customers for years.","pillar":"content-marketing","pillarLabel":"Content Marketing","readTime":22,"author":"Riley Catalano","date":"2025-02-01","slug":"how-to-create-evergreen-content","featured":false},{"id":"content-repurposing-mastery-ai-era","title":"Content Repurposing Mastery: For the AI Era","description":"Most businesses publish content once and move on. The businesses dominating search and AI-generated answers are doing something smarter - producing one piece of content and turning it into ten. This is exactly how to build a repurposing system that works for SEO, AEO, and GEO.","pillar":"content-marketing","pillarLabel":"Content Marketing","readTime":20,"author":"Riley Catalano","date":"2026-03-01","slug":"content-repurposing-mastery-ai-era","featured":false},{"id":"what-makes-google-trust-a-website","title":"What Makes Google Trust a Website","description":"Google doesn't use a single trust score. It uses a complex, multi-layered system of signals - E-E-A-T, backlinks, technical performance, authorship, user behavior, and more. This guide breaks down every signal that builds Google's trust in your website and what destroys it.","pillar":"search-visibility","pillarLabel":"Search Visibility & Local Discovery","readTime":18,"author":"Riley Catalano","date":"2026-03-22","slug":"what-makes-google-trust-a-website","featured":true},{"id":"new-rules-online-visibility-seo-aeo-geo","title":"The New Rules of Online Visibility: SEO, AEO & GEO Mastery","description":"Search engine optimization alone is no longer a viable strategy. AEO and GEO have become non-negotiable layers of modern search visibility. The most complete breakdown of all three - and the exact framework to build compounding visibility across every search ecosystem at once.","pillar":"search-visibility","pillarLabel":"Search Visibility & Local Discovery","readTime":28,"author":"Riley Catalano","date":"2026-03-01","slug":"new-rules-online-visibility-seo-aeo-geo","featured":true},{"id":"local-service-ads-fast-track-top-google","title":"Local Service Ads: Fast Track to the Top of Google","description":"Google Local Service Ads appear above everything else - the map, paid ads, organic results. Here is exactly how LSAs work, how the ranking algorithm decides who shows up, and how to build a profile that wins leads before competitors even know the game has changed.","pillar":"search-visibility","pillarLabel":"Search Visibility & Local Discovery","readTime":23,"author":"Riley Catalano","date":"2026-04-01","slug":"local-service-ads-fast-track-top-google","featured":true},{"id":"your-cute-captions-arent-searchable","title":"Your Cute Captions Aren't Searchable","description":"If your caption sounds clever but can't be searched, indexed, or matched to intent, it isn't helping your business. This is a discoverability problem - and here is exactly how to fix it across every platform you post on.","pillar":"social-media-strategy","pillarLabel":"Social Media Strategy","readTime":8,"author":"Riley Catalano","date":"2026-01-18","slug":"your-cute-captions-arent-searchable","featured":true},{"id":"complete-google-business-profile-checklist","title":"The Complete Google Business Profile Checklist","description":"Your Google Business Profile is not just a listing - it is your most powerful local search asset. Every missing photo, unlisted service, or unanswered review is lost revenue. This checklist covers everything: setup, categories, services, photos, reviews, posts, Q&A, and analytics.","pillar":"search-visibility","pillarLabel":"Search Visibility & Local Discovery","readTime":12,"author":"Riley Catalano","date":"2026-01-11","slug":"complete-google-business-profile-checklist","featured":true},{"id":"how-to-create-highly-engaging-social-media-posts","title":"How Businesses Can Create Highly-Engaging Social Media Posts","description":"Most business owners treat social media like a megaphone. The businesses winning right now are smarter - they understand that people don't engage with content, they engage with content that makes them feel something. Here is how to build that, systematically.","pillar":"social-media-strategy","pillarLabel":"Social Media Strategy","readTime":10,"author":"Riley Catalano","date":"2026-02-14","slug":"how-to-create-highly-engaging-social-media-posts","featured":true},{"id":"how-to-become-local-favorite-northern-indiana-michiana","title":"How to Make Your Business the Favorite in Northern Indiana & Michiana","description":"Being known is not the same as being chosen. This is the exact playbook for building a brand that Northern Indiana and Michiana customers trust, recommend, and return to - without a national budget or a marketing department.","pillar":"brand-positioning","pillarLabel":"Brand Positioning & Community Authority","readTime":14,"author":"Riley Catalano","date":"2026-04-01","slug":"how-to-become-local-favorite-northern-indiana-michiana","featured":true}];
+var FALLBACK_ARTICLES = [{"id":"blog-and-article-hierarchy-pillars-clusters-internal-linking","title":"Blog and Article Hierarchy: Pillars, Clusters, and Internal Linking","description":"Most businesses write articles one by one and wonder why their site never ranks. The issue isn't article quality - it's the lack of structure. This guide covers the three-level content hierarchy, topical authority, and the internal linking architecture that makes it all work.","pillar":"content-marketing","pillarLabel":"Content Marketing","readTime":17,"author":"Riley Catalano","date":"2025-01-01","slug":"blog-and-article-hierarchy-pillars-clusters-internal-linking","featured":true},{"id":"how-to-create-evergreen-content","title":"How to Create Evergreen Content That Brings Customers for Years","description":"Most businesses create content that disappears into the feed within hours. This guide covers exactly what evergreen content is, why it compounds in ways other marketing cannot, and precisely how to create it so it brings customers for years.","pillar":"content-marketing","pillarLabel":"Content Marketing","readTime":22,"author":"Riley Catalano","date":"2025-02-01","slug":"how-to-create-evergreen-content","featured":false},{"id":"content-repurposing-mastery-ai-era","title":"Content Repurposing Mastery: For the AI Era","description":"Most businesses publish content once and move on. The businesses dominating search and AI-generated answers are doing something smarter - producing one piece of content and turning it into ten. This is exactly how to build a repurposing system that works for SEO, AEO, and GEO.","pillar":"content-marketing","pillarLabel":"Content Marketing","readTime":20,"author":"Riley Catalano","date":"2026-03-01","slug":"content-repurposing-mastery-ai-era","featured":false},{"id":"what-makes-google-trust-a-website","title":"What Makes Google Trust a Website","description":"Google doesn't use a single trust score. It uses a complex, multi-layered system of signals - E-E-A-T, backlinks, technical performance, authorship, user behavior, and more. This guide breaks down every signal that builds Google's trust in your website and what destroys it.","pillar":"search-visibility","pillarLabel":"Search Visibility & Local Discovery","readTime":18,"author":"Riley Catalano","date":"2026-03-22","slug":"what-makes-google-trust-a-website","featured":true},{"id":"new-rules-online-visibility-seo-aeo-geo","title":"The New Rules of Online Visibility: SEO, AEO & GEO Mastery","description":"Search engine optimization alone is no longer a viable strategy. AEO and GEO have become non-negotiable layers of modern search visibility. The most complete breakdown of all three - and the exact framework to build compounding visibility across every search ecosystem at once.","pillar":"search-visibility","pillarLabel":"Search Visibility & Local Discovery","readTime":28,"author":"Riley Catalano","date":"2026-03-01","slug":"new-rules-online-visibility-seo-aeo-geo","featured":true},{"id":"local-service-ads-fast-track-top-google","title":"Local Service Ads: Fast Track to the Top of Google","description":"Google Local Service Ads appear above everything else - the map, paid ads, organic results. Here is exactly how LSAs work, how the ranking algorithm decides who shows up, and how to build a profile that wins leads before competitors even know the game has changed.","pillar":"search-visibility","pillarLabel":"Search Visibility & Local Discovery","readTime":23,"author":"Riley Catalano","date":"2026-04-01","slug":"local-service-ads-fast-track-top-google","featured":true},{"id":"your-cute-captions-arent-searchable","title":"Your Cute Captions Aren't Searchable","description":"If your caption sounds clever but can't be searched, indexed, or matched to intent, it isn't helping your business. This is a discoverability problem - and here is exactly how to fix it across every platform you post on.","pillar":"social-media-strategy","pillarLabel":"Social Media Strategy","readTime":8,"author":"Riley Catalano","date":"2026-01-18","slug":"your-cute-captions-arent-searchable","featured":true},{"id":"google-business-profile-checklist","title":"The Complete Google Business Profile Checklist","description":"Your Google Business Profile is not just a listing - it is your most powerful local search asset. Every missing photo, unlisted service, or unanswered review is lost revenue. This checklist covers everything: setup, categories, services, photos, reviews, posts, Q&A, and analytics.","pillar":"search-visibility","pillarLabel":"Search Visibility & Local Discovery","readTime":12,"author":"Riley Catalano","date":"2026-01-11","slug":"google-business-profile-checklist","featured":true},{"id":"how-to-create-highly-engaging-social-media-posts","title":"How Businesses Can Create Highly-Engaging Social Media Posts","description":"Most business owners treat social media like a megaphone. The businesses winning right now are smarter - they understand that people don't engage with content, they engage with content that makes them feel something. Here is how to build that, systematically.","pillar":"social-media-strategy","pillarLabel":"Social Media Strategy","readTime":10,"author":"Riley Catalano","date":"2026-02-14","slug":"how-to-create-highly-engaging-social-media-posts","featured":true},{"id":"how-to-become-local-favorite-northern-indiana-michiana","title":"How to Make Your Business the Favorite in Northern Indiana & Michiana","description":"Being known is not the same as being chosen. This is the exact playbook for building a brand that Northern Indiana and Michiana customers trust, recommend, and return to - without a national budget or a marketing department.","pillar":"brand-positioning","pillarLabel":"Brand Positioning & Community Authority","readTime":14,"author":"Riley Catalano","date":"2026-04-01","slug":"how-to-become-local-favorite-northern-indiana-michiana","featured":true}];
 var allArticles = [];
-
 fetch('https://favze.com/articles.json')
   .then(function(r){return r.json();})
   .then(function(data){allArticles=data;init();})
   .catch(function(){allArticles=FALLBACK_ARTICLES;init();});
-
 function init(){renderFeed();renderSidebar();bindEvents();}
-
 function renderFeed(){
   var arts = allArticles.filter(function(a){return a.pillar===THIS_PILLAR;});
   var countEl = document.getElementById('articleCount');
   var feed = document.getElementById('articleFeed');
   var coming = document.getElementById('comingMore');
   var empty = document.getElementById('emptyState');
-  countEl.textContent = arts.length + ' Article' + (arts.length!==1?'s':'');
-  if(arts.length===0){feed.innerHTML='';coming.style.display='none';empty.style.display='flex';return;}
-  empty.style.display='none';
+  if(countEl) countEl.textContent = arts.length + ' Article' + (arts.length!==1?'s':'');
+  if(!feed) return;
+  if(arts.length===0){feed.innerHTML='';if(coming)coming.style.display='none';if(empty)empty.style.display='flex';return;}
+  if(empty)empty.style.display='none';
   feed.innerHTML='<div class="articles-list">'+arts.map(function(a){
     var initials=a.author.split(' ').map(function(w){return w[0];}).join('');
     var url='https://favze.com/articles/'+a.pillar+'/'+a.slug;
     return '<a href="'+url+'" class="article-card"><div class="article-card-top"><span class="a-tag">Brand Positioning</span><span class="a-dot"></span><span class="a-read-time">'+a.readTime+' min read</span></div><h3>'+a.title+'</h3><p class="desc">'+a.description+'</p><div class="a-footer"><div class="a-author"><div class="a-author-avatar">'+initials+'</div><span class="a-author-name">'+a.author+'</span></div><span class="a-read-link">Read Article <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div></a>';
   }).join('')+'</div>';
-  coming.style.display='flex';
+  if(coming)coming.style.display='flex';
 }
-
 function renderSidebar(){
   var list = document.getElementById('sidebarPillarList');
   if(!list) return;
@@ -771,13 +796,9 @@ function renderSidebar(){
   });
   list.innerHTML = html;
 }
-
 function bindEvents(){
-  // Progress bar
   var fill = document.getElementById('progressFill');
   if(fill){window.addEventListener('scroll',function(){var doc=document.documentElement;var s=doc.scrollTop||document.body.scrollTop;var t=doc.scrollHeight-doc.clientHeight;fill.style.width=(t>0?(s/t*100):0)+'%';},{passive:true});}
-
-  // ToC active highlighting
   var sections = document.querySelectorAll('.pillar-body h2[id]');
   var tocLinks = document.querySelectorAll('.sidebar-toc a');
   if(sections.length&&tocLinks.length){
@@ -792,8 +813,6 @@ function bindEvents(){
     },{rootMargin:'-15% 0px -75% 0px'});
     sections.forEach(function(s){obs.observe(s);});
   }
-
-  // Nav dropdowns
   var drops=[
     {trig:document.getElementById('trigServices'),pan:document.getElementById('panServices')},
     {trig:document.getElementById('trigArticles'),pan:document.getElementById('panArticles')}
@@ -813,8 +832,6 @@ function bindEvents(){
     drops.forEach(function(d){if(!d.pan.contains(e.target)&&!d.trig.contains(e.target))closePanel(d.trig,d.pan);});
   });
   document.addEventListener('keydown',function(e){if(e.key==='Escape')drops.forEach(function(d){closePanel(d.trig,d.pan);});});
-
-  // Mobile menu
   var hb=document.getElementById('hb'),mm=document.getElementById('mm');
   if(hb&&mm){
     hb.addEventListener('click',function(){
@@ -827,7 +844,6 @@ function bindEvents(){
       a.addEventListener('click',function(){mm.classList.remove('open');hb.classList.remove('open');hb.setAttribute('aria-expanded','false');mm.setAttribute('aria-hidden','true');});
     });
   }
-
   function bindAccordion(trigId,subId){
     var trig=document.getElementById(trigId),sub=document.getElementById(subId);
     if(!trig||!sub)return;
