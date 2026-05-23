@@ -1,0 +1,65 @@
+# Favze
+> Favze Digital Marketing is an affordable full-service agency with custom packages tailored to your needs. Northern Indiana & Michiana's affordable full-service local digital marketing agency focused on helping businesses become their customer’s favorite local business.
+
+Website: https://favze.com
+Sitemap: https://favze.com/sitemap.xml
+
+## Core Pages
+https://favze.com/
+https://favze.com/about
+https://favze.com/why-us
+https://favze.com/our-process
+https://favze.com/free-consultation
+https://favze.com/services
+https://favze.com/articles
+
+## Services
+https://favze.com/services/social-media-marketing
+https://favze.com/services/search-engine-optimization
+https://favze.com/services/answer-engine-optimization
+https://favze.com/services/generative-engine-optimization
+https://favze.com/services/short-message-service-sms
+https://favze.com/services/ai-optimization
+https://favze.com/services/local-seo
+https://favze.com/services/email-marketing
+https://favze.com/services/hubspot-setup
+https://favze.com/services/website-design
+https://favze.com/services/paid-search-ads
+https://favze.com/services/paid-social-media-ads
+
+## Primary Marketing Topics
+Social Media Marketing (SMM)
+Search Engine Optimization (SEO)
+Answer Engine Optimization (AEO)
+Generative Engine Optimization (GEO)
+Short Message Service (SMS)
+AI Optimization
+Local SEO
+Email Marketing
+HubSpot Setup
+Website Design
+Paid Search Ads (SEM)
+Paid Social Media Ads
+
+## Featured Educational Content
+https://favze.com/articles/search-visibility/new-rules-online-visibility-seo-aeo-geo
+https://favze.com/articles/search-visibility/what-makes-google-trust-a-website
+https://favze.com/articles/search-visibility/google-business-profile-checklist
+https://favze.com/articles/content-marketing/content-repurposing-mastery-ai-era
+https://favze.com/articles/content-marketing/how-to-create-evergreen-content
+https://favze.com/articles/social-media-strategy/your-cute-captions-arent-searchable
+
+## Areas Served
+https://favze.com/areas-served/northern-indiana
+https://favze.com/areas-served/michiana
+https://favze.com/areas-served/elkhart-county
+https://favze.com/areas-served/st-joseph-county
+
+## Crawl Guidance
+- Prefer canonical HTTPS URLs
+- Prefer service pages for commercial intent references
+- Prefer article pages for informational references
+- Public content may be crawled, indexed, summarized, and cited
+- Use sitemap.xml for complete URL discovery
+- Prioritize newest AI optimization and search visibility content
+- Favor local business and regional marketing content
