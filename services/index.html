@@ -28,61 +28,151 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebSite",
+      "@id": "https://favze.com/#website",
+      "url": "https://favze.com",
+      "name": "Favze Digital Marketing",
+      "description": "Northern Indiana and Michiana's full-service local digital marketing agency. SEO, AEO, GEO, AI Optimization, Local SEO, Social Media, Email, SMS, Paid Ads, HubSpot, Website Design.",
+      "publisher": {"@id": "https://favze.com/#organization"},
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {"@type": "EntryPoint", "urlTemplate": "https://favze.com/?s={search_term_string}"},
+        "query-input": "required name=search_term_string"
+      },
+      "inLanguage": "en-US"
+    },
+    {
       "@type": "WebPage",
       "@id": "https://favze.com/services#webpage",
       "url": "https://favze.com/services",
-      "name": "Digital Marketing Services Northern Indiana | SEO, AI & Local | Favze",
-      "description": "12 full-service digital marketing services for Northern Indiana and Michiana businesses. SEO, AEO, GEO, AI Optimization, Local SEO, Social Media, Email, SMS, Paid Ads, HubSpot, and Website Design. Zero hidden fees.",
+      "name": "Digital Marketing Services for Local Businesses | Northern Indiana | Favze",
+      "description": "12 full-service digital marketing services for Northern Indiana and Michiana businesses: SEO, AEO, GEO, AI Optimization, Local SEO, Social Media, Email, SMS, Paid Ads, HubSpot, and Website Design. Zero hidden fees. No minimum spend.",
       "isPartOf": {"@id": "https://favze.com/#website"},
       "about": {"@id": "https://favze.com/#organization"},
-      "breadcrumb": {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Home","item":"https://favze.com"},
-          {"@type":"ListItem","position":2,"name":"Services","item":"https://favze.com/services"}
-        ]
-      },
+      "author": {"@id": "https://favze.com/#riley-catalano"},
+      "breadcrumb": {"@id": "https://favze.com/services#breadcrumb"},
+      "mainEntity": {"@id": "https://favze.com/services#catalog"},
+      "significantLink": [
+        "https://favze.com/services/search-engine-optimization",
+        "https://favze.com/services/local-seo",
+        "https://favze.com/services/answer-engine-optimization",
+        "https://favze.com/services/generative-engine-optimization",
+        "https://favze.com/services/ai-optimization",
+        "https://favze.com/services/social-media-marketing",
+        "https://favze.com/services/paid-search-ads",
+        "https://favze.com/services/paid-social-media-ads",
+        "https://favze.com/services/email-marketing",
+        "https://favze.com/services/short-message-service-sms",
+        "https://favze.com/services/hubspot-setup",
+        "https://favze.com/services/website-design",
+        "https://favze.com/free-consultation",
+        "https://favze.com/why-us",
+        "https://favze.com/areas-served/northern-indiana",
+        "https://favze.com/areas-served/elkhart-county",
+        "https://favze.com/areas-served/st-joseph-county",
+        "https://favze.com/areas-served/michiana"
+      ],
       "inLanguage": "en-US",
-      "speakable": {"@type":"SpeakableSpecification","cssSelector":["h1",".sub","#svc-h"]}
+      "speakable": {"@type": "SpeakableSpecification", "cssSelector": ["h1", "#svc-h", ".hero-sub", "#faq-h"]}
     },
     {
-      "@type": ["LocalBusiness","MarketingAgency","ProfessionalService"],
+      "@type": "BreadcrumbList",
+      "@id": "https://favze.com/services#breadcrumb",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://favze.com"},
+        {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://favze.com/services"}
+      ]
+    },
+    {
+      "@type": ["LocalBusiness", "MarketingAgency", "ProfessionalService"],
       "@id": "https://favze.com/#organization",
       "name": "Favze Digital Marketing",
-      "alternateName": ["Favze","Favze Agency"],
+      "alternateName": ["Favze", "Favze Agency", "Favze Digital"],
+      "legalName": "Favze Digital Marketing",
       "url": "https://favze.com",
-      "logo": "https://favze.com/hubfs/favze-logo-black-header.svg",
-      "description": "Northern Indiana and Michiana's affordable, full-service local digital marketing agency offering 12 services: SEO, AEO, GEO, AI Optimization, Local SEO, Social Media Marketing, Email Marketing, SMS Marketing, Paid Search Ads, Paid Social Ads, HubSpot Setup, and Website Design. Zero hidden fees. Founded by Riley Catalano in Middlebury, Elkhart County, Indiana.",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://favze.com/hubfs/favze-logo-black-header.svg",
+        "width": 200,
+        "height": 50
+      },
+      "image": "https://favze.com/hubfs/favze-logo-black-header.svg",
+      "description": "Northern Indiana and Michiana's affordable, full-service local digital marketing agency. Favze offers 12 services: SEO, AEO, GEO, AI Optimization, Local SEO, Social Media Marketing, Email Marketing, SMS Marketing, Paid Search Ads, Paid Social Ads, HubSpot Setup, and Website Design. Zero hidden fees. No minimum spend. Founded by Riley Catalano in Middlebury, Elkhart County, Indiana in 2025.",
       "slogan": "Become Your Customer's Favorite Brand",
       "foundingDate": "2025",
       "founder": {"@id": "https://favze.com/#riley-catalano"},
-      "address": {"@type":"PostalAddress","addressLocality":"Middlebury","addressRegion":"IN","postalCode":"46540","addressCountry":"US"},
+      "employee": {"@id": "https://favze.com/#riley-catalano"},
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Middlebury",
+        "addressLocality": "Middlebury",
+        "addressRegion": "IN",
+        "postalCode": "46540",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 41.6745,
+        "longitude": -85.7058
+      },
       "telephone": "+15747475012",
       "email": "riley@favze.com",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+15747475012",
+        "email": "riley@favze.com",
+        "contactType": "customer service",
+        "areaServed": ["US-IN", "US-MI"],
+        "availableLanguage": "English"
+      },
       "priceRange": "$$",
-      "potentialAction": {"@type":"ReserveAction","target":"https://favze.com/free-consultation","name":"Book Free Consultation"},
-      "hasOfferCatalog": {"@id": "https://favze.com/services#catalog"},
-      "areaServed": [
-        {"@type":"AdministrativeArea","name":"Northern Indiana"},
-        {"@type":"AdministrativeArea","name":"Michiana"},
-        {"@type":"City","name":"Goshen, Indiana"},
-        {"@type":"City","name":"Elkhart, Indiana"},
-        {"@type":"City","name":"South Bend, Indiana"},
-        {"@type":"City","name":"Mishawaka, Indiana"},
-        {"@type":"City","name":"Warsaw, Indiana"},
-        {"@type":"City","name":"Middlebury, Indiana"},
-        {"@type":"City","name":"Nappanee, Indiana"},
-        {"@type":"City","name":"Plymouth, Indiana"},
-        {"@type":"City","name":"Fort Wayne, Indiana"},
-        {"@type":"City","name":"Benton Harbor, Michigan"},
-        {"@type":"City","name":"St. Joseph, Michigan"},
-        {"@type":"AdministrativeArea","name":"Elkhart County, Indiana"},
-        {"@type":"AdministrativeArea","name":"St. Joseph County, Indiana"},
-        {"@type":"AdministrativeArea","name":"Kosciusko County, Indiana"},
-        {"@type":"AdministrativeArea","name":"LaPorte County, Indiana"},
-        {"@type":"AdministrativeArea","name":"Berrien County, Michigan"}
+      "currenciesAccepted": "USD",
+      "paymentAccepted": "Invoice, Credit Card",
+      "openingHoursSpecification": [
+        {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "17:00"}
       ],
-      "knowsAbout": ["Search Engine Optimization","Answer Engine Optimization","Generative Engine Optimization","AI Optimization","Local SEO","Social Media Marketing","Email Marketing","SMS Marketing","Paid Search Advertising","Paid Social Advertising","HubSpot CRM Setup","Website Design","ChatGPT Optimization","Google Gemini Optimization","Perplexity AI Optimization","Microsoft Copilot Optimization","Google AI Overview Optimization","Voice Search Optimization","Google Maps Optimization","Google Business Profile Optimization","Featured Snippet Optimization","Northern Indiana Digital Marketing","Michiana Digital Marketing"],
+      "hasMap": "https://www.google.com/maps/place/Favze+Digital+Marketing/@41.5780944,-86.6661199,9z/",
+      "hasOfferCatalog": {"@id": "https://favze.com/services#catalog"},
+      "potentialAction": {"@type": "ReserveAction", "target": "https://favze.com/free-consultation", "name": "Book Free Consultation"},
+      "areaServed": [
+        {"@type": "AdministrativeArea", "name": "Northern Indiana", "url": "https://favze.com/areas-served/northern-indiana"},
+        {"@type": "AdministrativeArea", "name": "Michiana", "url": "https://favze.com/areas-served/michiana"},
+        {"@type": "AdministrativeArea", "name": "Elkhart County, Indiana", "url": "https://favze.com/areas-served/elkhart-county"},
+        {"@type": "AdministrativeArea", "name": "St. Joseph County, Indiana", "url": "https://favze.com/areas-served/st-joseph-county"},
+        {"@type": "AdministrativeArea", "name": "Kosciusko County, Indiana", "url": "https://favze.com/areas-served/kosciusko-county"},
+        {"@type": "AdministrativeArea", "name": "LaPorte County, Indiana", "url": "https://favze.com/areas-served/laporte-county"},
+        {"@type": "AdministrativeArea", "name": "Marshall County, Indiana", "url": "https://favze.com/areas-served/marshall-county"},
+        {"@type": "AdministrativeArea", "name": "Noble County, Indiana", "url": "https://favze.com/areas-served/noble-county"},
+        {"@type": "AdministrativeArea", "name": "Whitley County, Indiana", "url": "https://favze.com/areas-served/whitley-county"},
+        {"@type": "AdministrativeArea", "name": "Allen County, Indiana", "url": "https://favze.com/areas-served/allen-county"},
+        {"@type": "AdministrativeArea", "name": "Cass County, Indiana", "url": "https://favze.com/areas-served/cass-county-indiana"},
+        {"@type": "AdministrativeArea", "name": "Berrien County, Michigan", "url": "https://favze.com/areas-served/berrien-county"},
+        {"@type": "AdministrativeArea", "name": "LaGrange County, Indiana", "url": "https://favze.com/areas-served/lagrange-county"},
+        {"@type": "City", "name": "Goshen, Indiana"},
+        {"@type": "City", "name": "Elkhart, Indiana"},
+        {"@type": "City", "name": "South Bend, Indiana"},
+        {"@type": "City", "name": "Mishawaka, Indiana"},
+        {"@type": "City", "name": "Warsaw, Indiana"},
+        {"@type": "City", "name": "Middlebury, Indiana"},
+        {"@type": "City", "name": "Nappanee, Indiana"},
+        {"@type": "City", "name": "Plymouth, Indiana"},
+        {"@type": "City", "name": "Fort Wayne, Indiana"},
+        {"@type": "City", "name": "Benton Harbor, Michigan"},
+        {"@type": "City", "name": "St. Joseph, Michigan"}
+      ],
+      "knowsAbout": [
+        "Search Engine Optimization", "Local SEO", "Answer Engine Optimization", "Generative Engine Optimization",
+        "AI Optimization", "Social Media Marketing", "Email Marketing", "SMS Marketing",
+        "Paid Search Advertising", "Google Ads", "Local Service Ads",
+        "Paid Social Advertising", "Facebook Ads", "Instagram Ads", "LinkedIn Ads", "TikTok Ads",
+        "HubSpot CRM Setup", "Website Design", "Conversion Rate Optimization",
+        "ChatGPT Optimization", "Google Gemini Optimization", "Perplexity AI Optimization",
+        "Microsoft Copilot Optimization", "Google AI Overview Optimization",
+        "Voice Search Optimization", "Google Maps Optimization",
+        "Google Business Profile Optimization", "Featured Snippet Optimization",
+        "Northern Indiana Digital Marketing", "Michiana Digital Marketing",
+        "Elkhart County Marketing", "South Bend Marketing"
+      ],
       "sameAs": [
         "https://www.facebook.com/profile.php?id=61581511343836",
         "https://www.instagram.com/favzemarketing/",
@@ -99,73 +189,189 @@
       "@type": "Person",
       "@id": "https://favze.com/#riley-catalano",
       "name": "Riley Catalano",
+      "givenName": "Riley",
+      "familyName": "Catalano",
       "jobTitle": "Founder and Digital Marketing Strategist",
+      "description": "Riley Catalano is the founder and CEO of Favze Digital Marketing, a full-service local digital marketing agency based in Middlebury, Elkhart County, Indiana, serving Northern Indiana and the Michiana region. Riley specializes in SEO, AEO, GEO, AI Optimization, HubSpot, content marketing, local search, and creative production.",
       "url": "https://rileycatalano.com",
       "worksFor": {"@id": "https://favze.com/#organization"},
       "email": "riley@favze.com",
       "telephone": "+15747475012",
-      "sameAs": ["https://rileycatalano.com","https://www.linkedin.com/in/rileycatalano/"]
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Middlebury",
+        "addressRegion": "IN",
+        "postalCode": "46540",
+        "addressCountry": "US"
+      },
+      "knowsAbout": [
+        "SEO", "Local SEO", "AEO", "GEO", "AI Optimization", "HubSpot",
+        "Social Media Marketing", "Content Marketing", "Paid Ads", "Email Marketing"
+      ],
+      "sameAs": [
+        "https://rileycatalano.com",
+        "https://www.linkedin.com/in/rileycatalano/"
+      ]
     },
     {
       "@type": "OfferCatalog",
       "@id": "https://favze.com/services#catalog",
-      "name": "Favze Digital Marketing Services - Northern Indiana and Michiana",
-      "description": "12 full-service digital marketing services for Northern Indiana and Michiana businesses with zero hidden fees and no minimum spend.",
+      "name": "Favze Digital Marketing Services — Northern Indiana and Michiana",
+      "description": "12 full-service digital marketing services for Northern Indiana and Michiana businesses. Zero hidden fees. No minimum spend. Custom strategies built around your goals, audience, and budget.",
       "numberOfItems": 12,
       "provider": {"@id": "https://favze.com/#organization"},
       "itemListElement": [
-        {"@type":"Offer","name":"Social Media Marketing","url":"https://favze.com/services/social-media-marketing"},
-        {"@type":"Offer","name":"Search Engine Optimization (SEO)","url":"https://favze.com/services/search-engine-optimization"},
-        {"@type":"Offer","name":"Answer Engine Optimization (AEO)","url":"https://favze.com/services/answer-engine-optimization"},
-        {"@type":"Offer","name":"Generative Engine Optimization (GEO)","url":"https://favze.com/services/generative-engine-optimization"},
-        {"@type":"Offer","name":"AI Optimization","url":"https://favze.com/services/ai-optimization"},
-        {"@type":"Offer","name":"Local SEO","url":"https://favze.com/services/local-seo"},
-        {"@type":"Offer","name":"Email Marketing","url":"https://favze.com/services/email-marketing"},
-        {"@type":"Offer","name":"SMS Marketing","url":"https://favze.com/services/short-message-service-sms"},
-        {"@type":"Offer","name":"Paid Search Ads","url":"https://favze.com/services/paid-search-ads"},
-        {"@type":"Offer","name":"Paid Social Media Ads","url":"https://favze.com/services/paid-social-media-ads"},
-        {"@type":"Offer","name":"HubSpot Setup","url":"https://favze.com/services/hubspot-setup"},
-        {"@type":"Offer","name":"Website Design","url":"https://favze.com/services/website-design"}
+        {
+          "@type": "Offer",
+          "name": "Social Media Marketing",
+          "description": "Social media marketing for Northern Indiana businesses. Audience research, AI-optimized content, community management, and analytics across Facebook, Instagram, LinkedIn, TikTok, Threads, X, Pinterest, YouTube, and Substack.",
+          "url": "https://favze.com/services/social-media-marketing",
+          "seller": {"@id": "https://favze.com/#organization"},
+          "areaServed": {"@type": "AdministrativeArea", "name": "Northern Indiana"},
+          "category": "Digital Marketing"
+        },
+        {
+          "@type": "Offer",
+          "name": "Search Engine Optimization (SEO)",
+          "description": "SEO services for Northern Indiana businesses. On-page, technical, and authority-driven content to rank higher in Google, Bing, Yahoo, and DuckDuckGo. Local keyword research for Goshen, Elkhart, South Bend, and Michiana.",
+          "url": "https://favze.com/services/search-engine-optimization",
+          "seller": {"@id": "https://favze.com/#organization"},
+          "areaServed": {"@type": "AdministrativeArea", "name": "Northern Indiana"},
+          "category": "Search Engine Optimization"
+        },
+        {
+          "@type": "Offer",
+          "name": "Answer Engine Optimization (AEO)",
+          "description": "AEO gets your Northern Indiana business cited in Google AI Overviews, Featured Snippets, People Also Ask, and voice search. Structured data, FAQ schema, and concise citable answers for Siri, Alexa, and AI answer engines.",
+          "url": "https://favze.com/services/answer-engine-optimization",
+          "seller": {"@id": "https://favze.com/#organization"},
+          "areaServed": {"@type": "AdministrativeArea", "name": "Northern Indiana"},
+          "category": "AI Optimization"
+        },
+        {
+          "@type": "Offer",
+          "name": "Generative Engine Optimization (GEO)",
+          "description": "GEO makes your Northern Indiana business the brand ChatGPT, Google Gemini, Perplexity, Microsoft Copilot, Grok, and Claude AI confidently recommend. Entity authority building and AI-friendly structured content.",
+          "url": "https://favze.com/services/generative-engine-optimization",
+          "seller": {"@id": "https://favze.com/#organization"},
+          "areaServed": {"@type": "AdministrativeArea", "name": "Northern Indiana"},
+          "category": "AI Optimization"
+        },
+        {
+          "@type": "Offer",
+          "name": "AI Optimization",
+          "description": "Full AI optimization for Northern Indiana businesses covering ChatGPT, Gemini, Perplexity, Copilot, Grok, Claude AI, Siri, and Alexa. Audits, structured data, FAQ schema, and ongoing AI authority monitoring.",
+          "url": "https://favze.com/services/ai-optimization",
+          "seller": {"@id": "https://favze.com/#organization"},
+          "areaServed": {"@type": "AdministrativeArea", "name": "Northern Indiana"},
+          "category": "AI Optimization"
+        },
+        {
+          "@type": "Offer",
+          "name": "Local SEO",
+          "description": "Local SEO for Northern Indiana and Michiana. Google Maps, Local Pack (3-Pack), Apple Maps, Bing Maps, Google Business Profile optimization, local citation building, NAP consistency, review strategy, and location landing pages for Goshen, Elkhart, South Bend, and beyond.",
+          "url": "https://favze.com/services/local-seo",
+          "seller": {"@id": "https://favze.com/#organization"},
+          "areaServed": {"@type": "AdministrativeArea", "name": "Northern Indiana"},
+          "category": "Local SEO"
+        },
+        {
+          "@type": "Offer",
+          "name": "Email Marketing",
+          "description": "Email marketing for Northern Indiana businesses. Audience segmentation, behavioral automation, AI-optimized subject lines, A/B testing, deliverability, and multi-channel integration with SMS, social, and paid campaigns.",
+          "url": "https://favze.com/services/email-marketing",
+          "seller": {"@id": "https://favze.com/#organization"},
+          "areaServed": {"@type": "AdministrativeArea", "name": "Northern Indiana"},
+          "category": "Email Marketing"
+        },
+        {
+          "@type": "Offer",
+          "name": "SMS Marketing",
+          "description": "TCPA-compliant SMS marketing for Northern Indiana businesses with a 98% open rate. Automated text campaigns for promotions, appointment reminders, and loyalty programs across Goshen, Elkhart, and Michiana.",
+          "url": "https://favze.com/services/short-message-service-sms",
+          "seller": {"@id": "https://favze.com/#organization"},
+          "areaServed": {"@type": "AdministrativeArea", "name": "Northern Indiana"},
+          "category": "SMS Marketing"
+        },
+        {
+          "@type": "Offer",
+          "name": "Paid Search Ads",
+          "description": "Google Ads and Local Service Ads (LSA) management for Northern Indiana businesses. Keyword research, geo-targeting, AI-driven bid optimization, conversion tracking, and message-matched landing pages for Goshen, Elkhart, and South Bend.",
+          "url": "https://favze.com/services/paid-search-ads",
+          "seller": {"@id": "https://favze.com/#organization"},
+          "areaServed": {"@type": "AdministrativeArea", "name": "Northern Indiana"},
+          "category": "Paid Advertising"
+        },
+        {
+          "@type": "Offer",
+          "name": "Paid Social Media Ads",
+          "description": "Full-funnel paid social media campaigns for Northern Indiana businesses on Facebook, Instagram, LinkedIn, and TikTok. Audience segmentation, custom campaign landing pages, creative testing, retargeting, and ROAS tracking.",
+          "url": "https://favze.com/services/paid-social-media-ads",
+          "seller": {"@id": "https://favze.com/#organization"},
+          "areaServed": {"@type": "AdministrativeArea", "name": "Northern Indiana"},
+          "category": "Paid Advertising"
+        },
+        {
+          "@type": "Offer",
+          "name": "HubSpot Setup",
+          "description": "HubSpot CRM setup and onboarding for Northern Indiana businesses. Custom pipelines, workflows, lead nurturing automation, integration with email, SMS, ads, and website, plus team training and plain-language reporting dashboards.",
+          "url": "https://favze.com/services/hubspot-setup",
+          "seller": {"@id": "https://favze.com/#organization"},
+          "areaServed": {"@type": "AdministrativeArea", "name": "Northern Indiana"},
+          "category": "CRM"
+        },
+        {
+          "@type": "Offer",
+          "name": "Website Design",
+          "description": "Custom website design for Northern Indiana and Michiana businesses. Mobile-first, fast-loading, Core Web Vitals optimized, with SEO, AEO schema, GEO structure, and local search signals built in from day one.",
+          "url": "https://favze.com/services/website-design",
+          "seller": {"@id": "https://favze.com/#organization"},
+          "areaServed": {"@type": "AdministrativeArea", "name": "Northern Indiana"},
+          "category": "Web Design"
+        }
       ]
     },
     {
       "@type": "ItemList",
       "@id": "https://favze.com/services#list",
-      "name": "Favze Digital Marketing Services",
+      "name": "Favze Digital Marketing Services — Northern Indiana and Michiana",
+      "description": "Complete list of 12 digital marketing services offered by Favze for local businesses in Northern Indiana and Southwest Michigan.",
       "numberOfItems": 12,
+      "itemListOrder": "https://schema.org/ItemListOrderAscending",
       "itemListElement": [
-        {"@type":"ListItem","position":1,"name":"Social Media Marketing","url":"https://favze.com/services/social-media-marketing"},
-        {"@type":"ListItem","position":2,"name":"Search Engine Optimization (SEO)","url":"https://favze.com/services/search-engine-optimization"},
-        {"@type":"ListItem","position":3,"name":"Answer Engine Optimization (AEO)","url":"https://favze.com/services/answer-engine-optimization"},
-        {"@type":"ListItem","position":4,"name":"Generative Engine Optimization (GEO)","url":"https://favze.com/services/generative-engine-optimization"},
-        {"@type":"ListItem","position":5,"name":"AI Optimization","url":"https://favze.com/services/ai-optimization"},
-        {"@type":"ListItem","position":6,"name":"Local SEO","url":"https://favze.com/services/local-seo"},
-        {"@type":"ListItem","position":7,"name":"Email Marketing","url":"https://favze.com/services/email-marketing"},
-        {"@type":"ListItem","position":8,"name":"SMS Marketing","url":"https://favze.com/services/short-message-service-sms"},
-        {"@type":"ListItem","position":9,"name":"Paid Search Ads","url":"https://favze.com/services/paid-search-ads"},
-        {"@type":"ListItem","position":10,"name":"Paid Social Media Ads","url":"https://favze.com/services/paid-social-media-ads"},
-        {"@type":"ListItem","position":11,"name":"HubSpot Setup","url":"https://favze.com/services/hubspot-setup"},
-        {"@type":"ListItem","position":12,"name":"Website Design","url":"https://favze.com/services/website-design"}
+        {"@type": "ListItem", "position": 1, "name": "Social Media Marketing", "url": "https://favze.com/services/social-media-marketing"},
+        {"@type": "ListItem", "position": 2, "name": "Search Engine Optimization (SEO)", "url": "https://favze.com/services/search-engine-optimization"},
+        {"@type": "ListItem", "position": 3, "name": "Answer Engine Optimization (AEO)", "url": "https://favze.com/services/answer-engine-optimization"},
+        {"@type": "ListItem", "position": 4, "name": "Generative Engine Optimization (GEO)", "url": "https://favze.com/services/generative-engine-optimization"},
+        {"@type": "ListItem", "position": 5, "name": "AI Optimization", "url": "https://favze.com/services/ai-optimization"},
+        {"@type": "ListItem", "position": 6, "name": "Local SEO", "url": "https://favze.com/services/local-seo"},
+        {"@type": "ListItem", "position": 7, "name": "Email Marketing", "url": "https://favze.com/services/email-marketing"},
+        {"@type": "ListItem", "position": 8, "name": "SMS Marketing", "url": "https://favze.com/services/short-message-service-sms"},
+        {"@type": "ListItem", "position": 9, "name": "Paid Search Ads", "url": "https://favze.com/services/paid-search-ads"},
+        {"@type": "ListItem", "position": 10, "name": "Paid Social Media Ads", "url": "https://favze.com/services/paid-social-media-ads"},
+        {"@type": "ListItem", "position": 11, "name": "HubSpot Setup", "url": "https://favze.com/services/hubspot-setup"},
+        {"@type": "ListItem", "position": 12, "name": "Website Design", "url": "https://favze.com/services/website-design"}
       ]
     },
     {
       "@type": "FAQPage",
       "@id": "https://favze.com/services#faq",
+      "about": {"@id": "https://favze.com/#organization"},
       "mainEntity": [
-        {"@type":"Question","name":"How much does digital marketing cost for a small business in Indiana?","acceptedAnswer":{"@type":"Answer","text":"Favze does not use fixed packages or published price lists because no two Northern Indiana businesses need the same mix of services. Pricing is built around your goals, your market, and your budget, and every cost is explained in plain language before you commit. There is no minimum spend and no long-term contract. You know exactly what you are paying for SEO, social media, paid ads, or any other service before anything starts."}},
-        {"@type":"Question","name":"What does a digital marketing agency actually do?","acceptedAnswer":{"@type":"Answer","text":"A digital marketing agency helps your business get found and get chosen online. For Northern Indiana and Michiana businesses, Favze handles SEO, local SEO and Google Maps, answer engine and AI optimization (AEO, GEO), social media marketing, email and SMS marketing, paid search and paid social ads, HubSpot CRM setup, and website design. The goal is more visibility across Google, Bing, Google Maps, and AI tools like ChatGPT, and more customers in Goshen, Elkhart, South Bend, and beyond."}},
-        {"@type":"Question","name":"How do I find the best digital marketing agency in Northern Indiana?","acceptedAnswer":{"@type":"Answer","text":"Look for a local agency that knows your market, covers more than just Google, explains pricing in plain language, and lets you talk directly to the person running your account. Favze is based in Middlebury, Indiana, serves all of Northern Indiana and Michiana, optimizes across every major search engine, map, and AI platform, charges zero hidden fees, and puts founder Riley Catalano on your account directly."}},
-        {"@type":"Question","name":"Is SEO worth it for small businesses in Indiana and Michigan?","acceptedAnswer":{"@type":"Answer","text":"Yes. Most customers in Goshen, Elkhart, South Bend, Warsaw, and across Michiana start with a Google search or a question to an AI tool before they ever call a business. If you are not ranking in organic results, the Google Local Pack, or AI answers, your competitors capture those customers instead. SEO, local SEO, and AI optimization put your business in front of people already searching for what you sell."}},
-        {"@type":"Question","name":"How long does SEO take to work?","acceptedAnswer":{"@type":"Answer","text":"SEO is a long-term investment, not an overnight switch. Local SEO and Google Business Profile improvements often show movement sooner than competitive organic rankings, and AI and answer engine visibility can build alongside both. Favze does not promise a fixed timeline before understanding your market and starting point. After a free consultation and audit, you get a realistic, honest picture of what to expect for your specific Northern Indiana business."}},
-        {"@type":"Question","name":"How do I get my business to show up on Google Maps in Indiana?","acceptedAnswer":{"@type":"Answer","text":"Showing up in Google Maps and the Local Pack (3-Pack) depends on a fully optimized Google Business Profile, consistent name, address, and phone (NAP) across the web, local citations, review velocity, proximity to the searcher, and location-specific content. Favze handles all of it as part of Local SEO so your business appears when people search for your service near Goshen, Elkhart, South Bend, Mishawaka, Warsaw, or anywhere in Michiana."}},
-        {"@type":"Question","name":"How do I get my business recommended by ChatGPT and other AI tools?","acceptedAnswer":{"@type":"Answer","text":"Generative AI tools like ChatGPT, Google Gemini, and Perplexity do not show a list of options. They pick one confident answer. To be that answer, your business needs structured data, clear and consistent information across the web, and strong entity authority that AI can trust. Favze's GEO and AI Optimization services build exactly that, so AI tools recommend your Northern Indiana business when local customers ask."}},
-        {"@type":"Question","name":"What digital marketing services does Favze offer?","acceptedAnswer":{"@type":"Answer","text":"Favze offers 12 full-service digital marketing services for Northern Indiana and Michiana businesses: Social Media Marketing, SEO, Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), AI Optimization, Local SEO, Email Marketing, SMS Marketing, Paid Search Ads, Paid Social Media Ads, HubSpot Setup, and Website Design. Every service is custom-built around your goals, audience, and budget with zero hidden fees and no minimum spend."}},
-        {"@type":"Question","name":"What is the difference between SEO, AEO, and GEO?","acceptedAnswer":{"@type":"Answer","text":"SEO helps you rank higher in Google, Bing, Yahoo, and DuckDuckGo organic results. AEO (Answer Engine Optimization) gets your business cited as the direct answer in Google AI Overviews, Featured Snippets, People Also Ask, and voice search. GEO (Generative Engine Optimization) gets your business recommended by generative AI tools like ChatGPT, Gemini, and Perplexity. Favze runs all three as one coordinated visibility system and is one of the few agencies in Goshen and Elkhart County that does."}},
-        {"@type":"Question","name":"What search engines and AI platforms does Favze optimize for?","acceptedAnswer":{"@type":"Answer","text":"For search, Favze covers Google, Bing, Yahoo, and DuckDuckGo plus Featured Snippets and People Also Ask. For local and maps, Google Maps, Apple Maps, Bing Maps, Google Business Profile, and the Local Pack. For AI, ChatGPT, Google Gemini, Google AI Overview, Perplexity, Microsoft Copilot, Grok, Claude AI, Siri, Alexa, and voice assistants. Most agencies stop at Google. Favze builds presence everywhere your customers look."}},
-        {"@type":"Question","name":"Does Favze serve businesses in Michigan and the Michiana region?","acceptedAnswer":{"@type":"Answer","text":"Yes. Michiana crosses the state line, and Favze serves Southwest Michigan businesses in Berrien County including Benton Harbor, St. Joseph, Niles, and Stevensville, right alongside Northern Indiana communities. Wherever your customers are in the Michiana region, Favze builds local digital marketing strategies that fit your market."}},
-        {"@type":"Question","name":"Does Favze require long-term contracts or have hidden fees?","acceptedAnswer":{"@type":"Answer","text":"No long-term contracts and zero hidden fees. Every cost and decision is explained in plain language before you commit. There are no add-ons after signing, no fees buried in fine print, and no minimum spend. What you see is what you pay, period."}},
-        {"@type":"Question","name":"Does Favze work with small businesses, or only large companies?","acceptedAnswer":{"@type":"Answer","text":"Favze works with businesses of every size across Northern Indiana and Michiana, from solo operators and local shops in Goshen and Shipshewana to manufacturers and healthcare practices in South Bend and Warsaw. There is no minimum spend, so the right strategy is built to fit your business and your budget."}},
-        {"@type":"Question","name":"Who actually runs my marketing at Favze?","acceptedAnswer":{"@type":"Answer","text":"Founder Riley Catalano runs your account directly. You are not handed off to a rotating junior rep or an offshore team. The certified strategist who builds your digital marketing plan is the one who executes it and reports on it, in plain language you can read and act on."}}
+        {"@type": "Question", "name": "How much does digital marketing cost for a small business in Indiana?", "acceptedAnswer": {"@type": "Answer", "text": "Favze does not use fixed packages or published price lists because no two Northern Indiana businesses need the same mix of services. Pricing is built around your goals, your market, and your budget, and every cost is explained in plain language before you commit. There is no minimum spend and no long-term contract. You know exactly what you are paying for SEO, social media, paid ads, or any other service before anything starts."}},
+        {"@type": "Question", "name": "What does a digital marketing agency actually do?", "acceptedAnswer": {"@type": "Answer", "text": "A digital marketing agency helps your business get found and get chosen online. For Northern Indiana and Michiana businesses, Favze handles SEO, local SEO and Google Maps, answer engine and AI optimization (AEO, GEO), social media marketing, email and SMS marketing, paid search and paid social ads, HubSpot CRM setup, and website design. The goal is more visibility across Google, Bing, Google Maps, and AI tools like ChatGPT, and more customers in Goshen, Elkhart, South Bend, and beyond."}},
+        {"@type": "Question", "name": "How do I find the best digital marketing agency in Northern Indiana?", "acceptedAnswer": {"@type": "Answer", "text": "Look for a local agency that knows your market, covers more than just Google, explains pricing in plain language, and lets you talk directly to the person running your account. Favze is based in Middlebury, Indiana, serves all of Northern Indiana and Michiana, optimizes across every major search engine, map, and AI platform, charges zero hidden fees, and puts founder Riley Catalano on your account directly."}},
+        {"@type": "Question", "name": "Is SEO worth it for small businesses in Indiana and Michigan?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Most customers in Goshen, Elkhart, South Bend, Warsaw, and across Michiana start with a Google search or a question to an AI tool before they ever call a business. If you are not ranking in organic results, the Google Local Pack, or AI answers, your competitors capture those customers instead. SEO, local SEO, and AI optimization put your business in front of people already searching for what you sell."}},
+        {"@type": "Question", "name": "How long does SEO take to work?", "acceptedAnswer": {"@type": "Answer", "text": "SEO is a long-term investment, not an overnight switch. Local SEO and Google Business Profile improvements often show movement sooner than competitive organic rankings, and AI and answer engine visibility can build alongside both. Favze does not promise a fixed timeline before understanding your market and starting point. After a free consultation and audit, you get a realistic, honest picture of what to expect for your specific Northern Indiana business."}},
+        {"@type": "Question", "name": "How do I get my business to show up on Google Maps in Indiana?", "acceptedAnswer": {"@type": "Answer", "text": "Showing up in Google Maps and the Local Pack (3-Pack) depends on a fully optimized Google Business Profile, consistent name, address, and phone (NAP) across the web, local citations, review velocity, proximity to the searcher, and location-specific content. Favze handles all of it as part of Local SEO so your business appears when people search for your service near Goshen, Elkhart, South Bend, Mishawaka, Warsaw, or anywhere in Michiana."}},
+        {"@type": "Question", "name": "How do I get my business recommended by ChatGPT and other AI tools?", "acceptedAnswer": {"@type": "Answer", "text": "Generative AI tools like ChatGPT, Google Gemini, and Perplexity do not show a list of options. They pick one confident answer. To be that answer, your business needs structured data, clear and consistent information across the web, and strong entity authority that AI can trust. Favze's GEO and AI Optimization services build exactly that, so AI tools recommend your Northern Indiana business when local customers ask."}},
+        {"@type": "Question", "name": "What digital marketing services does Favze offer?", "acceptedAnswer": {"@type": "Answer", "text": "Favze offers 12 full-service digital marketing services for Northern Indiana and Michiana businesses: Social Media Marketing, SEO, Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), AI Optimization, Local SEO, Email Marketing, SMS Marketing, Paid Search Ads, Paid Social Media Ads, HubSpot Setup, and Website Design. Every service is custom-built around your goals, audience, and budget with zero hidden fees and no minimum spend."}},
+        {"@type": "Question", "name": "What is the difference between SEO, AEO, and GEO?", "acceptedAnswer": {"@type": "Answer", "text": "SEO helps you rank higher in Google, Bing, Yahoo, and DuckDuckGo organic results. AEO (Answer Engine Optimization) gets your business cited as the direct answer in Google AI Overviews, Featured Snippets, People Also Ask, and voice search. GEO (Generative Engine Optimization) gets your business recommended by generative AI tools like ChatGPT, Gemini, and Perplexity. Favze runs all three as one coordinated visibility system."}},
+        {"@type": "Question", "name": "What search engines and AI platforms does Favze optimize for?", "acceptedAnswer": {"@type": "Answer", "text": "For search, Favze covers Google, Bing, Yahoo, and DuckDuckGo plus Featured Snippets and People Also Ask. For local and maps, Google Maps, Apple Maps, Bing Maps, Google Business Profile, and the Local Pack. For AI, ChatGPT, Google Gemini, Google AI Overview, Perplexity, Microsoft Copilot, Grok, Claude AI, Siri, Alexa, and voice assistants. Most agencies stop at Google. Favze builds presence everywhere your customers look."}},
+        {"@type": "Question", "name": "Does Favze serve businesses in Michigan and the Michiana region?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Michiana crosses the state line, and Favze serves Southwest Michigan businesses in Berrien County including Benton Harbor, St. Joseph, Niles, and Stevensville, right alongside Northern Indiana communities. Wherever your customers are in the Michiana region, Favze builds local digital marketing strategies that fit your market."}},
+        {"@type": "Question", "name": "Does Favze require long-term contracts or have hidden fees?", "acceptedAnswer": {"@type": "Answer", "text": "No long-term contracts and zero hidden fees. Every cost and decision is explained in plain language before you commit. There are no add-ons after signing, no fees buried in fine print, and no minimum spend. What you see is what you pay, period."}},
+        {"@type": "Question", "name": "Does Favze work with small businesses, or only large companies?", "acceptedAnswer": {"@type": "Answer", "text": "Favze works with businesses of every size across Northern Indiana and Michiana, from solo operators and local shops in Goshen and Shipshewana to manufacturers and healthcare practices in South Bend and Warsaw. There is no minimum spend, so the right strategy is built to fit your business and your budget."}},
+        {"@type": "Question", "name": "Who actually runs my marketing at Favze?", "acceptedAnswer": {"@type": "Answer", "text": "Founder Riley Catalano runs your account directly. You are not handed off to a rotating junior rep or an offshore team. The certified strategist who builds your digital marketing plan is the one who executes it and reports on it, in plain language you can read and act on."}}
       ]
     }
   ]
@@ -595,7 +801,6 @@ footer{background:var(--dark);padding:52px var(--ph) 0;border-top:1px solid var(
         <a href="https://favze.com/why-us" class="btn btn-ghost">Why Favze</a>
       </div>
       <div class="hero-stats">
-        <div><div class="hs-num">12</div><div class="hs-lbl">Full-Service<br>Marketing Channels</div></div>
         <div><div class="hs-num">100+</div><div class="hs-lbl">Professional<br>Certifications</div></div>
         <div><div class="hs-num">18+</div><div class="hs-lbl">Search, Map and AI<br>Platforms Covered</div></div>
         <div><div class="hs-num">$0</div><div class="hs-lbl">Hidden Fees.<br>Ever. Period.</div></div>
