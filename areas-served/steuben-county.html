@@ -29,7 +29,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
-<style><style>
+<style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--navy:#064187;--teal:#0A89A3;--dark:#0a0a0a;--font-display:'Barlow Condensed',sans-serif;--font-body:'DM Sans',sans-serif;--radius:16px;--max:1200px;color-scheme:light!important}
 html{scroll-behavior:smooth;overflow-x:clip}
@@ -325,6 +325,7 @@ footer{background:var(--dark)!important;padding:56px 5% 0;border-top:1px solid r
 .areas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px}
 .areas-grid a{font-size:.78rem;color:rgba(255,255,255,.5)!important;padding:4px 0;transition:color .2s;display:block}
 .areas-grid a:hover{color:rgba(255,255,255,.85)!important}
+@media(min-width:1025px){.hero-card{display:flex}}
 @media(max-width:1024px){
   .hero-top{grid-template-columns:1fr;gap:32px}.hero-card{display:block;max-width:100%}
   .intro-grid{grid-template-columns:1fr;gap:40px}
