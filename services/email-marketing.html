@@ -943,8 +943,11 @@ footer { background: var(--dark); padding: 56px 5% 0; border-top: 1px solid var(
 .nl-cta { font-family: var(--font-body); font-weight: 700; font-size: 0.875rem; padding: 9px 18px; border-radius: 9px; background: var(--navy); color: #fff !important; display: inline-flex; align-items: center; transition: background .15s; white-space: nowrap; }
 .nl-cta:hover { background: var(--teal); }
 .nl > li { position: relative; }
+.nl > li::after { content: ''; position: absolute; top: 100%; left: 0; right: 0; height: 12px; }
 .drop-panel { position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%) translateY(-6px); background: #fff; border: 1.5px solid #e8e8e8; border-radius: 14px; box-shadow: 0 16px 48px rgba(0,0,0,.13); padding: 12px; z-index: 300; min-width: 240px; width: max-content; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .18s ease, transform .18s ease, visibility .18s ease; }
-.drop-panel.open { opacity: 1; visibility: visible; pointer-events: auto; transform: translateX(-50%) translateY(0); }
+.drop-panel.open,
+.nl > li:hover .drop-panel,
+.nl > li:focus-within .drop-panel { opacity: 1; visibility: visible; pointer-events: auto; transform: translateX(-50%) translateY(0); }
 .drop-panel.center { left: 50%; }
 .drop-panel.center.open { transform: translateX(-50%) translateY(0); }
 .drop-label { font-size: 0.65rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: #aaa; padding: 0 12px 8px; border-bottom: 1px solid #f0f0f0; margin-bottom: 4px; white-space: nowrap; }
@@ -1102,10 +1105,10 @@ footer { background: var(--dark); padding: 56px 5% 0; border-top: 1px solid var(
       <div class="hero-badge"><span class="hdot"></span>Email Marketing & Email Automation · Northern Indiana</div>
       <h1>
         <span class="hero-h1-line">Email Marketing &amp;</span>
-        <span class="hero-h1-line teal">Automation Agency</span>
-        <span class="hero-h1-line boxed">in Northern Indiana</span>
+        <span class="hero-h1-line teal">Automation That</span>
+        <span class="hero-h1-line boxed">Converts</span>
       </h1>
-      <p class="hero-sub">Favze is the email marketing agency for Northern Indiana and Michiana businesses. From inbox placement and list building to real marketing automation and full campaign analytics, every email is engineered to generate revenue, build loyalty, and make your business the obvious local choice.</p>
+      <p class="hero-sub">Favze builds email marketing and automation for lead generation businesses across Northern Indiana and Michiana, turning cold subscribers into booked calls and closed deals. Inbox placement, list segmentation, and behavior-triggered nurture sequences work together so every lead gets followed up with automatically, moved through your pipeline, and converted, without a single manual send.</p>
       <div class="hero-ctas">
         <a href="https://favze.com/free-consultation" class="btn-primary">Start Free Consultation <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         <a href="#services" class="btn-ghost">See What's Included</a>
@@ -1321,7 +1324,7 @@ footer { background: var(--dark); padding: 56px 5% 0; border-top: 1px solid var(
   </div>
 </section>
 
-<section class="sec services-section" id="services" aria-labelledby="services-heading">
+<section class="sec services-section" id="services" aria-labelledby="services-heading" style="scroll-margin-top:118px;">
   <div class="sec-inner">
     <span class="lbl">Every Capability, Explained</span>
     <h2 class="ttl" id="services-heading" style="color:#fff;max-width:800px;">Email Marketing Services <span style="color:var(--teal)">in Northern Indiana</span></h2>
