@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="light only">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Favze Framework | Lead Generation &amp; Local Business Growth System | Favze Digital Marketing</title>
+<meta name="description" content="The Favze Framework is a closed-loop, five-stage system built for lead generation businesses and local businesses: Full Findability, Audience Architecture, Velocity Infrastructure, Zero Recapture, Exponential Compounding.">
+<link rel="canonical" href="https://favze.com/favze-framework">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+<script async src="https://tally.so/widgets/embed.js"></script>
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+*{cursor:none!important}
+.cursor-glow{position:fixed;top:0;left:0;width:22px;height:22px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#0A89A3,#064187 100%);box-shadow:0 0 18px 7px rgba(6,65,135,.65),0 0 9px 3px rgba(10,137,163,.7);pointer-events:none;z-index:99999;opacity:0;transform:translate(-50%,-50%);transition:opacity .2s ease}
+@media(hover:none){*{cursor:auto!important}.cursor-glow{display:none}}
+:root{
+  --navy:#064187;
+  --teal:#0A89A3;
+  --dark:#0a0a0a;
+  --font-display:'Barlow Condensed',sans-serif;
+  --font-body:'DM Sans',sans-serif;
+  --max:1200px;
+  color-scheme:light!important;
+}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:var(--font-body);background:#fff!important;color:var(--dark)!important;line-height:1.6;-webkit-text-size-adjust:100%}
+a{color:inherit;text-decoration:none}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:200;background:#fff;border-bottom:1.5px solid #e8e8e8;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:68px}
+.nav-logo{display:flex;align-items:center}
+.nav-logo img{height:32px;width:auto;display:block}
+.nl{display:flex;align-items:center;gap:4px;list-style:none}
+.nl li{position:relative}
+.nl a{font-weight:500;font-size:.875rem;padding:7px 12px;border-radius:8px;color:var(--dark);transition:background .2s}
+.nl a:hover{background:#f0f0f0}
+.nc{background:var(--navy)!important;color:#fff!important;padding:9px 18px!important;border-radius:9px!important;font-weight:700!important}
+.nc:hover{background:var(--teal)!important}
+.hb{display:none;flex-direction:column;gap:5px;cursor:pointer;border:none;background:none;padding:6px}
+.hb span{display:block;width:24px;height:2px;background:var(--dark);border-radius:2px;transition:.25s}
+.hb.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hb.open span:nth-child(2){opacity:0}
+.hb.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.nav-drop{position:relative}
+.nav-drop::after{content:'';position:absolute;top:100%;left:0;right:0;height:8px;background:transparent}
+.nav-drop-trigger{font-weight:500;font-size:.875rem;padding:7px 12px;border-radius:8px;color:var(--dark);transition:background .2s;display:flex;align-items:center;gap:4px;cursor:pointer}
+.nav-drop:hover .nav-drop-trigger{background:#f0f0f0}
+.nav-drop-trigger svg{transition:transform .2s}
+.nav-drop:hover .nav-drop-trigger svg{transform:rotate(180deg)}
+.drop-menu{position:absolute;top:calc(100% + 4px);left:0;background:#fff;border:1.5px solid #e8e8e8;border-radius:14px;box-shadow:0 16px 48px rgba(0,0,0,.12);padding:16px;z-index:210;min-width:230px;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .2s,visibility .2s}
+.drop-menu.wide{min-width:420px;display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.nav-drop:hover .drop-menu{opacity:1;visibility:visible;pointer-events:auto}
+.drop-col-label{font-size:.65rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#aaa;margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid #f0f0f0;grid-column:1/-1}
+.drop-menu a{font-size:.82rem;font-weight:500;color:#333;padding:6px 8px;border-radius:7px;transition:background .15s,color .15s;display:block}
+.drop-menu a:hover{background:rgba(6,65,135,.07);color:var(--navy)}
+.drop-view-all{font-size:.75rem!important;font-weight:700!important;color:var(--navy)!important;margin-top:6px;grid-column:1/-1}
+.mm{display:none;position:fixed;top:68px;left:0;right:0;background:#fff;border-bottom:1.5px solid #e8e8e8;padding:18px 5% 22px;z-index:199;flex-direction:column;gap:2px;box-shadow:0 16px 48px rgba(0,0,0,.12);max-height:calc(100vh - 68px);overflow-y:auto}
+.mm.open{display:flex}
+.mm a{font-weight:500;font-size:1rem;padding:12px 14px;border-radius:8px;display:block;color:var(--dark)}
+.mc-mob{background:var(--navy)!important;color:#fff!important;text-align:center;margin-top:8px;font-weight:700!important}
+.mm-section{border-bottom:1px solid #f0f0f0}
+.mm-toggle{width:100%;text-align:left;background:none;border:none;font-size:1rem;font-weight:500;color:var(--dark);padding:12px 14px;border-radius:8px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:6px}
+.mm-toggle:hover{background:#f5f5f5}
+.mm-toggle svg{transition:transform .2s;flex-shrink:0}
+.mm-item.open .mm-toggle svg{transform:rotate(180deg)}
+.mm-sub{display:none;flex-direction:column;gap:1px;padding:0 8px 10px 20px}
+.mm-item.open .mm-sub{display:flex}
+.mm-sub a{font-size:.88rem;font-weight:500;color:#444;padding:7px 10px;border-radius:7px;display:block}
+.mm-sub a:hover{background:rgba(6,65,135,.07);color:var(--navy)}
+
+/* HERO */
+.hero{background:var(--dark)!important;padding:76px 5% 64px;position:relative;overflow:hidden;text-align:center}
+.hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(10,137,163,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(10,137,163,.05) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}
+.hero-glow{position:absolute;top:-110px;left:50%;transform:translateX(-50%);width:680px;height:440px;background:radial-gradient(circle,rgba(6,65,135,.24) 0%,transparent 62%);pointer-events:none}
+.hero-inner{max-width:820px;margin:0 auto;position:relative;z-index:1}
+.hero-badge{display:inline-flex;align-items:center;gap:7px;font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);background:rgba(10,137,163,.18);border:1px solid rgba(10,137,163,.35);border-radius:100px;padding:5px 14px;margin-bottom:22px}
+.hero h1{font-family:var(--font-display);font-weight:900;line-height:.95;text-transform:uppercase;letter-spacing:-.01em;color:#fff!important;font-size:clamp(1.7rem,5.2vw,3.6rem);margin-bottom:20px}
+.hero h1 span{color:var(--teal)!important}
+.hero .tm{font-size:.4em;vertical-align:super;letter-spacing:0}
+.hero-sub{font-size:1rem;color:rgba(255,255,255,.65)!important;line-height:1.8;max-width:640px;margin:0 auto 32px}
+.hero-ctas{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap}
+.hero-cta{display:inline-flex;align-items:center;gap:8px;background:var(--navy);color:#fff!important;font-weight:700;font-size:.9rem;padding:14px 28px;border-radius:10px;transition:background .2s}
+.hero-cta:hover{background:var(--teal)}
+.hero-cta-ghost{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.18);color:#fff!important;font-weight:700;font-size:.9rem;padding:13px 26px;border-radius:10px;transition:border-color .2s,background .2s}
+.hero-cta-ghost:hover{border-color:var(--teal);background:rgba(10,137,163,.12)}
+
+/* INTRO */
+.intro{max-width:800px;margin:0 auto;padding:60px 5% 8px;text-align:center}
+.intro p{font-size:1rem;color:#555;line-height:1.9;margin-bottom:18px}
+.intro p:last-child{margin-bottom:0}
+.intro p strong{color:var(--dark);font-weight:700}
+.intro .inline-link{color:var(--teal);font-weight:600;text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px;text-decoration-color:rgba(10,137,163,.4)}
+.intro .inline-link:hover{text-decoration-thickness:2px;text-decoration-color:var(--teal)}
+
+/* PROBLEM SECTION */
+.problem{padding:64px 5% 72px;background:#fff}
+.problem-inner{max-width:900px;margin:0 auto}
+.section-eyebrow{display:flex;align-items:center;gap:8px;font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:12px}
+.section-eyebrow::before{content:'';display:block;width:22px;height:2.5px;background:var(--teal);border-radius:2px;flex-shrink:0}
+.problem-title{font-family:var(--font-display);font-weight:900;text-transform:uppercase;color:var(--dark);font-size:clamp(1.8rem,3.6vw,2.8rem);line-height:1.02;letter-spacing:-.01em;margin-bottom:18px;max-width:640px}
+.problem-lead{font-size:.98rem;color:#555;line-height:1.9;max-width:740px;margin-bottom:36px}
+.problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.problem-card{background:#f7f9fc;border:1.5px solid #ebebeb;border-radius:14px;padding:22px 20px}
+.problem-card-label{font-size:.64rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--navy);margin-bottom:10px}
+.problem-card-title{font-family:var(--font-display);font-weight:900;font-size:1.05rem;text-transform:uppercase;color:var(--dark);line-height:1.15;margin-bottom:8px}
+.problem-card p{font-size:.83rem;color:#666;line-height:1.65}
+
+/* GUIDE SECTION */
+.guide{padding:64px 5% 72px;background:#f7f9fc}
+.guide-inner{max-width:900px;margin:0 auto}
+.guide-title{font-family:var(--font-display);font-weight:900;text-transform:uppercase;color:var(--dark);font-size:clamp(1.8rem,3.6vw,2.8rem);line-height:1.02;letter-spacing:-.01em;margin-bottom:22px;max-width:680px}
+.guide-title span{color:var(--teal)}
+.guide-story{background:#fff;border:1.5px solid #ebebeb;border-left:4px solid var(--teal);border-radius:0 14px 14px 0;padding:24px 26px;margin-bottom:32px}
+.guide-story p{font-size:.94rem;color:#555;line-height:1.9;margin-bottom:14px}
+.guide-story p:last-child{margin-bottom:0}
+.guide-story .inline-link{color:var(--teal);font-weight:600;text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px;text-decoration-color:rgba(10,137,163,.4)}
+.guide-story .inline-link:hover{text-decoration-thickness:2px;text-decoration-color:var(--teal)}
+.guide-body{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.guide-col-label{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:10px}
+.guide-body p{font-size:.93rem;color:#555;line-height:1.85}
+.guide-stats{display:flex;gap:20px;margin-top:32px;flex-wrap:wrap}
+.guide-stat{background:#fff;border:1.5px solid #ebebeb;border-radius:12px;padding:16px 20px;flex:1;min-width:140px}
+.guide-stat-num{font-family:var(--font-display);font-weight:900;font-size:1.8rem;color:var(--navy);line-height:1}
+.guide-stat-label{font-size:.72rem;color:#666;margin-top:4px;font-weight:600}
+
+/* PLAN STEPS */
+.plan-steps{padding:56px 5% 8px;background:#fff;text-align:center}
+.plan-steps-inner{max-width:900px;margin:0 auto}
+.plan-steps-title{font-family:var(--font-display);font-weight:900;text-transform:uppercase;color:var(--dark);font-size:clamp(1.6rem,3.2vw,2.3rem);line-height:1.02;letter-spacing:-.01em;margin-bottom:36px}
+.plan-steps-row{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
+.plan-cta{margin-top:36px}
+.plan-step{flex:1 1 220px;max-width:260px;text-align:left;background:#f7f9fc;border:1.5px solid #ebebeb;border-radius:14px;padding:20px 20px}
+.plan-step-num{font-family:var(--font-display);font-weight:900;font-size:1.6rem;color:var(--teal);margin-bottom:8px}
+.plan-step-title{font-family:var(--font-display);font-weight:900;text-transform:uppercase;font-size:.92rem;color:var(--dark);margin-bottom:6px}
+.plan-step p{font-size:.8rem;color:#666;line-height:1.6}
+
+/* FAILURE / SUCCESS */
+.stakes{padding:76px 5%;background:var(--dark)!important;position:relative;overflow:hidden}
+.stakes::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(10,137,163,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(10,137,163,.05) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}
+.stakes-inner{max-width:1000px;margin:0 auto;position:relative;z-index:1}
+.stakes-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.stakes-card{border-radius:18px;padding:32px 28px}
+.stakes-card.failure{background:rgba(255,255,255,.03);border:1.5px solid rgba(255,255,255,.1)}
+.stakes-card.success{background:rgba(10,137,163,.1);border:1.5px solid rgba(10,137,163,.35)}
+.stakes-label{font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
+.stakes-card.failure .stakes-label{color:rgba(255,255,255,.5)}
+.stakes-card.success .stakes-label{color:var(--teal)}
+.stakes-title{font-family:var(--font-display);font-weight:900;text-transform:uppercase;font-size:clamp(1.3rem,2.6vw,1.7rem);line-height:1.1;color:#fff!important;margin-bottom:16px}
+.stakes-list{list-style:none;display:flex;flex-direction:column;gap:12px}
+.stakes-list li{position:relative;padding-left:22px;font-size:.86rem;color:rgba(255,255,255,.6);line-height:1.6}
+.stakes-card.failure .stakes-list li::before{content:'';position:absolute;left:0;top:.5em;width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.25)}
+.stakes-card.success .stakes-list li::before{content:'';position:absolute;left:0;top:.4em;width:9px;height:6px;border-left:2px solid var(--teal);border-bottom:2px solid var(--teal);transform:rotate(-45deg)}
+.stakes-card.success .stakes-list li{color:rgba(255,255,255,.75)}
+
+/* STAGE SECTIONS */
+.stage{padding:72px 5%;scroll-margin-top:80px}
+.stage.alt{background:#f7f9fc}
+.stage-inner{max-width:900px;margin:0 auto}
+.stage-head{display:flex;align-items:flex-start;gap:26px;margin-bottom:28px}
+.stage-letter{font-family:var(--font-display);font-weight:900;font-size:5.5rem;line-height:.8;color:rgba(10,137,163,.14);flex-shrink:0}
+.stage-heading{padding-top:.7rem}
+.stage-eyebrow{font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:8px}
+.stage-title{font-family:var(--font-display);font-weight:900;text-transform:uppercase;font-size:clamp(1.6rem,3.2vw,2.4rem);line-height:1.02;color:var(--dark);letter-spacing:-.01em}
+.stage-body p{font-size:.96rem;color:#555;line-height:1.9;margin-bottom:16px;max-width:760px}
+.stage-body p:last-child{margin-bottom:0}
+.stage-body .inline-link{color:var(--teal);font-weight:600;text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px;text-decoration-color:rgba(10,137,163,.4)}
+.stage-body .inline-link:hover{text-decoration-thickness:2px;text-decoration-color:var(--teal)}
+.audience-split{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0}
+.audience-box{background:#fff;border:1.5px solid #ebebeb;border-radius:14px;padding:20px 22px}
+.stage.alt .audience-box{background:#fff}
+.audience-label{display:flex;align-items:center;gap:8px;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--navy);margin-bottom:10px}
+.audience-label.local{color:var(--teal)}
+.audience-dot{width:7px;height:7px;border-radius:50%;background:var(--navy);flex-shrink:0}
+.audience-label.local .audience-dot{background:var(--teal)}
+.audience-box p{font-size:.85rem;color:#666;line-height:1.7}
+.stage-services{display:flex;flex-wrap:wrap;gap:18px;margin-top:28px}
+.service-graphic{display:flex;flex-direction:column;align-items:center;gap:9px;width:88px;text-align:center;transition:transform .25s cubic-bezier(.34,1.56,.64,1)}
+.service-graphic:hover{transform:translateY(-6px) scale(1.06)}
+.service-icon{width:56px;height:56px;border-radius:18px;display:flex;align-items:center;justify-content:center;color:#fff;box-shadow:0 4px 14px rgba(6,65,135,.22);transition:box-shadow .25s,transform .25s}
+.service-icon svg{width:26px;height:26px}
+.service-graphic:hover .service-icon{box-shadow:0 10px 22px rgba(10,137,163,.4);transform:rotate(-4deg)}
+.service-icon.g1{background:linear-gradient(135deg,var(--navy),var(--teal))}
+.service-icon.g2{background:linear-gradient(135deg,var(--teal),var(--navy))}
+.service-icon.g3{background:linear-gradient(150deg,var(--navy) 20%,var(--teal) 100%)}
+.service-label{font-size:.68rem;font-weight:700;color:var(--dark);line-height:1.25}
+
+/* SYSTEM LOGIC */
+.logic{background:var(--dark)!important;padding:80px 5%;position:relative;overflow:hidden;text-align:center}
+.logic::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(10,137,163,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(10,137,163,.05) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}
+.logic-glow{position:absolute;top:-120px;left:50%;transform:translateX(-50%);width:680px;height:440px;background:radial-gradient(circle,rgba(10,137,163,.14) 0%,transparent 65%);pointer-events:none}
+.logic-inner{max-width:760px;margin:0 auto;position:relative;z-index:1}
+.logic-eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);background:rgba(10,137,163,.18);border:1px solid rgba(10,137,163,.35);border-radius:100px;padding:5px 14px;margin-bottom:20px}
+.logic-title{font-family:var(--font-display);font-weight:900;text-transform:uppercase;font-size:clamp(1.8rem,3.6vw,2.8rem);line-height:1;color:#fff!important;margin-bottom:24px}
+.logic-text{font-size:.95rem;color:rgba(255,255,255,.65)!important;line-height:1.9;margin-bottom:28px}
+.logic-flow{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px;margin-bottom:32px}
+.logic-letter{font-family:var(--font-display);font-weight:900;font-size:1.3rem;color:var(--teal)!important;background:rgba(10,137,163,.12);border:1px solid rgba(10,137,163,.35);width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center}
+.logic-arrow{color:rgba(255,255,255,.3);font-size:1.1rem}
+.logic-closing{font-family:var(--font-display);font-weight:900;text-transform:uppercase;font-size:clamp(1.2rem,2.4vw,1.7rem);color:#fff!important;line-height:1.25}
+.logic-closing span{color:var(--teal)!important}
+
+/* BOTTOM CTA FORM */
+.bottom-form{background:#f7f9fc;padding:84px 5% 92px;text-align:center}
+.bottom-form-inner{max-width:520px;margin:0 auto}
+.bf-eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);background:rgba(10,137,163,.1);border:1px solid rgba(10,137,163,.3);border-radius:100px;padding:5px 14px;margin-bottom:20px}
+.bf-title{font-family:var(--font-display);font-weight:900;text-transform:uppercase;font-size:clamp(1.7rem,3.4vw,2.4rem);line-height:1;letter-spacing:-.01em;color:var(--dark);margin-bottom:14px}
+.bf-title span{color:var(--teal)}
+.bf-copy{font-size:.95rem;color:#555;line-height:1.75;margin-bottom:32px;max-width:460px;margin-left:auto;margin-right:auto}
+.bf-card{background:#fff;border:1.5px solid #e4e8ee;border-radius:20px;padding:32px 28px;box-shadow:0 8px 40px rgba(0,0,0,.07);text-align:left}
+.fc-lbl{font-size:.6rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:8px;display:block}
+.fc-title{font-family:var(--font-display);font-weight:900;font-size:1.5rem;text-transform:uppercase;color:var(--dark);line-height:1.05;margin-bottom:6px}
+.fc-sub{font-size:.82rem;color:#777;line-height:1.65;margin-bottom:20px;padding-bottom:18px;border-bottom:1.5px solid #f0f0f0}
+.tally-wrap{margin:0 -28px -32px;border-top:1.5px solid #f0f0f0}
+.tally-wrap iframe{display:block;width:100%;border:none}
+
+/* FOOTER */
+footer{background:var(--dark)!important;padding:56px 5% 0;border-top:1px solid rgba(255,255,255,.07)}
+.ft-inner{max-width:var(--max);margin:0 auto}
+.ft-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.09)}
+.fb-desc{font-size:.84rem;color:rgba(255,255,255,.5)!important;line-height:1.72;margin-top:14px;max-width:310px}
+.ft-social{display:grid;grid-template-columns:repeat(3,34px);gap:8px;margin-top:18px}
+.ft-social a{width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.45)!important;transition:background .2s,color .2s}
+.ft-social a:hover{background:var(--navy);color:#fff!important}
+.fc-col h4{font-weight:900;font-size:.78rem;color:#fff!important;margin-bottom:16px;letter-spacing:.09em;text-transform:uppercase}
+.fc-col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.fc-col ul li a{font-size:.83rem;color:rgba(255,255,255,.5)!important;transition:color .2s}
+.fc-col ul li a:hover{color:#fff!important}
+.fcon{display:flex;flex-direction:column;gap:9px}
+.fcon a{font-size:.83rem;color:rgba(255,255,255,.5)!important;display:flex;align-items:center;gap:7px;transition:color .2s}
+.fcon a:hover{color:#fff!important}
+.ft-serving-strip{border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);padding:11px 0;display:flex;align-items:center;overflow:hidden}
+.ft-sl{font-size:.62rem;font-weight:700;letter-spacing:.16em;color:var(--teal)!important;white-space:nowrap;padding:0 20px 0 0;flex-shrink:0;text-transform:uppercase}
+.ft-scroll{flex:1;overflow:hidden;position:relative}
+.ft-scroll-track{display:inline-flex;align-items:center;white-space:nowrap;animation:ftScroll 42s linear infinite}
+.ft-scroll-track:hover{animation-play-state:paused}
+.ft-scroll-track a{font-size:.78rem;color:rgba(255,255,255,.45)!important;padding:0 4px;transition:color .2s}
+.ft-scroll-track a:hover{color:#fff!important}
+.ft-scroll-track .dot{color:rgba(255,255,255,.18);padding:0 6px}
+@keyframes ftScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ft-pin{display:flex;align-items:center;gap:6px;white-space:nowrap;flex-shrink:0;padding-left:16px;font-size:.62rem;font-weight:700;letter-spacing:.1em;color:var(--teal)!important;text-transform:uppercase}
+.ft-trust{border-bottom:1px solid rgba(255,255,255,.07);padding:14px 5%;display:flex;align-items:center;gap:0;flex-wrap:wrap;justify-content:center}
+.ft-trust-item{display:flex;align-items:center;gap:7px;font-size:.72rem;font-weight:600;color:rgba(255,255,255,.45)!important;padding:4px 20px}
+.ft-trust-div{width:1px;height:16px;background:rgba(255,255,255,.1);flex-shrink:0}
+.fb-bot{padding:18px 0 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px}
+.fb-bot p{font-size:.78rem;color:rgba(255,255,255,.3)!important}
+.fb-bot a{color:rgba(255,255,255,.35)!important;font-size:.78rem;transition:color .2s}
+.fb-bot a:hover{color:#fff!important}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .ft-top{grid-template-columns:1fr 1fr;gap:28px}
+  .audience-split{grid-template-columns:1fr}
+  .problem-grid{grid-template-columns:1fr}
+  .guide-body{grid-template-columns:1fr;gap:28px}
+  .stakes-grid{grid-template-columns:1fr}
+}
+@media(max-width:768px){
+  .nl{display:none}
+  .hb{display:flex}
+  .hero{padding:56px 5% 48px}
+  .hero h1{font-size:clamp(1.3rem,7vw,3rem)}
+  .intro{padding:44px 5% 4px}
+  .problem{padding:44px 5% 52px}
+  .guide{padding:44px 5% 52px}
+  .plan-steps{padding:44px 5% 8px}
+  .stage{padding:56px 5%}
+  .stage-head{gap:16px}
+  .stage-letter{font-size:3.2rem}
+  .audience-split{gap:12px}
+  .logic{padding:64px 5%}
+  .stakes{padding:56px 5%}
+  .bottom-form{padding:64px 5% 72px}
+  .bf-card{padding:24px 20px}
+  .tally-wrap{margin:0 -20px -24px}
+  .ft-serving-strip{flex-wrap:wrap;padding:11px 5%}
+  .ft-pin{padding-left:0;padding-top:4px}
+  .ft-trust{flex-direction:column;gap:4px;padding:14px 5%}
+  .ft-trust-div{display:none}
+}
+@media(max-width:600px){
+  nav{padding:0 4%}
+  .hero{padding:48px 4% 40px}
+  .hero-sub{font-size:.92rem}
+  .hero-ctas{flex-direction:column;align-items:stretch}
+  .hero-cta,.hero-cta-ghost{justify-content:center;text-align:center}
+  .intro{padding:36px 4% 4px}
+  .problem{padding:36px 4% 44px}
+  .problem-card{padding:18px 16px}
+  .guide{padding:36px 4% 44px}
+  .guide-story{padding:18px 18px}
+  .guide-stats{flex-direction:column}
+  .guide-stat{min-width:0}
+  .plan-steps{padding:36px 4% 8px}
+  .plan-step{max-width:none;flex-basis:100%}
+  .plan-cta .hero-cta{width:100%;justify-content:center}
+  .stakes{padding:44px 4%}
+  .stakes-card{padding:24px 20px}
+  .stage{padding:44px 4%}
+  .stage-head{flex-direction:column;gap:8px}
+  .stage-letter{font-size:3rem}
+  .stage-services{gap:14px;justify-content:center}
+  .service-graphic{width:76px}
+  .service-icon{width:50px;height:50px;border-radius:15px}
+  .bf-card{padding:20px 16px;border-radius:16px}
+  .tally-wrap{margin:0 -16px -20px}
+  footer{padding:40px 4% 0}
+  .ft-top{grid-template-columns:1fr}
+}
+@media(max-width:380px){
+  .hero{padding:40px 4% 32px}
+  .hero-badge{font-size:.6rem;padding:4px 11px}
+  .hero-sub{font-size:.86rem}
+  .hero-cta,.hero-cta-ghost{font-size:.84rem;padding:12px 20px}
+  .problem-title,.guide-title{font-size:1.55rem}
+  .problem-card{padding:16px 14px}
+  .plan-steps-title{font-size:1.4rem}
+  .plan-step{padding:16px 16px}
+  .stage-letter{font-size:2.4rem}
+  .stage-title{font-size:1.4rem}
+  .stage-eyebrow{margin-bottom:4px}
+  .audience-box{padding:16px 16px}
+  .service-graphic{width:68px}
+  .service-icon{width:44px;height:44px;border-radius:13px}
+  .service-icon svg{width:20px;height:20px}
+  .service-label{font-size:.62rem}
+  .stakes-title{font-size:1.2rem}
+  .stakes-card{padding:20px 16px}
+  .logic-title{font-size:1.5rem}
+  .logic-letter{width:36px;height:36px;font-size:1.1rem}
+  .fc-title{font-size:1.2rem}
+  .bf-card{padding:16px 13px}
+  .tally-wrap{margin:0 -13px -16px}
+}
+
+/* SCROLL GUIDE */
+.scroll-guide{position:fixed;right:22px;bottom:22px;z-index:150;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.sg-bubble{background:#fff;color:var(--dark);font-size:.78rem;font-weight:600;padding:10px 16px;border-radius:14px 14px 4px 14px;box-shadow:0 8px 24px rgba(0,0,0,.18);max-width:220px;line-height:1.4;opacity:0;transform:translateY(6px);transition:opacity .35s,transform .35s;pointer-events:none}
+.sg-bubble.show{opacity:1;transform:translateY(0)}
+.sg-btn{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--teal));border:none;box-shadow:0 8px 22px rgba(6,65,135,.35);cursor:pointer;display:flex;align-items:center;justify-content:center;color:#fff;animation:sgBounce 2.2s ease-in-out infinite;transition:transform .2s}
+.sg-btn:hover{transform:scale(1.08)}
+.sg-btn svg{width:22px;height:22px}
+.sg-btn.at-end{animation:none;background:linear-gradient(135deg,var(--teal),var(--navy))}
+@keyframes sgBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@media(max-width:600px){
+  .scroll-guide{right:14px;bottom:14px}
+  .sg-bubble{max-width:170px;font-size:.72rem;padding:8px 13px}
+  .sg-btn{width:46px;height:46px}
+  .sg-btn svg{width:18px;height:18px}
+}
+
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="https://favze.com" class="nav-logo"><img src="https://favze.com/favze-logo-black.jpg" alt="Favze Digital Marketing"></a>
+  <ul class="nl">
+    <li class="nav-drop">
+      <a href="https://favze.com/services" class="nav-drop-trigger">Services <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="drop-menu wide">
+        <div class="drop-col-label">All Services</div>
+        <a href="https://favze.com/services/social-media-marketing">Social Media Marketing</a>
+        <a href="https://favze.com/services/search-engine-optimization">SEO</a>
+        <a href="https://favze.com/services/answer-engine-optimization">AEO</a>
+        <a href="https://favze.com/services/generative-engine-optimization">GEO</a>
+        <a href="https://favze.com/services/ai-optimization">AI Optimization</a>
+        <a href="https://favze.com/services/local-seo">Local SEO</a>
+        <a href="https://favze.com/services/email-marketing">Email Marketing</a>
+        <a href="https://favze.com/services/short-message-service-sms">SMS Marketing</a>
+        <a href="https://favze.com/services/paid-search-ads">Paid Search Ads</a>
+        <a href="https://favze.com/services/paid-social-media-ads">Paid Social Ads</a>
+        <a href="https://favze.com/services/hubspot-setup">HubSpot Setup</a>
+        <a href="https://favze.com/services/website-design">Website Design</a>
+        <a href="https://favze.com/services" class="drop-view-all">View All Services &rarr;</a>
+      </div>
+    </li>
+    <li class="nav-drop">
+      <a href="https://favze.com/articles" class="nav-drop-trigger">Articles <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <div class="drop-menu">
+        <div class="drop-col-label">Browse by Pillar</div>
+        <a href="https://favze.com/articles/content-marketing">Content Marketing</a>
+        <a href="https://favze.com/articles/social-media-strategy">Social Media Strategy</a>
+        <a href="https://favze.com/articles/search-visibility">Search Visibility &amp; Local Discovery</a>
+        <a href="https://favze.com/articles/brand-positioning">Brand Positioning</a>
+        <a href="https://favze.com/articles" class="drop-view-all">All Articles &rarr;</a>
+      </div>
+    </li>
+    <li><a href="https://favze.com/why-choose-us">Why Us</a></li>
+    <li><a href="https://favze.com/about">About</a></li>
+    <li><a href="https://favze.com/digital-marketing-faq">FAQ</a></li>
+    <li><a href="https://favze.com/contact" class="nc">Free Consultation</a></li>
+  </ul>
+  <button class="hb" id="hb" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mm" id="mm">
+  <div class="mm-item" id="mmServicesItem">
+    <button class="mm-toggle" id="mmServicesToggle">Services <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <div class="mm-sub">
+      <a href="https://favze.com/services/social-media-marketing">Social Media Marketing</a>
+      <a href="https://favze.com/services/search-engine-optimization">SEO</a>
+      <a href="https://favze.com/services/answer-engine-optimization">AEO</a>
+      <a href="https://favze.com/services/generative-engine-optimization">GEO</a>
+      <a href="https://favze.com/services/ai-optimization">AI Optimization</a>
+      <a href="https://favze.com/services/local-seo">Local SEO</a>
+      <a href="https://favze.com/services/email-marketing">Email Marketing</a>
+      <a href="https://favze.com/services/short-message-service-sms">SMS Marketing</a>
+      <a href="https://favze.com/services/paid-search-ads">Paid Search Ads</a>
+      <a href="https://favze.com/services/paid-social-media-ads">Paid Social Ads</a>
+      <a href="https://favze.com/services/hubspot-setup">HubSpot Setup</a>
+      <a href="https://favze.com/services/website-design">Website Design</a>
+      <a href="https://favze.com/services" style="font-weight:700;color:var(--navy)">All Services</a>
+    </div>
+  </div>
+  <div class="mm-item" id="mmArticlesItem">
+    <button class="mm-toggle" id="mmArticlesToggle">Articles <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <div class="mm-sub">
+      <a href="https://favze.com/articles/content-marketing">Content Marketing</a>
+      <a href="https://favze.com/articles/social-media-strategy">Social Media Strategy</a>
+      <a href="https://favze.com/articles/search-visibility">Search Visibility &amp; Local Discovery</a>
+      <a href="https://favze.com/articles/brand-positioning">Brand Positioning</a>
+      <a href="https://favze.com/articles" style="font-weight:700;color:var(--navy)">All Articles</a>
+    </div>
+  </div>
+  <a href="https://favze.com/why-choose-us">Why Us</a>
+  <a href="https://favze.com/about">About</a>
+  <a href="https://favze.com/digital-marketing-faq">FAQ</a>
+  <a href="https://favze.com/contact" class="mc-mob">Start Free Consultation</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="hero-badge">The Favze<sup class="tm">&trade;</sup> Framework</div>
+    <h1>Turn Searches Into Leads.<br>Turn Leads Into <span>Repeat Customers.</span></h1>
+    <p class="hero-sub">A five-stage marketing system built for lead generation businesses and local businesses across Northern Indiana and Michiana, so you always know what's working and what to fix next.</p>
+    <div class="hero-ctas">
+      <a href="https://favze.com/contact" class="hero-cta">Book Your Free Consultation</a>
+      <a href="https://favze.com/full-digital-marketing-audit" class="hero-cta-ghost">See the Full Audit Checklist</a>
+    </div>
+  </div>
+</section>
+
+<!-- THE PROBLEM -->
+<section class="problem">
+  <div class="problem-inner">
+    <div class="section-eyebrow">The Real Problem</div>
+    <h2 class="problem-title">You're Not Failing. Your Marketing Is Just Disconnected.</h2>
+    <p class="problem-lead">Most lead generation and local businesses aren't struggling because they aren't working hard enough. They're struggling because their marketing is a pile of disconnected tactics: a website nobody optimized, ads with no landing page built for them, leads that go cold because nobody followed up fast enough, and customers who leave and never hear from the business again. Every piece was bought separately, from a different vendor, with no system connecting any of it.</p>
+    <div class="problem-grid">
+      <div class="problem-card">
+        <div class="problem-card-label">What's Happening</div>
+        <div class="problem-card-title">You're Invisible Where It Counts</div>
+        <p>Buyers are searching for exactly what you offer, right now, today. If you're not showing up across search, maps, and AI answer engines, they never even know you exist.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-card-label">How It Feels</div>
+        <div class="problem-card-title">Like Throwing Money at a Wall</div>
+        <p>You've paid for ads, a website, maybe someone to "handle social." Months later you still can't say what actually worked or where the money went.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-card-label">The Bigger Issue</div>
+        <div class="problem-card-title">You Deserve a System, Not a Sales Pitch</div>
+        <p>Local and lead gen businesses keep getting sold the same recycled tactics as everyone else, when what they actually need is a system built around how their buyers really behave.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE GUIDE -->
+<section class="guide">
+  <div class="guide-inner">
+    <div class="section-eyebrow">The Guide</div>
+    <h2 class="guide-title">Favze Understands This, Because <span>Favze Was Built to Fix It</span></h2>
+    <div class="guide-story">
+      <p><a href="https://rileycatalano.com" target="_blank" rel="noopener noreferrer" class="inline-link">Riley Catalano</a>, founder of Favze, has always been obsessed with two things: revenue-driven digital marketing and local businesses. Not marketing for the sake of marketing, marketing built to be measured in leads and dollars, not likes. And not marketing built for national brands with seven-figure budgets, marketing built for the local business down the street trying to compete with someone who has twenty times the ad spend.</p>
+      <p>The problem was, nothing tied those two passions together into an actual system. There were SEO tactics. There were paid ad tactics. There were CRM platforms and email tools. But there was no single framework built specifically for lead generation businesses, especially local ones, that connected findability, targeting, speed, recapture, and retention into one closed loop. Every agency sold pieces. Nobody sold the whole system. So Riley built one, and the Favze Framework was born.</p>
+    </div>
+    <div class="guide-body">
+      <div>
+        <div class="guide-col-label">We Get It</div>
+        <p>Riley started Favze after watching the same pattern play out over and over: business owners paying for marketing that never connected to anything bigger. An ad here, a website there, a social account nobody's touched in months. Each piece cost real money and none of it added up to a system. That frustration, of paying for effort without a result, is exactly why the Favze Framework exists.</p>
+      </div>
+      <div>
+        <div class="guide-col-label">Why Favze Can Fix It</div>
+        <p>Favze runs all 12 core digital marketing services under one roof, so nothing falls through the cracks between vendors. Riley holds more than 100 industry certifications and personally reviews every account, no rotating rep, no outsourced work you never see. Every engagement follows the same five-stage <a href="#stage-01" class="inline-link">Favze Framework</a> below, built specifically for lead generation and local businesses across Northern Indiana and Michiana.</p>
+      </div>
+    </div>
+    <div class="guide-stats">
+      <div class="guide-stat">
+        <div class="guide-stat-num">100+</div>
+        <div class="guide-stat-label">Certifications held by founder Riley Catalano</div>
+      </div>
+      <div class="guide-stat">
+        <div class="guide-stat-num">12</div>
+        <div class="guide-stat-label">Services under one roof, one system</div>
+      </div>
+      <div class="guide-stat">
+        <div class="guide-stat-num">5</div>
+        <div class="guide-stat-label">Stages, run in order, every time</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE PLAN -->
+<section class="plan-steps">
+  <div class="plan-steps-inner">
+    <h2 class="plan-steps-title">The Plan Is Simple</h2>
+    <div class="plan-steps-row">
+      <div class="plan-step">
+        <div class="plan-step-num">01</div>
+        <div class="plan-step-title">Book a Free Consultation</div>
+        <p>No pitch, no pressure. Riley looks at your actual digital presence with you, live, on the call.</p>
+      </div>
+      <div class="plan-step">
+        <div class="plan-step-num">02</div>
+        <div class="plan-step-title">Favze Builds the Framework</div>
+        <p>All five stages get built around your business specifically, whether you're a lead gen business or a local business.</p>
+      </div>
+      <div class="plan-step">
+        <div class="plan-step-num">03</div>
+        <div class="plan-step-title">Watch It Compound</div>
+        <p>Leads turn into customers, customers turn into referrals, and the system keeps working with less new spend required.</p>
+      </div>
+    </div>
+    <div class="plan-cta">
+      <a href="https://favze.com/contact" class="hero-cta">Book Your Free Consultation</a>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="intro">
+  <p>Whether you're a <strong>lead generation business</strong> where every dollar comes down to form fills, phone calls, and how fast you follow up, or a <strong>local business</strong> where growth comes from foot traffic, reputation, and customers who keep coming back, the same five stages apply across <a href="https://favze.com/areas-served" class="inline-link">Northern Indiana and Michiana</a>. What changes is how each stage gets built. Below is the deep breakdown of all five, with the specific way Favze applies each one depending on which kind of business you run.</p>
+</section>
+
+<!-- STAGE 01: FULL FINDABILITY -->
+<section class="stage" id="stage-01">
+  <div class="stage-inner">
+    <div class="stage-head">
+      <div class="stage-letter">F</div>
+      <div class="stage-heading">
+        <div class="stage-eyebrow">Stage 01</div>
+        <h2 class="stage-title">Full Findability</h2>
+      </div>
+    </div>
+    <div class="stage-body">
+      <p>Most lead gen and local businesses are invisible to the exact buyers looking for them right now. Full Findability means showing up everywhere your buyer actually searches, not just one channel. That includes traditional <a href="https://favze.com/services/search-engine-optimization" class="inline-link">Google search results</a>, <a href="https://favze.com/services/local-seo" class="inline-link">Google Maps and the local pack</a>, AI answer engines like ChatGPT and Perplexity through <a href="https://favze.com/services/answer-engine-optimization" class="inline-link">AEO</a> and <a href="https://favze.com/services/generative-engine-optimization" class="inline-link">GEO</a>, industry-specific directories, and neighborhood platforms like Nextdoor.</p>
+      <p>Buyers today don't search once and stop. They check Google, then ask an AI assistant to confirm, then glance at reviews on a map listing before ever picking up the phone or filling out a form. If you're missing from any one of those touchpoints, a competitor fills the gap instead. Full Findability is about closing every one of those gaps at once, not optimizing for a single search engine and hoping the rest follows.</p>
+    </div>
+    <div class="audience-split">
+      <div class="audience-box">
+        <div class="audience-label"><span class="audience-dot"></span>For Lead Generation Businesses</div>
+        <p>If someone searches "commercial roofing contractor near me" and you're not in the map pack, the AI overview, and the organic results, you never even get the chance to compete for that lead. Full Findability puts you in front of every one of those moments.</p>
+      </div>
+      <div class="audience-box">
+        <div class="audience-label local"><span class="audience-dot"></span>For Local Businesses</div>
+        <p>Someone searching "best pizza near me" at 6pm isn't reading through ten options. They're picking from whatever shows up first. Full Findability puts your hours, your menu, and your reviews in front of them before they open a second tab.</p>
+      </div>
+    </div>
+    <div class="stage-services">
+      <a href="https://favze.com/services/local-seo" class="service-graphic">
+        <div class="service-icon g1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-7.5 7-12a7 7 0 10-14 0c0 4.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
+        <div class="service-label">Local SEO</div>
+      </a>
+      <a href="https://favze.com/services/search-engine-optimization" class="service-graphic">
+        <div class="service-icon g2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"/><path d="M20 20l-5.5-5.5"/></svg></div>
+        <div class="service-label">SEO</div>
+      </a>
+      <a href="https://favze.com/services/answer-engine-optimization" class="service-graphic">
+        <div class="service-icon g3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12H8l-4 4V4z"/><path d="M10.5 9a1.5 1.5 0 113 0c0 1.5-1.5 1.4-1.5 2.8"/><circle cx="12" cy="14.3" r=".3" fill="currentColor"/></svg></div>
+        <div class="service-label">AEO</div>
+      </a>
+      <a href="https://favze.com/services/generative-engine-optimization" class="service-graphic">
+        <div class="service-icon g1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l1.8 5.2L19 9l-5.2 1.8L12 16l-1.8-5.2L5 9l5.2-1.8L12 2z"/></svg></div>
+        <div class="service-label">GEO</div>
+      </a>
+      <a href="https://favze.com/services/ai-optimization" class="service-graphic">
+        <div class="service-icon g2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="9" width="12" height="10" rx="2"/><circle cx="10" cy="14" r="1" fill="currentColor"/><circle cx="14" cy="14" r="1" fill="currentColor"/><path d="M12 9V5"/><circle cx="12" cy="4" r="1" fill="currentColor"/></svg></div>
+        <div class="service-label">AI Optimization</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- STAGE 02: AUDIENCE ARCHITECTURE -->
+<section class="stage alt">
+  <div class="stage-inner">
+    <div class="stage-head">
+      <div class="stage-letter">A</div>
+      <div class="stage-heading">
+        <div class="stage-eyebrow">Stage 02</div>
+        <h2 class="stage-title">Audience Architecture</h2>
+      </div>
+    </div>
+    <div class="stage-body">
+      <p>More traffic means nothing if it's the wrong traffic. Audience Architecture is the targeting structure built before a single ad runs or a single page goes live: who the buyer actually is, what they search for, what objections they have, and what would make them choose you over the next result. Every piece of messaging, from ad copy to landing page headlines, gets calibrated to that ideal customer profile before it ever gets published.</p>
+      <p>This is where most campaigns fail quietly. Broad targeting feels safer, but it spends the same budget reaching people who were never going to buy as it does reaching people who were ready to buy today. Audience Architecture narrows the aim so every dollar spent is spent on someone who could actually become a customer.</p>
+    </div>
+    <div class="audience-split">
+      <div class="audience-box">
+        <div class="audience-label"><span class="audience-dot"></span>For Lead Generation Businesses</div>
+        <p>Running ads to "anyone within 50 miles" burns budget on people who were never a fit. Audience Architecture narrows targeting to the buyers actively shopping right now, and matches the ad, landing page, and offer to exactly what they searched for.</p>
+      </div>
+      <div class="audience-box">
+        <div class="audience-label local"><span class="audience-dot"></span>For Local Businesses</div>
+        <p>A boutique doesn't need to reach an entire county, it needs to reach people within a short drive who actually care about what it sells. Audience Architecture builds that radius and message so local ad spend doesn't leak outside where customers can walk in the door.</p>
+      </div>
+    </div>
+    <div class="stage-services">
+      <a href="https://favze.com/services/website-design" class="service-graphic">
+        <div class="service-icon g1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 8h18"/><circle cx="6" cy="6" r=".6" fill="currentColor"/><circle cx="8.5" cy="6" r=".6" fill="currentColor"/></svg></div>
+        <div class="service-label">Website Design</div>
+      </a>
+      <a href="https://favze.com/services/paid-search-ads" class="service-graphic">
+        <div class="service-icon g2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10v4h3l5 4V6l-5 4H3z"/><path d="M16.5 9a3 3 0 010 6"/><path d="M19 7a6 6 0 010 10"/></svg></div>
+        <div class="service-label">Paid Search Ads</div>
+      </a>
+      <a href="https://favze.com/services/paid-social-media-ads" class="service-graphic">
+        <div class="service-icon g3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.35-9.5-8.5C.5 8.5 3 5 6.5 5c2 0 3.5 1.5 4.5 3 1-1.5 2.5-3 4.5-3 3.5 0 6 3.5 4 7.5C19 16.65 12 21 12 21z"/></svg></div>
+        <div class="service-label">Paid Social Ads</div>
+      </a>
+      <a href="https://favze.com/services/social-media-marketing" class="service-graphic">
+        <div class="service-icon g1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="12" r="2.2"/><circle cx="18" cy="6" r="2.2"/><circle cx="18" cy="18" r="2.2"/><path d="M8 11l8-4M8 13l8 4"/></svg></div>
+        <div class="service-label">Social Media Marketing</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- STAGE 03: VELOCITY INFRASTRUCTURE -->
+<section class="stage">
+  <div class="stage-inner">
+    <div class="stage-head">
+      <div class="stage-letter">V</div>
+      <div class="stage-heading">
+        <div class="stage-eyebrow">Stage 03</div>
+        <h2 class="stage-title">Velocity Infrastructure</h2>
+      </div>
+    </div>
+    <div class="stage-body">
+      <p>Speed kills in lead gen and local business alike, yours if you're slow. Velocity Infrastructure is the conversion system that turns interest into a submitted lead before hesitation or friction kills the moment: conversion-optimized landing pages, click-to-call buttons, smart form sequencing that doesn't scare people off, and instant automated follow-up the second a lead comes in, day or night.</p>
+      <p>Most businesses lose leads not because the marketing failed, but because the response was slow. A form submitted at 9pm that doesn't get a reply until the next afternoon is a form submitted to whichever competitor called back first. Velocity Infrastructure removes that gap entirely.</p>
+    </div>
+    <div class="audience-split">
+      <div class="audience-box">
+        <div class="audience-label"><span class="audience-dot"></span>For Lead Generation Businesses</div>
+        <p>Leads contacted within five minutes convert dramatically higher than leads contacted an hour later. Velocity Infrastructure makes sure your CRM fires that first response automatically, before a competitor even sees the form come in.</p>
+      </div>
+      <div class="audience-box">
+        <div class="audience-label local"><span class="audience-dot"></span>For Local Businesses</div>
+        <p>Someone deciding between two nearby salons often calls both. Whoever answers first, or texts back first, usually books the appointment. Velocity Infrastructure makes sure that's you, not the shop down the street.</p>
+      </div>
+    </div>
+    <div class="stage-services">
+      <a href="https://favze.com/services/website-design" class="service-graphic">
+        <div class="service-icon g2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 8h18"/><circle cx="6" cy="6" r=".6" fill="currentColor"/><circle cx="8.5" cy="6" r=".6" fill="currentColor"/></svg></div>
+        <div class="service-label">Website Design</div>
+      </a>
+      <a href="https://favze.com/services/hubspot-setup" class="service-graphic">
+        <div class="service-icon g1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg></div>
+        <div class="service-label">CRM Setup</div>
+      </a>
+      <a href="https://favze.com/services/email-marketing" class="service-graphic">
+        <div class="service-icon g3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 6l9 7 9-7"/></svg></div>
+        <div class="service-label">Email Marketing</div>
+      </a>
+      <a href="https://favze.com/services/short-message-service-sms" class="service-graphic">
+        <div class="service-icon g2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4V5z"/><circle cx="9" cy="10.5" r=".9" fill="currentColor"/><circle cx="12" cy="10.5" r=".9" fill="currentColor"/><circle cx="15" cy="10.5" r=".9" fill="currentColor"/></svg></div>
+        <div class="service-label">SMS</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- STAGE 04: ZERO RECAPTURE -->
+<section class="stage alt">
+  <div class="stage-inner">
+    <div class="stage-head">
+      <div class="stage-letter">Z</div>
+      <div class="stage-heading">
+        <div class="stage-eyebrow">Stage 04</div>
+        <h2 class="stage-title">Zero Recapture</h2>
+      </div>
+    </div>
+    <div class="stage-body">
+      <p>Most lead gen and local businesses lose 60 to 80 percent of their leads to silence and inaction, not to a competitor winning them fair and square. Zero Recapture closes that gap with retargeting sequences for visitors who didn't convert, automated re-engagement for leads that went quiet, and reactivation campaigns for past contacts who went cold. Every lead that enters the pipeline gets worked until they convert, opt out, or are formally disqualified. Nothing is left to just fade away.</p>
+      <p>This is the stage most businesses skip entirely, because it requires infrastructure, not just effort. A single follow-up call isn't a recapture system. An automated sequence that re-engages every unconverted lead on a schedule, without anyone having to remember to do it, is.</p>
+    </div>
+    <div class="audience-split">
+      <div class="audience-box">
+        <div class="audience-label"><span class="audience-dot"></span>For Lead Generation Businesses</div>
+        <p>A lead who filled out a form but never answered a follow-up call isn't gone, they're just quiet. Zero Recapture keeps working that lead through retargeting ads and automated re-engagement sequences until they convert or explicitly say no.</p>
+      </div>
+      <div class="audience-box">
+        <div class="audience-label local"><span class="audience-dot"></span>For Local Businesses</div>
+        <p>A customer who visited once and never came back isn't lost forever. Zero Recapture brings them back with a well-timed email, a birthday text offer, or a simple reminder that you're still the best option nearby.</p>
+      </div>
+    </div>
+    <div class="stage-services">
+      <a href="https://favze.com/services/paid-search-ads" class="service-graphic">
+        <div class="service-icon g3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r=".8" fill="currentColor"/></svg></div>
+        <div class="service-label">Paid Search Retargeting</div>
+      </a>
+      <a href="https://favze.com/services/paid-social-media-ads" class="service-graphic">
+        <div class="service-icon g1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0114-5.3M20 12a8 8 0 01-14 5.3"/><path d="M18 4v4h-4M6 20v-4h4"/></svg></div>
+        <div class="service-label">Paid Social Retargeting</div>
+      </a>
+      <a href="https://favze.com/services/email-marketing" class="service-graphic">
+        <div class="service-icon g2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 6l9 7 9-7"/></svg></div>
+        <div class="service-label">Email Marketing</div>
+      </a>
+      <a href="https://favze.com/services/short-message-service-sms" class="service-graphic">
+        <div class="service-icon g3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4V5z"/><circle cx="9" cy="10.5" r=".9" fill="currentColor"/><circle cx="12" cy="10.5" r=".9" fill="currentColor"/><circle cx="15" cy="10.5" r=".9" fill="currentColor"/></svg></div>
+        <div class="service-label">SMS</div>
+      </a>
+      <a href="https://favze.com/services/hubspot-setup" class="service-graphic">
+        <div class="service-icon g1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg></div>
+        <div class="service-label">CRM Automation</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- STAGE 05: EXPONENTIAL COMPOUNDING -->
+<section class="stage">
+  <div class="stage-inner">
+    <div class="stage-head">
+      <div class="stage-letter">E</div>
+      <div class="stage-heading">
+        <div class="stage-eyebrow">Stage 05</div>
+        <h2 class="stage-title">Exponential Compounding</h2>
+      </div>
+    </div>
+    <div class="stage-body">
+      <p>The most expensive way to grow is to keep buying new leads from scratch, forever. Exponential Compounding turns existing closed clients and customers into the cheapest and highest-converting acquisition channel a business has: automated review generation, referral workflows, retention sequences, and reactivation campaigns that keep compounding over time. The longer the system runs, the lower cost per lead gets and the higher the close rate climbs, because a growing share of new business comes from people who already trust you.</p>
+      <p>This is the stage that separates businesses that plateau from businesses that keep growing without a growing ad budget. It's also the stage most easily neglected, because it doesn't feel urgent the way a slow month does. Favze builds it in from the start so it's already running by the time it matters most.</p>
+    </div>
+    <div class="audience-split">
+      <div class="audience-box">
+        <div class="audience-label"><span class="audience-dot"></span>For Lead Generation Businesses</div>
+        <p>Every closed client who leaves a review and refers a colleague is a lead you didn't have to pay Google for. Exponential Compounding automates review requests and referral asks so your cheapest leads come from customers you already won.</p>
+      </div>
+      <div class="audience-box">
+        <div class="audience-label local"><span class="audience-dot"></span>For Local Businesses</div>
+        <p>Regulars are the backbone of any local business. Exponential Compounding keeps them coming back with loyalty touches and makes it easy for them to bring friends, so your best marketing channel becomes the people already walking through your door.</p>
+      </div>
+    </div>
+    <div class="stage-services">
+      <a href="https://favze.com/services/email-marketing" class="service-graphic">
+        <div class="service-icon g1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 6l9 7 9-7"/></svg></div>
+        <div class="service-label">Email Marketing</div>
+      </a>
+      <a href="https://favze.com/services/short-message-service-sms" class="service-graphic">
+        <div class="service-icon g2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4V5z"/><circle cx="9" cy="10.5" r=".9" fill="currentColor"/><circle cx="12" cy="10.5" r=".9" fill="currentColor"/><circle cx="15" cy="10.5" r=".9" fill="currentColor"/></svg></div>
+        <div class="service-label">SMS</div>
+      </a>
+      <a href="https://favze.com/services/hubspot-setup" class="service-graphic">
+        <div class="service-icon g3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg></div>
+        <div class="service-label">CRM &amp; Automation</div>
+      </a>
+      <a href="https://favze.com/services/social-media-marketing" class="service-graphic">
+        <div class="service-icon g1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="12" r="2.2"/><circle cx="18" cy="6" r="2.2"/><circle cx="18" cy="18" r="2.2"/><path d="M8 11l8-4M8 13l8 4"/></svg></div>
+        <div class="service-label">Social Media Marketing</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SYSTEM LOGIC -->
+<section class="logic">
+  <div class="logic-glow"></div>
+  <div class="logic-inner">
+    <div class="logic-eyebrow">Why Order Matters</div>
+    <h2 class="logic-title">The System Logic</h2>
+    <div class="logic-flow">
+      <div class="logic-letter">F</div><span class="logic-arrow">&rarr;</span>
+      <div class="logic-letter">A</div><span class="logic-arrow">&rarr;</span>
+      <div class="logic-letter">V</div><span class="logic-arrow">&rarr;</span>
+      <div class="logic-letter">Z</div><span class="logic-arrow">&rarr;</span>
+      <div class="logic-letter">E</div>
+    </div>
+    <p class="logic-text">Each stage feeds the next. Full Findability brings in qualified traffic. Audience Architecture filters it before the click. Velocity Infrastructure converts it fast. Zero Recapture recovers what slips through. Exponential Compounding multiplies what closed. Remove any one stage and the system leaks. Run all five and your pipeline compounds.</p>
+    <div class="logic-closing">This is not a checklist of tactics. <span>This is a system.</span></div>
+  </div>
+</section>
+
+<!-- FAILURE / SUCCESS -->
+<section class="stakes">
+  <div class="stakes-inner">
+    <div class="stakes-grid">
+      <div class="stakes-card failure">
+        <div class="stakes-label">If Nothing Changes</div>
+        <div class="stakes-title">You Stay the Best-Kept Secret</div>
+        <ul class="stakes-list">
+          <li>Competitors keep showing up first in search, maps, and AI answers, while you stay invisible in the moments that matter.</li>
+          <li>Ad spend keeps leaking into clicks from people who were never going to buy, because nothing's aimed at the right audience.</li>
+          <li>Leads keep going cold because follow-up depends on someone remembering to call back.</li>
+          <li>Customers keep leaving quietly, with no system bringing them back or asking for a referral.</li>
+          <li>You're poorer for having tried, with no clearer picture of what's actually working than when you started.</li>
+          <li>Six months from now, you're in the same spot, just more tired and more skeptical of marketing altogether.</li>
+        </ul>
+      </div>
+      <div class="stakes-card success">
+        <div class="stakes-label">With the Framework Running</div>
+        <div class="stakes-title">You Become the Obvious Choice</div>
+        <ul class="stakes-list">
+          <li>A buyer searches for what you offer and finds you first, across Google, maps, and AI answer engines.</li>
+          <li>The ad they click and the page they land on both match exactly what they were looking for.</li>
+          <li>The phone rings, or the follow-up text goes out, within minutes of a form fill, automatically.</li>
+          <li>A lead that goes quiet gets brought back through retargeting and re-engagement, without anyone chasing it manually.</li>
+          <li>A growing share of new business next year comes from referrals and repeat customers, not a bigger ad budget.</li>
+          <li>You stop being the business people stumble on and become the business people specifically look for.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM CTA FORM -->
+<section class="bottom-form">
+  <div class="bottom-form-inner">
+    <span class="bf-eyebrow">Ready to Build the System?</span>
+    <h2 class="bf-title">Get Your Free <span>Framework Walkthrough</span></h2>
+    <p class="bf-copy">No pitch. No pressure. No contracts. Fill out the form and Riley will personally walk you through which stage of the Favze Framework your business needs most.</p>
+    <div class="bf-card">
+      <span class="fc-lbl">No Pitch. No Pressure. Just Honest Advice.</span>
+      <div class="fc-title">Claim Your Free Consultation</div>
+      <p class="fc-sub">Fill this out and Riley will reach out within one business day to schedule your call. No commitment required.</p>
+      <div class="tally-wrap">
+        <iframe
+          data-tally-src="https://tally.so/embed/aQjrzb?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1&formEventsForwarding=1"
+          loading="lazy"
+          width="100%"
+          height="400"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          title="Claim Your Free Consultation Framework Page">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<!-- SCROLL GUIDE -->
+<div class="scroll-guide" id="scrollGuide">
+  <div class="sg-bubble" id="sgBubble">Curious how this works? Keep scrolling</div>
+  <button class="sg-btn" id="sgBtn" type="button" aria-label="Scroll to next section">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+  </button>
+</div>
+
+<footer>
+  <div class="ft-inner">
+    <div class="ft-top">
+      <div>
+        <div style="display:inline-flex;align-items:center;background:#fff;border-radius:8px;padding:8px 12px">
+          <img src="https://favze.com/favze-logo-black.jpg" alt="Favze Digital Marketing" style="height:26px;width:auto;display:block">
+        </div>
+        <p class="fb-desc">Favze Digital Marketing is Northern Indiana and Michiana's affordable, full-service local digital marketing agency. All 12 services. Founded by Riley Catalano. Based in Middlebury, Elkhart County, Indiana.</p>
+        <div class="ft-social">
+          <a href="https://www.facebook.com/profile.php?id=61581511343836" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.514c-1.491 0-1.956.93-1.956 1.884v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg></a>
+          <a href="https://www.instagram.com/favzemarketing/" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+          <a href="https://www.linkedin.com/company/favze-digital-marketing/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <a href="https://x.com/favzemarketing" aria-label="X" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          <a href="https://www.youtube.com/@Favze" aria-label="YouTube" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12z"/></svg></a>
+          <a href="https://www.threads.com/@favzemarketing" aria-label="Threads" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16.3 11.3c-.1 0-.2-.1-.2-.1-.1-2.6-1.5-4-3.9-4-1.4 0-2.6.6-3.3 1.7l1.3.9c.5-.8 1.4-1 2-1 .8 0 1.4.2 1.7.7.3.3.5.8.5 1.3-.7-.1-1.4-.2-2.2-.1-2.2.1-3.7 1.4-3.6 3.2 0 .9.5 1.7 1.3 2.2.7.4 1.5.6 2.4.6 1.2-.1 2.1-.5 2.7-1.3.5-.6.8-1.4.9-2.4.6.3 1 .8 1.2 1.3.4.9.4 2.4-.8 3.6-1.1 1.1-2.3 1.5-4.3 1.5-2.1 0-3.8-.7-4.8-2S5.7 14.3 5.7 12c0-2.3.5-4.1 1.5-5.4 1.1-1.3 2.7-2 4.8-2 2.2 0 3.8.7 4.9 2 .5.7.9 1.5 1.2 2.5l1.5-.4c-.3-1.2-.8-2.2-1.5-3.1-1.3-1.7-3.3-2.6-6-2.6-2.6 0-4.7.9-6 2.6C4.9 7.2 4.3 9.3 4.3 12s.6 4.8 1.9 6.4c1.4 1.7 3.4 2.6 6 2.6 2.3 0 4-.6 5.3-2 1.8-1.8 1.7-4 1.1-5.4-.4-.9-1.2-1.7-2.3-2.3zm-4 3.8c-1 .1-2-.4-2-1.3 0-.7.5-1.5 2.1-1.6h.5c.6 0 1.1.1 1.6.2-.2 2.3-1.3 2.7-2.2 2.7z"/></svg></a>
+          <a href="https://www.pinterest.com/favzemarketing/" aria-label="Pinterest" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.17-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.056-4.869-4.994-4.869-3.4 0-5.395 2.551-5.395 5.184 0 1.027.395 2.127.889 2.726a.36.36 0 01.083.343c-.091.378-.293 1.189-.332 1.355-.053.218-.173.265-.4.16-1.492-.694-2.424-2.875-2.424-4.627 0-3.769 2.737-7.229 7.892-7.229 4.144 0 7.365 2.953 7.365 6.899 0 4.117-2.595 7.431-6.199 7.431-1.211 0-2.348-.629-2.738-1.373l-.744 2.84c-.27 1.037-.998 2.337-1.487 3.129 1.121.345 2.309.53 3.541.53 6.62 0 11.987-5.368 11.987-11.987C23.987 5.367 18.62 0 12 0z"/></svg></a>
+          <a href="https://nextdoor.com/page/favze-digital-marketing/" aria-label="Nextdoor" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm.94 4.5c.322 0 .58.075.775.225.196.15.334.36.415.63l3.09 9.3c.075.24.037.45-.113.63a.68.68 0 01-.556.27h-1.575a.876.876 0 01-.53-.157.79.79 0 01-.294-.428l-.484-1.65H9.315l-.484 1.65a.79.79 0 01-.294.428.876.876 0 01-.53.157H6.432a.68.68 0 01-.556-.27c-.15-.18-.188-.39-.113-.63l3.09-9.3c.081-.27.219-.48.415-.63.195-.15.453-.225.775-.225h2.897zm-1.44 2.16l-1.35 4.59h2.7l-1.35-4.59z"/></svg></a>
+          <a href="https://www.google.com/maps/place/Favze" aria-label="Google Business Profile" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></a>
+        </div>
+      </div>
+      <div class="fc-col">
+        <h4>Affordable Services</h4>
+        <ul>
+          <li><a href="https://favze.com/services/social-media-marketing">Social Media Marketing</a></li>
+          <li><a href="https://favze.com/services/search-engine-optimization">SEO</a></li>
+          <li><a href="https://favze.com/services/answer-engine-optimization">AEO</a></li>
+          <li><a href="https://favze.com/services/generative-engine-optimization">GEO</a></li>
+          <li><a href="https://favze.com/services/ai-optimization">AI Optimization</a></li>
+          <li><a href="https://favze.com/services/local-seo">Local SEO</a></li>
+          <li><a href="https://favze.com/services/email-marketing">Email Marketing</a></li>
+          <li><a href="https://favze.com/services/paid-search-ads">Paid Search Ads</a></li>
+          <li><a href="https://favze.com/services/paid-social-media-ads">Paid Social Ads</a></li>
+          <li><a href="https://favze.com/services/website-design">Website Design</a></li>
+          <li><a href="https://favze.com/services/hubspot-setup">HubSpot Setup</a></li>
+          <li><a href="https://favze.com/services/short-message-service-sms">SMS Marketing</a></li>
+        </ul>
+      </div>
+      <div class="fc-col">
+        <h4>Articles</h4>
+        <ul>
+          <li><a href="https://favze.com/articles/content-marketing">Content Marketing</a></li>
+          <li><a href="https://favze.com/articles/search-visibility">Search Visibility</a></li>
+          <li><a href="https://favze.com/articles/social-media-strategy">Social Media Strategy</a></li>
+          <li><a href="https://favze.com/articles/brand-positioning">Brand Positioning</a></li>
+          <li><a href="https://favze.com/articles">All Articles</a></li>
+        </ul>
+        <div style="margin-top:22px">
+          <h4>Newsletter</h4>
+          <ul>
+            <li><a href="https://favze.com/newsletters">Favze Insider</a></li>
+            <li><a href="https://favze.com/newsletters">Favze Intel</a></li>
+            <li><a href="https://www.linkedin.com/newsletters/favze-insights-7399519169551126528/" target="_blank" rel="noopener noreferrer">Favze Insights</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="fc-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="https://favze.com/">Home</a></li>
+          <li><a href="https://favze.com/why-choose-us">Why Choose Favze</a></li>
+          <li><a href="https://favze.com/about">About</a></li>
+          <li><a href="https://favze.com/our-process">Our Process</a></li>
+          <li><a href="https://favze.com/services">All Services</a></li>
+          <li><a href="https://favze.com/digital-marketing-faq">FAQ</a></li>
+          <li><a href="https://favze.com/areas-served">Areas Served</a></li>
+        </ul>
+        <div style="margin-top:22px">
+          <h4>Contact</h4>
+          <div class="fcon">
+            <a href="mailto:riley@favze.com"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="1" y="2" width="11" height="9" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M1 4.5l5.5 3.5L12 4.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>riley@favze.com</a>
+            <a href="tel:+15747475012"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 1.5s1-.5 2 1l1 1.5s.5 1-.5 1.9L4 6.4s-.4.4 0 1.3S5.6 9.8 7.5 10.8c1 .5 1 0 1 0l.5-.5c.9-.9 1.9-.5 1.9-.5L12.4 11c1.4 1 1 1.9 1 1.9-.5.9-2.4 1.4-3.8.5" stroke="currentColor" stroke-width="1.2"/></svg>574-747-5012</a>
+            <a href="https://favze.com/contact"><svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="1" y="1" width="11" height="11" rx="2" stroke="currentColor" stroke-width="1.2"/><path d="M3.5 5h6M3.5 7.5h4" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>Free Consultation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ft-serving-strip">
+      <span class="ft-sl">Serving</span>
+      <div class="ft-scroll">
+        <div class="ft-scroll-track">
+          <a href="https://favze.com/areas-served">Northern Indiana</a><span class="dot">&middot;</span>
+          <a href="https://favze.com/areas-served">Michiana</a><span class="dot">&middot;</span>
+          <a href="https://favze.com/areas-served/elkhart-county">Elkhart County</a><span class="dot">&middot;</span>
+          <a href="https://favze.com/areas-served/elkhart-county">Goshen</a><span class="dot">&middot;</span>
+          <a href="https://favze.com/areas-served/st-joseph-county">St. Joseph County</a><span class="dot">&middot;</span>
+          <a href="https://favze.com/areas-served/st-joseph-county">South Bend</a><span class="dot">&middot;</span>
+          <a href="https://favze.com/areas-served/st-joseph-county">Mishawaka</a><span class="dot">&middot;</span>
+          <a href="https://favze.com/areas-served/lagrange-county">LaGrange County</a><span class="dot">&middot;</span>
+          <a href="https://favze.com/areas-served/noble-county">Noble County</a><span class="dot">&middot;</span>
+          <a href="https://favze.com/areas-served/kosciusko-county">Kosciusko County</a><span class="dot">&middot;</span>
+          <a href="https://favze.com/areas-served/kosciusko-county">Warsaw</a><span class="dot">&middot;</span>
+          <a href="https://favze.com/areas-served/dekalb-county">DeKalb County</a><span class="dot">&middot;</span>
+          <a href="https://favze.com/areas-served/allen-county">Allen County</a><span class="dot">&middot;</span>
+          <a href="https://favze.com/areas-served/allen-county">Fort Wayne</a><span class="dot">&middot;</span>
+          <a href="https://favze.com/areas-served/marshall-county">Marshall County</a><span class="dot">&middot;</span>
+          <a href="https://favze.com/areas-served/howard-county">Howard County</a><span class="dot">&middot;</span>
+          <a href="https://favze.com/areas-served/howard-county">Kokomo</a><span class="dot">&middot;</span>
+          <a href="https://favze.com/areas-served/porter-county">Porter County</a><span class="dot">&middot;</span>
+          <a href="https://favze.com/areas-served/laporte-county">LaPorte County</a><span class="dot">&middot;</span>
+          <a href="https://favze.com/areas-served/lake-county">Lake County</a><span class="dot">&middot;</span>
+          <a href="https://favze.com/areas-served/jasper-county">Jasper County</a><span class="dot">&middot;</span>
+          <a href="https://favze.com/areas-served/newton-county">Newton County</a><span class="dot">&middot;</span>
+          <a href="https://favze.com/areas-served/pulaski-county">Pulaski County</a><span class="dot">&middot;</span>
+          <a href="https://favze.com/areas-served/whitley-county">Whitley County</a><span class="dot">&middot;</span>
+          <a href="https://favze.com/areas-served/steuben-county">Steuben County</a><span class="dot">&middot;</span>
+          <a href="https://favze.com/areas-served/cass-county-indiana">Cass County</a><span class="dot">&middot;</span>
+          <a href="https://favze.com/areas-served/berrien-county">Berrien County</a><span class="dot">&middot;</span>
+          <a href="https://favze.com/areas-served/cass-county-michigan">Cass County, MI</a><span class="dot">&middot;</span>
+          <a href="https://favze.com/areas-served">Northern Indiana</a><span class="dot">&middot;</span>
+          <a href="https://favze.com/areas-served">Michiana</a><span class="dot">&middot;</span>
+          <a href="https://favze.com/areas-served/elkhart-county">Elkhart County</a><span class="dot">&middot;</span>
+          <a href="https://favze.com/areas-served/st-joseph-county">South Bend</a><span class="dot">&middot;</span>
+          <a href="https://favze.com/areas-served/allen-county">Fort Wayne</a><span class="dot">&middot;</span>
+          <a href="https://favze.com/areas-served/berrien-county">Berrien County</a><span class="dot">&middot;</span>
+          <a href="https://favze.com/areas-served/kosciusko-county">Warsaw</a>
+        </div>
+      </div>
+      <div class="ft-pin">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 .5C3.07.5 1.5 2.07 1.5 4c0 2.52 3.5 5.5 3.5 5.5S8.5 6.52 8.5 4C8.5 2.07 6.93.5 5 .5z" fill="rgba(10,137,163,.5)" stroke="#0A89A3" stroke-width="0.9"/><circle cx="5" cy="4" r="1.1" fill="#0A89A3"/></svg>
+        MIDDLEBURY, <a href="https://favze.com/areas-served/elkhart-county" style="color:var(--teal)">IN</a>
+      </div>
+    </div>
+
+    <div class="ft-trust">
+      <div class="ft-trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z" stroke="#0A89A3" stroke-width="1.8" stroke-linejoin="round"/></svg><span>100+ Industry Certifications</span></div>
+      <div class="ft-trust-div"></div>
+      <div class="ft-trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="#0A89A3" stroke-width="1.8"/></svg><span>Locally Owned &amp; Operated</span></div>
+      <div class="ft-trust-div"></div>
+      <div class="ft-trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#0A89A3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="#0A89A3" stroke-width="1.8"/></svg><span>Zero Hidden Fees. Ever.</span></div>
+      <div class="ft-trust-div"></div>
+      <div class="ft-trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="#0A89A3" stroke-width="1.8"/><path d="M8 12h8M12 8v8" stroke="#0A89A3" stroke-width="2" stroke-linecap="round"/></svg><a href="https://favze.com/contact" style="color:rgba(255,255,255,.45)">Free Consultation Available</a></div>
+    </div>
+
+    <div class="fb-bot">
+      <p>&copy; 2026 Favze Digital Marketing. All rights reserved.</p>
+      <div style="display:flex;gap:18px;flex-wrap:wrap">
+        <a href="https://favze.com/privacy-policy">Privacy Policy</a>
+        <a href="https://favze.com/terms-of-use">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Cursor glow
+(function(){
+  if(window.matchMedia && window.matchMedia('(hover: none)').matches) return;
+  var glow=document.createElement('div');
+  glow.className='cursor-glow';
+  document.body.appendChild(glow);
+  document.addEventListener('mousemove',function(e){
+    glow.style.left=e.clientX+'px';
+    glow.style.top=e.clientY+'px';
+    glow.style.opacity='1';
+  },{passive:true});
+  document.addEventListener('mouseleave',function(){
+    glow.style.opacity='0';
+  });
+})();
+
+// Nav hamburger
+var hb=document.getElementById('hb'),mm=document.getElementById('mm');
+if(hb&&mm){
+  hb.addEventListener('click',function(){
+    var o=!mm.classList.contains('open');
+    mm.classList.toggle('open',o);
+    hb.classList.toggle('open',o);
+  });
+  mm.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){
+      mm.classList.remove('open');
+      hb.classList.remove('open');
+      document.querySelectorAll('.mm-item').forEach(function(it){it.classList.remove('open')});
+    });
+  });
+}
+
+// Mobile Services / Articles accordions
+(function(){
+  var pairs=[['mmServicesToggle','mmServicesItem'],['mmArticlesToggle','mmArticlesItem']];
+  pairs.forEach(function(p){
+    var toggle=document.getElementById(p[0]),item=document.getElementById(p[1]);
+    if(!toggle||!item) return;
+    toggle.addEventListener('click',function(){
+      var open=!item.classList.contains('open');
+      item.classList.toggle('open',open);
+    });
+  });
+})();
+
+// Tally embed init fallback
+if(typeof Tally!=='undefined'){
+  Tally.loadEmbeds();
+} else {
+  document.querySelectorAll('iframe[data-tally-src]:not([src])').forEach(function(e){
+    e.src=e.dataset.tallySrc;
+  });
+}
+
+// Scroll guide
+(function(){
+  var btn=document.getElementById('sgBtn'),bubble=document.getElementById('sgBubble');
+  if(!btn||!bubble) return;
+  var stops=[
+    {el:document.querySelector('.hero'), msg:"Curious how this works? Keep scrolling"},
+    {el:document.querySelector('.problem'), msg:"Sound familiar? Here's the fix"},
+    {el:document.querySelector('.guide'), msg:"Meet the guide behind it all"},
+    {el:document.querySelector('.plan-steps'), msg:"Just 3 simple steps to start"},
+    {el:document.getElementById('stage-01'), msg:"Now let's go deep on all 5 stages"},
+    {el:document.querySelector('.logic'), msg:"See why the order actually matters"},
+    {el:document.querySelector('.stakes'), msg:"Here's what's at stake either way"},
+    {el:document.querySelector('.bottom-form'), msg:"You're all caught up. Ready to talk?"}
+  ].filter(function(s){return s.el});
+
+  var lastIdx=-1;
+  function currentIndex(){
+    var mid=window.innerHeight*0.4;
+    var idx=0;
+    for(var i=0;i<stops.length;i++){
+      var r=stops[i].el.getBoundingClientRect();
+      if(r.top<=mid) idx=i;
+    }
+    return idx;
+  }
+  function update(){
+    var idx=currentIndex();
+    if(idx!==lastIdx){
+      lastIdx=idx;
+      bubble.textContent=stops[idx].msg;
+      bubble.classList.remove('show');
+      void bubble.offsetWidth;
+      bubble.classList.add('show');
+      btn.classList.toggle('at-end', idx===stops.length-1);
+    }
+  }
+  window.addEventListener('scroll', function(){
+    window.requestAnimationFrame(update);
+  }, {passive:true});
+  update();
+  bubble.classList.add('show');
+
+  btn.addEventListener('click', function(){
+    var idx=currentIndex();
+    var next=stops[Math.min(idx+1, stops.length-1)];
+    if(idx>=stops.length-1){
+      window.scrollTo({top:0, behavior:'smooth'});
+    } else {
+      next.el.scrollIntoView({behavior:'smooth', block:'start'});
+    }
+  });
+})();
+</script>
+</body>
+</html>
