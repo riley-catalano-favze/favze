@@ -70,23 +70,73 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["Organization", "LocalBusiness", "ProfessionalService"],
+      "@type": [
+        "Organization",
+        "LocalBusiness",
+        "ProfessionalService"
+      ],
       "@id": "/#organization",
       "name": "Favze Digital Marketing",
       "alternateName": "Favze",
       "url": "",
-      "logo": { "@type": "ImageObject", "url": "/assets/favze-logo.png", "width": 200, "height": 60 },
+      "logo": {
+        "@type": "ImageObject",
+        "url": "/assets/favze-logo.png",
+        "width": 200,
+        "height": 60
+      },
       "image": "https://favze.com/assets/brand/favze-social-preview.jpg",
       "description": "Favze Digital Marketing is Northern Indiana and Michiana's affordable, full-service local digital marketing agency. Specializing in SEO, AEO, GEO, AI optimization, local SEO, social media marketing, content marketing, email marketing, paid search, and website design. Founded by Riley Catalano and based in Middlebury, Elkhart County, Indiana.",
-      "founder": { "@type": "Person", "@id": "https://favze.com/about#riley-catalano", "name": "Riley Catalano", "url": "https://favze.com/about", "sameAs": ["https://rileycatalano.com"] },
-      "address": { "@type": "PostalAddress", "streetAddress": "Middlebury", "addressLocality": "Middlebury", "addressRegion": "IN", "postalCode": "46540", "addressCountry": "US" },
-      "geo": { "@type": "GeoCoordinates", "latitude": 41.6775, "longitude": -85.7055 },
+      "founder": {
+        "@id": "https://favze.com/#riley-catalano"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Middlebury",
+        "addressLocality": "Middlebury",
+        "addressRegion": "IN",
+        "postalCode": "46540",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 41.6775,
+        "longitude": -85.7055
+      },
       "telephone": "+15747475012",
       "email": "riley@favze.com",
-      "contactPoint": { "@type": "ContactPoint", "telephone": "+15747475012", "email": "riley@favze.com", "contactType": "customer service", "areaServed": ["Northern Indiana", "Michiana", "Elkhart County"], "availableLanguage": "English" },
-      "sameAs": ["https://www.facebook.com/favzemarketing", "https://www.instagram.com/favzemarketing", "https://www.linkedin.com/company/favze"],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+15747475012",
+        "email": "riley@favze.com",
+        "contactType": "customer service",
+        "areaServed": [
+          "Northern Indiana",
+          "Michiana",
+          "Elkhart County"
+        ],
+        "availableLanguage": "English"
+      },
+      "sameAs": [
+        "https://www.facebook.com/favzemarketing",
+        "https://www.instagram.com/favzemarketing",
+        "https://www.linkedin.com/company/favze"
+      ],
       "priceRange": "$$",
-      "knowsAbout": ["Search Engine Optimization", "Answer Engine Optimization", "Generative Engine Optimization", "AI Optimization", "Local SEO", "Social Media Marketing", "Content Marketing", "Email Marketing", "Paid Search Advertising", "Digital Marketing Strategy", "Brand Positioning", "Northern Indiana Business Marketing"]
+      "knowsAbout": [
+        "Search Engine Optimization",
+        "Answer Engine Optimization",
+        "Generative Engine Optimization",
+        "AI Optimization",
+        "Local SEO",
+        "Social Media Marketing",
+        "Content Marketing",
+        "Email Marketing",
+        "Paid Search Advertising",
+        "Digital Marketing Strategy",
+        "Brand Positioning",
+        "Northern Indiana Business Marketing"
+      ]
     },
     {
       "@type": "WebSite",
@@ -95,9 +145,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "name": "Favze",
       "alternateName": "Favze Digital Marketing",
       "description": "Northern Indiana's full-service local digital marketing agency: SEO, AEO, GEO, AI optimization, social media, content, and more.",
-      "publisher": { "@id": "/#organization" },
+      "publisher": {
+        "@id": "/#organization"
+      },
       "inLanguage": "en-US",
-      "potentialAction": { "@type": "SearchAction", "target": { "@type": "EntryPoint", "urlTemplate": "https://favze.com/articles/?q={search_term_string}" }, "query-input": "required name=search_term_string" }
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://favze.com/articles/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
     },
     {
       "@type": "CollectionPage",
@@ -107,20 +166,40 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "headline": "Marketing That Actually Moves Local Businesses",
       "description": "Straight-talk articles on SEO, AI visibility, content strategy, social media, and brand positioning. Written for Northern Indiana businesses that want to grow, not just look busy.",
       "inLanguage": "en-US",
-      "isPartOf": { "@id": "/#website" },
-      "about": { "@id": "/#organization" },
-      "author": { "@id": "https://favze.com/about#riley-catalano" },
-      "publisher": { "@id": "/#organization" },
+      "isPartOf": {
+        "@id": "/#website"
+      },
+      "about": {
+        "@id": "/#organization"
+      },
+      "author": {
+        "@id": "https://favze.com/#riley-catalano"
+      },
+      "publisher": {
+        "@id": "/#organization"
+      },
       "datePublished": "2025-01-01",
       "dateModified": "2026-04-26",
-      "breadcrumb": { "@id": "https://favze.com/articles/#breadcrumb" }
+      "breadcrumb": {
+        "@id": "https://favze.com/articles/#breadcrumb"
+      }
     },
     {
       "@type": "BreadcrumbList",
       "@id": "https://favze.com/articles/#breadcrumb",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "/" },
-        { "@type": "ListItem", "position": 2, "name": "Articles", "item": "https://favze.com/articles/" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Articles",
+          "item": "https://favze.com/articles/"
+        }
       ]
     },
     {
@@ -130,21 +209,56 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "givenName": "Riley",
       "familyName": "Catalano",
       "jobTitle": "Founder & Digital Marketing Strategist",
-      "worksFor": { "@id": "/#organization" },
+      "worksFor": {
+        "@id": "/#organization"
+      },
       "url": "https://favze.com/about",
-      "sameAs": ["https://rileycatalano.com"],
+      "sameAs": [
+        "https://rileycatalano.com"
+      ],
       "description": "Riley Catalano is the founder of Favze Digital Marketing, a full-service local digital marketing agency based in Middlebury, Indiana. With 100+ industry certifications and real-world experience inside Northern Indiana's manufacturing sector, Riley writes about SEO, AEO, GEO, AI optimization, content marketing, social media strategy, and brand positioning for local businesses.",
-      "hasCredential": { "@type": "EducationalOccupationalCredential", "description": "100+ digital marketing industry certifications" }
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "description": "100+ digital marketing industry certifications"
+      }
     },
     {
       "@type": "FAQPage",
       "@id": "https://favze.com/articles/#faq-signal",
       "name": "About Favze Insights",
       "mainEntity": [
-        { "@type": "Question", "name": "What topics does Favze write about?", "acceptedAnswer": { "@type": "Answer", "text": "Favze publishes articles across four content pillars: Content Marketing, Social Media Strategy, Search Visibility & Local Discovery (including SEO, AEO, GEO, and Local SEO), and Brand Positioning & Community Authority. All articles are written specifically for Northern Indiana and Michiana businesses." } },
-        { "@type": "Question", "name": "Who writes the articles on Favze?", "acceptedAnswer": { "@type": "Answer", "text": "All articles are written by Riley Catalano, the founder of Favze Digital Marketing. Riley holds 100+ industry certifications and brings real-world experience inside Northern Indiana's manufacturing and small business sectors." } },
-        { "@type": "Question", "name": "What is AEO and how is it different from SEO?", "acceptedAnswer": { "@type": "Answer", "text": "SEO (Search Engine Optimization) is the practice of optimizing content to rank in traditional search results. AEO (Answer Engine Optimization) focuses on getting your content selected as a direct answer in AI Overviews, featured snippets, and voice search. GEO (Generative Engine Optimization) goes further: it's about getting cited and recommended by AI platforms like ChatGPT, Perplexity, and Gemini. Favze covers all three." } },
-        { "@type": "Question", "name": "Does Favze serve businesses outside of Elkhart County?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Favze Digital Marketing serves businesses across all of Northern Indiana and Michiana, including Elkhart County, St. Joseph County, LaGrange County, Noble County, Kosciusko County, Marshall County, DeKalb County, Whitley County, Allen County, and many more counties in Indiana and Southwest Michigan." } }
+        {
+          "@type": "Question",
+          "name": "What topics does Favze write about?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Favze publishes articles across four content pillars: Content Marketing, Social Media Strategy, Search Visibility & Local Discovery (including SEO, AEO, GEO, and Local SEO), and Brand Positioning & Community Authority. All articles are written specifically for Northern Indiana and Michiana businesses."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who writes the articles on Favze?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "All articles are written by Riley Catalano, the founder of Favze Digital Marketing. Riley holds 100+ industry certifications and brings real-world experience inside Northern Indiana's manufacturing and small business sectors."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is AEO and how is it different from SEO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SEO (Search Engine Optimization) is the practice of optimizing content to rank in traditional search results. AEO (Answer Engine Optimization) focuses on getting your content selected as a direct answer in AI Overviews, featured snippets, and voice search. GEO (Generative Engine Optimization) goes further: it's about getting cited and recommended by AI platforms like ChatGPT, Perplexity, and Gemini. Favze covers all three."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Favze serve businesses outside of Elkhart County?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Favze Digital Marketing serves businesses across all of Northern Indiana and Michiana, including Elkhart County, St. Joseph County, LaGrange County, Noble County, Kosciusko County, Marshall County, DeKalb County, Whitley County, Allen County, and many more counties in Indiana and Southwest Michigan."
+          }
+        }
       ]
     }
   ]
@@ -881,6 +995,25 @@ html body .drop-panel a{border-radius:999px!important}
 html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .mc,html body .cta-btn,html body .cta-btn2,html body .btn-p,html body .btn-g,html body .hc-cta,html body .mc-btn,html body .mc-btn2,html body .fcd-btn,html body .ob-cta,html body .btn-primary,html body .btn-ghost,html body .btn-white,html body .btn-ghost-white,html body .why-btn,html body .why-btn2,html body .sc-btn,html body .bp,html body .bgh,html body .bs,html body .bw,html body .bs-wh,html body .hero-cta,html body .hero-cta-ghost,html body .btn-dark,html body .btn-outline-dark,html body .btn-dark-ol,html body .btn-ghost-wh,html body .btn-navy,html body .btn-teal,html body .svc-card-cta,html body .bcard-cta,html body .btn,html body .btn-cta,html body .view-all-link,html body .city-pill,html body .sidebar-cta a,html body .city-services a,html body .why-left a,html body .nb-cta a,html body .hctas a,html body .cta-bs a,html body .vbts a,html body .fq-bts a,html body .fo-bts a,html body .shdr a,html body form button,html body form [type=submit],html body button[type=submit],html body input[type=submit]{border-radius:999px!important}
 </style>
 <link rel="stylesheet" href="../assets/css/fz-site.css">
+<script type="application/ld+json" id="fz-person-schema">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://favze.com/#riley-catalano",
+  "name": "Riley Catalano",
+  "jobTitle": "Founder and CEO",
+  "description": "Full-stack lead generation digital marketer and founder of Favze Digital Marketing in Middlebury, Indiana.",
+  "url": "https://rileycatalano.com",
+  "email": "riley@favze.com",
+  "worksFor": {
+    "@id": "https://favze.com/#organization"
+  },
+  "sameAs": [
+    "https://rileycatalano.com",
+    "https://www.linkedin.com/in/rileycatalano/"
+  ]
+}
+</script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
