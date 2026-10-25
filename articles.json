@@ -84,7 +84,7 @@
     "featured": true
   },
   {
-    "id": "complete-google-business-profile-checklist",
+    "id": "google-business-profile-checklist",
     "title": "The Complete Google Business Profile Checklist",
     "description": "Your Google Business Profile is not just a listing - it is your most powerful local search asset. Every missing photo, unlisted service, or unanswered review is lost revenue. This checklist covers everything: setup, categories, services, photos, reviews, posts, Q&A, and analytics.",
     "pillar": "search-visibility",
@@ -92,7 +92,7 @@
     "readTime": 12,
     "author": "Riley Catalano",
     "date": "2026-01-11",
-    "slug": "complete-google-business-profile-checklist",
+    "slug": "google-business-profile-checklist",
     "featured": true
   },
   {
@@ -108,7 +108,7 @@
     "featured": true
   },
   {
-    "id": "how-to-become-local-favorite-northern-indiana-michiana",
+    "id": "how-to-make-business-local-favorite",
     "title": "How to Make Your Business the Favorite in Northern Indiana & Michiana",
     "description": "Being known is not the same as being chosen. This is the exact playbook for building a brand that Northern Indiana and Michiana customers trust, recommend, and return to - without a national budget or a marketing department.",
     "pillar": "brand-positioning",
@@ -116,7 +116,7 @@
     "readTime": 14,
     "author": "Riley Catalano",
     "date": "2026-04-01",
-    "slug": "how-to-become-local-favorite-northern-indiana-michiana",
+    "slug": "how-to-make-business-local-favorite",
     "featured": true
   }
 ]
