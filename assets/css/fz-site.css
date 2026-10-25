@@ -38,7 +38,8 @@ html body .fz-icon-btn svg{display:block}
 }
 
 /* ---- Cursor: dot and ring (mouse and trackpad only) ---- */
-html body .fz-cursor{display:none!important}
+html body .fz-cursor,html body .cursor-glow,html body .cursor-dot,html body .cursor-ring{display:none!important}
+@media(hover:none),(pointer:coarse){html body .fz-dot,html body .fz-ring{display:none!important}}
 .fz-dot,.fz-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:2147483646;border-radius:50%;opacity:0;will-change:transform}
 .fz-dot{width:7px;height:7px;margin:-3.5px 0 0 -3.5px;background:#0A89A3;transition:opacity .2s}
 .fz-ring{width:36px;height:36px;margin:-18px 0 0 -18px;border:1.5px solid rgba(10,137,163,.55);transition:opacity .2s,width .25s ease,height .25s ease,margin .25s ease,background-color .25s,border-color .25s}

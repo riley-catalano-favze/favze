@@ -265,6 +265,8 @@
     D.addEventListener('mousedown', function () { ring.classList.add('is-down'); });
     D.addEventListener('mouseup', function () { ring.classList.remove('is-down'); });
     H.addEventListener('mouseleave', function () { H.classList.remove('fz-cur-on'); });
+    D.addEventListener('touchstart', function () { H.classList.remove('fz-cur-on'); }, { passive: true });
+    D.addEventListener('pointerdown', function (e) { if (e.pointerType !== 'mouse') H.classList.remove('fz-cur-on'); }, { passive: true });
     (function loop() {
       var k = reduceMotion ? 1 : 0.2;
       rx += (x - rx) * k; ry += (y - ry) * k;
