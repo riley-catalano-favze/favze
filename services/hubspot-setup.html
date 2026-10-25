@@ -854,6 +854,15 @@ html body .drop-panel a{border-radius:999px!important}
 /* All buttons: fully rounded */
 html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .mc,html body .cta-btn,html body .cta-btn2,html body .btn-p,html body .btn-g,html body .hc-cta,html body .mc-btn,html body .mc-btn2,html body .fcd-btn,html body .ob-cta,html body .btn-primary,html body .btn-ghost,html body .btn-white,html body .btn-ghost-white,html body .why-btn,html body .why-btn2,html body .sc-btn,html body .bp,html body .bgh,html body .bs,html body .bw,html body .bs-wh,html body .hero-cta,html body .hero-cta-ghost,html body .btn-dark,html body .btn-outline-dark,html body .btn-dark-ol,html body .btn-ghost-wh,html body .btn-navy,html body .btn-teal,html body .svc-card-cta,html body .bcard-cta,html body .btn,html body .btn-cta,html body .view-all-link,html body .city-pill,html body .sidebar-cta a,html body .city-services a,html body .why-left a,html body .nb-cta a,html body .hctas a,html body .cta-bs a,html body .vbts a,html body .fq-bts a,html body .fo-bts a,html body .shdr a,html body form button,html body form [type=submit],html body button[type=submit],html body input[type=submit]{border-radius:999px!important}
 </style>
+<style id="fz-res-css">
+.fz-res{position:relative}
+.fz-res-panel{display:none;position:absolute;top:100%;left:50%;transform:translateX(-50%);min-width:300px;padding:12px;background:#fff;border:1.5px solid #e8e8e8;border-radius:22px;box-shadow:0 16px 48px rgba(0,0,0,.12);z-index:300;flex-direction:column;gap:2px}
+.fz-res:hover .fz-res-panel,.fz-res:focus-within .fz-res-panel{display:flex}
+.fz-res-panel a{display:block;padding:9px 14px;border-radius:999px;font-size:.88rem;color:#111!important;text-decoration:none;white-space:nowrap}
+.fz-res-panel a:hover,.fz-res-panel a:focus-visible{background:rgba(6,65,135,.08);color:#064187!important}
+.fz-res-div{height:1px;background:#eee;margin:6px 8px}
+.fz-res-panel .fz-res-all{font-weight:700;color:#064187!important}
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -867,8 +876,19 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
   </a>
   <ul class="nl">
     <li><a href="https://favze.com/services" class="active">Services</a></li>
-    <li><a href="https://favze.com/articles">Articles</a></li>
-    <li><a href="https://favze.com/newsletters">Newsletters</a></li>
+    <li class="fz-res"><a href="https://favze.com/articles" aria-haspopup="true">Resources</a>
+      <div class="fz-res-panel">
+        <a href="https://favze.com/articles/content-marketing">Content Marketing</a>
+        <a href="https://favze.com/articles/social-media-strategy">Social Media Strategy</a>
+        <a href="https://favze.com/articles/search-visibility">Search Visibility &amp; Local Discovery</a>
+        <a href="https://favze.com/articles/brand-positioning">Brand Positioning &amp; Community Authority</a>
+        <div class="fz-res-div"></div>
+        <a href="https://www.linkedin.com/newsletters/favze-insights-7399519169551126528/" target="_blank" rel="noopener noreferrer">Favze Insights &#8599;</a>
+        <a href="https://favze.com/newsletters#intel-card">Favze Intel</a>
+        <a href="https://favze.com/newsletters#insider-card">Favze Insider</a>
+        <a href="https://favze.com/articles" class="fz-res-all">All Articles &rarr;</a>
+      </div>
+    </li>
     <li><a href="https://favze.com/why-us">Why Us</a></li>
     <li><a href="https://favze.com/about">About</a></li>
     <li><a href="https://favze.com/faq">FAQ</a></li>
@@ -880,8 +900,10 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
 </nav>
 <div class="mm" id="mm">
   <a href="https://favze.com/services">Services</a>
-  <a href="https://favze.com/articles">Articles</a>
-  <a href="https://favze.com/newsletters">Newsletters</a>
+  <a href="https://favze.com/articles">Resources</a>
+  <a href="https://www.linkedin.com/newsletters/favze-insights-7399519169551126528/" target="_blank" rel="noopener noreferrer">Favze Insights &#8599;</a>
+  <a href="https://favze.com/newsletters#intel-card">Favze Intel</a>
+  <a href="https://favze.com/newsletters#insider-card">Favze Insider</a>
   <a href="https://favze.com/why-us">Why Us</a>
   <a href="https://favze.com/about">About</a>
   <a href="https://favze.com/faq">FAQ</a>
