@@ -27,7 +27,7 @@ function gtag(){dataLayer.push(arguments);}
   --iconBackgroundColor: #FFFFFF;
 }
 #stcm-wrapper .stcm-button{border-radius:999px!important}
-@media(max-width:768px){#stcm-icon{bottom:calc(84px + env(safe-area-inset-bottom))!important;left:14px!important;width:48px!important;height:48px!important}}
+@media(max-width:768px){#stcm-icon{bottom:calc(66px + env(safe-area-inset-bottom))!important;left:14px!important;width:48px!important;height:48px!important}}
 </style>
 <script src="https://cdn.jsdelivr.net/gh/silktide/consent-manager@v2.0.1/silktide-consent-manager.js" integrity="sha384-5Pt34uiIbCsvfiiZXoLi4HRf/YBXjr9c8e+gYeVo9smUaInNHYVtc8NZ8wUnXJIq" crossorigin="anonymous"></script>
 <!-- Google Tag Manager -->
@@ -380,16 +380,16 @@ footer{background:var(--dark);padding:56px 5% 0;border-top:1px solid rgba(255,25
 .nav-phone svg{display:block}
 .nav-phone-m{display:none!important}
 @media(max-width:768px){.nav-phone-d{display:none!important}.nav-phone-m{display:inline-flex!important;margin-left:auto;margin-right:6px}}
-/* Mobile bottom bar: floating rounded Book Free Consultation */
+/* Mobile bottom bar: full-width Book Free Consultation button */
 .fz-mbar{display:none}
 @media(max-width:768px){
-  .fz-mbar{display:block;position:fixed;left:0;right:0;bottom:0;z-index:180;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:transparent;pointer-events:none}
-  .fz-mbar a{pointer-events:auto;display:flex;align-items:center;justify-content:center;gap:9px;min-height:54px;border-radius:999px;background:#064187;box-shadow:0 8px 22px rgba(6,65,135,.35);font-family:'DM Sans',sans-serif;font-weight:700;font-size:16px;line-height:1.2;color:#fff!important;text-decoration:none!important;-webkit-tap-highlight-color:transparent;transition:background .2s}
-  .fz-mbar a:hover,.fz-mbar a:active{background:#000}
-  .fz-mbar a:focus-visible{outline:3px solid #0A89A3;outline-offset:3px}
-  body:has(.fz-mbar){padding-bottom:calc(78px + env(safe-area-inset-bottom))!important}
+  .fz-mbar{display:block;position:fixed;left:0;right:0;bottom:0;z-index:180;padding:0;background:#064187;box-shadow:0 -4px 16px rgba(0,0,0,.16)}
+  html body .fz-mbar a{display:flex;align-items:center;justify-content:center;gap:9px;box-sizing:border-box;width:100%;min-height:calc(52px + env(safe-area-inset-bottom));padding:0 16px env(safe-area-inset-bottom);border-radius:0!important;background:#064187;font-family:'DM Sans',sans-serif;font-weight:700;font-size:16px;line-height:1.2;color:#fff!important;text-decoration:none!important;-webkit-tap-highlight-color:transparent;transition:background .2s}
+  html body .fz-mbar a:hover,html body .fz-mbar a:active{background:#000}
+  html body .fz-mbar a:focus-visible{outline:3px solid #fff;outline-offset:-5px}
+  body:has(.fz-mbar){padding-bottom:calc(52px + env(safe-area-inset-bottom))!important}
   body:has(#mm.open) .fz-mbar{display:none}
-  .scroll-guide{bottom:calc(88px + env(safe-area-inset-bottom))!important}
+  .scroll-guide{bottom:calc(66px + env(safe-area-inset-bottom))!important}
 }
 </style>
 <style id="fz-cursor-css">
@@ -696,7 +696,7 @@ html body .drop-panel a{border-radius:999px!important}
 </style>
 <style id="fz-buttons-css">
 /* All buttons: fully rounded */
-html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .mc,html body .cta-btn,html body .cta-btn2,html body .btn-p,html body .btn-g,html body .hc-cta,html body .mc-btn,html body .mc-btn2,html body .fcd-btn,html body .ob-cta,html body .btn-primary,html body .btn-ghost,html body .btn-white,html body .btn-ghost-white,html body .why-btn,html body .why-btn2,html body .sc-btn,html body .bp,html body .bgh,html body .bs,html body .bw,html body .bs-wh,html body .hero-cta,html body .hero-cta-ghost,html body .btn-dark,html body .btn-outline-dark,html body .btn-dark-ol,html body .btn-ghost-wh,html body .btn-navy,html body .btn-teal,html body .svc-card-cta,html body .bcard-cta,html body .btn,html body .btn-cta,html body .view-all-link,html body .city-pill,html body .sidebar-cta a,html body .city-services a,html body .why-left a,html body .nb-cta a,html body .hctas a,html body .cta-bs a,html body .vbts a,html body .fq-bts a,html body .fo-bts a,html body .shdr a,html body form button,html body form [type=submit],html body button[type=submit],html body input[type=submit],html body .fz-mbar a{border-radius:999px!important}
+html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .mc,html body .cta-btn,html body .cta-btn2,html body .btn-p,html body .btn-g,html body .hc-cta,html body .mc-btn,html body .mc-btn2,html body .fcd-btn,html body .ob-cta,html body .btn-primary,html body .btn-ghost,html body .btn-white,html body .btn-ghost-white,html body .why-btn,html body .why-btn2,html body .sc-btn,html body .bp,html body .bgh,html body .bs,html body .bw,html body .bs-wh,html body .hero-cta,html body .hero-cta-ghost,html body .btn-dark,html body .btn-outline-dark,html body .btn-dark-ol,html body .btn-ghost-wh,html body .btn-navy,html body .btn-teal,html body .svc-card-cta,html body .bcard-cta,html body .btn,html body .btn-cta,html body .view-all-link,html body .city-pill,html body .sidebar-cta a,html body .city-services a,html body .why-left a,html body .nb-cta a,html body .hctas a,html body .cta-bs a,html body .vbts a,html body .fq-bts a,html body .fo-bts a,html body .shdr a,html body form button,html body form [type=submit],html body button[type=submit],html body input[type=submit]{border-radius:999px!important}
 </style>
 </head>
 <body>
