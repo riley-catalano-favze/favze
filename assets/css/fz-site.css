@@ -1,0 +1,490 @@
+/* =========================================================
+   Favze sitewide styles (shared by every page)
+   ========================================================= */
+
+/* ---- Type: DM Sans everywhere, Barlow Condensed for H1 and H2 only ---- */
+html body *{font-family:'DM Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif!important}
+html body h1,html body h1 *,html body h2,html body h2 *{font-family:'Barlow Condensed','DM Sans',sans-serif!important}
+html body h1,html body h1 *{letter-spacing:.035em!important}
+html body h2,html body h2 *{letter-spacing:.03em!important}
+html body :is(h1,h2) *:not(#fz-none){text-transform:inherit!important;letter-spacing:inherit!important}
+html body code,html body pre,html body kbd,html body samp{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace!important}
+html body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
+
+/* ---- Navigation ---- */
+.fz-logo{display:flex;align-items:center;flex-shrink:0;line-height:0}
+.fz-logo img{height:34px;width:auto;display:block}
+.fz-nav-actions{display:flex;align-items:center;gap:2px}
+.fz-nav-actions .fz-nav-cta{margin-left:10px}
+.fz-nav-mob{display:none}
+html body .fz-icon-btn{display:inline-flex!important;align-items:center;justify-content:center;width:42px;height:42px;padding:0;border:0;border-radius:999px;background:transparent;color:#064187!important;text-decoration:none!important;transition:background .2s,color .2s;-webkit-tap-highlight-color:transparent}
+html body .fz-icon-btn:hover,html body .fz-icon-btn:focus-visible{background:rgba(6,65,135,.08);color:#000!important}
+html body .fz-icon-btn svg{display:block}
+@media(min-width:1081px){
+  html body nav:not(:has(.nav-inner)),html body nav .nav-inner{display:grid!important;grid-template-columns:1fr auto 1fr!important;align-items:center!important;column-gap:20px}
+  html body nav .fz-logo{justify-self:start}
+  html body nav .nl{justify-self:center;display:flex!important;margin:0!important}
+  html body nav .fz-nav-actions{justify-self:end}
+  html body nav .hb{display:none!important}
+}
+@media(max-width:1080px){
+  html body nav .nl{display:none!important}
+  html body nav .hb{display:flex!important}
+  html body nav .fz-nav-actions{margin-left:auto;margin-right:10px}
+}
+@media(max-width:768px){
+  html body nav .fz-nav-actions{display:none!important}
+  html body nav .fz-nav-mob{display:flex;align-items:center;margin-left:auto;margin-right:4px}
+}
+
+/* ---- Cursor: dot and ring (mouse and trackpad only) ---- */
+html body .fz-cursor{display:none!important}
+.fz-dot,.fz-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:2147483646;border-radius:50%;opacity:0;will-change:transform}
+.fz-dot{width:7px;height:7px;margin:-3.5px 0 0 -3.5px;background:#0A89A3;transition:opacity .2s}
+.fz-ring{width:36px;height:36px;margin:-18px 0 0 -18px;border:1.5px solid rgba(10,137,163,.55);transition:opacity .2s,width .25s ease,height .25s ease,margin .25s ease,background-color .25s,border-color .25s}
+html.fz-cur-on .fz-dot,html.fz-cur-on .fz-ring{opacity:1}
+.fz-ring.is-hover{width:56px;height:56px;margin:-28px 0 0 -28px;background-color:rgba(10,137,163,.10);border-color:#0A89A3}
+.fz-ring.is-down{width:26px;height:26px;margin:-13px 0 0 -13px}
+@media(hover:hover) and (pointer:fine){
+  html.fz-cur,html.fz-cur *{cursor:none!important}
+  html.fz-cur input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]),html.fz-cur textarea,html.fz-cur [contenteditable="true"]{cursor:text!important}
+  html.fz-cur select{cursor:pointer!important}
+}
+
+/* ---- Mobile booking bar: thinner, on every page ---- */
+@media(max-width:768px){
+  html body .fz-mbar a{min-height:calc(44px + env(safe-area-inset-bottom))!important;padding:0 16px env(safe-area-inset-bottom)!important;font-size:15px!important;gap:8px!important}
+  html body .fz-mbar a svg{width:17px;height:17px}
+  html body:has(.fz-mbar){padding-bottom:calc(44px + env(safe-area-inset-bottom))!important}
+  html body #stcm-icon{bottom:calc(56px + env(safe-area-inset-bottom))!important}
+  html body .scroll-guide{bottom:calc(58px + env(safe-area-inset-bottom))!important}
+}
+
+/* ---- Scrolling tickers: clean, no divider lines ---- */
+html body .mq{border-top:0!important;border-bottom:0!important;background:#f4f5f7!important}
+html body .mp{border-left:0!important;border-right:0!important;padding:15px 30px!important;font-weight:600!important;color:#2b3038!important}
+html body .mp a{color:inherit!important}
+html body .mp .dot,html body .mp .mpip{width:6px!important;height:6px!important}
+html body .trust-pill{box-shadow:none!important}
+html body footer.ft-std .ft-dot{display:none!important}
+html body footer.ft-std .ft-track-set a{padding:0 16px!important}
+html body footer.ft-std .ft-scroll-strip{border-top:0!important;border-bottom:0!important}
+
+/* ---- Service pages: other services in one scrolling row ---- */
+.fz-rail{position:relative;margin-top:36px}
+.fz-rail-viewport{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding:6px 2px 10px;scroll-behavior:auto}
+.fz-rail-viewport::-webkit-scrollbar{display:none}
+.fz-rail-viewport{-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 40px,#000 calc(100% - 40px),transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 40px,#000 calc(100% - 40px),transparent 100%)}
+html body .fz-rail .other-grid{display:flex!important;flex-wrap:nowrap!important;gap:16px!important;grid-template-columns:none!important;width:max-content!important;margin:0!important;background:transparent!important;border:0!important;border-radius:0!important;overflow:visible!important}
+html body .fz-rail .other-card{position:relative;display:flex!important;flex-direction:column;gap:6px;flex:0 0 280px!important;width:280px!important;min-width:0!important;min-height:178px;padding:22px 22px 18px!important;background:#fff!important;border:1px solid #e3e6ea!important;border-radius:22px!important;text-decoration:none!important;color:#0a0a0a!important;transition:border-color .2s,transform .2s,box-shadow .2s}
+html body .fz-rail .other-card:hover{border-color:#0A89A3!important;transform:translateY(-2px);box-shadow:0 12px 28px rgba(10,20,40,.08)}
+html body .fz-rail .other-card::before{display:none!important}
+html body .fz-rail .other-card-tag{font-size:12px!important;font-weight:700!important;letter-spacing:.1em!important;text-transform:uppercase!important;color:#0A89A3!important;margin:0!important}
+html body .fz-rail .other-card-name{font-size:18px!important;font-weight:700!important;line-height:1.25!important;color:#0a0a0a!important;text-transform:none!important;letter-spacing:-.005em!important;margin:0!important}
+html body .fz-rail .other-card-desc{font-size:14.5px!important;line-height:1.5!important;color:#4a4f57!important;margin:0!important}
+html body .fz-rail .other-card-arrow{margin-top:auto!important;padding-top:8px!important;color:#064187!important;font-weight:700!important;font-size:16px!important}
+.fz-rail-viewport{margin:0 -4px;padding-left:4px;padding-right:4px}
+.fz-rail-btns{display:flex;justify-content:flex-end;gap:10px;margin-top:18px}
+.fz-rail-btn{width:46px;height:46px;border-radius:999px;border:1.5px solid rgba(6,65,135,.25);background:#fff;color:#064187;display:inline-flex;align-items:center;justify-content:center;transition:background .2s,color .2s,border-color .2s}
+.fz-rail-btn:hover,.fz-rail-btn:focus-visible{background:#064187;color:#fff;border-color:#064187}
+.fz-rail-btn svg{display:block}
+
+/* ---- Light and grey sections (applied by fz-site.js on dark-heavy pages) ---- */
+html body .fz-sec-white{background:#ffffff!important;background-image:none!important}
+html body .fz-sec-grey{background:#f3f4f6!important;background-image:none!important}
+html body .fz-bleed{padding-top:72px!important;padding-bottom:72px!important;clip-path:inset(0 -100vmax)}
+html body .fz-sec-white.fz-bleed{box-shadow:0 0 0 100vmax #ffffff!important}
+html body .fz-sec-grey.fz-bleed{box-shadow:0 0 0 100vmax #f3f4f6!important}
+
+/* ---- Free consultation form section (above the footer) ---- */
+.fz-form-sec{background:#f3f4f6;padding:88px 5%}
+.fz-form-inner{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:56px;align-items:start}
+.fz-form-copy .fz-form-eyebrow{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#0A89A3;margin:0 0 14px}
+html body .fz-form-sec h2{font-weight:900;font-size:clamp(2.1rem,4.2vw,3.2rem);line-height:.92;text-transform:uppercase;color:#0a0a0a;margin:0 0 18px}
+html body .fz-form-sec h2 span{color:#064187}
+.fz-form-copy p{font-size:17px;line-height:1.7;color:#3d4148;margin:0 0 22px;max-width:520px}
+.fz-form-list{list-style:none;margin:0 0 26px;padding:0;display:grid;gap:12px}
+.fz-form-list li{display:flex;align-items:center;gap:12px;font-size:16px;font-weight:600;color:#1a1d21}
+.fz-form-list li svg{flex-shrink:0;color:#0A89A3}
+.fz-form-alt{font-size:15.5px;color:#3d4148}
+.fz-form-alt a{color:#064187;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.fz-form-card{background:#fff;border-radius:28px;padding:28px 28px 12px;box-shadow:0 20px 50px rgba(10,20,40,.08);border:1px solid rgba(0,0,0,.05)}
+.fz-form-card iframe{display:block;width:100%;border:0;min-height:420px}
+@media(max-width:900px){.fz-form-inner{grid-template-columns:1fr;gap:32px}.fz-form-sec{padding:64px 5%}}
+@media(max-width:480px){.fz-form-card{padding:18px 16px 6px;border-radius:22px}}
+
+/* ---- Footer newsletter signup ---- */
+footer.ft-std .fz-news{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:36px;align-items:center;padding:40px 0;border-bottom:1px solid rgba(255,255,255,.09)}
+footer.ft-std .fz-news-copy .fz-news-title{font-size:1.25rem;font-weight:700;color:#fff;margin:0 0 8px;letter-spacing:-.005em}
+footer.ft-std .fz-news-copy p{font-size:15.5px;line-height:1.7;color:rgba(255,255,255,.72);margin:0}
+footer.ft-std .fz-news-copy p a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+footer.ft-std .fz-news-card{background:#fff;border-radius:22px;padding:18px 20px 4px}
+footer.ft-std .fz-news-card iframe{display:block;width:100%;border:0;min-height:260px}
+@media(max-width:900px){footer.ft-std .fz-news{grid-template-columns:1fr;gap:22px;padding:32px 5%}}
+
+/* ---- Readability ---- */
+html body footer.ft-std .fb-desc,html body footer.ft-std .fc ul li a,html body footer.ft-std .fcon a{color:rgba(255,255,255,.72)!important}
+html body footer.ft-std .fc ul li a:hover,html body footer.ft-std .fcon a:hover{color:#fff!important}
+/* ---- Generated: former Barlow elements now DM Sans ---- */
+html body .about-mini-name > a,
+html body .article-body > h3,
+html body .article-card > h3,
+html body .article-cta > h3,
+html body .audit-card-title > a,
+html body .bcard-title > span,
+html body .callout-text > h3,
+html body .comb-card > h3,
+html body .compat-outer > div,
+html body .county-name > a,
+html body .db-title > span,
+html body .decision-text > em,
+html body .dest-card > h3,
+html body .empty-state > h4,
+html body .explainer-card > h3,
+html body .fh > span,
+html body .fl-closing > span,
+html body .founding-perk > h3,
+html body .gc > h4,
+html body .hstat-num > sup,
+html body .ind-card > h3,
+html body .logic-closing > span,
+html body .map-card-header > span,
+html body .nc-card > h3,
+html body .ob-title > span,
+html body .ov-step > h3,
+html body .pillar-body > h3,
+html body .pillar-card > div,
+html body .pillar-card > h3,
+html body .policy-body > h3,
+html body .proc-step > h3,
+html body .sc-top > h3,
+html body .section-body > h3,
+html body .service-name > a,
+html body .sidebar-cta > h3,
+html body .sp-step > h4,
+html body .sr > div,
+html body .srn > sup,
+html body .stat-num > span,
+html body .step > h3,
+html body .step-item > h3,
+html body .stt > a,
+html body .svc-card > h3,
+html body .vp-hl > span,
+html body .why-ai-card > h3,
+html body .why-card > h3,
+html body .why-dark-title > span,
+html body .why-sms-card > h3,
+html body a.nav-logo,
+html body button.obj-q,
+html body div.about-mini-name,
+html body div.action-title,
+html body div.alt-title,
+html body div.analytics-metric,
+html body div.art-card-title,
+html body div.audit-card-title,
+html body div.bignum,
+html body div.c-stat-num,
+html body div.cd-title,
+html body div.city-name,
+html body div.co-title,
+html body div.compare-title,
+html body div.count-badge,
+html body div.county-card-name,
+html body div.county-name,
+html body div.db-title,
+html body div.deep-stats-num,
+html body div.def-abbr,
+html body div.def-card-abbr,
+html body div.deliver-name,
+html body div.deliver-watermark,
+html body div.diff-card-title,
+html body div.eeat-letter,
+html body div.ei-num,
+html body div.email-card-name,
+html body div.exp-name,
+html body div.exp-watermark,
+html body div.factor-num,
+html body div.faq-q,
+html body div.fc-title,
+html body div.fcd-title,
+html body div.fl-closing,
+html body div.format-card-name,
+html body div.fw-badge,
+html body div.fw-letter,
+html body div.fw-quote-avatar,
+html body div.fw-quote-mark,
+html body div.fw-title,
+html body div.guide-stat-num,
+html body div.hab-card-title,
+html body div.hab-mini-val,
+html body div.hc-title,
+html body div.hs-num,
+html body div.hstat-num,
+html body div.layer-title,
+html body div.level-card-title,
+html body div.logic-closing,
+html body div.logic-letter,
+html body div.lp-hd2,
+html body div.mcc-name,
+html body div.ob-stat-num,
+html body div.ob-title,
+html body div.other-card-name,
+html body div.ov-num,
+html body div.pain-num-watermark,
+html body div.phase-title,
+html body div.pillar-back-title,
+html body div.pillar-card-name,
+html body div.pillar-card-num,
+html body div.pillar-item-title,
+html body div.plan-step-num,
+html body div.plan-step-title,
+html body div.plat-detail-name,
+html body div.plat-name,
+html body div.plat-watermark,
+html body div.platform-name,
+html body div.principle-num,
+html body div.principle-title,
+html body div.problem-card-title,
+html body div.proc-num,
+html body div.q-num,
+html body div.q-text,
+html body div.qm-question-text,
+html body div.r-stat-num,
+html body div.rc-title,
+html body div.rd-title,
+html body div.region-dark-title,
+html body div.related-title,
+html body div.result-num,
+html body div.review-step-title,
+html body div.rf-title,
+html body div.rt-num,
+html body div.sam-hd2,
+html body div.sc-overlay-t,
+html body div.section-title,
+html body div.service-name,
+html body div.service-num,
+html body div.service-title,
+html body div.services-count-badge,
+html body div.si-num,
+html body div.sidebar-card-header,
+html body div.signal-num,
+html body div.signal-title,
+html body div.smock-avatar,
+html body div.sn,
+html body div.snum,
+html body div.sp-stat-card-headline,
+html body div.sp-step-num,
+html body div.srn,
+html body div.stage-letter,
+html body div.stakes-title,
+html body div.stat-box-num,
+html body div.stat-num,
+html body div.step-body-title,
+html body div.step-num,
+html body div.step-title,
+html body div.stlbl,
+html body div.stn,
+html body div.stnum,
+html body div.stt,
+html body div.surf-detail-name,
+html body div.surf-name,
+html body div.surf-watermark,
+html body div.svc-detail-name,
+html body div.svc-name,
+html body div.svc-watermark,
+html body div.timeline-title,
+html body div.tip-num,
+html body div.tip-title,
+html body div.tl-title,
+html body div.ts-num,
+html body div.ts-title,
+html body div.type-name,
+html body div.vc-lbl,
+html body div.who-fact-num,
+html body div.why-ai-watermark,
+html body div.why-card-title,
+html body div.why-dark-title,
+html body div.why-num,
+html body div.why-sms-watermark,
+html body div.why-stat-num,
+html body div.why-title,
+html body div.why-watermark,
+html body h3.bcard-title,
+html body h3.factor-title,
+html body h3.fh,
+html body h3.fw-title,
+html body h3.other-card-name,
+html body h3.pain-quote,
+html body h3.pl-title,
+html body h3.svc-card-title,
+html body h3.svc-detail-name,
+html body h3.vp-hl,
+html body p.decision-text,
+html body p.fw-quote-text,
+html body p.pain-quote,
+html body p.promise-headline,
+html body p.why-strip-headline,
+html body span.audit-num,
+html body span.count-up,
+html body span.decision-num,
+html body span.fh,
+html body span.hero-meta-num,
+html body span.nav-logo-fb,
+html body span.nav-wordmark,
+html body span.qm-q-mark,
+html body span.sc-num,
+html body span.th-fn,
+html body th.col-aeo,
+html body th.col-geo,
+html body th.col-seo{text-transform:none!important;letter-spacing:-.005em!important}
+html body .ctn > a,
+html body .fc > h3,
+html body .issue-mock-head > span,
+html body .map-overlay-badge > span,
+html body .vp-svc-item > strong,
+html body a.inline-link,
+html body div.a-author-avatar,
+html body div.action-num,
+html body div.bcard-num,
+html body div.byline-avatar,
+html body div.community-tag,
+html body div.compare-item,
+html body div.ct-overlay-t,
+html body div.ctn,
+html body div.ei-title,
+html body div.emotion-name,
+html body div.layer-num,
+html body div.level-num,
+html body div.pack-rank,
+html body div.phase-num,
+html body div.pillar-item-badge,
+html body div.platform-icon,
+html body div.ps-label,
+html body div.ratio-label,
+html body div.region-flag,
+html body div.review-step-num,
+html body div.rf-rank,
+html body div.sd-badge,
+html body div.sd-num,
+html body div.section-num,
+html body div.serp-rank-badge,
+html body div.sidebar-card-hd,
+html body div.signal-badge,
+html body div.sources-title,
+html body div.timeline-dot,
+html body div.tl-dot,
+html body div.toc-title,
+html body span.lp-num,
+html body span.toc-num,
+html body th.th-cat{letter-spacing:.06em!important;font-weight:700!important}
+/* ---- Generated: undersized paragraph text raised for readability ---- */
+html body .ai-left > p,
+html body .areas-left > p,
+html body .article-card > p,
+html body .article-cta > p,
+html body .audience-box > p,
+html body .audit-list > li,
+html body .callout > p,
+html body .callout-gold > p,
+html body .callout-text > p,
+html body .compare-card > p,
+html body .county-dark > p,
+html body .dark-box > p,
+html body .dark-card > p,
+html body .deliver-list > li,
+html body .dest-card > p,
+html body .empty-state > p,
+html body .exp-checklist > li,
+html body .exp-key-fact > p,
+html body .explainer-card > p,
+html body .faq-footer > p,
+html body .founding-perk > p,
+html body .gc > p,
+html body .hc > p,
+html body .ind-card > p,
+html body .info-card > p,
+html body .insight-box > p,
+html body .issue-row > p,
+html body .layer-bd > p,
+html body .level-card-body > p,
+html body .mech-card > p,
+html body .nc-card > p,
+html body .no-results > p,
+html body .note-box > p,
+html body .ov-step > p,
+html body .phase-card-body > p,
+html body .pillar-card > p,
+html body .plan-step > p,
+html body .plat-checklist > li,
+html body .plat-detail-example > p,
+html body .plat-key-fact > p,
+html body .plt-card > p,
+html body .problem-card > p,
+html body .proc-step > p,
+html body .region-dark > p,
+html body .sc-top > p,
+html body .sec-inner > p,
+html body .section-body > p,
+html body .section-meta > p,
+html body .service-checklist > li,
+html body .services-cta > p,
+html body .sidebar-cta > p,
+html body .sources-list > p,
+html body .sp-step > p,
+html body .stakes-list > li,
+html body .step > p,
+html body .step-item > p,
+html body .surf-checklist > li,
+html body .svc-card > p,
+html body .svc-checklist > li,
+html body .svc-key-fact > p,
+html body .ta-c > p,
+html body .timeline-notice > p,
+html body .two-col-card > p,
+html body .type-example > p,
+html body .vp-body > p,
+html body .vp-more-inner > p,
+html body .why-ai-card > p,
+html body .why-card > p,
+html body .why-right-dark > p,
+html body .why-sms-card > p,
+html body p.about-mini-bio,
+html body p.art-card-desc,
+html body p.bcard-text,
+html body p.city-insight,
+html body p.county-cities,
+html body p.county-desc,
+html body p.deep-strip-text,
+html body p.deliver-desc,
+html body p.desc,
+html body p.exp-desc,
+html body p.factor-sub,
+html body p.fb-desc,
+html body p.fc-sub,
+html body p.fcd-desc,
+html body p.fl-text,
+html body p.fw-loop-text,
+html body p.fw-text,
+html body p.hab-card-body,
+html body p.hc-sub,
+html body p.mc-desc,
+html body p.nb-desc,
+html body p.ob-text,
+html body p.pain-solution,
+html body p.pl-text,
+html body p.plan-step-text,
+html body p.plat-detail-desc,
+html body p.sd,
+html body p.smock-caption,
+html body p.stbody,
+html body p.std,
+html body p.sub-head,
+html body p.surf-detail-desc,
+html body p.svc-card-stat,
+html body p.svc-card-text,
+html body p.svc-desc,
+html body p.svc-detail-desc,
+html body p.type-desc{font-size:15.5px!important;line-height:1.7!important}
+
+/* Status pills and badges stay on one line */
+html body .plat-badge,html body .plat-status-pill,html body .badge-live,html body .badge-soon,html body .pill-live,html body .pill-soon{white-space:nowrap!important}

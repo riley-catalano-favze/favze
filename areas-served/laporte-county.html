@@ -537,12 +537,6 @@ footer{background:var(--dark)!important;padding:56px 5% 0;border-top:1px solid r
   .scroll-guide{bottom:calc(66px + env(safe-area-inset-bottom))!important}
 }
 </style>
-<style id="fz-cursor-css">
-/* Sitewide cursor: Favze glow orb (mouse and trackpad only) */
-.fz-cursor{position:fixed;top:0;left:0;width:22px;height:22px;margin:-11px 0 0 -11px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#0A89A3,#064187 100%);box-shadow:0 0 18px 7px rgba(6,65,135,.65),0 0 9px 3px rgba(10,137,163,.7);pointer-events:none;z-index:2147483646;opacity:0;transition:opacity .2s ease;will-change:transform}
-.cursor-dot,.cursor-ring,.cursor-glow{display:none!important}
-@media(hover:hover) and (pointer:fine){html.fz-cursor-on,html.fz-cursor-on *{cursor:none!important}}
-</style>
 <style id="fz-mobile-css">
 /* Sitewide mobile guard */
 html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
@@ -848,17 +842,14 @@ html body .drop-panel a{border-radius:999px!important}
 /* All buttons: fully rounded */
 html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .mc,html body .cta-btn,html body .cta-btn2,html body .btn-p,html body .btn-g,html body .hc-cta,html body .mc-btn,html body .mc-btn2,html body .fcd-btn,html body .ob-cta,html body .btn-primary,html body .btn-ghost,html body .btn-white,html body .btn-ghost-white,html body .why-btn,html body .why-btn2,html body .sc-btn,html body .bp,html body .bgh,html body .bs,html body .bw,html body .bs-wh,html body .hero-cta,html body .hero-cta-ghost,html body .btn-dark,html body .btn-outline-dark,html body .btn-dark-ol,html body .btn-ghost-wh,html body .btn-navy,html body .btn-teal,html body .svc-card-cta,html body .bcard-cta,html body .btn,html body .btn-cta,html body .view-all-link,html body .city-pill,html body .sidebar-cta a,html body .city-services a,html body .why-left a,html body .nb-cta a,html body .hctas a,html body .cta-bs a,html body .vbts a,html body .fq-bts a,html body .fo-bts a,html body .shdr a,html body form button,html body form [type=submit],html body button[type=submit],html body input[type=submit]{border-radius:999px!important}
 </style>
+<link rel="stylesheet" href="../assets/css/fz-site.css">
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PTG2KZ6K" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <nav>
-  <a href="https://favze.com/" style="display:flex;align-items:center">
-    <img src="https://favze.com/assets/brand/favze-logo-horizontal-black.png" alt="Favze Digital Marketing" class="nav-logo-img"
-      onerror="this.style.display='none';this.nextSibling.style.display='flex'">
-    <span style="display:none;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.45rem;color:#064187;letter-spacing:.04em;">FAVZE</span>
-  </a>
+  <a href="https://favze.com/" class="fz-logo" aria-label="Favze home"><img src="https://favze.com/assets/brand/favze-logo-horizontal-black.png" alt="Favze Digital Marketing" width="147" height="34"></a>
   <ul class="nl">
     <li>
       <button class="drop-trigger" id="trigServices" aria-expanded="false" aria-controls="panServices">
@@ -906,10 +897,9 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
     <li><a href="https://favze.com/why-us" class="nl-link">Why Us</a></li>
     <li><a href="https://favze.com/about" class="nl-link">About</a></li>
     <li><a href="https://favze.com/faq" class="nl-link">FAQ</a></li>
-    <li><a href="tel:+15747475012" class="nav-phone nav-phone-d" aria-label="Call Favze at 574-747-5012" title="Call Favze at 574-747-5012"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a></li>
-    <li><a href="https://favze.com/free-consultation" class="nl-cta">Free Consultation</a></li>
   </ul>
-  <a href="tel:+15747475012" class="nav-phone nav-phone-m" aria-label="Call Favze at 574-747-5012"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+  <div class="fz-nav-actions"><a href="tel:+15747475012" class="nav-phone fz-icon-btn" aria-label="Call Favze at 574-747-5012" title="Call 574-747-5012"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a><a href="sms:+15747475012" class="nav-sms fz-icon-btn" aria-label="Text Favze at 574-747-5012" title="Text 574-747-5012"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></svg></a><a href="https://favze.com/free-consultation" class="nl-cta fz-nav-cta">Free Consultation</a></div>
+  <div class="fz-nav-mob"><a href="tel:+15747475012" class="nav-phone fz-icon-btn" aria-label="Call Favze at 574-747-5012" title="Call 574-747-5012"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a><a href="sms:+15747475012" class="nav-sms fz-icon-btn" aria-label="Text Favze at 574-747-5012" title="Text 574-747-5012"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></svg></a></div>
   <button class="hb" id="hb" aria-label="Toggle menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
@@ -1474,6 +1464,25 @@ footer.ft-std .ft-dot{color:rgba(255,255,255,.18);padding:0 6px}
 @media(max-width:768px){footer.ft-std{padding:48px 0 0!important}footer.ft-std .ft-top{grid-template-columns:1fr!important;gap:28px!important;padding:0 5% 36px!important}footer.ft-std .fb-desc{max-width:none!important}footer.ft-std .fb-bot{padding:16px 5% 22px!important;flex-direction:column;align-items:flex-start}footer.ft-std .ft-scroll-strip>div:last-child{display:none!important}}
 @media(max-width:768px){footer.ft-std .ft-top{grid-template-columns:1fr;gap:28px;padding:0 5% 40px}footer.ft-std .fb-bot{padding:16px 5%}footer.ft-std div[style*="width:1px;height:16px"]{display:none!important}}
 </style>
+<section class="fz-form-sec" id="free-consultation-form" aria-labelledby="fzFormTitle">
+  <div class="fz-form-inner">
+    <div class="fz-form-copy">
+      <p class="fz-form-eyebrow">Free Consultation</p>
+      <h2 id="fzFormTitle">Become the Local <span>Favorite</span></h2>
+      <p>Tell Riley about your business and goals. You&rsquo;ll get a clear, honest look at what&rsquo;s working, what to focus on first, and what it costs, all built around your budget.</p>
+      <ul class="fz-form-list">
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Talk directly with Riley, the person doing the work</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Clear pricing with zero hidden fees</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>A custom plan built for your local market</li>
+      </ul>
+      <p class="fz-form-alt">Prefer to talk now? Call <a href="tel:+15747475012">574-747-5012</a> or <a href="sms:+15747475012">send a text</a>.</p>
+    </div>
+    <div class="fz-form-card">
+      <iframe data-tally-src="https://tally.so/embed/aQjrzb?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1&amp;formEventsForwarding=1" loading="lazy" width="100%" height="420" frameborder="0" marginheight="0" marginwidth="0" title="Claim your free consultation"></iframe>
+      <noscript><p><a href="https://tally.so/r/aQjrzb">Open the free consultation form</a></p></noscript>
+    </div>
+  </div>
+</section>
 <footer class="ft-std">
   <div class="ft-inner">
     <div class="ft-top">
@@ -1563,6 +1572,16 @@ footer.ft-std .ft-dot{color:rgba(255,255,255,.18);padding:0 6px}
             </a>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div class="fz-news">
+      <div class="fz-news-copy">
+        <p class="fz-news-title">Get Favze Insider and Favze Intel</p>
+        <p>One signup gets you two free monthly newsletters. Favze Insider keeps you current. Favze Intel makes you sharper. <a href="https://favze.com/newsletters">Learn more</a>.</p>
+      </div>
+      <div class="fz-news-card">
+        <iframe data-tally-src="https://tally.so/embed/Gxg47Z?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;formEventsForwarding=1" loading="lazy" width="100%" height="260" frameborder="0" marginheight="0" marginwidth="0" title="Favze newsletter signup"></iframe>
       </div>
     </div>
 
@@ -1670,15 +1689,6 @@ document.addEventListener('DOMContentLoaded', function() {
   bindAccordion('mmArtTrig','mmArtSub');
 });
 </script><div class="fz-mbar" role="region" aria-label="Book a free consultation"><a href="https://favze.com/free-consultation"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Book Free Consultation</a></div>
-<script id="fz-cursor-js">
-(function(){
-  if(!window.matchMedia||!matchMedia('(hover:hover) and (pointer:fine)').matches)return;
-  var c=document.createElement('div');c.className='fz-cursor';c.setAttribute('aria-hidden','true');
-  document.body.appendChild(c);document.documentElement.classList.add('fz-cursor-on');
-  document.addEventListener('mousemove',function(e){c.style.transform='translate('+e.clientX+'px,'+e.clientY+'px)';c.style.opacity='1';},{passive:true});
-  document.documentElement.addEventListener('mouseleave',function(){c.style.opacity='0';});
-})();
-</script>
 <script id="fz-mobile-js">
 (function(){
   var mq=window.matchMedia&&matchMedia('(max-width:768px)');
@@ -1765,5 +1775,6 @@ window.silktideConsentManager.init({
   }
 });
 </script>
+<script src="../assets/js/fz-site.js"></script>
 </body>
 </html>
