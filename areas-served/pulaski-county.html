@@ -505,6 +505,12 @@ footer{background:var(--dark)!important;padding:56px 5% 0;border-top:1px solid r
   .scroll-guide{bottom:calc(72px + env(safe-area-inset-bottom))!important}
 }
 </style>
+<style id="fz-cursor-css">
+/* Sitewide cursor: Favze glow orb (mouse and trackpad only) */
+.fz-cursor{position:fixed;top:0;left:0;width:22px;height:22px;margin:-11px 0 0 -11px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#0A89A3,#064187 100%);box-shadow:0 0 18px 7px rgba(6,65,135,.65),0 0 9px 3px rgba(10,137,163,.7);pointer-events:none;z-index:2147483646;opacity:0;transition:opacity .2s ease;will-change:transform}
+.cursor-dot,.cursor-ring,.cursor-glow{display:none!important}
+@media(hover:hover) and (pointer:fine){html.fz-cursor-on,html.fz-cursor-on *{cursor:none!important}}
+</style>
 </head>
 <body>
 
@@ -1227,4 +1233,13 @@ document.addEventListener('click',function(){
   btn.addEventListener('click',function(){var open=sub.style.display!=='none';sub.style.display=open?'none':'flex';btn.setAttribute('aria-expanded',open?'false':'true')});
 });
 </script><div class="fz-mbar" role="region" aria-label="Book a free consultation"><a href="https://favze.com/free-consultation"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Book Free Consultation</a></div>
+<script id="fz-cursor-js">
+(function(){
+  if(!window.matchMedia||!matchMedia('(hover:hover) and (pointer:fine)').matches)return;
+  var c=document.createElement('div');c.className='fz-cursor';c.setAttribute('aria-hidden','true');
+  document.body.appendChild(c);document.documentElement.classList.add('fz-cursor-on');
+  document.addEventListener('mousemove',function(e){c.style.transform='translate('+e.clientX+'px,'+e.clientY+'px)';c.style.opacity='1';},{passive:true});
+  document.documentElement.addEventListener('mouseleave',function(){c.style.opacity='0';});
+})();
+</script>
 
