@@ -323,6 +323,15 @@ footer{background:var(--dark);padding:56px 5% 0;border-top:1px solid rgba(255,25
 @media(max-width:768px){.nl{display:none}.hb{display:flex}.article-header{padding:48px 4.5% 40px}.article-layout{padding:36px 4.5% 60px}.ft-top{grid-template-columns:1fr;gap:28px}.article-sidebar{grid-template-columns:1fr}.stat-row{grid-template-columns:1fr}.toc-card{display:none}.pillar-back-card{flex-direction:column;align-items:flex-start;gap:12px}.pillar-back-arrow{margin-left:0}.decay-row{grid-template-columns:1fr;gap:6px}}
 @media(max-width:480px){nav{padding:0 4%}.article-layout{padding:28px 4% 48px}footer{padding:40px 4% 0}}
 </style>
+<style id="nav-phone-css">
+.nav-phone{display:inline-flex;align-items:center;justify-content:center;gap:7px;height:38px;min-width:38px;padding:0 10px;border:1.5px solid #064187;border-radius:999px;color:#064187!important;background:#fff;text-decoration:none!important;font-family:'DM Sans',sans-serif;font-weight:700;font-size:.85rem;line-height:1;white-space:nowrap;transition:background .2s,color .2s;box-sizing:border-box}
+.nav-phone:hover,.nav-phone:focus-visible{background:#064187;color:#fff!important}
+.nav-phone svg{flex-shrink:0;display:block}
+.nav-phone-txt{display:none}
+.nav-phone-m{display:none!important}
+@media(min-width:1200px){.nav-phone-d{padding:0 14px}.nav-phone-txt{display:inline}}
+@media(max-width:768px){.nav-phone-d{display:none!important}.nav-phone-m{display:inline-flex!important;margin-left:auto;margin-right:12px;width:42px;height:42px;padding:0}}
+</style>
 </head>
 <body>
 <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
@@ -368,8 +377,10 @@ footer{background:var(--dark);padding:56px 5% 0;border-top:1px solid rgba(255,25
     <li><a href="https://favze.com/why-us" class="nl-link">Why Us</a></li>
     <li><a href="https://favze.com/about" class="nl-link">About</a></li>
     <li><a href="https://favze.com/faq" class="nl-link">FAQ</a></li>
+    <li><a href="tel:+15747475012" class="nav-phone nav-phone-d" aria-label="Call Favze at 574-747-5012" title="Call Favze at 574-747-5012"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z" fill="currentColor"/></svg><span class="nav-phone-txt">574-747-5012</span></a></li>
     <li><a href="https://favze.com/free-consultation" class="nl-cta">Free Consultation</a></li>
   </ul>
+  <a href="tel:+15747475012" class="nav-phone nav-phone-m" aria-label="Call Favze at 574-747-5012"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z" fill="currentColor"/></svg></a>
   <button class="hb" id="hb" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </nav>
 <div class="mm" id="mm" aria-hidden="true">
