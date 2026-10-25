@@ -9,6 +9,44 @@
 <link rel="manifest" href="https://favze.com/site.webmanifest">
 <meta name="color-scheme" content="light only">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Favze tracking + consent: start -->
+<script id="fz-consent-default">
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+(function(){
+  function s(id){try{return localStorage.getItem('stcm.consent.'+id)==='true'?'granted':'denied'}catch(e){return 'denied'}}
+  gtag('consent','default',{analytics_storage:s('analytics'),ad_storage:s('marketing'),ad_user_data:s('marketing'),ad_personalization:s('marketing'),functionality_storage:'granted',security_storage:'granted',wait_for_update:500});
+})();
+</script>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" id="silktide-consent-manager-css" href="https://cdn.jsdelivr.net/gh/silktide/consent-manager@v2.0.1/silktide-consent-manager.css" integrity="sha384-EdMq+R+YOnsbelo08wPenoTlnxbAyxI11NMIxzugx/qAsbh64KcOkqxYqq6pfvO/" crossorigin="anonymous">
+<style id="silktide-consent-manager-overrides">
+#stcm-wrapper {
+  --boxShadow: -5px 5px 10px 0px #00000012, 0px 0px 50px 0px #0000001a;
+  --fontFamily: Helvetica Neue, Segoe UI, Arial, sans-serif;
+  --primaryColor: #064187;
+  --backgroundColor: #FFFFFF;
+  --textColor: #4B494B;
+  --backdropBackgroundColor: #00000033;
+  --backdropBackgroundBlur: 0px;
+  --iconColor: #064187;
+  --iconBackgroundColor: #FFFFFF;
+}
+#stcm-wrapper .stcm-button{border-radius:999px!important}
+@media(max-width:768px){#stcm-icon{bottom:calc(84px + env(safe-area-inset-bottom))!important;left:14px!important;width:48px!important;height:48px!important}}
+</style>
+<script src="https://cdn.jsdelivr.net/gh/silktide/consent-manager@v2.0.1/silktide-consent-manager.js" integrity="sha384-5Pt34uiIbCsvfiiZXoLi4HRf/YBXjr9c8e+gYeVo9smUaInNHYVtc8NZ8wUnXJIq" crossorigin="anonymous"></script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PTG2KZ6K');</script>
+<!-- End Google Tag Manager -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-79E26LS14F"></script>
+<script>gtag('js',new Date());gtag('config','G-79E26LS14F');</script>
+<!-- Favze tracking + consent: end -->
 <title>Affordable Digital Marketing Agency | Steuben County, IN | Favze</title>
 <meta name="description" content="Favze is Steuben County's digital marketing agency. Local SEO, GEO, AI Optimization, paid ads &amp; web design for Angola, Fremont, Hamilton &amp; Orland. Riley Catalano, founder.">
 <meta name="robots" content="index, follow">
@@ -535,6 +573,9 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
 </style>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PTG2KZ6K" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <!-- NAV: fixed slugs + dropdown mega-menu -->
 <nav>
@@ -1261,5 +1302,64 @@ document.addEventListener('click',function(){
   if(document.readyState==='complete')run();else window.addEventListener('load',run);
   var t;window.addEventListener('resize',function(){clearTimeout(t);t=setTimeout(fit,200)});
 })();
+</script>
+<script id="fz-consent-init">
+window.silktideConsentManager.init({
+  backdrop: {
+    show: true
+  },
+  icon: {
+    position: "bottomLeft"
+  },
+  prompt: {
+    position: "bottomRight"
+  },
+  consentTypes: [
+    {
+      id: "essential",
+      label: "Essential",
+      description: "<p>These cookies are necessary for the website to function properly and cannot be switched off. They help with things like logging in and setting your privacy preferences.</p>",
+      required: true
+    },
+    {
+      id: "analytics",
+      label: "Analytics",
+      description: "<p>These cookies help us improve the site by tracking which pages are most popular and how visitors move around the site.</p>",
+      required: false,
+      defaultValue: true,
+      gtag: "analytics_storage"
+    },
+    {
+      id: "marketing",
+      label: "Marketing",
+      description: "<p>These cookies are used by us and our advertising partners to show you relevant ads on this site and elsewhere, and to measure how those campaigns perform.</p>",
+      required: false,
+      gtag: [
+        "ad_storage",
+        "ad_user_data",
+        "ad_personalization"
+      ]
+    }
+  ],
+  text: {
+    prompt: {
+      description: "<p>We use cookies on our site to enhance your user experience, provide personalized content, and analyze our traffic.</p>",
+      acceptAllButtonText: "Accept all",
+      acceptAllButtonAccessibleLabel: "Accept all cookies",
+      rejectNonEssentialButtonText: "Reject non-essential",
+      rejectNonEssentialButtonAccessibleLabel: "Reject all non-essential cookies",
+      preferencesButtonText: "Preferences",
+      preferencesButtonAccessibleLabel: "Toggle preferences"
+    },
+    preferences: {
+      title: "Customize your cookie preferences",
+      description: "<p>We respect your right to privacy. You can choose not to allow some types of cookies. Your cookie preferences will apply across our website.</p>",
+      saveButtonText: "Save and close",
+      saveButtonAccessibleLabel: "Save your cookie preferences",
+      creditLinkText: "Get this banner for free",
+      creditLinkAccessibleLabel: "Get this banner for free"
+    }
+  }
+});
 </script>
 
