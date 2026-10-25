@@ -847,7 +847,12 @@ html body .why-grid,
 html body .why-right-dark,
 html body .why-sms-grid,
 html body .why-stat{border-radius:28px!important}
-html body .drop-panel{border-radius:22px!important}
+html body .drop-trigger,html body .nav-drop-trigger,html body .drop-menu a,html body .drop-panel a,html body .fz-res-panel a,html body .fz-res > a{border-radius:999px!important}
+html body .drop-panel .drop-label,html body .drop-menu .drop-col-label{margin-top:2px}
+.fz-res-label{font-size:.65rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#aaa;padding:4px 14px 6px}
+.fz-mm-label{font-family:'DM Sans',sans-serif;font-size:.65rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#999;padding:12px 0 4px 12px;margin-top:6px;border-top:1px solid #f0f0f0}
+html body .drop-panel,html body .drop-menu{border-radius:22px!important}
+html body .drop-menu{min-width:300px}
 html body .drop-panel a{border-radius:999px!important}
 </style>
 <style id="fz-buttons-css">
@@ -878,15 +883,18 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
     <li><a href="https://favze.com/services" class="active">Services</a></li>
     <li class="fz-res"><a href="https://favze.com/articles" aria-haspopup="true">Resources</a>
       <div class="fz-res-panel">
+        <div class="fz-res-label">Articles</div>
         <a href="https://favze.com/articles/content-marketing">Content Marketing</a>
         <a href="https://favze.com/articles/social-media-strategy">Social Media Strategy</a>
         <a href="https://favze.com/articles/search-visibility">Search Visibility &amp; Local Discovery</a>
         <a href="https://favze.com/articles/brand-positioning">Brand Positioning &amp; Community Authority</a>
+        <a href="https://favze.com/articles" class="fz-res-all">All Articles &rarr;</a>
         <div class="fz-res-div"></div>
+        <div class="fz-res-label">Newsletters</div>
         <a href="https://www.linkedin.com/newsletters/favze-insights-7399519169551126528/" target="_blank" rel="noopener noreferrer">Favze Insights &#8599;</a>
         <a href="https://favze.com/newsletters#intel-card">Favze Intel</a>
         <a href="https://favze.com/newsletters#insider-card">Favze Insider</a>
-        <a href="https://favze.com/articles" class="fz-res-all">All Articles &rarr;</a>
+        <a href="https://favze.com/newsletters" class="fz-res-all">All Newsletters &rarr;</a>
       </div>
     </li>
     <li><a href="https://favze.com/why-us">Why Us</a></li>
@@ -901,6 +909,7 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
 <div class="mm" id="mm">
   <a href="https://favze.com/services">Services</a>
   <a href="https://favze.com/articles">Resources</a>
+  <div class="fz-mm-label">Newsletters</div>
   <a href="https://www.linkedin.com/newsletters/favze-insights-7399519169551126528/" target="_blank" rel="noopener noreferrer">Favze Insights &#8599;</a>
   <a href="https://favze.com/newsletters#intel-card">Favze Intel</a>
   <a href="https://favze.com/newsletters#insider-card">Favze Insider</a>

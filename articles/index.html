@@ -859,7 +859,12 @@ html body .why-grid,
 html body .why-right-dark,
 html body .why-sms-grid,
 html body .why-stat{border-radius:28px!important}
-html body .drop-panel{border-radius:22px!important}
+html body .drop-trigger,html body .nav-drop-trigger,html body .drop-menu a,html body .drop-panel a,html body .fz-res-panel a,html body .fz-res > a{border-radius:999px!important}
+html body .drop-panel .drop-label,html body .drop-menu .drop-col-label{margin-top:2px}
+.fz-res-label{font-size:.65rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#aaa;padding:4px 14px 6px}
+.fz-mm-label{font-family:'DM Sans',sans-serif;font-size:.65rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#999;padding:12px 0 4px 12px;margin-top:6px;border-top:1px solid #f0f0f0}
+html body .drop-panel,html body .drop-menu{border-radius:22px!important}
+html body .drop-menu{min-width:300px}
 html body .drop-panel a{border-radius:999px!important}
 </style>
 <style id="fz-buttons-css">
@@ -911,16 +916,18 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
         <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
       <div class="drop-panel center" id="panArticles" role="menu">
-        <div class="drop-label">Browse by Pillar</div>
-        <a href="https://favze.com/articles/content-marketing/" role="menuitem">Content Marketing</a>
-        <a href="https://favze.com/articles/social-media-strategy/" role="menuitem">Social Media Strategy</a>
-        <a href="https://favze.com/articles/search-visibility/" role="menuitem">Search Visibility &amp; Local Discovery</a>
-        <a href="https://favze.com/articles/brand-positioning/" role="menuitem">Brand Positioning &amp; Community Authority</a>
+        <div class="drop-label">Articles</div>
+        <a href="https://favze.com/articles/content-marketing" role="menuitem">Content Marketing</a>
+        <a href="https://favze.com/articles/social-media-strategy" role="menuitem">Social Media Strategy</a>
+        <a href="https://favze.com/articles/search-visibility" role="menuitem">Search Visibility &amp; Local Discovery</a>
+        <a href="https://favze.com/articles/brand-positioning" role="menuitem">Brand Positioning &amp; Community Authority</a>
+        <a href="https://favze.com/articles" class="drop-view-all" role="menuitem">All Articles &rarr;</a>
         <div class="drop-divider"></div>
+        <div class="drop-label">Newsletters</div>
         <a href="https://www.linkedin.com/newsletters/favze-insights-7399519169551126528/" role="menuitem" target="_blank" rel="noopener noreferrer">Favze Insights &#8599;</a>
         <a href="https://favze.com/newsletters#intel-card" role="menuitem">Favze Intel</a>
         <a href="https://favze.com/newsletters#insider-card" role="menuitem">Favze Insider</a>
-        <a href="https://favze.com/articles/" class="drop-view-all" role="menuitem">All Articles &rarr;</a>
+        <a href="https://favze.com/newsletters" class="drop-view-all" role="menuitem">All Newsletters &rarr;</a>
       </div>
     </li>
 
@@ -970,10 +977,12 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
     <a href="https://favze.com/articles/social-media-strategy/">Social Media Strategy</a>
     <a href="https://favze.com/articles/search-visibility/">Search Visibility &amp; Local Discovery</a>
     <a href="https://favze.com/articles/brand-positioning/">Brand Positioning &amp; Community Authority</a>
+    <a href="https://favze.com/articles/" style="font-weight:700;color:var(--navy);">All Articles</a>
+    <div class="fz-mm-label">Newsletters</div>
     <a href="https://www.linkedin.com/newsletters/favze-insights-7399519169551126528/" target="_blank" rel="noopener noreferrer">Favze Insights &#8599;</a>
     <a href="https://favze.com/newsletters#intel-card">Favze Intel</a>
     <a href="https://favze.com/newsletters#insider-card">Favze Insider</a>
-    <a href="https://favze.com/articles/" style="font-weight:700;color:var(--navy);">All Articles</a>
+    <a href="https://favze.com/newsletters" style="font-weight:700;color:var(--navy);">All Newsletters</a>
   </div>
 
   <a href="https://favze.com/why-us" class="mm-link">Why Us</a>
