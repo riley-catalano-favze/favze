@@ -369,16 +369,16 @@ footer{background:var(--dark);padding:56px 5% 0;border-top:1px solid rgba(255,25
 .nav-phone svg{display:block}
 .nav-phone-m{display:none!important}
 @media(max-width:768px){.nav-phone-d{display:none!important}.nav-phone-m{display:inline-flex!important;margin-left:auto;margin-right:6px}}
-/* Mobile bottom bar: Book Free Consultation */
+/* Mobile bottom bar: floating rounded Book Free Consultation */
 .fz-mbar{display:none}
 @media(max-width:768px){
-  .fz-mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:180;background:#064187;box-shadow:0 -6px 20px rgba(0,0,0,.14);padding-bottom:env(safe-area-inset-bottom)}
-  .fz-mbar a{flex:1;display:flex;align-items:center;justify-content:center;gap:9px;min-height:58px;font-family:'DM Sans',sans-serif;font-weight:700;font-size:16px;line-height:1.2;color:#fff!important;text-decoration:none!important;-webkit-tap-highlight-color:transparent}
+  .fz-mbar{display:block;position:fixed;left:0;right:0;bottom:0;z-index:180;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:transparent;pointer-events:none}
+  .fz-mbar a{pointer-events:auto;display:flex;align-items:center;justify-content:center;gap:9px;min-height:54px;border-radius:999px;background:#064187;box-shadow:0 8px 22px rgba(6,65,135,.35);font-family:'DM Sans',sans-serif;font-weight:700;font-size:16px;line-height:1.2;color:#fff!important;text-decoration:none!important;-webkit-tap-highlight-color:transparent;transition:background .2s}
   .fz-mbar a:hover,.fz-mbar a:active{background:#000}
-  .fz-mbar a:focus-visible{outline:3px solid #fff;outline-offset:-5px}
-  body:has(.fz-mbar){padding-bottom:calc(58px + env(safe-area-inset-bottom))!important}
+  .fz-mbar a:focus-visible{outline:3px solid #0A89A3;outline-offset:3px}
+  body:has(.fz-mbar){padding-bottom:calc(78px + env(safe-area-inset-bottom))!important}
   body:has(#mm.open) .fz-mbar{display:none}
-  .scroll-guide{bottom:calc(72px + env(safe-area-inset-bottom))!important}
+  .scroll-guide{bottom:calc(88px + env(safe-area-inset-bottom))!important}
 }
 </style>
 <style id="fz-cursor-css">
@@ -386,6 +386,28 @@ footer{background:var(--dark);padding:56px 5% 0;border-top:1px solid rgba(255,25
 .fz-cursor{position:fixed;top:0;left:0;width:22px;height:22px;margin:-11px 0 0 -11px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#0A89A3,#064187 100%);box-shadow:0 0 18px 7px rgba(6,65,135,.65),0 0 9px 3px rgba(10,137,163,.7);pointer-events:none;z-index:2147483646;opacity:0;transition:opacity .2s ease;will-change:transform}
 .cursor-dot,.cursor-ring,.cursor-glow{display:none!important}
 @media(hover:hover) and (pointer:fine){html.fz-cursor-on,html.fz-cursor-on *{cursor:none!important}}
+</style>
+<style id="fz-mobile-css">
+/* Sitewide mobile guard */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+img,video,canvas,iframe,embed,object{max-width:100%}
+img,video{height:auto}
+@media(max-width:768px){
+  html,body{max-width:100%!important;overflow-x:clip!important}
+  body{overflow-wrap:break-word}
+  table{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  pre,code{white-space:pre-wrap;word-break:break-word}
+  input,select,textarea{font-size:16px!important;max-width:100%}
+  .nav-cta{display:none!important}
+  .page-layout>*,.article-layout>*,.hero-inner>*,.ft-top>*{min-width:0!important}
+  .map-cities-below{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .pillar-divider-label,.btn-cta{white-space:normal!important}
+}
+@media(max-width:380px){.map-cities-below{grid-template-columns:minmax(0,1fr)!important}}
+</style>
+<style id="fz-buttons-css">
+/* All buttons: fully rounded */
+html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .mc,html body .cta-btn,html body .cta-btn2,html body .btn-p,html body .btn-g,html body .hc-cta,html body .mc-btn,html body .mc-btn2,html body .fcd-btn,html body .ob-cta,html body .btn-primary,html body .btn-ghost,html body .btn-white,html body .btn-ghost-white,html body .why-btn,html body .why-btn2,html body .sc-btn,html body .bp,html body .bgh,html body .bs,html body .bw,html body .bs-wh,html body .hero-cta,html body .hero-cta-ghost,html body .btn-dark,html body .btn-outline-dark,html body .btn-dark-ol,html body .btn-ghost-wh,html body .btn-navy,html body .btn-teal,html body .svc-card-cta,html body .bcard-cta,html body .btn,html body .btn-cta,html body .view-all-link,html body .city-pill,html body .sidebar-cta a,html body .city-services a,html body .why-left a,html body .nb-cta a,html body .hctas a,html body .cta-bs a,html body .vbts a,html body .fq-bts a,html body .fo-bts a,html body .shdr a,html body form button,html body form [type=submit],html body button[type=submit],html body input[type=submit],html body .fz-mbar a{border-radius:999px!important}
 </style>
 </head>
 <body>
@@ -1053,6 +1075,15 @@ footer.ft-std .fb-bot a{color:rgba(255,255,255,.42);font-size:.8rem;transition:c
 footer.ft-std .fb-bot a:hover{color:#fff}
 @keyframes ftScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 @media(max-width:1024px){footer.ft-std .ft-top{grid-template-columns:1fr 1fr}}
+/* Serving strip: seamless, always scrolling */
+footer.ft-std .ft-track{display:flex!important;width:max-content!important;animation:fzFtScroll 60s linear infinite!important;animation-play-state:running!important;will-change:transform}
+footer.ft-std .ft-track-set{display:flex;align-items:center;white-space:nowrap;flex-shrink:0}
+footer.ft-std .ft-track-set a{font-size:.78rem;color:rgba(255,255,255,.45);padding:0 4px;text-decoration:none;transition:color .2s}
+footer.ft-std .ft-track-set a:hover{color:#fff}
+footer.ft-std .ft-dot{color:rgba(255,255,255,.18);padding:0 6px}
+@keyframes fzFtScroll{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+@media(max-width:1024px){footer.ft-std .ft-top{grid-template-columns:1fr 1fr!important}}
+@media(max-width:768px){footer.ft-std{padding:48px 0 0!important}footer.ft-std .ft-top{grid-template-columns:1fr!important;gap:28px!important;padding:0 5% 36px!important}footer.ft-std .fb-desc{max-width:none!important}footer.ft-std .fb-bot{padding:16px 5% 22px!important;flex-direction:column;align-items:flex-start}footer.ft-std .ft-scroll-strip>div:last-child{display:none!important}}
 @media(max-width:768px){footer.ft-std .ft-top{grid-template-columns:1fr;gap:28px;padding:0 5% 40px}footer.ft-std .fb-bot{padding:16px 5%}footer.ft-std div[style*="width:1px;height:16px"]{display:none!important}}
 </style>
 <footer class="ft-std">
@@ -1147,43 +1178,7 @@ footer.ft-std .fb-bot a:hover{color:#fff}
     <div class="ft-scroll-strip" style="border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);padding:11px 0;display:flex;align-items:center;overflow:hidden">
       <div style="font-size:0.62rem;font-weight:700;letter-spacing:.16em;color:#0A89A3;white-space:nowrap;padding:0 20px 0 5%;flex-shrink:0">SERVING</div>
       <div style="flex:1;overflow:hidden;position:relative">
-        <div style="display:flex;align-items:center;white-space:nowrap;animation:ftScroll 40s linear infinite">
-          <a href="https://favze.com/areas-served/northern-indiana" style="font-size:0.78rem;color:rgba(255,255,255,.45);padding:0 4px;transition:color .2s">Northern Indiana</a><span style="color:rgba(255,255,255,.18);padding:0 6px">&middot;</span>
-          <a href="https://favze.com/areas-served/michiana" style="font-size:0.78rem;color:rgba(255,255,255,.45);padding:0 4px">Michiana</a><span style="color:rgba(255,255,255,.18);padding:0 6px">&middot;</span>
-          <a href="https://favze.com/areas-served/elkhart-county" style="font-size:0.78rem;color:rgba(255,255,255,.45);padding:0 4px">Elkhart County</a><span style="color:rgba(255,255,255,.18);padding:0 6px">&middot;</span>
-          <a href="https://favze.com/areas-served/elkhart-county" style="font-size:0.78rem;color:rgba(255,255,255,.45);padding:0 4px">Goshen</a><span style="color:rgba(255,255,255,.18);padding:0 6px">&middot;</span>
-          <a href="https://favze.com/areas-served/st-joseph-county" style="font-size:0.78rem;color:rgba(255,255,255,.45);padding:0 4px">South Bend</a><span style="color:rgba(255,255,255,.18);padding:0 6px">&middot;</span>
-          <a href="https://favze.com/areas-served/st-joseph-county" style="font-size:0.78rem;color:rgba(255,255,255,.45);padding:0 4px">Mishawaka</a><span style="color:rgba(255,255,255,.18);padding:0 6px">&middot;</span>
-          <a href="https://favze.com/areas-served/lagrange-county" style="font-size:0.78rem;color:rgba(255,255,255,.45);padding:0 4px">LaGrange County</a><span style="color:rgba(255,255,255,.18);padding:0 6px">&middot;</span>
-          <a href="https://favze.com/areas-served/noble-county" style="font-size:0.78rem;color:rgba(255,255,255,.45);padding:0 4px">Noble County</a><span style="color:rgba(255,255,255,.18);padding:0 6px">&middot;</span>
-          <a href="https://favze.com/areas-served/kosciusko-county" style="font-size:0.78rem;color:rgba(255,255,255,.45);padding:0 4px">Kosciusko County</a><span style="color:rgba(255,255,255,.18);padding:0 6px">&middot;</span>
-          <a href="https://favze.com/areas-served/kosciusko-county" style="font-size:0.78rem;color:rgba(255,255,255,.45);padding:0 4px">Warsaw</a><span style="color:rgba(255,255,255,.18);padding:0 6px">&middot;</span>
-          <a href="https://favze.com/areas-served/dekalb-county" style="font-size:0.78rem;color:rgba(255,255,255,.45);padding:0 4px">DeKalb County</a><span style="color:rgba(255,255,255,.18);padding:0 6px">&middot;</span>
-          <a href="https://favze.com/areas-served/allen-county" style="font-size:0.78rem;color:rgba(255,255,255,.45);padding:0 4px">Allen County</a><span style="color:rgba(255,255,255,.18);padding:0 6px">&middot;</span>
-          <a href="https://favze.com/areas-served/allen-county" style="font-size:0.78rem;color:rgba(255,255,255,.45);padding:0 4px">Fort Wayne</a><span style="color:rgba(255,255,255,.18);padding:0 6px">&middot;</span>
-          <a href="https://favze.com/areas-served/marshall-county" style="font-size:0.78rem;color:rgba(255,255,255,.45);padding:0 4px">Marshall County</a><span style="color:rgba(255,255,255,.18);padding:0 6px">&middot;</span>
-          <a href="https://favze.com/areas-served/howard-county" style="font-size:0.78rem;color:rgba(255,255,255,.45);padding:0 4px">Howard County</a><span style="color:rgba(255,255,255,.18);padding:0 6px">&middot;</span>
-          <a href="https://favze.com/areas-served/howard-county" style="font-size:0.78rem;color:rgba(255,255,255,.45);padding:0 4px">Kokomo</a><span style="color:rgba(255,255,255,.18);padding:0 6px">&middot;</span>
-          <a href="https://favze.com/areas-served/porter-county" style="font-size:0.78rem;color:rgba(255,255,255,.45);padding:0 4px">Porter County</a><span style="color:rgba(255,255,255,.18);padding:0 6px">&middot;</span>
-          <a href="https://favze.com/areas-served/laporte-county" style="font-size:0.78rem;color:rgba(255,255,255,.45);padding:0 4px">LaPorte County</a><span style="color:rgba(255,255,255,.18);padding:0 6px">&middot;</span>
-          <a href="https://favze.com/areas-served/lake-county" style="font-size:0.78rem;color:rgba(255,255,255,.45);padding:0 4px">Lake County</a><span style="color:rgba(255,255,255,.18);padding:0 6px">&middot;</span>
-          <a href="https://favze.com/areas-served/jasper-county" style="font-size:0.78rem;color:rgba(255,255,255,.45);padding:0 4px">Jasper County</a><span style="color:rgba(255,255,255,.18);padding:0 6px">&middot;</span>
-          <a href="https://favze.com/areas-served/newton-county" style="font-size:0.78rem;color:rgba(255,255,255,.45);padding:0 4px">Newton County</a><span style="color:rgba(255,255,255,.18);padding:0 6px">&middot;</span>
-          <a href="https://favze.com/areas-served/pulaski-county" style="font-size:0.78rem;color:rgba(255,255,255,.45);padding:0 4px">Pulaski County</a><span style="color:rgba(255,255,255,.18);padding:0 6px">&middot;</span>
-          <a href="https://favze.com/areas-served/whitley-county" style="font-size:0.78rem;color:rgba(255,255,255,.45);padding:0 4px">Whitley County</a><span style="color:rgba(255,255,255,.18);padding:0 6px">&middot;</span>
-          <a href="https://favze.com/areas-served/steuben-county" style="font-size:0.78rem;color:rgba(255,255,255,.45);padding:0 4px">Steuben County</a><span style="color:rgba(255,255,255,.18);padding:0 6px">&middot;</span>
-          <a href="https://favze.com/areas-served/cass-county-indiana" style="font-size:0.78rem;color:rgba(255,255,255,.45);padding:0 4px">Cass County</a><span style="color:rgba(255,255,255,.18);padding:0 6px">&middot;</span>
-          <a href="https://favze.com/areas-served/berrien-county" style="font-size:0.78rem;color:rgba(255,255,255,.45);padding:0 4px">Berrien County</a><span style="color:rgba(255,255,255,.18);padding:0 6px">&middot;</span>
-          <a href="https://favze.com/areas-served/cass-county-michigan" style="font-size:0.78rem;color:rgba(255,255,255,.45);padding:0 4px">Cass County, MI</a><span style="color:rgba(255,255,255,.18);padding:0 6px">&middot;</span>
-          <!-- duplicate for seamless loop -->
-          <a href="https://favze.com/areas-served/northern-indiana" style="font-size:0.78rem;color:rgba(255,255,255,.45);padding:0 4px">Northern Indiana</a><span style="color:rgba(255,255,255,.18);padding:0 6px">&middot;</span>
-          <a href="https://favze.com/areas-served/michiana" style="font-size:0.78rem;color:rgba(255,255,255,.45);padding:0 4px">Michiana</a><span style="color:rgba(255,255,255,.18);padding:0 6px">&middot;</span>
-          <a href="https://favze.com/areas-served/elkhart-county" style="font-size:0.78rem;color:rgba(255,255,255,.45);padding:0 4px">Elkhart County</a><span style="color:rgba(255,255,255,.18);padding:0 6px">&middot;</span>
-          <a href="https://favze.com/areas-served/st-joseph-county" style="font-size:0.78rem;color:rgba(255,255,255,.45);padding:0 4px">South Bend</a><span style="color:rgba(255,255,255,.18);padding:0 6px">&middot;</span>
-          <a href="https://favze.com/areas-served/allen-county" style="font-size:0.78rem;color:rgba(255,255,255,.45);padding:0 4px">Fort Wayne</a><span style="color:rgba(255,255,255,.18);padding:0 6px">&middot;</span>
-          <a href="https://favze.com/areas-served/berrien-county" style="font-size:0.78rem;color:rgba(255,255,255,.45);padding:0 4px">Berrien County</a><span style="color:rgba(255,255,255,.18);padding:0 6px">&middot;</span>
-          <a href="https://favze.com/areas-served/kosciusko-county" style="font-size:0.78rem;color:rgba(255,255,255,.45);padding:0 4px">Warsaw</a>
-        </div>
+        <div class="ft-track"><div class="ft-track-set"><a href="https://favze.com/areas-served/northern-indiana">Northern Indiana</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/michiana">Michiana</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/elkhart-county">Elkhart County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/elkhart-county">Goshen</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/st-joseph-county">St. Joseph County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/st-joseph-county">South Bend</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/st-joseph-county">Mishawaka</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/lagrange-county">LaGrange County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/noble-county">Noble County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/kosciusko-county">Kosciusko County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/kosciusko-county">Warsaw</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/dekalb-county">DeKalb County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/allen-county">Allen County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/allen-county">Fort Wayne</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/marshall-county">Marshall County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/howard-county">Howard County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/howard-county">Kokomo</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/porter-county">Porter County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/laporte-county">LaPorte County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/lake-county">Lake County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/jasper-county">Jasper County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/newton-county">Newton County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/pulaski-county">Pulaski County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/whitley-county">Whitley County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/steuben-county">Steuben County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/cass-county-indiana">Cass County, IN</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/berrien-county">Berrien County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/cass-county-michigan">Cass County, MI</a><span class="ft-dot">&middot;</span></div><div class="ft-track-set" aria-hidden="true"><a href="https://favze.com/areas-served/northern-indiana" tabindex="-1">Northern Indiana</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/michiana" tabindex="-1">Michiana</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/elkhart-county" tabindex="-1">Elkhart County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/elkhart-county" tabindex="-1">Goshen</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/st-joseph-county" tabindex="-1">St. Joseph County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/st-joseph-county" tabindex="-1">South Bend</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/st-joseph-county" tabindex="-1">Mishawaka</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/lagrange-county" tabindex="-1">LaGrange County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/noble-county" tabindex="-1">Noble County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/kosciusko-county" tabindex="-1">Kosciusko County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/kosciusko-county" tabindex="-1">Warsaw</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/dekalb-county" tabindex="-1">DeKalb County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/allen-county" tabindex="-1">Allen County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/allen-county" tabindex="-1">Fort Wayne</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/marshall-county" tabindex="-1">Marshall County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/howard-county" tabindex="-1">Howard County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/howard-county" tabindex="-1">Kokomo</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/porter-county" tabindex="-1">Porter County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/laporte-county" tabindex="-1">LaPorte County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/lake-county" tabindex="-1">Lake County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/jasper-county" tabindex="-1">Jasper County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/newton-county" tabindex="-1">Newton County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/pulaski-county" tabindex="-1">Pulaski County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/whitley-county" tabindex="-1">Whitley County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/steuben-county" tabindex="-1">Steuben County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/cass-county-indiana" tabindex="-1">Cass County, IN</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/berrien-county" tabindex="-1">Berrien County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/cass-county-michigan" tabindex="-1">Cass County, MI</a><span class="ft-dot">&middot;</span></div></div>
       </div>
       <div style="display:flex;align-items:center;gap:6px;white-space:nowrap;flex-shrink:0;padding:0 5% 0 16px;font-size:0.62rem;font-weight:700;letter-spacing:.1em;color:#0A89A3;text-transform:uppercase">
         <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 0.5C3.07 0.5 1.5 2.07 1.5 4c0 2.52 3.5 5.5 3.5 5.5s3.5-2.98 3.5-5.5C8.5 2.07 6.93 0.5 5 0.5z" fill="rgba(10,137,163,.6)" stroke="#0A89A3" stroke-width="0.9"/><circle cx="5" cy="4" r="1.1" fill="#0A89A3"/></svg>
@@ -1217,7 +1212,7 @@ footer.ft-std .fb-bot a:hover{color:#fff}
     </div>
 
     <div class="fb-bot">
-      <p>&copy; 2026 Favze Digital Marketing. All rights reserved.</p>
+      <p>&copy; 2026 Favze, LLC. All rights reserved.</p>
       <div style="display:flex;gap:18px;flex-wrap:wrap">
         <a href="https://favze.com/privacy-policy">Privacy Policy</a>
         <a href="https://favze.com/terms-of-use">Terms of Use</a>
@@ -1384,6 +1379,33 @@ document.addEventListener('DOMContentLoaded', function() {
   document.body.appendChild(c);document.documentElement.classList.add('fz-cursor-on');
   document.addEventListener('mousemove',function(e){c.style.transform='translate('+e.clientX+'px,'+e.clientY+'px)';c.style.opacity='1';},{passive:true});
   document.documentElement.addEventListener('mouseleave',function(){c.style.opacity='0';});
+})();
+</script>
+<script id="fz-mobile-js">
+(function(){
+  var mq=window.matchMedia&&matchMedia('(max-width:768px)');
+  function clipped(el){for(var a=el.parentElement;a&&a!==document.body;a=a.parentElement){var o=getComputedStyle(a).overflowX;if(o!=='visible')return true}return false}
+  function fit(){
+    if(!mq||!mq.matches)return;
+    var vw=document.documentElement.clientWidth;
+    document.querySelectorAll('body *').forEach(function(el){
+      var cs=getComputedStyle(el);
+      if(cs.display==='grid'||cs.display==='inline-grid'){for(var i=0;i<el.children.length;i++)el.children[i].style.minWidth='0'}
+    });
+    document.querySelectorAll('body *').forEach(function(el){
+      var cs=getComputedStyle(el);if(cs.position==='fixed'||cs.display==='none')return;
+      var r=el.getBoundingClientRect();if(!r.width)return;
+      if((r.right>vw+1||r.left<-1)&&!clipped(el)){
+        el.style.maxWidth='100%';el.style.minWidth='0';
+        if(cs.whiteSpace==='nowrap'&&el.children.length<3)el.style.whiteSpace='normal';
+        if(parseFloat(cs.width)>vw)el.style.width='auto';
+        el.style.overflowWrap='anywhere';
+      }
+    });
+  }
+  function run(){fit();setTimeout(fit,400)}
+  if(document.readyState==='complete')run();else window.addEventListener('load',run);
+  var t;window.addEventListener('resize',function(){clearTimeout(t);t=setTimeout(fit,200)});
 })();
 </script>
 </body>
