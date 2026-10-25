@@ -286,7 +286,45 @@
     else setTimeout(v, 1500);
   }
 
+  /* ---------- Google Analytics click and form tracking ---------- */
+  function track(name, params) {
+    params = params || {};
+    params.page_path = location.pathname;
+    if (typeof window.gtag === 'function') window.gtag('event', name, params);
+    else (window.dataLayer = window.dataLayer || []).push(Object.assign({ event: name }, params));
+  }
+  function clickTracking() {
+    D.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href]');
+      if (!a) return;
+      var href = a.getAttribute('href') || '';
+      var label = (a.textContent || a.getAttribute('aria-label') || '').replace(/\s+/g, ' ').trim().slice(0, 80);
+      var p = { link_text: label, link_url: href };
+      if (/^tel:/i.test(href)) return track('call_click', p);
+      if (/^sms:/i.test(href)) return track('text_click', p);
+      if (/^mailto:/i.test(href)) return track('email_click', p);
+      if (/free-consultation|tally\.so\/r\/aQjrzb/i.test(href)) {
+        if (a.closest('.fz-mbar')) return track('consult_mobile_bar_click', p);
+        if (a.closest('nav')) return track('consult_nav_click', p);
+        if (a.closest('footer')) return track('consult_footer_click', p);
+        return track('consult_page_click', p);
+      }
+      if (/tally\.so\/r\/Gxg47Z/i.test(href)) return track('newsletter_link_click', p);
+    }, true);
+    window.addEventListener('message', function (e) {
+      if (!/tally\.so$/.test((e.origin || '').replace(/^https?:\/\//, ''))) return;
+      var d = e.data;
+      if (typeof d === 'string') { try { d = JSON.parse(d); } catch (x) { return; } }
+      if (!d || d.event !== 'Tally.FormSubmitted') return;
+      var id = (d.payload && d.payload.formId) || '';
+      if (id === 'aQjrzb') track('generate_lead', { form_name: 'free_consultation' });
+      else if (id === 'Gxg47Z') track('newsletter_signup', { form_name: 'newsletter' });
+      else track('form_submit', { form_name: id });
+    });
+  }
+
   function run(fn) { try { fn(); } catch (e) { if (window.console) console.warn('fz-site:', e); } }
+  run(clickTracking);
   run(themeSections);
   run(contrastPass);
   run(buildRails);
