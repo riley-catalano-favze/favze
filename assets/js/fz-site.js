@@ -325,7 +325,22 @@
     });
   }
 
+  /* ---------- Keep one H1 per page: the cookie preferences title becomes an H2 ---------- */
+  function cookieHeading() {
+    var fix = function () {
+      D.querySelectorAll('#stcm-modal h1, #stcm-wrapper h1').forEach(function (h) {
+        var n = D.createElement('h2');
+        n.className = 'stcm-title';
+        n.innerHTML = h.innerHTML;
+        h.parentNode.replaceChild(n, h);
+      });
+    };
+    fix();
+    new MutationObserver(fix).observe(D.body, { childList: true, subtree: true });
+  }
+
   function run(fn) { try { fn(); } catch (e) { if (window.console) console.warn('fz-site:', e); } }
+  run(cookieHeading);
   run(clickTracking);
   run(themeSections);
   run(contrastPass);
