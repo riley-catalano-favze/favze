@@ -1,65 +1,78 @@
 # Favze
+
 > Favze Digital Marketing is an affordable full-service agency with custom packages tailored to your needs. Northern Indiana & Michiana's affordable full-service local digital marketing agency focused on helping businesses become their customer’s favorite local business.
 
-Website: https://favze.com
-Sitemap: https://favze.com/sitemap.xml
+Favze Digital Marketing (Favze, LLC) is based in Middlebury, Indiana, and serves businesses across Northern Indiana and Southwest Michigan (Michiana). Founder and CEO: Riley Catalano (https://rileycatalano.com, https://www.linkedin.com/in/rileycatalano/). Phone and text: 574-747-5012. Email: riley@favze.com.
 
 ## Core Pages
-https://favze.com/
-https://favze.com/about
-https://favze.com/why-us
-https://favze.com/our-process
-https://favze.com/free-consultation
-https://favze.com/services
-https://favze.com/articles
+- [Digital Marketing Agency in Northern Indiana & Michiana](https://favze.com/): Favze is a full-service digital marketing agency in Middlebury, IN. Local SEO, AI search, ads, and websites that help Michiana businesses get found and chosen.
+- [About Favze - Local Marketing Agency in Middlebury, Indiana](https://favze.com/about): Meet Riley Catalano, founder of Favze. One point of contact, transparent pricing, and month-to-month marketing for Northern Indiana and Michiana businesses.
+- [Why Choose Favze - A Local Alternative to Big Agencies](https://favze.com/why-us): Direct access to the founder, clear pricing with every cost shown, and month-to-month flexibility. See how Favze compares to the typical marketing agency.
+- [How Favze Works - Our Digital Marketing Process](https://favze.com/our-process): See how Favze plans, launches, and grows every service, phase by phase, from the first audit to monthly reporting. Clear steps and clear results at every stage.
+- [The FAVZE Framework - A 5-Stage Lead Generation System](https://favze.com/favze-framework): Findability, Audience, Velocity, Zippy Workflows, and Evergreen. The FAVZE Framework turns searches into leads and leads into repeat customers.
+- [Digital Marketing FAQ for Local Business Owners](https://favze.com/faq): Straight answers on SEO, AI search, Google Ads, social media, pricing, and timelines for Northern Indiana and Michiana business owners, from the Favze team.
+- [Free Digital Marketing Consultation](https://favze.com/free-consultation): Book a free one-on-one consultation with Riley Catalano and leave with a clear plan for SEO, AI search, ads, and leads built for your Northern Indiana business.
+- [Free Digital Marketing Audit Checklist](https://favze.com/full-digital-marketing-audit): Review your Google Business Profile, website, SEO, AI visibility, ads, email, and social with the free Favze checklist, and spot your fastest wins for growth.
+- [Favze Insider & Favze Intel - Free Marketing Newsletters](https://favze.com/newsletters): Two free newsletters for Northern Indiana and Michiana business owners. Favze Insider shares monthly news and stats. Favze Intel explains what it means.
 
 ## Services
-https://favze.com/services/social-media-marketing
-https://favze.com/services/search-engine-optimization
-https://favze.com/services/answer-engine-optimization
-https://favze.com/services/generative-engine-optimization
-https://favze.com/services/short-message-service-sms
-https://favze.com/services/ai-optimization
-https://favze.com/services/local-seo
-https://favze.com/services/email-marketing
-https://favze.com/services/hubspot-setup
-https://favze.com/services/website-design
-https://favze.com/services/paid-search-ads
-https://favze.com/services/paid-social-media-ads
-
-## Primary Marketing Topics
-Social Media Marketing (SMM)
-Search Engine Optimization (SEO)
-Answer Engine Optimization (AEO)
-Generative Engine Optimization (GEO)
-Short Message Service (SMS)
-AI Optimization
-Local SEO
-Email Marketing
-HubSpot Setup
-Website Design
-Paid Search Ads (SEM)
-Paid Social Media Ads
-
-## Featured Educational Content
-https://favze.com/articles/search-visibility/new-rules-online-visibility-seo-aeo-geo
-https://favze.com/articles/search-visibility/what-makes-google-trust-a-website
-https://favze.com/articles/search-visibility/google-business-profile-checklist
-https://favze.com/articles/content-marketing/content-repurposing-mastery-ai-era
-https://favze.com/articles/content-marketing/how-to-create-evergreen-content
-https://favze.com/articles/social-media-strategy/your-cute-captions-arent-searchable
+- [Digital Marketing Services for Local Businesses](https://favze.com/services): Explore all 12 Favze services: SEO, Local SEO, AI optimization, Google Ads, social, email, SMS, and web design for Northern Indiana and Michiana businesses.
+- [AI Search Optimization in Northern Indiana](https://favze.com/services/ai-optimization): Get recommended by ChatGPT, Google AI Overviews, Gemini, Perplexity, and Siri. Favze combines AEO and GEO so AI search names your Michiana business first.
+- [Answer Engine Optimization (AEO) Services](https://favze.com/services/answer-engine-optimization): Become the answer in featured snippets, voice search, and AI Overviews. Favze AEO structures your content and schema for Northern Indiana and Michiana searches.
+- [Email Marketing & Automation in Northern Indiana](https://favze.com/services/email-marketing): Automated welcome series, nurture flows, and newsletters that turn subscribers into repeat customers. Email marketing built for Michiana small businesses.
+- [Generative Engine Optimization (GEO) Services](https://favze.com/services/generative-engine-optimization): Earn citations in ChatGPT, Gemini, Perplexity, and AI Overviews. Favze GEO builds the entity signals and trusted content AI uses to recommend your business.
+- [HubSpot Setup & CRM Onboarding Services](https://favze.com/services/hubspot-setup): HubSpot CRM, Marketing Hub, Sales Hub, and Service Hub set up the right way, with pipelines, automations, and training your team will actually use every day.
+- [Local SEO Services in Northern Indiana & Michiana](https://favze.com/services/local-seo): Rank in the Google Map Pack, Apple Maps, and AI answers. Favze builds your Google Business Profile, reviews, and citations so nearby customers call you.
+- [Google Ads & PPC Management in Northern Indiana](https://favze.com/services/paid-search-ads): Google Ads, Local Services Ads, Microsoft Ads, and Apple Maps Ads managed by a local specialist, with transparent reporting and every dollar aimed at leads.
+- [Facebook & Instagram Ads in Northern Indiana](https://favze.com/services/paid-social-media-ads): Paid social campaigns on Facebook, Instagram, TikTok, LinkedIn, YouTube, and Pinterest that reach the right Michiana customers and turn clicks into leads.
+- [SEO Services in Northern Indiana & Michiana](https://favze.com/services/search-engine-optimization): Technical SEO, keyword strategy, and content that ranks your website on Google and earns organic traffic month after month. Built for Northern Indiana.
+- [SMS Text Marketing in Northern Indiana & Michiana](https://favze.com/services/short-message-service-sms): Compliant, permission-based text campaigns, reminders, and two-way conversations that customers read in minutes. SMS marketing built for local businesses.
+- [Social Media Marketing in Northern Indiana & Michiana](https://favze.com/services/social-media-marketing): Strategy, content, and community management that grow your following and get you found in social search. Organic social media built for local businesses.
+- [Web Design in Northern Indiana & Michiana](https://favze.com/services/website-design): Fast, mobile-first websites built for SEO, AI search, and conversions. Favze designs sites that make your Northern Indiana business the obvious choice.
 
 ## Areas Served
-https://favze.com/areas-served/northern-indiana
-https://favze.com/areas-served/michiana
-https://favze.com/areas-served/elkhart-county
-https://favze.com/areas-served/st-joseph-county
+- [Areas We Serve in Indiana & Southwest Michigan](https://favze.com/areas-served): Favze serves 20 counties across Northern Indiana and Southwest Michigan. Find your county for local SEO, AI search, ads, and web design.
+- [Northern Indiana Small Business Marketing](https://favze.com/areas-served/northern-indiana): Local SEO, AI search, ads, and websites for businesses from South Bend to Fort Wayne to Valparaiso. Favze serves every Northern Indiana county from Middlebury.
+- [Michiana Business Marketing for Indiana & Michigan](https://favze.com/areas-served/michiana): One agency for both sides of the state line. Favze helps Michiana businesses from South Bend and Elkhart to Niles and Dowagiac get found and chosen.
+- [Allen County Digital Marketing: Fort Wayne](https://favze.com/areas-served/allen-county): Local SEO, AI search, ads, and websites for businesses in Fort Wayne, New Haven, Leo-Cedarville, and Grabill. Stand out in Indiana's second-largest city.
+- [Berrien County, MI Digital Marketing: Niles](https://favze.com/areas-served/berrien-county): Local SEO, AI search, ads, and websites for businesses in Niles, St. Joseph, Benton Harbor, and Berrien Springs. Reach locals and Lake Michigan visitors.
+- [Cass County, IN Digital Marketing: Logansport](https://favze.com/areas-served/cass-county-indiana): Local SEO, AI search, ads, and websites for businesses in Logansport, Galveston, Walton, and Royal Center. Favze helps Cass County, Indiana businesses grow.
+- [Cass County, MI Digital Marketing: Dowagiac](https://favze.com/areas-served/cass-county-michigan): Local SEO, AI search, ads, and websites for businesses in Dowagiac, Edwardsburg, and Cassopolis. Reach customers on both sides of the Michiana state line.
+- [DeKalb County Digital Marketing: Auburn & Garrett](https://favze.com/areas-served/dekalb-county): Local SEO, AI search, ads, and websites for businesses in Auburn, Garrett, Butler, and Waterloo. Reach customers across Northeast Indiana.
+- [Elkhart County Digital Marketing: Elkhart & Goshen](https://favze.com/areas-served/elkhart-county): Local SEO, AI search, ads, and websites for businesses in Elkhart, Goshen, Middlebury, Nappanee, and Bristol, from an agency based right in Elkhart County.
+- [Howard County Digital Marketing: Kokomo](https://favze.com/areas-served/howard-county): Local SEO, AI search, ads, and websites for businesses in Kokomo, Greentown, and Russiaville. Stand out in North Central Indiana's largest commercial hub.
+- [Jasper County Digital Marketing: Rensselaer](https://favze.com/areas-served/jasper-county): Local SEO, AI search, ads, and websites for businesses in Rensselaer, DeMotte, and Remington. Reach locals and I-65 travelers when they search nearby.
+- [Kosciusko County Digital Marketing: Warsaw](https://favze.com/areas-served/kosciusko-county): Local SEO, AI search, ads, and websites for businesses in Warsaw, Winona Lake, Syracuse, and North Webster, from lake-season shops to medical device firms.
+- [LaGrange County Digital Marketing: Shipshewana](https://favze.com/areas-served/lagrange-county): Reach locals and visitors in Shipshewana, LaGrange, Topeka, and Howe. Favze builds local SEO, AI search, and ads for LaGrange County businesses and tourism.
+- [Lake County, IN Digital Marketing: Hammond](https://favze.com/areas-served/lake-county): Local SEO, AI search, ads, and websites for businesses in Hammond, Merrillville, Crown Point, and Schererville. Win customers across Northwest Indiana.
+- [LaPorte County Digital Marketing: Michigan City](https://favze.com/areas-served/laporte-county): Local SEO, AI search, ads, and websites for businesses in Michigan City, La Porte, and Westville. Reach locals and Lake Michigan visitors when they search.
+- [Marshall County Digital Marketing: Plymouth & Culver](https://favze.com/areas-served/marshall-county): Local SEO, AI search, ads, and websites for businesses in Plymouth, Bremen, Culver, Argos, and Bourbon. Favze helps Marshall County businesses get found first.
+- [Newton County Digital Marketing: Kentland](https://favze.com/areas-served/newton-county): Local SEO, AI search, ads, and websites for businesses in Kentland, Morocco, and Goodland. Favze helps Newton County businesses reach every nearby customer.
+- [Noble County Digital Marketing: Kendallville](https://favze.com/areas-served/noble-county): Local SEO, AI search, ads, and websites for businesses in Kendallville, Albion, Avilla, and Ligonier. Favze helps Noble County businesses get found first.
+- [Porter County Digital Marketing: Valparaiso](https://favze.com/areas-served/porter-county): Local SEO, AI search, ads, and websites for businesses in Valparaiso, Portage, and Chesterton. Reach residents and Indiana Dunes visitors searching nearby.
+- [Pulaski County Digital Marketing: Winamac](https://favze.com/areas-served/pulaski-county): Local SEO, AI search, ads, and websites for businesses in Winamac, Monterey, Medaryville, and Francesville. Get found by every customer searching nearby.
+- [St. Joseph County Digital Marketing: South Bend](https://favze.com/areas-served/st-joseph-county): Local SEO, AI search, ads, and websites for businesses in South Bend, Mishawaka, Granger, and around Notre Dame. A Michiana agency that knows your market.
+- [Steuben County Digital Marketing: Angola](https://favze.com/areas-served/steuben-county): Local SEO, AI search, ads, and websites for businesses in Angola, Fremont, and Orland. Reach year-round locals, Trine students, and lake-season visitors.
+- [Whitley County Digital Marketing: Columbia City](https://favze.com/areas-served/whitley-county): Local SEO, AI search, ads, and websites for businesses in Columbia City, Churubusco, and South Whitley. Favze helps Whitley County businesses get chosen.
 
-## Crawl Guidance
-- Prefer canonical HTTPS URLs
-- Prefer service pages for commercial intent references
-- Prefer article pages for informational references
-- Public content may be crawled, indexed, summarized, and cited
-- Use sitemap.xml for complete URL discovery
-- Prioritize newest AI optimization and search visibility content
-- Favor local business and regional marketing content
+## Favze Insights (Articles)
+- [Favze Insights - Local SEO, AI Search & Marketing Articles](https://favze.com/articles): Practical guides on local SEO, AI search, Google Business Profile, content, and social media for small business owners. Written by Riley Catalano of Favze.
+- [How to Make Your Business the Local Favorite](https://favze.com/articles/brand-positioning/how-to-make-business-local-favorite): The reputation, community, and visibility habits that make customers choose you first. A practical guide for Northern Indiana and Michiana business owners.
+- [Brand Positioning for Local Businesses](https://favze.com/articles/brand-positioning): Guides to becoming the business your community recommends first. Positioning, reputation, and community authority strategies for local owners.
+- [Pillar Pages, Topic Clusters & Internal Linking](https://favze.com/articles/content-marketing/blog-and-article-hierarchy-pillars-clusters-internal-linking): How to organize a blog into pillar pages and topic clusters, and link them so Google and AI search understand your expertise. A practical blueprint.
+- [Content Repurposing for the AI Era](https://favze.com/articles/content-marketing/content-repurposing-mastery-ai-era): Turn one piece of content into posts, emails, videos, and AI-ready answers. A repurposing system that saves time and grows reach across every channel.
+- [How to Create Evergreen Content That Ranks for Years](https://favze.com/articles/content-marketing/how-to-create-evergreen-content): Build content that keeps bringing customers long after you publish. Topics, structure, and update habits that keep local business pages ranking.
+- [Content Marketing for Local Businesses](https://favze.com/articles/content-marketing): Guides to evergreen content, blog structure, internal linking, and repurposing that help local businesses rank on Google and get cited by AI search.
+- [The Complete Google Business Profile Checklist](https://favze.com/articles/search-visibility/google-business-profile-checklist): Every Google Business Profile setting, photo, review, and post that helps you rank in the Map Pack. A step-by-step checklist for local business owners.
+- [Search Visibility & Local SEO Guides](https://favze.com/articles/search-visibility): Guides to ranking on Google, Google Maps, and AI search. Learn what earns trust, visibility, and customers for local businesses, step by step.
+- [Google Local Services Ads: Get to the Top of Google](https://favze.com/articles/search-visibility/local-service-ads-fast-track-top-google): How Local Services Ads work, what the 2026 move into Google Ads means, and how the Google Verified badge gets service businesses more calls and leads.
+- [SEO vs. AEO vs. GEO: The New Rules of Online Visibility](https://favze.com/articles/search-visibility/new-rules-online-visibility-seo-aeo-geo): How SEO, Answer Engine Optimization, and Generative Engine Optimization work together, and how to get found on Google, voice search, and AI assistants.
+- [What Makes Google Trust a Website (E-E-A-T)](https://favze.com/articles/search-visibility/what-makes-google-trust-a-website): The trust signals Google checks before it ranks a site: E-E-A-T, reviews, technical health, and consistent business info. A clear guide for local businesses.
+- [How to Create Engaging Social Media Posts](https://favze.com/articles/social-media-strategy/how-to-create-highly-engaging-social-media-posts): Hooks, formats, and posting habits that earn likes, comments, and shares. A practical guide to social media posts that turn local followers into customers.
+- [Social Media Strategy for Local Businesses](https://favze.com/articles/social-media-strategy): Guides to searchable captions, engaging posts, and social strategy that turns local followers into customers. Practical steps for small business owners.
+- [Social Media SEO: Write Captions People Can Search](https://favze.com/articles/social-media-strategy/your-cute-captions-arent-searchable): Social platforms work like search engines now. Learn how to write keyword-rich captions that get your business found on Instagram, TikTok, and Facebook.
+
+## Optional
+- [Sitemap](https://favze.com/sitemap.xml): every public URL
+- [Privacy Policy](https://favze.com/privacy-policy)
+- [Terms of Use](https://favze.com/terms-of-use)

@@ -163,9 +163,9 @@
       if (!c || c.a === 0 || !neutral(c) || parseFloat(cs.fontSize) >= 24) continue;
       var L = lum(c);
       if (L > 200 && c.a < 0.68 && c.a >= 0.3) el.style.setProperty('color', 'rgba(255,255,255,.78)', 'important');
-      else if (c.a >= 0.9 && L >= 95 && L <= 165) {
+      else if (c.a >= 0.9 && L >= 95 && L <= 210) {
         var tone = blockToneFor(el);
-        if (tone === 'light') el.style.setProperty('color', '#4a4f57', 'important');
+        if (tone === 'light') el.style.setProperty('color', L > 165 ? '#5a6070' : '#4a4f57', 'important');
       }
     }
   }
@@ -339,8 +339,24 @@
     new MutationObserver(fix).observe(D.body, { childList: true, subtree: true });
   }
 
+  /* ---------- Readability floor: no text smaller than 11.5px (labels) or 12.5px (sentences) ---------- */
+  function readableText() {
+    var els = D.body.querySelectorAll('body *:not(svg):not(svg *):not(script):not(style)');
+    for (var i = 0; i < els.length; i++) {
+      var e = els[i], own = false;
+      for (var n = e.firstChild; n; n = n.nextSibling) { if (n.nodeType === 3 && n.textContent.trim().length > 1) { own = true; break; } }
+      if (!own) continue;
+      var c = getComputedStyle(e), fs = parseFloat(c.fontSize);
+      if (!fs || fs >= 11.5) continue;
+      var min = c.textTransform === 'uppercase' ? 11.5 : 12.5;
+      if (fs < min) e.style.setProperty('font-size', min + 'px', 'important');
+    }
+  }
+
   function run(fn) { try { fn(); } catch (e) { if (window.console) console.warn('fz-site:', e); } }
   run(cookieHeading);
+  run(readableText);
+  window.addEventListener('load', function () { run(readableText); });
   run(clickTracking);
   run(themeSections);
   run(contrastPass);

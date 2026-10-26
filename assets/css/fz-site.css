@@ -504,3 +504,31 @@ html body #stcm-modal h2.stcm-title,html body #stcm-modal h2.stcm-title *{font-f
   html body h2 *:not(#fz-none){font-size:1em!important}
   html body #stcm-modal h2.stcm-title:not(#fz-none){font-size:20px!important;line-height:1.3!important}
 }
+
+/* ---- Related guides (service and area pages) ---- */
+html body .fz-related{background:#fff;padding:80px 5%}
+.fz-related-inner{max-width:1160px;margin:0 auto}
+html body .fz-related-eyebrow{font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#0A89A3;margin:0 0 12px}
+html body .fz-related h2{font-weight:900;font-size:clamp(2rem,3.6vw,2.8rem);line-height:.95;text-transform:uppercase;color:#0a0a0a;margin:0 0 30px}
+.fz-related-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+html body .fz-related-card{display:flex;flex-direction:column;gap:10px;background:#f4f5f7;border:1px solid rgba(0,0,0,.06);border-radius:22px;padding:24px 24px 22px;text-decoration:none!important;color:#0a0a0a!important;transition:transform .2s,box-shadow .2s,background .2s}
+html body .fz-related-card:hover,html body .fz-related-card:focus-visible{transform:translateY(-3px);background:#fff;box-shadow:0 16px 36px rgba(10,20,40,.09)}
+html body .fz-related-tag{font-size:.74rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#0A89A3}
+html body .fz-related-title{font-size:1.12rem;font-weight:700;line-height:1.35;color:#0a0a0a;flex:1}
+html body .fz-related-more{display:inline-flex;align-items:center;gap:6px;font-size:.9rem;font-weight:700;color:#064187}
+html body .fz-related-alt{margin:26px 0 0;font-size:15.5px;line-height:1.7;color:#3d4148}
+html body .fz-related-alt a{color:#064187;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:900px){.fz-related-grid{grid-template-columns:1fr}html body .fz-related{padding:60px 5%}}
+
+/* ---- Keep reading (articles) ---- */
+html body .fz-keep{margin:40px 0 0;padding:28px 28px 22px;background:#f4f5f7;border-radius:22px}
+html body .fz-keep-title{font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#0A89A3;margin:0 0 14px}
+html body .fz-keep ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+html body .fz-keep li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 14px;padding:0 0 12px;border-bottom:1px solid rgba(0,0,0,.08)}
+html body .fz-keep li::before{display:none!important}
+html body .fz-keep li a{font-size:1.02rem;font-weight:700;color:#064187;text-decoration:none}
+html body .fz-keep li a:hover{text-decoration:underline;text-underline-offset:3px}
+html body .fz-keep li span{font-size:.8rem;font-weight:600;color:#5a6070}
+html body .fz-keep-alt{margin:14px 0 0;font-size:15px;line-height:1.7;color:#3d4148}
+html body .fz-keep-alt a{color:#064187;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+html body .art-card-pill{font-size:11.5px!important}
