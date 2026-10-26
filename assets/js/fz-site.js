@@ -46,8 +46,16 @@
   function isIsland(el, cs) {
     var bg = parse(cs.backgroundColor);
     if (bg && bg.a >= 0.85 && (lum(bg) < 110 || !neutral(bg))) return true;
-    if (cs.backgroundImage && cs.backgroundImage !== 'none' && /gradient|url/.test(cs.backgroundImage) && el.textContent.trim()) return true;
+    if (cs.backgroundImage && cs.backgroundImage !== 'none' && /gradient|url/.test(cs.backgroundImage) && el.textContent.trim() && !softGradient(cs.backgroundImage)) return true;
     return false;
+  }
+  /* A gradient made only of see-through colors is a tint, not a dark panel: its text gets recolored with the section */
+  function softGradient(bi) {
+    if (!/gradient/.test(bi) || /url\(/.test(bi)) return false;
+    var cols = bi.match(/rgba?\([^)]*\)/g);
+    if (!cols || !cols.length) return false;
+    for (var i = 0; i < cols.length; i++) { var c = parse(cols[i]); if (!c || c.a >= 0.5) return false; }
+    return true;
   }
   function lightenNode(el, tone) {
     var cs = getComputedStyle(el);

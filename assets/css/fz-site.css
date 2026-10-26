@@ -540,3 +540,21 @@ html body .art-card-pill{font-size:11.5px!important}
 }
 /* Room at the very bottom so the cookie button never covers the legal links */
 @media(max-width:768px){html body footer.ft-std .fb-bot{padding-bottom:84px!important}}
+
+/* ---- Hero stats on phones: one tidy row per stat, number left, label right ---- */
+@media(max-width:600px){
+  html body .hero-stats{display:grid!important;grid-template-columns:1fr!important;gap:16px!important;flex-direction:initial!important}
+  html body .hero-stats > div{display:grid!important;grid-template-columns:92px minmax(0,1fr);align-items:center;column-gap:16px}
+  html body .hero-stats :is(.hstat-num,.hs-num){margin:0!important;line-height:1!important}
+  html body .hero-stats :is(.hstat-label,.hs-lbl){margin:0!important}
+}
+
+/* ---- Results numbers on the navy band: brighter teal for contrast, no mid-word breaks ---- */
+html body .results-section .result-num{color:#7fd8ea!important;white-space:nowrap}
+@media(max-width:600px){html body .results-section .result-num{font-size:clamp(2rem,10vw,2.6rem)!important}}
+
+/* ---- Platform cards on phones: the status pill drops to its own line ---- */
+@media(max-width:600px){
+  html body .plat-header{flex-wrap:wrap!important;row-gap:12px}
+  html body .plat-header > div[style*="margin-left:auto"]{margin-left:0!important;flex-basis:100%}
+}
