@@ -412,3 +412,11 @@ html.fz-still .fz-glow-l{display:none}
 @media(max-width:1024px){.fz-split{grid-template-columns:1fr;gap:36px}.fz-split-vis{justify-content:flex-start}}
 @media(max-width:768px){.fz-split-vis{display:none}}
 .fz-split-vis .browser-mockup{max-width:440px;width:100%}
+
+/* Hero stats: one row on phones */
+@media(max-width:768px){
+  html body .hero-stats{display:grid!important;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);grid-template-columns:none!important;flex-direction:initial!important;gap:12px!important;align-items:start}
+  html body .hero-stats>div{display:flex!important;flex-direction:column!important;align-items:flex-start!important;gap:6px!important;min-width:0}
+  html body .hero-stats .hstat-num,html body .hero-stats .hs-num{font-size:clamp(1.55rem,7.4vw,2.1rem)!important;line-height:1!important;white-space:nowrap;margin:0!important}
+  html body .hero-stats .hstat-label,html body .hero-stats .hs-lbl{font-size:12.5px!important;line-height:1.4!important;margin:0!important}
+}

@@ -58,7 +58,8 @@
   function load() {
     if (data) return Promise.resolve(data);
     if (loading) return loading;
-    loading = fetch(INDEX_URL, { cache: 'force-cache' }).then(function (r) { return r.json(); }).then(function (j) { j.forEach(prep); data = j; return j; });
+    loading = fetch(INDEX_URL, { cache: 'force-cache' }).then(function (r) { if (!r.ok) throw new Error('index ' + r.status); return r.json(); }).then(function (j) { j.forEach(prep); data = j; return j; })
+      .catch(function () { loading = null; return null; });
     return loading;
   }
 
@@ -125,7 +126,7 @@
   function build() {
     dlg = D.createElement('div');
     dlg.className = 'fz-search'; dlg.id = 'fzSearch';
-    dlg.setAttribute('role', 'dialog'); dlg.setAttribute('aria-modal', 'true'); dlg.setAttribute('aria-labelledby', 'fzSearchTitle'); dlg.hidden = true;
+    dlg.setAttribute('data-nosnippet', ''); dlg.setAttribute('role', 'dialog'); dlg.setAttribute('aria-modal', 'true'); dlg.setAttribute('aria-labelledby', 'fzSearchTitle'); dlg.hidden = true;
     dlg.innerHTML =
       '<div class="fz-search-backdrop" data-close></div>' +
       '<div class="fz-search-panel">' +
@@ -191,7 +192,7 @@
   function render() {
     var q = input.value.trim(); lastQ = q;
     if (!q) { quick(); return; }
-    if (!data) { status.textContent = 'Loading search...'; load().then(render); return; }
+    if (!data) { status.textContent = 'Loading search...'; load().then(function (d) { if (d) render(); else status.textContent = 'Search is reconnecting. Try again in a moment.'; }); return; }
     var r = search(q, mode);
     status.textContent = r.length ? r.length + (r.length === 1 ? ' result' : ' results') + ' for “' + q + '”' : 'No matches for “' + q + '”. Try Broad, fewer words, or ask Riley directly.';
     list.innerHTML = r.length ? r.map(function (x, i) {
@@ -253,5 +254,5 @@
     if ((e.key === 'k' || e.key === 'K') && (e.metaKey || e.ctrlKey)) { e.preventDefault(); open(); }
     else if (e.key === '/' && !typing) { e.preventDefault(); open(); }
   });
-  window.fzSearch = { open: open, close: close, _search: function (q, m) { return load().then(function () { return search(q, m || 'broad').map(function (r) { return [r.p.t, r.type, Math.round(r.s)]; }); }); } };
+  window.fzSearch = { open: open, close: close, _search: function (q, m) { return load().then(function (d) { if (!d) return []; return search(q, m || 'broad').map(function (r) { return [r.p.t, r.type, Math.round(r.s)]; }); }); } };
 })();

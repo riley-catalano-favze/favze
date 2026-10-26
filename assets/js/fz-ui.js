@@ -240,6 +240,7 @@
     return ({ 'answer-engine-optimization': 'answer', 'generative-engine-optimization': 'ai', 'ai-optimization': 'ai', 'local-seo': 'map', 'search-engine-optimization': 'rank', 'email-marketing': 'inbox', 'short-message-service-sms': 'sms', 'social-media-marketing': 'social', 'paid-social-media-ads': 'ad', 'paid-search-ads': 'ad', 'website-design': 'devices', 'hubspot-setup': 'pipeline' })[page] || 'spark';
   }
   function minis() {
+    if (window.fzDemos) return;
     if (!/\/services\/[a-z-]+(\.html)?$/.test(location.pathname)) return;
     var cards = D.querySelectorAll('main .svc-card, main .svc-detail-card, main .service-row, main .why-ai-card, main .exp-card, main .surf-detail-card, main .plat-detail-card');
     var used = {};
@@ -301,6 +302,9 @@
     ask: { mode: 'sway', d: 'M50 6c24 0 44 16.5 44 37S74 80 50 80c-5 0-10-.7-14.5-2L12 92l7-21C11 63.5 6 53.6 6 43 6 22.5 26 6 50 6z', fx: '<path d="M38 33c0-7 5.5-12 12.5-12S63 26 63 32.5c0 9-12 9.5-12 18.5" stroke="#fff" stroke-width="6.5" fill="none" stroke-linecap="round"/><circle cx="51" cy="62" r="4.6" fill="#fff"/>' },
     spark: { mode: 'spin', d: 'M50 2C53 33 67 47 98 50 67 53 53 67 50 98 47 67 33 53 2 50 33 47 47 33 50 2z', fx: '<path d="M84 8c1 6 4 9 10 10-6 1-9 4-10 10-1-6-4-9-10-10 6-1 9-4 10-10z" fill="#fff"/>', both: 1 },
     funnel: { mode: 'sway', d: 'M6 10h88L60 50v32L40 94V50z', fx: '<circle class="fz-tdot" cx="32" cy="22" r="5" fill="#fff"/><circle class="fz-tdot" cx="50" cy="22" r="5" fill="#fff"/><circle class="fz-tdot" cx="68" cy="22" r="5" fill="#fff"/><path d="M50 58v20" stroke="#fff" stroke-width="5" stroke-linecap="round"/>' },
+    book: { mode: 'sway', d: 'M50 22C40 14 24 12 8 14v66c16-2 32 1 42 9 10-8 26-11 42-9V14C76 12 60 14 50 22z', fx: '<path d="M50 22v66" stroke="#fff" stroke-width="2.5"/><path d="M17 31h24M17 41h24M17 51h18M59 31h24M59 41h24M59 51h18" stroke="#fff" stroke-width="3.2" stroke-linecap="round" opacity=".9"/>' },
+    calc: { mode: 'sway', d: 'M24 4h52a9 9 0 0 1 9 9v74a9 9 0 0 1-9 9H24a9 9 0 0 1-9-9V13a9 9 0 0 1 9-9z', fx: '<rect x="24" y="13" width="52" height="20" rx="5" fill="#fff"/><path d="M58 23h12M64 17v12" stroke="#0A89A3" stroke-width="3" stroke-linecap="round"/>' + [0, 1, 2].map(function (r) { return [0, 1, 2].map(function (c) { return '<rect x="' + (24 + c * 18) + '" y="' + (42 + r * 16) + '" width="14" height="11" rx="3" fill="#fff" opacity="' + (c === 2 && r === 2 ? 1 : .85) + '"/>'; }).join(''); }).join('') },
+    chip: { mode: 'spin', d: 'M30 20h40a10 10 0 0 1 10 10v40a10 10 0 0 1-10 10H30a10 10 0 0 1-10-10V30a10 10 0 0 1 10-10zM34 6h6v12h-6zM47 6h6v12h-6zM60 6h6v12h-6zM34 82h6v12h-6zM47 82h6v12h-6zM60 82h6v12h-6zM6 34h12v6H6zM6 47h12v6H6zM6 60h12v6H6zM82 34h12v6H82zM82 47h12v6H82zM82 60h12v6H82z', fx: '<rect x="32" y="32" width="36" height="36" rx="6" fill="none" stroke="#fff" stroke-width="3"/><path d="M50 38c1.6 7 5 10.4 12 12-7 1.6-10.4 5-12 12-1.6-7-5-10.4-12-12 7-1.6 10.4-5 12-12z" fill="#fff"/>', both: 1 },
     target: { mode: 'sway', build: 'rings' },
     atom: { mode: 'spin', build: 'atom' },
     cube: { mode: 'cube', build: 'cube' },
@@ -309,7 +313,7 @@
   };
   var TOY_PAGE = { 'local-seo': 'pin', 'search-engine-optimization': 'bars', 'email-marketing': 'mail', 'short-message-service-sms': 'sms',
     'social-media-marketing': 'heart', 'paid-search-ads': 'glass', 'answer-engine-optimization': 'ask', 'generative-engine-optimization': 'spark',
-    'hubspot-setup': 'funnel', 'paid-social-media-ads': 'target', 'ai-optimization': 'atom', 'services': 'cube', 'website-design': 'site', 'about': 'photo' };
+    'hubspot-setup': 'funnel', 'paid-social-media-ads': 'target', 'ai-optimization': 'atom', 'services': 'cube', 'website-design': 'site', 'about': 'photo', 'marketing-glossary': 'book', 'marketing-kpis-glossary': 'calc', 'ai-glossary': 'chip' };
   function el(tag, cls, css) { var e = D.createElement(tag); if (cls) e.className = cls; if (css) e.style.cssText = css; return e; }
   function gradDefs() {
     if (D.getElementById('fzToyDefs')) return;
@@ -381,7 +385,7 @@
     var h1 = D.querySelector('main h1');
     if (!host && !h1) return;
     var t = TOY[key]; gradDefs();
-    var toy = el('span', 'fz-toy'); toy.setAttribute('aria-hidden', 'true'); toy.dataset.mode = t.mode; toy.dataset.toy = key;
+    var toy = el('span', 'fz-toy'); toy.setAttribute('aria-hidden', 'true'); toy.setAttribute('data-nosnippet', ''); toy.dataset.mode = t.mode; toy.dataset.toy = key;
     var sc = el('span', 'fz-toy-sc'), tilt = el('span', 'fz-toy-tilt'), bob = el('span', 'fz-toy-bob'), rot = el('span', 'fz-toy-rot');
     bob.appendChild(rot); tilt.appendChild(bob); sc.appendChild(tilt); toy.appendChild(sc);
     if (t.ripple) { sc.appendChild(el('span', 'fz-ripple')); sc.appendChild(el('span', 'fz-ripple')); }
@@ -477,10 +481,10 @@
   function chat() {
     if (D.querySelector('.fz-chat-launch')) return;
     var launch = D.createElement('button');
-    launch.type = 'button'; launch.className = 'fz-chat-launch'; launch.setAttribute('aria-haspopup', 'dialog'); launch.setAttribute('aria-label', 'Open the Favze chat assistant');
+    launch.type = 'button'; launch.className = 'fz-chat-launch'; launch.setAttribute('data-nosnippet', ''); launch.setAttribute('aria-haspopup', 'dialog'); launch.setAttribute('aria-label', 'Open the Favze chat assistant');
     launch.innerHTML = '<span class="fz-av" aria-hidden="true"><img src="https://favze.com/assets/img/riley-avatar.webp" alt="" width="64" height="64" loading="lazy" decoding="async"></span><span class="fz-dotlive" aria-hidden="true"></span><span class="fz-chat-lbl">Questions? Tap to chat</span>';
     var box = D.createElement('div');
-    box.className = 'fz-chat'; box.setAttribute('role', 'dialog'); box.setAttribute('aria-modal', 'true'); box.setAttribute('aria-label', 'Favze chat assistant'); box.hidden = true;
+    box.className = 'fz-chat'; box.setAttribute('data-nosnippet', ''); box.setAttribute('role', 'dialog'); box.setAttribute('aria-modal', 'true'); box.setAttribute('aria-label', 'Favze chat assistant'); box.hidden = true;
     box.innerHTML = '<div class="fz-chat-head"><span class="fz-av" aria-hidden="true"><img src="https://favze.com/assets/img/riley-avatar.webp" alt="" width="64" height="64" loading="lazy" decoding="async"></span><div><b>Favze</b><small>Tap an answer. Riley follows up personally.</small></div><button type="button" class="fz-chat-x" aria-label="Close chat">&times;</button></div>' +
       '<div class="fz-chat-log" role="log" aria-live="polite"></div><div class="fz-chat-opts"></div><p class="fz-chat-note">This assistant uses set answers. To reach a person, call or text 574-747-5012.</p>';
     D.body.appendChild(launch); D.body.appendChild(box);

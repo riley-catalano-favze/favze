@@ -30,6 +30,11 @@ Favze Digital Marketing (Favze, LLC) is based in Middlebury, Indiana, and serves
 - [Social Media Marketing in Northern Indiana & Michiana](https://favze.com/services/social-media-marketing): Strategy, content, and community management that grow your following and get you found in social search. Organic social media built for local businesses.
 - [Web Design in Northern Indiana & Michiana](https://favze.com/services/website-design): Fast, mobile-first websites built for SEO, AI search, and conversions. Favze designs sites that make your Northern Indiana business the obvious choice.
 
+## Glossaries
+- [Marketing Glossary: Local Marketing Terms Explained](https://favze.com/marketing-glossary): Plain-English definitions of marketing, local SEO, advertising, AI search, and AI marketing terms, each with a Northern Indiana or Michiana example.
+- [Marketing KPIs Glossary: Metrics, Formulas & Examples](https://favze.com/marketing-kpis-glossary): Marketing KPIs and metrics with formulas and worked examples, including CTR, conversion rate, cost per lead, CAC, ROAS, ROI, customer lifetime value, and retention rate.
+- [AI Glossary for Business Owners](https://favze.com/ai-glossary): AI and automation terms explained in plain English, including generative AI, LLMs, prompts, AI agents, workflow automation, API integrations, RPA, human-in-the-loop, and responsible AI.
+
 ## Areas Served
 - [Areas We Serve in Indiana & Southwest Michigan](https://favze.com/areas-served): Favze serves 20 counties across Northern Indiana and Southwest Michigan. Find your county for local SEO, AI search, ads, and web design.
 - [Northern Indiana Small Business Marketing](https://favze.com/areas-served/northern-indiana): Local SEO, AI search, ads, and websites for businesses from South Bend to Fort Wayne to Valparaiso. Favze serves every Northern Indiana county from Middlebury.

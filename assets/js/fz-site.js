@@ -19,7 +19,7 @@
   }
 
   /* ---------- Section backgrounds: white / grey / black rhythm on dark-heavy pages ---------- */
-  var SKIP_BLOCK = 'nav,footer,script,style,noscript,link,template,.mm,.fz-mbar,#stcm-wrapper,.fz-form-sec,.fz-dot,.fz-ring,.fz-blk,.fz-philo,.fz-areas,.fz-related,.fz-sidenav,.fz-chat,.fz-chat-launch';
+  var SKIP_BLOCK = '.fzd,nav,footer,script,style,noscript,link,template,.mm,.fz-mbar,#stcm-wrapper,.fz-form-sec,.fz-dot,.fz-ring,.fz-blk,.fz-philo,.fz-areas,.fz-related,.fz-sidenav,.fz-chat,.fz-chat-launch';
   function blockTone(el) {
     for (var e = el; e && e !== D.documentElement; e = e.parentElement) {
       var cs = getComputedStyle(e);
@@ -58,6 +58,7 @@
     return true;
   }
   function lightenNode(el, tone) {
+    if (el.classList && el.classList.contains('fzd')) return false;
     var cs = getComputedStyle(el);
     if (cs.backgroundImage && cs.backgroundImage !== 'none' && !el.textContent.trim() && (cs.position === 'absolute' || cs.position === 'fixed')) {
       el.style.setProperty('opacity', '0', 'important');
@@ -104,7 +105,7 @@
       new MutationObserver(function (muts) {
         muts.forEach(function (m) {
           [].forEach.call(m.addedNodes, function (n) {
-            if (n.nodeType === 1) (function walk(el) {
+            if (n.nodeType === 1 && !(n.closest && n.closest('.fzd'))) (function walk(el) {
               if (!lightenNode.call(block, el, tone)) return;
               for (var k = el.firstElementChild; k; k = k.nextElementSibling) walk(k);
             })(n);
@@ -443,7 +444,7 @@
     var els = D.body.querySelectorAll('body *:not(script):not(style):not(svg):not(svg *)');
     for (var i = 0; i < els.length; i++) {
       var el = els[i];
-      if (!ownText(el) || el.closest('#stcm-wrapper,.fz-mbar,.fz-skip')) continue;
+      if (!ownText(el) || el.closest('#stcm-wrapper,.fz-mbar,.fz-skip,.fzd')) continue;
       var cs = getComputedStyle(el);
       var fg = parse(cs.color); if (!fg || fg.a === 0) continue;
       var bg = effectiveBg(el); if (!bg) continue;
@@ -519,7 +520,7 @@
   (function watchNew() {
     var m = D.querySelector('main'); if (!m || !window.MutationObserver) return;
     var t = null;
-    new MutationObserver(function () { clearTimeout(t); t = setTimeout(function () { run(readableText); run(wcagContrast); run(inlineLinks); }, 250); })
+    new MutationObserver(function (ms) { if (ms.every(function (x) { var n = x.target.nodeType === 1 ? x.target : x.target.parentNode; return n && n.closest && n.closest('.fzd'); })) return; clearTimeout(t); t = setTimeout(function () { run(readableText); run(wcagContrast); run(inlineLinks); }, 250); })
       .observe(m, { childList: true, subtree: true });
   })();
   run(buildRails);
