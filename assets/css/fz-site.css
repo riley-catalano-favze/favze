@@ -550,7 +550,7 @@ html body .art-card-pill{font-size:11.5px!important}
 }
 
 /* ---- Results numbers on the navy band: brighter teal for contrast, no mid-word breaks ---- */
-html body .results-section .result-num{color:#7fd8ea!important;white-space:nowrap}
+html body .results-section .result-num{white-space:nowrap}
 @media(max-width:600px){html body .results-section .result-num{font-size:clamp(2rem,10vw,2.6rem)!important}}
 
 /* ---- Platform cards on phones: the status pill drops to its own line ---- */
@@ -558,3 +558,78 @@ html body .results-section .result-num{color:#7fd8ea!important;white-space:nowra
   html body .plat-header{flex-wrap:wrap!important;row-gap:12px}
   html body .plat-header > div[style*="margin-left:auto"]{margin-left:0!important;flex-basis:100%}
 }
+
+/* ---- Accessibility: skip link, focus, reduced motion ---- */
+.fz-skip{position:absolute;left:12px;top:-200px;z-index:2147483647;background:#064187;color:#fff!important;font-weight:700;font-size:16px;padding:12px 20px;border-radius:999px;text-decoration:none}
+.fz-skip:focus,.fz-skip:focus-visible{top:12px;outline:3px solid #0A89A3;outline-offset:2px}
+main#main:focus{outline:none}
+html body a:focus-visible,html body button:focus-visible,html body [tabindex]:focus-visible,html body summary:focus-visible,html body input:focus-visible,html body select:focus-visible,html body textarea:focus-visible{outline:3px solid #0A89A3!important;outline-offset:2px}
+@media(prefers-reduced-motion:reduce){html body *,html body *::before,html body *::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+html.fz-still body *,html.fz-still body *::before,html.fz-still body *::after{animation-play-state:paused!important}
+footer.ft-std .fz-motion{background:none;border:0;padding:0;font:inherit;font-size:.8rem;color:rgba(255,255,255,.72);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+footer.ft-std .fz-motion:hover{color:#fff}
+html body footer.ft-std .fb-bot p{color:rgba(255,255,255,.66)!important}
+html body footer.ft-std .fb-bot a{color:rgba(255,255,255,.72)!important}
+
+/* Decorative numbers drawn by CSS (not read as content) */
+.fz-wm::before{content:attr(data-fz-wm)}
+/* Links inside sentences are underlined so they never rely on color alone */
+html body :is(main :is(p,li,dd,td,figcaption,blockquote,label),footer .fb-desc,footer p) a:not([class*="btn"]):not([class*="cta"]):not([class*="pill"]):not([class*="tag"]):not([class*="chip"]):not([class*="card"]):not([class*="fz-icon"]){text-decoration:underline!important;text-decoration-thickness:1px!important;text-underline-offset:3px!important}
+html body .gc-reg a{display:inline-block;padding:5px 0;min-height:24px}
+html body footer.ft-std .ft-track-set a{color:#e3e5e9!important}
+html.fz-boot body *,html.fz-boot body *::before,html.fz-boot body *::after{transition:none!important}
+
+/* ---- Sitewide search ---- */
+html.fz-search-open{overflow:hidden}
+.fz-search[hidden]{display:none}
+.fz-search{position:fixed;inset:0;z-index:2147483600;display:flex;align-items:flex-start;justify-content:center;padding:clamp(12px,8vh,96px) 16px 16px}
+.fz-search-backdrop{position:absolute;inset:0;background:rgba(6,20,40,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);opacity:0;transition:opacity .16s}
+.fz-search-panel{position:relative;width:min(720px,100%);max-height:min(78vh,760px);display:flex;flex-direction:column;background:#fff;border-radius:28px;box-shadow:0 30px 80px rgba(6,20,40,.35);overflow:hidden;transform:translateY(-10px) scale(.985);opacity:0;transition:transform .18s ease,opacity .16s}
+.fz-search.is-open .fz-search-backdrop{opacity:1}
+.fz-search.is-open .fz-search-panel{transform:none;opacity:1}
+.fz-search-head{padding:18px 18px 12px;border-bottom:1px solid rgba(0,0,0,.07)}
+html body .fz-search-title{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.fz-search-box{display:flex;align-items:center;gap:10px;background:#f3f4f6;border-radius:999px;padding:0 8px 0 18px;color:#064187}
+.fz-search-box input{flex:1;min-width:0;border:0;background:transparent;font:500 17px/1.2 'DM Sans',sans-serif;color:#0a0a0a;padding:15px 0;outline:none}
+.fz-search-box input::-webkit-search-cancel-button{display:none}
+.fz-search-box:focus-within{box-shadow:0 0 0 3px rgba(6,65,135,.25)}
+.fz-search-close{border:0;background:#fff;color:#3d4148;font:700 12px 'DM Sans',sans-serif;padding:8px 12px;border-radius:999px;cursor:pointer;min-height:32px}
+.fz-search-modes{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:12px}
+.fz-search-modes button{border:1.5px solid rgba(6,65,135,.2);background:#fff;color:#064187;font:700 13px 'DM Sans',sans-serif;padding:7px 14px;border-radius:999px;cursor:pointer;min-height:34px;transition:background .15s,color .15s}
+.fz-search-modes button[aria-checked="true"]{background:linear-gradient(135deg,#064187,#0A89A3);border-color:transparent;color:#fff}
+.fz-search-help{flex-basis:100%;font-size:13px;color:#4a4f57;line-height:1.5;margin-top:2px}
+.fz-search-status{margin:0;padding:12px 22px 6px;font-size:13px;font-weight:700;color:#4a4f57}
+.fz-search-list{list-style:none;margin:0;padding:4px 10px 14px;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+.fz-search-list li a{display:flex;flex-direction:column;gap:4px;padding:13px 14px;border-radius:18px;text-decoration:none!important;color:#0a0a0a!important;transition:background .12s}
+.fz-search-list li a:hover,.fz-search-list li.is-active a,.fz-search-list li a:focus-visible{background:#f0f5fb}
+.fz-sr-kind{display:flex;align-items:center;gap:8px;font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#064187}
+.fz-sr-kind em{font-style:normal;letter-spacing:0;text-transform:none;font-weight:600;color:#4a4f57;background:#f3f4f6;border-radius:999px;padding:2px 8px}
+.fz-sr-title{font-size:16.5px;font-weight:700;line-height:1.35}
+.fz-sr-snip{font-size:14.5px;line-height:1.55;color:#3d4148}
+.fz-sr-snip mark{background:rgba(10,137,163,.16);color:#0a0a0a;border-radius:4px;padding:0 2px}
+.fz-sr-empty{display:flex;flex-wrap:wrap;gap:8px;padding:8px}
+.fz-sr-empty a{flex-direction:row!important;background:#f3f4f6;font-weight:700}
+@media(max-width:600px){
+  .fz-search{padding:0}
+  .fz-search-panel{width:100%;max-height:100dvh;height:100dvh;border-radius:0}
+  .fz-search-help{display:none}
+}
+html body .nav-search{cursor:pointer}
+html body .fz-search-box input:focus-visible{outline:none!important}
+
+/* ---- Compact forms: same questions in a shorter window that scrolls inside itself ---- */
+html body iframe[data-tally-src*="aQjrzb"],html body iframe[src*="tally.so/embed/aQjrzb"]{height:540px!important;min-height:0!important;max-height:none!important}
+html body iframe[data-tally-src*="Gxg47Z"],html body iframe[src*="tally.so/embed/Gxg47Z"]{height:300px!important;min-height:0!important}
+@media(max-width:600px){html body iframe[data-tally-src*="aQjrzb"],html body iframe[src*="tally.so/embed/aQjrzb"]{height:480px!important}}
+.fz-form-scroll-hint{display:flex;align-items:center;justify-content:center;gap:6px;font-size:13px;font-weight:600;color:#4a4f57;margin:8px 0 4px}
+
+/* ---- One primary CTA style: Book a Free Consultation (navy to teal gradient) ---- */
+html body :is(main,nav,.mm) a[href^="https://favze.com/free-consultation"]:is([class*="btn"],[class*="cta"],.bp,.bw,.bs,.mc,.mc-mob,.pain-fix,.sp-block-link){
+  background:linear-gradient(135deg,#064187 0%,#0A89A3 100%)!important;background-size:160% 100%!important;background-position:0 0!important;
+  color:#fff!important;border:0!important;border-radius:999px!important;font-weight:700!important;text-decoration:none!important;
+  box-shadow:0 10px 24px rgba(6,65,135,.22)!important;transition:background-position .35s ease,transform .2s ease,box-shadow .2s ease!important}
+html body :is(main,nav,.mm) a[href^="https://favze.com/free-consultation"]:is([class*="btn"],[class*="cta"],.bp,.bw,.bs,.mc,.mc-mob,.pain-fix,.sp-block-link):hover{
+  background-position:100% 0!important;transform:translateY(-2px);box-shadow:0 14px 30px rgba(10,137,163,.28)!important}
+html body :is(main,nav,.mm) a[href^="https://favze.com/free-consultation"]:is([class*="btn"],[class*="cta"],.bp,.bw,.bs,.mc,.mc-mob,.pain-fix,.sp-block-link) svg{color:#fff;stroke:currentColor}
+html body nav .fz-nav-cta{white-space:nowrap!important}
+@media(min-width:1081px) and (max-width:1240px){html body nav .fz-nav-cta{font-size:13.5px!important;padding:11px 16px!important}html body nav .nl{gap:0!important}html body nav .nl>li>a,html body nav .nl>li>button{padding-left:10px!important;padding-right:10px!important}}

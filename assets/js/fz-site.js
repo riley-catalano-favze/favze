@@ -19,7 +19,7 @@
   }
 
   /* ---------- Section backgrounds: white / grey / black rhythm on dark-heavy pages ---------- */
-  var SKIP_BLOCK = 'nav,footer,script,style,noscript,link,template,.mm,.fz-mbar,#stcm-wrapper,.fz-form-sec,.fz-dot,.fz-ring';
+  var SKIP_BLOCK = 'nav,footer,script,style,noscript,link,template,.mm,.fz-mbar,#stcm-wrapper,.fz-form-sec,.fz-dot,.fz-ring,.fz-blk,.fz-philo,.fz-areas,.fz-related,.fz-sidenav,.fz-chat,.fz-chat-launch';
   function blockTone(el) {
     for (var e = el; e && e !== D.documentElement; e = e.parentElement) {
       var cs = getComputedStyle(e);
@@ -243,7 +243,7 @@
       if (reduceMotion) return;
       var last = null;
       (function tick(t) {
-        if (last !== null && !anim && !hover && Date.now() > holdUntil) {
+        if (last !== null && !anim && !hover && Date.now() > holdUntil && !H.classList.contains('fz-still')) {
           pos += Math.min(64, t - last) * 0.028; wrap(); vp.scrollLeft = pos;
         }
         last = t; requestAnimationFrame(tick);
@@ -285,6 +285,12 @@
 
   /* ---------- Tally forms ---------- */
   function loadTally() {
+    D.querySelectorAll('iframe[data-tally-src*="aQjrzb"]').forEach(function (fr) {
+      if (fr.nextElementSibling && fr.nextElementSibling.classList.contains('fz-form-scroll-hint')) return;
+      var h = D.createElement('p'); h.className = 'fz-form-scroll-hint';
+      h.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 4v16M7 9l5-5 5 5M7 15l5 5 5-5"/></svg>Scroll inside the form to see every question';
+      fr.parentNode.insertBefore(h, fr.nextSibling);
+    });
     if (!D.querySelector('iframe[data-tally-src]')) return;
     var w = 'https://tally.so/widgets/embed.js';
     var v = function () {
@@ -361,13 +367,161 @@
     }
   }
 
+  /* ---------- Pause animations control (WCAG 2.2.2): footer button, remembered per visitor ---------- */
+  function motionToggle() {
+    var KEY = 'fz-still', still = false;
+    try { still = localStorage.getItem(KEY) === '1'; } catch (e) {}
+    if (still) H.classList.add('fz-still');
+    var bot = D.querySelector('footer.ft-std .fb-bot');
+    if (!bot) return;
+    var btn = D.createElement('button');
+    btn.type = 'button'; btn.className = 'fz-motion';
+    var label = function () { var on = H.classList.contains('fz-still'); btn.textContent = on ? 'Play animations' : 'Pause animations'; btn.setAttribute('aria-pressed', on ? 'true' : 'false'); };
+    label();
+    btn.addEventListener('click', function () {
+      H.classList.toggle('fz-still');
+      try { localStorage.setItem(KEY, H.classList.contains('fz-still') ? '1' : '0'); } catch (e) {}
+      label();
+    });
+    var links = bot.querySelector('div:last-child') || bot;
+    links.appendChild(btn);
+  }
+  /* ---------- Skip link moves focus into the main content ---------- */
+  function skipLink() {
+    var a = D.querySelector('.fz-skip'); if (!a) return;
+    a.addEventListener('click', function () {
+      var t = D.getElementById((a.getAttribute('href') || '').slice(1));
+      if (t) { if (!t.hasAttribute('tabindex')) t.setAttribute('tabindex', '-1'); t.focus(); }
+    });
+  }
+
+  /* ---------- Menu button always reports open/closed to screen readers ---------- */
+  function menuState() {
+    var hb = D.getElementById('hb'), mm = D.getElementById('mm');
+    if (!hb || !mm) return;
+    hb.setAttribute('aria-controls', 'mm');
+    var sync = function () {
+      var open = mm.classList.contains('open') || mm.classList.contains('active') || mm.classList.contains('show');
+      hb.setAttribute('aria-expanded', open ? 'true' : 'false');
+      hb.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+      if (mm.hasAttribute('aria-hidden')) mm.setAttribute('aria-hidden', open ? 'false' : 'true');
+    };
+    sync();
+    if (window.MutationObserver) new MutationObserver(sync).observe(mm, { attributes: true, attributeFilter: ['class'] });
+  }
+
+  /* ---------- WCAG 2.2 AA contrast: brand colors only (navy, teal, black, white, greys) ---------- */
+  function relLum(c) {
+    var f = function (v) { v /= 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); };
+    return 0.2126 * f(c.r) + 0.7152 * f(c.g) + 0.0722 * f(c.b);
+  }
+  function ratio(a, b) { var x = relLum(a), y = relLum(b); return (Math.max(x, y) + 0.05) / (Math.min(x, y) + 0.05); }
+  function blend(top, under) { var a = top.a; return { r: top.r * a + under.r * (1 - a), g: top.g * a + under.g * (1 - a), b: top.b * a + under.b * (1 - a), a: 1 }; }
+  function effectiveBg(el) {
+    var layers = [];
+    for (var e = el; e && e.nodeType === 1; e = e.parentElement) {
+      var cs = getComputedStyle(e);
+      var bi = cs.backgroundImage;
+      if (bi && bi !== 'none') {
+        if (/url\(/.test(bi)) return null;
+        var cols = (bi.match(/rgba?\([^)]*\)/g) || []).map(parse).filter(Boolean);
+        if (cols.length) {
+          var avg = cols.reduce(function (s, c) { return { r: s.r + c.r / cols.length, g: s.g + c.g / cols.length, b: s.b + c.b / cols.length, a: s.a + c.a / cols.length }; }, { r: 0, g: 0, b: 0, a: 0 });
+          layers.push(avg); if (avg.a >= 0.95) break;
+        }
+      }
+      var c = parse(cs.backgroundColor);
+      if (c && c.a > 0) { layers.push(c); if (c.a >= 0.95) break; }
+    }
+    var base = { r: 255, g: 255, b: 255, a: 1 };
+    for (var i = layers.length - 1; i >= 0; i--) base = blend(layers[i], base);
+    return base;
+  }
+  var NAVY = { r: 6, g: 65, b: 135, a: 1 }, TEAL_LIGHT = 'rgb(127,216,234)';
+  function rgbOf(v) { var h = /^#([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})$/i.exec(v); return h ? { r: parseInt(h[1], 16), g: parseInt(h[2], 16), b: parseInt(h[3], 16), a: 1 } : parse(v); }
+  function wcagContrast() {
+    var els = D.body.querySelectorAll('body *:not(script):not(style):not(svg):not(svg *)');
+    for (var i = 0; i < els.length; i++) {
+      var el = els[i];
+      if (!ownText(el) || el.closest('#stcm-wrapper,.fz-mbar,.fz-skip')) continue;
+      var cs = getComputedStyle(el);
+      var fg = parse(cs.color); if (!fg || fg.a === 0) continue;
+      var bg = effectiveBg(el); if (!bg) continue;
+      var col = blend(fg, bg), cr = ratio(col, bg);
+      var fs = parseFloat(cs.fontSize), bold = parseInt(cs.fontWeight, 10) >= 700;
+      var large = fs >= 24 || (bold && fs >= 18.66);
+      var need = large ? 3 : 4.5;
+      if (cr >= need + 0.15) continue;
+      var txt = el.textContent.trim();
+      /* Decorative numbers (01, 02, 03 watermarks) become pure decoration, read from the page by nobody */
+      if (/^(0?\d{1,2}|[A-Z]{2,4})$/.test(txt) && !el.closest('a,button,label,[tabindex]') && (cr < 1.8 || el.getAttribute('aria-hidden') === 'true')) {
+        el.setAttribute('aria-hidden', 'true'); el.setAttribute('data-fz-wm', txt); el.classList.add('fz-wm'); el.textContent = '';
+        continue;
+      }
+      var darkBg = relLum(bg) < 0.18;
+      var ownBg = parse(cs.backgroundColor);
+      var saturated = !neutral(col);
+      var pick;
+      if (ownBg && ownBg.a >= 0.95 && !neutral(ownBg) && !darkBg && relLum(ownBg) > 0.12) {
+        /* Small white text on a teal button: the button turns navy */
+        el.style.setProperty('background-color', 'rgb(6,65,135)', 'important');
+        if (ratio(parse(cs.color), NAVY) >= need) continue;
+        pick = '#ffffff';
+      } else if (darkBg) {
+        pick = saturated ? TEAL_LIGHT : '#b8bcc4';
+        if (ratio(rgbOf(pick), bg) < need) pick = '#ffffff';
+      } else {
+        pick = saturated ? '#064187' : '#3d4148';
+        if (ratio(rgbOf(pick), bg) < need) pick = '#0a0a0a';
+      }
+      el.style.setProperty('color', pick, 'important');
+    }
+  }
+  /* Links sitting inside sentences get an underline so they never depend on color alone */
+  function inlineLinks() {
+    D.querySelectorAll('main a:not([class]), footer .fb-desc a, footer p a').forEach(function (a) {
+      var p = a.parentElement; if (!p) return;
+      var has = false;
+      for (var n = p.firstChild; n; n = n.nextSibling) if (n.nodeType === 3 && n.textContent.trim().length > 2) { has = true; break; }
+      if (has) { a.style.setProperty('text-decoration', 'underline', 'important'); a.style.setProperty('text-underline-offset', '3px', 'important'); }
+    });
+  }
+  /* Scrolling tables and comparison boxes can be reached and scrolled with a keyboard */
+  function scrollRegions() {
+    D.querySelectorAll('table, [class*="wrap"], [class*="scroll"], [class*="table"]').forEach(function (el) {
+      if (el.closest('.fz-rail,nav,footer,.mm')) return;
+      var cs = getComputedStyle(el);
+      if (!/(auto|scroll)/.test(cs.overflowX + cs.overflowY)) return;
+      if (el.scrollWidth <= el.clientWidth + 2 && el.scrollHeight <= el.clientHeight + 2) return;
+      if (el.querySelector('a,button,input,select,textarea,[tabindex]')) return;
+      el.setAttribute('tabindex', '0');
+      if (!el.hasAttribute('role')) el.setAttribute('role', 'region');
+      if (!el.hasAttribute('aria-label')) el.setAttribute('aria-label', 'Scrollable content');
+    });
+  }
+
   function run(fn) { try { fn(); } catch (e) { if (window.console) console.warn('fz-site:', e); } }
+  H.classList.add('fz-boot');
+  var unboot = function () { setTimeout(function () { H.classList.remove('fz-boot'); }, 60); };
   run(cookieHeading);
+  run(motionToggle);
+  run(skipLink);
+  run(menuState);
   run(readableText);
-  window.addEventListener('load', function () { run(readableText); });
+  window.addEventListener('load', function () { run(readableText); run(wcagContrast); run(scrollRegions); run(inlineLinks); unboot(); });
+  if (D.readyState === 'complete') unboot();
   run(clickTracking);
   run(themeSections);
   run(contrastPass);
+  run(wcagContrast);
+  run(scrollRegions);
+  run(inlineLinks);
+  (function watchNew() {
+    var m = D.querySelector('main'); if (!m || !window.MutationObserver) return;
+    var t = null;
+    new MutationObserver(function () { clearTimeout(t); t = setTimeout(function () { run(readableText); run(wcagContrast); run(inlineLinks); }, 250); })
+      .observe(m, { childList: true, subtree: true });
+  })();
   run(buildRails);
   run(cursor);
   run(loadTally);
