@@ -167,7 +167,7 @@
     var els = D.body.querySelectorAll('p,li,span,div,a,small,dd,dt,td,label');
     for (var i = 0; i < els.length; i++) {
       var el = els[i];
-      if (!ownText(el) || el.closest('.fz-lit,#stcm-wrapper,.fz-mbar,nav,.mm,.fz-own,.fz-gl-more,.fz-goals,.vis-sec,.fz-smband,.fz-nl-duo,.fz-cta-band,.fz-cluster,.rs-sec,.rs-hero,.fz-about-band,.svc-grid,.sm-wrap,.fz-org')) continue;
+      if (!ownText(el) || el.closest('.fz-lit,#stcm-wrapper,.fz-mbar,nav,.mm,.gl-letter,.fz-own,.fz-gl-more,.fz-goals,.vis-sec,.fz-smband,.fz-nl-duo,.fz-cta-band,.fz-cluster,.rs-sec,.rs-hero,.fz-about-band,.svc-grid,.sm-wrap,.fz-org')) continue;
       var cs = getComputedStyle(el), c = parse(cs.color);
       if (!c || c.a === 0 || !neutral(c) || parseFloat(cs.fontSize) >= 24) continue;
       var L = lum(c);
@@ -355,18 +355,48 @@
     new MutationObserver(fix).observe(D.body, { childList: true, subtree: true });
   }
 
-  /* ---------- Readability floor: no text smaller than 11.5px (labels) or 12.5px (sentences) ---------- */
-  function readableText() {
-    var els = D.body.querySelectorAll('body *:not(svg):not(svg *):not(script):not(style)');
+  /* ---------- Work splitter: check the first two screens before paint, the rest when the browser is idle ---------- */
+  var FOLLOW = 4; /* Node.DOCUMENT_POSITION_FOLLOWING */
+  function cutoffNode() {
+    var m = D.querySelector('main'); if (!m) return null;
+    var lim = (window.innerHeight || 800) * 2, kids = m.children;
+    for (var i = 0; i < kids.length; i++) if (kids[i].getBoundingClientRect().top > lim) return kids[i];
+    return D.querySelector('footer');
+  }
+  var idle = window.requestIdleCallback ? function (f) { window.requestIdleCallback(f, { timeout: 700 }); } : function (f) { setTimeout(f, 16); };
+  function eachSplit(els, seen, fn, before, after) {
+    var cut = cutoffNode(), now = [], rest = [];
     for (var i = 0; i < els.length; i++) {
-      var e = els[i], own = false;
-      for (var n = e.firstChild; n; n = n.nextSibling) { if (n.nodeType === 3 && n.textContent.trim().length > 1) { own = true; break; } }
-      if (!own) continue;
-      var c = getComputedStyle(e), fs = parseFloat(c.fontSize);
-      if (!fs || fs >= 11.5) continue;
-      var min = c.textTransform === 'uppercase' ? 11.5 : 12.5;
-      if (fs < min) e.style.setProperty('font-size', min + 'px', 'important');
+      var e = els[i];
+      if (seen) { if (seen.has(e)) continue; seen.add(e); }
+      if (cut && rest.length === 0 && e !== cut && !(cut.compareDocumentPosition(e) & FOLLOW)) now.push(e);
+      else if (cut) rest.push(e); else now.push(e);
     }
+    if (before) before(); try { now.forEach(fn); } finally { if (after) after(); }
+    if (!rest.length) return;
+    var k = 0;
+    (function step() {
+      var t = performance.now();
+      if (before) before();
+      try { while (k < rest.length && performance.now() - t < 12) fn(rest[k++]); } catch (err) { if (window.console) console.warn('fz-site:', err); }
+      finally { if (after) after(); }
+      if (k < rest.length) idle(step);
+    })();
+  }
+
+  /* ---------- Readability floor: no text smaller than 11.5px (labels) or 12.5px (sentences) ---------- */
+  var SEEN_R = window.WeakSet ? new WeakSet() : null;
+  function readableText() {
+    eachSplit(D.body.querySelectorAll('body *:not(svg):not(svg *):not(script):not(style)'), SEEN_R, readOne);
+  }
+  function readOne(e) {
+    var own = false;
+    for (var n = e.firstChild; n; n = n.nextSibling) { if (n.nodeType === 3 && n.textContent.trim().length > 1) { own = true; break; } }
+    if (!own || e.closest('.gl-letter')) return; /* glossary cards are designed at readable sizes */
+    var c = getComputedStyle(e), fs = parseFloat(c.fontSize);
+    if (!fs || fs >= 11.5) return;
+    var min = c.textTransform === 'uppercase' ? 11.5 : 12.5;
+    if (fs < min) e.style.setProperty('font-size', min + 'px', 'important');
   }
 
   /* ---------- Pause animations control (WCAG 2.2.2): footer button, remembered per visitor ---------- */
@@ -419,7 +449,31 @@
   }
   function ratio(a, b) { var x = relLum(a), y = relLum(b); return (Math.max(x, y) + 0.05) / (Math.min(x, y) + 0.05); }
   function blend(top, under) { var a = top.a; return { r: top.r * a + under.r * (1 - a), g: top.g * a + under.g * (1 - a), b: top.b * a + under.b * (1 - a), a: 1 }; }
+  var BGC = null; /* per-pass cache: element -> effective background (same result, far fewer style reads) */
   function effectiveBg(el) {
+    if (BGC) return bgMemo(el);
+    return bgWalk(el);
+  }
+  function bgMemo(e) {
+    if (!e || e.nodeType !== 1) return { r: 255, g: 255, b: 255, a: 1 };
+    if (BGC.has(e)) return BGC.get(e);
+    var cs = getComputedStyle(e), layers = [], stop = false, bi = cs.backgroundImage, out;
+    if (bi && bi !== 'none') {
+      if (/url\(/.test(bi)) { BGC.set(e, null); return null; }
+      var cols = (bi.match(/rgba?\([^)]*\)/g) || []).map(parse).filter(Boolean);
+      var solid = cols.filter(function (c) { return c.a >= 0.5; }); if (solid.length) cols = solid;
+      if (cols.length) {
+        var avg = cols.reduce(function (s, c) { return { r: s.r + c.r / cols.length, g: s.g + c.g / cols.length, b: s.b + c.b / cols.length, a: s.a + c.a / cols.length }; }, { r: 0, g: 0, b: 0, a: 0 });
+        layers.push(avg); if (avg.a >= 0.95) stop = true;
+      }
+    }
+    if (!stop) { var c = parse(cs.backgroundColor); if (c && c.a > 0) { layers.push(c); if (c.a >= 0.95) stop = true; } }
+    var base = stop ? { r: 255, g: 255, b: 255, a: 1 } : bgMemo(e.parentElement);
+    if (base === null) { BGC.set(e, null); return null; }
+    for (var i = layers.length - 1; i >= 0; i--) base = blend(layers[i], base);
+    BGC.set(e, base); return base;
+  }
+  function bgWalk(el) {
     var layers = [];
     for (var e = el; e && e.nodeType === 1; e = e.parentElement) {
       var cs = getComputedStyle(e);
@@ -442,11 +496,17 @@
   }
   var NAVY = { r: 6, g: 65, b: 135, a: 1 }, TEAL_LIGHT = 'rgb(127,216,234)';
   function rgbOf(v) { var h = /^#([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})$/i.exec(v); return h ? { r: parseInt(h[1], 16), g: parseInt(h[2], 16), b: parseInt(h[3], 16), a: 1 } : parse(v); }
+  var SEEN_W = window.WeakSet ? new WeakSet() : null;
   function wcagContrast() {
+    /* runs in full before paint so colors match exactly; the background cache keeps it fast */
     var els = D.body.querySelectorAll('body *:not(script):not(style):not(svg):not(svg *)');
-    for (var i = 0; i < els.length; i++) {
-      var el = els[i];
-      if (!ownText(el) || el.closest('#stcm-wrapper,.fz-mbar,.fz-skip,.fzd,.fz-own,.fz-gl-more,.fz-goals,.vis-sec,.fz-smband,.fz-nl-duo,.fz-cta-band,.fz-cluster,.rs-sec,.rs-hero,.fz-about-band,.svc-grid,.sm-wrap,.fz-org')) continue;
+    BGC = window.Map ? new Map() : null;
+    try { for (var i = 0; i < els.length; i++) { var el = els[i]; if (SEEN_W) { if (SEEN_W.has(el)) continue; SEEN_W.add(el); } wcagOne(el); } }
+    finally { BGC = null; }
+  }
+  function wcagOne(el) {
+    for (var once = 0; once < 1; once++) {
+      if (!ownText(el) || el.closest('#stcm-wrapper,.fz-mbar,.fz-skip,.fzd,.gl-letter,.fz-own,.fz-gl-more,.fz-goals,.vis-sec,.fz-smband,.fz-nl-duo,.fz-cta-band,.fz-cluster,.rs-sec,.rs-hero,.fz-about-band,.svc-grid,.sm-wrap,.fz-org')) continue;
       var cs = getComputedStyle(el);
       var fg = parse(cs.color); if (!fg || fg.a === 0) continue;
       var bg = effectiveBg(el); if (!bg) continue;
@@ -468,6 +528,7 @@
       if (ownBg && ownBg.a >= 0.95 && !neutral(ownBg) && !darkBg && relLum(ownBg) > 0.12) {
         /* Small white text on a teal button: the button turns navy */
         el.style.setProperty('background-color', 'rgb(6,65,135)', 'important');
+        if (BGC) BGC = new Map();
         if (ratio(parse(cs.color), NAVY) >= need) continue;
         pick = '#ffffff';
       } else if (darkBg) {

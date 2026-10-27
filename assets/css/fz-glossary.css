@@ -109,3 +109,5 @@ html{scroll-padding-top:150px}
 .gl-guide.gl-ask{background:#fff;color:#064187!important;border:1.5px solid rgba(6,65,135,.28)}
 .gl-guide.gl-ask:hover{background:#f0f5fb;filter:none}
 .gl-foot .gl-svc{min-height:2.7em;display:flex;align-items:center}
+/* Speed: the browser skips layout and paint for letter groups until they near the screen */
+.gl-letter{content-visibility:auto;contain-intrinsic-size:auto 1800px}
