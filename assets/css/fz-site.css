@@ -674,3 +674,6 @@ footer.ft-std .fc-ind-all:hover,footer.ft-std .fc-ind-all:focus-visible{color:#f
   footer.ft-std .ft-trust>div{padding:2px 0!important}
   footer.ft-std .ft-trust>div>span{line-height:1.4}
 }
+
+/* Footer: use more of the width on large screens so the six columns breathe */
+@media(min-width:1280px){html body footer.ft-std .ft-inner{max-width:1360px!important}}
