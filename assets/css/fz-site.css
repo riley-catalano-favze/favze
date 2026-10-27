@@ -667,8 +667,8 @@ html body footer .ft-track{animation-duration:110s!important}
 footer.ft-std .fc.fc-ind{min-width:0}
 footer.ft-std .fc ul.fc-ind-list{display:flex;flex-direction:column;gap:9px}
 footer.ft-std .fc ul.fc-ind-list li a{white-space:normal}
-footer.ft-std .fc-ind-all{display:inline-flex;align-items:center;margin-top:18px;padding:8px 16px;border:1px solid #0A89A3;border-radius:999px;font-size:.8rem;font-weight:700;color:#fff!important;text-decoration:none;transition:background .2s}
-footer.ft-std .fc-ind-all:hover,footer.ft-std .fc-ind-all:focus-visible{background:#0A89A3}
+footer.ft-std .fc-ind-all{display:inline-flex;align-items:center;margin-top:18px;font-size:.84rem;font-weight:700;color:#0A89A3!important;text-decoration:none;transition:color .2s}
+footer.ft-std .fc-ind-all:hover,footer.ft-std .fc-ind-all:focus-visible{color:#fff!important;text-decoration:underline}
 @media(max-width:768px){
   footer.ft-std .ft-trust{display:grid!important;grid-template-columns:1fr 1fr;gap:10px 14px;justify-items:start;padding:0 5%!important}
   footer.ft-std .ft-trust>div{padding:2px 0!important}
