@@ -730,3 +730,11 @@ html body .fz-duo-t{font-family:'Barlow Condensed','Arial Black',sans-serif!impo
 .fz-duo-d{margin:14px auto 0;font-size:1rem;line-height:1.7;color:#4a4f57;max-width:600px}
 @media(max-width:600px){.fz-duo-sec{padding:56px 4.5%}}
 @media(max-width:560px){.fz-nl-card.is-articles{padding-top:178px}}
+.fz-duo-sec { max-width:1280px; margin:0 auto 42px; padding:0 3% }
+.fz-duo-cards { display:flex; gap:12px; align-items:center }
+.fz-duo-btn { flex:0 0 auto; width:34px; height:34px; border:0; border-radius:17px; background:#0B8A94; color:#fff; font:700 20px sans-serif; }
+.fz-duo-strip { flex:1; min-width:0; overflow-x:auto; -webkit-overflow-scrolling:touch; scroll-snap-type:x mandatory; scroll-behavior:smooth }
+.fz-duo-strip::-webkit-scrollbar { display:none }
+.fz-nl-duo { display:flex; gap:18px; padding:12px; overflow-x:auto; scroll-snap-type:x mandatory; scroll-padding:12px; scroll-behavior:smooth }
+.fz-nl-card { flex:0 0 90%; max-width:90%; padding:0; scroll-snap-align:center }
+.fz-nl-link:focus-visible { outline-offset:-6px }
