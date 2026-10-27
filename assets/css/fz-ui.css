@@ -682,3 +682,4 @@ html body .pstack .pl{color:#555b66!important}
 /* Mobile menu open: only the menu scrolls */
 html:has(#mm.open),html:has(#mm.open) body{overflow:hidden!important;overscroll-behavior:none}
 html body #mm{scrollbar-width:thin;scrollbar-color:rgba(6,65,135,.35) transparent}
+.fz-txt{display:inline;min-width:0;flex:1 1 auto}
