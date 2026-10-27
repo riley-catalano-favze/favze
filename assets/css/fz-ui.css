@@ -114,12 +114,12 @@ html body .fz-philo h2{font-weight:900;font-size:clamp(2.1rem,4.4vw,3.4rem);line
 /* ---------- Side navigation on service pages (tablet and computer) ---------- */
 .fz-sidenav{position:fixed;right:18px;top:50%;transform:translateY(-50%);z-index:150;display:none}
 @media(min-width:769px){.fz-sidenav{display:block}}
-.fz-sidenav ol{list-style:none;margin:0;padding:10px 8px;display:flex;flex-direction:column;gap:4px;background:rgba(255,255,255,.86);border-radius:999px;box-shadow:0 10px 30px rgba(6,20,40,.15);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
-.fz-sidenav a{position:relative;display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;text-decoration:none!important}
-.fz-sidenav a i{width:9px;height:9px;border-radius:50%;background:rgba(6,65,135,.3);transition:transform .2s,background .2s}
-.fz-sidenav a.is-on i{background:var(--fz-teal);transform:scale(1.45)}
-.fz-sidenav a span{position:absolute;right:38px;top:50%;transform:translate(8px,-50%);white-space:nowrap;padding:7px 12px;border-radius:999px;background:#0a0a0a;color:#fff;font-size:13px;font-weight:700;opacity:0;pointer-events:none;transition:opacity .18s,transform .18s}
-.fz-sidenav a:hover span,.fz-sidenav a:focus-visible span,.fz-sidenav.show-labels a.is-on span{opacity:1;transform:translate(0,-50%)}
+
+
+
+
+
+
 .fz-sidenav-top{margin-top:4px;border-top:1px solid rgba(6,65,135,.12);padding-top:4px}
 
 /* ---------- Tap-to-chat lead assistant ---------- */
@@ -320,9 +320,9 @@ html body .fo2 h2{font-size:clamp(2.2rem,4.2vw,3.4rem)!important;line-height:.98
 .fz-cg-rail{max-width:100%;min-width:0;width:100%}
 html body :has(> .fz-cg-rail){min-width:0}
 html body .areas-left,html body .areas-grid > *{min-width:0}
-.fz-sidenav ol{max-height:78vh;overflow-y:auto;scrollbar-width:none}
+
 .fz-sidenav ol::-webkit-scrollbar{display:none}
-.fz-sidenav a{width:26px;height:26px}
+
 .scroll-guide{display:none!important}
 
 /* ---- Chat launcher: a round photo button that mirrors the cookie button on the opposite corner ---- */
@@ -420,3 +420,35 @@ html.fz-still .fz-glow-l{display:none}
   html body .hero-stats .hstat-num,html body .hero-stats .hs-num{font-size:clamp(1.55rem,7.4vw,2.1rem)!important;line-height:1!important;white-space:nowrap;margin:0!important}
   html body .hero-stats .hstat-label,html body .hero-stats .hs-lbl{font-size:12.5px!important;line-height:1.4!important;margin:0!important}
 }
+
+/* Side nav: dot rail that opens into short labels, plus Service Match CTA */
+@media(min-width:769px){
+.fz-sidenav{display:flex;flex-direction:column;align-items:flex-end;gap:10px;width:max-content}
+.fz-sidenav ol,.fz-sidenav-cta{width:max-content;flex-shrink:0}
+.fz-sidenav ol{list-style:none;margin:0;padding:8px 6px;display:flex;flex-direction:column;align-items:flex-end;gap:2px;background:rgba(255,255,255,.92);border-radius:22px;box-shadow:0 10px 30px rgba(6,20,40,.15);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);max-height:70vh;overflow-y:auto;scrollbar-width:none;transition:padding .25s}
+.fz-sidenav ol::-webkit-scrollbar{display:none}
+.fz-sidenav ol a{display:flex;align-items:center;justify-content:flex-end;min-width:26px;height:28px;padding:0 0 0 0;border-radius:999px;text-decoration:none!important;color:#064187;transition:background .2s,padding .25s}
+.fz-sidenav ol a i{flex:0 0 26px;width:26px;min-width:26px;height:26px;display:grid;place-items:center}
+.fz-sidenav ol a i::before{content:"";width:9px;height:9px;border-radius:50%;background:rgba(6,65,135,.3);transition:transform .2s,background .2s}
+.fz-sidenav ol a.is-on i::before{background:#0A89A3;transform:scale(1.45)}
+.fz-sidenav ol a span{max-width:0;opacity:0;overflow:hidden;white-space:nowrap;font:700 13px/1 'DM Sans',sans-serif;color:#064187;transition:max-width .28s ease,opacity .2s,margin .28s}
+.fz-sidenav ol a.is-on span{color:#0A89A3}
+.fz-sidenav:hover ol,.fz-sidenav:focus-within ol,.fz-sidenav.is-peek ol{padding:8px 8px 8px 10px}
+.fz-sidenav:hover ol a span,.fz-sidenav:focus-within ol a span,.fz-sidenav.is-peek ol a span{max-width:150px;opacity:1;margin:0 2px 0 10px}
+.fz-sidenav ol a:hover,.fz-sidenav ol a:focus-visible{background:#eaf6f9}
+.fz-sidenav ol a.is-on{background:#eaf6f9}
+.fz-sidenav-cta{position:relative;display:flex;align-items:center;justify-content:flex-end;min-height:46px;border-radius:999px;background:linear-gradient(135deg,#064187,#0A89A3);color:#fff!important;text-decoration:none!important;box-shadow:0 12px 26px rgba(6,65,135,.35);transition:transform .2s,box-shadow .2s}
+.fz-sidenav-cta i{flex:0 0 46px;width:46px;min-width:46px;height:46px;display:grid;place-items:center}
+.fz-sidenav-cta i svg{animation:fzSnSpin 6s ease-in-out infinite}
+.fz-sidenav-cta span{max-width:0;opacity:0;overflow:hidden;white-space:nowrap;display:flex;flex-direction:column;line-height:1.1;transition:max-width .28s ease,opacity .2s,margin .28s}
+.fz-sidenav-cta b{font:800 14px 'DM Sans',sans-serif}
+.fz-sidenav-cta small{font:600 11.5px 'DM Sans',sans-serif;color:#d9f3f8}
+.fz-sidenav-cta::after{content:"";position:absolute;right:0;top:0;width:46px;height:46px;border-radius:50%;box-shadow:0 0 0 0 rgba(10,137,163,.55);animation:fzSnPulse 2.4s ease-out infinite;pointer-events:none}
+.fz-sidenav:hover .fz-sidenav-cta span,.fz-sidenav:focus-within .fz-sidenav-cta span,.fz-sidenav.is-peek .fz-sidenav-cta span{max-width:170px;opacity:1;margin-left:18px}
+.fz-sidenav-cta:hover{transform:translateY(-2px);box-shadow:0 16px 32px rgba(6,65,135,.45)}
+.fz-sidenav-cta:focus-visible{outline:3px solid #0A89A3;outline-offset:3px}
+}
+@keyframes fzSnPulse{0%{box-shadow:0 0 0 0 rgba(10,137,163,.55)}70%,100%{box-shadow:0 0 0 14px rgba(10,137,163,0)}}
+@keyframes fzSnSpin{0%,70%{transform:rotate(0)}85%{transform:rotate(25deg)}100%{transform:rotate(0)}}
+@media(prefers-reduced-motion:reduce){.fz-sidenav-cta::after,.fz-sidenav-cta i svg{animation:none}}
+.drop-view-all.drop-sm{color:#086E84!important}

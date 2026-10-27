@@ -36,34 +36,77 @@
   }
 
   /* ---------- Side navigation on service pages (tablet and computer) ---------- */
+  var COMPASS = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" stroke="currentColor" stroke-width="2"/><path d="M15.6 8.4l-2.1 5.1-5.1 2.1 2.1-5.1z" fill="currentColor"/></svg>';
+  var SHORT = [
+    [/^(what made you look|why are you looking)/i, 'Your Goals'], [/faq|frequently asked/i, 'FAQ'], [/pricing/i, 'Pricing'],
+    [/fractional cmo/i, 'Your CMO'], [/insights before/i, 'Newsletter'], [/tips from favze insights/i, 'Insights'],
+    [/articles & guides/i, 'Guides'], [/^pair /i, 'Pair With'], [/more digital marketing services/i, 'More Services'],
+    [/^favze .*vs\.|vs\. generic/i, 'Why Favze'], [/local service ads/i, 'Ads vs LSAs'], [/aeo vs\. seo/i, 'AEO vs SEO'],
+    [/three layers/i, 'SEO, AEO, GEO'], [/aeo \+ geo/i, 'AEO + GEO'], [/technical, on-page/i, 'SEO Types'],
+    [/process|step by step|launches your/i, 'Process'], [/results/i, 'Results'], [/problems|concerns/i, 'Problems Solved'],
+    [/by industry|every northern indiana industry|benefit most/i, 'Industries'], [/automation statistics/i, 'Automation ROI'], [/statistics/i, 'Stats & ROI'], [/roi/i, 'ROI'],
+    [/^what is /i, 'What It Is'], [/includes|included|every part|what favze does|12 pillars/i, "What's Included"],
+    [/platforms|every platform|chatgpt, perplexity|featured snippets, ai|facebook, instagram, tiktok/i, 'Platforms'],
+    [/where aeo gets/i, 'Where It Shows'], [/complian/i, 'Compliance'], [/deliverability/i, 'Deliverability'],
+    [/automation services/i, 'Automation'], [/ranking factors/i, 'Ranking Factors'], [/map pack/i, 'Map Pack'],
+    [/how long/i, 'Timeline'], [/content strategy/i, 'Content'], [/ownership/i, 'Ownership'], [/principles/i, 'Principles'],
+    [/compatible/i, 'Every Inbox'], [/ai search optimization for local/i, 'AI Search'], [/real reasons/i, 'Why Now'],
+    [/^why .*(matter|work)/i, 'Why It Works'], [/ready to/i, "Who It's For"], [/company serving|services across|& michiana$/i, 'Service Area'],
+    [/services (for|in|that)/i, 'Services'], [/one goal|one platform|all 4 platforms|two strategies|google maps$|^ai-optimized|works as hard/i, 'Overview']
+  ];
+  function shortLabel(t, used) {
+    for (var i = 0; i < SHORT.length; i++) { if (SHORT[i][0].test(t) && !used[SHORT[i][1]]) return SHORT[i][1]; }
+    var w = t.replace(/[:?].*$/, '').split(' ').slice(0, 3).join(' ');
+    return used[w] ? t.split(' ').slice(0, 4).join(' ') : w;
+  }
   function sidenav() {
     if (!/\/services\/[a-z-]+(\.html)?$/.test(location.pathname)) return;
     var secs = [].slice.call(D.querySelectorAll('main > section')).filter(function (s) {
       return s.querySelector('h2') && !s.classList.contains('fz-form-sec') && s.offsetHeight > 380;
     });
     if (secs.length < 4) return;
-    if (secs.length > 11) secs = secs.filter(function (x) { return !x.classList.contains('fz-related') && !x.classList.contains('art-scroll-sec'); }).slice(0, 11);
     var nav = D.createElement('div'); nav.className = 'fz-sidenav'; nav.setAttribute('role', 'navigation'); nav.setAttribute('aria-label', 'Sections on this page');
+    nav.setAttribute('data-nosnippet', '');
     var ol = D.createElement('ol');
     var hero = D.querySelector('main .hero');
+    var used = {};
     var items = (hero ? [{ el: hero, label: 'Top' }] : []).concat(secs.map(function (s) {
       var t = s.querySelector('h2').textContent.replace(/\s+/g, ' ').trim();
-      var words = t.split(' '); if (words.length > 5) t = words.slice(0, 5).join(' ') + '...';
-      return { el: s, label: t };
+      var l = shortLabel(t, used); used[l] = 1;
+      return { el: s, label: l, full: t };
     }));
+    var DROP = ['Insights', 'Newsletter', 'Guides', 'Every Inbox', 'More Services', 'Service Area', 'Pair With', 'Your CMO'];
+    for (var di = 0; items.length > 15 && di < DROP.length; di++) items = items.filter(function (it) { return it.label !== DROP[di]; });
+    while (items.length > 15) { var cut = -1; for (var k = items.length - 1; k > 1; k--) { if (!/^(FAQ|Pricing|Process|Your Goals)$/.test(items[k].label)) { cut = k; break; } } if (cut < 0) break; items.splice(cut, 1); }
     items.forEach(function (it, i) {
       if (!it.el.id) it.el.id = 'sec-' + (i + 1);
       var li = D.createElement('li'), a = D.createElement('a');
-      a.href = '#' + it.el.id; a.innerHTML = '<i></i><span>' + it.label.replace(/</g, '&lt;') + '</span>';
-      a.setAttribute('aria-label', it.label);
+      a.href = '#' + it.el.id; a.innerHTML = '<span>' + it.label.replace(/</g, '&lt;') + '</span><i></i>';
+      if (it.full) a.title = it.full;
       a.addEventListener('click', function (e) { e.preventDefault(); it.el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }); history.replaceState(null, '', '#' + it.el.id); track('side_nav_click', { section: it.label }); });
       li.appendChild(a); ol.appendChild(li); it.a = a;
     });
-    nav.appendChild(ol); D.body.appendChild(nav);
+    nav.appendChild(ol);
+    var svc = (location.pathname.match(/services\/([a-z-]+)/) || [])[1] || '';
+    var cta = D.createElement('a'); cta.className = 'fz-sidenav-cta';
+    cta.href = B + 'service-match?from=side-nav&service=' + svc;
+    cta.innerHTML = '<span><b>Find My Service</b><small>Free 60-second quiz</small></span><i>' + COMPASS + '</i>';
+    cta.setAttribute('aria-label', 'Find My Service: take the free Service Match quiz');
+    cta.addEventListener('click', function () { track('side_nav_click', { section: 'Service Match' }); track('service_match_entry', { sm_entry: 'side-nav', service: svc }); });
+    nav.appendChild(cta);
+    D.body.appendChild(nav);
     var io = new IntersectionObserver(function (es) {
       es.forEach(function (e) { if (e.isIntersecting) { items.forEach(function (it) { it.a.classList.toggle('is-on', it.el === e.target); }); } });
     }, { rootMargin: '-45% 0px -50% 0px' });
     items.forEach(function (it) { io.observe(it.el); });
+    /* Peek open once after the hero so visitors see the labels, then tuck away */
+    var peeked = false;
+    function peek() {
+      if (peeked || window.scrollY < innerHeight * 0.8) return; peeked = true;
+      nav.classList.add('is-peek'); setTimeout(function () { nav.classList.remove('is-peek'); }, 3200);
+      window.removeEventListener('scroll', peek);
+    }
+    window.addEventListener('scroll', peek, { passive: true });
   }
 
   /* ---------- "Why are you looking?" picks: tracked, and carried to the consultation page ---------- */
@@ -71,6 +114,10 @@
     D.addEventListener('click', function (e) {
       var a = e.target.closest('a[data-fz-reason]'); if (!a) return;
       track('consult_reason_click', { service: a.getAttribute('data-fz-service') || '', reason: a.getAttribute('data-fz-reason') });
+    });
+    D.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[data-sm-entry]'); if (!a) return;
+      track('service_match_entry', { sm_entry: a.getAttribute('data-sm-entry') });
     });
     if (!/free-consultation/.test(location.pathname)) return;
     var q = new URLSearchParams(location.search), reason = q.get('reason'), service = q.get('service');
@@ -305,6 +352,7 @@
     book: { mode: 'sway', d: 'M50 22C40 14 24 12 8 14v66c16-2 32 1 42 9 10-8 26-11 42-9V14C76 12 60 14 50 22z', fx: '<path d="M50 22v66" stroke="#fff" stroke-width="2.5"/><path d="M17 31h24M17 41h24M17 51h18M59 31h24M59 41h24M59 51h18" stroke="#fff" stroke-width="3.2" stroke-linecap="round" opacity=".9"/>' },
     calc: { mode: 'sway', d: 'M24 4h52a9 9 0 0 1 9 9v74a9 9 0 0 1-9 9H24a9 9 0 0 1-9-9V13a9 9 0 0 1 9-9z', fx: '<rect x="24" y="13" width="52" height="20" rx="5" fill="#fff"/><path d="M58 23h12M64 17v12" stroke="#0A89A3" stroke-width="3" stroke-linecap="round"/>' + [0, 1, 2].map(function (r) { return [0, 1, 2].map(function (c) { return '<rect x="' + (24 + c * 18) + '" y="' + (42 + r * 16) + '" width="14" height="11" rx="3" fill="#fff" opacity="' + (c === 2 && r === 2 ? 1 : .85) + '"/>'; }).join(''); }).join('') },
     chip: { mode: 'spin', d: 'M30 20h40a10 10 0 0 1 10 10v40a10 10 0 0 1-10 10H30a10 10 0 0 1-10-10V30a10 10 0 0 1 10-10zM34 6h6v12h-6zM47 6h6v12h-6zM60 6h6v12h-6zM34 82h6v12h-6zM47 82h6v12h-6zM60 82h6v12h-6zM6 34h12v6H6zM6 47h12v6H6zM6 60h12v6H6zM82 34h12v6H82zM82 47h12v6H82zM82 60h12v6H82z', fx: '<rect x="32" y="32" width="36" height="36" rx="6" fill="none" stroke="#fff" stroke-width="3"/><path d="M50 38c1.6 7 5 10.4 12 12-7 1.6-10.4 5-12 12-1.6-7-5-10.4-12-12 7-1.6 10.4-5 12-12z" fill="#fff"/>', both: 1 },
+    compass: { mode: 'spin', d: 'M50 4a46 46 0 1 0 0 92 46 46 0 1 0 0-92zm0 10a36 36 0 1 1 0 72 36 36 0 1 1 0-72z', fx: '<path d="M50 20 59 50H41z" fill="#fff"/><path d="M41 50h18L50 80z" fill="#fff" opacity=".45"/><circle cx="50" cy="50" r="5" fill="#0A89A3" stroke="#fff" stroke-width="2.5"/><path d="M50 8v6M50 86v6M8 50h6M86 50h6" stroke="#fff" stroke-width="3" stroke-linecap="round"/>', both: 1 },
     target: { mode: 'sway', build: 'rings' },
     atom: { mode: 'spin', build: 'atom' },
     cube: { mode: 'cube', build: 'cube' },
@@ -313,7 +361,7 @@
   };
   var TOY_PAGE = { 'local-seo': 'pin', 'search-engine-optimization': 'bars', 'email-marketing': 'mail', 'short-message-service-sms': 'sms',
     'social-media-marketing': 'heart', 'paid-search-ads': 'glass', 'answer-engine-optimization': 'ask', 'generative-engine-optimization': 'spark',
-    'hubspot-setup': 'funnel', 'paid-social-media-ads': 'target', 'ai-optimization': 'atom', 'services': 'cube', 'website-design': 'site', 'about': 'photo', 'marketing-glossary': 'book', 'marketing-kpis-glossary': 'calc', 'ai-glossary': 'chip' };
+    'hubspot-setup': 'funnel', 'paid-social-media-ads': 'target', 'ai-optimization': 'atom', 'services': 'cube', 'website-design': 'site', 'about': 'photo', 'marketing-glossary': 'book', 'marketing-kpis-glossary': 'calc', 'ai-glossary': 'chip', 'service-match': 'compass' };
   function el(tag, cls, css) { var e = D.createElement(tag); if (cls) e.className = cls; if (css) e.style.cssText = css; return e; }
   function gradDefs() {
     if (D.getElementById('fzToyDefs')) return;
