@@ -735,3 +735,14 @@
   run(philo); run(h1fit); run(cookieFade); run(mmFit); run(progress); run(sidenav); run(reasons); run(minis); run(three); run(dials); run(toys); run(glow); run(chat); run(hiddenFocus);
   window.addEventListener('load', function () { run(hiddenFocus); setTimeout(function () { run(hiddenFocus); }, 1500); });
 })();
+window.addEventListener('load', function() {
+  document.querySelectorAll('.fz-duo-sec').forEach(function(sec) {
+    var strip = sec.querySelector('.fz-duo-strip'), btns = sec.querySelectorAll('.fz-duo-btn');
+    btns.forEach(function(btn) { 
+      btn.addEventListener('click', function() {
+        var dir = +btn.getAttribute('data-dir'), jump = (strip.scrollLeft + strip.clientWidth * dir) | 0;
+        strip.scrollTo({ left: jump, behavior: 'smooth' });
+      });
+    });
+  });
+});
