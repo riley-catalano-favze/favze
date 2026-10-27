@@ -133,7 +133,7 @@ footer.ft-std .fz-news-card iframe{display:block;width:100%;border:0;min-height:
 /* ---- Readability ---- */
 html body footer.ft-std .fb-desc,html body footer.ft-std .fc ul li a,html body footer.ft-std .fcon a{color:rgba(255,255,255,.72)!important}
 html body footer.ft-std .fc ul li a:hover,html body footer.ft-std .fcon a:hover{color:#fff!important}
-@media(min-width:1025px){html body footer.ft-std .ft-top{grid-template-columns:1.15fr 1fr 1fr 1fr 1fr!important;gap:28px!important}}
+@media(min-width:1025px){html body footer.ft-std .ft-top{grid-template-columns:1.15fr 1fr 1fr 1.9fr 1fr!important;gap:28px!important}}
 /* ---- Generated: former Barlow elements now DM Sans ---- */
 html body .about-mini-name > a,
 html body .article-body > h3,
@@ -660,3 +660,15 @@ html body nav .fz-nav-cta{white-space:nowrap!important}
 /* Footer area strip: longer list, same reading speed */
 html body footer .ft-track{animation-duration:110s!important}
 @media(prefers-reduced-motion:reduce){html body footer .ft-track{animation:none!important}}
+
+/* Footer: industries column (20 industries, two columns) and trust bar layout */
+footer.ft-std .fc.fc-ind{min-width:0}
+footer.ft-std .fc ul.fc-ind-list{display:grid;grid-template-columns:1fr 1fr;gap:9px 16px}
+footer.ft-std .fc ul.fc-ind-list li a{white-space:normal}
+footer.ft-std .fc-ind-all{display:inline-flex;align-items:center;margin-top:18px;padding:8px 16px;border:1px solid #0A89A3;border-radius:999px;font-size:.8rem;font-weight:700;color:#fff!important;text-decoration:none;transition:background .2s}
+footer.ft-std .fc-ind-all:hover,footer.ft-std .fc-ind-all:focus-visible{background:#0A89A3}
+@media(max-width:768px){
+  footer.ft-std .ft-trust{display:grid!important;grid-template-columns:1fr 1fr;gap:10px 14px;justify-items:start;padding:0 5%!important}
+  footer.ft-std .ft-trust>div{padding:2px 0!important}
+  footer.ft-std .ft-trust>div>span{line-height:1.4}
+}
