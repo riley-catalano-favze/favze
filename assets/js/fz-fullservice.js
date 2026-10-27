@@ -1,0 +1,183 @@
+/* Favze "Full-Service, Explained" interactive (Why Us page).
+   Twelve services either scatter into separate vendors or connect around one plan.
+   Tap a service to see how it powers the others. Works with keyboard, screen readers,
+   and reduced motion. */
+(function () {
+  'use strict';
+  var D = document;
+  var root = D.getElementById('fzFs');
+  if (!root) return;
+
+  var B = 'https://favze.com/services/';
+  /* id, short label, full name, service page, vendor group, what it does, which services it powers */
+  var S = [
+    ['seo', 'SEO', 'Search Engine Optimization', 'search-engine-optimization', 'search', 'Helps your website rank for the searches your customers make.', ['web', 'aeo', 'email']],
+    ['local', 'Local SEO', 'Local SEO', 'local-seo', 'search', 'Puts you in the Google map pack and on Google Maps.', ['gads', 'web', 'sms']],
+    ['aeo', 'AEO', 'Answer Engine Optimization', 'answer-engine-optimization', 'search', 'Shapes your content into clear answers that Google and AI tools quote.', ['seo', 'geo', 'web']],
+    ['geo', 'GEO', 'Generative Engine Optimization', 'generative-engine-optimization', 'search', 'Helps ChatGPT, Gemini, and Perplexity recommend you by name.', ['ai', 'aeo', 'social']],
+    ['ai', 'AI', 'AI Optimization', 'ai-optimization', 'search', 'Keeps your business facts consistent everywhere AI looks.', ['geo', 'local', 'crm']],
+    ['web', 'Website', 'Website Design', 'website-design', 'web', 'Turns every visit from every channel into a call, form, or booking.', ['seo', 'gads', 'crm']],
+    ['social', 'Social', 'Social Media Marketing', 'social-media-marketing', 'social', 'Builds trust and a following between purchases.', ['sads', 'email', 'geo']],
+    ['sads', 'Social Ads', 'Paid Social Media Ads', 'paid-social-media-ads', 'ads', 'Reaches nearby customers on Facebook and Instagram, and brings visitors back.', ['social', 'web', 'crm']],
+    ['gads', 'Google Ads', 'Paid Search Ads', 'paid-search-ads', 'ads', 'Captures people searching right now, while SEO builds long-term rankings.', ['seo', 'local', 'web']],
+    ['email', 'Email', 'Email Marketing', 'email-marketing', 'crm', 'Turns one-time customers into repeat customers with timely, helpful emails.', ['crm', 'social', 'seo']],
+    ['sms', 'SMS', 'SMS Marketing', 'short-message-service-sms', 'crm', 'Sends reminders, offers, and review requests people read within minutes.', ['local', 'crm', 'email']],
+    ['crm', 'CRM', 'HubSpot Setup', 'hubspot-setup', 'crm', 'Tracks every lead from first click to closed sale, so you see what works.', ['email', 'sms', 'gads']]
+  ];
+  var GROUPS = {
+    search: { name: 'Search vendor', x: 26, y: 24 },
+    web: { name: 'Web designer', x: 78, y: 18 },
+    social: { name: 'Social freelancer', x: 20, y: 62 },
+    ads: { name: 'Ad agency', x: 74, y: 60 },
+    crm: { name: 'Email & CRM tools', x: 50, y: 88 }
+  };
+  var MODE_COPY = {
+    full: { teams: '1', plans: '1', reports: '1', contact: 'Riley' },
+    split: { teams: '5', plans: '5', reports: '5', contact: '5' }
+  };
+
+  var stage = root.querySelector('.fs-stage');
+  var svg = root.querySelector('.fs-lines');
+  var live = root.querySelector('.fs-live');
+  var panel = root.querySelector('.fs-panel-body');
+  var modeBtns = root.querySelectorAll('[data-fs-mode]');
+  var groupLabels = {};
+  var mode = 'full', picked = null, touched = false;
+  var still = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* build service buttons */
+  var nodes = {};
+  S.forEach(function (s, i) {
+    var b = D.createElement('button');
+    b.type = 'button'; b.className = 'fs-node'; b.dataset.id = s[0];
+    b.setAttribute('aria-pressed', 'false');
+    b.setAttribute('aria-label', s[2] + ': see how it connects');
+    b.innerHTML = '<span>' + s[1] + '</span>';
+    b.addEventListener('click', function () { touched = true; pick(picked === s[0] ? null : s[0]); });
+    stage.appendChild(b);
+    nodes[s[0]] = { el: b, s: s, i: i };
+  });
+  Object.keys(GROUPS).forEach(function (g) {
+    var l = D.createElement('span');
+    l.className = 'fs-group'; l.setAttribute('aria-hidden', 'true'); l.textContent = GROUPS[g].name;
+    l.style.left = GROUPS[g].x + '%';
+    stage.appendChild(l); groupLabels[g] = l;
+  });
+
+  function pos(n) {
+    if (mode === 'full') {
+      var a = (n.i / S.length) * Math.PI * 2 - Math.PI / 2;
+      return { x: 50 + Math.cos(a) * 39, y: 50 + Math.sin(a) * 39 };
+    }
+    var g = GROUPS[n.s[4]], mates = S.filter(function (x) { return x[4] === n.s[4]; });
+    var narrow = stage.clientWidth < 480;
+    var k = mates.indexOf(n.s), cols = narrow ? (mates.length > 2 ? 2 : 1) : (mates.length > 2 ? 3 : mates.length);
+    var col = k % cols, row = Math.floor(k / cols), rows = Math.ceil(mates.length / cols);
+    return { x: g.x + (col - (cols - 1) / 2) * (narrow ? 26 : cols === 2 ? 21 : 15), y: g.y + (row - (rows - 1) / 2) * (narrow ? 10.5 : 9) };
+  }
+  function layout() {
+    Object.keys(nodes).forEach(function (id) {
+      var n = nodes[id], p = pos(n);
+      n.x = p.x; n.y = p.y;
+      n.el.style.left = p.x + '%'; n.el.style.top = p.y + '%';
+    });
+    /* each vendor label sits just above its own group of services */
+    Object.keys(GROUPS).forEach(function (g) {
+      var ys = Object.keys(nodes).filter(function (k) { return nodes[k].s[4] === g; }).map(function (k) { return nodes[k].y; });
+      groupLabels[g].style.top = (Math.min.apply(null, ys) - (stage.clientWidth < 480 ? 9 : 8)) + '%';
+    });
+    root.classList.toggle('is-split', mode === 'split');
+    root.classList.toggle('is-full', mode === 'full');
+    draw();
+  }
+  function line(x1, y1, x2, y2, cls) {
+    var l = D.createElementNS('http://www.w3.org/2000/svg', 'line');
+    l.setAttribute('x1', x1); l.setAttribute('y1', y1); l.setAttribute('x2', x2); l.setAttribute('y2', y2);
+    l.setAttribute('class', cls); l.setAttribute('vector-effect', 'non-scaling-stroke');
+    svg.appendChild(l);
+  }
+  function draw() {
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+    if (mode !== 'full') return;
+    Object.keys(nodes).forEach(function (id) { var n = nodes[id]; line(50, 50, n.x, n.y, 'fs-spoke'); });
+    if (picked) {
+      var a = nodes[picked];
+      a.s[6].forEach(function (t) { var b = nodes[t]; line(a.x, a.y, b.x, b.y, 'fs-link'); });
+    }
+  }
+  function pick(id) {
+    picked = id;
+    Object.keys(nodes).forEach(function (k) {
+      var n = nodes[k], on = k === id, linked = id && nodes[id].s[6].indexOf(k) > -1;
+      n.el.setAttribute('aria-pressed', on ? 'true' : 'false');
+      n.el.classList.toggle('is-on', on);
+      n.el.classList.toggle('is-linked', !!(linked && mode === 'full'));
+    });
+    draw();
+    render();
+  }
+  function render() {
+    var c = MODE_COPY[mode];
+    root.querySelector('[data-fs="teams"]').textContent = c.teams;
+    root.querySelector('[data-fs="plans"]').textContent = c.plans;
+    root.querySelector('[data-fs="reports"]').textContent = c.reports;
+    root.querySelector('[data-fs="contact"]').textContent = c.contact;
+    var html, say;
+    if (!picked) {
+      html = mode === 'full'
+        ? '<p class="fs-p-k">Full service with Favze</p><p class="fs-p-t">All 12 services connect to one plan for your business.</p><p>Tap any service to see how it powers the others.</p>'
+        : '<p class="fs-p-k">Separate vendors</p><p class="fs-p-t">The same 12 services, split across 5 different teams.</p><p>Tap any service, then switch to Full Service to connect it.</p>';
+      say = mode === 'full' ? 'Full service view. All 12 services connect to one plan.' : 'Separate vendors view. 12 services split across 5 teams.';
+    } else {
+      var s = nodes[picked].s;
+      var names = s[6].map(function (t) { return '<a href="' + B + nodes[t].s[3] + '">' + nodes[t].s[2] + '</a>'; });
+      var list = names.slice(0, -1).join(', ') + ', and ' + names[names.length - 1];
+      html = '<p class="fs-p-k">' + s[2] + '</p><p class="fs-p-t">' + s[5] + '</p>' +
+        (mode === 'full'
+          ? '<p>With Favze, it works hand in hand with ' + list + ', all from one plan and one report.</p>'
+          : '<p>Here it sits with the ' + GROUPS[s[4]].name.toLowerCase() + ', with its own login and its own report. Switch to Full Service to connect it with ' + list + '.</p>') +
+        '<a class="fs-more" href="' + B + s[3] + '">Explore ' + s[2] + ' <span aria-hidden="true">&rarr;</span></a>';
+      say = s[2] + '. ' + s[5] + (mode === 'full' ? ' Connected to ' + s[6].map(function (t) { return nodes[t].s[2]; }).join(', ') + '.' : '');
+    }
+    panel.innerHTML = html;
+    live.textContent = say;
+  }
+  function setMode(m, auto) {
+    mode = m;
+    modeBtns.forEach(function (b) { var on = b.getAttribute('data-fs-mode') === m; b.setAttribute('aria-pressed', on ? 'true' : 'false'); b.classList.toggle('is-on', on); });
+    layout();
+    pick(picked);
+    if (!auto) track('fullservice_mode', { mode: m });
+  }
+  modeBtns.forEach(function (b) { b.addEventListener('click', function () { touched = true; setMode(b.getAttribute('data-fs-mode')); }); });
+  stage.addEventListener('keydown', function (e) {
+    var keys = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 };
+    if (!keys[e.key]) return;
+    var list = S.map(function (s) { return nodes[s[0]].el; }), i = list.indexOf(D.activeElement);
+    if (i < 0) return;
+    e.preventDefault(); list[(i + keys[e.key] + list.length) % list.length].focus();
+  });
+  function track(name, p) {
+    p = p || {}; p.page_path = location.pathname;
+    if (typeof window.gtag === 'function') window.gtag('event', name, p);
+  }
+
+  root.classList.add('is-ready');
+  if (still) root.classList.add('is-still');
+  var rz; window.addEventListener('resize', function () { clearTimeout(rz); rz = setTimeout(layout, 150); });
+  layout();
+  render();
+  /* a gentle first demo: start split, then connect when the section scrolls into view */
+  if (!still && 'IntersectionObserver' in window) {
+    mode = 'split'; layout(); render();
+    modeBtns.forEach(function (b) { var on = b.getAttribute('data-fs-mode') === 'split'; b.setAttribute('aria-pressed', on ? 'true' : 'false'); b.classList.toggle('is-on', on); });
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        io.disconnect();
+        setTimeout(function () { if (!touched) setMode('full', true); }, 900);
+      });
+    }, { threshold: 0.45 });
+    io.observe(stage);
+  }
+})();
