@@ -738,3 +738,24 @@ html body .fz-duo-t{font-family:'Barlow Condensed','Arial Black',sans-serif!impo
 .fz-nl-duo { display:flex; gap:18px; padding:12px; overflow-x:auto; scroll-snap-type:x mandatory; scroll-padding:12px; scroll-behavior:smooth }
 .fz-nl-card { flex:0 0 90%; max-width:90%; padding:0; scroll-snap-align:center }
 .fz-nl-link:focus-visible { outline-offset:-6px }
+
+/* Resources nav dropdown */
+header nav .nav-res {
+  width: 400px;
+}
+header nav .nav-res > ul {
+  column-count: 1;
+}
+
+/* Footer columns */  
+footer .ft-cols {
+  display: grid;  
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+footer .ft-cols > div:nth-child(1) {
+  grid-column: 1 / 2;
+}
+footer .ft-cols > div:nth-child(2) {  
+  grid-column: 2 / 3;
+}
