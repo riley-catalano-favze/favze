@@ -953,6 +953,7 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
 </style>
 <link rel="stylesheet" href="../assets/css/fz-site.css">
 <link rel="stylesheet" href="../assets/css/fz-ui.css">
+<link rel="stylesheet" href="../assets/css/fz-nav.css">
 <script type="application/ld+json" id="fz-person-schema">
 {
   "@context": "https://schema.org",
@@ -982,54 +983,52 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
 <nav>
   <a class="fz-skip" href="#main">Skip to main content</a>
   <a href="https://favze.com/" class="fz-logo" aria-label="Favze home"><img src="https://favze.com/assets/brand/favze-logo-horizontal-black.png" alt="Favze Digital Marketing" width="147" height="34"></a>
-  <ul class="nl">
+  <ul class="nl fz-nl">
     <li>
-      <button class="drop-trigger" id="trigServices" aria-expanded="false" aria-controls="panServices">
-        Services
-        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="drop-panel" id="panServices" role="menu">
+      <button class="drop-trigger" id="fzTrigSvc" aria-expanded="false" aria-controls="fzPanSvc">Services <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="drop-panel" id="fzPanSvc" role="menu">
         <div class="drop-label">All Services</div>
-        <a href="https://favze.com/services/local-seo" role="menuitem">Local SEO</a>
+        <a href="https://favze.com/services/social-media-marketing" role="menuitem">Social Media Marketing <span class="drop-abbr">SMM</span></a>
         <a href="https://favze.com/services/search-engine-optimization" role="menuitem">Search Engine Optimization <span class="drop-abbr">SEO</span></a>
         <a href="https://favze.com/services/answer-engine-optimization" role="menuitem">Answer Engine Optimization <span class="drop-abbr">AEO</span></a>
         <a href="https://favze.com/services/generative-engine-optimization" role="menuitem">Generative Engine Optimization <span class="drop-abbr">GEO</span></a>
         <a href="https://favze.com/services/ai-optimization" role="menuitem">AI Optimization</a>
-        <a href="https://favze.com/services/social-media-marketing" role="menuitem">Social Media Marketing <span class="drop-abbr">SMM</span></a>
-        <a href="https://favze.com/services/paid-search-ads" role="menuitem">Paid Search Ads <span class="drop-abbr">SEM</span></a>
-        <a href="https://favze.com/services/paid-social-media-ads" role="menuitem">Paid Social Media Ads</a>
+        <a href="https://favze.com/services/local-seo" role="menuitem">Local SEO</a>
         <a href="https://favze.com/services/email-marketing" role="menuitem">Email Marketing</a>
         <a href="https://favze.com/services/short-message-service-sms" role="menuitem">SMS Marketing</a>
         <a href="https://favze.com/services/hubspot-setup" role="menuitem">HubSpot Setup</a>
         <a href="https://favze.com/services/website-design" role="menuitem">Website Design</a>
+        <a href="https://favze.com/services/paid-search-ads" role="menuitem">Paid Search Ads <span class="drop-abbr">SEM</span></a>
+        <a href="https://favze.com/services/paid-social-media-ads" role="menuitem">Paid Social Media Ads</a>
         <div class="drop-divider"></div>
         <a href="https://favze.com/services" class="drop-view-all" role="menuitem">View All Services &rarr;</a>
-        <a href="https://favze.com/service-match" class="drop-view-all drop-sm" role="menuitem" data-sm-entry="nav">Not Sure? Take the Service Match &rarr;</a>
+        <a href="https://favze.com/resources/marketing-tools/service-match" class="drop-view-all drop-sm" role="menuitem" data-sm-entry="nav">Not Sure? Take the Service Match &rarr;</a>
       </div>
     </li>
     <li>
-      <button class="drop-trigger" id="trigArticles" aria-expanded="false" aria-controls="panArticles">
-        Resources
-        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="drop-panel center" id="panArticles" role="menu">
+      <button class="drop-trigger" id="fzTrigRes" aria-expanded="false" aria-controls="fzPanRes">Resources <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="drop-panel center" id="fzPanRes" role="menu">
         <div class="drop-label">Articles</div>
-        <a href="https://favze.com/articles/content-marketing" role="menuitem">Content Marketing</a>
-        <a href="https://favze.com/articles/social-media-strategy" role="menuitem">Social Media Strategy</a>
-        <a href="https://favze.com/articles/search-visibility" role="menuitem">Search Visibility &amp; Local Discovery</a>
-        <a href="https://favze.com/articles/brand-positioning" role="menuitem">Brand Positioning &amp; Community Authority</a>
-        <a href="https://favze.com/articles" class="drop-view-all" role="menuitem">All Articles &rarr;</a>
+        <a href="https://favze.com/resources/articles/content-marketing" role="menuitem">Content Marketing</a>
+        <a href="https://favze.com/resources/articles/social-media-strategy" role="menuitem">Social Media Strategy</a>
+        <a href="https://favze.com/resources/articles/search-visibility" role="menuitem">Search Visibility &amp; Local Discovery</a>
+        <a href="https://favze.com/resources/articles/brand-positioning" role="menuitem">Brand Positioning &amp; Community Authority</a>
+        <a href="https://favze.com/resources/articles" class="drop-view-all" role="menuitem">All Articles &rarr;</a>
         <div class="drop-divider"></div>
         <div class="drop-label">Newsletters</div>
-        <a href="https://www.linkedin.com/newsletters/favze-insights-7399519169551126528/" role="menuitem" target="_blank" rel="noopener noreferrer">Favze Insights &#8599;</a>
-        <a href="https://favze.com/newsletters#intel-card" role="menuitem">Favze Intel</a>
-        <a href="https://favze.com/newsletters#insider-card" role="menuitem">Favze Insider</a>
-        <a href="https://favze.com/newsletters" class="drop-view-all" role="menuitem">All Newsletters &rarr;</a>
+        <a href="https://favze.com/resources/newsletters/favze-insider" role="menuitem">Favze Insider</a>
+        <a href="https://favze.com/resources/newsletters/favze-intel" role="menuitem">Favze Intel</a>
+        <a href="https://favze.com/resources/newsletters/favze-insights" role="menuitem">Favze Insights</a>
+        <a href="https://favze.com/resources/newsletters" class="drop-view-all" role="menuitem">All Newsletters &rarr;</a>
         <div class="drop-divider"></div>
         <div class="drop-label">Glossaries</div>
-        <a href="https://favze.com/marketing-glossary" role="menuitem">Marketing Terms Glossary</a>
-        <a href="https://favze.com/marketing-kpis-glossary" role="menuitem">Marketing KPIs Glossary</a>
-        <a href="https://favze.com/ai-glossary" role="menuitem">AI &amp; Automation Glossary</a>
+        <a href="https://favze.com/resources/glossary/marketing-terms" role="menuitem">Marketing Terms Glossary</a>
+        <a href="https://favze.com/resources/glossary/marketing-kpis" role="menuitem">Marketing KPIs Glossary</a>
+        <a href="https://favze.com/resources/glossary/ai" role="menuitem">AI &amp; Automation Glossary</a>
+        <div class="drop-divider"></div>
+        <div class="drop-label">Marketing Tools</div>
+        <a href="https://favze.com/resources/marketing-tools/service-match" role="menuitem" data-sm-entry="nav-tools">Service Match Quiz</a>
+        <a href="https://favze.com/resources" class="drop-view-all" role="menuitem">All Resources &rarr;</a>
       </div>
     </li>
     <li><a href="https://favze.com/why-us" class="nl-link">Why Us</a></li>
@@ -1044,45 +1043,42 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
 </nav>
 <!-- Mobile menu -->
 <div class="mm" id="mm" aria-hidden="true">
-  <button class="mm-toggle" id="mmServTrig" aria-expanded="false">
-    Services
-    <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  </button>
-  <div class="mm-sub" id="mmServSub">
-    <a href="https://favze.com/services/local-seo">Local SEO</a>
+  <button class="mm-toggle" id="fzMmSvcTrig" aria-expanded="false">Services <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  <div class="mm-sub" id="fzMmSvcSub">
+    <a href="https://favze.com/services/social-media-marketing">Social Media Marketing</a>
     <a href="https://favze.com/services/search-engine-optimization">SEO</a>
     <a href="https://favze.com/services/answer-engine-optimization">AEO</a>
     <a href="https://favze.com/services/generative-engine-optimization">GEO</a>
     <a href="https://favze.com/services/ai-optimization">AI Optimization</a>
-    <a href="https://favze.com/services/social-media-marketing">Social Media Marketing</a>
-    <a href="https://favze.com/services/paid-search-ads">Paid Search Ads</a>
-    <a href="https://favze.com/services/paid-social-media-ads">Paid Social Media Ads</a>
+    <a href="https://favze.com/services/local-seo">Local SEO</a>
     <a href="https://favze.com/services/email-marketing">Email Marketing</a>
     <a href="https://favze.com/services/short-message-service-sms">SMS Marketing</a>
     <a href="https://favze.com/services/hubspot-setup">HubSpot Setup</a>
     <a href="https://favze.com/services/website-design">Website Design</a>
+    <a href="https://favze.com/services/paid-search-ads">Paid Search Ads</a>
+    <a href="https://favze.com/services/paid-social-media-ads">Paid Social Ads</a>
     <a href="https://favze.com/services" style="font-weight:700;color:var(--navy);">All Services</a>
-      <a href="https://favze.com/service-match" style="font-weight:700;color:#086E84" data-sm-entry="mobile-menu">Not Sure? Take the Service Match</a>
+      <a href="https://favze.com/resources/marketing-tools/service-match" style="font-weight:700;color:#086E84" data-sm-entry="mobile-menu">Not Sure? Take the Service Match</a>
   </div>
-  <button class="mm-toggle" id="mmArtTrig" aria-expanded="false">
-    Resources
-    <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  </button>
-  <div class="mm-sub" id="mmArtSub">
-    <a href="https://favze.com/articles/content-marketing">Content Marketing</a>
-    <a href="https://favze.com/articles/social-media-strategy">Social Media Strategy</a>
-    <a href="https://favze.com/articles/search-visibility">Search Visibility &amp; Local Discovery</a>
-    <a href="https://favze.com/articles/brand-positioning">Brand Positioning &amp; Community Authority</a>
-    <a href="https://favze.com/articles" style="font-weight:700;color:var(--navy);">All Articles</a>
+  <button class="mm-toggle" id="fzMmResTrig" aria-expanded="false">Resources <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  <div class="mm-sub" id="fzMmResSub">
+    <a href="https://favze.com/resources/articles/content-marketing">Content Marketing</a>
+    <a href="https://favze.com/resources/articles/social-media-strategy">Social Media Strategy</a>
+    <a href="https://favze.com/resources/articles/search-visibility">Search Visibility &amp; Local Discovery</a>
+    <a href="https://favze.com/resources/articles/brand-positioning">Brand Positioning &amp; Community Authority</a>
+    <a href="https://favze.com/resources/articles" style="font-weight:700;color:var(--navy);">All Articles</a>
     <div class="fz-mm-label">Newsletters</div>
-    <a href="https://www.linkedin.com/newsletters/favze-insights-7399519169551126528/" target="_blank" rel="noopener noreferrer">Favze Insights &#8599;</a>
-    <a href="https://favze.com/newsletters#intel-card">Favze Intel</a>
-    <a href="https://favze.com/newsletters#insider-card">Favze Insider</a>
-    <a href="https://favze.com/newsletters" style="font-weight:700;color:var(--navy);">All Newsletters</a>
+    <a href="https://favze.com/resources/newsletters/favze-insider">Favze Insider</a>
+    <a href="https://favze.com/resources/newsletters/favze-intel">Favze Intel</a>
+    <a href="https://favze.com/resources/newsletters/favze-insights">Favze Insights</a>
+    <a href="https://favze.com/resources/newsletters" style="font-weight:700;color:var(--navy);">All Newsletters</a>
     <div class="fz-mm-label">Glossaries</div>
-    <a href="https://favze.com/marketing-glossary">Marketing Terms Glossary</a>
-    <a href="https://favze.com/marketing-kpis-glossary">Marketing KPIs Glossary</a>
-    <a href="https://favze.com/ai-glossary">AI &amp; Automation Glossary</a>
+    <a href="https://favze.com/resources/glossary/marketing-terms">Marketing Terms Glossary</a>
+    <a href="https://favze.com/resources/glossary/marketing-kpis">Marketing KPIs Glossary</a>
+    <a href="https://favze.com/resources/glossary/ai">AI &amp; Automation Glossary</a>
+        <div class="fz-mm-label">Marketing Tools</div>
+        <a href="https://favze.com/resources/marketing-tools/service-match" data-sm-entry="nav-tools">Service Match Quiz</a>
+    <a href="https://favze.com/resources" style="font-weight:700;color:#064187">All Resources</a>
   </div>
   <a href="https://favze.com/why-us" class="mm-link">Why Us</a>
   <a href="https://favze.com/about" class="mm-link">About</a>
@@ -1172,7 +1168,7 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
       <div class="co-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 2C5.69 2 3 4.69 3 8c0 4.5 6 10 6 10s6-5.5 6-10c0-3.31-2.69-6-6-6z" stroke="currentColor" stroke-width="1.4"/><circle cx="9" cy="8" r="2.2" stroke="currentColor" stroke-width="1.3"/></svg></div>
       <div>
         <div class="co-title">30 Minutes Away. Not 300.</div>
-        <div class="co-text">Favze is based in Middlebury, Elkhart County, just 30 minutes from South Bend. We are a Northern Indiana agency, not a Chicago or Indianapolis firm treating St. Joseph County as a territory on a spreadsheet. We understand how Notre Dame&rsquo;s calendar drives seasonal search spikes, how Granger&rsquo;s demographics demand premium positioning, and how Mishawaka&rsquo;s retail corridor works differently from anything else in the region. Read our <a href="https://favze.com/articles/search-visibility">Search Visibility articles</a> and <a href="https://favze.com/articles/brand-positioning">Brand Positioning articles</a> for how regional strategy compounds.</div>
+        <div class="co-text">Favze is based in Middlebury, Elkhart County, just 30 minutes from South Bend. We are a Northern Indiana agency, not a Chicago or Indianapolis firm treating St. Joseph County as a territory on a spreadsheet. We understand how Notre Dame&rsquo;s calendar drives seasonal search spikes, how Granger&rsquo;s demographics demand premium positioning, and how Mishawaka&rsquo;s retail corridor works differently from anything else in the region. Read our <a href="https://favze.com/resources/articles/search-visibility">Search Visibility articles</a> and <a href="https://favze.com/resources/articles/brand-positioning">Brand Positioning articles</a> for how regional strategy compounds.</div>
       </div>
     </div>
     <p>We offer all <strong>12 digital marketing services</strong> to every St. Joseph County business, from <a href="https://favze.com/services/local-seo">Local SEO</a> and <a href="https://favze.com/services/paid-search-ads">paid search ads</a> designed for competitive South Bend and Mishawaka markets, to <a href="https://favze.com/services/email-marketing">email</a>, <a href="https://favze.com/services/short-message-service-sms">SMS</a>, <a href="https://favze.com/services/hubspot-setup">HubSpot</a>, and <a href="https://favze.com/services/website-design">website design</a> tailored to each community&rsquo;s audience. Learn <a href="https://favze.com/our-process">how we work</a> and <a href="https://favze.com/why-us">why businesses choose Favze</a>.</p>
@@ -1209,19 +1205,19 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
 
     <div class="svc-card">
       <div class="svc-head"><div class="svc-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 2C5.69 2 3 4.69 3 8c0 4.5 6 10 6 10s6-5.5 6-10c0-3.31-2.69-6-6-6z" stroke="currentColor" stroke-width="1.4"/><circle cx="9" cy="8" r="2.2" stroke="currentColor" stroke-width="1.3"/></svg></div><div class="svc-name">Local SEO</div></div>
-      <p class="svc-desc">When someone in South Bend searches "best dentist near me" or a Mishawaka resident Googles "home services," Local SEO determines whether they find you or your competitor. We optimize your <a class="fz-gl-link" href="https://favze.com/marketing-glossary#google-business-profile">Google Business Profile</a>, build directory citations, create city-level landing pages, and deploy a review strategy targeting Map Pack placement, where 44% of local clicks go. In South Bend and Mishawaka the competition is real. In Lakeville, North Liberty, and Walkerton, most categories are unclaimed.</p>
+      <p class="svc-desc">When someone in South Bend searches "best dentist near me" or a Mishawaka resident Googles "home services," Local SEO determines whether they find you or your competitor. We optimize your <a class="fz-gl-link" href="https://favze.com/resources/glossary/marketing-terms#google-business-profile">Google Business Profile</a>, build directory citations, create city-level landing pages, and deploy a review strategy targeting Map Pack placement, where 44% of local clicks go. In South Bend and Mishawaka the competition is real. In Lakeville, North Liberty, and Walkerton, most categories are unclaimed.</p>
       <a href="https://favze.com/services/local-seo" class="svc-link">Learn More <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5h7M6 2.5l3 3-3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
 
     <div class="svc-card">
       <div class="svc-head"><div class="svc-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.3"/><path d="M12 12l3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="svc-name">Search Engine Optimization (SEO)</div></div>
-      <p class="svc-desc">Organic SEO builds lasting Google authority that compounds month over month. In competitive South Bend and Mishawaka markets, businesses with strong content depth and <a class="fz-gl-link" href="https://favze.com/marketing-glossary#backlink">backlink</a> authority pull ahead of competitors and hold those positions for years. In outlying St. Joseph County communities, organic rankings are attainable quickly with minimal competition. Every month you invest builds an asset no competitor can instantly replicate.</p>
+      <p class="svc-desc">Organic SEO builds lasting Google authority that compounds month over month. In competitive South Bend and Mishawaka markets, businesses with strong content depth and <a class="fz-gl-link" href="https://favze.com/resources/glossary/marketing-terms#backlink">backlink</a> authority pull ahead of competitors and hold those positions for years. In outlying St. Joseph County communities, organic rankings are attainable quickly with minimal competition. Every month you invest builds an asset no competitor can instantly replicate.</p>
       <a href="https://favze.com/services/search-engine-optimization" class="svc-link">Learn More <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5h7M6 2.5l3 3-3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
 
     <div class="svc-card">
       <div class="svc-head"><div class="svc-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="2" y="3" width="14" height="12" rx="2.5" stroke="currentColor" stroke-width="1.3"/><path d="M5 8h8M5 11h5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></div><div class="svc-name">Answer Engine Optimization (AEO)</div></div>
-      <p class="svc-desc">Google <a class="fz-gl-link" href="https://favze.com/marketing-glossary#ai-overviews">AI Overviews</a>, Siri, Alexa, and voice search now pull direct answers before users see traditional results. AEO structures your content so your St. Joseph County business is the source these systems pull from when customers ask questions related to your industry. With Notre Dame drawing visitors who frequently use voice search to find local services, AEO presence is a competitive edge most South Bend businesses haven&rsquo;t built yet.</p>
+      <p class="svc-desc">Google <a class="fz-gl-link" href="https://favze.com/resources/glossary/marketing-terms#ai-overviews">AI Overviews</a>, Siri, Alexa, and voice search now pull direct answers before users see traditional results. AEO structures your content so your St. Joseph County business is the source these systems pull from when customers ask questions related to your industry. With Notre Dame drawing visitors who frequently use voice search to find local services, AEO presence is a competitive edge most South Bend businesses haven&rsquo;t built yet.</p>
       <a href="https://favze.com/services/answer-engine-optimization" class="svc-link">Learn More <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5h7M6 2.5l3 3-3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
 
@@ -1245,7 +1241,7 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
 
     <div class="svc-card">
       <div class="svc-head"><div class="svc-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="2" y="4" width="14" height="11" rx="2" stroke="currentColor" stroke-width="1.3"/><path d="M2 7l7 5 7-5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></div><div class="svc-name">Email Marketing</div></div>
-      <p class="svc-desc">Email delivers the highest <a class="fz-gl-link" href="https://favze.com/marketing-kpis-glossary#return-on-investment">ROI</a> of any digital channel. For St. Joseph County businesses with an existing customer base, email marketing turns that base into a repeat-revenue engine. A South Bend restaurant building loyalty with regulars. A Mishawaka retailer activating customers before a seasonal promotion. A Granger professional services firm staying top-of-mind with clients. A Notre Dame-adjacent business building a list of repeat game-day visitors. We build the list, write the sequences, and track revenue impact directly.</p>
+      <p class="svc-desc">Email delivers the highest <a class="fz-gl-link" href="https://favze.com/resources/glossary/marketing-kpis#return-on-investment">ROI</a> of any digital channel. For St. Joseph County businesses with an existing customer base, email marketing turns that base into a repeat-revenue engine. A South Bend restaurant building loyalty with regulars. A Mishawaka retailer activating customers before a seasonal promotion. A Granger professional services firm staying top-of-mind with clients. A Notre Dame-adjacent business building a list of repeat game-day visitors. We build the list, write the sequences, and track revenue impact directly.</p>
       <a href="https://favze.com/services/email-marketing" class="svc-link">Learn More <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5h7M6 2.5l3 3-3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
 
@@ -1269,7 +1265,7 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
 
     <div class="svc-card">
       <div class="svc-head"><div class="svc-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 5a2 2 0 012-2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V5z" stroke="currentColor" stroke-width="1.3"/><path d="M6 9h6M9 6v6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></div><div class="svc-name">HubSpot Setup</div></div>
-      <p class="svc-desc">Marketing without a CRM means leads fall through the cracks. HubSpot ties your leads, contacts, email campaigns, and sales pipeline together in one place. Every contact that comes from your Favze campaigns gets tracked, nurtured, and followed up with automated precision. For South Bend B2B businesses, Granger professional services firms, and Mishawaka retailers managing a recurring customer base, a properly built CRM transforms marketing spend into measurable closed revenue. Read our <a href="https://favze.com/articles/content-marketing">Content Marketing articles</a> for related strategy.</p>
+      <p class="svc-desc">Marketing without a CRM means leads fall through the cracks. HubSpot ties your leads, contacts, email campaigns, and sales pipeline together in one place. Every contact that comes from your Favze campaigns gets tracked, nurtured, and followed up with automated precision. For South Bend B2B businesses, Granger professional services firms, and Mishawaka retailers managing a recurring customer base, a properly built CRM transforms marketing spend into measurable closed revenue. Read our <a href="https://favze.com/resources/articles/content-marketing">Content Marketing articles</a> for related strategy.</p>
       <a href="https://favze.com/services/hubspot-setup" class="svc-link">Learn More <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5h7M6 2.5l3 3-3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
 
@@ -1422,7 +1418,7 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
   <div>
     <span class="ob-lbl">270,000 People. Notre Dame. A Reviving Downtown. An Affluent Suburb. And Three Underserved Rural Markets.</span>
     <div class="ob-title">St. Joseph County Has <span>Every Type</span> of Market.</div>
-    <p class="ob-text">No single strategy wins across all of St. Joseph County. South Bend requires authority, content depth, and paid coverage to compete in a genuine urban market. Notre Dame demands seasonally-aware campaigns built around a university calendar that drives national-scale traffic. Granger rewards premium brand positioning and research-stage content. And Lakeville, North Liberty, and Walkerton are essentially unclaimed, where any business willing to invest in basic <a href="https://favze.com/services/local-seo" style="color:var(--teal)">Local SEO</a> and a professional website can own its category in weeks. <strong>Favze builds strategy around what is actually true about each community within St. Joseph County.</strong> Start with a <a href="https://favze.com/free-consultation" style="color:var(--teal)">free consultation</a> or read our <a href="https://favze.com/articles/brand-positioning" style="color:var(--teal)">Brand Positioning articles</a>.</p>
+    <p class="ob-text">No single strategy wins across all of St. Joseph County. South Bend requires authority, content depth, and paid coverage to compete in a genuine urban market. Notre Dame demands seasonally-aware campaigns built around a university calendar that drives national-scale traffic. Granger rewards premium brand positioning and research-stage content. And Lakeville, North Liberty, and Walkerton are essentially unclaimed, where any business willing to invest in basic <a href="https://favze.com/services/local-seo" style="color:var(--teal)">Local SEO</a> and a professional website can own its category in weeks. <strong>Favze builds strategy around what is actually true about each community within St. Joseph County.</strong> Start with a <a href="https://favze.com/free-consultation" style="color:var(--teal)">free consultation</a> or read our <a href="https://favze.com/resources/articles/brand-positioning" style="color:var(--teal)">Brand Positioning articles</a>.</p>
   </div>
   <div class="ob-right">
     <div class="ob-stats">
@@ -1466,7 +1462,7 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
       <span class="why-dark-lbl">From Northern Indiana, for St. Joseph County. Not from a Spreadsheet.</span>
       <div class="why-dark-title">What Makes a Regional Agency <span style="color:var(--teal)">Actually Different</span></div>
       <p>Most agencies that say they serve South Bend are running your account from Chicago. They have never driven the University Drive corridor on a Saturday, experienced the Notre Dame game-day economy firsthand, or understood what makes the Granger market different from everything around it. They know your zip code. They do not know your market.</p>
-      <p>Favze was built to be the opposite. Regional knowledge changes how we do keyword research, who we identify as your actual competitors, how we time seasonal campaigns around Notre Dame&rsquo;s calendar, and how we position your brand relative to the dramatically different sub-markets within St. Joseph County. That is a structural advantage, and it compounds into better results every month. Read our <a href="https://favze.com/articles/search-visibility" style="color:var(--teal)">Search Visibility</a> and <a href="https://favze.com/articles/brand-positioning" style="color:var(--teal)">Brand Positioning</a> articles for how this works in practice.</p>
+      <p>Favze was built to be the opposite. Regional knowledge changes how we do keyword research, who we identify as your actual competitors, how we time seasonal campaigns around Notre Dame&rsquo;s calendar, and how we position your brand relative to the dramatically different sub-markets within St. Joseph County. That is a structural advantage, and it compounds into better results every month. Read our <a href="https://favze.com/resources/articles/search-visibility" style="color:var(--teal)">Search Visibility</a> and <a href="https://favze.com/resources/articles/brand-positioning" style="color:var(--teal)">Brand Positioning</a> articles for how this works in practice.</p>
       <div class="why-stat-grid">
         <div class="why-stat"><div class="why-stat-num">12</div><div class="why-stat-lbl">Services Under One Roof</div></div>
         <div class="why-stat"><div class="why-stat-num">8</div><div class="why-stat-lbl">Communities Served</div></div>
@@ -1501,7 +1497,7 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
     </div>
     <div class="faq-list">
       <details class="faq-item"><summary><span class="fq-q">Does Favze serve South Bend, Mishawaka, Granger, Notre Dame, and the rest of St. Joseph County?</span><span class="fq-icon"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 2v7M2 5.5h7" stroke="#666" stroke-width="1.7" stroke-linecap="round"/></svg></span></summary><div class="fq-ans"><p><strong>Yes: every community in St. Joseph County.</strong> South Bend, Mishawaka, Granger, Notre Dame, Osceola, Lakeville, North Liberty, Walkerton, and all surrounding townships. No minimum business size, no community too small. Based 30 minutes east in Middlebury. Call <a href="tel:+15747475012">574-747-5012</a> or <a href="https://favze.com/free-consultation">book a free consultation</a>. See all <a href="https://favze.com/areas-served">areas served</a> and the <a href="https://favze.com/areas-served/northern-indiana">Northern Indiana hub</a>.</p></div></details>
-      <details class="faq-item"><summary><span class="fq-q">Why should a St. Joseph County business choose a regional agency over a national one?</span><span class="fq-icon"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 2v7M2 5.5h7" stroke="#666" stroke-width="1.7" stroke-linecap="round"/></svg></span></summary><div class="fq-ans"><p>National agencies apply generic strategies to every market. They do not know that Notre Dame&rsquo;s game-day calendar drives massive search spikes, that Granger demands premium positioning, that University Drive in Mishawaka is one of the most competitive retail corridors in Northern Indiana, or that Lakeville and Walkerton are dramatically underserved with first-mover positions available at almost no cost. <strong>Favze is 30 minutes away. We know this market from the inside.</strong> That translates into better keyword targeting, smarter competitive analysis, and campaigns that resonate with the actual people you are trying to reach. Read our <a href="https://favze.com/articles/search-visibility">Search Visibility articles</a> for more.</p></div></details>
+      <details class="faq-item"><summary><span class="fq-q">Why should a St. Joseph County business choose a regional agency over a national one?</span><span class="fq-icon"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 2v7M2 5.5h7" stroke="#666" stroke-width="1.7" stroke-linecap="round"/></svg></span></summary><div class="fq-ans"><p>National agencies apply generic strategies to every market. They do not know that Notre Dame&rsquo;s game-day calendar drives massive search spikes, that Granger demands premium positioning, that University Drive in Mishawaka is one of the most competitive retail corridors in Northern Indiana, or that Lakeville and Walkerton are dramatically underserved with first-mover positions available at almost no cost. <strong>Favze is 30 minutes away. We know this market from the inside.</strong> That translates into better keyword targeting, smarter competitive analysis, and campaigns that resonate with the actual people you are trying to reach. Read our <a href="https://favze.com/resources/articles/search-visibility">Search Visibility articles</a> for more.</p></div></details>
       <details class="faq-item"><summary><span class="fq-q">How competitive is digital marketing in South Bend and Mishawaka?</span><span class="fq-icon"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 2v7M2 5.5h7" stroke="#666" stroke-width="1.7" stroke-linecap="round"/></svg></span></summary><div class="fq-ans"><p>South Bend and Mishawaka are genuinely competitive markets. Most service categories have multiple businesses investing in <a href="https://favze.com/services/search-engine-optimization">SEO</a> and <a href="https://favze.com/services/paid-search-ads">paid ads</a>. That makes strategy quality and execution critical. <strong>In outlying communities like Lakeville, North Liberty, and Walkerton, digital competition is minimal and first-mover positions are available quickly at low cost.</strong> Osceola sits between those extremes: growing fast enough to reward early investment but not yet as saturated as the urban core.</p></div></details>
       <details class="faq-item"><summary><span class="fq-q">How does Notre Dame affect digital marketing for nearby businesses?</span><span class="fq-icon"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 2v7M2 5.5h7" stroke="#666" stroke-width="1.7" stroke-linecap="round"/></svg></span></summary><div class="fq-ans"><p>Notre Dame creates predictable seasonal traffic spikes tied to the football calendar, graduation, and campus event schedules that drive national-scale visitor searches. Businesses near campus with strong <a href="https://favze.com/services/local-seo">Local SEO</a>, <a href="https://favze.com/services/generative-engine-optimization">GEO</a>, and <a href="https://favze.com/services/answer-engine-optimization">AEO</a> presence appear when visitors use AI tools and Google to search for nearby restaurants, lodging, and services before they arrive. <strong>Most South Bend and Notre Dame businesses are not positioning their content around these seasonal patterns at all.</strong> That is a straightforward opportunity for the businesses that do.</p></div></details>
       <details class="faq-item"><summary><span class="fq-q">Is Favze affordable for a small South Bend or Mishawaka business?</span><span class="fq-icon"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 2v7M2 5.5h7" stroke="#666" stroke-width="1.7" stroke-linecap="round"/></svg></span></summary><div class="fq-ans"><p>Yes. Favze was built for small and mid-size businesses. A South Bend restaurant and a Granger professional services firm have different revenue scales and different competitive contexts. Pricing is built around your actual goals, competition level, and market, not a flat retainer rate applied regardless of context. Start with a free consultation where Riley will review your situation and give you honest cost expectations. Call <a href="tel:+15747475012">574-747-5012</a> or visit <a href="https://favze.com/free-consultation">favze.com/free-consultation</a>. See our <a href="https://favze.com/faq">FAQ page</a> for more.</p></div></details>
@@ -1510,7 +1506,7 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
       <details class="faq-item"><summary><span class="fq-q">How do I get started?</span><span class="fq-icon"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 2v7M2 5.5h7" stroke="#666" stroke-width="1.7" stroke-linecap="round"/></svg></span></summary><div class="fq-ans"><p>Book a free consultation at <a href="https://favze.com/free-consultation"><strong>favze.com/free-consultation</strong></a> or call Riley directly at <a href="tel:+15747475012"><strong>574-747-5012</strong></a>. You do not need a plan ready or know which services you want. Just describe your business and where you want to grow. The call takes about 30 minutes and by the end you will know where you stand digitally, what your biggest opportunities are in St. Joseph County, and what it would realistically take to capture them. Read our <a href="https://favze.com/our-process">Our Process page</a> to see exactly what happens after you reach out.</p></div></details>
     </div>
   
-  <p class="fz-text-cta">Have a question that is not answered here? <a href="https://favze.com/free-consultation?reason=faq-question" data-cta="faq-ask-riley">Ask Riley in a free consultation</a>, or <a href="https://favze.com/service-match?from=faq-st-joseph-county" data-sm-entry="faq-st-joseph-county">see which services fit your business in 60 seconds</a>.</p>
+  <p class="fz-text-cta">Have a question that is not answered here? <a href="https://favze.com/free-consultation?reason=faq-question" data-cta="faq-ask-riley">Ask Riley in a free consultation</a>, or <a href="https://favze.com/resources/marketing-tools/service-match?from=faq-st-joseph-county" data-sm-entry="faq-st-joseph-county">see which services fit your business in 60 seconds</a>.</p>
 </div>
 </section>
 
@@ -1571,7 +1567,7 @@ footer.ft-std .ft-dot{color:rgba(255,255,255,.18);padding:0 6px}
 <div class="fz-related-inner">
 <p class="fz-related-eyebrow">Free Guides</p>
 <h2 id="fzRelated-area">Marketing Guides for St. Joseph County Businesses</h2>
-<div class="fz-related-grid"><a class="fz-related-card" href="https://favze.com/articles/brand-positioning/how-to-make-business-local-favorite"><span class="fz-related-tag">Brand Positioning</span><span class="fz-related-title">How to Make Your Business the Local Favorite</span><span class="fz-related-more">Read the guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="fz-related-card" href="https://favze.com/articles/search-visibility/google-business-profile-checklist"><span class="fz-related-tag">Search Visibility</span><span class="fz-related-title">The Complete Google Business Profile Checklist</span><span class="fz-related-more">Read the guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="fz-related-card" href="https://favze.com/articles/search-visibility/new-rules-online-visibility-seo-aeo-geo"><span class="fz-related-tag">Search Visibility</span><span class="fz-related-title">SEO vs. AEO vs. GEO: The New Rules of Online Visibility</span><span class="fz-related-more">Read the guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
+<div class="fz-related-grid"><a class="fz-related-card" href="https://favze.com/resources/articles/brand-positioning/how-to-make-business-local-favorite"><span class="fz-related-tag">Brand Positioning</span><span class="fz-related-title">How to Make Your Business the Local Favorite</span><span class="fz-related-more">Read the guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="fz-related-card" href="https://favze.com/resources/articles/search-visibility/google-business-profile-checklist"><span class="fz-related-tag">Search Visibility</span><span class="fz-related-title">The Complete Google Business Profile Checklist</span><span class="fz-related-more">Read the guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="fz-related-card" href="https://favze.com/resources/articles/search-visibility/new-rules-online-visibility-seo-aeo-geo"><span class="fz-related-tag">Search Visibility</span><span class="fz-related-title">SEO vs. AEO vs. GEO: The New Rules of Online Visibility</span><span class="fz-related-more">Read the guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
 <p class="fz-related-alt">See how every channel fits together in the <a href="https://favze.com/favze-framework">FAVZE Framework</a>, or check your own marketing with the <a href="https://favze.com/full-digital-marketing-audit">free digital marketing audit checklist</a>.</p>
 </div>
 </section>
@@ -1580,7 +1576,7 @@ footer.ft-std .ft-dot{color:rgba(255,255,255,.18);padding:0 6px}
 <div class="fz-smband-inner">
 <div class="fz-smband-ico" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" stroke="currentColor" stroke-width="2"/><path d="M15.6 8.4l-2.1 5.1-5.1 2.1 2.1-5.1z" fill="currentColor"/></svg></div>
 <div class="fz-smband-copy"><p class="fz-smband-kick">Free Service Match &middot; 60 seconds</p><h2 id="fzSmBand-st-joseph-county" class="fz-smband-title">Not Sure Which Service Fits Your Business?</h2><p class="fz-smband-sub">Answer 3 quick questions about your business type, industry, and goals. Service Match builds a phased plan showing which Favze services to start with and why.</p><ul class="fz-smband-steps"><li><b>1</b>Your business</li><li><b>2</b>Your industry</li><li><b>3</b>Your goals</li></ul></div>
-<div class="fz-smband-acts"><a class="fz-smband-btn" href="https://favze.com/service-match?from=st-joseph-county" data-sm-entry="band-st-joseph-county">Find My Service <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="fz-smband-alt" href="https://favze.com/free-consultation" data-cta="smband-consult">Or talk it through with Riley</a></div>
+<div class="fz-smband-acts"><a class="fz-smband-btn" href="https://favze.com/resources/marketing-tools/service-match?from=st-joseph-county" data-sm-entry="band-st-joseph-county">Find My Service <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="fz-smband-alt" href="https://favze.com/free-consultation" data-cta="smband-consult">Or talk it through with Riley</a></div>
 </div>
 </section>
 <section class="fz-form-sec" id="free-consultation-form" aria-labelledby="fzFormTitle">
@@ -1642,27 +1638,33 @@ footer.ft-std .ft-dot{color:rgba(255,255,255,.18);padding:0 6px}
         </ul>
       </div>
       <div class="fc">
-        <h3><a href="https://favze.com/articles">Articles</a></h3>
+        <h3><a href="https://favze.com/resources/articles">Articles</a></h3>
         <ul>
-          <li><a href="https://favze.com/articles/content-marketing">Content Marketing</a></li>
-          <li><a href="https://favze.com/articles/social-media-strategy">Social Media Strategy</a></li>
-          <li><a href="https://favze.com/articles/search-visibility">Search Visibility &amp; Local Discovery</a></li>
-          <li><a href="https://favze.com/articles/brand-positioning">Brand Positioning</a></li>
+          <li><a href="https://favze.com/resources/articles/content-marketing">Content Marketing</a></li>
+          <li><a href="https://favze.com/resources/articles/social-media-strategy">Social Media Strategy</a></li>
+          <li><a href="https://favze.com/resources/articles/search-visibility">Search Visibility &amp; Local Discovery</a></li>
+          <li><a href="https://favze.com/resources/articles/brand-positioning">Brand Positioning</a></li>
         </ul>
         <div style="margin-top:22px">
-          <h3><a href="https://favze.com/newsletters">Newsletters</a></h3>
+          <h3><a href="https://favze.com/resources/newsletters">Newsletters</a></h3>
           <ul>
-            <li><a href="https://favze.com/newsletters#insider-card">Favze Insider</a></li>
-            <li><a href="https://favze.com/newsletters#intel-card">Favze Intel</a></li>
-            <li><a href="https://www.linkedin.com/newsletters/favze-insights-7399519169551126528/" target="_blank" rel="noopener noreferrer nofollow">Favze Insights</a></li>
+            <li><a href="https://favze.com/resources/newsletters/favze-insider">Favze Insider</a></li>
+            <li><a href="https://favze.com/resources/newsletters/favze-intel">Favze Intel</a></li>
+            <li><a href="https://favze.com/resources/newsletters/favze-insights">Favze Insights</a></li>
           </ul>
         </div>
         <div style="margin-top:22px">
-          <h3><a href="https://favze.com/marketing-glossary">Glossaries</a></h3>
+          <h3><a href="https://favze.com/resources/glossary">Glossaries</a></h3>
           <ul>
-            <li><a href="https://favze.com/marketing-glossary">Marketing Terms</a></li>
-            <li><a href="https://favze.com/marketing-kpis-glossary">Marketing KPIs</a></li>
-            <li><a href="https://favze.com/ai-glossary">AI &amp; Automation</a></li>
+            <li><a href="https://favze.com/resources/glossary/marketing-terms">Marketing Terms</a></li>
+            <li><a href="https://favze.com/resources/glossary/marketing-kpis">Marketing KPIs</a></li>
+            <li><a href="https://favze.com/resources/glossary/ai">AI &amp; Automation</a></li>
+          </ul>
+        </div>
+        <div style="margin-top:22px">
+          <h3><a href="https://favze.com/resources/marketing-tools">Marketing Tools</a></h3>
+          <ul>
+            <li><a href="https://favze.com/resources/marketing-tools/service-match" data-sm-entry="footer-tools">Service Match</a></li>
           </ul>
         </div>
       </div>
@@ -1675,7 +1677,8 @@ footer.ft-std .ft-dot{color:rgba(255,255,255,.18);padding:0 6px}
           <li><a href="https://favze.com/our-process">Our Process</a></li>
           <li><a href="https://favze.com/favze-framework">FAVZE Framework</a></li>
           <li><a href="https://favze.com/services">All Services</a></li>
-          <li><a href="https://favze.com/service-match" data-sm-entry="footer">Service Match Quiz</a></li>
+          <li><a href="https://favze.com/resources/marketing-tools/service-match" data-sm-entry="footer">Service Match Quiz</a></li>
+          <li><a href="https://favze.com/resources">Resources</a></li>
           <li><a href="https://favze.com/faq">FAQ</a></li>
           <li><a href="https://favze.com/areas-served">Areas Served</a></li>
         </ul>
@@ -1706,7 +1709,7 @@ footer.ft-std .ft-dot{color:rgba(255,255,255,.18);padding:0 6px}
     <div class="fz-news">
       <div class="fz-news-copy">
         <p class="fz-news-title">Get Favze Insider and Favze Intel</p>
-        <p>One signup gets you two free monthly newsletters. Favze Insider keeps you current. Favze Intel makes you sharper. <a href="https://favze.com/newsletters">Learn more</a>.</p>
+        <p>One signup gets you two free monthly newsletters. Favze Insider keeps you current. Favze Intel makes you sharper. <a href="https://favze.com/resources/newsletters">Learn more</a>.</p>
       </div>
       <div class="fz-news-card">
         <iframe data-tally-src="https://tally.so/embed/Gxg47Z?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;formEventsForwarding=1" loading="lazy" width="100%" height="260" frameborder="0" marginheight="0" marginwidth="0" title="Favze newsletter signup"></iframe>
@@ -1755,6 +1758,7 @@ footer.ft-std .ft-dot{color:rgba(255,255,255,.18);padding:0 6px}
       <div style="display:flex;gap:18px;flex-wrap:wrap">
         <a href="https://favze.com/privacy-policy">Privacy Policy</a>
         <a href="https://favze.com/terms-of-use">Terms of Use</a>
+        <a href="https://favze.com/accessibility-statement">Accessibility Statement</a>
       </div>
     </div>
   </div>
@@ -1881,6 +1885,7 @@ window.silktideConsentManager.init({
 });
 </script>
 <script src="../assets/js/fz-site.js"></script>
+<script src="../assets/js/fz-nav.js" defer></script>
 <script src="../assets/js/fz-search.js" defer></script>
 <script src="../assets/js/fz-ui.js" defer></script>
 

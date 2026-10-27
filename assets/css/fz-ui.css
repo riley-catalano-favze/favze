@@ -602,3 +602,10 @@ html body .hero-ctas a.fz-gl-btn.is-art[href]{background:#fff!important;backgrou
 html body .hero-ctas a.fz-gl-btn[href]:hover{transform:translateY(-2px)}
 .fz-gl-link{color:inherit!important;text-decoration:underline dotted!important;text-decoration-thickness:1.5px!important;text-underline-offset:3px;text-decoration-color:currentColor!important}.fz-gl-link:hover{text-decoration-style:solid!important;color:#0A89A3!important}
 .fz-text-cta{max-width:820px;margin:28px auto 0;text-align:center;font-size:16px;line-height:1.6;color:inherit}.fz-text-cta a{font-weight:800;color:inherit;text-decoration:underline!important;text-underline-offset:3px}
+/* Service pill row: centered on tablet and computer, scrolls on phones */
+@media(min-width:769px){
+  html body .svc-nav{overflow:visible}
+  html body .svc-nav-inner{width:100%;min-width:0;flex-wrap:wrap;justify-content:center;gap:4px;padding:8px 3%;box-sizing:border-box}
+  html body .svc-nav .svc-pill{padding:9px 13px;border-right:0;border-radius:999px}
+}
+@media(min-width:1200px){html body .svc-nav-inner{gap:2px;padding:8px 2%}html body .svc-nav .svc-pill{padding:9px 10px;letter-spacing:.02em;gap:6px}}

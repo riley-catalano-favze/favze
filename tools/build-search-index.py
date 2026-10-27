@@ -20,7 +20,11 @@ def url_of(f):
 def kind_of(f):
     if f.startswith('services/'): return 'Service' if not f.endswith('index.html') else 'Services'
     if f.startswith('areas-served/'): return 'Area' if not f.endswith('index.html') else 'Areas'
-    if f.startswith('articles/'): return 'Article' if f.count('/') == 2 and not f.endswith('index.html') else 'Insights'
+    if f.startswith('resources/articles/'): return 'Article' if f.count('/') == 3 and not f.endswith('index.html') else 'Insights'
+    if f.startswith('resources/newsletters/'): return 'Newsletter'
+    if f.startswith('resources/glossary/'): return 'Glossary'
+    if f.startswith('resources/marketing-tools/'): return 'Tool'
+    if f.startswith('resources/'): return 'Resources'
     return 'Page'
 
 out = []

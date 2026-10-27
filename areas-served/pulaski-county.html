@@ -932,6 +932,7 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
 </style>
 <link rel="stylesheet" href="../assets/css/fz-site.css">
 <link rel="stylesheet" href="../assets/css/fz-ui.css">
+<link rel="stylesheet" href="../assets/css/fz-nav.css">
 <script type="application/ld+json" id="fz-person-schema">
 {
   "@context": "https://schema.org",
@@ -961,54 +962,52 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
 <nav>
   <a class="fz-skip" href="#main">Skip to main content</a>
   <a href="https://favze.com/" class="fz-logo" aria-label="Favze home"><img src="https://favze.com/assets/brand/favze-logo-horizontal-black.png" alt="Favze Digital Marketing" width="147" height="34"></a>
-  <ul class="nl">
+  <ul class="nl fz-nl">
     <li>
-      <button class="drop-trigger" id="trigServices" aria-expanded="false" aria-controls="panServices">
-        Services
-        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="drop-panel" id="panServices" role="menu">
+      <button class="drop-trigger" id="fzTrigSvc" aria-expanded="false" aria-controls="fzPanSvc">Services <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="drop-panel" id="fzPanSvc" role="menu">
         <div class="drop-label">All Services</div>
-        <a href="https://favze.com/services/local-seo" role="menuitem">Local SEO</a>
+        <a href="https://favze.com/services/social-media-marketing" role="menuitem">Social Media Marketing <span class="drop-abbr">SMM</span></a>
         <a href="https://favze.com/services/search-engine-optimization" role="menuitem">Search Engine Optimization <span class="drop-abbr">SEO</span></a>
         <a href="https://favze.com/services/answer-engine-optimization" role="menuitem">Answer Engine Optimization <span class="drop-abbr">AEO</span></a>
         <a href="https://favze.com/services/generative-engine-optimization" role="menuitem">Generative Engine Optimization <span class="drop-abbr">GEO</span></a>
         <a href="https://favze.com/services/ai-optimization" role="menuitem">AI Optimization</a>
-        <a href="https://favze.com/services/social-media-marketing" role="menuitem">Social Media Marketing <span class="drop-abbr">SMM</span></a>
-        <a href="https://favze.com/services/paid-search-ads" role="menuitem">Paid Search Ads <span class="drop-abbr">SEM</span></a>
-        <a href="https://favze.com/services/paid-social-media-ads" role="menuitem">Paid Social Media Ads</a>
+        <a href="https://favze.com/services/local-seo" role="menuitem">Local SEO</a>
         <a href="https://favze.com/services/email-marketing" role="menuitem">Email Marketing</a>
         <a href="https://favze.com/services/short-message-service-sms" role="menuitem">SMS Marketing</a>
         <a href="https://favze.com/services/hubspot-setup" role="menuitem">HubSpot Setup</a>
         <a href="https://favze.com/services/website-design" role="menuitem">Website Design</a>
+        <a href="https://favze.com/services/paid-search-ads" role="menuitem">Paid Search Ads <span class="drop-abbr">SEM</span></a>
+        <a href="https://favze.com/services/paid-social-media-ads" role="menuitem">Paid Social Media Ads</a>
         <div class="drop-divider"></div>
         <a href="https://favze.com/services" class="drop-view-all" role="menuitem">View All Services &rarr;</a>
-        <a href="https://favze.com/service-match" class="drop-view-all drop-sm" role="menuitem" data-sm-entry="nav">Not Sure? Take the Service Match &rarr;</a>
+        <a href="https://favze.com/resources/marketing-tools/service-match" class="drop-view-all drop-sm" role="menuitem" data-sm-entry="nav">Not Sure? Take the Service Match &rarr;</a>
       </div>
     </li>
     <li>
-      <button class="drop-trigger" id="trigArticles" aria-expanded="false" aria-controls="panArticles">
-        Resources
-        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="drop-panel center" id="panArticles" role="menu">
+      <button class="drop-trigger" id="fzTrigRes" aria-expanded="false" aria-controls="fzPanRes">Resources <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="drop-panel center" id="fzPanRes" role="menu">
         <div class="drop-label">Articles</div>
-        <a href="https://favze.com/articles/content-marketing" role="menuitem">Content Marketing</a>
-        <a href="https://favze.com/articles/social-media-strategy" role="menuitem">Social Media Strategy</a>
-        <a href="https://favze.com/articles/search-visibility" role="menuitem">Search Visibility &amp; Local Discovery</a>
-        <a href="https://favze.com/articles/brand-positioning" role="menuitem">Brand Positioning &amp; Community Authority</a>
-        <a href="https://favze.com/articles" class="drop-view-all" role="menuitem">All Articles &rarr;</a>
+        <a href="https://favze.com/resources/articles/content-marketing" role="menuitem">Content Marketing</a>
+        <a href="https://favze.com/resources/articles/social-media-strategy" role="menuitem">Social Media Strategy</a>
+        <a href="https://favze.com/resources/articles/search-visibility" role="menuitem">Search Visibility &amp; Local Discovery</a>
+        <a href="https://favze.com/resources/articles/brand-positioning" role="menuitem">Brand Positioning &amp; Community Authority</a>
+        <a href="https://favze.com/resources/articles" class="drop-view-all" role="menuitem">All Articles &rarr;</a>
         <div class="drop-divider"></div>
         <div class="drop-label">Newsletters</div>
-        <a href="https://www.linkedin.com/newsletters/favze-insights-7399519169551126528/" role="menuitem" target="_blank" rel="noopener noreferrer">Favze Insights &#8599;</a>
-        <a href="https://favze.com/newsletters#intel-card" role="menuitem">Favze Intel</a>
-        <a href="https://favze.com/newsletters#insider-card" role="menuitem">Favze Insider</a>
-        <a href="https://favze.com/newsletters" class="drop-view-all" role="menuitem">All Newsletters &rarr;</a>
+        <a href="https://favze.com/resources/newsletters/favze-insider" role="menuitem">Favze Insider</a>
+        <a href="https://favze.com/resources/newsletters/favze-intel" role="menuitem">Favze Intel</a>
+        <a href="https://favze.com/resources/newsletters/favze-insights" role="menuitem">Favze Insights</a>
+        <a href="https://favze.com/resources/newsletters" class="drop-view-all" role="menuitem">All Newsletters &rarr;</a>
         <div class="drop-divider"></div>
         <div class="drop-label">Glossaries</div>
-        <a href="https://favze.com/marketing-glossary" role="menuitem">Marketing Terms Glossary</a>
-        <a href="https://favze.com/marketing-kpis-glossary" role="menuitem">Marketing KPIs Glossary</a>
-        <a href="https://favze.com/ai-glossary" role="menuitem">AI &amp; Automation Glossary</a>
+        <a href="https://favze.com/resources/glossary/marketing-terms" role="menuitem">Marketing Terms Glossary</a>
+        <a href="https://favze.com/resources/glossary/marketing-kpis" role="menuitem">Marketing KPIs Glossary</a>
+        <a href="https://favze.com/resources/glossary/ai" role="menuitem">AI &amp; Automation Glossary</a>
+        <div class="drop-divider"></div>
+        <div class="drop-label">Marketing Tools</div>
+        <a href="https://favze.com/resources/marketing-tools/service-match" role="menuitem" data-sm-entry="nav-tools">Service Match Quiz</a>
+        <a href="https://favze.com/resources" class="drop-view-all" role="menuitem">All Resources &rarr;</a>
       </div>
     </li>
     <li><a href="https://favze.com/why-us" class="nl-link">Why Us</a></li>
@@ -1023,45 +1022,42 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
 </nav>
 <!-- Mobile menu -->
 <div class="mm" id="mm" aria-hidden="true">
-  <button class="mm-toggle" id="mmServTrig" aria-expanded="false">
-    Services
-    <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  </button>
-  <div class="mm-sub" id="mmServSub">
-    <a href="https://favze.com/services/local-seo">Local SEO</a>
+  <button class="mm-toggle" id="fzMmSvcTrig" aria-expanded="false">Services <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  <div class="mm-sub" id="fzMmSvcSub">
+    <a href="https://favze.com/services/social-media-marketing">Social Media Marketing</a>
     <a href="https://favze.com/services/search-engine-optimization">SEO</a>
     <a href="https://favze.com/services/answer-engine-optimization">AEO</a>
     <a href="https://favze.com/services/generative-engine-optimization">GEO</a>
     <a href="https://favze.com/services/ai-optimization">AI Optimization</a>
-    <a href="https://favze.com/services/social-media-marketing">Social Media Marketing</a>
-    <a href="https://favze.com/services/paid-search-ads">Paid Search Ads</a>
-    <a href="https://favze.com/services/paid-social-media-ads">Paid Social Media Ads</a>
+    <a href="https://favze.com/services/local-seo">Local SEO</a>
     <a href="https://favze.com/services/email-marketing">Email Marketing</a>
     <a href="https://favze.com/services/short-message-service-sms">SMS Marketing</a>
     <a href="https://favze.com/services/hubspot-setup">HubSpot Setup</a>
     <a href="https://favze.com/services/website-design">Website Design</a>
+    <a href="https://favze.com/services/paid-search-ads">Paid Search Ads</a>
+    <a href="https://favze.com/services/paid-social-media-ads">Paid Social Ads</a>
     <a href="https://favze.com/services" style="font-weight:700;color:var(--navy);">All Services</a>
-      <a href="https://favze.com/service-match" style="font-weight:700;color:#086E84" data-sm-entry="mobile-menu">Not Sure? Take the Service Match</a>
+      <a href="https://favze.com/resources/marketing-tools/service-match" style="font-weight:700;color:#086E84" data-sm-entry="mobile-menu">Not Sure? Take the Service Match</a>
   </div>
-  <button class="mm-toggle" id="mmArtTrig" aria-expanded="false">
-    Resources
-    <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  </button>
-  <div class="mm-sub" id="mmArtSub">
-    <a href="https://favze.com/articles/content-marketing">Content Marketing</a>
-    <a href="https://favze.com/articles/social-media-strategy">Social Media Strategy</a>
-    <a href="https://favze.com/articles/search-visibility">Search Visibility &amp; Local Discovery</a>
-    <a href="https://favze.com/articles/brand-positioning">Brand Positioning &amp; Community Authority</a>
-    <a href="https://favze.com/articles" style="font-weight:700;color:var(--navy);">All Articles</a>
+  <button class="mm-toggle" id="fzMmResTrig" aria-expanded="false">Resources <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  <div class="mm-sub" id="fzMmResSub">
+    <a href="https://favze.com/resources/articles/content-marketing">Content Marketing</a>
+    <a href="https://favze.com/resources/articles/social-media-strategy">Social Media Strategy</a>
+    <a href="https://favze.com/resources/articles/search-visibility">Search Visibility &amp; Local Discovery</a>
+    <a href="https://favze.com/resources/articles/brand-positioning">Brand Positioning &amp; Community Authority</a>
+    <a href="https://favze.com/resources/articles" style="font-weight:700;color:var(--navy);">All Articles</a>
     <div class="fz-mm-label">Newsletters</div>
-    <a href="https://www.linkedin.com/newsletters/favze-insights-7399519169551126528/" target="_blank" rel="noopener noreferrer">Favze Insights &#8599;</a>
-    <a href="https://favze.com/newsletters#intel-card">Favze Intel</a>
-    <a href="https://favze.com/newsletters#insider-card">Favze Insider</a>
-    <a href="https://favze.com/newsletters" style="font-weight:700;color:var(--navy);">All Newsletters</a>
+    <a href="https://favze.com/resources/newsletters/favze-insider">Favze Insider</a>
+    <a href="https://favze.com/resources/newsletters/favze-intel">Favze Intel</a>
+    <a href="https://favze.com/resources/newsletters/favze-insights">Favze Insights</a>
+    <a href="https://favze.com/resources/newsletters" style="font-weight:700;color:var(--navy);">All Newsletters</a>
     <div class="fz-mm-label">Glossaries</div>
-    <a href="https://favze.com/marketing-glossary">Marketing Terms Glossary</a>
-    <a href="https://favze.com/marketing-kpis-glossary">Marketing KPIs Glossary</a>
-    <a href="https://favze.com/ai-glossary">AI &amp; Automation Glossary</a>
+    <a href="https://favze.com/resources/glossary/marketing-terms">Marketing Terms Glossary</a>
+    <a href="https://favze.com/resources/glossary/marketing-kpis">Marketing KPIs Glossary</a>
+    <a href="https://favze.com/resources/glossary/ai">AI &amp; Automation Glossary</a>
+        <div class="fz-mm-label">Marketing Tools</div>
+        <a href="https://favze.com/resources/marketing-tools/service-match" data-sm-entry="nav-tools">Service Match Quiz</a>
+    <a href="https://favze.com/resources" style="font-weight:700;color:#064187">All Resources</a>
   </div>
   <a href="https://favze.com/why-us" class="mm-link">Why Us</a>
   <a href="https://favze.com/about" class="mm-link">About</a>
@@ -1147,7 +1143,7 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
       <div class="co-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 2C5.69 2 3 4.69 3 8c0 4.5 6 10 6 10s6-5.5 6-10c0-3.31-2.69-6-6-6z" stroke="currentColor" stroke-width="1.4"/><circle cx="9" cy="8" r="2.2" stroke="currentColor" stroke-width="1.3"/></svg></div>
       <div>
         <div class="co-title">Pulaski County&rsquo;s Trade Area Is Bigger Than Its Population Suggests.</div>
-        <div class="co-text">Pulaski County&rsquo;s position between South Bend to the north, Lafayette to the south, and the Illinois border to the west means local businesses draw trade-area customers from multiple directions. A Winamac service business with strong digital presence does not compete for just Pulaski County&rsquo;s 13,000 residents: it captures traffic from Starke County, Cass County, Newton County, and across the surrounding rural corridor. Read our <a href="https://favze.com/articles/search-visibility">Search Visibility articles</a> to understand how local authority compounds in thin-competition markets like this one.</div>
+        <div class="co-text">Pulaski County&rsquo;s position between South Bend to the north, Lafayette to the south, and the Illinois border to the west means local businesses draw trade-area customers from multiple directions. A Winamac service business with strong digital presence does not compete for just Pulaski County&rsquo;s 13,000 residents: it captures traffic from Starke County, Cass County, Newton County, and across the surrounding rural corridor. Read our <a href="https://favze.com/resources/articles/search-visibility">Search Visibility articles</a> to understand how local authority compounds in thin-competition markets like this one.</div>
       </div>
     </div>
     <p>BraunAbility, headquartered in Winamac, is globally recognized as a leader in mobility equipment manufacturing. Its presence creates a supplier and workforce network that draws professional and technical talent into the county and signals a commercial sophistication far above what the county&rsquo;s raw population numbers suggest. The Tippecanoe River State Park in Winamac brings outdoor recreation visitors from across Northern Indiana. Jasper-Pulaski Fish &amp; Wildlife Area near Medaryville draws tens of thousands of crane migration observers every fall from across the Midwest. <strong>None of those visitor flows are being captured digitally by local businesses in any meaningful way.</strong> That is the opportunity. See the full <a href="https://favze.com/areas-served/northern-indiana">Northern Indiana coverage area</a> and <a href="https://favze.com/areas-served">all areas served</a>.</p>
@@ -1184,7 +1180,7 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
 
     <div class="svc-card">
       <div class="svc-head"><div class="svc-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 2C5.69 2 3 4.69 3 8c0 4.5 6 10 6 10s6-5.5 6-10c0-3.31-2.69-6-6-6z" stroke="currentColor" stroke-width="1.4"/><circle cx="9" cy="8" r="2.2" stroke="currentColor" stroke-width="1.3"/></svg></div><div class="svc-name">Local SEO</div></div>
-      <p class="svc-desc">When a Pulaski County resident searches for a plumber, electrician, or restaurant near Winamac, Local SEO determines who gets found. We optimize your <a class="fz-gl-link" href="https://favze.com/marketing-glossary#google-business-profile">Google Business Profile</a>, build directory citations, and build county-specific landing pages. In Pulaski County, Local SEO competition is essentially zero in most categories. The first business to claim a category in Winamac, Monterey, or Medaryville will hold that position until a competitor makes the same investment, which has not happened yet in most service areas.</p>
+      <p class="svc-desc">When a Pulaski County resident searches for a plumber, electrician, or restaurant near Winamac, Local SEO determines who gets found. We optimize your <a class="fz-gl-link" href="https://favze.com/resources/glossary/marketing-terms#google-business-profile">Google Business Profile</a>, build directory citations, and build county-specific landing pages. In Pulaski County, Local SEO competition is essentially zero in most categories. The first business to claim a category in Winamac, Monterey, or Medaryville will hold that position until a competitor makes the same investment, which has not happened yet in most service areas.</p>
       <a href="https://favze.com/services/local-seo" class="svc-link">Learn More <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5h7M6 2.5l3 3-3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
 
@@ -1244,7 +1240,7 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
 
     <div class="svc-card">
       <div class="svc-head"><div class="svc-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 5a2 2 0 012-2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V5z" stroke="currentColor" stroke-width="1.3"/><path d="M6 9h6M9 6v6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></div><div class="svc-name">HubSpot Setup</div></div>
-      <p class="svc-desc">When marketing generates leads for your Pulaski County business, those contacts need a system to capture, track, and convert them. HubSpot ties it all together: contact records, automated follow-up sequences, pipeline stages, and revenue reporting that connects spend to closed business. For Winamac-area B2B businesses, agricultural operations with commercial buyers, and service businesses managing a recurring client base, a properly configured CRM ensures no qualified lead goes cold. Read our <a href="https://favze.com/articles/content-marketing">Content Marketing articles</a> for related strategy.</p>
+      <p class="svc-desc">When marketing generates leads for your Pulaski County business, those contacts need a system to capture, track, and convert them. HubSpot ties it all together: contact records, automated follow-up sequences, pipeline stages, and revenue reporting that connects spend to closed business. For Winamac-area B2B businesses, agricultural operations with commercial buyers, and service businesses managing a recurring client base, a properly configured CRM ensures no qualified lead goes cold. Read our <a href="https://favze.com/resources/articles/content-marketing">Content Marketing articles</a> for related strategy.</p>
       <a href="https://favze.com/services/hubspot-setup" class="svc-link">Learn More <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5h7M6 2.5l3 3-3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
 
@@ -1356,7 +1352,7 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
   <div>
     <span class="ob-lbl">Near-Zero Competition. Real Visitor Flows. Open Digital Positions in Every Category.</span>
     <div class="ob-title">Pulaski County Has <span>Open Field</span> in Every Category.</div>
-    <p class="ob-text">Tippecanoe River State Park visitors search for local restaurants and lodging before they arrive and find almost nothing. Jasper-Pulaski crane migration visitors search for nearby food and accommodations with AI tools and encounter zero Medaryville businesses in the results. BraunAbility&rsquo;s supplier network searches for Winamac-area professional services in categories that are completely unclaimed. Regional trade-area residents from Starke, Cass, Newton, and Jasper counties drive to Winamac for services and find businesses with no digital presence to confirm they are the right choice. <strong>Pulaski County is not a difficult market to win. It is a market that nobody has tried to win yet. That changes when the first business in each category makes the investment.</strong> Start with a <a href="https://favze.com/free-consultation" style="color:var(--teal)">free consultation</a> or read our <a href="https://favze.com/articles/brand-positioning" style="color:var(--teal)">Brand Positioning articles</a> to understand how first-mover authority works in thin-competition markets.</p>
+    <p class="ob-text">Tippecanoe River State Park visitors search for local restaurants and lodging before they arrive and find almost nothing. Jasper-Pulaski crane migration visitors search for nearby food and accommodations with AI tools and encounter zero Medaryville businesses in the results. BraunAbility&rsquo;s supplier network searches for Winamac-area professional services in categories that are completely unclaimed. Regional trade-area residents from Starke, Cass, Newton, and Jasper counties drive to Winamac for services and find businesses with no digital presence to confirm they are the right choice. <strong>Pulaski County is not a difficult market to win. It is a market that nobody has tried to win yet. That changes when the first business in each category makes the investment.</strong> Start with a <a href="https://favze.com/free-consultation" style="color:var(--teal)">free consultation</a> or read our <a href="https://favze.com/resources/articles/brand-positioning" style="color:var(--teal)">Brand Positioning articles</a> to understand how first-mover authority works in thin-competition markets.</p>
   </div>
   <div class="ob-right">
     <div class="ob-stats">
@@ -1400,7 +1396,7 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
       <span class="why-dark-lbl">Agricultural County. Outdoor Recreation Visitor Flows. BraunAbility Manufacturing Anchor. Near-Zero Digital Competition.</span>
       <div class="why-dark-title">What It Really Means to Serve <span style="color:var(--teal)">Pulaski County</span></div>
       <p>Most agencies that claim to serve rural Indiana counties apply a template designed for suburban markets and call it local. Marketing BraunAbility supplier services, Tippecanoe River recreation hospitality, Jasper-Pulaski crane migration visitor businesses, and Winamac residential service companies with the same strategy is not a nuanced read of the market: it is a template that will underperform in every context.</p>
-      <p>Recreation-adjacent businesses in Monterey and Medaryville need content built for the trip-planning stage, when visitors from Chicago and Northern Indiana are searching weeks before they arrive. Agricultural operations need content authority that captures procurement-stage search from buyers who are evaluating suppliers before making contact. Winamac residential and professional services need hyper-local presence built for a county-seat consumer base that drives in from surrounding townships. <strong>Understanding which strategy belongs in which context is the difference between a real regional agency and a generic service provider.</strong> Read our <a href="https://favze.com/articles/search-visibility" style="color:var(--teal)">Search Visibility</a> and <a href="https://favze.com/articles/brand-positioning" style="color:var(--teal)">Brand Positioning</a> articles for how this works in practice.</p>
+      <p>Recreation-adjacent businesses in Monterey and Medaryville need content built for the trip-planning stage, when visitors from Chicago and Northern Indiana are searching weeks before they arrive. Agricultural operations need content authority that captures procurement-stage search from buyers who are evaluating suppliers before making contact. Winamac residential and professional services need hyper-local presence built for a county-seat consumer base that drives in from surrounding townships. <strong>Understanding which strategy belongs in which context is the difference between a real regional agency and a generic service provider.</strong> Read our <a href="https://favze.com/resources/articles/search-visibility" style="color:var(--teal)">Search Visibility</a> and <a href="https://favze.com/resources/articles/brand-positioning" style="color:var(--teal)">Brand Positioning</a> articles for how this works in practice.</p>
       <div class="why-stat-grid">
         <div class="why-stat"><div class="why-stat-num">12</div><div class="why-stat-lbl">Services Under One Roof</div></div>
         <div class="why-stat"><div class="why-stat-num">4</div><div class="why-stat-lbl">Communities Served</div></div>
@@ -1435,7 +1431,7 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
     </div>
     <div class="faq-list">
       <details class="faq-item"><summary><span class="fq-q">Does Favze serve Winamac, Monterey, Medaryville, and Francesville?</span><span class="fq-icon"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 2v7M2 5.5h7" stroke="#666" stroke-width="1.7" stroke-linecap="round"/></svg></span></summary><div class="fq-ans"><p><strong>Yes, all four, and every unincorporated township in Pulaski County.</strong> No minimum business size, no community too small. We serve the entire county from our base in Middlebury, Elkhart County. Call <a href="tel:+15747475012">574-747-5012</a> or <a href="https://favze.com/free-consultation">book a free consultation</a>. See all <a href="https://favze.com/areas-served">areas served</a> including the full <a href="https://favze.com/areas-served/northern-indiana">Northern Indiana hub</a>.</p></div></details>
-      <details class="faq-item"><summary><span class="fq-q">Why does a Pulaski County business need digital marketing?</span><span class="fq-icon"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 2v7M2 5.5h7" stroke="#666" stroke-width="1.7" stroke-linecap="round"/></svg></span></summary><div class="fq-ans"><p>Pulaski County sits between South Bend, Lafayette, and the Illinois border, giving local businesses a natural multi-directional trade area. Tippecanoe River State Park and Jasper-Pulaski Fish &amp; Wildlife Area bring outdoor recreation and wildlife tourism visitors who search for local services before they arrive. Buyers in every Pulaski County community research businesses online before spending money. <strong>If your business is not visible in that process, a competitor from Winamac, from a neighboring county, or from a larger market is capturing that demand instead of you.</strong> Read our <a href="https://favze.com/articles/search-visibility">Search Visibility articles</a> for context on how this works in thin-competition rural markets.</p></div></details>
+      <details class="faq-item"><summary><span class="fq-q">Why does a Pulaski County business need digital marketing?</span><span class="fq-icon"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 2v7M2 5.5h7" stroke="#666" stroke-width="1.7" stroke-linecap="round"/></svg></span></summary><div class="fq-ans"><p>Pulaski County sits between South Bend, Lafayette, and the Illinois border, giving local businesses a natural multi-directional trade area. Tippecanoe River State Park and Jasper-Pulaski Fish &amp; Wildlife Area bring outdoor recreation and wildlife tourism visitors who search for local services before they arrive. Buyers in every Pulaski County community research businesses online before spending money. <strong>If your business is not visible in that process, a competitor from Winamac, from a neighboring county, or from a larger market is capturing that demand instead of you.</strong> Read our <a href="https://favze.com/resources/articles/search-visibility">Search Visibility articles</a> for context on how this works in thin-competition rural markets.</p></div></details>
       <details class="faq-item"><summary><span class="fq-q">How competitive is digital marketing in Pulaski County?</span><span class="fq-icon"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 2v7M2 5.5h7" stroke="#666" stroke-width="1.7" stroke-linecap="round"/></svg></span></summary><div class="fq-ans"><p>Pulaski County is one of the least digitally competitive markets in Indiana. <strong>Winamac has essentially no meaningful digital competition in most service categories. Monterey, Medaryville, and Francesville have zero digital competition across every category.</strong> The first business in any Pulaski County category to build real <a href="https://favze.com/services/local-seo">Local SEO</a>, <a href="https://favze.com/services/answer-engine-optimization">AEO</a>, and <a href="https://favze.com/services/generative-engine-optimization">GEO</a> presence holds it for years. That window exists now.</p></div></details>
       <details class="faq-item"><summary><span class="fq-q">Can digital marketing help a Pulaski County business capture Jasper-Pulaski crane migration visitors?</span><span class="fq-icon"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 2v7M2 5.5h7" stroke="#666" stroke-width="1.7" stroke-linecap="round"/></svg></span></summary><div class="fq-ans"><p>Yes, and it is one of the most straightforward opportunities in Pulaski County. The fall crane migration draws tens of thousands of visitors from across the Midwest, many of whom use AI tools and Google to search for nearby restaurants, lodging, and services during trip planning. <strong>A Medaryville or Winamac business with strong <a href="https://favze.com/services/generative-engine-optimization">GEO</a> and <a href="https://favze.com/services/answer-engine-optimization">AEO</a> presence gets recommended in those searches. Zero local businesses currently have that presence.</strong> The opportunity is completely open.</p></div></details>
       <details class="faq-item"><summary><span class="fq-q">Is Favze affordable for a small Pulaski County business?</span><span class="fq-icon"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 2v7M2 5.5h7" stroke="#666" stroke-width="1.7" stroke-linecap="round"/></svg></span></summary><div class="fq-ans"><p>Yes. Favze was built for small and mid-size businesses. Pricing is based on your specific goals, competition level, and community context. A Francesville agricultural operation and a Winamac home services company should not pay the same rate. Start with a free consultation where Riley will review your situation honestly and give you realistic expectations. Call <a href="tel:+15747475012">574-747-5012</a> or visit <a href="https://favze.com/free-consultation">favze.com/free-consultation</a>. See our <a href="https://favze.com/faq">FAQ page</a> for more.</p></div></details>
@@ -1443,7 +1439,7 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
       <details class="faq-item"><summary><span class="fq-q">How do I get started?</span><span class="fq-icon"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 2v7M2 5.5h7" stroke="#666" stroke-width="1.7" stroke-linecap="round"/></svg></span></summary><div class="fq-ans"><p>Book a free consultation at <a href="https://favze.com/free-consultation"><strong>favze.com/free-consultation</strong></a> or call Riley directly at <a href="tel:+15747475012"><strong>574-747-5012</strong></a>. You do not need a plan ready or know which services you want. Just describe your business and where you want to grow. The call takes about 30 minutes. By the end you will know where you stand digitally, what your biggest opportunities are in Pulaski County, and what it would realistically take to capture them. Read our <a href="https://favze.com/our-process">Our Process page</a> to see exactly what happens after you reach out.</p></div></details>
     </div>
   
-  <p class="fz-text-cta">Have a question that is not answered here? <a href="https://favze.com/free-consultation?reason=faq-question" data-cta="faq-ask-riley">Ask Riley in a free consultation</a>, or <a href="https://favze.com/service-match?from=faq-pulaski-county" data-sm-entry="faq-pulaski-county">see which services fit your business in 60 seconds</a>.</p>
+  <p class="fz-text-cta">Have a question that is not answered here? <a href="https://favze.com/free-consultation?reason=faq-question" data-cta="faq-ask-riley">Ask Riley in a free consultation</a>, or <a href="https://favze.com/resources/marketing-tools/service-match?from=faq-pulaski-county" data-sm-entry="faq-pulaski-county">see which services fit your business in 60 seconds</a>.</p>
 </div>
 </section>
 
@@ -1504,7 +1500,7 @@ footer.ft-std .ft-dot{color:rgba(255,255,255,.18);padding:0 6px}
 <div class="fz-related-inner">
 <p class="fz-related-eyebrow">Free Guides</p>
 <h2 id="fzRelated-area">Marketing Guides for Pulaski County Businesses</h2>
-<div class="fz-related-grid"><a class="fz-related-card" href="https://favze.com/articles/brand-positioning/how-to-make-business-local-favorite"><span class="fz-related-tag">Brand Positioning</span><span class="fz-related-title">How to Make Your Business the Local Favorite</span><span class="fz-related-more">Read the guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="fz-related-card" href="https://favze.com/articles/search-visibility/google-business-profile-checklist"><span class="fz-related-tag">Search Visibility</span><span class="fz-related-title">The Complete Google Business Profile Checklist</span><span class="fz-related-more">Read the guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="fz-related-card" href="https://favze.com/articles/search-visibility/new-rules-online-visibility-seo-aeo-geo"><span class="fz-related-tag">Search Visibility</span><span class="fz-related-title">SEO vs. AEO vs. GEO: The New Rules of Online Visibility</span><span class="fz-related-more">Read the guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
+<div class="fz-related-grid"><a class="fz-related-card" href="https://favze.com/resources/articles/brand-positioning/how-to-make-business-local-favorite"><span class="fz-related-tag">Brand Positioning</span><span class="fz-related-title">How to Make Your Business the Local Favorite</span><span class="fz-related-more">Read the guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="fz-related-card" href="https://favze.com/resources/articles/search-visibility/google-business-profile-checklist"><span class="fz-related-tag">Search Visibility</span><span class="fz-related-title">The Complete Google Business Profile Checklist</span><span class="fz-related-more">Read the guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="fz-related-card" href="https://favze.com/resources/articles/search-visibility/new-rules-online-visibility-seo-aeo-geo"><span class="fz-related-tag">Search Visibility</span><span class="fz-related-title">SEO vs. AEO vs. GEO: The New Rules of Online Visibility</span><span class="fz-related-more">Read the guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
 <p class="fz-related-alt">See how every channel fits together in the <a href="https://favze.com/favze-framework">FAVZE Framework</a>, or check your own marketing with the <a href="https://favze.com/full-digital-marketing-audit">free digital marketing audit checklist</a>.</p>
 </div>
 </section>
@@ -1513,7 +1509,7 @@ footer.ft-std .ft-dot{color:rgba(255,255,255,.18);padding:0 6px}
 <div class="fz-smband-inner">
 <div class="fz-smband-ico" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" stroke="currentColor" stroke-width="2"/><path d="M15.6 8.4l-2.1 5.1-5.1 2.1 2.1-5.1z" fill="currentColor"/></svg></div>
 <div class="fz-smband-copy"><p class="fz-smband-kick">Free Service Match &middot; 60 seconds</p><h2 id="fzSmBand-pulaski-county" class="fz-smband-title">Not Sure Which Service Fits Your Business?</h2><p class="fz-smband-sub">Answer 3 quick questions about your business type, industry, and goals. Service Match builds a phased plan showing which Favze services to start with and why.</p><ul class="fz-smband-steps"><li><b>1</b>Your business</li><li><b>2</b>Your industry</li><li><b>3</b>Your goals</li></ul></div>
-<div class="fz-smband-acts"><a class="fz-smband-btn" href="https://favze.com/service-match?from=pulaski-county" data-sm-entry="band-pulaski-county">Find My Service <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="fz-smband-alt" href="https://favze.com/free-consultation" data-cta="smband-consult">Or talk it through with Riley</a></div>
+<div class="fz-smband-acts"><a class="fz-smband-btn" href="https://favze.com/resources/marketing-tools/service-match?from=pulaski-county" data-sm-entry="band-pulaski-county">Find My Service <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="fz-smband-alt" href="https://favze.com/free-consultation" data-cta="smband-consult">Or talk it through with Riley</a></div>
 </div>
 </section>
 <section class="fz-form-sec" id="free-consultation-form" aria-labelledby="fzFormTitle">
@@ -1575,27 +1571,33 @@ footer.ft-std .ft-dot{color:rgba(255,255,255,.18);padding:0 6px}
         </ul>
       </div>
       <div class="fc">
-        <h3><a href="https://favze.com/articles">Articles</a></h3>
+        <h3><a href="https://favze.com/resources/articles">Articles</a></h3>
         <ul>
-          <li><a href="https://favze.com/articles/content-marketing">Content Marketing</a></li>
-          <li><a href="https://favze.com/articles/social-media-strategy">Social Media Strategy</a></li>
-          <li><a href="https://favze.com/articles/search-visibility">Search Visibility &amp; Local Discovery</a></li>
-          <li><a href="https://favze.com/articles/brand-positioning">Brand Positioning</a></li>
+          <li><a href="https://favze.com/resources/articles/content-marketing">Content Marketing</a></li>
+          <li><a href="https://favze.com/resources/articles/social-media-strategy">Social Media Strategy</a></li>
+          <li><a href="https://favze.com/resources/articles/search-visibility">Search Visibility &amp; Local Discovery</a></li>
+          <li><a href="https://favze.com/resources/articles/brand-positioning">Brand Positioning</a></li>
         </ul>
         <div style="margin-top:22px">
-          <h3><a href="https://favze.com/newsletters">Newsletters</a></h3>
+          <h3><a href="https://favze.com/resources/newsletters">Newsletters</a></h3>
           <ul>
-            <li><a href="https://favze.com/newsletters#insider-card">Favze Insider</a></li>
-            <li><a href="https://favze.com/newsletters#intel-card">Favze Intel</a></li>
-            <li><a href="https://www.linkedin.com/newsletters/favze-insights-7399519169551126528/" target="_blank" rel="noopener noreferrer nofollow">Favze Insights</a></li>
+            <li><a href="https://favze.com/resources/newsletters/favze-insider">Favze Insider</a></li>
+            <li><a href="https://favze.com/resources/newsletters/favze-intel">Favze Intel</a></li>
+            <li><a href="https://favze.com/resources/newsletters/favze-insights">Favze Insights</a></li>
           </ul>
         </div>
         <div style="margin-top:22px">
-          <h3><a href="https://favze.com/marketing-glossary">Glossaries</a></h3>
+          <h3><a href="https://favze.com/resources/glossary">Glossaries</a></h3>
           <ul>
-            <li><a href="https://favze.com/marketing-glossary">Marketing Terms</a></li>
-            <li><a href="https://favze.com/marketing-kpis-glossary">Marketing KPIs</a></li>
-            <li><a href="https://favze.com/ai-glossary">AI &amp; Automation</a></li>
+            <li><a href="https://favze.com/resources/glossary/marketing-terms">Marketing Terms</a></li>
+            <li><a href="https://favze.com/resources/glossary/marketing-kpis">Marketing KPIs</a></li>
+            <li><a href="https://favze.com/resources/glossary/ai">AI &amp; Automation</a></li>
+          </ul>
+        </div>
+        <div style="margin-top:22px">
+          <h3><a href="https://favze.com/resources/marketing-tools">Marketing Tools</a></h3>
+          <ul>
+            <li><a href="https://favze.com/resources/marketing-tools/service-match" data-sm-entry="footer-tools">Service Match</a></li>
           </ul>
         </div>
       </div>
@@ -1608,7 +1610,8 @@ footer.ft-std .ft-dot{color:rgba(255,255,255,.18);padding:0 6px}
           <li><a href="https://favze.com/our-process">Our Process</a></li>
           <li><a href="https://favze.com/favze-framework">FAVZE Framework</a></li>
           <li><a href="https://favze.com/services">All Services</a></li>
-          <li><a href="https://favze.com/service-match" data-sm-entry="footer">Service Match Quiz</a></li>
+          <li><a href="https://favze.com/resources/marketing-tools/service-match" data-sm-entry="footer">Service Match Quiz</a></li>
+          <li><a href="https://favze.com/resources">Resources</a></li>
           <li><a href="https://favze.com/faq">FAQ</a></li>
           <li><a href="https://favze.com/areas-served">Areas Served</a></li>
         </ul>
@@ -1639,7 +1642,7 @@ footer.ft-std .ft-dot{color:rgba(255,255,255,.18);padding:0 6px}
     <div class="fz-news">
       <div class="fz-news-copy">
         <p class="fz-news-title">Get Favze Insider and Favze Intel</p>
-        <p>One signup gets you two free monthly newsletters. Favze Insider keeps you current. Favze Intel makes you sharper. <a href="https://favze.com/newsletters">Learn more</a>.</p>
+        <p>One signup gets you two free monthly newsletters. Favze Insider keeps you current. Favze Intel makes you sharper. <a href="https://favze.com/resources/newsletters">Learn more</a>.</p>
       </div>
       <div class="fz-news-card">
         <iframe data-tally-src="https://tally.so/embed/Gxg47Z?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;formEventsForwarding=1" loading="lazy" width="100%" height="260" frameborder="0" marginheight="0" marginwidth="0" title="Favze newsletter signup"></iframe>
@@ -1688,6 +1691,7 @@ footer.ft-std .ft-dot{color:rgba(255,255,255,.18);padding:0 6px}
       <div style="display:flex;gap:18px;flex-wrap:wrap">
         <a href="https://favze.com/privacy-policy">Privacy Policy</a>
         <a href="https://favze.com/terms-of-use">Terms of Use</a>
+        <a href="https://favze.com/accessibility-statement">Accessibility Statement</a>
       </div>
     </div>
   </div>
@@ -1814,6 +1818,7 @@ window.silktideConsentManager.init({
 });
 </script>
 <script src="../assets/js/fz-site.js"></script>
+<script src="../assets/js/fz-nav.js" defer></script>
 <script src="../assets/js/fz-search.js" defer></script>
 <script src="../assets/js/fz-ui.js" defer></script>
 

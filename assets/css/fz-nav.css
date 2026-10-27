@@ -1,0 +1,37 @@
+/* Favze shared navigation (desktop dropdowns + mobile menu), identical on every page */
+html body nav ul.fz-nl{display:flex;align-items:center;gap:2px;list-style:none;margin:0;padding:0}
+html body nav ul.fz-nl>li{position:relative;list-style:none}
+html body nav ul.fz-nl>li>a.nl-link{font-family:'DM Sans',sans-serif;font-weight:500;font-size:.875rem;padding:8px 12px;border-radius:999px;color:#0a0a0a;display:inline-flex;align-items:center;gap:3px;transition:background .15s;white-space:nowrap;text-decoration:none}
+html body nav ul.fz-nl>li>a.nl-link:hover{background:#f0f0f0}
+html body nav ul.fz-nl>li>a.nl-link.active{color:#064187;font-weight:700}
+html body nav ul.fz-nl .drop-trigger{font-family:'DM Sans',sans-serif;font-weight:500;font-size:.875rem;padding:8px 12px;border-radius:999px;color:#0a0a0a;background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:4px;transition:background .15s;white-space:nowrap}
+html body nav ul.fz-nl .drop-trigger.is-current{color:#064187;font-weight:700}
+html body nav ul.fz-nl .drop-trigger:hover,html body nav ul.fz-nl .drop-trigger[aria-expanded="true"]{background:#f0f0f0}
+html body nav ul.fz-nl .drop-trigger svg{transition:transform .2s;flex-shrink:0}
+html body nav ul.fz-nl .drop-trigger[aria-expanded="true"] svg{transform:rotate(180deg)}
+html body nav ul.fz-nl .drop-panel{position:absolute;top:calc(100% + 6px);left:0;background:#fff;border:1.5px solid #e8e8e8;border-radius:16px;box-shadow:0 16px 48px rgba(0,0,0,.13);padding:16px;z-index:300;min-width:320px;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(-6px);transition:opacity .15s ease,transform .15s ease,visibility 0s linear .15s;display:block}
+html body nav ul.fz-nl .drop-panel.open{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0);transition:opacity .15s ease,transform .15s ease}
+html body nav ul.fz-nl .drop-panel.center{left:50%;transform:translateX(-50%) translateY(-6px)}
+html body nav ul.fz-nl .drop-panel.center.open{transform:translateX(-50%) translateY(0)}
+html body nav ul.fz-nl .drop-label{font-family:'DM Sans',sans-serif;font-size:.65rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#6b7280;padding:0 8px 8px;border-bottom:1px solid #f0f0f0;margin-bottom:6px}
+html body nav ul.fz-nl .drop-panel a{display:block;font-family:'DM Sans',sans-serif;font-size:.83rem;font-weight:500;color:#333;padding:7px 10px;border-radius:999px;text-decoration:none;transition:background .12s,color .12s}
+html body nav ul.fz-nl .drop-panel a:hover,html body nav ul.fz-nl .drop-panel a:focus-visible{background:rgba(6,65,135,.07);color:#064187}
+html body nav ul.fz-nl .drop-abbr{font-size:.65rem;font-weight:700;color:#6b7280;margin-left:4px}
+html body nav ul.fz-nl .drop-divider{height:1px;background:#f0f0f0;margin:8px 0}
+html body nav ul.fz-nl .drop-view-all{font-weight:700!important;color:#064187!important;margin-top:4px}
+html body nav ul.fz-nl .drop-view-all.drop-sm{color:#086E84!important}
+@media(max-width:1080px){html body nav ul.fz-nl{display:none!important}}
+/* mobile menu sections */
+html body #mm .mm-link{font-family:'DM Sans',sans-serif;font-weight:500;font-size:1rem;padding:12px 14px;border-radius:12px;display:block;color:#0a0a0a;text-decoration:none}
+html body #mm .mm-link:hover{background:#f5f5f5}
+html body #mm .mm-toggle{width:100%;text-align:left;background:none;border:none;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:500;color:#0a0a0a;padding:12px 14px;border-radius:12px;cursor:pointer;display:flex;align-items:center;justify-content:space-between}
+html body #mm .mm-toggle:hover{background:#f5f5f5}
+html body #mm .mm-toggle svg{transition:transform .2s;flex-shrink:0}
+html body #mm .mm-toggle.open svg{transform:rotate(180deg)}
+html body #mm .mm-sub{display:none;flex-direction:column;gap:1px;padding:0 8px 8px 20px}
+html body #mm .mm-sub.open{display:flex}
+html body #mm .mm-sub a{font-family:'DM Sans',sans-serif;font-size:.9rem;font-weight:500;color:#333;padding:9px 10px;border-radius:10px;display:block;text-decoration:none}
+html body #mm .mm-sub a:hover{background:rgba(6,65,135,.07);color:#064187}
+html body #mm .fz-mm-label{font-family:'DM Sans',sans-serif;font-size:.65rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#6b7280;padding:12px 0 4px 12px;margin-top:6px;border-top:1px solid #f0f0f0}
+html body #mm .mm-cta{background:#064187!important;color:#fff!important;text-align:center;margin-top:8px;font-weight:700!important;border-radius:999px}
+html body #mm .mm-cta:hover{background:#0A89A3!important}

@@ -28,7 +28,7 @@
     cost: ['faq', 'free-consultation', 'why-us'], price: ['faq', 'free-consultation', 'why-us'], pricing: ['faq', 'free-consultation', 'why-us'], budget: ['faq', 'free-consultation'],
     chatgpt: ['services/ai-optimization', 'services/generative-engine-optimization'], ai: ['services/ai-optimization', 'services/answer-engine-optimization', 'services/generative-engine-optimization'],
     website: ['services/website-design'], web: ['services/website-design'], maps: ['services/local-seo'], map: ['services/local-seo'], reviews: ['services/local-seo'], review: ['services/local-seo'],
-    contact: ['free-consultation'], call: ['free-consultation'], consultation: ['free-consultation'], newsletter: ['newsletters'], audit: ['full-digital-marketing-audit'],
+    contact: ['free-consultation'], call: ['free-consultation'], consultation: ['free-consultation'], newsletter: ['resources/newsletters'], newsletters: ['resources/newsletters'], glossary: ['resources/glossary'], resources: ['resources'], quiz: ['resources/marketing-tools/service-match'], audit: ['full-digital-marketing-audit'],
     ads: ['services/paid-search-ads', 'services/paid-social-media-ads'], google: ['services/local-seo', 'services/paid-search-ads'], email: ['services/email-marketing'], text: ['services/short-message-service-sms'], sms: ['services/short-message-service-sms'],
     social: ['services/social-media-marketing', 'services/paid-social-media-ads'], crm: ['services/hubspot-setup'], hubspot: ['services/hubspot-setup'], seo: ['services/search-engine-optimization', 'services/local-seo'],
     riley: ['about'], founder: ['about'], about: ['about'], process: ['our-process'], framework: ['favze-framework'], areas: ['areas-served']
@@ -181,7 +181,7 @@
       ['Website design', 'https://favze.com/services/website-design', 'Service'],
       ['Get recommended by AI tools', 'https://favze.com/services/ai-optimization', 'Service'],
       ['Free marketing audit checklist', 'https://favze.com/full-digital-marketing-audit', 'Page'],
-      ['Favze Insights articles', 'https://favze.com/articles', 'Insights']
+      ['Favze Insights articles', 'https://favze.com/resources/articles', 'Insights']
     ];
     status.textContent = 'Popular on Favze';
     list.innerHTML = picks.map(function (x, i) {

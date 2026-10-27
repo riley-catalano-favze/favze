@@ -184,105 +184,105 @@
 
   <!-- ARTICLES -->
   <url>
-    <loc>https://favze.com/articles</loc>
+    <loc>https://favze.com/resources/articles</loc>
     <lastmod>2026-10-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://favze.com/articles/brand-positioning</loc>
+    <loc>https://favze.com/resources/articles/brand-positioning</loc>
     <lastmod>2026-10-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://favze.com/articles/brand-positioning/how-to-make-business-local-favorite</loc>
+    <loc>https://favze.com/resources/articles/brand-positioning/how-to-make-business-local-favorite</loc>
     <lastmod>2026-10-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://favze.com/articles/content-marketing</loc>
+    <loc>https://favze.com/resources/articles/content-marketing</loc>
     <lastmod>2026-10-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://favze.com/articles/content-marketing/blog-and-article-hierarchy-pillars-clusters-internal-linking</loc>
+    <loc>https://favze.com/resources/articles/content-marketing/blog-and-article-hierarchy-pillars-clusters-internal-linking</loc>
     <lastmod>2026-10-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://favze.com/articles/content-marketing/content-repurposing-mastery-ai-era</loc>
+    <loc>https://favze.com/resources/articles/content-marketing/content-repurposing-mastery-ai-era</loc>
     <lastmod>2026-10-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://favze.com/articles/content-marketing/how-to-create-evergreen-content</loc>
+    <loc>https://favze.com/resources/articles/content-marketing/how-to-create-evergreen-content</loc>
     <lastmod>2026-10-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://favze.com/articles/search-visibility</loc>
+    <loc>https://favze.com/resources/articles/search-visibility</loc>
     <lastmod>2026-10-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://favze.com/articles/search-visibility/google-business-profile-checklist</loc>
+    <loc>https://favze.com/resources/articles/search-visibility/google-business-profile-checklist</loc>
     <lastmod>2026-10-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://favze.com/articles/search-visibility/local-service-ads-fast-track-top-google</loc>
+    <loc>https://favze.com/resources/articles/search-visibility/local-service-ads-fast-track-top-google</loc>
     <lastmod>2026-10-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://favze.com/articles/search-visibility/new-rules-online-visibility-seo-aeo-geo</loc>
+    <loc>https://favze.com/resources/articles/search-visibility/new-rules-online-visibility-seo-aeo-geo</loc>
     <lastmod>2026-10-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://favze.com/articles/search-visibility/what-makes-google-trust-a-website</loc>
+    <loc>https://favze.com/resources/articles/search-visibility/what-makes-google-trust-a-website</loc>
     <lastmod>2026-10-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://favze.com/articles/social-media-strategy</loc>
+    <loc>https://favze.com/resources/articles/social-media-strategy</loc>
     <lastmod>2026-10-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://favze.com/articles/social-media-strategy/how-to-create-highly-engaging-social-media-posts</loc>
+    <loc>https://favze.com/resources/articles/social-media-strategy/how-to-create-highly-engaging-social-media-posts</loc>
     <lastmod>2026-10-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://favze.com/articles/social-media-strategy/your-cute-captions-arent-searchable</loc>
+    <loc>https://favze.com/resources/articles/social-media-strategy/your-cute-captions-arent-searchable</loc>
     <lastmod>2026-10-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -301,33 +301,75 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://favze.com/newsletters</loc>
+    <loc>https://favze.com/resources/newsletters</loc>
     <lastmod>2026-10-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://favze.com/service-match</loc>
+    <loc>https://favze.com/resources/marketing-tools/service-match</loc>
     <lastmod>2026-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://favze.com/marketing-glossary</loc>
+    <loc>https://favze.com/resources/glossary/marketing-terms</loc>
     <lastmod>2026-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://favze.com/marketing-kpis-glossary</loc>
+    <loc>https://favze.com/resources/glossary/marketing-kpis</loc>
     <lastmod>2026-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://favze.com/ai-glossary</loc>
+    <loc>https://favze.com/resources/glossary/ai</loc>
     <lastmod>2026-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://favze.com/resources</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://favze.com/resources/glossary</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://favze.com/resources/marketing-tools</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://favze.com/resources/newsletters/favze-insider</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favze.com/resources/newsletters/favze-intel</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favze.com/resources/newsletters/favze-insights</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://favze.com/accessibility-statement</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>

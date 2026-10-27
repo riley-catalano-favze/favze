@@ -1038,7 +1038,7 @@ footer{background:#0a0a0a;padding:66px 5% 0}
         "https://x.com/favzemarketing",
         "https://www.youtube.com/@Favze",
         "https://www.pinterest.com/favzemarketing/",
-        "https://www.facebook.com/people/Favze-Digital-Marketing/61576757183082/",
+        "https://www.facebook.com/favzedigitalmarketing/",
         "https://www.instagram.com/favzemarketing/",
         "https://www.google.com/maps/place/Favze+Digital+Marketing"
       ]
@@ -1801,6 +1801,7 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
 </style>
 <link rel="stylesheet" href="assets/css/fz-site.css">
 <link rel="stylesheet" href="assets/css/fz-ui.css">
+<link rel="stylesheet" href="assets/css/fz-nav.css">
 <script type="application/ld+json" id="fz-person-schema">
 {
   "@context": "https://schema.org",
@@ -1830,102 +1831,104 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
 <nav>
   <a class="fz-skip" href="#main">Skip to main content</a>
   <a href="https://favze.com/" class="fz-logo" aria-label="Favze home"><img src="https://favze.com/assets/brand/favze-logo-horizontal-black.png" alt="Favze Digital Marketing" width="147" height="34"></a>
-  <ul class="nl">
-    <li class="nav-drop">
-      <a href="https://favze.com/services/" class="nav-drop-trigger">Services <svg width="10" height="10" viewBox="0 0 10 10" fill="none" style="margin-left:2px;vertical-align:middle;"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      <div class="drop-menu drop-services">
-        <div class="drop-col">
-          <div class="drop-col-label">All Services</div>
-          <a href="https://favze.com/services/social-media-marketing">Social Media Marketing <span class="drop-abbr">SMM</span></a>
-          <a href="https://favze.com/services/search-engine-optimization">Search Engine Optimization <span class="drop-abbr">SEO</span></a>
-          <a href="https://favze.com/services/answer-engine-optimization">Answer Engine Optimization <span class="drop-abbr">AEO</span></a>
-          <a href="https://favze.com/services/generative-engine-optimization">Generative Engine Optimization <span class="drop-abbr">GEO</span></a>
-          <a href="https://favze.com/services/ai-optimization">AI Optimization</a>
-          <a href="https://favze.com/services/local-seo">Local SEO</a>
-          <a href="https://favze.com/services/email-marketing">Email Marketing</a>
-          <a href="https://favze.com/services/short-message-service-sms">SMS Marketing</a>
-          <a href="https://favze.com/services/hubspot-setup">HubSpot Setup</a>
-          <a href="https://favze.com/services/website-design">Website Design</a>
-          <a href="https://favze.com/services/paid-search-ads">Paid Search Ads <span class="drop-abbr">SEM</span></a>
-          <a href="https://favze.com/services/paid-social-media-ads">Paid Social Media Ads</a>
-          <a href="https://favze.com/services/" class="drop-view-all">View All Services &rarr;</a>
-        <a href="https://favze.com/service-match" class="drop-view-all drop-sm" data-sm-entry="nav">Not Sure? Take the Service Match &rarr;</a>
-        </div>
+  <ul class="nl fz-nl">
+    <li>
+      <button class="drop-trigger" id="fzTrigSvc" aria-expanded="false" aria-controls="fzPanSvc">Services <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="drop-panel" id="fzPanSvc" role="menu">
+        <div class="drop-label">All Services</div>
+        <a href="https://favze.com/services/social-media-marketing" role="menuitem">Social Media Marketing <span class="drop-abbr">SMM</span></a>
+        <a href="https://favze.com/services/search-engine-optimization" role="menuitem">Search Engine Optimization <span class="drop-abbr">SEO</span></a>
+        <a href="https://favze.com/services/answer-engine-optimization" role="menuitem">Answer Engine Optimization <span class="drop-abbr">AEO</span></a>
+        <a href="https://favze.com/services/generative-engine-optimization" role="menuitem">Generative Engine Optimization <span class="drop-abbr">GEO</span></a>
+        <a href="https://favze.com/services/ai-optimization" role="menuitem">AI Optimization</a>
+        <a href="https://favze.com/services/local-seo" role="menuitem">Local SEO</a>
+        <a href="https://favze.com/services/email-marketing" role="menuitem">Email Marketing</a>
+        <a href="https://favze.com/services/short-message-service-sms" role="menuitem">SMS Marketing</a>
+        <a href="https://favze.com/services/hubspot-setup" role="menuitem">HubSpot Setup</a>
+        <a href="https://favze.com/services/website-design" role="menuitem">Website Design</a>
+        <a href="https://favze.com/services/paid-search-ads" role="menuitem">Paid Search Ads <span class="drop-abbr">SEM</span></a>
+        <a href="https://favze.com/services/paid-social-media-ads" role="menuitem">Paid Social Media Ads</a>
+        <div class="drop-divider"></div>
+        <a href="https://favze.com/services" class="drop-view-all" role="menuitem">View All Services &rarr;</a>
+        <a href="https://favze.com/resources/marketing-tools/service-match" class="drop-view-all drop-sm" role="menuitem" data-sm-entry="nav">Not Sure? Take the Service Match &rarr;</a>
       </div>
     </li>
-    <li class="nav-drop">
-      <a href="https://favze.com/articles/" class="nav-drop-trigger">Resources <svg width="10" height="10" viewBox="0 0 10 10" fill="none" style="margin-left:2px;vertical-align:middle;"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      <div class="drop-menu drop-articles">
-        <div class="drop-col-label">Articles</div>
-        <a href="https://favze.com/articles/content-marketing">Content Marketing</a>
-        <a href="https://favze.com/articles/social-media-strategy">Social Media Strategy</a>
-        <a href="https://favze.com/articles/search-visibility">Search Visibility &amp; Local Discovery</a>
-        <a href="https://favze.com/articles/brand-positioning">Brand Positioning &amp; Community Authority</a>
-        <a href="https://favze.com/articles" class="drop-view-all">All Articles &rarr;</a>
-        <div style="margin:10px 0 8px;border-top:1px solid #f0f0f0"></div>
-        <div class="drop-col-label">Newsletters</div>
-        <a href="https://www.linkedin.com/newsletters/favze-insights-7399519169551126528/" target="_blank" rel="noopener noreferrer">Favze Insights &#8599;</a>
-        <a href="https://favze.com/newsletters#intel-card">Favze Intel</a>
-        <a href="https://favze.com/newsletters#insider-card">Favze Insider</a>
-        <a href="https://favze.com/newsletters" class="drop-view-all">All Newsletters &rarr;</a>
-        <div style="margin:10px 0 8px;border-top:1px solid #f0f0f0"></div>
-        <div class="drop-col-label">Glossaries</div>
-        <a href="https://favze.com/marketing-glossary">Marketing Terms Glossary</a>
-        <a href="https://favze.com/marketing-kpis-glossary">Marketing KPIs Glossary</a>
-        <a href="https://favze.com/ai-glossary">AI &amp; Automation Glossary</a>
+    <li>
+      <button class="drop-trigger" id="fzTrigRes" aria-expanded="false" aria-controls="fzPanRes">Resources <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="drop-panel center" id="fzPanRes" role="menu">
+        <div class="drop-label">Articles</div>
+        <a href="https://favze.com/resources/articles/content-marketing" role="menuitem">Content Marketing</a>
+        <a href="https://favze.com/resources/articles/social-media-strategy" role="menuitem">Social Media Strategy</a>
+        <a href="https://favze.com/resources/articles/search-visibility" role="menuitem">Search Visibility &amp; Local Discovery</a>
+        <a href="https://favze.com/resources/articles/brand-positioning" role="menuitem">Brand Positioning &amp; Community Authority</a>
+        <a href="https://favze.com/resources/articles" class="drop-view-all" role="menuitem">All Articles &rarr;</a>
+        <div class="drop-divider"></div>
+        <div class="drop-label">Newsletters</div>
+        <a href="https://favze.com/resources/newsletters/favze-insider" role="menuitem">Favze Insider</a>
+        <a href="https://favze.com/resources/newsletters/favze-intel" role="menuitem">Favze Intel</a>
+        <a href="https://favze.com/resources/newsletters/favze-insights" role="menuitem">Favze Insights</a>
+        <a href="https://favze.com/resources/newsletters" class="drop-view-all" role="menuitem">All Newsletters &rarr;</a>
+        <div class="drop-divider"></div>
+        <div class="drop-label">Glossaries</div>
+        <a href="https://favze.com/resources/glossary/marketing-terms" role="menuitem">Marketing Terms Glossary</a>
+        <a href="https://favze.com/resources/glossary/marketing-kpis" role="menuitem">Marketing KPIs Glossary</a>
+        <a href="https://favze.com/resources/glossary/ai" role="menuitem">AI &amp; Automation Glossary</a>
+        <div class="drop-divider"></div>
+        <div class="drop-label">Marketing Tools</div>
+        <a href="https://favze.com/resources/marketing-tools/service-match" role="menuitem" data-sm-entry="nav-tools">Service Match Quiz</a>
+        <a href="https://favze.com/resources" class="drop-view-all" role="menuitem">All Resources &rarr;</a>
       </div>
     </li>
-    <li><a href="https://favze.com/why-us">Why Us</a></li>
-    <li><a href="https://favze.com/about">About</a></li>
-    <li><a href="https://favze.com/faq">FAQ</a></li>
+    <li><a href="https://favze.com/why-us" class="nl-link">Why Us</a></li>
+    <li><a href="https://favze.com/about" class="nl-link">About</a></li>
+    <li><a href="https://favze.com/faq" class="nl-link">FAQ</a></li>
   </ul>
   <div class="fz-nav-actions"><a href="tel:+15747475012" class="nav-phone fz-icon-btn" aria-label="Call Favze at 574-747-5012" title="Call 574-747-5012"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a><a href="sms:+15747475012" class="nav-sms fz-icon-btn" aria-label="Text Favze at 574-747-5012" title="Text 574-747-5012"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></svg></a><a href="https://favze.com/free-consultation" class="nc fz-nav-cta">Book a Free Consultation</a></div>
   <div class="fz-nav-mob"><a href="tel:+15747475012" class="nav-phone fz-icon-btn" aria-label="Call Favze at 574-747-5012" title="Call 574-747-5012"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a><a href="sms:+15747475012" class="nav-sms fz-icon-btn" aria-label="Text Favze at 574-747-5012" title="Text 574-747-5012"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></svg></a></div>
   <button class="hb" id="hb" aria-label="Toggle menu"><span></span><span></span><span></span></button>
 </nav>
 <div class="mm" id="mm">
-  <div class="mm-section">
-    <button class="mm-toggle" id="mmServicesToggle">Services <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-    <div class="mm-sub" id="mmServicesSub">
-      <a href="https://favze.com/services/social-media-marketing">Social Media Marketing</a>
-      <a href="https://favze.com/services/search-engine-optimization">SEO</a>
-      <a href="https://favze.com/services/answer-engine-optimization">AEO</a>
-      <a href="https://favze.com/services/generative-engine-optimization">GEO</a>
-      <a href="https://favze.com/services/ai-optimization">AI Optimization</a>
-      <a href="https://favze.com/services/local-seo">Local SEO</a>
-      <a href="https://favze.com/services/email-marketing">Email Marketing</a>
-      <a href="https://favze.com/services/short-message-service-sms">SMS Marketing</a>
-      <a href="https://favze.com/services/hubspot-setup">HubSpot Setup</a>
-      <a href="https://favze.com/services/website-design">Website Design</a>
-      <a href="https://favze.com/services/paid-search-ads">Paid Search Ads</a>
-      <a href="https://favze.com/services/paid-social-media-ads">Paid Social Media Ads</a>
-      <a href="https://favze.com/services/" style="font-weight:700;color:var(--navy);">All Services</a>
-      <a href="https://favze.com/service-match" style="font-weight:700;color:#086E84" data-sm-entry="mobile-menu">Not Sure? Take the Service Match</a>
-    </div>
+  <button class="mm-toggle" id="fzMmSvcTrig" aria-expanded="false">Services <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  <div class="mm-sub" id="fzMmSvcSub">
+    <a href="https://favze.com/services/social-media-marketing">Social Media Marketing</a>
+    <a href="https://favze.com/services/search-engine-optimization">SEO</a>
+    <a href="https://favze.com/services/answer-engine-optimization">AEO</a>
+    <a href="https://favze.com/services/generative-engine-optimization">GEO</a>
+    <a href="https://favze.com/services/ai-optimization">AI Optimization</a>
+    <a href="https://favze.com/services/local-seo">Local SEO</a>
+    <a href="https://favze.com/services/email-marketing">Email Marketing</a>
+    <a href="https://favze.com/services/short-message-service-sms">SMS Marketing</a>
+    <a href="https://favze.com/services/hubspot-setup">HubSpot Setup</a>
+    <a href="https://favze.com/services/website-design">Website Design</a>
+    <a href="https://favze.com/services/paid-search-ads">Paid Search Ads</a>
+    <a href="https://favze.com/services/paid-social-media-ads">Paid Social Ads</a>
+    <a href="https://favze.com/services" style="font-weight:700;color:var(--navy);">All Services</a>
+      <a href="https://favze.com/resources/marketing-tools/service-match" style="font-weight:700;color:#086E84" data-sm-entry="mobile-menu">Not Sure? Take the Service Match</a>
   </div>
-  <div class="mm-section">
-    <button class="mm-toggle" id="mmArticlesToggle">Resources <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-    <div class="mm-sub" id="mmArticlesSub">
-      <a href="https://favze.com/articles/content-marketing/">Content Marketing</a>
-      <a href="https://favze.com/articles/social-media-strategy/">Social Media Strategy</a>
-      <a href="https://favze.com/articles/search-visibility/">Search Visibility &amp; Local Discovery</a>
-      <a href="https://favze.com/articles/brand-positioning/">Brand Positioning &amp; Community Authority</a>
-      <a href="https://favze.com/articles/" style="font-weight:700;color:var(--navy);">All Articles</a>
-      <div class="fz-mm-label">Newsletters</div>
-      <a href="https://www.linkedin.com/newsletters/favze-insights-7399519169551126528/" target="_blank" rel="noopener noreferrer">Favze Insights &#8599;</a>
-      <a href="https://favze.com/newsletters#intel-card">Favze Intel</a>
-      <a href="https://favze.com/newsletters#insider-card">Favze Insider</a>
-      <a href="https://favze.com/newsletters" style="font-weight:700;color:var(--navy);">All Newsletters</a>
-      <div class="fz-mm-label">Glossaries</div>
-      <a href="https://favze.com/marketing-glossary">Marketing Terms Glossary</a>
-      <a href="https://favze.com/marketing-kpis-glossary">Marketing KPIs Glossary</a>
-      <a href="https://favze.com/ai-glossary">AI &amp; Automation Glossary</a>
-    </div>
+  <button class="mm-toggle" id="fzMmResTrig" aria-expanded="false">Resources <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  <div class="mm-sub" id="fzMmResSub">
+    <a href="https://favze.com/resources/articles/content-marketing">Content Marketing</a>
+    <a href="https://favze.com/resources/articles/social-media-strategy">Social Media Strategy</a>
+    <a href="https://favze.com/resources/articles/search-visibility">Search Visibility &amp; Local Discovery</a>
+    <a href="https://favze.com/resources/articles/brand-positioning">Brand Positioning &amp; Community Authority</a>
+    <a href="https://favze.com/resources/articles" style="font-weight:700;color:var(--navy);">All Articles</a>
+    <div class="fz-mm-label">Newsletters</div>
+    <a href="https://favze.com/resources/newsletters/favze-insider">Favze Insider</a>
+    <a href="https://favze.com/resources/newsletters/favze-intel">Favze Intel</a>
+    <a href="https://favze.com/resources/newsletters/favze-insights">Favze Insights</a>
+    <a href="https://favze.com/resources/newsletters" style="font-weight:700;color:var(--navy);">All Newsletters</a>
+    <div class="fz-mm-label">Glossaries</div>
+    <a href="https://favze.com/resources/glossary/marketing-terms">Marketing Terms Glossary</a>
+    <a href="https://favze.com/resources/glossary/marketing-kpis">Marketing KPIs Glossary</a>
+    <a href="https://favze.com/resources/glossary/ai">AI &amp; Automation Glossary</a>
+        <div class="fz-mm-label">Marketing Tools</div>
+        <a href="https://favze.com/resources/marketing-tools/service-match" data-sm-entry="nav-tools">Service Match Quiz</a>
+    <a href="https://favze.com/resources" style="font-weight:700;color:#064187">All Resources</a>
   </div>
-  <a href="https://favze.com/why-us">Why Us</a>
-  <a href="https://favze.com/about">About</a>
-  <a href="https://favze.com/faq">FAQ</a>
-  <a href="https://favze.com/free-consultation" class="mc">Book a Free Consultation</a>
+  <a href="https://favze.com/why-us" class="mm-link">Why Us</a>
+  <a href="https://favze.com/about" class="mm-link">About</a>
+  <a href="https://favze.com/faq" class="mm-link">FAQ</a>
+  <a href="https://favze.com/free-consultation" class="mm-link mm-cta">Book a Free Consultation</a>
 </div>
 <main id="main">
 
@@ -1939,7 +1942,7 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
       <p style="font-size:1.08rem;color:rgba(255,255,255,.82);line-height:1.65;max-width:520px;margin-bottom:28px">Your customers are already searching. If they can't find you, they find someone else. Favze is a local, full-service digital marketing agency serving <a href="https://favze.com/areas-served/northern-indiana">Northern Indiana</a> &amp; <a href="https://favze.com/areas-served/michiana">Michiana</a> with a personalized plan to help you get found, attract qualified customers, convert leads, and keep them coming back.</p>
       <div class="hctas">
         <a href="https://favze.com/free-consultation" class="bp">Book a Free Consultation <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        <a href="https://favze.com/services/" style="background:transparent;color:#fff;font-weight:700;padding:12px 22px;border-radius:10px;display:inline-flex;align-items:center;gap:8px;font-size:0.9rem;border:1.5px solid rgba(255,255,255,.3);text-decoration:none">Explore Services</a>
+        <a href="https://favze.com/services" style="background:transparent;color:#fff;font-weight:700;padding:12px 22px;border-radius:10px;display:inline-flex;align-items:center;gap:8px;font-size:0.9rem;border:1.5px solid rgba(255,255,255,.3);text-decoration:none">Explore Services</a>
       </div>
     </div>
     <div class="hv">
@@ -2266,7 +2269,7 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
   <text x="392" y="226" text-anchor="end" fill="rgba(255,255,255,.14)" font-family="Arial" font-size="6" font-style="italic">Northern Indiana &amp; Michiana</text>
 </svg>
                     <div style="padding:10px 20px;border-top:1px solid rgba(255,255,255,.07);display:flex;align-items:center;justify-content:flex-end">
-            <a href="https://favze.com/areas-served/" style="font-size:0.75rem;font-weight:700;color:#0A89A3;text-decoration:none;display:inline-flex;align-items:center;gap:5px">View all areas served &#8594;</a>
+            <a href="https://favze.com/areas-served" style="font-size:0.75rem;font-weight:700;color:#0A89A3;text-decoration:none;display:inline-flex;align-items:center;gap:5px">View all areas served &#8594;</a>
           </div>
         </div>
         <div class="cbox">
@@ -2444,7 +2447,7 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
       <a href="https://favze.com/services/paid-social-media-ads" class="sc"><div class="si"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><circle cx="5.5" cy="13" r="2.5" stroke="#064187" stroke-width="1.6"/><circle cx="20.5" cy="6.5" r="2.5" stroke="#064187" stroke-width="1.6"/><circle cx="20.5" cy="19.5" r="2.5" stroke="#064187" stroke-width="1.6"/><path d="M7.8 11.9L18.2 7.6M7.8 14.1L18.2 18.4" stroke="#064187" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="sn fh">Paid Social Media Ads</div><p class="sd">Facebook, Instagram, and TikTok ads aimed at the local people most likely to buy, tracked all the way to real leads.</p><span class="sl">Learn More &#8594;</span><div class="sc-overlay"><div class="sc-overlay-t">Paid Social Media Ads</div><div class="sc-overlay-d">Precisely targeted campaigns on the platforms your ideal customers already scroll. Favze builds and manages the ads and the landing pages behind them to turn attention into actual leads.</div><span class="sc-overlay-cta">Learn More &#8594;</span></div></a>
     </div>
     <div style="text-align:center;margin-top:44px">
-      <a href="https://favze.com/services/" class="bp">View All Services</a>
+      <a href="https://favze.com/services" class="bp">View All Services</a>
     </div>
   </div>
 </section>
@@ -2726,7 +2729,7 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
   <p>Not because they're better. Because they're easier to find. Favze builds the system that gets you found first, turns that lead into a buyer, and keeps them coming back, so tomorrow that customer chooses you instead. It starts with one free consultation.</p>
   <div class="cta-bs">
     <a href="https://favze.com/free-consultation" class="bw">Book a Free Consultation</a>
-    <a href="https://favze.com/services/" class="bs-wh">Explore All Services</a>
+    <a href="https://favze.com/services" class="bs-wh">Explore All Services</a>
   </div>
 </section>
 
@@ -2807,7 +2810,7 @@ footer.ft-std .ft-dot{color:rgba(255,255,255,.18);padding:0 6px}
 <div class="fz-smband-inner">
 <div class="fz-smband-ico" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" stroke="currentColor" stroke-width="2"/><path d="M15.6 8.4l-2.1 5.1-5.1 2.1 2.1-5.1z" fill="currentColor"/></svg></div>
 <div class="fz-smband-copy"><p class="fz-smband-kick">Free Service Match &middot; 60 seconds</p><h2 id="fzSmBand-index" class="fz-smband-title">Not Sure Which Service Fits Your Business?</h2><p class="fz-smband-sub">Answer 3 quick questions about your business type, industry, and goals. Service Match builds a phased plan showing which Favze services to start with and why.</p><ul class="fz-smband-steps"><li><b>1</b>Your business</li><li><b>2</b>Your industry</li><li><b>3</b>Your goals</li></ul></div>
-<div class="fz-smband-acts"><a class="fz-smband-btn" href="https://favze.com/service-match?from=index" data-sm-entry="band-index">Find My Service <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="fz-smband-alt" href="https://favze.com/free-consultation" data-cta="smband-consult">Or talk it through with Riley</a></div>
+<div class="fz-smband-acts"><a class="fz-smband-btn" href="https://favze.com/resources/marketing-tools/service-match?from=index" data-sm-entry="band-index">Find My Service <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="fz-smband-alt" href="https://favze.com/free-consultation" data-cta="smband-consult">Or talk it through with Riley</a></div>
 </div>
 </section>
 <section class="fz-form-sec" id="free-consultation-form" aria-labelledby="fzFormTitle">
@@ -2869,27 +2872,33 @@ footer.ft-std .ft-dot{color:rgba(255,255,255,.18);padding:0 6px}
         </ul>
       </div>
       <div class="fc">
-        <h3><a href="https://favze.com/articles">Articles</a></h3>
+        <h3><a href="https://favze.com/resources/articles">Articles</a></h3>
         <ul>
-          <li><a href="https://favze.com/articles/content-marketing">Content Marketing</a></li>
-          <li><a href="https://favze.com/articles/social-media-strategy">Social Media Strategy</a></li>
-          <li><a href="https://favze.com/articles/search-visibility">Search Visibility &amp; Local Discovery</a></li>
-          <li><a href="https://favze.com/articles/brand-positioning">Brand Positioning</a></li>
+          <li><a href="https://favze.com/resources/articles/content-marketing">Content Marketing</a></li>
+          <li><a href="https://favze.com/resources/articles/social-media-strategy">Social Media Strategy</a></li>
+          <li><a href="https://favze.com/resources/articles/search-visibility">Search Visibility &amp; Local Discovery</a></li>
+          <li><a href="https://favze.com/resources/articles/brand-positioning">Brand Positioning</a></li>
         </ul>
         <div style="margin-top:22px">
-          <h3><a href="https://favze.com/newsletters">Newsletters</a></h3>
+          <h3><a href="https://favze.com/resources/newsletters">Newsletters</a></h3>
           <ul>
-            <li><a href="https://favze.com/newsletters#insider-card">Favze Insider</a></li>
-            <li><a href="https://favze.com/newsletters#intel-card">Favze Intel</a></li>
-            <li><a href="https://www.linkedin.com/newsletters/favze-insights-7399519169551126528/" target="_blank" rel="noopener noreferrer nofollow">Favze Insights</a></li>
+            <li><a href="https://favze.com/resources/newsletters/favze-insider">Favze Insider</a></li>
+            <li><a href="https://favze.com/resources/newsletters/favze-intel">Favze Intel</a></li>
+            <li><a href="https://favze.com/resources/newsletters/favze-insights">Favze Insights</a></li>
           </ul>
         </div>
         <div style="margin-top:22px">
-          <h3><a href="https://favze.com/marketing-glossary">Glossaries</a></h3>
+          <h3><a href="https://favze.com/resources/glossary">Glossaries</a></h3>
           <ul>
-            <li><a href="https://favze.com/marketing-glossary">Marketing Terms</a></li>
-            <li><a href="https://favze.com/marketing-kpis-glossary">Marketing KPIs</a></li>
-            <li><a href="https://favze.com/ai-glossary">AI &amp; Automation</a></li>
+            <li><a href="https://favze.com/resources/glossary/marketing-terms">Marketing Terms</a></li>
+            <li><a href="https://favze.com/resources/glossary/marketing-kpis">Marketing KPIs</a></li>
+            <li><a href="https://favze.com/resources/glossary/ai">AI &amp; Automation</a></li>
+          </ul>
+        </div>
+        <div style="margin-top:22px">
+          <h3><a href="https://favze.com/resources/marketing-tools">Marketing Tools</a></h3>
+          <ul>
+            <li><a href="https://favze.com/resources/marketing-tools/service-match" data-sm-entry="footer-tools">Service Match</a></li>
           </ul>
         </div>
       </div>
@@ -2902,7 +2911,8 @@ footer.ft-std .ft-dot{color:rgba(255,255,255,.18);padding:0 6px}
           <li><a href="https://favze.com/our-process">Our Process</a></li>
           <li><a href="https://favze.com/favze-framework">FAVZE Framework</a></li>
           <li><a href="https://favze.com/services">All Services</a></li>
-          <li><a href="https://favze.com/service-match" data-sm-entry="footer">Service Match Quiz</a></li>
+          <li><a href="https://favze.com/resources/marketing-tools/service-match" data-sm-entry="footer">Service Match Quiz</a></li>
+          <li><a href="https://favze.com/resources">Resources</a></li>
           <li><a href="https://favze.com/faq">FAQ</a></li>
           <li><a href="https://favze.com/areas-served">Areas Served</a></li>
         </ul>
@@ -2933,7 +2943,7 @@ footer.ft-std .ft-dot{color:rgba(255,255,255,.18);padding:0 6px}
     <div class="fz-news">
       <div class="fz-news-copy">
         <p class="fz-news-title">Get Favze Insider and Favze Intel</p>
-        <p>One signup gets you two free monthly newsletters. Favze Insider keeps you current. Favze Intel makes you sharper. <a href="https://favze.com/newsletters">Learn more</a>.</p>
+        <p>One signup gets you two free monthly newsletters. Favze Insider keeps you current. Favze Intel makes you sharper. <a href="https://favze.com/resources/newsletters">Learn more</a>.</p>
       </div>
       <div class="fz-news-card">
         <iframe data-tally-src="https://tally.so/embed/Gxg47Z?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;formEventsForwarding=1" loading="lazy" width="100%" height="260" frameborder="0" marginheight="0" marginwidth="0" title="Favze newsletter signup"></iframe>
@@ -2982,6 +2992,7 @@ footer.ft-std .ft-dot{color:rgba(255,255,255,.18);padding:0 6px}
       <div style="display:flex;gap:18px;flex-wrap:wrap">
         <a href="https://favze.com/privacy-policy">Privacy Policy</a>
         <a href="https://favze.com/terms-of-use">Terms of Use</a>
+        <a href="https://favze.com/accessibility-statement">Accessibility Statement</a>
       </div>
     </div>
   </div>
@@ -3344,6 +3355,7 @@ window.silktideConsentManager.init({
 });
 </script>
 <script src="assets/js/fz-site.js"></script>
+<script src="assets/js/fz-nav.js" defer></script>
 <script src="assets/js/fz-search.js" defer></script>
 <script src="assets/js/fz-ui.js" defer></script>
 </body>

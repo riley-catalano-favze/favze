@@ -128,7 +128,7 @@
     nav.appendChild(ol);
     var svc = isSvc ? path.split('/').pop() : '';
     var cta = D.createElement('a'); cta.className = 'fz-sidenav-cta';
-    cta.href = B + 'service-match?from=side-nav' + (svc ? '&service=' + svc : '&page=' + encodeURIComponent(path.split('/').pop() || 'home'));
+    cta.href = B + 'resources/marketing-tools/service-match?from=side-nav' + (svc ? '&service=' + svc : '&page=' + encodeURIComponent(path.split('/').pop() || 'home'));
     cta.innerHTML = '<span><b>Find My Service</b><small>Free 60-second quiz</small></span><i>' + COMPASS + '</i>';
     cta.setAttribute('aria-label', 'Find My Service: take the free Service Match quiz');
     cta.addEventListener('click', function () { track('side_nav_click', { section: 'Service Match' }); track('service_match_entry', { sm_entry: 'side-nav', service: svc }); });
@@ -470,7 +470,7 @@
   };
   var TOY_PAGE = { 'local-seo': 'pin', 'search-engine-optimization': 'bars', 'email-marketing': 'mail', 'short-message-service-sms': 'sms',
     'social-media-marketing': 'heart', 'paid-search-ads': 'glass', 'answer-engine-optimization': 'ask', 'generative-engine-optimization': 'spark',
-    'hubspot-setup': 'funnel', 'paid-social-media-ads': 'target', 'ai-optimization': 'atom', 'services': 'like', 'website-design': 'site', 'about': 'medal', 'marketing-glossary': 'book', 'marketing-kpis-glossary': 'calc', 'ai-glossary': 'chip', 'service-match': 'compass' };
+    'hubspot-setup': 'funnel', 'paid-social-media-ads': 'target', 'ai-optimization': 'atom', 'services': 'like', 'website-design': 'site', 'about': 'medal', 'marketing-terms': 'book', 'marketing-kpis': 'calc', 'ai': 'chip', 'resources': 'cube', 'glossary': 'book', 'marketing-tools': 'compass', 'newsletters': 'mail', 'favze-insider': 'bars', 'favze-intel': 'glass', 'favze-insights': 'ask', 'accessibility-statement': 'heart', 'service-match': 'compass' };
   function el(tag, cls, css) { var e = D.createElement(tag); if (cls) e.className = cls; if (css) e.style.cssText = css; return e; }
   function gradDefs() {
     if (D.getElementById('fzToyDefs')) return;
@@ -647,7 +647,7 @@
     convert: { say: ['Turning visitors into leads is about ads and a website that makes people act.'], links: [['Website Design', 'services/website-design'], ['Paid Search Ads', 'services/paid-search-ads'], ['Paid Social Ads', 'services/paid-social-media-ads']], next: 'close' },
     keep: { say: ['Keeping customers is follow-up: emails, texts, and a CRM that remembers everyone.'], links: [['Email Marketing', 'services/email-marketing'], ['SMS Marketing', 'services/short-message-service-sms'], ['HubSpot Setup', 'services/hubspot-setup']], next: 'close' },
     match: { say: ['Great place to start. Service Match asks 3 quick questions about your business, industry, and goals.', 'It takes about a minute and gives you a phased plan:'],
-      links: [['Take the free Service Match quiz', 'service-match?from=chat']], next: 'close' },
+      links: [['Take the free Service Match quiz', 'resources/marketing-tools/service-match?from=chat']], next: 'close' },
     close: { say: ['Want to talk it through with Riley? It’s free, and there’s no pressure.'], end: true }
   };
   function chat() {

@@ -126,7 +126,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         "Allen County, Indiana"
       ],
       "sameAs": [
-        "https://www.facebook.com/favze",
+        "https://www.facebook.com/favzedigitalmarketing/",
         "https://www.linkedin.com/company/favze",
         "https://www.instagram.com/favze"
       ],
@@ -1638,6 +1638,7 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
 </style>
 <link rel="stylesheet" href="../assets/css/fz-site.css">
 <link rel="stylesheet" href="../assets/css/fz-ui.css">
+<link rel="stylesheet" href="../assets/css/fz-nav.css">
 <link rel="stylesheet" href="../assets/css/fz-demos.css">
 <script type="application/ld+json" id="fz-person-schema">
 {
@@ -1666,13 +1667,10 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
 <nav>
   <a class="fz-skip" href="#main">Skip to main content</a>
   <a href="https://favze.com/" class="fz-logo" aria-label="Favze home"><img src="https://favze.com/assets/brand/favze-logo-horizontal-black.png" alt="Favze Digital Marketing" width="147" height="34"></a>
-  <ul class="nl">
+  <ul class="nl fz-nl">
     <li>
-      <button class="drop-trigger" id="trigServices" aria-expanded="false" aria-controls="panServices">
-        Services
-        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="drop-panel" id="panServices" role="menu">
+      <button class="drop-trigger is-current" id="fzTrigSvc" aria-expanded="false" aria-controls="fzPanSvc">Services <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="drop-panel" id="fzPanSvc" role="menu">
         <div class="drop-label">All Services</div>
         <a href="https://favze.com/services/social-media-marketing" role="menuitem">Social Media Marketing <span class="drop-abbr">SMM</span></a>
         <a href="https://favze.com/services/search-engine-optimization" role="menuitem">Search Engine Optimization <span class="drop-abbr">SEO</span></a>
@@ -1680,40 +1678,41 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
         <a href="https://favze.com/services/generative-engine-optimization" role="menuitem">Generative Engine Optimization <span class="drop-abbr">GEO</span></a>
         <a href="https://favze.com/services/ai-optimization" role="menuitem">AI Optimization</a>
         <a href="https://favze.com/services/local-seo" role="menuitem">Local SEO</a>
-        <a href="https://favze.com/services/email-marketing" role="menuitem" style="font-weight:700;color:var(--navy);">Email Marketing</a>
+        <a href="https://favze.com/services/email-marketing" role="menuitem">Email Marketing</a>
         <a href="https://favze.com/services/short-message-service-sms" role="menuitem">SMS Marketing</a>
         <a href="https://favze.com/services/hubspot-setup" role="menuitem">HubSpot Setup</a>
         <a href="https://favze.com/services/website-design" role="menuitem">Website Design</a>
         <a href="https://favze.com/services/paid-search-ads" role="menuitem">Paid Search Ads <span class="drop-abbr">SEM</span></a>
         <a href="https://favze.com/services/paid-social-media-ads" role="menuitem">Paid Social Media Ads</a>
         <div class="drop-divider"></div>
-        <a href="https://favze.com/services/" class="drop-view-all" role="menuitem">View All Services &rarr;</a>
-        <a href="https://favze.com/service-match" class="drop-view-all drop-sm" role="menuitem" data-sm-entry="nav">Not Sure? Take the Service Match &rarr;</a>
+        <a href="https://favze.com/services" class="drop-view-all" role="menuitem">View All Services &rarr;</a>
+        <a href="https://favze.com/resources/marketing-tools/service-match" class="drop-view-all drop-sm" role="menuitem" data-sm-entry="nav">Not Sure? Take the Service Match &rarr;</a>
       </div>
     </li>
     <li>
-      <button class="drop-trigger" id="trigArticles" aria-expanded="false" aria-controls="panArticles">
-        Resources
-        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="drop-panel center" id="panArticles" role="menu">
+      <button class="drop-trigger" id="fzTrigRes" aria-expanded="false" aria-controls="fzPanRes">Resources <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="drop-panel center" id="fzPanRes" role="menu">
         <div class="drop-label">Articles</div>
-        <a href="https://favze.com/articles/content-marketing" role="menuitem">Content Marketing</a>
-        <a href="https://favze.com/articles/social-media-strategy" role="menuitem">Social Media Strategy</a>
-        <a href="https://favze.com/articles/search-visibility" role="menuitem">Search Visibility &amp; Local Discovery</a>
-        <a href="https://favze.com/articles/brand-positioning" role="menuitem">Brand Positioning &amp; Community Authority</a>
-        <a href="https://favze.com/articles" class="drop-view-all" role="menuitem">All Articles &rarr;</a>
+        <a href="https://favze.com/resources/articles/content-marketing" role="menuitem">Content Marketing</a>
+        <a href="https://favze.com/resources/articles/social-media-strategy" role="menuitem">Social Media Strategy</a>
+        <a href="https://favze.com/resources/articles/search-visibility" role="menuitem">Search Visibility &amp; Local Discovery</a>
+        <a href="https://favze.com/resources/articles/brand-positioning" role="menuitem">Brand Positioning &amp; Community Authority</a>
+        <a href="https://favze.com/resources/articles" class="drop-view-all" role="menuitem">All Articles &rarr;</a>
         <div class="drop-divider"></div>
         <div class="drop-label">Newsletters</div>
-        <a href="https://www.linkedin.com/newsletters/favze-insights-7399519169551126528/" role="menuitem" target="_blank" rel="noopener noreferrer">Favze Insights &#8599;</a>
-        <a href="https://favze.com/newsletters#intel-card" role="menuitem">Favze Intel</a>
-        <a href="https://favze.com/newsletters#insider-card" role="menuitem">Favze Insider</a>
-        <a href="https://favze.com/newsletters" class="drop-view-all" role="menuitem">All Newsletters &rarr;</a>
+        <a href="https://favze.com/resources/newsletters/favze-insider" role="menuitem">Favze Insider</a>
+        <a href="https://favze.com/resources/newsletters/favze-intel" role="menuitem">Favze Intel</a>
+        <a href="https://favze.com/resources/newsletters/favze-insights" role="menuitem">Favze Insights</a>
+        <a href="https://favze.com/resources/newsletters" class="drop-view-all" role="menuitem">All Newsletters &rarr;</a>
         <div class="drop-divider"></div>
         <div class="drop-label">Glossaries</div>
-        <a href="https://favze.com/marketing-glossary" role="menuitem">Marketing Terms Glossary</a>
-        <a href="https://favze.com/marketing-kpis-glossary" role="menuitem">Marketing KPIs Glossary</a>
-        <a href="https://favze.com/ai-glossary" role="menuitem">AI &amp; Automation Glossary</a>
+        <a href="https://favze.com/resources/glossary/marketing-terms" role="menuitem">Marketing Terms Glossary</a>
+        <a href="https://favze.com/resources/glossary/marketing-kpis" role="menuitem">Marketing KPIs Glossary</a>
+        <a href="https://favze.com/resources/glossary/ai" role="menuitem">AI &amp; Automation Glossary</a>
+        <div class="drop-divider"></div>
+        <div class="drop-label">Marketing Tools</div>
+        <a href="https://favze.com/resources/marketing-tools/service-match" role="menuitem" data-sm-entry="nav-tools">Service Match Quiz</a>
+        <a href="https://favze.com/resources" class="drop-view-all" role="menuitem">All Resources &rarr;</a>
       </div>
     </li>
     <li><a href="https://favze.com/why-us" class="nl-link">Why Us</a></li>
@@ -1727,45 +1726,42 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
   </button>
 </nav>
 <div class="mm" id="mm" aria-hidden="true">
-  <button class="mm-toggle" id="mmServTrig" aria-expanded="false">
-    Services
-    <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  </button>
-  <div class="mm-sub" id="mmServSub">
+  <button class="mm-toggle" id="fzMmSvcTrig" aria-expanded="false">Services <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  <div class="mm-sub" id="fzMmSvcSub">
     <a href="https://favze.com/services/social-media-marketing">Social Media Marketing</a>
     <a href="https://favze.com/services/search-engine-optimization">SEO</a>
     <a href="https://favze.com/services/answer-engine-optimization">AEO</a>
     <a href="https://favze.com/services/generative-engine-optimization">GEO</a>
     <a href="https://favze.com/services/ai-optimization">AI Optimization</a>
     <a href="https://favze.com/services/local-seo">Local SEO</a>
-    <a href="https://favze.com/services/email-marketing" style="font-weight:700;color:var(--navy);">Email Marketing</a>
+    <a href="https://favze.com/services/email-marketing">Email Marketing</a>
     <a href="https://favze.com/services/short-message-service-sms">SMS Marketing</a>
     <a href="https://favze.com/services/hubspot-setup">HubSpot Setup</a>
     <a href="https://favze.com/services/website-design">Website Design</a>
     <a href="https://favze.com/services/paid-search-ads">Paid Search Ads</a>
-    <a href="https://favze.com/services/paid-social-media-ads">Paid Social Media Ads</a>
-    <a href="https://favze.com/services/" style="font-weight:700;color:var(--navy);">All Services</a>
-      <a href="https://favze.com/service-match" style="font-weight:700;color:#086E84" data-sm-entry="mobile-menu">Not Sure? Take the Service Match</a>
+    <a href="https://favze.com/services/paid-social-media-ads">Paid Social Ads</a>
+    <a href="https://favze.com/services" style="font-weight:700;color:var(--navy);">All Services</a>
+      <a href="https://favze.com/resources/marketing-tools/service-match" style="font-weight:700;color:#086E84" data-sm-entry="mobile-menu">Not Sure? Take the Service Match</a>
   </div>
-  <button class="mm-toggle" id="mmArtTrig" aria-expanded="false">
-    Resources
-    <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  </button>
-  <div class="mm-sub" id="mmArtSub">
-    <a href="https://favze.com/articles/content-marketing/">Content Marketing</a>
-    <a href="https://favze.com/articles/social-media-strategy/">Social Media Strategy</a>
-    <a href="https://favze.com/articles/search-visibility/">Search Visibility &amp; Local Discovery</a>
-    <a href="https://favze.com/articles/brand-positioning/">Brand Positioning &amp; Community Authority</a>
-    <a href="https://favze.com/articles/" style="font-weight:700;color:var(--navy);">All Articles</a>
+  <button class="mm-toggle" id="fzMmResTrig" aria-expanded="false">Resources <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  <div class="mm-sub" id="fzMmResSub">
+    <a href="https://favze.com/resources/articles/content-marketing">Content Marketing</a>
+    <a href="https://favze.com/resources/articles/social-media-strategy">Social Media Strategy</a>
+    <a href="https://favze.com/resources/articles/search-visibility">Search Visibility &amp; Local Discovery</a>
+    <a href="https://favze.com/resources/articles/brand-positioning">Brand Positioning &amp; Community Authority</a>
+    <a href="https://favze.com/resources/articles" style="font-weight:700;color:var(--navy);">All Articles</a>
     <div class="fz-mm-label">Newsletters</div>
-    <a href="https://www.linkedin.com/newsletters/favze-insights-7399519169551126528/" target="_blank" rel="noopener noreferrer">Favze Insights &#8599;</a>
-    <a href="https://favze.com/newsletters#intel-card">Favze Intel</a>
-    <a href="https://favze.com/newsletters#insider-card">Favze Insider</a>
-    <a href="https://favze.com/newsletters" style="font-weight:700;color:var(--navy);">All Newsletters</a>
+    <a href="https://favze.com/resources/newsletters/favze-insider">Favze Insider</a>
+    <a href="https://favze.com/resources/newsletters/favze-intel">Favze Intel</a>
+    <a href="https://favze.com/resources/newsletters/favze-insights">Favze Insights</a>
+    <a href="https://favze.com/resources/newsletters" style="font-weight:700;color:var(--navy);">All Newsletters</a>
     <div class="fz-mm-label">Glossaries</div>
-    <a href="https://favze.com/marketing-glossary">Marketing Terms Glossary</a>
-    <a href="https://favze.com/marketing-kpis-glossary">Marketing KPIs Glossary</a>
-    <a href="https://favze.com/ai-glossary">AI &amp; Automation Glossary</a>
+    <a href="https://favze.com/resources/glossary/marketing-terms">Marketing Terms Glossary</a>
+    <a href="https://favze.com/resources/glossary/marketing-kpis">Marketing KPIs Glossary</a>
+    <a href="https://favze.com/resources/glossary/ai">AI &amp; Automation Glossary</a>
+        <div class="fz-mm-label">Marketing Tools</div>
+        <a href="https://favze.com/resources/marketing-tools/service-match" data-sm-entry="nav-tools">Service Match Quiz</a>
+    <a href="https://favze.com/resources" style="font-weight:700;color:#064187">All Resources</a>
   </div>
   <a href="https://favze.com/why-us" class="mm-link">Why Us</a>
   <a href="https://favze.com/about" class="mm-link">About</a>
@@ -1801,7 +1797,7 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
         <span class="hero-h1-line teal">Automation That</span>
         <span class="hero-h1-line boxed">Converts</span><span class="fz-h1-sub">Email marketing services for Northern Indiana &amp; Michiana businesses</span>
       </h1>
-      <p class="hero-sub">Favze builds email marketing and automation for lead generation businesses across Northern Indiana and Michiana, turning cold subscribers into booked calls and closed deals. Inbox placement, <a class="fz-gl-link" href="https://favze.com/marketing-glossary#segmentation">list segmentation</a>, and behavior-triggered nurture sequences work together so every lead gets followed up with automatically, moved through your pipeline, and converted, without a single manual send.</p>
+      <p class="hero-sub">Favze builds email marketing and automation for lead generation businesses across Northern Indiana and Michiana, turning cold subscribers into booked calls and closed deals. Inbox placement, <a class="fz-gl-link" href="https://favze.com/resources/glossary/marketing-terms#segmentation">list segmentation</a>, and behavior-triggered nurture sequences work together so every lead gets followed up with automatically, moved through your pipeline, and converted, without a single manual send.</p>
       <div class="hero-ctas">
         <a href="https://favze.com/free-consultation" class="btn-primary">Book a Free Consultation <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         <a href="#services" class="btn-ghost">See What's Included</a>
@@ -1923,7 +1919,7 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="2" y="4" width="20" height="16" rx="2" stroke="#0A89A3" stroke-width="1.7"/><path d="M2 8l10 7 10-7" stroke="#0A89A3" stroke-width="1.7" stroke-linecap="round"/></svg>
         </div>
         <h3>Inbox Placement is AI-Driven</h3>
-        <p>Gmail, Outlook, and Yahoo Mail all use <a class="fz-gl-link" href="https://favze.com/ai-glossary#machine-learning">machine learning</a> algorithms to decide if your email lands in the primary inbox, the promotions tab, or spam. Sender reputation, authentication (SPF, DKIM, DMARC), engagement history, and content signals all feed these models. Favze engineers every campaign to score high across all these signals, so your emails reach the subscribers who want them.</p>
+        <p>Gmail, Outlook, and Yahoo Mail all use <a class="fz-gl-link" href="https://favze.com/resources/glossary/ai#machine-learning">machine learning</a> algorithms to decide if your email lands in the primary inbox, the promotions tab, or spam. Sender reputation, authentication (SPF, DKIM, DMARC), engagement history, and content signals all feed these models. Favze engineers every campaign to score high across all these signals, so your emails reach the subscribers who want them.</p>
       </div>
 
       <div class="why-ai-card">
@@ -1932,7 +1928,7 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><polygon points="12,2 15,9 22,9 16,14 18,21 12,17 6,21 8,14 2,9 9,9" stroke="#ffb400" stroke-width="1.7" fill="none"/></svg>
         </div>
         <h3>Revenue-Focused Personalization</h3>
-        <p>AI analyzes each subscriber's behavior, purchase history, and engagement patterns to determine exactly which offer to send them and when. Generic batch-and-blast emails generate low open rates and high unsubscribes. Personalized, behavior-triggered campaigns generate measurably higher clicks, conversions, and <a class="fz-gl-link" href="https://favze.com/marketing-kpis-glossary#revenue-per-email">revenue per email</a>, often 3–5x the results of untargeted sends.</p>
+        <p>AI analyzes each subscriber's behavior, purchase history, and engagement patterns to determine exactly which offer to send them and when. Generic batch-and-blast emails generate low open rates and high unsubscribes. Personalized, behavior-triggered campaigns generate measurably higher clicks, conversions, and <a class="fz-gl-link" href="https://favze.com/resources/glossary/marketing-kpis#revenue-per-email">revenue per email</a>, often 3–5x the results of untargeted sends.</p>
       </div>
 
       <div class="why-ai-card">
@@ -1959,7 +1955,7 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="#EA4335" stroke-width="1.7" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="#EA4335" stroke-width="1.7"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="#EA4335" stroke-width="1.7" stroke-linecap="round"/></svg>
         </div>
         <h3>Email Fatigue Prevention</h3>
-        <p>Sending too frequently to disengaged subscribers damages your <a class="fz-gl-link" href="https://favze.com/marketing-glossary#sender-reputation">sender reputation</a> and inflates unsubscribe rates. AI monitors individual engagement patterns and automatically adjusts send frequency to keep your list healthy, your reputation clean, and your subscribers profitable over the long term, not just for one campaign cycle.</p>
+        <p>Sending too frequently to disengaged subscribers damages your <a class="fz-gl-link" href="https://favze.com/resources/glossary/marketing-terms#sender-reputation">sender reputation</a> and inflates unsubscribe rates. AI monitors individual engagement patterns and automatically adjusts send frequency to keep your list healthy, your reputation clean, and your subscribers profitable over the long term, not just for one campaign cycle.</p>
       </div>
 
       <div class="why-ai-card">
@@ -1991,7 +1987,7 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
         <span class="lbl">The Deliverability Difference</span>
         <h2 id="deliverability-heading">Email Deliverability Services: <span>SPF, DKIM, and DMARC Setup</span></h2>
         <p>An email that lands in spam is an email that was never sent. Gmail's AI filters block millions of legitimate business emails every day, not because they're spam, but because they look like spam to the algorithm. Sender authentication, list hygiene, engagement rates, and content signals all feed the filter.</p>
-        <p>Favze sets up and maintains <a class="fz-gl-link" href="https://favze.com/marketing-glossary#spf-dkim-dmarc">SPF, DKIM, and DMARC</a> authentication records, monitors sender reputation scores, keeps your list clean through active hygiene management, and writes content structured to pass machine learning filters, ensuring your messages reach real inboxes in Goshen, Elkhart, South Bend, and across Northern Indiana.</p>
+        <p>Favze sets up and maintains <a class="fz-gl-link" href="https://favze.com/resources/glossary/marketing-terms#spf-dkim-dmarc">SPF, DKIM, and DMARC</a> authentication records, monitors sender reputation scores, keeps your list clean through active hygiene management, and writes content structured to pass machine learning filters, ensuring your messages reach real inboxes in Goshen, Elkhart, South Bend, and across Northern Indiana.</p>
         
       </div>
       <div>
@@ -2050,7 +2046,7 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
         <p class="svc-detail-desc">Your email list is your most valuable owned marketing asset, but only if it's healthy. A list full of invalid addresses, unengaged contacts, or purchased junk emails tanks deliverability and destroys sender reputation. Favze builds and maintains credible, engaged lists of real local customers in Northern Indiana and Michiana who actually want to hear from your business.</p>
         <ul class="svc-checklist">
           <li><span class="chk"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Opt-in lead capture strategy, forms, landing pages, and incentive campaigns</li>
-          <li><span class="chk"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><a class="fz-gl-link" href="https://favze.com/marketing-glossary#double-opt-in">Double opt-in</a> configuration for maximum list quality and compliance</li>
+          <li><span class="chk"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><a class="fz-gl-link" href="https://favze.com/resources/glossary/marketing-terms#double-opt-in">Double opt-in</a> configuration for maximum list quality and compliance</li>
           <li><span class="chk"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Ongoing list hygiene, removal of bounces, invalid addresses, and spam traps</li>
           <li><span class="chk"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Suppression list management, protect sender reputation and comply with CAN-SPAM</li>
           <li><span class="chk"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Sender domain authentication, SPF, DKIM, and DMARC properly configured</li>
@@ -2097,12 +2093,12 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
             <h3 class="svc-detail-name">AI-Powered Content Optimization</h3>
           </div>
         </div>
-        <p class="svc-detail-desc">Every element of your email, the subject line, <a class="fz-gl-link" href="https://favze.com/marketing-glossary#preheader">preheader text</a>, headline, body copy, images, CTA button, and layout, directly affects whether subscribers open, click, and buy. Favze engineers each element using AI testing and platform-native optimization tools to maximize engagement and conversions from every send.</p>
+        <p class="svc-detail-desc">Every element of your email, the subject line, <a class="fz-gl-link" href="https://favze.com/resources/glossary/marketing-terms#preheader">preheader text</a>, headline, body copy, images, CTA button, and layout, directly affects whether subscribers open, click, and buy. Favze engineers each element using AI testing and platform-native optimization tools to maximize engagement and conversions from every send.</p>
         <ul class="svc-checklist">
           <li><span class="chk"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Subject line AI testing, multiple variants tested for highest open rate</li>
           <li><span class="chk"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Spam filter content review, no trigger words, safe image-to-text ratios</li>
           <li><span class="chk"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Mobile-responsive templates, fully optimized for phone-first reading</li>
-          <li><span class="chk"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>CTA placement and copy optimization for maximum <a class="fz-gl-link" href="https://favze.com/marketing-kpis-glossary#click-through-rate">click-through rate</a></li>
+          <li><span class="chk"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>CTA placement and copy optimization for maximum <a class="fz-gl-link" href="https://favze.com/resources/glossary/marketing-kpis#click-through-rate">click-through rate</a></li>
           <li><span class="chk"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Localized content, messaging relevant to Elkhart County and Northern Indiana audiences</li>
           <li><span class="chk"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Image optimization, compressed for fast load without losing quality</li>
         </ul>
@@ -2147,7 +2143,7 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
             <h3 class="svc-detail-name">Multi-Channel Integration</h3>
           </div>
         </div>
-        <p class="svc-detail-desc">Email performs best when it's part of a connected marketing ecosystem, not an isolated channel. Favze integrates your email campaigns with your social media presence, SMS marketing, website content, <a class="fz-gl-link" href="https://favze.com/marketing-glossary#google-business-profile">Google Business Profile</a>, and paid search ads so your Northern Indiana customers receive consistent messaging at every touchpoint on every channel they use.</p>
+        <p class="svc-detail-desc">Email performs best when it's part of a connected marketing ecosystem, not an isolated channel. Favze integrates your email campaigns with your social media presence, SMS marketing, website content, <a class="fz-gl-link" href="https://favze.com/resources/glossary/marketing-terms#google-business-profile">Google Business Profile</a>, and paid search ads so your Northern Indiana customers receive consistent messaging at every touchpoint on every channel they use.</p>
         <ul class="svc-checklist">
           <li><span class="chk"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Email + SMS coordination, reinforce campaigns across both direct channels</li>
           <li><span class="chk"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5 3.5-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Social media alignment, consistent offer messaging across email and social</li>
@@ -2935,7 +2931,7 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
       </div>
     </div>
   
-  <p class="fz-text-cta">Have a question that is not answered here? <a href="https://favze.com/free-consultation?service=email-marketing&amp;reason=faq-question" data-cta="faq-ask-riley">Ask Riley in a free consultation</a>, or <a href="https://favze.com/service-match?from=faq-email-marketing" data-sm-entry="faq-email-marketing">see which services fit your business in 60 seconds</a>.</p>
+  <p class="fz-text-cta">Have a question that is not answered here? <a href="https://favze.com/free-consultation?service=email-marketing&amp;reason=faq-question" data-cta="faq-ask-riley">Ask Riley in a free consultation</a>, or <a href="https://favze.com/resources/marketing-tools/service-match?from=faq-email-marketing" data-sm-entry="faq-email-marketing">see which services fit your business in 60 seconds</a>.</p>
 </div>
 </section>
 <!-- NEWSLETTER CTA -->
@@ -2956,7 +2952,7 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
           <div style="font-size:0.83rem;color:rgba(255,255,255,.55);line-height:1.6;">A monthly deep dive, one strategic topic per issue, covered in full.</div>
         </div>
       </div>
-      <a href="https://favze.com/newsletters" class="btn-primary" style="display:inline-flex;align-items:center;gap:9px;">Subscribe to Favze Insider &amp; Favze Intel <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="https://favze.com/resources/newsletters" class="btn-primary" style="display:inline-flex;align-items:center;gap:9px;">Subscribe to Favze Insider &amp; Favze Intel <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       <p style="margin-top:14px;font-size:0.8rem;color:rgba(255,255,255,.35);">Free. No spam. Unsubscribe anytime.</p>
     </div>
   </div>
@@ -3007,15 +3003,15 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
 <p class="fz-related-eyebrow">Free Guides &middot; 10 Articles</p>
 <h2 id="fzRelated-svc">Email Marketing Tips From Favze Insights</h2>
 <p class="fz-cl-sub">Every Favze Insights guide in one place, starting with the ones that matter most for Email Marketing.</p>
-<div class="fz-cl-grid" data-fz-rail="Favze Insights guides"><a class="fz-cl-card" href="https://favze.com/articles/content-marketing/content-repurposing-mastery-ai-era"><span class="fz-cl-tag">Content Marketing</span><span class="fz-cl-title">Content Repurposing Mastery: For the AI Era</span><span class="fz-cl-desc">Most businesses publish content once and move on. The businesses dominating search and AI-generated answers are doing something smarter - producing one piece of content and turning it into ten. This is exactly how to build a repurposing system that works for SEO, AEO, and GEO.</span><span class="fz-cl-meta"><span>20 min read</span><span class="fz-cl-go">Read the guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a><a class="fz-cl-card" href="https://favze.com/articles/content-marketing/how-to-create-evergreen-content"><span class="fz-cl-tag">Content Marketing</span><span class="fz-cl-title">How to Create Evergreen Content That Brings Customers for Years</span><span class="fz-cl-desc">Most businesses create content that disappears into the feed within hours. This guide covers exactly what evergreen content is, why it compounds in ways other marketing cannot, and precisely how to create it so it brings customers for years.</span><span class="fz-cl-meta"><span>22 min read</span><span class="fz-cl-go">Read the guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a><a class="fz-cl-card" href="https://favze.com/articles/brand-positioning/how-to-make-business-local-favorite"><span class="fz-cl-tag">Brand Positioning</span><span class="fz-cl-title">How to Make Your Business the Favorite in Northern Indiana &amp; Michiana</span><span class="fz-cl-desc">Being known is not the same as being chosen. This is the exact playbook for building a brand that Northern Indiana and Michiana customers trust, recommend, and return to - without a national budget or a marketing department.</span><span class="fz-cl-meta"><span>14 min read</span><span class="fz-cl-go">Read the guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a><a class="fz-cl-card" href="https://favze.com/articles/content-marketing/blog-and-article-hierarchy-pillars-clusters-internal-linking"><span class="fz-cl-tag">Content Marketing</span><span class="fz-cl-title">Blog and Article Hierarchy: Pillars, Clusters, and Internal Linking</span><span class="fz-cl-desc">Most businesses write articles one by one and wonder why their site never ranks. The issue isn&#x27;t article quality - it&#x27;s the lack of structure. This guide covers the three-level content hierarchy, topical authority, and the internal linking architecture that makes it all work.</span><span class="fz-cl-meta"><span>17 min read</span><span class="fz-cl-go">Read the guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a><a class="fz-cl-card" href="https://favze.com/articles/search-visibility/local-service-ads-fast-track-top-google"><span class="fz-cl-tag">Search Visibility</span><span class="fz-cl-title">Local Service Ads: Fast Track to the Top of Google</span><span class="fz-cl-desc">Google Local Service Ads appear above everything else - the map, paid ads, organic results. Here is exactly how LSAs work, how the ranking algorithm decides who shows up, and how to build a profile that wins leads before competitors even know the game has changed.</span><span class="fz-cl-meta"><span>23 min read</span><span class="fz-cl-go">Read the guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a><a class="fz-cl-card" href="https://favze.com/articles/search-visibility/google-business-profile-checklist"><span class="fz-cl-tag">Search Visibility</span><span class="fz-cl-title">The Complete Google Business Profile Checklist</span><span class="fz-cl-desc">Your Google Business Profile is not just a listing - it is your most powerful local search asset. Every missing photo, unlisted service, or unanswered review is lost revenue. This checklist covers everything: setup, categories, services, photos, reviews, posts, Q&amp;A, and analytics.</span><span class="fz-cl-meta"><span>12 min read</span><span class="fz-cl-go">Read the guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a><a class="fz-cl-card" href="https://favze.com/articles/search-visibility/new-rules-online-visibility-seo-aeo-geo"><span class="fz-cl-tag">Search Visibility</span><span class="fz-cl-title">The New Rules of Online Visibility: SEO, AEO &amp; GEO Mastery</span><span class="fz-cl-desc">Search engine optimization alone is no longer a viable strategy. AEO and GEO have become non-negotiable layers of modern search visibility. The most complete breakdown of all three - and the exact framework to build compounding visibility across every search ecosystem at once.</span><span class="fz-cl-meta"><span>28 min read</span><span class="fz-cl-go">Read the guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a><a class="fz-cl-card" href="https://favze.com/articles/search-visibility/what-makes-google-trust-a-website"><span class="fz-cl-tag">Search Visibility</span><span class="fz-cl-title">What Makes Google Trust a Website</span><span class="fz-cl-desc">Google doesn&#x27;t use a single trust score. It uses a complex, multi-layered system of signals - E-E-A-T, backlinks, technical performance, authorship, user behavior, and more. This guide breaks down every signal that builds Google&#x27;s trust in your website and what destroys it.</span><span class="fz-cl-meta"><span>18 min read</span><span class="fz-cl-go">Read the guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a><a class="fz-cl-card" href="https://favze.com/articles/social-media-strategy/how-to-create-highly-engaging-social-media-posts"><span class="fz-cl-tag">Social Media</span><span class="fz-cl-title">How Businesses Can Create Highly-Engaging Social Media Posts</span><span class="fz-cl-desc">Most business owners treat social media like a megaphone. The businesses winning right now are smarter - they understand that people don&#x27;t engage with content, they engage with content that makes them feel something. Here is how to build that, systematically.</span><span class="fz-cl-meta"><span>10 min read</span><span class="fz-cl-go">Read the guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a><a class="fz-cl-card" href="https://favze.com/articles/social-media-strategy/your-cute-captions-arent-searchable"><span class="fz-cl-tag">Social Media</span><span class="fz-cl-title">Your Cute Captions Aren&#x27;t Searchable</span><span class="fz-cl-desc">If your caption sounds clever but can&#x27;t be searched, indexed, or matched to intent, it isn&#x27;t helping your business. This is a discoverability problem - and here is exactly how to fix it across every platform you post on.</span><span class="fz-cl-meta"><span>8 min read</span><span class="fz-cl-go">Read the guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a></div>
-<p class="fz-cl-links"><a class="fz-arrow-link" href="https://favze.com/articles">Browse all articles <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="fz-arrow-link" href="https://favze.com/newsletters" data-cta="newsletter">Get new guides in your inbox <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+<div class="fz-cl-grid" data-fz-rail="Favze Insights guides"><a class="fz-cl-card" href="https://favze.com/resources/articles/content-marketing/content-repurposing-mastery-ai-era"><span class="fz-cl-tag">Content Marketing</span><span class="fz-cl-title">Content Repurposing Mastery: For the AI Era</span><span class="fz-cl-desc">Most businesses publish content once and move on. The businesses dominating search and AI-generated answers are doing something smarter - producing one piece of content and turning it into ten. This is exactly how to build a repurposing system that works for SEO, AEO, and GEO.</span><span class="fz-cl-meta"><span>20 min read</span><span class="fz-cl-go">Read the guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a><a class="fz-cl-card" href="https://favze.com/resources/articles/content-marketing/how-to-create-evergreen-content"><span class="fz-cl-tag">Content Marketing</span><span class="fz-cl-title">How to Create Evergreen Content That Brings Customers for Years</span><span class="fz-cl-desc">Most businesses create content that disappears into the feed within hours. This guide covers exactly what evergreen content is, why it compounds in ways other marketing cannot, and precisely how to create it so it brings customers for years.</span><span class="fz-cl-meta"><span>22 min read</span><span class="fz-cl-go">Read the guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a><a class="fz-cl-card" href="https://favze.com/resources/articles/brand-positioning/how-to-make-business-local-favorite"><span class="fz-cl-tag">Brand Positioning</span><span class="fz-cl-title">How to Make Your Business the Favorite in Northern Indiana &amp; Michiana</span><span class="fz-cl-desc">Being known is not the same as being chosen. This is the exact playbook for building a brand that Northern Indiana and Michiana customers trust, recommend, and return to - without a national budget or a marketing department.</span><span class="fz-cl-meta"><span>14 min read</span><span class="fz-cl-go">Read the guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a><a class="fz-cl-card" href="https://favze.com/resources/articles/content-marketing/blog-and-article-hierarchy-pillars-clusters-internal-linking"><span class="fz-cl-tag">Content Marketing</span><span class="fz-cl-title">Blog and Article Hierarchy: Pillars, Clusters, and Internal Linking</span><span class="fz-cl-desc">Most businesses write articles one by one and wonder why their site never ranks. The issue isn&#x27;t article quality - it&#x27;s the lack of structure. This guide covers the three-level content hierarchy, topical authority, and the internal linking architecture that makes it all work.</span><span class="fz-cl-meta"><span>17 min read</span><span class="fz-cl-go">Read the guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a><a class="fz-cl-card" href="https://favze.com/resources/articles/search-visibility/local-service-ads-fast-track-top-google"><span class="fz-cl-tag">Search Visibility</span><span class="fz-cl-title">Local Service Ads: Fast Track to the Top of Google</span><span class="fz-cl-desc">Google Local Service Ads appear above everything else - the map, paid ads, organic results. Here is exactly how LSAs work, how the ranking algorithm decides who shows up, and how to build a profile that wins leads before competitors even know the game has changed.</span><span class="fz-cl-meta"><span>23 min read</span><span class="fz-cl-go">Read the guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a><a class="fz-cl-card" href="https://favze.com/resources/articles/search-visibility/google-business-profile-checklist"><span class="fz-cl-tag">Search Visibility</span><span class="fz-cl-title">The Complete Google Business Profile Checklist</span><span class="fz-cl-desc">Your Google Business Profile is not just a listing - it is your most powerful local search asset. Every missing photo, unlisted service, or unanswered review is lost revenue. This checklist covers everything: setup, categories, services, photos, reviews, posts, Q&amp;A, and analytics.</span><span class="fz-cl-meta"><span>12 min read</span><span class="fz-cl-go">Read the guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a><a class="fz-cl-card" href="https://favze.com/resources/articles/search-visibility/new-rules-online-visibility-seo-aeo-geo"><span class="fz-cl-tag">Search Visibility</span><span class="fz-cl-title">The New Rules of Online Visibility: SEO, AEO &amp; GEO Mastery</span><span class="fz-cl-desc">Search engine optimization alone is no longer a viable strategy. AEO and GEO have become non-negotiable layers of modern search visibility. The most complete breakdown of all three - and the exact framework to build compounding visibility across every search ecosystem at once.</span><span class="fz-cl-meta"><span>28 min read</span><span class="fz-cl-go">Read the guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a><a class="fz-cl-card" href="https://favze.com/resources/articles/search-visibility/what-makes-google-trust-a-website"><span class="fz-cl-tag">Search Visibility</span><span class="fz-cl-title">What Makes Google Trust a Website</span><span class="fz-cl-desc">Google doesn&#x27;t use a single trust score. It uses a complex, multi-layered system of signals - E-E-A-T, backlinks, technical performance, authorship, user behavior, and more. This guide breaks down every signal that builds Google&#x27;s trust in your website and what destroys it.</span><span class="fz-cl-meta"><span>18 min read</span><span class="fz-cl-go">Read the guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a><a class="fz-cl-card" href="https://favze.com/resources/articles/social-media-strategy/how-to-create-highly-engaging-social-media-posts"><span class="fz-cl-tag">Social Media</span><span class="fz-cl-title">How Businesses Can Create Highly-Engaging Social Media Posts</span><span class="fz-cl-desc">Most business owners treat social media like a megaphone. The businesses winning right now are smarter - they understand that people don&#x27;t engage with content, they engage with content that makes them feel something. Here is how to build that, systematically.</span><span class="fz-cl-meta"><span>10 min read</span><span class="fz-cl-go">Read the guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a><a class="fz-cl-card" href="https://favze.com/resources/articles/social-media-strategy/your-cute-captions-arent-searchable"><span class="fz-cl-tag">Social Media</span><span class="fz-cl-title">Your Cute Captions Aren&#x27;t Searchable</span><span class="fz-cl-desc">If your caption sounds clever but can&#x27;t be searched, indexed, or matched to intent, it isn&#x27;t helping your business. This is a discoverability problem - and here is exactly how to fix it across every platform you post on.</span><span class="fz-cl-meta"><span>8 min read</span><span class="fz-cl-go">Read the guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></span></a></div>
+<p class="fz-cl-links"><a class="fz-arrow-link" href="https://favze.com/resources/articles">Browse all articles <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="fz-arrow-link" href="https://favze.com/resources/newsletters" data-cta="newsletter">Get new guides in your inbox <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
 </div>
 </section>
 <section class="sec other-section" aria-labelledby="other-heading">
   <div class="sec-inner">
     <span class="lbl lbl-dark">All Favze Services</span>
     <h2 class="ttl ttl-dark" id="other-heading">More Digital Marketing Services <span style="color:var(--teal)">in Northern Indiana</span></h2>
-    <p class="sub sub-dark" style="margin-top:14px;">Email marketing drives the highest <a class="fz-gl-link" href="https://favze.com/marketing-kpis-glossary#return-on-investment">ROI</a> per dollar spent. Pair it with SMS, paid search, and SEO to dominate every channel your Northern Indiana customers use.</p>
+    <p class="sub sub-dark" style="margin-top:14px;">Email marketing drives the highest <a class="fz-gl-link" href="https://favze.com/resources/glossary/marketing-kpis#return-on-investment">ROI</a> per dollar spent. Pair it with SMS, paid search, and SEO to dominate every channel your Northern Indiana customers use.</p>
     <div class="other-grid">
       <a href="https://favze.com/services/short-message-service-sms" class="other-card"><div class="other-card-tag">SMS</div><h3 class="other-card-name">SMS Marketing</h3><div class="other-card-desc">Pair email with direct text campaigns</div><div class="other-card-arrow">→</div></a>
       <a href="https://favze.com/services/paid-search-ads" class="other-card"><div class="other-card-tag">Paid Search</div><h3 class="other-card-name">Paid Search Ads</h3><div class="other-card-desc">Capture customers the moment they search</div><div class="other-card-arrow">→</div></a>
@@ -3028,7 +3024,7 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
       <a href="https://favze.com/services/hubspot-setup" class="other-card"><div class="other-card-tag">CRM</div><h3 class="other-card-name">HubSpot Setup</h3><div class="other-card-desc">CRM, automation & email integration</div><div class="other-card-arrow">→</div></a>
       <a href="https://favze.com/services/website-design" class="other-card"><div class="other-card-tag">Web</div><h3 class="other-card-name">Website Design</h3><div class="other-card-desc">The foundation that converts your traffic</div><div class="other-card-arrow">→</div></a>
       <a href="https://favze.com/services/generative-engine-optimization" class="other-card"><div class="other-card-tag">GEO</div><h3 class="other-card-name">Generative Engine Optimization</h3><div class="other-card-desc">Appear in AI chatbots & assistants</div><div class="other-card-arrow">→</div></a>
-      <a href="https://favze.com/services/" class="other-card" style="background:#f4f2ec;"><div class="other-card-tag">All</div><h3 class="other-card-name">View All Services</h3><div class="other-card-desc">Full digital marketing suite</div><div class="other-card-arrow">→</div></a>
+      <a href="https://favze.com/services" class="other-card" style="background:#f4f2ec;"><div class="other-card-tag">All</div><h3 class="other-card-name">View All Services</h3><div class="other-card-desc">Full digital marketing suite</div><div class="other-card-arrow">→</div></a>
     </div>
   </div>
 </section>
@@ -3069,7 +3065,7 @@ footer.ft-std .ft-dot{color:rgba(255,255,255,.18);padding:0 6px}
 <div class="fz-smband-inner">
 <div class="fz-smband-ico" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" stroke="currentColor" stroke-width="2"/><path d="M15.6 8.4l-2.1 5.1-5.1 2.1 2.1-5.1z" fill="currentColor"/></svg></div>
 <div class="fz-smband-copy"><p class="fz-smband-kick">Free Service Match &middot; 60 seconds</p><h2 id="fzSmBand-email-marketing" class="fz-smband-title">Not Sure Which Service Fits Your Business?</h2><p class="fz-smband-sub">Answer 3 quick questions about your business type, industry, and goals. Service Match builds a phased plan showing which Favze services to start with and why.</p><ul class="fz-smband-steps"><li><b>1</b>Your business</li><li><b>2</b>Your industry</li><li><b>3</b>Your goals</li></ul></div>
-<div class="fz-smband-acts"><a class="fz-smband-btn" href="https://favze.com/service-match?from=email-marketing" data-sm-entry="band-email-marketing">Find My Service <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="fz-smband-alt" href="https://favze.com/free-consultation" data-cta="smband-consult">Or talk it through with Riley</a></div>
+<div class="fz-smband-acts"><a class="fz-smband-btn" href="https://favze.com/resources/marketing-tools/service-match?from=email-marketing" data-sm-entry="band-email-marketing">Find My Service <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="fz-smband-alt" href="https://favze.com/free-consultation" data-cta="smband-consult">Or talk it through with Riley</a></div>
 </div>
 </section>
 <section class="fz-form-sec" id="free-consultation-form" aria-labelledby="fzFormTitle">
@@ -3131,27 +3127,33 @@ footer.ft-std .ft-dot{color:rgba(255,255,255,.18);padding:0 6px}
         </ul>
       </div>
       <div class="fc">
-        <h3><a href="https://favze.com/articles">Articles</a></h3>
+        <h3><a href="https://favze.com/resources/articles">Articles</a></h3>
         <ul>
-          <li><a href="https://favze.com/articles/content-marketing">Content Marketing</a></li>
-          <li><a href="https://favze.com/articles/social-media-strategy">Social Media Strategy</a></li>
-          <li><a href="https://favze.com/articles/search-visibility">Search Visibility &amp; Local Discovery</a></li>
-          <li><a href="https://favze.com/articles/brand-positioning">Brand Positioning</a></li>
+          <li><a href="https://favze.com/resources/articles/content-marketing">Content Marketing</a></li>
+          <li><a href="https://favze.com/resources/articles/social-media-strategy">Social Media Strategy</a></li>
+          <li><a href="https://favze.com/resources/articles/search-visibility">Search Visibility &amp; Local Discovery</a></li>
+          <li><a href="https://favze.com/resources/articles/brand-positioning">Brand Positioning</a></li>
         </ul>
         <div style="margin-top:22px">
-          <h3><a href="https://favze.com/newsletters">Newsletters</a></h3>
+          <h3><a href="https://favze.com/resources/newsletters">Newsletters</a></h3>
           <ul>
-            <li><a href="https://favze.com/newsletters#insider-card">Favze Insider</a></li>
-            <li><a href="https://favze.com/newsletters#intel-card">Favze Intel</a></li>
-            <li><a href="https://www.linkedin.com/newsletters/favze-insights-7399519169551126528/" target="_blank" rel="noopener noreferrer nofollow">Favze Insights</a></li>
+            <li><a href="https://favze.com/resources/newsletters/favze-insider">Favze Insider</a></li>
+            <li><a href="https://favze.com/resources/newsletters/favze-intel">Favze Intel</a></li>
+            <li><a href="https://favze.com/resources/newsletters/favze-insights">Favze Insights</a></li>
           </ul>
         </div>
         <div style="margin-top:22px">
-          <h3><a href="https://favze.com/marketing-glossary">Glossaries</a></h3>
+          <h3><a href="https://favze.com/resources/glossary">Glossaries</a></h3>
           <ul>
-            <li><a href="https://favze.com/marketing-glossary">Marketing Terms</a></li>
-            <li><a href="https://favze.com/marketing-kpis-glossary">Marketing KPIs</a></li>
-            <li><a href="https://favze.com/ai-glossary">AI &amp; Automation</a></li>
+            <li><a href="https://favze.com/resources/glossary/marketing-terms">Marketing Terms</a></li>
+            <li><a href="https://favze.com/resources/glossary/marketing-kpis">Marketing KPIs</a></li>
+            <li><a href="https://favze.com/resources/glossary/ai">AI &amp; Automation</a></li>
+          </ul>
+        </div>
+        <div style="margin-top:22px">
+          <h3><a href="https://favze.com/resources/marketing-tools">Marketing Tools</a></h3>
+          <ul>
+            <li><a href="https://favze.com/resources/marketing-tools/service-match" data-sm-entry="footer-tools">Service Match</a></li>
           </ul>
         </div>
       </div>
@@ -3164,7 +3166,8 @@ footer.ft-std .ft-dot{color:rgba(255,255,255,.18);padding:0 6px}
           <li><a href="https://favze.com/our-process">Our Process</a></li>
           <li><a href="https://favze.com/favze-framework">FAVZE Framework</a></li>
           <li><a href="https://favze.com/services">All Services</a></li>
-          <li><a href="https://favze.com/service-match" data-sm-entry="footer">Service Match Quiz</a></li>
+          <li><a href="https://favze.com/resources/marketing-tools/service-match" data-sm-entry="footer">Service Match Quiz</a></li>
+          <li><a href="https://favze.com/resources">Resources</a></li>
           <li><a href="https://favze.com/faq">FAQ</a></li>
           <li><a href="https://favze.com/areas-served">Areas Served</a></li>
         </ul>
@@ -3195,7 +3198,7 @@ footer.ft-std .ft-dot{color:rgba(255,255,255,.18);padding:0 6px}
     <div class="fz-news">
       <div class="fz-news-copy">
         <p class="fz-news-title">Get Favze Insider and Favze Intel</p>
-        <p>One signup gets you two free monthly newsletters. Favze Insider keeps you current. Favze Intel makes you sharper. <a href="https://favze.com/newsletters">Learn more</a>.</p>
+        <p>One signup gets you two free monthly newsletters. Favze Insider keeps you current. Favze Intel makes you sharper. <a href="https://favze.com/resources/newsletters">Learn more</a>.</p>
       </div>
       <div class="fz-news-card">
         <iframe data-tally-src="https://tally.so/embed/Gxg47Z?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;formEventsForwarding=1" loading="lazy" width="100%" height="260" frameborder="0" marginheight="0" marginwidth="0" title="Favze newsletter signup"></iframe>
@@ -3244,6 +3247,7 @@ footer.ft-std .ft-dot{color:rgba(255,255,255,.18);padding:0 6px}
       <div style="display:flex;gap:18px;flex-wrap:wrap">
         <a href="https://favze.com/privacy-policy">Privacy Policy</a>
         <a href="https://favze.com/terms-of-use">Terms of Use</a>
+        <a href="https://favze.com/accessibility-statement">Accessibility Statement</a>
       </div>
     </div>
   </div>
@@ -3253,7 +3257,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var drops = [
     { trig: document.getElementById('trigServices'), pan: document.getElementById('panServices') },
     { trig: document.getElementById('trigArticles'), pan: document.getElementById('panArticles') }
-  ];
+  ].filter(function(d){return d.trig&&d.pan;});
   function openPanel(trig, pan) { pan.classList.add('open'); trig.setAttribute('aria-expanded','true'); }
   function closePanel(trig, pan) { pan.classList.remove('open'); trig.setAttribute('aria-expanded','false'); }
   drops.forEach(function(d) {
@@ -3423,6 +3427,7 @@ window.silktideConsentManager.init({
 });
 </script>
 <script src="../assets/js/fz-site.js"></script>
+<script src="../assets/js/fz-nav.js" defer></script>
 <script src="../assets/js/fz-search.js" defer></script>
 <script src="../assets/js/fz-demos.js" defer></script>
 <script src="../assets/js/fz-ui.js" defer></script>

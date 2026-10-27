@@ -924,6 +924,7 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
 </style>
 <link rel="stylesheet" href="../assets/css/fz-site.css">
 <link rel="stylesheet" href="../assets/css/fz-ui.css">
+<link rel="stylesheet" href="../assets/css/fz-nav.css">
 <script type="application/ld+json" id="fz-person-schema">
 {
   "@context": "https://schema.org",
@@ -951,54 +952,52 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
 <nav>
   <a class="fz-skip" href="#main">Skip to main content</a>
   <a href="https://favze.com/" class="fz-logo" aria-label="Favze home"><img src="https://favze.com/assets/brand/favze-logo-horizontal-black.png" alt="Favze Digital Marketing" width="147" height="34"></a>
-  <ul class="nl">
+  <ul class="nl fz-nl">
     <li>
-      <button class="drop-trigger" id="trigServices" aria-expanded="false" aria-controls="panServices">
-        Services
-        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="drop-panel" id="panServices" role="menu">
+      <button class="drop-trigger" id="fzTrigSvc" aria-expanded="false" aria-controls="fzPanSvc">Services <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="drop-panel" id="fzPanSvc" role="menu">
         <div class="drop-label">All Services</div>
-        <a href="https://favze.com/services/local-seo" role="menuitem">Local SEO</a>
+        <a href="https://favze.com/services/social-media-marketing" role="menuitem">Social Media Marketing <span class="drop-abbr">SMM</span></a>
         <a href="https://favze.com/services/search-engine-optimization" role="menuitem">Search Engine Optimization <span class="drop-abbr">SEO</span></a>
         <a href="https://favze.com/services/answer-engine-optimization" role="menuitem">Answer Engine Optimization <span class="drop-abbr">AEO</span></a>
         <a href="https://favze.com/services/generative-engine-optimization" role="menuitem">Generative Engine Optimization <span class="drop-abbr">GEO</span></a>
         <a href="https://favze.com/services/ai-optimization" role="menuitem">AI Optimization</a>
-        <a href="https://favze.com/services/social-media-marketing" role="menuitem">Social Media Marketing <span class="drop-abbr">SMM</span></a>
-        <a href="https://favze.com/services/paid-search-ads" role="menuitem">Paid Search Ads <span class="drop-abbr">SEM</span></a>
-        <a href="https://favze.com/services/paid-social-media-ads" role="menuitem">Paid Social Media Ads</a>
+        <a href="https://favze.com/services/local-seo" role="menuitem">Local SEO</a>
         <a href="https://favze.com/services/email-marketing" role="menuitem">Email Marketing</a>
         <a href="https://favze.com/services/short-message-service-sms" role="menuitem">SMS Marketing</a>
         <a href="https://favze.com/services/hubspot-setup" role="menuitem">HubSpot Setup</a>
         <a href="https://favze.com/services/website-design" role="menuitem">Website Design</a>
+        <a href="https://favze.com/services/paid-search-ads" role="menuitem">Paid Search Ads <span class="drop-abbr">SEM</span></a>
+        <a href="https://favze.com/services/paid-social-media-ads" role="menuitem">Paid Social Media Ads</a>
         <div class="drop-divider"></div>
         <a href="https://favze.com/services" class="drop-view-all" role="menuitem">View All Services &rarr;</a>
-        <a href="https://favze.com/service-match" class="drop-view-all drop-sm" role="menuitem" data-sm-entry="nav">Not Sure? Take the Service Match &rarr;</a>
+        <a href="https://favze.com/resources/marketing-tools/service-match" class="drop-view-all drop-sm" role="menuitem" data-sm-entry="nav">Not Sure? Take the Service Match &rarr;</a>
       </div>
     </li>
     <li>
-      <button class="drop-trigger" id="trigArticles" aria-expanded="false" aria-controls="panArticles">
-        Resources
-        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
-      <div class="drop-panel center" id="panArticles" role="menu">
+      <button class="drop-trigger" id="fzTrigRes" aria-expanded="false" aria-controls="fzPanRes">Resources <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="drop-panel center" id="fzPanRes" role="menu">
         <div class="drop-label">Articles</div>
-        <a href="https://favze.com/articles/content-marketing" role="menuitem">Content Marketing</a>
-        <a href="https://favze.com/articles/social-media-strategy" role="menuitem">Social Media Strategy</a>
-        <a href="https://favze.com/articles/search-visibility" role="menuitem">Search Visibility &amp; Local Discovery</a>
-        <a href="https://favze.com/articles/brand-positioning" role="menuitem">Brand Positioning &amp; Community Authority</a>
-        <a href="https://favze.com/articles" class="drop-view-all" role="menuitem">All Articles &rarr;</a>
+        <a href="https://favze.com/resources/articles/content-marketing" role="menuitem">Content Marketing</a>
+        <a href="https://favze.com/resources/articles/social-media-strategy" role="menuitem">Social Media Strategy</a>
+        <a href="https://favze.com/resources/articles/search-visibility" role="menuitem">Search Visibility &amp; Local Discovery</a>
+        <a href="https://favze.com/resources/articles/brand-positioning" role="menuitem">Brand Positioning &amp; Community Authority</a>
+        <a href="https://favze.com/resources/articles" class="drop-view-all" role="menuitem">All Articles &rarr;</a>
         <div class="drop-divider"></div>
         <div class="drop-label">Newsletters</div>
-        <a href="https://www.linkedin.com/newsletters/favze-insights-7399519169551126528/" role="menuitem" target="_blank" rel="noopener noreferrer">Favze Insights &#8599;</a>
-        <a href="https://favze.com/newsletters#intel-card" role="menuitem">Favze Intel</a>
-        <a href="https://favze.com/newsletters#insider-card" role="menuitem">Favze Insider</a>
-        <a href="https://favze.com/newsletters" class="drop-view-all" role="menuitem">All Newsletters &rarr;</a>
+        <a href="https://favze.com/resources/newsletters/favze-insider" role="menuitem">Favze Insider</a>
+        <a href="https://favze.com/resources/newsletters/favze-intel" role="menuitem">Favze Intel</a>
+        <a href="https://favze.com/resources/newsletters/favze-insights" role="menuitem">Favze Insights</a>
+        <a href="https://favze.com/resources/newsletters" class="drop-view-all" role="menuitem">All Newsletters &rarr;</a>
         <div class="drop-divider"></div>
         <div class="drop-label">Glossaries</div>
-        <a href="https://favze.com/marketing-glossary" role="menuitem">Marketing Terms Glossary</a>
-        <a href="https://favze.com/marketing-kpis-glossary" role="menuitem">Marketing KPIs Glossary</a>
-        <a href="https://favze.com/ai-glossary" role="menuitem">AI &amp; Automation Glossary</a>
+        <a href="https://favze.com/resources/glossary/marketing-terms" role="menuitem">Marketing Terms Glossary</a>
+        <a href="https://favze.com/resources/glossary/marketing-kpis" role="menuitem">Marketing KPIs Glossary</a>
+        <a href="https://favze.com/resources/glossary/ai" role="menuitem">AI &amp; Automation Glossary</a>
+        <div class="drop-divider"></div>
+        <div class="drop-label">Marketing Tools</div>
+        <a href="https://favze.com/resources/marketing-tools/service-match" role="menuitem" data-sm-entry="nav-tools">Service Match Quiz</a>
+        <a href="https://favze.com/resources" class="drop-view-all" role="menuitem">All Resources &rarr;</a>
       </div>
     </li>
     <li><a href="https://favze.com/why-us" class="nl-link">Why Us</a></li>
@@ -1013,45 +1012,42 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
 </nav>
 <!-- Mobile menu -->
 <div class="mm" id="mm" aria-hidden="true">
-  <button class="mm-toggle" id="mmServTrig" aria-expanded="false">
-    Services
-    <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  </button>
-  <div class="mm-sub" id="mmServSub">
-    <a href="https://favze.com/services/local-seo">Local SEO</a>
+  <button class="mm-toggle" id="fzMmSvcTrig" aria-expanded="false">Services <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  <div class="mm-sub" id="fzMmSvcSub">
+    <a href="https://favze.com/services/social-media-marketing">Social Media Marketing</a>
     <a href="https://favze.com/services/search-engine-optimization">SEO</a>
     <a href="https://favze.com/services/answer-engine-optimization">AEO</a>
     <a href="https://favze.com/services/generative-engine-optimization">GEO</a>
     <a href="https://favze.com/services/ai-optimization">AI Optimization</a>
-    <a href="https://favze.com/services/social-media-marketing">Social Media Marketing</a>
-    <a href="https://favze.com/services/paid-search-ads">Paid Search Ads</a>
-    <a href="https://favze.com/services/paid-social-media-ads">Paid Social Media Ads</a>
+    <a href="https://favze.com/services/local-seo">Local SEO</a>
     <a href="https://favze.com/services/email-marketing">Email Marketing</a>
     <a href="https://favze.com/services/short-message-service-sms">SMS Marketing</a>
     <a href="https://favze.com/services/hubspot-setup">HubSpot Setup</a>
     <a href="https://favze.com/services/website-design">Website Design</a>
+    <a href="https://favze.com/services/paid-search-ads">Paid Search Ads</a>
+    <a href="https://favze.com/services/paid-social-media-ads">Paid Social Ads</a>
     <a href="https://favze.com/services" style="font-weight:700;color:var(--navy);">All Services</a>
-      <a href="https://favze.com/service-match" style="font-weight:700;color:#086E84" data-sm-entry="mobile-menu">Not Sure? Take the Service Match</a>
+      <a href="https://favze.com/resources/marketing-tools/service-match" style="font-weight:700;color:#086E84" data-sm-entry="mobile-menu">Not Sure? Take the Service Match</a>
   </div>
-  <button class="mm-toggle" id="mmArtTrig" aria-expanded="false">
-    Resources
-    <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  </button>
-  <div class="mm-sub" id="mmArtSub">
-    <a href="https://favze.com/articles/content-marketing">Content Marketing</a>
-    <a href="https://favze.com/articles/social-media-strategy">Social Media Strategy</a>
-    <a href="https://favze.com/articles/search-visibility">Search Visibility &amp; Local Discovery</a>
-    <a href="https://favze.com/articles/brand-positioning">Brand Positioning &amp; Community Authority</a>
-    <a href="https://favze.com/articles" style="font-weight:700;color:var(--navy);">All Articles</a>
+  <button class="mm-toggle" id="fzMmResTrig" aria-expanded="false">Resources <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  <div class="mm-sub" id="fzMmResSub">
+    <a href="https://favze.com/resources/articles/content-marketing">Content Marketing</a>
+    <a href="https://favze.com/resources/articles/social-media-strategy">Social Media Strategy</a>
+    <a href="https://favze.com/resources/articles/search-visibility">Search Visibility &amp; Local Discovery</a>
+    <a href="https://favze.com/resources/articles/brand-positioning">Brand Positioning &amp; Community Authority</a>
+    <a href="https://favze.com/resources/articles" style="font-weight:700;color:var(--navy);">All Articles</a>
     <div class="fz-mm-label">Newsletters</div>
-    <a href="https://www.linkedin.com/newsletters/favze-insights-7399519169551126528/" target="_blank" rel="noopener noreferrer">Favze Insights &#8599;</a>
-    <a href="https://favze.com/newsletters#intel-card">Favze Intel</a>
-    <a href="https://favze.com/newsletters#insider-card">Favze Insider</a>
-    <a href="https://favze.com/newsletters" style="font-weight:700;color:var(--navy);">All Newsletters</a>
+    <a href="https://favze.com/resources/newsletters/favze-insider">Favze Insider</a>
+    <a href="https://favze.com/resources/newsletters/favze-intel">Favze Intel</a>
+    <a href="https://favze.com/resources/newsletters/favze-insights">Favze Insights</a>
+    <a href="https://favze.com/resources/newsletters" style="font-weight:700;color:var(--navy);">All Newsletters</a>
     <div class="fz-mm-label">Glossaries</div>
-    <a href="https://favze.com/marketing-glossary">Marketing Terms Glossary</a>
-    <a href="https://favze.com/marketing-kpis-glossary">Marketing KPIs Glossary</a>
-    <a href="https://favze.com/ai-glossary">AI &amp; Automation Glossary</a>
+    <a href="https://favze.com/resources/glossary/marketing-terms">Marketing Terms Glossary</a>
+    <a href="https://favze.com/resources/glossary/marketing-kpis">Marketing KPIs Glossary</a>
+    <a href="https://favze.com/resources/glossary/ai">AI &amp; Automation Glossary</a>
+        <div class="fz-mm-label">Marketing Tools</div>
+        <a href="https://favze.com/resources/marketing-tools/service-match" data-sm-entry="nav-tools">Service Match Quiz</a>
+    <a href="https://favze.com/resources" style="font-weight:700;color:#064187">All Resources</a>
   </div>
   <a href="https://favze.com/why-us" class="mm-link">Why Us</a>
   <a href="https://favze.com/about" class="mm-link">About</a>
@@ -1193,7 +1189,7 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
 
     <div class="svc-card">
       <div class="svc-head"><div class="svc-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 2C5.69 2 3 4.69 3 8c0 4.5 6 10 6 10s6-5.5 6-10c0-3.31-2.69-6-6-6z" stroke="currentColor" stroke-width="1.4"/><circle cx="9" cy="8" r="2.2" stroke="currentColor" stroke-width="1.3"/></svg></div><div><div class="svc-name">Local SEO</div></div></div>
-      <p class="svc-desc">When a visitor pulls into Shipshewana and searches &ldquo;restaurants near me,&rdquo; or a homeowner in LaGrange Googles &ldquo;HVAC repair,&rdquo; <a href="https://favze.com/services/local-seo">Local SEO</a> decides who they call. We optimize your <a class="fz-gl-link" href="https://favze.com/marketing-glossary#google-business-profile">Google Business Profile</a>, build directory citations, and deploy city-level landing pages so your business claims the Google Map Pack. In a county where most competitors haven&rsquo;t touched their Google listing in years, the opportunity to dominate is extraordinary. Pairs naturally with <a href="https://favze.com/services/search-engine-optimization">organic SEO</a>.</p>
+      <p class="svc-desc">When a visitor pulls into Shipshewana and searches &ldquo;restaurants near me,&rdquo; or a homeowner in LaGrange Googles &ldquo;HVAC repair,&rdquo; <a href="https://favze.com/services/local-seo">Local SEO</a> decides who they call. We optimize your <a class="fz-gl-link" href="https://favze.com/resources/glossary/marketing-terms#google-business-profile">Google Business Profile</a>, build directory citations, and deploy city-level landing pages so your business claims the Google Map Pack. In a county where most competitors haven&rsquo;t touched their Google listing in years, the opportunity to dominate is extraordinary. Pairs naturally with <a href="https://favze.com/services/search-engine-optimization">organic SEO</a>.</p>
       <a href="https://favze.com/services/local-seo" class="svc-link">Learn More <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5h7M6 2.5l3 3-3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
 
@@ -1223,7 +1219,7 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
 
     <div class="svc-card">
       <div class="svc-head"><div class="svc-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="4" y="2" width="10" height="14" rx="2" stroke="currentColor" stroke-width="1.3"/><path d="M7 6h4M7 9h4M7 12h2" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></div><div><div class="svc-name">AI Optimization</div></div></div>
-      <p class="svc-desc"><a href="https://favze.com/services/ai-optimization">AI Optimization</a> prepares the entire infrastructure of your digital presence (content architecture, <a class="fz-gl-link" href="https://favze.com/marketing-glossary#structured-data">structured data</a>, brand authority signals, and entity clarity) so that AI-driven search tools recognize your LaGrange County business as relevant and trustworthy. As AI becomes the default starting point for discovery, businesses with a prepared digital foundation will show up where others are invisible. Getting there first in LaGrange County has never been more accessible. Part of a complete <a href="https://favze.com/services/answer-engine-optimization">AEO</a> and <a href="https://favze.com/services/generative-engine-optimization">GEO</a> strategy.</p>
+      <p class="svc-desc"><a href="https://favze.com/services/ai-optimization">AI Optimization</a> prepares the entire infrastructure of your digital presence (content architecture, <a class="fz-gl-link" href="https://favze.com/resources/glossary/marketing-terms#structured-data">structured data</a>, brand authority signals, and entity clarity) so that AI-driven search tools recognize your LaGrange County business as relevant and trustworthy. As AI becomes the default starting point for discovery, businesses with a prepared digital foundation will show up where others are invisible. Getting there first in LaGrange County has never been more accessible. Part of a complete <a href="https://favze.com/services/answer-engine-optimization">AEO</a> and <a href="https://favze.com/services/generative-engine-optimization">GEO</a> strategy.</p>
       <a href="https://favze.com/services/ai-optimization" class="svc-link">Learn More <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5h7M6 2.5l3 3-3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
 
@@ -1428,7 +1424,7 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
     <a href="https://favze.com/free-consultation" class="btn-p">Book a Free Consultation</a>
     <div class="why-reasons" style="margin-top:40px">
       <div class="why-r"><div class="why-num">01</div><div><div class="why-title">We&rsquo;re Your Neighbor. Literally.</div><div class="why-text">Favze is based in Middlebury: five minutes from the LaGrange County line. We shop at the same stores, drive the same roads, and follow the same regional calendar. When you call, you reach Riley directly. See the <a href="https://favze.com/about">About page</a> for the full story.</div></div></div>
-      <div class="why-r"><div class="why-num">02</div><div><div class="why-title">We Understand Tourism-Driven Markets</div><div class="why-text">Shipshewana&rsquo;s seasonal economy is unlike anything a national marketing agency is equipped to handle. We understand how to build campaigns that peak during flea market season, sustain off-season engagement, and convert visitor intent into actual foot traffic and reservations. Read our <a href="https://favze.com/articles/brand-positioning">Brand Positioning articles</a> for more on this approach.</div></div></div>
+      <div class="why-r"><div class="why-num">02</div><div><div class="why-title">We Understand Tourism-Driven Markets</div><div class="why-text">Shipshewana&rsquo;s seasonal economy is unlike anything a national marketing agency is equipped to handle. We understand how to build campaigns that peak during flea market season, sustain off-season engagement, and convert visitor intent into actual foot traffic and reservations. Read our <a href="https://favze.com/resources/articles/brand-positioning">Brand Positioning articles</a> for more on this approach.</div></div></div>
       <div class="why-r"><div class="why-num">03</div><div><div class="why-title">All 12 Services From One Place</div><div class="why-text">Your <a href="https://favze.com/services/search-engine-optimization">SEO</a>, <a href="https://favze.com/services/paid-search-ads">paid ads</a>, <a href="https://favze.com/services/email-marketing">email campaigns</a>, <a href="https://favze.com/services/social-media-marketing">social presence</a>, and <a href="https://favze.com/services/website-design">website</a> shouldn&rsquo;t be managed by five different vendors who have never spoken to each other. Favze runs everything together. See all <a href="https://favze.com/services">12 services</a> and learn <a href="https://favze.com/our-process">how our process works</a>.</div></div></div>
       <div class="why-r"><div class="why-num">04</div><div><div class="why-title">Priced for Small-Town Business Realities</div><div class="why-text">A Topeka hardware store and a Mongo lake cottage rental shouldn&rsquo;t be paying Chicago agency rates. Favze is intentionally priced for the actual revenue scale of LaGrange County businesses. Check our <a href="https://favze.com/faq">FAQ</a> for common pricing questions or <a href="https://favze.com/free-consultation">book a free consultation</a> for a specific estimate.</div></div></div>
       <div class="why-r"><div class="why-num">05</div><div><div class="why-title">No Long-Term Contracts. Your Business Is Earned Every Month.</div><div class="why-text">We don&rsquo;t believe in locking clients into long-term agreements. You should be able to leave if we&rsquo;re not performing. More details on our <a href="https://favze.com/why-us">Why Us</a> and <a href="https://favze.com/faq">FAQ</a> pages.</div></div></div>
@@ -1439,7 +1435,7 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
       <span class="db-lbl">The Neighbor Advantage</span>
       <div class="db-title">What It Means That We&rsquo;re <span style="color:var(--teal)">Right Next Door</span></div>
       <p>Most agencies that technically &ldquo;serve LaGrange County&rdquo; have never set foot here. They&rsquo;ve never driven through Shipshewana on a summer Saturday to experience the scale of the flea market economy firsthand. They&rsquo;ve never understood why a Topeka business&rsquo;s peak season looks nothing like a Howe business&rsquo;s peak season. <strong>They see a county code. We see a community.</strong></p>
-      <p>That proximity changes the quality of every strategic decision we make, from which keywords to prioritize to how to time seasonal campaigns, from how to position your brand relative to Amish heritage tourism to how to differentiate your business inside a market that national brands don&rsquo;t even know exists. Read our <a href="https://favze.com/articles/search-visibility" style="color:var(--teal)">Search Visibility articles</a> for more. <strong>Being from here isn&rsquo;t a soft benefit. It&rsquo;s a hard competitive advantage.</strong></p>
+      <p>That proximity changes the quality of every strategic decision we make, from which keywords to prioritize to how to time seasonal campaigns, from how to position your brand relative to Amish heritage tourism to how to differentiate your business inside a market that national brands don&rsquo;t even know exists. Read our <a href="https://favze.com/resources/articles/search-visibility" style="color:var(--teal)">Search Visibility articles</a> for more. <strong>Being from here isn&rsquo;t a soft benefit. It&rsquo;s a hard competitive advantage.</strong></p>
       <div class="stat-grid">
         <div class="stat-box"><div class="stat-num">12</div><div class="stat-lbl">Services Under One Roof</div></div>
         <div class="stat-box"><div class="stat-num">5</div><div class="stat-lbl">LaGrange County Communities</div></div>
@@ -1474,16 +1470,16 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
     </div>
     <div class="faq-list">
       <details class="faq-item"><summary><span class="fq-q">Does Favze serve LaGrange, Shipshewana, Topeka, Howe, and Mongo?</span><span class="fq-icon"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 2v7M2 5.5h7" stroke="#666" stroke-width="1.7" stroke-linecap="round"/></svg></span></summary><div class="fq-ans"><p><strong>Yes, all of them, and every rural township in between.</strong> Favze serves every community in LaGrange County and all unincorporated areas throughout the county. No minimum business size, no community too small. We&rsquo;re based in neighboring Middlebury, about five minutes from the county line. We also serve the full <a href="https://favze.com/areas-served">Northern Indiana region</a>.</p></div></details>
-      <details class="faq-item"><summary><span class="fq-q">Why does my LaGrange County business need digital marketing?</span><span class="fq-icon"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 2v7M2 5.5h7" stroke="#666" stroke-width="1.7" stroke-linecap="round"/></svg></span></summary><div class="fq-ans"><p>Even in a county known for traditional commerce, your customers are using Google, ChatGPT, and social media to find businesses before leaving home. A tourist planning a Shipshewana trip searches for restaurants and shops weeks before arriving. A LaGrange homeowner Googles a contractor before calling. A Howe traveler searches for gas or food from their car on the interstate. <strong>If your business doesn&rsquo;t appear in those searches, the customer finds someone else.</strong> Read our <a href="https://favze.com/articles/search-visibility">Search Visibility articles</a> for more context.</p></div></details>
+      <details class="faq-item"><summary><span class="fq-q">Why does my LaGrange County business need digital marketing?</span><span class="fq-icon"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 2v7M2 5.5h7" stroke="#666" stroke-width="1.7" stroke-linecap="round"/></svg></span></summary><div class="fq-ans"><p>Even in a county known for traditional commerce, your customers are using Google, ChatGPT, and social media to find businesses before leaving home. A tourist planning a Shipshewana trip searches for restaurants and shops weeks before arriving. A LaGrange homeowner Googles a contractor before calling. A Howe traveler searches for gas or food from their car on the interstate. <strong>If your business doesn&rsquo;t appear in those searches, the customer finds someone else.</strong> Read our <a href="https://favze.com/resources/articles/search-visibility">Search Visibility articles</a> for more context.</p></div></details>
       <details class="faq-item"><summary><span class="fq-q">How quickly can a LaGrange County business see digital marketing results?</span><span class="fq-icon"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 2v7M2 5.5h7" stroke="#666" stroke-width="1.7" stroke-linecap="round"/></svg></span></summary><div class="fq-ans"><p><strong>Faster than almost anywhere else in Indiana.</strong> Because digital competition in LaGrange County is so low, <a href="https://favze.com/services/local-seo">Local SEO</a> and basic Google Business Profile optimization can move businesses to the top of their category in weeks rather than months. <a href="https://favze.com/services/paid-search-ads">Paid Search Ads</a> can generate leads the same week they launch. In Topeka, Mongo, or rural LaGrange, category dominance can be established in a fraction of the time it takes in more competitive markets like South Bend or Goshen.</p></div></details>
       <details class="faq-item"><summary><span class="fq-q">Is Favze affordable for a small LaGrange County business?</span><span class="fq-icon"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 2v7M2 5.5h7" stroke="#666" stroke-width="1.7" stroke-linecap="round"/></svg></span></summary><div class="fq-ans"><p>Yes. Favze was specifically built for small and mid-size businesses in communities like LaGrange County. We don&rsquo;t publish one-size-fits-all pricing because the right investment depends on your specific goals, services, and competition level. The best way to get a realistic number is a <strong><a href="https://favze.com/free-consultation">free consultation</a></strong> where Riley will review your situation and give honest expectations. See our <a href="https://favze.com/faq">FAQ</a>. Call <a href="tel:+15747475012">574-747-5012</a> or visit <a href="https://favze.com/free-consultation">favze.com/free-consultation</a>.</p></div></details>
       <details class="faq-item"><summary><span class="fq-q">How does Favze handle Shipshewana&rsquo;s seasonal tourism peaks?</span><span class="fq-icon"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 2v7M2 5.5h7" stroke="#666" stroke-width="1.7" stroke-linecap="round"/></svg></span></summary><div class="fq-ans"><p>Shipshewana&rsquo;s tourist season, heaviest from May through October and peaking on flea market days, requires a marketing calendar built around it. We plan campaigns that begin generating awareness in early spring, build peak-season <a href="https://favze.com/services/paid-search-ads">paid ads</a> that capture summer search traffic, and deploy <a href="https://favze.com/services/email-marketing">email</a> and <a href="https://favze.com/services/short-message-service-sms">SMS retention strategies</a> to bring visitors back the following year. <strong>Seasonal businesses don&rsquo;t have to go dark in November. The right strategy keeps you relevant year-round.</strong></p></div></details>
-      <details class="faq-item"><summary><span class="fq-q">What&rsquo;s the difference between SEO, Local SEO, AEO, and GEO?</span><span class="fq-icon"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 2v7M2 5.5h7" stroke="#666" stroke-width="1.7" stroke-linecap="round"/></svg></span></summary><div class="fq-ans"><p><strong><a href="https://favze.com/services/search-engine-optimization">SEO</a></strong> builds organic authority in Google&rsquo;s general search results over time. <strong><a href="https://favze.com/services/local-seo">Local SEO</a></strong> targets Google Maps and the Local 3-Pack for location-based searches like &ldquo;restaurant near me&rdquo; or &ldquo;plumber in LaGrange Indiana.&rdquo; This is often the single highest-impact service for any LaGrange County business with a physical location.</p><p><strong><a href="https://favze.com/services/answer-engine-optimization">AEO</a></strong> ensures your content is structured to be pulled as a direct answer by Google&rsquo;s <a class="fz-gl-link" href="https://favze.com/marketing-glossary#ai-overviews">AI Overviews</a>, Siri, and Alexa, especially important for tourism-related searches. <strong><a href="https://favze.com/services/generative-engine-optimization">GEO</a></strong> positions your business to be mentioned and recommended by AI tools like ChatGPT when someone asks about LaGrange County businesses. All four layers reinforce each other.</p></div></details>
+      <details class="faq-item"><summary><span class="fq-q">What&rsquo;s the difference between SEO, Local SEO, AEO, and GEO?</span><span class="fq-icon"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 2v7M2 5.5h7" stroke="#666" stroke-width="1.7" stroke-linecap="round"/></svg></span></summary><div class="fq-ans"><p><strong><a href="https://favze.com/services/search-engine-optimization">SEO</a></strong> builds organic authority in Google&rsquo;s general search results over time. <strong><a href="https://favze.com/services/local-seo">Local SEO</a></strong> targets Google Maps and the Local 3-Pack for location-based searches like &ldquo;restaurant near me&rdquo; or &ldquo;plumber in LaGrange Indiana.&rdquo; This is often the single highest-impact service for any LaGrange County business with a physical location.</p><p><strong><a href="https://favze.com/services/answer-engine-optimization">AEO</a></strong> ensures your content is structured to be pulled as a direct answer by Google&rsquo;s <a class="fz-gl-link" href="https://favze.com/resources/glossary/marketing-terms#ai-overviews">AI Overviews</a>, Siri, and Alexa, especially important for tourism-related searches. <strong><a href="https://favze.com/services/generative-engine-optimization">GEO</a></strong> positions your business to be mentioned and recommended by AI tools like ChatGPT when someone asks about LaGrange County businesses. All four layers reinforce each other.</p></div></details>
       <details class="faq-item"><summary><span class="fq-q">Does Favze require long-term contracts?</span><span class="fq-icon"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 2v7M2 5.5h7" stroke="#666" stroke-width="1.7" stroke-linecap="round"/></svg></span></summary><div class="fq-ans"><p><strong>No long-term contracts.</strong> Favze earns your business every month by producing real results and communicating clearly about them. If we&rsquo;re not delivering, you should be free to move on. More on our <a href="https://favze.com/why-us">Why Us</a> and <a href="https://favze.com/our-process">Our Process</a> pages.</p></div></details>
       <details class="faq-item"><summary><span class="fq-q">How do I get started with Favze as a LaGrange County business?</span><span class="fq-icon"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 2v7M2 5.5h7" stroke="#666" stroke-width="1.7" stroke-linecap="round"/></svg></span></summary><div class="fq-ans"><p>The easiest step is <a href="https://favze.com/free-consultation"><strong>booking a free consultation at favze.com/free-consultation</strong></a> or calling Riley directly at <a href="tel:+15747475012"><strong>574-747-5012</strong></a>. You don&rsquo;t need to know what services you want or have a plan ready. The call takes about 30 minutes. By the end you&rsquo;ll know exactly where you stand digitally, what your biggest opportunities are, and what it would realistically take to capture them. Read our <a href="https://favze.com/our-process">Our Process page</a> to see exactly what happens after you reach out.</p></div></details>
     </div>
   
-  <p class="fz-text-cta">Have a question that is not answered here? <a href="https://favze.com/free-consultation?reason=faq-question" data-cta="faq-ask-riley">Ask Riley in a free consultation</a>, or <a href="https://favze.com/service-match?from=faq-lagrange-county" data-sm-entry="faq-lagrange-county">see which services fit your business in 60 seconds</a>.</p>
+  <p class="fz-text-cta">Have a question that is not answered here? <a href="https://favze.com/free-consultation?reason=faq-question" data-cta="faq-ask-riley">Ask Riley in a free consultation</a>, or <a href="https://favze.com/resources/marketing-tools/service-match?from=faq-lagrange-county" data-sm-entry="faq-lagrange-county">see which services fit your business in 60 seconds</a>.</p>
 </div>
 </section>
 
@@ -1544,7 +1540,7 @@ footer.ft-std .ft-dot{color:rgba(255,255,255,.18);padding:0 6px}
 <div class="fz-related-inner">
 <p class="fz-related-eyebrow">Free Guides</p>
 <h2 id="fzRelated-area">Marketing Guides for LaGrange County Businesses</h2>
-<div class="fz-related-grid"><a class="fz-related-card" href="https://favze.com/articles/brand-positioning/how-to-make-business-local-favorite"><span class="fz-related-tag">Brand Positioning</span><span class="fz-related-title">How to Make Your Business the Local Favorite</span><span class="fz-related-more">Read the guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="fz-related-card" href="https://favze.com/articles/search-visibility/google-business-profile-checklist"><span class="fz-related-tag">Search Visibility</span><span class="fz-related-title">The Complete Google Business Profile Checklist</span><span class="fz-related-more">Read the guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="fz-related-card" href="https://favze.com/articles/search-visibility/new-rules-online-visibility-seo-aeo-geo"><span class="fz-related-tag">Search Visibility</span><span class="fz-related-title">SEO vs. AEO vs. GEO: The New Rules of Online Visibility</span><span class="fz-related-more">Read the guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
+<div class="fz-related-grid"><a class="fz-related-card" href="https://favze.com/resources/articles/brand-positioning/how-to-make-business-local-favorite"><span class="fz-related-tag">Brand Positioning</span><span class="fz-related-title">How to Make Your Business the Local Favorite</span><span class="fz-related-more">Read the guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="fz-related-card" href="https://favze.com/resources/articles/search-visibility/google-business-profile-checklist"><span class="fz-related-tag">Search Visibility</span><span class="fz-related-title">The Complete Google Business Profile Checklist</span><span class="fz-related-more">Read the guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="fz-related-card" href="https://favze.com/resources/articles/search-visibility/new-rules-online-visibility-seo-aeo-geo"><span class="fz-related-tag">Search Visibility</span><span class="fz-related-title">SEO vs. AEO vs. GEO: The New Rules of Online Visibility</span><span class="fz-related-more">Read the guide <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div>
 <p class="fz-related-alt">See how every channel fits together in the <a href="https://favze.com/favze-framework">FAVZE Framework</a>, or check your own marketing with the <a href="https://favze.com/full-digital-marketing-audit">free digital marketing audit checklist</a>.</p>
 </div>
 </section>
@@ -1553,7 +1549,7 @@ footer.ft-std .ft-dot{color:rgba(255,255,255,.18);padding:0 6px}
 <div class="fz-smband-inner">
 <div class="fz-smband-ico" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" stroke="currentColor" stroke-width="2"/><path d="M15.6 8.4l-2.1 5.1-5.1 2.1 2.1-5.1z" fill="currentColor"/></svg></div>
 <div class="fz-smband-copy"><p class="fz-smband-kick">Free Service Match &middot; 60 seconds</p><h2 id="fzSmBand-lagrange-county" class="fz-smband-title">Not Sure Which Service Fits Your Business?</h2><p class="fz-smband-sub">Answer 3 quick questions about your business type, industry, and goals. Service Match builds a phased plan showing which Favze services to start with and why.</p><ul class="fz-smband-steps"><li><b>1</b>Your business</li><li><b>2</b>Your industry</li><li><b>3</b>Your goals</li></ul></div>
-<div class="fz-smband-acts"><a class="fz-smband-btn" href="https://favze.com/service-match?from=lagrange-county" data-sm-entry="band-lagrange-county">Find My Service <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="fz-smband-alt" href="https://favze.com/free-consultation" data-cta="smband-consult">Or talk it through with Riley</a></div>
+<div class="fz-smband-acts"><a class="fz-smband-btn" href="https://favze.com/resources/marketing-tools/service-match?from=lagrange-county" data-sm-entry="band-lagrange-county">Find My Service <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="fz-smband-alt" href="https://favze.com/free-consultation" data-cta="smband-consult">Or talk it through with Riley</a></div>
 </div>
 </section>
 <section class="fz-form-sec" id="free-consultation-form" aria-labelledby="fzFormTitle">
@@ -1615,27 +1611,33 @@ footer.ft-std .ft-dot{color:rgba(255,255,255,.18);padding:0 6px}
         </ul>
       </div>
       <div class="fc">
-        <h3><a href="https://favze.com/articles">Articles</a></h3>
+        <h3><a href="https://favze.com/resources/articles">Articles</a></h3>
         <ul>
-          <li><a href="https://favze.com/articles/content-marketing">Content Marketing</a></li>
-          <li><a href="https://favze.com/articles/social-media-strategy">Social Media Strategy</a></li>
-          <li><a href="https://favze.com/articles/search-visibility">Search Visibility &amp; Local Discovery</a></li>
-          <li><a href="https://favze.com/articles/brand-positioning">Brand Positioning</a></li>
+          <li><a href="https://favze.com/resources/articles/content-marketing">Content Marketing</a></li>
+          <li><a href="https://favze.com/resources/articles/social-media-strategy">Social Media Strategy</a></li>
+          <li><a href="https://favze.com/resources/articles/search-visibility">Search Visibility &amp; Local Discovery</a></li>
+          <li><a href="https://favze.com/resources/articles/brand-positioning">Brand Positioning</a></li>
         </ul>
         <div style="margin-top:22px">
-          <h3><a href="https://favze.com/newsletters">Newsletters</a></h3>
+          <h3><a href="https://favze.com/resources/newsletters">Newsletters</a></h3>
           <ul>
-            <li><a href="https://favze.com/newsletters#insider-card">Favze Insider</a></li>
-            <li><a href="https://favze.com/newsletters#intel-card">Favze Intel</a></li>
-            <li><a href="https://www.linkedin.com/newsletters/favze-insights-7399519169551126528/" target="_blank" rel="noopener noreferrer nofollow">Favze Insights</a></li>
+            <li><a href="https://favze.com/resources/newsletters/favze-insider">Favze Insider</a></li>
+            <li><a href="https://favze.com/resources/newsletters/favze-intel">Favze Intel</a></li>
+            <li><a href="https://favze.com/resources/newsletters/favze-insights">Favze Insights</a></li>
           </ul>
         </div>
         <div style="margin-top:22px">
-          <h3><a href="https://favze.com/marketing-glossary">Glossaries</a></h3>
+          <h3><a href="https://favze.com/resources/glossary">Glossaries</a></h3>
           <ul>
-            <li><a href="https://favze.com/marketing-glossary">Marketing Terms</a></li>
-            <li><a href="https://favze.com/marketing-kpis-glossary">Marketing KPIs</a></li>
-            <li><a href="https://favze.com/ai-glossary">AI &amp; Automation</a></li>
+            <li><a href="https://favze.com/resources/glossary/marketing-terms">Marketing Terms</a></li>
+            <li><a href="https://favze.com/resources/glossary/marketing-kpis">Marketing KPIs</a></li>
+            <li><a href="https://favze.com/resources/glossary/ai">AI &amp; Automation</a></li>
+          </ul>
+        </div>
+        <div style="margin-top:22px">
+          <h3><a href="https://favze.com/resources/marketing-tools">Marketing Tools</a></h3>
+          <ul>
+            <li><a href="https://favze.com/resources/marketing-tools/service-match" data-sm-entry="footer-tools">Service Match</a></li>
           </ul>
         </div>
       </div>
@@ -1648,7 +1650,8 @@ footer.ft-std .ft-dot{color:rgba(255,255,255,.18);padding:0 6px}
           <li><a href="https://favze.com/our-process">Our Process</a></li>
           <li><a href="https://favze.com/favze-framework">FAVZE Framework</a></li>
           <li><a href="https://favze.com/services">All Services</a></li>
-          <li><a href="https://favze.com/service-match" data-sm-entry="footer">Service Match Quiz</a></li>
+          <li><a href="https://favze.com/resources/marketing-tools/service-match" data-sm-entry="footer">Service Match Quiz</a></li>
+          <li><a href="https://favze.com/resources">Resources</a></li>
           <li><a href="https://favze.com/faq">FAQ</a></li>
           <li><a href="https://favze.com/areas-served">Areas Served</a></li>
         </ul>
@@ -1679,7 +1682,7 @@ footer.ft-std .ft-dot{color:rgba(255,255,255,.18);padding:0 6px}
     <div class="fz-news">
       <div class="fz-news-copy">
         <p class="fz-news-title">Get Favze Insider and Favze Intel</p>
-        <p>One signup gets you two free monthly newsletters. Favze Insider keeps you current. Favze Intel makes you sharper. <a href="https://favze.com/newsletters">Learn more</a>.</p>
+        <p>One signup gets you two free monthly newsletters. Favze Insider keeps you current. Favze Intel makes you sharper. <a href="https://favze.com/resources/newsletters">Learn more</a>.</p>
       </div>
       <div class="fz-news-card">
         <iframe data-tally-src="https://tally.so/embed/Gxg47Z?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;formEventsForwarding=1" loading="lazy" width="100%" height="260" frameborder="0" marginheight="0" marginwidth="0" title="Favze newsletter signup"></iframe>
@@ -1728,6 +1731,7 @@ footer.ft-std .ft-dot{color:rgba(255,255,255,.18);padding:0 6px}
       <div style="display:flex;gap:18px;flex-wrap:wrap">
         <a href="https://favze.com/privacy-policy">Privacy Policy</a>
         <a href="https://favze.com/terms-of-use">Terms of Use</a>
+        <a href="https://favze.com/accessibility-statement">Accessibility Statement</a>
       </div>
     </div>
   </div>
@@ -1737,7 +1741,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var drops = [
     { trig: document.getElementById('trigServices'), pan: document.getElementById('panServices') },
     { trig: document.getElementById('trigArticles'), pan: document.getElementById('panArticles') }
-  ];
+  ].filter(function(d){return d.trig&&d.pan;});
   function openPanel(trig, pan) { pan.classList.add('open'); trig.setAttribute('aria-expanded','true'); }
   function closePanel(trig, pan) { pan.classList.remove('open'); trig.setAttribute('aria-expanded','false'); }
   drops.forEach(function(d) {
@@ -1877,6 +1881,7 @@ window.silktideConsentManager.init({
 });
 </script>
 <script src="../assets/js/fz-site.js"></script>
+<script src="../assets/js/fz-nav.js" defer></script>
 <script src="../assets/js/fz-search.js" defer></script>
 <script src="../assets/js/fz-ui.js" defer></script>
 </body>
