@@ -97,3 +97,5 @@ html{scroll-padding-top:150px}
 .gl-svc-name{display:inline-block;min-height:24px;line-height:24px}
 .gl-tab{min-height:24px}
 .gl-foot .gl-svc{display:inline-flex;align-items:center;min-height:28px}
+.gl-guide{display:inline-flex;align-items:center;min-height:36px;padding:0 16px;border-radius:999px;background:linear-gradient(135deg,#064187,#0A89A3);color:#fff!important;font:700 14px 'DM Sans',sans-serif;text-decoration:none!important}
+.gl-guide:hover{filter:brightness(1.08)}

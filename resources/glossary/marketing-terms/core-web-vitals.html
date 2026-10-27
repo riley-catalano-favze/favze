@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Favze tracking + consent: start -->
+<script id="fz-consent-default">
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+(function(){
+  function s(id){try{return localStorage.getItem('stcm.consent.'+id)==='true'?'granted':'denied'}catch(e){return 'denied'}}
+  gtag('consent','default',{analytics_storage:s('analytics'),ad_storage:s('marketing'),ad_user_data:s('marketing'),ad_personalization:s('marketing'),functionality_storage:'granted',security_storage:'granted',wait_for_update:500});
+})();
+</script>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" id="silktide-consent-manager-css" href="https://cdn.jsdelivr.net/gh/silktide/consent-manager@v2.0.1/silktide-consent-manager.css" integrity="sha384-EdMq+R+YOnsbelo08wPenoTlnxbAyxI11NMIxzugx/qAsbh64KcOkqxYqq6pfvO/" crossorigin="anonymous">
+<style id="silktide-consent-manager-overrides">
+#stcm-wrapper {
+  --boxShadow: -5px 5px 10px 0px #00000012, 0px 0px 50px 0px #0000001a;
+  --fontFamily: Helvetica Neue, Segoe UI, Arial, sans-serif;
+  --primaryColor: #064187;
+  --backgroundColor: #FFFFFF;
+  --textColor: #4B494B;
+  --backdropBackgroundColor: #00000033;
+  --backdropBackgroundBlur: 0px;
+  --iconColor: #064187;
+  --iconBackgroundColor: #FFFFFF;
+}
+#stcm-wrapper .stcm-button{border-radius:999px!important}
+@media(max-width:768px){#stcm-icon{bottom:calc(66px + env(safe-area-inset-bottom))!important;left:14px!important;width:48px!important;height:48px!important}}
+</style>
+<script src="https://cdn.jsdelivr.net/gh/silktide/consent-manager@v2.0.1/silktide-consent-manager.js" integrity="sha384-5Pt34uiIbCsvfiiZXoLi4HRf/YBXjr9c8e+gYeVo9smUaInNHYVtc8NZ8wUnXJIq" crossorigin="anonymous"></script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PTG2KZ6K');</script>
+<!-- End Google Tag Manager -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-79E26LS14F"></script>
+<script>gtag('js',new Date());gtag('config','G-79E26LS14F');</script>
+<!-- Favze tracking + consent: end -->
+<title>What Are Core Web Vitals? Page Speed Metrics Explained - Favze</title>
+<meta name="description" content="Core Web Vitals are Google&#x27;s measurements of loading, responsiveness, and visual stability. Learn LCP, INP, and CLS, their targets, and how faster sites win more customers.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Favze">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="What Are Core Web Vitals? Page Speed Metrics Explained - Favze">
+<meta property="og:description" content="Core Web Vitals are Google&#x27;s measurements of loading, responsiveness, and visual stability. Learn LCP, INP, and CLS, their targets, and how faster sites win more customers.">
+<meta property="og:url" content="https://favze.com/resources/glossary/marketing-terms/core-web-vitals">
+<meta property="og:image" content="https://favze.com/assets/brand/favze-social-preview.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Favze logo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What Are Core Web Vitals? Page Speed Metrics Explained - Favze">
+<meta name="twitter:description" content="Core Web Vitals are Google&#x27;s measurements of loading, responsiveness, and visual stability. Learn LCP, INP, and CLS, their targets, and how faster sites win more customers.">
+<meta name="twitter:image" content="https://favze.com/assets/brand/favze-social-preview.jpg">
+<meta name="twitter:image:alt" content="Favze logo">
+<link rel="canonical" href="https://favze.com/resources/glossary/marketing-terms/core-web-vitals">
+<link rel="icon" href="https://favze.com/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="https://favze.com/assets/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://favze.com/assets/favicon/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://favze.com/apple-touch-icon.png">
+<link rel="manifest" href="https://favze.com/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebPage",
+   "@id": "https://favze.com/resources/glossary/marketing-terms/core-web-vitals#webpage",
+   "url": "https://favze.com/resources/glossary/marketing-terms/core-web-vitals",
+   "name": "What Are Core Web Vitals? Page Speed Metrics Explained - Favze",
+   "description": "Core Web Vitals are Google's measurements of loading, responsiveness, and visual stability. Learn LCP, INP, and CLS, their targets, and how faster sites win more customers.",
+   "isPartOf": {
+    "@id": "https://favze.com/#website"
+   },
+   "publisher": {
+    "@id": "https://favze.com/#organization"
+   },
+   "inLanguage": "en-US",
+   "dateModified": "2026-10-27"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Home",
+     "item": "https://favze.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Resources",
+     "item": "https://favze.com/resources"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Glossaries",
+     "item": "https://favze.com/resources/glossary"
+    },
+    {
+     "@type": "ListItem",
+     "position": 4,
+     "name": "Marketing Terms Glossary",
+     "item": "https://favze.com/resources/glossary/marketing-terms"
+    },
+    {
+     "@type": "ListItem",
+     "position": 5,
+     "name": "Core Web Vitals",
+     "item": "https://favze.com/resources/glossary/marketing-terms/core-web-vitals"
+    }
+   ]
+  },
+  {
+   "@type": "DefinedTerm",
+   "@id": "https://favze.com/resources/glossary/marketing-terms/core-web-vitals#term",
+   "name": "Core Web Vitals",
+   "description": "Google's measurements of how fast a page loads, how quickly it responds to taps, and how steady the layout stays while loading. Strong scores create a smoother visit and support better rankings.",
+   "url": "https://favze.com/resources/glossary/marketing-terms/core-web-vitals",
+   "inDefinedTermSet": {
+    "@type": "DefinedTermSet",
+    "name": "Marketing Terms Glossary",
+    "url": "https://favze.com/resources/glossary/marketing-terms"
+   }
+  },
+  {
+   "@type": "Article",
+   "@id": "https://favze.com/resources/glossary/marketing-terms/core-web-vitals#article",
+   "headline": "What Are Core Web Vitals? Page Speed Metrics Explained",
+   "description": "Core Web Vitals are Google's measurements of loading, responsiveness, and visual stability. Learn LCP, INP, and CLS, their targets, and how faster sites win more customers.",
+   "url": "https://favze.com/resources/glossary/marketing-terms/core-web-vitals",
+   "author": {
+    "@type": "Person",
+    "@id": "https://favze.com/about#riley-catalano",
+    "name": "Riley Catalano",
+    "url": "https://favze.com/about"
+   },
+   "publisher": {
+    "@id": "https://favze.com/#organization"
+   },
+   "datePublished": "2026-10-27",
+   "dateModified": "2026-10-27",
+   "inLanguage": "en-US",
+   "mainEntityOfPage": "https://favze.com/resources/glossary/marketing-terms/core-web-vitals",
+   "about": {
+    "@id": "https://favze.com/resources/glossary/marketing-terms/core-web-vitals#term"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Do Core Web Vitals affect rankings?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "They are part of Google's page experience signals. Content relevance matters most, and strong Core Web Vitals help when competing pages are similar."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What replaced First Input Delay?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Interaction to Next Paint replaced First Input Delay as a Core Web Vital in March 2024."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do I check my scores?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Use Google Search Console's Core Web Vitals report for site-wide field data and PageSpeed Insights for individual pages."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#064187;
+  --teal:#0A89A3;
+  --dark:#0a0a0a;
+  --dark2:#111111;
+  --white:#ffffff;
+  --off-white:#f4f4f0;
+  --border-dark:rgba(255,255,255,0.07);
+  --font-display:'Barlow Condensed',sans-serif;
+  --font-body:'DM Sans',sans-serif;
+  --radius-card:20px;
+  --radius-sm:10px;
+  --inner-max:1100px;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--dark);color:var(--white);line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;height:auto;display:block}
+button{font-family:var(--font-body);cursor:pointer}
+/* NAV */
+nav{position:sticky;top:0;z-index:200;background:#fff;border-bottom:1.5px solid #e8e8e8;padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:68px}
+.nav-logo-img{height:30px;width:auto;object-fit:contain}
+.nl{display:flex;align-items:center;gap:2px;list-style:none}
+.nl>li{position:relative}
+.nl>li>a.nl-link{font-weight:500;font-size:.875rem;padding:8px 12px;border-radius:8px;color:#0a0a0a;display:inline-flex;align-items:center;gap:3px;transition:background .15s;white-space:nowrap}
+.nl>li>a.nl-link:hover{background:#f0f0f0}
+.nl>li>a.nl-link.active{color:var(--navy);font-weight:700}
+.drop-trigger{font-family:var(--font-body);font-weight:500;font-size:.875rem;padding:8px 12px;border-radius:8px;color:#0a0a0a;background:none;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:4px;transition:background .15s;white-space:nowrap}
+.drop-trigger:hover{background:#f0f0f0}
+.drop-trigger[aria-expanded="true"]{background:#f0f0f0}
+.drop-trigger[aria-expanded="true"] svg{transform:rotate(180deg)}
+.drop-trigger svg{transition:transform .2s;flex-shrink:0}
+.nl-cta{font-family:var(--font-body);font-weight:700;font-size:.875rem;padding:9px 18px;border-radius:9px;background:var(--navy);color:#fff!important;display:inline-flex;align-items:center;transition:background .15s;white-space:nowrap}
+.nl-cta:hover{background:var(--teal)}
+.drop-panel{position:absolute;top:calc(100% + 6px);left:0;background:#fff;border:1.5px solid #e8e8e8;border-radius:14px;box-shadow:0 16px 48px rgba(0,0,0,.13);padding:16px;z-index:300;min-width:320px;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(-6px);transition:opacity .15s ease,transform .15s ease;transition-property:opacity,transform}
+.drop-panel.open{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
+.drop-panel.open a{pointer-events:auto;cursor:pointer}
+.drop-panel.center{left:50%;transform:translateX(-50%) translateY(-6px)}
+.drop-panel.center.open{transform:translateX(-50%) translateY(0)}
+.drop-label{font-size:.65rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#aaa;padding:0 8px 8px;border-bottom:1px solid #f0f0f0;margin-bottom:6px}
+.drop-panel a{display:block;font-size:.83rem;font-weight:500;color:#333;padding:7px 10px;border-radius:8px;transition:background .12s,color .12s}
+.drop-panel a:hover{background:rgba(6,65,135,.07);color:var(--navy)}
+.drop-abbr{font-size:.65rem;font-weight:700;color:#aaa;margin-left:4px}
+.drop-divider{height:1px;background:#f0f0f0;margin:8px 0}
+.drop-view-all{font-weight:700!important;color:var(--navy)!important;margin-top:4px}
+.hb{display:none;flex-direction:column;gap:5px;cursor:pointer;border:none;background:none;padding:6px}
+.hb span{display:block;width:24px;height:2px;background:#0a0a0a;border-radius:2px;transition:.25s}
+.hb.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hb.open span:nth-child(2){opacity:0}
+.hb.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mm{display:none;position:fixed;top:68px;left:0;right:0;background:#fff;border-bottom:1.5px solid #e8e8e8;padding:16px 5% 20px;z-index:190;flex-direction:column;gap:2px;box-shadow:0 16px 48px rgba(0,0,0,.12);max-height:calc(100vh - 68px);overflow-y:auto}
+.mm.open{display:flex}
+.mm-link{font-weight:500;font-size:1rem;padding:12px 14px;border-radius:8px;display:block;color:#0a0a0a}
+.mm-link:hover{background:#f5f5f5}
+.mm-toggle{width:100%;text-align:left;background:none;border:none;font-family:var(--font-body);font-size:1rem;font-weight:500;color:#0a0a0a;padding:12px 14px;border-radius:8px;cursor:pointer;display:flex;align-items:center;justify-content:space-between}
+.mm-toggle:hover{background:#f5f5f5}
+.mm-toggle svg{transition:transform .2s;flex-shrink:0}
+.mm-toggle.open svg{transform:rotate(180deg)}
+.mm-sub{display:none;flex-direction:column;gap:1px;padding:0 8px 8px 20px}
+.mm-sub.open{display:flex}
+.mm-sub a{font-size:.88rem;font-weight:500;color:#444;padding:8px 10px;border-radius:7px;display:block}
+.mm-sub a:hover{background:rgba(6,65,135,.07);color:var(--navy)}
+.mm-cta{background:var(--navy)!important;color:#fff!important;text-align:center;margin-top:8px;font-weight:700!important;border-radius:9px}
+.mm-cta:hover{background:var(--teal)!important}
+/* HERO */
+.faq-hero{position:relative;overflow:hidden;background:var(--dark);padding:72px 5% 64px}
+.faq-hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(6,65,135,.065) 1px,transparent 1px),linear-gradient(90deg,rgba(6,65,135,.065) 1px,transparent 1px);background-size:52px 52px;pointer-events:none}
+.faq-hero-glow{position:absolute;inset:0;background:radial-gradient(ellipse 55% 65% at 75% 25%,rgba(10,137,163,.18) 0%,transparent 65%),radial-gradient(ellipse 35% 45% at 10% 80%,rgba(6,65,135,.25) 0%,transparent 60%);pointer-events:none}
+.faq-hero-inner{position:relative;max-width:var(--inner-max);margin:0 auto;display:grid;grid-template-columns:1fr 420px;gap:48px;align-items:center}
+.hero-left{min-width:0}
+.hero-badge{display:inline-flex;align-items:center;gap:9px;background:rgba(10,137,163,.14);border:1px solid rgba(10,137,163,.38);border-radius:100px;padding:6px 18px;font-size:.72rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--teal);margin-bottom:24px}
+.hdot{width:8px;height:8px;background:var(--teal);border-radius:50%;animation:pulse 2.2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+.faq-hero h1{font-family:var(--font-display);font-weight:900;text-transform:uppercase;line-height:1;letter-spacing:-.01em;margin-bottom:20px}
+.h1-line{display:block;font-size:clamp(2.6rem,4.5vw,4.8rem)}
+.h1-line.teal{color:var(--teal)}
+.h1-line.boxed{display:inline-block;color:var(--navy);background:var(--white);padding:2px 14px 4px;border-radius:6px;line-height:1.05;margin-top:4px}
+.hero-sub{font-size:1rem;color:rgba(255,255,255,.62);line-height:1.75;max-width:520px;margin-bottom:32px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
+.btn-primary{background:var(--navy);color:#fff;font-weight:700;padding:14px 28px;border-radius:var(--radius-sm);display:inline-flex;align-items:center;gap:9px;font-size:.95rem;border:none;cursor:pointer;transition:background .2s;font-family:var(--font-body)}
+.btn-primary:hover{background:var(--teal)}
+.btn-ghost{background:transparent;color:#fff;font-weight:700;padding:13px 26px;border-radius:var(--radius-sm);display:inline-flex;align-items:center;gap:9px;font-size:.95rem;border:1.5px solid rgba(255,255,255,.25);transition:.2s;font-family:var(--font-body)}
+.btn-ghost:hover{background:rgba(255,255,255,.07)}
+.hero-stats{display:flex;flex-wrap:wrap;gap:28px 36px;margin-top:36px;padding-top:28px;border-top:1px solid rgba(255,255,255,.09)}
+.hstat-num{font-family:var(--font-display);font-size:2.2rem;font-weight:900;color:var(--teal);line-height:1}
+.hstat-label{font-size:.78rem;color:rgba(255,255,255,.45);margin-top:4px;line-height:1.45}
+/* CATEGORY NAV */
+.cat-nav{background:var(--dark2);border-bottom:1px solid rgba(255,255,255,.06);padding:0 5%;position:sticky;top:68px;z-index:50;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.cat-nav::-webkit-scrollbar{display:none}
+.cat-nav-inner{max-width:var(--inner-max);margin:0 auto;display:flex;gap:0;white-space:nowrap}
+.cat-btn{background:none;border:none;color:rgba(255,255,255,.45);font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:16px 18px;cursor:pointer;font-family:var(--font-body);border-bottom:2px solid transparent;transition:.2s;flex-shrink:0}
+.cat-btn:hover{color:rgba(255,255,255,.8)}
+.cat-btn.active{color:var(--teal);border-bottom-color:var(--teal)}
+/* FAQ MAIN */
+.faq-main{padding:64px 5% 80px;max-width:var(--inner-max);margin:0 auto}
+/* SECTION */
+.faq-section{margin-bottom:72px;scroll-margin-top:0}
+.section-header{display:flex;align-items:flex-start;gap:18px;margin-bottom:36px}
+.section-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.section-icon.navy-bg{background:rgba(6,65,135,.25);border:1.5px solid rgba(6,65,135,.4)}
+.section-icon.teal-bg{background:rgba(10,137,163,.2);border:1.5px solid rgba(10,137,163,.35)}
+.section-num{font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:6px;display:block}
+.section-title{font-family:var(--font-display);font-size:clamp(1.5rem,3vw,2.2rem);font-weight:900;text-transform:uppercase;color:#fff;line-height:1.05}
+/* ACCORDION */
+.faq-list{display:flex;flex-direction:column;gap:0;border-radius:var(--radius-card);overflow:hidden;border:1.5px solid rgba(255,255,255,.07);background:rgba(255,255,255,.02)}
+.faq-item{border-bottom:1px solid rgba(255,255,255,.055)}
+.faq-item:last-child{border-bottom:none}
+.faq-q{width:100%;background:none;border:none;text-align:left;padding:20px 24px;font-weight:700;font-size:.97rem;color:rgba(255,255,255,.88);cursor:pointer;display:flex;align-items:flex-start;justify-content:space-between;gap:16px;font-family:var(--font-body);transition:background .2s;position:relative}
+.faq-q:hover{background:rgba(255,255,255,.03)}
+.faq-item.open .faq-q{background:rgba(6,65,135,.12);color:#fff}
+.faq-item.open .faq-q::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:linear-gradient(180deg,var(--navy),var(--teal));border-radius:0}
+.faq-icon{flex-shrink:0;width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;margin-top:1px;transition:background .2s,transform .25s}
+.faq-item.open .faq-icon{background:var(--navy);transform:rotate(45deg)}
+.faq-a{display:none;padding:0 24px 24px;font-size:.915rem;color:rgba(255,255,255,.62);line-height:1.78;border-top:1px solid rgba(255,255,255,.05);padding-top:18px}
+.faq-a.show{display:block}
+.faq-a a{color:var(--teal);text-decoration:underline;text-underline-offset:3px}
+.faq-a a:hover{color:#fff}
+.faq-a strong{color:rgba(255,255,255,.85);font-weight:700}
+/* CALLOUT */
+.faq-callout{background:linear-gradient(135deg,rgba(6,65,135,.35),rgba(10,137,163,.25));border:1.5px solid rgba(10,137,163,.3);border-radius:var(--radius-card);padding:28px 32px;margin-bottom:72px;display:flex;align-items:flex-start;gap:18px}
+.callout-icon{width:44px;height:44px;border-radius:12px;background:rgba(10,137,163,.25);border:1.5px solid rgba(10,137,163,.4);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.callout-text h3,.callout-text .callout-title{font-family:var(--font-display);font-size:1.2rem;font-weight:900;text-transform:uppercase;color:#fff;margin-bottom:8px;letter-spacing:.04em}
+.callout-text p{font-size:.88rem;color:rgba(255,255,255,.62);line-height:1.7}
+.callout-text a{color:var(--teal);font-weight:700}
+/* CTA STRIP */
+.cta-strip{background:linear-gradient(135deg,var(--navy) 0%,var(--teal) 62%,var(--navy) 100%);padding:76px 5%;text-align:center;position:relative;overflow:hidden}
+.cta-strip::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:42px 42px}
+.cta-inner{position:relative;max-width:680px;margin:0 auto}
+.cta-strip h2{font-family:var(--font-display);font-size:clamp(2rem,4.5vw,3.4rem);font-weight:900;color:#fff;text-transform:uppercase;line-height:1.02;margin-bottom:14px}
+.cta-strip p{color:rgba(255,255,255,.74);font-size:1rem;margin-bottom:32px;line-height:1.68}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn-white{background:#fff;color:var(--navy);font-weight:700;padding:14px 28px;border-radius:var(--radius-sm);display:inline-flex;align-items:center;gap:9px;font-size:.95rem;font-family:var(--font-body);transition:.2s}
+.btn-white:hover{background:#eee}
+.btn-ghost-white{background:rgba(255,255,255,.12);color:#fff;font-weight:700;padding:13px 26px;border-radius:var(--radius-sm);display:inline-flex;align-items:center;gap:9px;font-size:.95rem;border:1.5px solid rgba(255,255,255,.28);font-family:var(--font-body);transition:.2s}
+.btn-ghost-white:hover{background:rgba(255,255,255,.22)}
+/* FOOTER */
+footer{background:var(--dark);padding:56px 5% 0;border-top:1px solid rgba(255,255,255,.07)}
+.ft-inner{max-width:var(--inner-max);margin:0 auto}
+.ft-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.09)}
+.fb-desc{font-size:.84rem;color:rgba(255,255,255,.42);line-height:1.72;margin-top:14px;max-width:300px}
+.ft-social{display:grid;grid-template-columns:repeat(3,34px);gap:8px;margin-top:18px}
+.ft-social a{width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.45);transition:background .2s,color .2s,border-color .2s;flex-shrink:0}
+.ft-social a:hover{background:var(--navy);border-color:var(--navy);color:#fff}
+.fc h4{font-weight:900;font-size:.78rem;color:#fff;margin-bottom:16px;letter-spacing:.09em;text-transform:uppercase}
+.fc ul{list-style:none;display:flex;flex-direction:column;gap:8px}
+.fc ul li a{font-size:.83rem;color:rgba(255,255,255,.42);transition:color .2s}
+.fc ul li a:hover{color:#fff}
+.fcon{display:flex;flex-direction:column;gap:9px}
+.fcon a{font-size:.83rem;color:rgba(255,255,255,.42);display:flex;align-items:center;gap:7px;transition:color .2s}
+.fcon a:hover{color:#fff}
+.ft-scroll-strip{border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);padding:11px 0;display:flex;align-items:center;overflow:hidden}
+.ft-scroll-label{font-size:.62rem;font-weight:700;letter-spacing:.16em;color:var(--teal);white-space:nowrap;padding:0 20px 0 5%;flex-shrink:0}
+.ft-scroll-track-wrap{flex:1;overflow:hidden;position:relative}
+.ft-scroll-track-wrap::before,.ft-scroll-track-wrap::after{content:'';position:absolute;top:0;bottom:0;width:40px;z-index:2;pointer-events:none}
+.ft-scroll-track-wrap::before{left:0;background:linear-gradient(to right,#0a0a0a,transparent)}
+.ft-scroll-track-wrap::after{right:0;background:linear-gradient(to left,#0a0a0a,transparent)}
+.ft-scroll-track{display:flex;align-items:center;white-space:nowrap;animation:ftScroll 40s linear infinite}
+.ft-scroll-track:hover{animation-play-state:paused}
+.ft-scroll-track a{font-size:.78rem;color:rgba(255,255,255,.45);padding:0 4px;transition:color .2s;flex-shrink:0}
+.ft-scroll-track a:hover{color:rgba(255,255,255,.85)}
+.ft-scroll-dot{font-size:.78rem;color:rgba(255,255,255,.18);padding:0 6px;flex-shrink:0}
+@keyframes ftScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ft-scroll-right{display:flex;align-items:center;gap:6px;white-space:nowrap;flex-shrink:0;padding:0 5% 0 16px;font-size:.62rem;font-weight:700;letter-spacing:.1em;color:var(--teal);text-transform:uppercase}
+.ft-trust-bar{border-bottom:1px solid rgba(255,255,255,.07);padding:12px 5%}
+.ft-trust-inner{max-width:var(--inner-max);margin:0 auto;display:flex;align-items:center;flex-wrap:wrap;justify-content:center}
+.ft-trust-item{display:flex;align-items:center;gap:7px;font-size:.72rem;font-weight:600;color:rgba(255,255,255,.45);padding:4px 20px}
+.ft-trust-sep{width:1px;height:16px;background:rgba(255,255,255,.1);flex-shrink:0}
+.fb-bot{padding:18px 0 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px}
+.fb-bot p{font-size:.78rem;color:rgba(255,255,255,.26)}
+.fb-bot a{color:rgba(255,255,255,.32);font-size:.78rem;transition:color .2s}
+.fb-bot a:hover{color:#fff}
+/* DEEP STRIP */
+.deep-strip{margin-top:28px;padding:20px 24px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:16px;display:flex;align-items:flex-start;gap:16px;flex-wrap:wrap}
+.deep-strip-icon{width:36px;height:36px;border-radius:10px;background:rgba(10,137,163,.18);border:1px solid rgba(10,137,163,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.deep-strip-body{flex:1;min-width:200px}
+.deep-strip-label{font-size:.65rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--teal);display:block;margin-bottom:6px}
+.deep-strip-text{font-size:.84rem;color:rgba(255,255,255,.5);line-height:1.6;margin-bottom:12px}
+.deep-links{display:flex;flex-wrap:wrap;gap:8px}
+.deep-link{display:inline-flex;align-items:center;gap:6px;font-size:.76rem;font-weight:700;color:rgba(255,255,255,.7);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:100px;padding:5px 14px;transition:background .2s,border-color .2s,color .2s;text-decoration:none}
+.deep-link:hover{background:rgba(10,137,163,.2);border-color:rgba(10,137,163,.45);color:#fff}
+.deep-link svg{flex-shrink:0;opacity:.6}
+/* QUESTION MACHINE */
+.qm-widget{position:relative;width:100%}
+.qm-outer{border-radius:24px;overflow:hidden;background:#0d0d0d;border:1.5px solid rgba(255,255,255,.1);padding:0}
+.qm-topbar{background:#161616;padding:12px 18px;display:flex;align-items:center;gap:8px;border-bottom:1px solid rgba(255,255,255,.07)}
+.qm-dot{width:10px;height:10px;border-radius:50%}
+.qm-dot-r{background:#ff5f57}
+.qm-dot-y{background:#febc2e}
+.qm-dot-g{background:#28c840}
+.qm-topbar-label{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-left:auto}
+.qm-body{padding:28px 24px 24px}
+.qm-label{font-size:.65rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:14px;display:block}
+.qm-question-wrap{min-height:80px;display:flex;align-items:flex-start;gap:12px;margin-bottom:20px}
+.qm-q-mark{font-family:var(--font-display);font-size:3.2rem;font-weight:900;color:var(--teal);line-height:1;flex-shrink:0;animation:qpulse 2s ease-in-out infinite}
+@keyframes qpulse{0%,100%{opacity:1}50%{opacity:.55}}
+.qm-question-text{font-family:var(--font-display);font-size:clamp(1.1rem,2.2vw,1.45rem);font-weight:700;text-transform:uppercase;color:#fff;line-height:1.2;letter-spacing:.02em;padding-top:8px}
+.qm-cursor{display:inline-block;width:2px;height:1.1em;background:var(--teal);vertical-align:text-bottom;margin-left:2px;animation:blink .75s step-end infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+.qm-divider{height:1px;background:rgba(255,255,255,.07);margin:0 0 20px}
+.qm-answer-label{font-size:.63rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:8px;display:block}
+.qm-answer-text{font-size:.875rem;color:rgba(255,255,255,.72);line-height:1.65;min-height:54px;transition:opacity .3s}
+.qm-answer-text.fading{opacity:0}
+.qm-dots{display:flex;gap:6px;margin-top:20px;align-items:center}
+.qm-pdot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.2);transition:background .3s,width .3s}
+.qm-pdot.active{background:var(--teal);width:20px;border-radius:3px}
+.qm-skip{font-size:.68rem;color:rgba(255,255,255,.25);font-weight:600;margin-left:auto;cursor:pointer;padding:2px 0;transition:color .2s;background:none;border:none;font-family:var(--font-body)}
+.qm-skip:hover{color:rgba(255,255,255,.55)}
+.qm-tags{display:flex;flex-wrap:wrap;gap:8px;padding:16px 24px;border-top:1px solid rgba(255,255,255,.07)}
+.qm-tag{font-size:.68rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.45);background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:100px;padding:4px 12px;cursor:pointer;transition:all .2s}
+.qm-tag:hover,.qm-tag.active{background:rgba(10,137,163,.2);border-color:rgba(10,137,163,.5);color:var(--teal)}
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .faq-hero-inner{grid-template-columns:1fr;gap:36px}
+  .qm-widget{max-width:560px}
+  .ft-top{grid-template-columns:1fr 1fr;gap:28px}
+}
+@media(max-width:768px){
+  .nl{display:none}
+  .hb{display:flex}
+  nav{padding:0 4.5%}
+  .faq-hero{padding:52px 4.5% 48px}
+  .faq-hero-inner{gap:28px}
+  .qm-widget{max-width:100%}
+  .hero-sub{font-size:.96rem}
+  .hero-stats{gap:20px 28px;margin-top:28px;padding-top:22px}
+  .hstat-num{font-size:1.9rem}
+  .faq-main{padding:40px 4.5% 56px}
+  .cat-btn{padding:13px 13px;font-size:.7rem}
+  .section-header{flex-direction:column;gap:12px}
+  .faq-callout{flex-direction:column;gap:14px;padding:22px 20px}
+  .ft-top{grid-template-columns:1fr;gap:24px}
+}
+@media(max-width:480px){
+  .faq-hero{padding:44px 4% 40px}
+  .h1-line{font-size:clamp(2rem,8.5vw,2.6rem)}
+  .hero-ctas{flex-direction:column}
+  .hero-ctas a{width:100%;justify-content:center}
+  .faq-q{padding:15px 16px;font-size:.88rem}
+  .faq-a{padding:0 16px 18px;padding-top:14px;font-size:.875rem}
+  .section-title{font-size:1.35rem}
+  .cta-btns{flex-direction:column;align-items:stretch}
+  .cta-btns a{width:100%;justify-content:center}
+  .cta-strip{padding:52px 4%}
+  .faq-main{padding:32px 4% 48px}
+}
+</style>
+<style id="nav-phone-css">
+/* Header call icon: navy, every screen size */
+.nav-phone{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;padding:0;border:0;border-radius:10px;background:transparent;color:#064187!important;text-decoration:none!important;transition:color .2s,background .2s;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+.nav-phone:hover,.nav-phone:focus-visible{color:#000!important;background:rgba(6,65,135,.08)}
+.nav-phone svg{display:block}
+.nav-phone-m{display:none!important}
+@media(max-width:768px){.nav-phone-d{display:none!important}.nav-phone-m{display:inline-flex!important;margin-left:auto;margin-right:6px}}
+/* Mobile bottom bar: full-width Book Free Consultation button */
+.fz-mbar{display:none}
+@media(max-width:768px){
+  .fz-mbar{display:block;position:fixed;left:0;right:0;bottom:0;z-index:180;padding:0;background:#064187;box-shadow:0 -4px 16px rgba(0,0,0,.16)}
+  html body .fz-mbar a{display:flex;align-items:center;justify-content:center;gap:9px;box-sizing:border-box;width:100%;min-height:calc(52px + env(safe-area-inset-bottom));padding:0 16px env(safe-area-inset-bottom);border-radius:0!important;background:#064187;font-family:'DM Sans',sans-serif;font-weight:700;font-size:16px;line-height:1.2;color:#fff!important;text-decoration:none!important;-webkit-tap-highlight-color:transparent;transition:background .2s}
+  html body .fz-mbar a:hover,html body .fz-mbar a:active{background:#000}
+  html body .fz-mbar a:focus-visible{outline:3px solid #fff;outline-offset:-5px}
+  body:has(.fz-mbar){padding-bottom:calc(52px + env(safe-area-inset-bottom))!important}
+  body:has(#mm.open) .fz-mbar{display:none}
+  .scroll-guide{bottom:calc(66px + env(safe-area-inset-bottom))!important}
+}
+</style>
+<style id="fz-mobile-css">
+/* Sitewide mobile guard */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+img,video,canvas,iframe,embed,object{max-width:100%}
+img,video{height:auto}
+@media(max-width:768px){
+  html,body{max-width:100%!important;overflow-x:clip!important}
+  body{overflow-wrap:break-word}
+  table{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  pre,code{white-space:pre-wrap;word-break:break-word}
+  input,select,textarea{font-size:16px!important;max-width:100%}
+  .nav-cta{display:none!important}
+  .page-layout>*,.article-layout>*,.hero-inner>*,.ft-top>*{min-width:0!important}
+  .map-cities-below{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .pillar-divider-label,.btn-cta{white-space:normal!important}
+}
+@media(max-width:380px){.map-cities-below{grid-template-columns:minmax(0,1fr)!important}}
+</style>
+<style id="fz-round-css">
+/* Rounder Favze shapes: circle icons, pill chips, soft cards */
+html body .action-num,
+html body .alt-icon,
+html body .articles-section-icon,
+html body .bcard-icon,
+html body .callout-icon,
+html body .co-icon,
+html body .coming-more-icon,
+html body .comp-row-icon,
+html body .cs-item-icon,
+html body .cti,
+html body .decision-stmt-icon,
+html body .deep-strip-icon,
+html body .deliver-icon,
+html body .dest-ic,
+html body .email-icon,
+html body .emotion-icon,
+html body .exp-icon,
+html body .expect-icon,
+html body .factor-icon,
+html body .format-card-icon,
+html body .founding-perk-icon,
+html body .fq-icon,
+html body .fw-badge,
+html body .fw-loop-icon,
+html body .hab-card-icon,
+html body .hci,
+html body .icard-full > div:first-child,
+html body .ici-icon,
+html body .inbox-row-icon,
+html body .ind-icon,
+html body .level-num,
+html body .logic-letter,
+html body .mcc-pin,
+html body .mock-card-icon,
+html body .phase-num,
+html body .pi,
+html body .pillar-back-icon,
+html body .pillar-card > div:first-child,
+html body .pl-icon,
+html body .plat-detail-icon,
+html body .plat-icon,
+html body .platform-icon,
+html body .platform-icon-wrap,
+html body .ps-icon,
+html body .rc-icon,
+html body .review-step-num,
+html body .rf-rank,
+html body .sc-icon,
+html body .service-icon,
+html body .si,
+html body .signal-badge,
+html body .smock-post2-img,
+html body .step-num,
+html body .stic,
+html body .surf-detail-icon,
+html body .surf-icon,
+html body .svc-card-icon,
+html body .svc-detail-icon,
+html body .svc-icon,
+html body .vc-icon,
+html body .who-icon,
+html body .why-ai-icon,
+html body .why-ic,
+html body .why-icon,
+html body .why-sms-icon,
+html body footer.ft-std .ft-social a{border-radius:50%!important}
+html body .a-read-link,
+html body .ai-platform,
+html body .cert,
+html body .cert-note,
+html body .city-chip,
+html body .city-count,
+html body .city-tag,
+html body .community-tag,
+html body .compare-item,
+html body .count-badge,
+html body .gc-town,
+html body .h1-line,
+html body .map-overlay-badge,
+html body .mock-btn,
+html body .mock-btn-text,
+html body .mock-h1-bar-2,
+html body .mock-sub-bar,
+html body .mock-sub-bar-2,
+html body .pbadge,
+html body .pillar-item-badge,
+html body .region-flag,
+html body .search-input,
+html body .serp-search-bar,
+html body .services-count-badge,
+html body .sms-cta-link,
+html body input:not([type=checkbox]):not([type=radio]):not([type=range]),html body select{border-radius:999px!important}
+html body textarea{border-radius:22px!important}
+html body .action-step,
+html body .ai-bubble,
+html body .ai-query,
+html body .ai-recco-card,
+html body .ai-right,
+html body .ai-terminal-card,
+html body .alt-item,
+html body .analytics-card,
+html body .analytics-item,
+html body .apple-banner,
+html body .arch-diagram > div,
+html body .arch-takeaways > div,
+html body .art-card,
+html body .article-cta,
+html body .audience-box,
+html body .audit-card,
+html body .bcard,
+html body .bf-card,
+html body .browser-mockup,
+html body .c-stat,
+html body .callout,
+html body .cbox,
+html body .cert-badges > a,
+html body .check-item,
+html body .check-row,
+html body .city-card,
+html body .cmp-wrap,
+html body .comb-card,
+html body .combined-connector,
+html body .coming-more,
+html body .comp-row,
+html body .compare-card,
+html body .compare-grid,
+html body .compare-table-wrap,
+html body .compat-client-grid,
+html body .compat-outer,
+html body .compat-tech-strip,
+html body .compliance-visual,
+html body .contact-strip-grid,
+html body .content-two-col,
+html body .county-card,
+html body .county-dark,
+html body .cs-contact,
+html body .ct,
+html body .ct-overlay,
+html body .cta-form-wrap,
+html body .dark-box,
+html body .dark-card,
+html body .decay-row,
+html body .deep-stats-grid,
+html body .deep-strip,
+html body .def-card,
+html body .delivers-grid,
+html body .dest-card,
+html body .destroy-item,
+html body .diff-card,
+html body .eeat-card,
+html body .email-card,
+html body .emotion-card,
+html body .exp-key-fact,
+html body .expect-item,
+html body .explainer-card,
+html body .explainer-cta-strip,
+html body .explainer-grid,
+html body .factor-card,
+html body .faq-callout,
+html body .faq-card-dark,
+html body .faq-contact,
+html body .faq-item,
+html body .faq-list,
+html body .form-card,
+html body .format-card,
+html body .founding-perk,
+html body .fw-card,
+html body .fw-loop,
+html body .fw-quote,
+html body .fw-step,
+html body .gc,
+html body .glance-grid,
+html body .guide-stat,
+html body .h1l,
+html body .hab-card,
+html body .hab-mini,
+html body .hc,
+html body .hcta-box,
+html body .hstat,
+html body .icard-full,
+html body .inbox-visual,
+html body .industries-grid,
+html body .info-card,
+html body .inline-cta,
+html body .insight-box,
+html body .issue-mock,
+html body .layer-card,
+html body .level-card,
+html body .local-seo-grid,
+html body .lp-node,
+html body .map-card,
+html body .map-wrap,
+html body .mech-grid,
+html body .mid-cta,
+html body .mock-card,
+html body .nationwide-banner,
+html body .nc-card,
+html body .note-box,
+html body .ob-stat,
+html body .opportunity-box,
+html body .other-grid,
+html body .pain-card,
+html body .phase-card,
+html body .pillar,
+html body .pillar-back-card,
+html body .pillar-card,
+html body .pillar-item,
+html body .pillars-grid,
+html body .plan-step,
+html body .plat-card,
+html body .plat-detail-example,
+html body .plat-key-fact,
+html body .platform-card,
+html body .platform-item,
+html body .platforms-full-grid,
+html body .platforms-grid,
+html body .plt-grid-3col,
+html body .principles-grid,
+html body .problem-card,
+html body .proof-strip,
+html body .ps-item,
+html body .r-stat,
+html body .region-callout,
+html body .region-dark,
+html body .results-grid,
+html body .review-step,
+html body .rf-item,
+html body .rt-box,
+html body .sc,
+html body .sc-overlay,
+html body .serp-mock-card,
+html body .serp-result,
+html body .service-card,
+html body .services-cta,
+html body .services-grid,
+html body .sidebar-card,
+html body .sidebar-cta,
+html body .signal-item,
+html body .signup-card,
+html body .smock-post-img,
+html body .sms-bubble,
+html body .sms-cta-bubble,
+html body .sms-screen,
+html body .social-mock-card,
+html body .sp-deliverables,
+html body .sp-stat-card,
+html body .sp-steps,
+html body .stakes-card,
+html body .stat,
+html body .stat-box,
+html body .stat-row,
+html body .stc,
+html body .step-item,
+html body .surface-card,
+html body .surfaces-grid,
+html body .svc-card,
+html body .svc-key-fact,
+html body .timeline-notice,
+html body .timing-note,
+html body .toc-card,
+html body .two-col-card,
+html body .type-example,
+html body .types-grid,
+html body .vc,
+html body .vis-footer,
+html body .vpan,
+html body .who-grid,
+html body .why-ai-grid,
+html body .why-card,
+html body .why-grid,
+html body .why-right-dark,
+html body .why-sms-grid,
+html body .why-stat{border-radius:28px!important}
+html body .drop-trigger,html body .nav-drop-trigger,html body .drop-menu a,html body .drop-panel a,html body .fz-res-panel a,html body .fz-res > a{border-radius:999px!important}
+html body .drop-panel .drop-label,html body .drop-menu .drop-col-label{margin-top:2px}
+.fz-res-label{font-size:.65rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#aaa;padding:4px 14px 6px}
+.fz-mm-label{font-family:'DM Sans',sans-serif;font-size:.65rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#999;padding:12px 0 4px 12px;margin-top:6px;border-top:1px solid #f0f0f0}
+html body .drop-panel,html body .drop-menu{border-radius:22px!important}
+html body .drop-menu{min-width:300px}
+html body .drop-panel a{border-radius:999px!important}
+</style>
+<style id="fz-buttons-css">
+/* All buttons: fully rounded */
+html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .mc,html body .cta-btn,html body .cta-btn2,html body .btn-p,html body .btn-g,html body .hc-cta,html body .mc-btn,html body .mc-btn2,html body .fcd-btn,html body .ob-cta,html body .btn-primary,html body .btn-ghost,html body .btn-white,html body .btn-ghost-white,html body .why-btn,html body .why-btn2,html body .sc-btn,html body .bp,html body .bgh,html body .bs,html body .bw,html body .bs-wh,html body .hero-cta,html body .hero-cta-ghost,html body .btn-dark,html body .btn-outline-dark,html body .btn-dark-ol,html body .btn-ghost-wh,html body .btn-navy,html body .btn-teal,html body .svc-card-cta,html body .bcard-cta,html body .btn,html body .btn-cta,html body .view-all-link,html body .city-pill,html body .sidebar-cta a,html body .city-services a,html body .why-left a,html body .nb-cta a,html body .hctas a,html body .cta-bs a,html body .vbts a,html body .fq-bts a,html body .fo-bts a,html body .shdr a,html body form button,html body form [type=submit],html body button[type=submit],html body input[type=submit]{border-radius:999px!important}
+</style>
+<link rel="stylesheet" href="../../../assets/css/fz-site.css">
+<link rel="stylesheet" href="../../../assets/css/fz-ui.css">
+<link rel="stylesheet" href="../../../assets/css/fz-resources.css">
+<link rel="stylesheet" href="../../../assets/css/fz-nav.css">
+<script type="application/ld+json" id="fz-person-schema">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://favze.com/#riley-catalano",
+  "name": "Riley Catalano",
+  "jobTitle": "Founder and CEO",
+  "description": "Full-stack lead generation digital marketer and founder of Favze Digital Marketing in Middlebury, Indiana.",
+  "url": "https://rileycatalano.com",
+  "email": "riley@favze.com",
+  "worksFor": {
+    "@id": "https://favze.com/#organization"
+  },
+  "sameAs": [
+    "https://rileycatalano.com",
+    "https://www.linkedin.com/in/rileycatalano/"
+  ]
+}
+</script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe title="Google Tag Manager" src="https://www.googletagmanager.com/ns.html?id=GTM-PTG2KZ6K" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- NAV -->
+<nav>
+  <a class="fz-skip" href="#main">Skip to main content</a>
+  <a href="https://favze.com/" class="fz-logo" aria-label="Favze home"><img src="https://favze.com/assets/brand/favze-logo-horizontal-black.png" alt="Favze Digital Marketing" width="147" height="34"></a>
+  <ul class="nl fz-nl">
+    <li>
+      <button class="drop-trigger" id="fzTrigSvc" aria-expanded="false" aria-controls="fzPanSvc">Services <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="drop-panel" id="fzPanSvc" role="menu">
+        <div class="drop-label">All Services</div>
+        <a href="https://favze.com/services/social-media-marketing" role="menuitem">Social Media Marketing <span class="drop-abbr">SMM</span></a>
+        <a href="https://favze.com/services/search-engine-optimization" role="menuitem">Search Engine Optimization <span class="drop-abbr">SEO</span></a>
+        <a href="https://favze.com/services/answer-engine-optimization" role="menuitem">Answer Engine Optimization <span class="drop-abbr">AEO</span></a>
+        <a href="https://favze.com/services/generative-engine-optimization" role="menuitem">Generative Engine Optimization <span class="drop-abbr">GEO</span></a>
+        <a href="https://favze.com/services/ai-optimization" role="menuitem">AI Optimization</a>
+        <a href="https://favze.com/services/local-seo" role="menuitem">Local SEO</a>
+        <a href="https://favze.com/services/email-marketing" role="menuitem">Email Marketing</a>
+        <a href="https://favze.com/services/short-message-service-sms" role="menuitem">SMS Marketing</a>
+        <a href="https://favze.com/services/hubspot-setup" role="menuitem">HubSpot Setup</a>
+        <a href="https://favze.com/services/website-design" role="menuitem">Website Design</a>
+        <a href="https://favze.com/services/paid-search-ads" role="menuitem">Paid Search Ads <span class="drop-abbr">SEM</span></a>
+        <a href="https://favze.com/services/paid-social-media-ads" role="menuitem">Paid Social Media Ads</a>
+        <div class="drop-divider"></div>
+        <a href="https://favze.com/services" class="drop-view-all" role="menuitem">View All Services &rarr;</a>
+        <a href="https://favze.com/resources/marketing-tools/service-match" class="drop-view-all drop-sm" role="menuitem" data-sm-entry="nav">Not Sure? Take the Service Match &rarr;</a>
+      </div>
+    </li>
+    <li>
+      <button class="drop-trigger" id="fzTrigRes" aria-expanded="false" aria-controls="fzPanRes">Resources <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="drop-panel center" id="fzPanRes" role="menu">
+        <div class="drop-label">Articles</div>
+        <a href="https://favze.com/resources/articles/content-marketing" role="menuitem">Content Marketing</a>
+        <a href="https://favze.com/resources/articles/social-media-strategy" role="menuitem">Social Media Strategy</a>
+        <a href="https://favze.com/resources/articles/search-visibility" role="menuitem">Search Visibility &amp; Local Discovery</a>
+        <a href="https://favze.com/resources/articles/brand-positioning" role="menuitem">Brand Positioning &amp; Community Authority</a>
+        <a href="https://favze.com/resources/articles" class="drop-view-all" role="menuitem">All Articles &rarr;</a>
+        <div class="drop-divider"></div>
+        <div class="drop-label">Newsletters</div>
+        <a href="https://favze.com/resources/newsletters/favze-insider" role="menuitem">Favze Insider</a>
+        <a href="https://favze.com/resources/newsletters/favze-intel" role="menuitem">Favze Intel</a>
+        <a href="https://favze.com/resources/newsletters/favze-insights" role="menuitem">Favze Insights</a>
+        <a href="https://favze.com/resources/newsletters" class="drop-view-all" role="menuitem">All Newsletters &rarr;</a>
+        <div class="drop-divider"></div>
+        <div class="drop-label">Glossaries</div>
+        <a href="https://favze.com/resources/glossary/marketing-terms" role="menuitem">Marketing Terms Glossary</a>
+        <a href="https://favze.com/resources/glossary/marketing-kpis" role="menuitem">Marketing KPIs Glossary</a>
+        <a href="https://favze.com/resources/glossary/ai" role="menuitem">AI &amp; Automation Glossary</a>
+        <a href="https://favze.com/resources/glossary" class="drop-view-all" role="menuitem">All Glossaries &rarr;</a>
+        <div class="drop-divider"></div>
+        <div class="drop-label">Marketing Tools</div>
+        <a href="https://favze.com/resources/marketing-tools/service-match" role="menuitem" data-sm-entry="nav-tools">Service Match Quiz</a>
+        <a href="https://favze.com/resources/marketing-tools" class="drop-view-all" role="menuitem">All Marketing Tools &rarr;</a>
+        <a href="https://favze.com/resources" class="drop-view-all" role="menuitem">All Resources &rarr;</a>
+      </div>
+    </li>
+    <li><a href="https://favze.com/why-us" class="nl-link">Why Us</a></li>
+    <li><a href="https://favze.com/about" class="nl-link">About</a></li>
+    <li><a href="https://favze.com/faq" class="nl-link active" aria-current="page">FAQ</a></li>
+  </ul>
+  <div class="fz-nav-actions"><a href="tel:+15747475012" class="nav-phone fz-icon-btn" aria-label="Call Favze at 574-747-5012" title="Call 574-747-5012"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a><a href="sms:+15747475012" class="nav-sms fz-icon-btn" aria-label="Text Favze at 574-747-5012" title="Text 574-747-5012"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></svg></a><a href="https://favze.com/free-consultation" class="nl-cta fz-nav-cta">Book a Free Consultation</a></div>
+  <div class="fz-nav-mob"><a href="tel:+15747475012" class="nav-phone fz-icon-btn" aria-label="Call Favze at 574-747-5012" title="Call 574-747-5012"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a><a href="sms:+15747475012" class="nav-sms fz-icon-btn" aria-label="Text Favze at 574-747-5012" title="Text 574-747-5012"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></svg></a></div>
+  <button class="hb" id="hb" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+<div class="mm" id="mm" aria-hidden="true">
+  <button class="mm-toggle" id="fzMmSvcTrig" aria-expanded="false">Services <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  <div class="mm-sub" id="fzMmSvcSub">
+    <a href="https://favze.com/services/social-media-marketing">Social Media Marketing</a>
+    <a href="https://favze.com/services/search-engine-optimization">SEO</a>
+    <a href="https://favze.com/services/answer-engine-optimization">AEO</a>
+    <a href="https://favze.com/services/generative-engine-optimization">GEO</a>
+    <a href="https://favze.com/services/ai-optimization">AI Optimization</a>
+    <a href="https://favze.com/services/local-seo">Local SEO</a>
+    <a href="https://favze.com/services/email-marketing">Email Marketing</a>
+    <a href="https://favze.com/services/short-message-service-sms">SMS Marketing</a>
+    <a href="https://favze.com/services/hubspot-setup">HubSpot Setup</a>
+    <a href="https://favze.com/services/website-design">Website Design</a>
+    <a href="https://favze.com/services/paid-search-ads">Paid Search Ads</a>
+    <a href="https://favze.com/services/paid-social-media-ads">Paid Social Ads</a>
+    <a href="https://favze.com/services" style="font-weight:700;color:var(--navy);">All Services</a>
+      <a href="https://favze.com/resources/marketing-tools/service-match" style="font-weight:700;color:#086E84" data-sm-entry="mobile-menu">Not Sure? Take the Service Match</a>
+  </div>
+  <button class="mm-toggle" id="fzMmResTrig" aria-expanded="false">Resources <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+  <div class="mm-sub" id="fzMmResSub">
+    <a href="https://favze.com/resources/articles/content-marketing">Content Marketing</a>
+    <a href="https://favze.com/resources/articles/social-media-strategy">Social Media Strategy</a>
+    <a href="https://favze.com/resources/articles/search-visibility">Search Visibility &amp; Local Discovery</a>
+    <a href="https://favze.com/resources/articles/brand-positioning">Brand Positioning &amp; Community Authority</a>
+    <a href="https://favze.com/resources/articles" style="font-weight:700;color:var(--navy);">All Articles</a>
+    <div class="fz-mm-label">Newsletters</div>
+    <a href="https://favze.com/resources/newsletters/favze-insider">Favze Insider</a>
+    <a href="https://favze.com/resources/newsletters/favze-intel">Favze Intel</a>
+    <a href="https://favze.com/resources/newsletters/favze-insights">Favze Insights</a>
+    <a href="https://favze.com/resources/newsletters" style="font-weight:700;color:var(--navy);">All Newsletters</a>
+    <div class="fz-mm-label">Glossaries</div>
+    <a href="https://favze.com/resources/glossary/marketing-terms">Marketing Terms Glossary</a>
+    <a href="https://favze.com/resources/glossary/marketing-kpis">Marketing KPIs Glossary</a>
+    <a href="https://favze.com/resources/glossary/ai">AI &amp; Automation Glossary</a>
+    <a href="https://favze.com/resources/glossary" style="font-weight:700;color:var(--navy);">All Glossaries</a>
+        <div class="fz-mm-label">Marketing Tools</div>
+        <a href="https://favze.com/resources/marketing-tools/service-match" data-sm-entry="nav-tools">Service Match Quiz</a>
+    <a href="https://favze.com/resources/marketing-tools" style="font-weight:700;color:var(--navy);">All Marketing Tools</a>
+    <a href="https://favze.com/resources" style="font-weight:700;color:#064187">All Resources</a>
+  </div>
+  <a href="https://favze.com/why-us" class="mm-link">Why Us</a>
+  <a href="https://favze.com/about" class="mm-link">About</a>
+  <a href="https://favze.com/faq" class="mm-link">FAQ</a>
+  <a href="https://favze.com/free-consultation" class="mm-link mm-cta">Book a Free Consultation</a>
+</div>
+<main id="main">
+<section class="faq-hero tp-hero"><div class="faq-hero-grid"></div><div class="faq-hero-glow"></div><div class="faq-hero-inner"><div class="hero-left"><p class="tp-crumb"><a href="https://favze.com/resources">Resources</a> / <a href="https://favze.com/resources/glossary">Glossaries</a> / <a href="https://favze.com/resources/glossary/marketing-terms">Marketing Terms Glossary</a></p><h1><span class="h1-line">Core Web Vitals</span><span class="fz-h1-sub">Google's measurements of how fast, responsive, and stable your pages feel</span></h1><p class="hero-sub tp-def"><strong>Core Web Vitals:</strong> Google's measurements of how fast a page loads, how quickly it responds to taps, and how steady the layout stays while loading. Strong scores create a smoother visit and support better rankings.</p><div class="hero-ctas"><a href="#how" class="btn-primary">See How It Works <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a href="https://favze.com/resources/glossary/marketing-terms/core-web-vitals" class="btn-ghost">Back to the Glossary</a></div></div><div class="hero-visual fz-hero-solo" aria-hidden="true"></div></div></section>
+<section class="fz-blk rs-sec tp-body"><div class="rs-inner tp-grid"><article class="tp-main"><h2 id="what">What Is Core Web Vitals?</h2><p>Core Web Vitals are three measurements Google uses to describe real visitors' experience on a page. Largest Contentful Paint (LCP) measures loading, Interaction to Next Paint (INP) measures responsiveness to taps and clicks, and Cumulative Layout Shift (CLS) measures how much the layout jumps while loading.</p><p>Google's "good" thresholds are an LCP of 2.5 seconds or less, an INP of 200 milliseconds or less, and a CLS of 0.1 or less, measured across real visits. These scores appear in <a class="fz-il" href="https://favze.com/resources/glossary/marketing-terms/google-search-console">Google Search Console</a> and PageSpeed Insights.</p><h2 id="why">Why Core Web Vitals Matters for Northern Indiana &amp; Michiana Businesses</h2><p>Most local searches happen on phones, often on cellular connections in parking lots or job sites. A <a class="fz-il" href="https://favze.com/areas-served/porter-county">Valparaiso</a> customer who waits on a slow page or taps a button that jumps away is likely to go back and choose a faster competitor.</p><p>Page experience is part of how Google evaluates pages, and fast pages also convert better. Improving Core Web Vitals helps rankings, ad landing pages, and leads at the same time.</p><h2 id="how">How Core Web Vitals Works</h2><ol class="tp-steps"><li><b>Largest Contentful Paint</b><span>How quickly the biggest visible element, often a hero image or headline, finishes loading.</span></li><li><b>Interaction to Next Paint</b><span>How quickly the page responds visually after a visitor taps, clicks, or types.</span></li><li><b>Cumulative Layout Shift</b><span>How much content moves unexpectedly as images, fonts, and ads load.</span></li><li><b>Field data</b><span>Google uses data from real Chrome users over the past 28 days, so improvements show up gradually.</span></li></ol><h2 id="example">A Local Example</h2><div class="tp-example"><p>A <a class="fz-il" href="https://favze.com/areas-served/kosciusko-county">Warsaw</a> boutique's homepage hero image is a 4 MB photo, and its LCP sits around five seconds on phones. After compressing images, serving modern formats, reserving space for the banner, and removing an unused slider script, the page loads in under two seconds and the shop sees more product page visits from mobile searchers.</p></div><h2 id="start">Getting Started With Core Web Vitals</h2><p>Open Google Search Console and review the Core Web Vitals report for both mobile and desktop. It groups pages as Good, Needs Improvement, or Poor and names the metric holding each group back. Then run your most important pages, usually the homepage and top service pages, through PageSpeed Insights to see specific recommendations.</p><p>Fix the largest issues first. Oversized images are the most common cause of slow loading, so resize and compress them before anything else. Reserve space for images and banners so content stays steady, and remove scripts or plugins that no longer earn their place. After each round of changes, test on a real phone over a cellular connection, then give Google's field data a few weeks to reflect the improvement before measuring again.</p><h2 id="wins">Quick Wins to Improve Your Core Web Vitals</h2><ul class="rs-checks"><li>Compress images and serve WebP or AVIF formats</li><li>Set width and height on images and embeds to prevent layout jumps</li><li>Remove unused scripts, sliders, and plugins</li><li>Load fonts efficiently and limit font weights</li><li>Check Search Console's Core Web Vitals report monthly</li></ul><h2 id="watch">What to Watch For</h2><ul class="tp-watch"><li><b>Field versus lab.</b> PageSpeed lab scores help diagnose, while field data shows what Google uses.</li><li><b>Third-party tools.</b> Chat widgets, trackers, and embeds can slow pages; keep only what earns its place.</li><li><b>Mobile first.</b> Test on a real phone over cellular, where most local visitors browse.</li><li><b>Gradual updates.</b> Field data covers 28 days, so give fixes a few weeks to show.</li></ul><h2 id="faq">Core Web Vitals FAQ</h2><details class="rs-faq"><summary>Do Core Web Vitals affect rankings?</summary><p>They are part of Google's page experience signals. Content relevance matters most, and strong Core Web Vitals help when competing pages are similar.</p></details><details class="rs-faq"><summary>What replaced First Input Delay?</summary><p>Interaction to Next Paint replaced First Input Delay as a Core Web Vital in March 2024.</p></details><details class="rs-faq"><summary>How do I check my scores?</summary><p>Use Google Search Console's Core Web Vitals report for site-wide field data and PageSpeed Insights for individual pages.</p></details><div class="tp-cta"><p class="tp-cta-k">Put It to Work</p><p class="tp-cta-t">Want a site that loads fast on every phone in your market? Riley will review your Core Web Vitals and outline the fixes with the biggest payoff.</p><div class="tp-cta-acts"><a class="rs-card-btn is-big" href="https://favze.com/free-consultation?reason=glossary-core-web-vitals" data-cta="glossary-term-consult">Book a Free Consultation <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="fz-arrow-link" href="https://favze.com/resources/marketing-tools/service-match?from=glossary-core-web-vitals" data-sm-entry="glossary-term">Find my service in 60 seconds <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div></article><div class="tp-side"><div class="tp-box"><p class="tp-box-h">On This Page</p><ol class="tp-toc"><li><a href="#what">What It Is</a></li><li><a href="#why">Why It Matters Locally</a></li><li><a href="#how">How It Works</a></li><li><a href="#example">Local Example</a></li><li><a href="#start">Getting Started</a></li><li><a href="#wins">Quick Wins</a></li><li><a href="#watch">What to Watch</a></li><li><a href="#faq">FAQ</a></li></ol></div><div class="tp-box"><p class="tp-box-h">Related Terms</p><ul class="tp-rel"><li><a href="https://favze.com/resources/glossary/marketing-terms/google-search-console">Google Search Console</a></li><li><a href="https://favze.com/resources/glossary/marketing-terms/on-page-seo">On-Page SEO</a></li><li><a href="https://favze.com/resources/glossary/marketing-kpis/conversion-rate">Conversion Rate</a></li><li><a href="https://favze.com/resources/glossary/marketing-terms/alt-text">Alt Text</a></li></ul></div><a class="tp-svc" href="https://favze.com/services/website-design"><span class="tp-svc-k">Favze Service</span><span class="tp-svc-t">Website Design</span><span class="tp-svc-go">See how it works <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="tp-svc" href="https://favze.com/services/search-engine-optimization"><span class="tp-svc-k">Favze Service</span><span class="tp-svc-t">SEO</span><span class="tp-svc-go">See how it works <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><div class="tp-box"><p class="tp-box-h">Explore More</p><ul class="tp-rel"><li><a href="https://favze.com/resources/glossary/marketing-terms">Marketing Terms Glossary</a></li><li><a href="https://favze.com/resources/glossary/marketing-kpis">Marketing KPIs Glossary</a></li><li><a href="https://favze.com/resources/glossary/ai">AI &amp; Automation Glossary</a></li><li><a href="https://favze.com/resources/articles">Favze Insights Articles</a></li></ul></div></div></div></section>
+<style id="ft-std-css">
+footer.ft-std{background:#0a0a0a!important;padding:66px 5% 0!important;border-top:0}
+footer.ft-std .ft-inner{max-width:1160px;margin:0 auto}
+footer.ft-std .ft-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.09)}
+footer.ft-std .fb-desc{font-size:.85rem;color:rgba(255,255,255,.52);line-height:1.7;max-width:310px;margin-top:14px}
+footer.ft-std .fc h3{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:.82rem;color:#fff;margin:0 0 16px;letter-spacing:.09em;text-transform:uppercase}
+footer.ft-std .fc h3 a{color:inherit;text-decoration:none;transition:color .2s}
+footer.ft-std .fc h3 a:hover,footer.ft-std .fc h3 a:focus-visible{color:#0A89A3}
+footer.ft-std .fc ul{list-style:none;display:flex;flex-direction:column;gap:9px;margin:0;padding:0}
+footer.ft-std .fc ul li a{font-size:.84rem;color:rgba(255,255,255,.52);transition:color .2s;text-decoration:none}
+footer.ft-std .fc ul li a:hover{color:#fff}
+footer.ft-std .fcon{display:flex;flex-direction:column;gap:9px}
+footer.ft-std .fcon a{font-size:.84rem;color:rgba(255,255,255,.52);transition:color .2s;display:flex;align-items:center;gap:7px;text-decoration:none}
+footer.ft-std .fcon a:hover{color:#fff}
+footer.ft-std .fb-bot{padding:20px 0 26px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px}
+footer.ft-std .fb-bot p{font-size:.8rem;color:rgba(255,255,255,.32);margin:0}
+footer.ft-std .fb-bot a{color:rgba(255,255,255,.42);font-size:.8rem;transition:color .2s;text-decoration:none}
+footer.ft-std .fb-bot a:hover{color:#fff}
+@keyframes ftScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@media(max-width:1024px){footer.ft-std .ft-top{grid-template-columns:1fr 1fr}}
+/* Serving strip: seamless, always scrolling */
+footer.ft-std .ft-track{display:flex!important;width:max-content!important;animation:fzFtScroll 60s linear infinite!important;animation-play-state:running!important;will-change:transform}
+footer.ft-std .ft-track-set{display:flex;align-items:center;white-space:nowrap;flex-shrink:0}
+footer.ft-std .ft-track-set a{font-size:.78rem;color:rgba(255,255,255,.45);padding:0 4px;text-decoration:none;transition:color .2s}
+footer.ft-std .ft-track-set a:hover{color:#fff}
+footer.ft-std .ft-dot{color:rgba(255,255,255,.18);padding:0 6px}
+@keyframes fzFtScroll{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+@media(max-width:1024px){footer.ft-std .ft-top{grid-template-columns:1fr 1fr!important}}
+@media(max-width:768px){footer.ft-std{padding:48px 0 0!important}footer.ft-std .ft-top{grid-template-columns:1fr!important;gap:28px!important;padding:0 5% 36px!important}footer.ft-std .fb-desc{max-width:none!important}footer.ft-std .fb-bot{padding:16px 5% 22px!important;flex-direction:column;align-items:flex-start}footer.ft-std .ft-scroll-strip>div:last-child{display:none!important}}
+@media(max-width:768px){footer.ft-std .ft-top{grid-template-columns:1fr;gap:28px;padding:0 5% 40px}footer.ft-std .fb-bot{padding:16px 5%}footer.ft-std div[style*="width:1px;height:16px"]{display:none!important}}
+</style>
+</main>
+<section class="fz-smband fz-blk" aria-labelledby="fzSmBand-faq">
+<div class="fz-smband-inner">
+<div class="fz-smband-ico" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" stroke="currentColor" stroke-width="2"/><path d="M15.6 8.4l-2.1 5.1-5.1 2.1 2.1-5.1z" fill="currentColor"/></svg></div>
+<div class="fz-smband-copy"><p class="fz-smband-kick">Free Service Match &middot; 60 seconds</p><h2 id="fzSmBand-faq" class="fz-smband-title">Not Sure Which Service Fits Your Business?</h2><p class="fz-smband-sub">Answer 3 quick questions about your business type, industry, and goals. Service Match builds a phased plan showing which Favze services to start with and why.</p><ul class="fz-smband-steps"><li><b>1</b>Your business</li><li><b>2</b>Your industry</li><li><b>3</b>Your goals</li></ul></div>
+<div class="fz-smband-acts"><a class="fz-smband-btn" href="https://favze.com/resources/marketing-tools/service-match?from=faq" data-sm-entry="band-faq">Find My Service <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="fz-smband-alt" href="https://favze.com/free-consultation" data-cta="smband-consult">Or talk it through with Riley</a></div>
+</div>
+</section>
+<section class="fz-form-sec" id="free-consultation-form" aria-labelledby="fzFormTitle">
+  <div class="fz-form-inner">
+    <div class="fz-form-copy">
+      <div class="fz-founder"><span class="fz-av" aria-hidden="true"><img src="https://favze.com/assets/img/riley-avatar.webp" alt="" width="64" height="64" loading="lazy" decoding="async"></span><div><p class="fz-founder-name">Riley Catalano</p><p class="fz-founder-role">Founder of Favze, Your Northern Indiana Digital Marketing Guide</p></div></div>
+      <h2 id="fzFormTitle">Become the Local <span>Favorite</span></h2>
+      <p>Tell Riley about your business and goals. You&rsquo;ll get a clear, honest look at what&rsquo;s working, what to focus on first, and what it costs, all built around your budget.</p>
+      <ul class="fz-form-list">
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Talk directly with Riley, the person doing the work</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Clear pricing with zero hidden fees</li>
+        <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>A custom plan built for your local market</li>
+      </ul>
+      <p class="fz-form-alt">Prefer to talk now? Call <a href="tel:+15747475012">574-747-5012</a> or <a href="sms:+15747475012">send a text</a>.</p>
+    </div>
+    <div class="fz-form-card">
+      <iframe data-tally-src="https://tally.so/embed/aQjrzb?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;formEventsForwarding=1" loading="lazy" width="100%" height="420" frameborder="0" marginheight="0" marginwidth="0" title="Claim your free consultation"></iframe>
+      <noscript><p><a href="https://tally.so/r/aQjrzb">Open the free consultation form</a></p></noscript>
+    </div>
+  </div>
+</section>
+<footer class="ft-std">
+  <div class="ft-inner">
+    <div class="ft-top">
+      <div>
+        <a href="https://favze.com/"><div style="display:inline-flex;align-items:center;background:#fff;border-radius:8px;padding:5px 12px">
+          <img src="https://favze.com/assets/brand/favze-logo-horizontal-black.png" alt="Favze Digital Marketing" style="height:26px;width:auto;object-fit:contain" onerror="this.style.display='none';this.nextSibling.style.display='block'">
+          <span style="display:none;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.35rem;color:#064187;letter-spacing:.04em;">FAVZE</span>
+        </div></a>
+        <p class="fb-desc">Favze is a local, full-service digital marketing agency serving <a href="https://favze.com/areas-served/northern-indiana" style="color:rgba(255,255,255,.6);">Northern Indiana</a> and <a href="https://favze.com/areas-served/michiana" style="color:rgba(255,255,255,.6);">Michiana</a> businesses with accessible, personalized strategies designed to help businesses get found, attract qualified customers, convert leads, and increase customer retention. Through <a href="https://favze.com/services/search-engine-optimization" style="color:rgba(255,255,255,.6);">SEO</a>, <a href="https://favze.com/services/local-seo" style="color:rgba(255,255,255,.6);">Local SEO</a>, <a href="https://favze.com/services/ai-optimization" style="color:rgba(255,255,255,.6);">AI Optimization</a>, <a href="https://favze.com/services/answer-engine-optimization" style="color:rgba(255,255,255,.6);">AEO</a>, <a href="https://favze.com/services/generative-engine-optimization" style="color:rgba(255,255,255,.6);">GEO</a>, <a href="https://favze.com/services/website-design" style="color:rgba(255,255,255,.6);">website design</a>, paid advertising, <a href="https://favze.com/services/social-media-marketing" style="color:rgba(255,255,255,.6);">social media marketing</a>, <a href="https://favze.com/services/email-marketing" style="color:rgba(255,255,255,.6);">email marketing</a>, <a href="https://favze.com/services/short-message-service-sms" style="color:rgba(255,255,255,.6);">SMS</a>, <a href="https://favze.com/services/hubspot-setup" style="color:rgba(255,255,255,.6);">CRM systems</a>, and marketing automation, Favze helps businesses build a stronger digital presence and create long-term growth.</p>
+        <div class="ft-social" style="display:grid;grid-template-columns:repeat(3,34px);gap:8px;margin-top:18px">
+          <a href="https://www.facebook.com/favzedigitalmarketing/" target="_blank" rel="noopener noreferrer nofollow" aria-label="Favze on Facebook" style="width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.45);transition:background .2s,color .2s"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.514c-1.491 0-1.956.93-1.956 1.884v2.25h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg></a>
+          <a href="https://www.instagram.com/favzemarketing/" target="_blank" rel="noopener noreferrer nofollow" aria-label="Favze on Instagram" style="width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.45);transition:background .2s,color .2s"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+          <a href="https://www.linkedin.com/company/favze-digital-marketing/" target="_blank" rel="noopener noreferrer nofollow" aria-label="Favze on LinkedIn" style="width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.45);transition:background .2s,color .2s"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <a href="https://x.com/favzemarketing" target="_blank" rel="noopener noreferrer nofollow" aria-label="Favze on X" style="width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.45);transition:background .2s,color .2s"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          <a href="https://www.youtube.com/@Favze" target="_blank" rel="noopener noreferrer nofollow" aria-label="Favze on YouTube" style="width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.45);transition:background .2s,color .2s"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+          <a href="https://www.threads.com/@favzemarketing" target="_blank" rel="noopener noreferrer nofollow" aria-label="Favze on Threads" style="width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.45);transition:background .2s,color .2s"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16.3 11.3c-.1 0-.2-.1-.2-.1-.1-2.6-1.5-4-3.9-4-1.4 0-2.6.6-3.3 1.7l1.3.9c.5-.8 1.4-1 2-1 .8 0 1.4.2 1.7.7.3.3.5.8.5 1.3-.7-.1-1.4-.2-2.2-.1-2.2.1-3.7 1.4-3.6 3.2 0 .9.5 1.7 1.3 2.2.7.4 1.5.6 2.4.6 1.2-.1 2.1-.5 2.7-1.3.5-.6.8-1.4.9-2.4.6.3 1 .8 1.2 1.3.4.9.4 2.4-.8 3.6-1.1 1.1-2.3 1.5-4.3 1.5-2.1 0-3.8-.7-4.8-2S5.7 14.3 5.7 12c0-2.3.5-4.1 1.5-5.4 1.1-1.3 2.7-2 4.8-2 2.2 0 3.8.7 4.9 2 .5.7.9 1.5 1.2 2.5l1.5-.4c-.3-1.2-.8-2.2-1.5-3.1-1.3-1.7-3.3-2.6-6-2.6-2.6 0-4.7.9-6 2.6C4.9 7.2 4.3 9.3 4.3 12s.6 4.8 1.9 6.4c1.4 1.7 3.4 2.6 6 2.6 2.3 0 4-.6 5.3-2 1.8-1.8 1.7-4 1.1-5.4-.4-.9-1.2-1.7-2.3-2.3zm-4 3.8c-1 .1-2-.4-2-1.3 0-.7.5-1.5 2.1-1.6h.5c.6 0 1.1.1 1.6.2-.2 2.3-1.3 2.7-2.2 2.7z"/></svg></a>
+          <a href="https://www.pinterest.com/favzemarketing/" target="_blank" rel="noopener noreferrer nofollow" aria-label="Favze on Pinterest" style="width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.45);transition:background .2s,color .2s"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg></a>
+          <a href="https://nextdoor.com/pages/favze-digital-marketing/" target="_blank" rel="noopener noreferrer nofollow" aria-label="Favze on Nextdoor" style="width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.45);transition:background .2s,color .2s"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6 2h3v3.5L12 3l10 9h-2v9H4v-9H2l4-3.6V2zm1.5 1.5v3.8L12 4.8l-4.5 3.5zM14 21v-5h-4v5H5.5v-7.5h13V21H14z"/></svg></a>
+          
+          <a href="https://www.google.com/maps/place/Favze/@41.579986,-86.005348,9z/data=!3m1!4b1!4m6!3m5!1s0x8fd1e3cba3bc4677:0x44492c880fb69085!8m2!3d41.579986!4d-86.005348!16s%2Fg%2F11yv5nhx0f" target="_blank" rel="noopener noreferrer nofollow" aria-label="Favze Google Business" style="width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.45);transition:background .2s,color .2s"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></a>
+        </div>
+      </div>
+      <div class="fc">
+        <h3><a href="https://favze.com/services">Affordable Services</a></h3>
+        <ul>
+          <li><a href="https://favze.com/services/social-media-marketing">Social Media Marketing</a></li>
+          <li><a href="https://favze.com/services/search-engine-optimization">SEO</a></li>
+          <li><a href="https://favze.com/services/answer-engine-optimization">AEO</a></li>
+          <li><a href="https://favze.com/services/generative-engine-optimization">GEO</a></li>
+          <li><a href="https://favze.com/services/ai-optimization">AI Optimization</a></li>
+          <li><a href="https://favze.com/services/local-seo">Local SEO</a></li>
+          <li><a href="https://favze.com/services/email-marketing">Email Marketing</a></li>
+          <li><a href="https://favze.com/services/paid-search-ads">Paid Search Ads</a></li>
+          <li><a href="https://favze.com/services/paid-social-media-ads">Paid Social Ads</a></li>
+          <li><a href="https://favze.com/services/website-design">Website Design</a></li>
+          <li><a href="https://favze.com/services/hubspot-setup">HubSpot Setup</a></li>
+          <li><a href="https://favze.com/services/short-message-service-sms">SMS Marketing</a></li>
+        </ul>
+      </div>
+      <div class="fc">
+        <h3><a href="https://favze.com/resources/articles">Articles</a></h3>
+        <ul>
+          <li><a href="https://favze.com/resources/articles/content-marketing">Content Marketing</a></li>
+          <li><a href="https://favze.com/resources/articles/social-media-strategy">Social Media Strategy</a></li>
+          <li><a href="https://favze.com/resources/articles/search-visibility">Search Visibility &amp; Local Discovery</a></li>
+          <li><a href="https://favze.com/resources/articles/brand-positioning">Brand Positioning</a></li>
+        </ul>
+        <div style="margin-top:22px">
+          <h3><a href="https://favze.com/resources/newsletters">Newsletters</a></h3>
+          <ul>
+            <li><a href="https://favze.com/resources/newsletters/favze-insider">Favze Insider</a></li>
+            <li><a href="https://favze.com/resources/newsletters/favze-intel">Favze Intel</a></li>
+            <li><a href="https://favze.com/resources/newsletters/favze-insights">Favze Insights</a></li>
+          </ul>
+        </div>
+        <div style="margin-top:22px">
+          <h3><a href="https://favze.com/resources/glossary">Glossaries</a></h3>
+          <ul>
+            <li><a href="https://favze.com/resources/glossary/marketing-terms">Marketing Terms</a></li>
+            <li><a href="https://favze.com/resources/glossary/marketing-kpis">Marketing KPIs</a></li>
+            <li><a href="https://favze.com/resources/glossary/ai">AI &amp; Automation</a></li>
+          </ul>
+        </div>
+        <div style="margin-top:22px">
+          <h3><a href="https://favze.com/resources/marketing-tools">Marketing Tools</a></h3>
+          <ul>
+            <li><a href="https://favze.com/resources/marketing-tools/service-match" data-sm-entry="footer-tools">Service Match</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="fc">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="https://favze.com/">Home</a></li>
+          <li><a href="https://favze.com/why-us">Why Choose Favze</a></li>
+          <li><a href="https://favze.com/about">About</a></li>
+          <li><a href="https://favze.com/our-process">Our Process</a></li>
+          <li><a href="https://favze.com/favze-framework">FAVZE Framework</a></li>
+          <li><a href="https://favze.com/services">All Services</a></li>
+          <li><a href="https://favze.com/resources/marketing-tools/service-match" data-sm-entry="footer">Service Match Quiz</a></li>
+          <li><a href="https://favze.com/resources">Resources</a></li>
+          <li><a href="https://favze.com/faq">FAQ</a></li>
+          <li><a href="https://favze.com/areas-served">Areas Served</a></li>
+        </ul>
+        <div style="margin-top:22px">
+          <h3><a href="https://favze.com/free-consultation">Contact</a></h3>
+          <div class="fcon">
+            <a href="mailto:riley@favze.com">
+              <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="1" y="2" width="11" height="9" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M1 4.5l5.5 3.5L12 4.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>
+              riley@favze.com
+            </a>
+            <a href="tel:+15747475012">
+              <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 1.5s1-.5 2 1l1 1.5s.5 1-.5 1.9L4 6.4s-.4.4 0 1.3S5.6 9.8 7.5 10.8c1 .5 1 0 1 0l.5-.5c.9-.9 1.9-.5 1.9-.5L12.4 11c1.4 1 1 1.9 1 1.9-.5.9-2.4 1.4-3.8.5" stroke="currentColor" stroke-width="1.2"/></svg>
+              574-747-5012
+            </a>
+            <a href="https://favze.com/free-consultation">
+              <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="1" y="1" width="11" height="11" rx="2" stroke="currentColor" stroke-width="1.2"/><path d="M3.5 5h6M3.5 7.5h4" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>
+              Free Consultation
+            </a>
+            <a href="https://favze.com/full-digital-marketing-audit">
+              <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M4.5 1.5h4M4 2.5H3a1 1 0 0 0-1 1v7.5a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V3.5a1 1 0 0 0-1-1H9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><path d="M4.3 7.2l1.4 1.4 2.9-2.9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Free Full Digital Marketing Audit
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fz-news">
+      <div class="fz-news-copy">
+        <p class="fz-news-title">Get Favze Insider and Favze Intel</p>
+        <p>One signup gets you two free monthly newsletters. Favze Insider keeps you current. Favze Intel makes you sharper. <a href="https://favze.com/resources/newsletters">Learn more</a>.</p>
+      </div>
+      <div class="fz-news-card">
+        <iframe data-tally-src="https://tally.so/embed/Gxg47Z?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;formEventsForwarding=1" loading="lazy" width="100%" height="260" frameborder="0" marginheight="0" marginwidth="0" title="Favze newsletter signup"></iframe>
+      </div>
+    </div>
+
+    <!-- SCROLLING AREAS SERVED -->
+    <div class="ft-scroll-strip" style="border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);padding:11px 0;display:flex;align-items:center;overflow:hidden">
+      <div style="font-size:0.62rem;font-weight:700;letter-spacing:.16em;color:#0A89A3;white-space:nowrap;padding:0 20px 0 5%;flex-shrink:0">SERVING</div>
+      <div style="flex:1;overflow:hidden;position:relative">
+        <div class="ft-track"><div class="ft-track-set"><a href="https://favze.com/areas-served/northern-indiana">Northern Indiana</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/michiana">Michiana</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/elkhart-county">Elkhart County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/elkhart-county">Goshen</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/st-joseph-county">St. Joseph County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/st-joseph-county">South Bend</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/st-joseph-county">Mishawaka</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/lagrange-county">LaGrange County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/noble-county">Noble County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/kosciusko-county">Kosciusko County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/kosciusko-county">Warsaw</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/dekalb-county">DeKalb County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/allen-county">Allen County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/allen-county">Fort Wayne</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/marshall-county">Marshall County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/howard-county">Howard County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/howard-county">Kokomo</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/porter-county">Porter County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/laporte-county">LaPorte County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/lake-county">Lake County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/jasper-county">Jasper County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/newton-county">Newton County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/pulaski-county">Pulaski County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/whitley-county">Whitley County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/steuben-county">Steuben County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/cass-county-indiana">Cass County, IN</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/berrien-county">Berrien County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/cass-county-michigan">Cass County, MI</a><span class="ft-dot">&middot;</span></div><div class="ft-track-set" aria-hidden="true"><a href="https://favze.com/areas-served/northern-indiana" tabindex="-1">Northern Indiana</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/michiana" tabindex="-1">Michiana</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/elkhart-county" tabindex="-1">Elkhart County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/elkhart-county" tabindex="-1">Goshen</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/st-joseph-county" tabindex="-1">St. Joseph County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/st-joseph-county" tabindex="-1">South Bend</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/st-joseph-county" tabindex="-1">Mishawaka</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/lagrange-county" tabindex="-1">LaGrange County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/noble-county" tabindex="-1">Noble County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/kosciusko-county" tabindex="-1">Kosciusko County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/kosciusko-county" tabindex="-1">Warsaw</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/dekalb-county" tabindex="-1">DeKalb County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/allen-county" tabindex="-1">Allen County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/allen-county" tabindex="-1">Fort Wayne</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/marshall-county" tabindex="-1">Marshall County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/howard-county" tabindex="-1">Howard County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/howard-county" tabindex="-1">Kokomo</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/porter-county" tabindex="-1">Porter County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/laporte-county" tabindex="-1">LaPorte County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/lake-county" tabindex="-1">Lake County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/jasper-county" tabindex="-1">Jasper County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/newton-county" tabindex="-1">Newton County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/pulaski-county" tabindex="-1">Pulaski County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/whitley-county" tabindex="-1">Whitley County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/steuben-county" tabindex="-1">Steuben County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/cass-county-indiana" tabindex="-1">Cass County, IN</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/berrien-county" tabindex="-1">Berrien County</a><span class="ft-dot">&middot;</span><a href="https://favze.com/areas-served/cass-county-michigan" tabindex="-1">Cass County, MI</a><span class="ft-dot">&middot;</span></div></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:6px;white-space:nowrap;flex-shrink:0;padding:0 5% 0 16px;font-size:0.62rem;font-weight:700;letter-spacing:.1em;color:#0A89A3;text-transform:uppercase">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 0.5C3.07 0.5 1.5 2.07 1.5 4c0 2.52 3.5 5.5 3.5 5.5s3.5-2.98 3.5-5.5C8.5 2.07 6.93 0.5 5 0.5z" fill="rgba(10,137,163,.6)" stroke="#0A89A3" stroke-width="0.9"/><circle cx="5" cy="4" r="1.1" fill="#0A89A3"/></svg>
+        <span>MIDDLEBURY, <a href="https://favze.com/areas-served/elkhart-county" style="color:#0A89A3;">IN</a></span>
+      </div>
+    </div>
+
+    <!-- TRUST BAR -->
+    <div style="border-bottom:1px solid rgba(255,255,255,.07);padding:12px 5%">
+      <div style="max-width:1160px;margin:0 auto;display:flex;align-items:center;gap:0;flex-wrap:wrap;justify-content:center">
+        <div style="display:flex;align-items:center;gap:7px;font-size:0.72rem;font-weight:600;color:rgba(255,255,255,.45);padding:4px 20px">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z" stroke="#0A89A3" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          <span>100+ Industry Certifications</span>
+        </div>
+        <div style="width:1px;height:16px;background:rgba(255,255,255,.1);flex-shrink:0"></div>
+        <div style="display:flex;align-items:center;gap:7px;font-size:0.72rem;font-weight:600;color:rgba(255,255,255,.45);padding:4px 20px">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="#0A89A3" stroke-width="1.8"/></svg>
+          <span>Locally Owned &amp; Operated in <a href="https://favze.com/areas-served/northern-indiana" style="color:rgba(255,255,255,.45)">Northern Indiana</a></span>
+        </div>
+        <div style="width:1px;height:16px;background:rgba(255,255,255,.1);flex-shrink:0"></div>
+        <div style="display:flex;align-items:center;gap:7px;font-size:0.72rem;font-weight:600;color:rgba(255,255,255,.45);padding:4px 20px">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="#0A89A3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="#0A89A3" stroke-width="1.8"/></svg>
+          <span>Zero Hidden Fees. Ever.</span>
+        </div>
+        <div style="width:1px;height:16px;background:rgba(255,255,255,.1);flex-shrink:0"></div>
+        <div style="display:flex;align-items:center;gap:7px;font-size:0.72rem;font-weight:600;color:rgba(255,255,255,.45);padding:4px 20px">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="#0A89A3" stroke-width="1.8"/><path d="M8 12h8M12 8v8" stroke="#0A89A3" stroke-width="2" stroke-linecap="round"/></svg>
+          <a href="https://favze.com/free-consultation" style="color:rgba(255,255,255,.5)">Free Consultation Available</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="fb-bot">
+      <p>&copy; 2026 Favze, LLC. All rights reserved.</p>
+      <div style="display:flex;gap:18px;flex-wrap:wrap">
+        <a href="https://favze.com/privacy-policy">Privacy Policy</a>
+        <a href="https://favze.com/terms-of-use">Terms of Use</a>
+        <a href="https://favze.com/accessibility-statement">Accessibility Statement</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Hamburger
+  var hb = document.getElementById('hb'), mm = document.getElementById('mm');
+  if (hb && mm) {
+    hb.addEventListener('click', function() {
+      var open = mm.classList.toggle('open');
+      hb.classList.toggle('open', open);
+      hb.setAttribute('aria-expanded', open);
+      mm.setAttribute('aria-hidden', !open);
+    });
+    mm.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        mm.classList.remove('open');
+        hb.classList.remove('open');
+        hb.setAttribute('aria-expanded', 'false');
+        mm.setAttribute('aria-hidden', 'true');
+      });
+    });
+  }
+  // Mobile accordion
+  function bindAccordion(trigId, subId) {
+    var trig = document.getElementById(trigId), sub = document.getElementById(subId);
+    if (!trig || !sub) return;
+    trig.addEventListener('click', function() {
+      var open = sub.classList.toggle('open');
+      trig.classList.toggle('open', open);
+      trig.setAttribute('aria-expanded', open);
+    });
+  }
+  bindAccordion('mmServTrig', 'mmServSub');
+  bindAccordion('mmArtTrig', 'mmArtSub');
+  // Desktop dropdown nav
+  var drops = [
+    { trig: document.getElementById('trigServices'), pan: document.getElementById('panServices') },
+    { trig: document.getElementById('trigArticles'), pan: document.getElementById('panArticles') }
+  ].filter(function(d){return d.trig&&d.pan;});
+  function openPanel(trig, pan) { pan.classList.add('open'); trig.setAttribute('aria-expanded', 'true'); }
+  function closePanel(trig, pan) { pan.classList.remove('open'); trig.setAttribute('aria-expanded', 'false'); }
+  drops.forEach(function(d) {
+    if (!d.trig || !d.pan) return;
+    d.trig.addEventListener('click', function(e) {
+      e.stopPropagation();
+      var isOpen = d.pan.classList.contains('open');
+      drops.forEach(function(x) { closePanel(x.trig, x.pan); });
+      if (!isOpen) openPanel(d.trig, d.pan);
+    });
+  });
+  document.addEventListener('mousedown', function(e) {
+    drops.forEach(function(d) {
+      if (!d.pan.contains(e.target) && !d.trig.contains(e.target)) closePanel(d.trig, d.pan);
+    });
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') drops.forEach(function(d) { closePanel(d.trig, d.pan); });
+  });
+});
+</script>
+<div class="fz-mbar" role="region" aria-label="Book a free consultation"><a href="https://favze.com/free-consultation"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Book a Free Consultation</a></div>
+<script id="fz-mobile-js">
+(function(){
+  var mq=window.matchMedia&&matchMedia('(max-width:768px)');
+  function clipped(el){for(var a=el.parentElement;a&&a!==document.body;a=a.parentElement){var o=getComputedStyle(a).overflowX;if(o!=='visible')return true}return false}
+  function fit(){
+    if(!mq||!mq.matches)return;
+    var vw=document.documentElement.clientWidth;
+    document.querySelectorAll('body *').forEach(function(el){
+      var cs=getComputedStyle(el);
+      if(cs.display==='grid'||cs.display==='inline-grid'){for(var i=0;i<el.children.length;i++)el.children[i].style.minWidth='0'}
+    });
+    document.querySelectorAll('body *').forEach(function(el){
+      var cs=getComputedStyle(el);if(cs.position==='fixed'||cs.display==='none')return;
+      var r=el.getBoundingClientRect();if(!r.width)return;
+      if((r.right>vw+1||r.left<-1)&&!clipped(el)){
+        el.style.maxWidth='100%';el.style.minWidth='0';
+        if(cs.whiteSpace==='nowrap'&&el.children.length<3)el.style.whiteSpace='normal';
+        if(parseFloat(cs.width)>vw)el.style.width='auto';
+        el.style.overflowWrap='anywhere';
+      }
+    });
+  }
+  function run(){fit();setTimeout(fit,400)}
+  if(document.readyState==='complete')run();else window.addEventListener('load',run);
+  var t;window.addEventListener('resize',function(){clearTimeout(t);t=setTimeout(fit,200)});
+})();
+</script>
+<script id="fz-consent-init">
+window.silktideConsentManager.init({
+  backdrop: {
+    show: true
+  },
+  icon: {
+    position: "bottomLeft"
+  },
+  prompt: {
+    position: "bottomRight"
+  },
+  consentTypes: [
+    {
+      id: "essential",
+      label: "Essential",
+      description: "<p>These cookies are necessary for the website to function properly and cannot be switched off. They help with things like logging in and setting your privacy preferences.</p>",
+      required: true
+    },
+    {
+      id: "analytics",
+      label: "Analytics",
+      description: "<p>These cookies help us improve the site by tracking which pages are most popular and how visitors move around the site.</p>",
+      required: false,
+      defaultValue: true,
+      gtag: "analytics_storage"
+    },
+    {
+      id: "marketing",
+      label: "Marketing",
+      description: "<p>These cookies are used by us and our advertising partners to show you relevant ads on this site and elsewhere, and to measure how those campaigns perform.</p>",
+      required: false,
+      gtag: [
+        "ad_storage",
+        "ad_user_data",
+        "ad_personalization"
+      ]
+    }
+  ],
+  text: {
+    prompt: {
+      description: "<p>We use cookies on our site to enhance your user experience, provide personalized content, and analyze our traffic.</p>",
+      acceptAllButtonText: "Accept all",
+      acceptAllButtonAccessibleLabel: "Accept all cookies",
+      rejectNonEssentialButtonText: "Reject non-essential",
+      rejectNonEssentialButtonAccessibleLabel: "Reject all non-essential cookies",
+      preferencesButtonText: "Preferences",
+      preferencesButtonAccessibleLabel: "Toggle preferences"
+    },
+    preferences: {
+      title: "Customize your cookie preferences",
+      description: "<p>We respect your right to privacy. You can choose not to allow some types of cookies. Your cookie preferences will apply across our website.</p>",
+      saveButtonText: "Save and close",
+      saveButtonAccessibleLabel: "Save your cookie preferences",
+      creditLinkText: "Get this banner for free",
+      creditLinkAccessibleLabel: "Get this banner for free"
+    }
+  }
+});
+</script>
+<script src="../../../assets/js/fz-site.js"></script>
+<script src="../../../assets/js/fz-nav.js" defer></script>
+<script src="../../../assets/js/fz-search.js" defer></script>
+<script src="../../../assets/js/fz-ui.js" defer></script>
+</body>
+</html>
