@@ -99,3 +99,13 @@ html{scroll-padding-top:150px}
 .gl-foot .gl-svc{display:inline-flex;align-items:center;min-height:28px}
 .gl-guide{display:inline-flex;align-items:center;min-height:36px;padding:0 16px;border-radius:999px;background:linear-gradient(135deg,#064187,#0A89A3);color:#fff!important;font:700 14px 'DM Sans',sans-serif;text-decoration:none!important}
 .gl-guide:hover{filter:brightness(1.08)}
+/* Even cards: every card in a letter group shares one height, and every footer lines up */
+@media(min-width:721px){.gl-grid{grid-auto-rows:1fr}}
+.gl-term{height:100%}
+.gl-foot{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:12px 10px;margin-top:auto;padding-top:14px;border-top:1px solid #edf1f5}
+.gl-foot .gl-guide{grid-column:1/-1;justify-self:stretch;justify-content:center}
+.gl-foot .gl-svc{grid-column:1;min-width:0;line-height:1.35}
+.gl-foot .gl-copy{grid-column:2;margin-left:0;white-space:nowrap}
+.gl-guide.gl-ask{background:#fff;color:#064187!important;border:1.5px solid rgba(6,65,135,.28)}
+.gl-guide.gl-ask:hover{background:#f0f5fb;filter:none}
+.gl-foot .gl-svc{min-height:2.7em;display:flex;align-items:center}

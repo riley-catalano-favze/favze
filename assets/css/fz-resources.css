@@ -147,3 +147,11 @@ html.fz-still .rs-phase{animation:none}
 .ct-near a{display:inline-flex;align-items:center;min-height:40px;padding:0 16px;border-radius:999px;background:#eef6fb;border:1px solid #d5e6f1;color:#064187!important;font:700 15px 'DM Sans',sans-serif;text-decoration:none!important}
 .ct-near a:hover{background:#064187;color:#fff!important}
 @media(max-width:600px){.ct-map{aspect-ratio:4/3}}
+/* Even sidebar: align with the article top and keep it in view while reading */
+html body .tp-body{overflow:visible!important;overflow-x:clip!important}
+.tp-side{align-self:start;gap:14px}
+.tp-box,.tp-svc{border-radius:16px;padding:18px 20px}
+.tp-box{box-shadow:0 8px 22px rgba(6,40,90,.05)}
+.tp-box-h{margin:0 0 8px;padding-bottom:10px;border-bottom:1px solid #edf1f5}
+.tp-svc{box-shadow:0 10px 24px rgba(6,65,135,.18)}
+@media(min-width:961px){.tp-side{max-height:calc(100vh - 116px);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;padding-bottom:4px}}

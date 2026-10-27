@@ -651,3 +651,6 @@ html body nav .fz-nav-cta{white-space:nowrap!important}
 .fz-search-list li.fz-sr-more{padding:10px 4px}
 .fz-search-list li.fz-sr-more button{width:100%;min-height:44px;border:1.5px solid rgba(6,65,135,.2);border-radius:999px;background:#fff;color:#064187;font:700 14px 'DM Sans',sans-serif;cursor:pointer}
 .fz-search-list li.fz-sr-more button:hover{background:#f0f5fb}
+/* Footer area strip: longer list, same reading speed */
+html body footer .ft-track{animation-duration:110s!important}
+@media(prefers-reduced-motion:reduce){html body footer .ft-track{animation:none!important}}

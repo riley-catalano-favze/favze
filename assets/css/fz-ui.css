@@ -711,3 +711,7 @@ html body .fz-gl-more .fz-gl-more-t{font-family:'Barlow Condensed',sans-serif!im
 .ct-band .ct-near a:hover{background:#d9f1f7}
 .city-svc-link.city-page-link{background:#064187!important;color:#fff!important;border-color:#064187!important}
 @media(max-width:600px){.ct-band{padding:56px 4.5%}}
+/* Areas Served: towns with their own guide are clickable */
+html body a.city-tag.city-tag-link{display:inline-flex;align-items:center;gap:4px;min-height:28px;cursor:pointer;color:#064187!important;background:#e8f2fa;border:1px solid #cfe1f0;font-weight:700;text-decoration:none!important}
+html body a.city-tag.city-tag-link::after{content:"\2192";font-size:.85em}
+html body a.city-tag.city-tag-link:hover{background:#064187;color:#fff!important}
