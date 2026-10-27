@@ -715,3 +715,9 @@ html body .fz-gl-more .fz-gl-more-t{font-family:'Barlow Condensed',sans-serif!im
 html body a.city-tag.city-tag-link{display:inline-flex;align-items:center;gap:4px;min-height:28px;cursor:pointer;color:#064187!important;background:#e8f2fa;border:1px solid #cfe1f0;font-weight:700;text-decoration:none!important}
 html body a.city-tag.city-tag-link::after{content:"\2192";font-size:.85em}
 html body a.city-tag.city-tag-link:hover{background:#064187;color:#fff!important}
+.ct-band.ct-band-light{background:linear-gradient(180deg,#eef6fb,#f7fbfd);border-top:1px solid #e1ebf2;border-bottom:1px solid #e1ebf2}
+.ct-band-light .ct-band-k{color:#0A6F86!important}
+.ct-band-light .ct-band-t{color:#0a0a0a!important}
+.ct-band-light .ct-band-d{color:#3d4148!important}
+.ct-band-light .ct-near a{background:#fff;border:1.5px solid rgba(6,65,135,.22)}
+.ct-band-light .ct-near a:hover{background:#064187;color:#fff!important}

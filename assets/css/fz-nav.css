@@ -35,3 +35,10 @@ html body #mm .mm-sub a:hover{background:rgba(6,65,135,.07);color:#064187}
 html body #mm .fz-mm-label{font-family:'DM Sans',sans-serif;font-size:.65rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#6b7280;padding:12px 0 4px 12px;margin-top:6px;border-top:1px solid #f0f0f0}
 html body #mm .mm-cta{background:#064187!important;color:#fff!important;text-align:center;margin-top:8px;font-weight:700!important;border-radius:999px}
 html body #mm .mm-cta:hover{background:#0A89A3!important}
+/* Resources dropdown: two columns so it fits on laptop screens */
+@media(min-width:1081px){
+  html body nav ul.fz-nl #fzPanRes{column-count:2;column-gap:18px;min-width:560px}
+  html body nav ul.fz-nl #fzPanRes>*{break-inside:avoid}
+  html body nav ul.fz-nl #fzPanRes .drop-col{break-before:column;-webkit-column-break-before:always}
+  html body nav ul.fz-nl #fzPanRes .drop-divider:has(+ .drop-col){display:none}
+}
