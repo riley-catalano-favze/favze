@@ -42,3 +42,6 @@ html body #mm .mm-cta:hover{background:#0A89A3!important}
   html body nav ul.fz-nl #fzPanRes .drop-col{break-before:column;-webkit-column-break-before:always}
   html body nav ul.fz-nl #fzPanRes .drop-divider:has(+ .drop-col){display:none}
 }
+
+/* Body sits flush under the sticky header on every page (some legacy pages carry the browser default 8px top margin) */
+html body{margin-top:0!important}
