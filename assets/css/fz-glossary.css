@@ -95,3 +95,5 @@ html{scroll-padding-top:150px}
 @media(max-width:768px){.gl-controls{position:static;background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none}}
 .gl-svc-go,.gl-svc-name{display:inline-block;min-height:24px;padding:2px 0}.gl-svc-card{gap:6px}
 .gl-svc-name{display:inline-block;min-height:24px;line-height:24px}
+.gl-tab{min-height:24px}
+.gl-foot .gl-svc{display:inline-flex;align-items:center;min-height:28px}
