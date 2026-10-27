@@ -677,3 +677,4 @@ footer.ft-std .fc-ind-all:hover,footer.ft-std .fc-ind-all:focus-visible{color:#f
 
 /* Footer: use more of the width on large screens so the six columns breathe */
 @media(min-width:1280px){html body footer.ft-std .ft-inner{max-width:1360px!important}}
+@media(min-width:1600px){html body footer.ft-std .ft-inner{max-width:1600px!important}}
