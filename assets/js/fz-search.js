@@ -1,12 +1,13 @@
 /* Favze sitewide search: free, runs in the browser, no third-party service.
-   Modes: Broad (related words, typos, word endings), Phrase (words in this order), Exact (this exact term).
-   Typing "quotes" switches to Phrase automatically. */
+   Searches every word on the site. Results are ordered Exact, then Phrase, then Broad,
+   and more results load as you scroll. The index (search-index.json) rebuilds on every push. */
 (function () {
   'use strict';
   var D = document, H = D.documentElement;
   var SRC = (D.currentScript && D.currentScript.src) || '';
   var INDEX_URL = SRC ? SRC.replace(/assets\/js\/fz-search\.js.*$/, 'search-index.json') : '/search-index.json';
-  var data = null, loading = null, mode = 'broad', active = -1, lastQ = '';
+  var data = null, DF = {}, loading = null, active = -1, lastQ = '', results = [], shown = 0, io = null;
+  var PAGE = 12;
 
   var STOP = { a: 1, an: 1, the: 1, and: 1, or: 1, of: 1, to: 1, in: 1, for: 1, on: 1, my: 1, me: 1, i: 1, is: 1, it: 1, do: 1, does: 1, how: 1, what: 1, with: 1, can: 1, you: 1, your: 1, be: 1, at: 1, by: 1, much: 1, many: 1, get: 1, need: 1, want: 1, help: 1, near: 1 };
   var SYN = {
@@ -50,75 +51,101 @@
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
 
   function prep(p) {
-    p._t = norm(p.t); p._d = norm(p.d); p._h = norm(p.h); p._b = norm(p.b);
-    p._all = p._t + ' ' + p._h + ' ' + p._d + ' ' + p._b;
-    var set = {}; p._all.split(' ').forEach(function (w) { if (w.length > 1) set[stem(w)] = 1; });
+    p._t = norm(p.t); p._d = norm(p.d);
+    p.S = (p.s || []).map(function (x) { return { id: x[0], h: x[1], b: x[2], _h: norm(x[1]), _b: norm(x[2]) }; });
+    var set = {};
+    (p._t + ' ' + p._d + ' ' + p.S.map(function (x) { return x._h + ' ' + x._b; }).join(' ')).split(' ').forEach(function (w) { if (w.length > 1) set[stem(w)] = 1; });
     p._w = Object.keys(set);
   }
   function load() {
     if (data) return Promise.resolve(data);
     if (loading) return loading;
-    loading = fetch(INDEX_URL, { cache: 'force-cache' }).then(function (r) { if (!r.ok) throw new Error('index ' + r.status); return r.json(); }).then(function (j) { j.forEach(prep); data = j; return j; })
+    /* no-cache: the browser checks for a newer index every visit, so new pages show up right away */
+    loading = fetch(INDEX_URL, { cache: 'no-cache' }).then(function (r) { if (!r.ok) throw new Error('index ' + r.status); return r.json(); }).then(function (j) { j.forEach(prep); DF = {}; j.forEach(function (p) { p._w.forEach(function (w) { DF[w] = (DF[w] || 0) + 1; }); }); data = j; return j; })
       .catch(function () { loading = null; return null; });
     return loading;
   }
 
-  /* Scoring: title > headings > description > body. Exact and phrase hits outrank broad ones. */
-  function fieldScore(p, test) { return (test(p._t) ? 12 : 0) + (test(p._h) ? 6 : 0) + (test(p._d) ? 4 : 0) + (test(p._b) ? 2 : 0); }
-  function search(q, m) {
+  /* Results come in three tiers, always in this order:
+     1 Exact  : the exact words you typed, in that order
+     2 Phrase : all your words in the same order (word endings and a few words in between allowed)
+     3 Broad  : any of your words, related words, word endings, and small typos */
+  var TIER = ['', 'Exact match', 'Phrase match', 'Broad match'];
+  var GROUP = ['', 'Exact matches', 'Phrase matches', 'Broad matches'];
+  function idf(w) { return Math.log((data.length + 1) / ((DF[w] || 0) + 1)) + 0.3; }
+  function count(re, f) { var m = f.match(re); return m ? Math.min(m.length, 6) : 0; }
+  function search(q) {
     var raw = norm(q.replace(/["“”]/g, ' '));
     if (!raw) return [];
-    var quoted = /["“”]/.test(q);
-    var useMode = quoted && m === 'broad' ? 'phrase' : m;
     var qw = words(raw); if (!qw.length) qw = raw.split(' ');
-    var phraseRe = new RegExp('(^|\\W)' + escRe(raw) + '(\\W|$)');
+    var exactRe = new RegExp('(^| )' + escRe(raw) + '(?= |$)', 'g');
+    var stems = qw.map(stem), W = stems.map(idf);
+    var phraseRe = new RegExp('(^| )' + stems.map(function (w) { return escRe(w) + '[a-z0-9]*'; }).join('(?: [^ ]+){0,3} ') + '(?= |$)', 'g');
     var res = [];
     data.forEach(function (p) {
-      var score = 0, type = '';
-      var exactHit = fieldScore(p, function (f) { return phraseRe.test(f); });
-      if (useMode === 'exact') {
-        if (!exactHit) return;
-        score = exactHit * 3 + (p._t === raw ? 40 : 0); type = 'Exact match';
-      } else if (useMode === 'phrase') {
-        var seq = new RegExp(qw.map(escRe).join('\\W+(?:\\w+\\W+){0,2}'));
-        var ph = fieldScore(p, function (f) { return seq.test(f); });
-        if (!ph && !exactHit) return;
-        score = exactHit * 3 + ph * 2; type = exactHit ? 'Exact match' : 'Phrase match';
-      } else {
-        var hits = 0, sc = 0;
-        qw.forEach(function (w) {
-          var sw = stem(w), alts = [w].concat(SYN[w] || []);
-          var direct = fieldScore(p, function (f) { return (' ' + f).indexOf(' ' + sw) > -1; });
-          if (direct) { hits++; sc += direct; return; }
-          var syn = 0;
-          alts.slice(1).forEach(function (a) { syn = Math.max(syn, fieldScore(p, function (f) { return f.indexOf(a) > -1; })); });
-          if (syn) { hits++; sc += syn * 0.6; return; }
-          if (sw.length >= 4 && p._w.some(function (x) { return x.length >= 4 && lev1(x, sw); })) { hits++; sc += 1.5; }
-        });
-        if (!hits) return;
-        score = sc * (hits / qw.length) + exactHit * 3 + (hits === qw.length ? 8 : 0);
-        type = exactHit ? 'Exact match' : hits === qw.length ? 'All words' : 'Related';
+      var best = 4, score = 0, secs = [];
+      /* page-level fields */
+      var tE = count(exactRe, p._t), dE = count(exactRe, p._d), tP = count(phraseRe, p._t), dP = count(phraseRe, p._d);
+      if (tE || dE) { best = 1; score += tE * 40 + dE * 10 + (p._t === raw ? 60 : 0); }
+      else if (tP || dP) { best = 2; score += tP * 30 + dP * 8; }
+      p.S.forEach(function (x) {
+        var e = count(exactRe, x._h) * 12 + count(exactRe, x._b) * 3;
+        var ph = e ? 0 : count(phraseRe, x._h) * 10 + count(phraseRe, x._b) * 2.5;
+        var tier = e ? 1 : ph ? 2 : 0, sc = e || ph, hits = 0;
+        if (!tier) {
+          qw.forEach(function (w, i) {
+            var sw = stems[i];
+            if ((' ' + x._h).indexOf(' ' + sw) > -1) { hits++; sc += 5 * W[i]; return; }
+            if ((' ' + x._b).indexOf(' ' + sw) > -1) { hits++; sc += 1.5 * W[i]; return; }
+            var alts = SYN[w] || [];
+            for (var k = 0; k < alts.length; k++) if ((' ' + x._h + ' ' + x._b).indexOf(' ' + alts[k]) > -1) { hits++; sc += 0.8; return; }
+          });
+          if (hits) { tier = 3; sc = sc * (hits / qw.length) + (hits === qw.length ? 6 : 0); }
+        }
+        if (tier) secs.push({ x: x, tier: tier, sc: sc });
+      });
+      secs.forEach(function (o) { if (o.tier < best) best = o.tier; });
+      /* typo rescue for broad: a word one letter off from a word on the page */
+      if (best === 4) {
+        var typo = 0;
+        qw.forEach(function (w, i) { var sw = stems[i]; if (sw.length >= 4 && p._w.some(function (x) { return x.length >= 4 && lev1(x, sw); })) typo++; });
+        if (!typo) return;
+        best = 3; score += typo * 2;
+      }
+      var top = secs.filter(function (o) { return o.tier === best; }).sort(function (a, b) { return b.sc - a.sc; });
+      score += top.reduce(function (n, o, i) { return n + o.sc / (i + 1); }, 0);
+      if (best === 3) {
+        /* pages containing more of your words rank first inside Broad */
+        var all = ' ' + p._t + ' ' + p._d + ' ' + p.S.map(function (x) { return x._h + ' ' + x._b; }).join(' '), pH = 0, tH = 0;
+        var pN = 0;
+        stems.forEach(function (sw, i) { if (all.indexOf(' ' + sw) > -1) { pH += W[i]; pN++; } if ((' ' + p._t).indexOf(' ' + sw) > -1) tH += W[i]; });
+        score += pH * 40 + (pN === qw.length ? 60 : 0) + tH * 45;
       }
       if (p.k === 'Service') score *= 1.15;
       qw.forEach(function (w) { (BOOST[w] || BOOST[stem(w)] || []).forEach(function (path, i) { if (p.u === B + path) score += 60 - i * 10; }); });
-      res.push({ p: p, s: score, type: type });
+      var tHit = best === 1 ? (tE > 0) : best === 2 ? (tP > 0) : false;
+      res.push({ p: p, s: score, tier: best, type: TIER[best], top: tHit, secs: top.slice(0, 4).map(function (o) { return o.x; }) });
     });
-    res.sort(function (a, b) { return b.s - a.s; });
-    return res.slice(0, 30);
+    res.sort(function (a, b) { return a.tier - b.tier || b.s - a.s; });
+    return res;
   }
-  function snippet(p, q) {
-    var terms = words(q.replace(/["“”]/g, ' ')).map(stem).filter(function (t) { return t.length > 1; });
-    var src = p.d || '';
-    var body = p.b || '';
-    var low = body.toLowerCase(), at = -1;
-    for (var i = 0; i < terms.length && at < 0; i++) at = low.indexOf(terms[i]);
-    if (at > -1 && !(new RegExp(terms.map(escRe).join('|'), 'i')).test(src)) {
-      var st = Math.max(0, at - 70); src = (st ? '...' : '') + body.slice(st, st + 190).trim() + '...';
-    }
-    var html = esc(src);
-    if (terms.length) html = html.replace(new RegExp('(' + terms.map(escRe).join('|') + ')', 'gi'), '<mark>$1</mark>');
-    return html;
+  function termsOf(q) { return words(q.replace(/["“”]/g, ' ')).map(stem).filter(function (t) { return t.length > 1; }); }
+  function mark(text, q) {
+    var raw = norm(q.replace(/["“”]/g, ' ')), terms = termsOf(q), h = esc(text);
+    var pats = [escRe(raw)].concat(terms.map(function (t) { return escRe(t) + '[a-z0-9]*'; }));
+    try { h = h.replace(new RegExp('\\b(' + pats.join('|') + ')', 'gi'), '<mark>$1</mark>'); } catch (e) {}
+    return h;
   }
+  function snippet(r, q) {
+    var x = r.secs[0], raw = norm(q.replace(/["“”]/g, ' ')), terms = termsOf(q);
+    var body = x ? x.b : '', low = body.toLowerCase(), at = low.indexOf(raw);
+    for (var i = 0; at < 0 && i < terms.length; i++) at = low.indexOf(terms[i]);
+    var src;
+    if (at > -1) { var st = Math.max(0, low.lastIndexOf(' ', Math.max(0, at - 80)) + 1); if (at - st > 110) st = at - 80; src = (st > 0 ? '...' : '') + body.slice(st, st + 200).trim() + '...'; }
+    else src = r.p.d || body.slice(0, 180);
+    return mark(src, q);
+  }
+  function hrefOf(p, x) { return x && x.id && p.S[0] !== x ? p.u + '#' + x.id : p.u; }
 
   /* ---------- UI ---------- */
   var ICON = '<svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>';
@@ -136,22 +163,15 @@
             '<input id="fzSearchInput" type="search" autocomplete="off" spellcheck="false" placeholder="Try: Google Maps, website, ChatGPT, Goshen" aria-describedby="fzSearchHelp" aria-controls="fzSearchList" aria-autocomplete="list">' +
             '<button type="button" class="fz-search-close" data-close aria-label="Close search">Close</button>' +
           '</div>' +
-          '<div class="fz-search-modes" role="radiogroup" aria-label="Match type">' +
-            '<button type="button" role="radio" data-mode="broad" aria-checked="true">Broad</button>' +
-            '<button type="button" role="radio" data-mode="phrase" aria-checked="false">Phrase</button>' +
-            '<button type="button" role="radio" data-mode="exact" aria-checked="false">Exact</button>' +
-            '<span id="fzSearchHelp" class="fz-search-help">Broad finds related words. Phrase keeps your words in order. Exact matches the exact term.</span>' +
-          '</div>' +
+          '<p id="fzSearchHelp" class="fz-search-help">Exact matches show first, then phrase matches, then broader results as you scroll. Every word on the site is searchable.</p>' +
         '</div>' +
         '<p class="fz-search-status" role="status" aria-live="polite"></p>' +
         '<ul class="fz-search-list" id="fzSearchList" role="listbox" aria-label="Search results"></ul>' +
       '</div>';
     D.body.appendChild(dlg);
     input = dlg.querySelector('input'); list = dlg.querySelector('.fz-search-list'); status = dlg.querySelector('.fz-search-status');
+    if ('IntersectionObserver' in window) io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { io.unobserve(e.target); more(); } }); }, { root: list, rootMargin: '0px 0px 240px 0px' });
     dlg.addEventListener('click', function (e) { if (e.target.closest('[data-close]')) close(); });
-    dlg.querySelectorAll('[data-mode]').forEach(function (b) {
-      b.addEventListener('click', function () { setMode(b.getAttribute('data-mode')); input.focus(); });
-    });
     var t = null;
     input.addEventListener('input', function () { clearTimeout(t); t = setTimeout(render, 90); });
     input.addEventListener('keydown', keys);
@@ -167,12 +187,8 @@
     list.addEventListener('click', function (e) {
       var a = e.target.closest('a'); if (!a) return;
       track('search_result_click', { search_term: lastQ, link_url: a.getAttribute('href') });
+      if (a.hash && a.pathname === location.pathname) close();
     });
-  }
-  function setMode(m) {
-    mode = m;
-    dlg.querySelectorAll('[data-mode]').forEach(function (b) { b.setAttribute('aria-checked', b.getAttribute('data-mode') === m ? 'true' : 'false'); });
-    render();
   }
   function quick() {
     var picks = [
@@ -189,21 +205,56 @@
     }).join('');
     active = -1;
   }
+  function item(r, i, q) {
+    var p = r.p, main = r.top ? null : r.secs[0], href = hrefOf(p, main);
+    var sub = main && main.h && main.h !== p.t && p.S[0] !== main ? '<span class="fz-sr-sec">' + mark(main.h, q) + '</span>' : '';
+    var jumps = r.secs.slice(r.top ? 0 : 1, r.top ? 3 : 4).filter(function (x) { return x.id && x.h; }).map(function (x) {
+      return '<a class="fz-sr-jump" href="' + esc(p.u + '#' + x.id) + '">' + esc(x.h.length > 48 ? x.h.slice(0, 46) + '...' : x.h) + '</a>';
+    }).join('');
+    return '<li role="option" id="fzr' + i + '" aria-selected="false" class="fz-sr-t' + r.tier + '"><a href="' + esc(href) + '">' +
+      '<span class="fz-sr-kind">' + esc(p.k) + '<em>' + esc(r.type) + '</em></span>' +
+      '<span class="fz-sr-title">' + mark(p.t, q) + '</span>' + sub +
+      '<span class="fz-sr-snip">' + snippet(r, q) + '</span></a>' +
+      (jumps ? '<div class="fz-sr-jumps"><span>Also on this page:</span>' + jumps + '</div>' : '') + '</li>';
+  }
+  function more() {
+    if (shown >= results.length) return;
+    var q = lastQ, html = '', end = Math.min(results.length, shown + PAGE);
+    for (var i = shown; i < end; i++) {
+      var prev = results[i - 1];
+      if (!prev || prev.tier !== results[i].tier) {
+        var n = results.filter(function (x) { return x.tier === results[i].tier; }).length;
+        html += '<li class="fz-sr-group" role="presentation">' + GROUP[results[i].tier] + ' <span>' + n + '</span></li>';
+      }
+      html += item(results[i], i, q);
+    }
+    var sent = list.querySelector('.fz-sr-more'); if (sent) sent.remove();
+    list.insertAdjacentHTML('beforeend', html);
+    shown = end;
+    if (shown < results.length) {
+      list.insertAdjacentHTML('beforeend', '<li class="fz-sr-more" role="presentation"><button type="button">Show more results (' + (results.length - shown) + ' more)</button></li>');
+      var li = list.querySelector('.fz-sr-more');
+      li.querySelector('button').addEventListener('click', more);
+      if (io) io.observe(li);
+    }
+  }
   function render() {
     var q = input.value.trim(); lastQ = q;
-    if (!q) { quick(); return; }
+    if (!q) { results = []; shown = 0; quick(); return; }
     if (!data) { status.textContent = 'Loading search...'; load().then(function (d) { if (d) render(); else status.textContent = 'Search is reconnecting. Try again in a moment.'; }); return; }
-    var r = search(q, mode);
-    status.textContent = r.length ? r.length + (r.length === 1 ? ' result' : ' results') + ' for “' + q + '”' : 'No matches for “' + q + '”. Try Broad, fewer words, or ask Riley directly.';
-    list.innerHTML = r.length ? r.map(function (x, i) {
-      return '<li role="option" id="fzr' + i + '" aria-selected="false"><a href="' + esc(x.p.u) + '">' +
-        '<span class="fz-sr-kind">' + esc(x.p.k) + '<em>' + esc(x.type) + '</em></span>' +
-        '<span class="fz-sr-title">' + esc(x.p.t) + '</span>' +
-        '<span class="fz-sr-snip">' + snippet(x.p, q) + '</span></a></li>';
-    }).join('') : '<li class="fz-sr-empty"><a href="https://favze.com/free-consultation">Book a free consultation <span aria-hidden="true">&rarr;</span></a> <a href="sms:+15747475012">Text Riley <span aria-hidden="true">&rarr;</span></a></li>';
+    results = search(q); shown = 0; list.innerHTML = ''; list.scrollTop = 0;
+    var c = [0, 0, 0, 0]; results.forEach(function (r) { c[r.tier]++; });
+    if (results.length) {
+      var parts = []; if (c[1]) parts.push(c[1] + ' exact'); if (c[2]) parts.push(c[2] + ' phrase'); if (c[3]) parts.push(c[3] + ' broad');
+      status.textContent = results.length + (results.length === 1 ? ' result' : ' results') + ' for “' + q + '”: ' + parts.join(', ');
+      more();
+    } else {
+      status.textContent = 'No matches for “' + q + '”. Try fewer words, or ask Riley directly.';
+      list.innerHTML = '<li class="fz-sr-empty"><a href="https://favze.com/free-consultation">Book a free consultation <span aria-hidden="true">&rarr;</span></a> <a href="sms:+15747475012">Text Riley <span aria-hidden="true">&rarr;</span></a></li>';
+    }
     active = -1;
     clearTimeout(render._t);
-    render._t = setTimeout(function () { if (q === input.value.trim() && q.length > 1) track('search', { search_term: q, search_mode: mode, results: r.length }); }, 1200);
+    render._t = setTimeout(function () { if (q === input.value.trim() && q.length > 1) track('search', { search_term: q, results: results.length, exact: c[1], phrase: c[2], broad: c[3] }); }, 1200);
   }
   function keys(e) {
     var items = list.querySelectorAll('li[role="option"]');
@@ -254,5 +305,5 @@
     if ((e.key === 'k' || e.key === 'K') && (e.metaKey || e.ctrlKey)) { e.preventDefault(); open(); }
     else if (e.key === '/' && !typing) { e.preventDefault(); open(); }
   });
-  window.fzSearch = { open: open, close: close, _search: function (q, m) { return load().then(function (d) { if (!d) return []; return search(q, m || 'broad').map(function (r) { return [r.p.t, r.type, Math.round(r.s)]; }); }); } };
+  window.fzSearch = { open: open, close: close, _search: function (q) { return load().then(function (d) { if (!d) return []; return search(q).map(function (r) { return [r.p.t, r.type, Math.round(r.s), hrefOf(r.p, r.top ? null : r.secs[0])]; }); }); } };
 })();
