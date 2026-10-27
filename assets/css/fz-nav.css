@@ -35,13 +35,17 @@ html body #mm .mm-sub a:hover{background:rgba(6,65,135,.07);color:#064187}
 html body #mm .fz-mm-label{font-family:'DM Sans',sans-serif;font-size:.65rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#6b7280;padding:12px 0 4px 12px;margin-top:6px;border-top:1px solid #f0f0f0}
 html body #mm .mm-cta{background:#064187!important;color:#fff!important;text-align:center;margin-top:8px;font-weight:700!important;border-radius:999px}
 html body #mm .mm-cta:hover{background:#0A89A3!important}
-/* Resources dropdown: two columns so it fits on laptop screens */
+/* Resources dropdown: one column per group, with one All Resources link underneath */
 @media(min-width:1081px){
-  html body nav ul.fz-nl #fzPanRes{column-count:2;column-gap:18px;min-width:560px}
-  html body nav ul.fz-nl #fzPanRes>*{break-inside:avoid}
-  html body nav ul.fz-nl #fzPanRes .drop-col{break-before:column;-webkit-column-break-before:always}
-  html body nav ul.fz-nl #fzPanRes .drop-divider:has(+ .drop-col){display:none}
+  html body nav ul.fz-nl #fzPanRes.fz-res-panel{width:min(1040px,calc(100vw - 48px));min-width:0;padding:22px 22px 16px}
+  html body nav ul.fz-nl .fz-res-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0 20px}
+  html body nav ul.fz-nl .fz-res-col{min-width:0}
+  html body nav ul.fz-nl .drop-panel a.fz-res-head{font-family:'DM Sans',sans-serif;font-size:.66rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#064187;padding:0 8px 8px;margin-bottom:6px;border-bottom:1px solid #e5ecf5;border-radius:0;background:none}
+  html body nav ul.fz-nl .drop-panel a.fz-res-head:hover,html body nav ul.fz-nl .drop-panel a.fz-res-head:focus-visible{background:none;color:#0A89A3}
+  html body nav ul.fz-nl .drop-panel a.fz-res-all{text-align:center;margin-top:0;padding:11px 14px;border-radius:999px;background:#f3f6fb;color:#064187!important}
+  html body nav ul.fz-nl .drop-panel a.fz-res-all:hover{background:#064187;color:#fff!important}
 }
+@media(min-width:1081px) and (max-width:1279px){html body nav ul.fz-nl #fzPanRes.fz-res-panel{width:860px}}
 
 /* Body sits flush under the sticky header on every page (some legacy pages carry the browser default 8px top margin) */
 html body{margin-top:0!important}
