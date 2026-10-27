@@ -633,3 +633,8 @@ html body :is(main,nav,.mm) a[href^="https://favze.com/free-consultation"]:is([c
 html body :is(main,nav,.mm) a[href^="https://favze.com/free-consultation"]:is([class*="btn"],[class*="cta"],.bp,.bw,.bs,.mc,.mc-mob,.pain-fix,.sp-block-link) svg{color:#fff;stroke:currentColor}
 html body nav .fz-nav-cta{white-space:nowrap!important}
 @media(min-width:1081px) and (max-width:1240px){html body nav .fz-nav-cta{font-size:13.5px!important;padding:11px 16px!important}html body nav .nl{gap:0!important}html body nav .nl>li>a,html body nav .nl>li>button{padding-left:10px!important;padding-right:10px!important}}
+/* Generic scrolling rails (industries, counties, article clusters) */
+.fz-rail [data-fz-rail]{display:flex!important;flex-wrap:nowrap!important;align-items:stretch!important;gap:16px!important;grid-template-columns:none!important;width:max-content!important;max-width:none!important;margin:0!important;padding:0!important;list-style:none}
+.fz-rail [data-fz-rail]>*{flex:0 0 310px!important;width:310px!important;max-width:310px!important;min-width:0!important;margin:0!important;box-sizing:border-box}
+@media(max-width:600px){.fz-rail [data-fz-rail]>*{flex-basis:270px!important;width:270px!important;max-width:270px!important}}
+.fz-rail-btns{justify-content:center!important}

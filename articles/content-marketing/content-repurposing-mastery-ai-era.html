@@ -459,7 +459,7 @@ html body .fw-badge,
 html body .fw-loop-icon,
 html body .hab-card-icon,
 html body .hci,
-html body .icard-full > div,
+html body .icard-full > div:first-child,
 html body .ici-icon,
 html body .inbox-row-icon,
 html body .ind-icon,
@@ -470,7 +470,7 @@ html body .mock-card-icon,
 html body .phase-num,
 html body .pi,
 html body .pillar-back-icon,
-html body .pillar-card > div,
+html body .pillar-card > div:first-child,
 html body .pl-icon,
 html body .plat-detail-icon,
 html body .plat-icon,
@@ -905,7 +905,7 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
       <h3>Pillar Content</h3>
       <p>At the top is your pillar content. This is a comprehensive, long-form piece that covers a topic your business owns with authority, typically 2,000 to 5,000 words if written, 30 to 60 minutes if recorded. It is the most thorough treatment of that subject anywhere in your industry. See the <a href="https://favze.com/articles/content-marketing/blog-and-article-hierarchy-pillars-clusters-internal-linking" style="color:var(--navy);font-weight:600;">full guide to pillar and cluster architecture</a> for the complete framework.</p>
       <h3>Cluster Pieces</h3>
-      <p>Below your pillar content are cluster pieces: medium-length articles, videos, or episodes that each explore one sub-topic from your pillar in detail. Each cluster piece is valuable on its own, but it also links back to your pillar and to each other. This creates a web of related content that signals topical authority to search engines.</p>
+      <p>Below your pillar content are cluster pieces: medium-length articles, videos, or episodes that each explore one sub-topic from your pillar in detail. Each cluster piece is valuable on its own, but it also links back to your pillar and to each other. This creates a web of related content that signals <a class="fz-gl-link" href="https://favze.com/marketing-glossary#topical-authority">topical authority</a> to search engines.</p>
       <h3>Content Atoms</h3>
       <p>At the base are content atoms: the smallest, most shareable units of your content: a single statistic, a one-sentence insight, a short quote, a quick tip, a provocative question. Content atoms are what you post on X, what you caption on Instagram, what you open a LinkedIn post with. They carry your bigger ideas into spaces where people are scrolling quickly and only have five seconds of attention.</p>
       <div class="insight-box">
@@ -913,12 +913,12 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
         <p>When you write a pillar piece, you are not just writing one thing. You are building the source material for dozens of cluster pieces and hundreds of atoms. Every section is a potential article. Every insight is a potential post. Every story is a potential video script.</p>
       </div>
       <h2 id="seo">What SEO Actually Means and Why It Still Matters</h2>
-      <p><a href="https://favze.com/services/search-engine-optimization" style="color:var(--navy);font-weight:600;">SEO</a> stands for Search Engine Optimization. Modern SEO is fundamentally different from its keyword-stuffing past. Google's algorithm now evaluates content based on E-E-A-T (Experience, Expertise, Authoritativeness, and Trustworthiness) and semantic relevance, meaning it tries to understand the full topic your content covers, not just the specific words you used.</p>
+      <p><a href="https://favze.com/services/search-engine-optimization" style="color:var(--navy);font-weight:600;">SEO</a> stands for Search Engine Optimization. Modern SEO is fundamentally different from its keyword-stuffing past. Google's algorithm now evaluates content based on <a class="fz-gl-link" href="https://favze.com/marketing-glossary#e-e-a-t">E-E-A-T</a> (Experience, Expertise, Authoritativeness, and Trustworthiness) and semantic relevance, meaning it tries to understand the full topic your content covers, not just the specific words you used.</p>
       <p>Content repurposing becomes a direct SEO strategy here. When your business publishes a pillar piece on a topic, plus cluster articles on related sub-topics, plus an FAQ page, plus case studies, Google begins to recognize your website as a topically authoritative source. It is not just that you mentioned the keyword. It is that you have demonstrated comprehensive, multi-dimensional knowledge of the entire topic area.</p>
       <h2 id="aeo">What AEO Actually Means and Its Importance</h2>
-      <p><a href="https://favze.com/services/answer-engine-optimization" style="color:var(--navy);font-weight:600;">AEO</a> stands for Answer Engine Optimization. It refers to structuring your content so that AI-powered tools (Google's AI Overviews, ChatGPT, Perplexity, Microsoft Copilot) can extract your content as the direct answer to a user's question.</p>
+      <p><a href="https://favze.com/services/answer-engine-optimization" style="color:var(--navy);font-weight:600;">AEO</a> stands for Answer Engine Optimization. It refers to structuring your content so that AI-powered tools (Google's <a class="fz-gl-link" href="https://favze.com/marketing-glossary#ai-overviews">AI Overviews</a>, ChatGPT, Perplexity, Microsoft Copilot) can extract your content as the direct answer to a user's question.</p>
       <div class="callout">
-        <p><strong>The shift:</strong> For twenty-five years, search engines surfaced a list of links and let users click through. That model is breaking down. When someone asks an AI-powered search tool a question today, they often receive a direct, synthesized answer without ever clicking a link. The AI has read available content, extracted the relevant information, and delivered it as a conversational response.</p>
+        <p><strong>The shift:</strong> For twenty-five years, search engines surfaced a list of links and let users click through. That model is breaking down. When someone asks an <a class="fz-gl-link" href="https://favze.com/marketing-glossary#ai-powered-search">AI-powered search</a> tool a question today, they often receive a direct, synthesized answer without ever clicking a link. The AI has read available content, extracted the relevant information, and delivered it as a conversational response.</p>
       </div>
       <p>AI systems look for content that directly answers specific questions. They favor clear definitions, numbered or structured explanations, and language that matches how people naturally ask questions. They favor authoritative sources: businesses that consistently publish quality content on a topic, not someone who wrote one article. When you structure your repurposed content with AEO in mind, you give AI tools exactly what they need.</p>
       <h2 id="geo">What GEO Actually Means and Why It Is the Long Game</h2>
@@ -1074,10 +1074,17 @@ footer.ft-std .ft-dot{color:rgba(255,255,255,.18);padding:0 6px}
 @media(max-width:768px){footer.ft-std .ft-top{grid-template-columns:1fr;gap:28px;padding:0 5% 40px}footer.ft-std .fb-bot{padding:16px 5%}footer.ft-std div[style*="width:1px;height:16px"]{display:none!important}}
 </style>
 </main>
+<section class="fz-smband fz-blk" aria-labelledby="fzSmBand-content-repurposing-mastery-ai-era">
+<div class="fz-smband-inner">
+<div class="fz-smband-ico" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" stroke="currentColor" stroke-width="2"/><path d="M15.6 8.4l-2.1 5.1-5.1 2.1 2.1-5.1z" fill="currentColor"/></svg></div>
+<div class="fz-smband-copy"><p class="fz-smband-kick">Free Service Match &middot; 60 seconds</p><h2 id="fzSmBand-content-repurposing-mastery-ai-era" class="fz-smband-title">Not Sure Which Service Fits Your Business?</h2><p class="fz-smband-sub">Answer 3 quick questions about your business type, industry, and goals. Service Match builds a phased plan showing which Favze services to start with and why.</p><ul class="fz-smband-steps"><li><b>1</b>Your business</li><li><b>2</b>Your industry</li><li><b>3</b>Your goals</li></ul></div>
+<div class="fz-smband-acts"><a class="fz-smband-btn" href="https://favze.com/service-match?from=content-repurposing-mastery-ai-era" data-sm-entry="band-content-repurposing-mastery-ai-era">Find My Service <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="fz-smband-alt" href="https://favze.com/free-consultation" data-cta="smband-consult">Or talk it through with Riley</a></div>
+</div>
+</section>
 <section class="fz-form-sec" id="free-consultation-form" aria-labelledby="fzFormTitle">
   <div class="fz-form-inner">
     <div class="fz-form-copy">
-      <div class="fz-founder"><span class="fz-av" aria-hidden="true"><img src="https://favze.com/assets/img/riley-avatar.webp" alt="" width="64" height="64" loading="lazy" decoding="async"></span><div><p class="fz-founder-name">Riley Catalano</p><p class="fz-founder-role">Founder of Favze. You talk to me, the person doing the work.</p></div></div>
+      <div class="fz-founder"><span class="fz-av" aria-hidden="true"><img src="https://favze.com/assets/img/riley-avatar.webp" alt="" width="64" height="64" loading="lazy" decoding="async"></span><div><p class="fz-founder-name">Riley Catalano</p><p class="fz-founder-role">Founder of Favze, Your Content Marketing Specialist</p></div></div>
       <h2 id="fzFormTitle">Become the Local <span>Favorite</span></h2>
       <p>Tell Riley about your business and goals. You&rsquo;ll get a clear, honest look at what&rsquo;s working, what to focus on first, and what it costs, all built around your budget.</p>
       <ul class="fz-form-list">

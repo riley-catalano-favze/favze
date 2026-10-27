@@ -94,3 +94,4 @@ html{scroll-padding-top:150px}
 .gl-formula code{font-family:'DM Sans',system-ui,sans-serif!important;font-weight:700!important}
 @media(max-width:768px){.gl-controls{position:static;background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none}}
 .gl-svc-go,.gl-svc-name{display:inline-block;min-height:24px;padding:2px 0}.gl-svc-card{gap:6px}
+.gl-svc-name{display:inline-block;min-height:24px;line-height:24px}

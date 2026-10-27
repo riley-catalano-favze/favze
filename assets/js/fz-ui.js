@@ -59,37 +59,76 @@
     var w = t.replace(/[:?].*$/, '').split(' ').slice(0, 3).join(' ');
     return used[w] ? t.split(' ').slice(0, 4).join(' ') : w;
   }
+  var GEN = [
+    [/one marketing strategy|every channel/i, 'One Strategy'], [/great work deserves/i, 'The Problem'], [/deserves to be|now you know|right now, a customer/i, 'Get Started'],
+    [/just positioning/i, 'Our Promise'], [/affordable/i, 'Affordable'], [/keeps you current/i, 'The Newsletters'],
+    [/worth five minutes/i, 'Why Subscribe'], [/last to find out/i, 'Subscribe'], [/^about favze insider/i, 'About'],
+    [/plan is simple/i, 'The Plan'], [/walkthrough/i, 'Walkthrough'], [/counties/i, 'Counties'], [/favze in short/i, 'In Short'],
+    [/^how favze works|four[- ]step|our .*process|process for every/i, 'Process'], [/^hi, i.?m riley|^riley catalano$/i, 'Meet Riley'],
+    [/riley thinks|riley believes/i, "Riley's View"], [/certification/i, 'Certifications'], [/stands for/i, 'Values'],
+    [/vs\.|versus/i, 'Why Favze'], [/advice|insights|read something|guides for/i, 'Insights'], [/faq|frequently asked/i, 'FAQ'],
+    [/reports?\b/i, 'Reporting'], [/problems/i, 'Problems Solved'], [/support/i, 'Support'], [/framework/i, 'Framework'],
+    [/services?\b.*(one|connected|every|local agency|explained)|^every digital marketing service|^\d+ digital marketing services/i, 'Services'],
+    [/show up|builds your visibility/i, 'Visibility'], [/region|we know this/i, 'Our Region'], [/fractional cmo/i, 'Your CMO'],
+    [/leads into buyers/i, 'Leads to Buyers'], [/repeat customers/i, 'Loyalty'], [/lead generation/i, 'Lead Gen'],
+    [/cities and towns|town-by-town/i, 'Towns'], [/reasons/i, 'Why Favze'], [/formatted/i, 'Format'], [/waitlist|sign on/i, 'Join'],
+    [/still (thinking|deciding|have)/i, 'Next Step'], [/^ready to/i, 'Get Started']
+  ];
+  function genLabel(sec, t, used) {
+    var clean = t.replace(/[.!?]+$/, '').trim(), words = clean.split(' ');
+    if (words.length <= 3 && !used[clean]) return clean;
+    for (var i = 0; i < GEN.length; i++) { if (GEN[i][0].test(t) && !used[GEN[i][1]]) return GEN[i][1]; }
+    var h = sec.querySelector('h2'), eb = h && h.previousElementSibling;
+    if (eb && /^(span|p|div|small)$/i.test(eb.tagName)) {
+      var e = eb.textContent.replace(/^\s*\d+\s*[·.:-]\s*/, '').replace(/\s+/g, ' ').trim();
+      if (e && e.split(' ').length <= 3 && e.length < 26 && !used[e]) return e.toLowerCase().replace(/\b\w/g, function (c) { return c.toUpperCase(); });
+    }
+    var w = clean.replace(/[:?,].*$/, '').split(' ').slice(0, 3).join(' ');
+    return used[w] ? clean.split(' ').slice(0, 4).join(' ') : w;
+  }
   function sidenav() {
-    if (!/\/services\/[a-z-]+(\.html)?$/.test(location.pathname)) return;
-    var secs = [].slice.call(D.querySelectorAll('main > section')).filter(function (s) {
-      return s.querySelector('h2') && !s.classList.contains('fz-form-sec') && s.offsetHeight > 380;
-    });
-    if (secs.length < 4) return;
-    var nav = D.createElement('div'); nav.className = 'fz-sidenav'; nav.setAttribute('role', 'navigation'); nav.setAttribute('aria-label', 'Sections on this page');
+    var path = location.pathname.replace(/\.html$/, '').replace(/\/$/, '') || '/';
+    if (/\/articles\/|privacy|terms|service-match|404/.test(path)) return;
+    var isSvc = /\/services\/[a-z-]+$/.test(path) && !/\/services\/index$/.test(path);
+    var gloss = D.querySelectorAll('main section.gl-letter');
+    var items = [], used = {};
+    var hero = D.querySelector('main .hero, main .faq-hero');
+    if (gloss.length) {
+      if (hero) items.push({ el: hero, label: 'Top', letter: '↑' });
+      [].slice.call(gloss).forEach(function (g) { var l = g.getAttribute('data-letter'); items.push({ el: g, label: 'Terms: ' + l, letter: l }); });
+    } else {
+      var secs = [].slice.call(D.querySelectorAll('main > section, main > div > section')).filter(function (s) {
+        return s.querySelector('h2') && s !== hero && !s.classList.contains('fz-form-sec') && !s.closest('.hero, .faq-hero') && s.offsetHeight > 300;
+      });
+      if (secs.length < (isSvc ? 4 : 5)) return;
+      if (hero) items.push({ el: hero, label: 'Top' });
+      secs.forEach(function (sec) {
+        var h2 = sec.querySelector('h2'), t = (h2.innerText || h2.textContent).replace(/\s+/g, ' ').trim();
+        if (t === t.toUpperCase()) t = t.toLowerCase().replace(/(^|[\s(])([a-z])/g, function (m, a, c) { return a + c.toUpperCase(); }).replace(/\b(Favze|Faq|Seo|Aeo|Geo|Ai|Sms|Crm|Roi|Cmo)\b/g, function (w) { return w === 'Favze' ? w : w.toUpperCase(); }).replace(/Favze Framework/, 'FAVZE Framework');
+        var l = isSvc ? shortLabel(t, used) : genLabel(sec, t, used); used[l] = 1;
+        items.push({ el: sec, label: l, full: t });
+      });
+      var DROP = ['Insights', 'Newsletter', 'Guides', 'Every Inbox', 'More Services', 'Service Area', 'Pair With', 'Your CMO'];
+      for (var di = 0; items.length > 15 && di < DROP.length; di++) items = items.filter(function (it) { return it.label !== DROP[di]; });
+      while (items.length > 15) { var cut = -1; for (var k = items.length - 1; k > 1; k--) { if (!/^(FAQ|Pricing|Process|Your Goals)$/.test(items[k].label)) { cut = k; break; } } if (cut < 0) break; items.splice(cut, 1); }
+    }
+    var nav = D.createElement('div'); nav.className = 'fz-sidenav' + (gloss.length ? ' is-letters' : ''); nav.setAttribute('role', 'navigation'); nav.setAttribute('aria-label', 'Sections on this page');
     nav.setAttribute('data-nosnippet', '');
     var ol = D.createElement('ol');
-    var hero = D.querySelector('main .hero');
-    var used = {};
-    var items = (hero ? [{ el: hero, label: 'Top' }] : []).concat(secs.map(function (s) {
-      var t = s.querySelector('h2').textContent.replace(/\s+/g, ' ').trim();
-      var l = shortLabel(t, used); used[l] = 1;
-      return { el: s, label: l, full: t };
-    }));
-    var DROP = ['Insights', 'Newsletter', 'Guides', 'Every Inbox', 'More Services', 'Service Area', 'Pair With', 'Your CMO'];
-    for (var di = 0; items.length > 15 && di < DROP.length; di++) items = items.filter(function (it) { return it.label !== DROP[di]; });
-    while (items.length > 15) { var cut = -1; for (var k = items.length - 1; k > 1; k--) { if (!/^(FAQ|Pricing|Process|Your Goals)$/.test(items[k].label)) { cut = k; break; } } if (cut < 0) break; items.splice(cut, 1); }
     items.forEach(function (it, i) {
       if (!it.el.id) it.el.id = 'sec-' + (i + 1);
       var li = D.createElement('li'), a = D.createElement('a');
-      a.href = '#' + it.el.id; a.innerHTML = '<span>' + it.label.replace(/</g, '&lt;') + '</span><i></i>';
+      a.href = '#' + it.el.id;
+      a.innerHTML = it.letter ? '<b>' + it.letter + '</b>' : '<span>' + it.label.replace(/</g, '&lt;') + '</span><i></i>';
+      if (it.letter) a.setAttribute('aria-label', it.label);
       if (it.full) a.title = it.full;
       a.addEventListener('click', function (e) { e.preventDefault(); it.el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' }); history.replaceState(null, '', '#' + it.el.id); track('side_nav_click', { section: it.label }); });
-      li.appendChild(a); ol.appendChild(li); it.a = a;
+      li.appendChild(a); ol.appendChild(li); it.a = a; it.li = li;
     });
     nav.appendChild(ol);
-    var svc = (location.pathname.match(/services\/([a-z-]+)/) || [])[1] || '';
+    var svc = isSvc ? path.split('/').pop() : '';
     var cta = D.createElement('a'); cta.className = 'fz-sidenav-cta';
-    cta.href = B + 'service-match?from=side-nav&service=' + svc;
+    cta.href = B + 'service-match?from=side-nav' + (svc ? '&service=' + svc : '&page=' + encodeURIComponent(path.split('/').pop() || 'home'));
     cta.innerHTML = '<span><b>Find My Service</b><small>Free 60-second quiz</small></span><i>' + COMPASS + '</i>';
     cta.setAttribute('aria-label', 'Find My Service: take the free Service Match quiz');
     cta.addEventListener('click', function () { track('side_nav_click', { section: 'Service Match' }); track('service_match_entry', { sm_entry: 'side-nav', service: svc }); });
@@ -99,6 +138,11 @@
       es.forEach(function (e) { if (e.isIntersecting) { items.forEach(function (it) { it.a.classList.toggle('is-on', it.el === e.target); }); } });
     }, { rootMargin: '-45% 0px -50% 0px' });
     items.forEach(function (it) { io.observe(it.el); });
+    /* Glossary filters hide letters: hide their rail entries too */
+    if (gloss.length && 'MutationObserver' in window) {
+      var sync = function () { items.forEach(function (it) { if (it.letter && it.letter !== '↑') it.li.hidden = !it.el.offsetHeight; }); };
+      new MutationObserver(function () { clearTimeout(sync.t); sync.t = setTimeout(sync, 80); }).observe(D.querySelector('main'), { attributes: true, subtree: true, attributeFilter: ['hidden', 'class', 'style'] });
+    }
     /* Peek open once after the hero so visitors see the labels, then tuck away */
     var peeked = false;
     function peek() {
@@ -106,7 +150,64 @@
       nav.classList.add('is-peek'); setTimeout(function () { nav.classList.remove('is-peek'); }, 3200);
       window.removeEventListener('scroll', peek);
     }
-    window.addEventListener('scroll', peek, { passive: true });
+    if (!gloss.length) window.addEventListener('scroll', peek, { passive: true });
+  }
+
+  /* ---------- Mobile menu: fit to the screen so every link can scroll into view ---------- */
+  function mmFit() {
+    var mm = D.getElementById('mm'); if (!mm) return;
+    function fit() { if (innerWidth > 1024) { mm.style.removeProperty('max-height'); return; } var t = mm.getBoundingClientRect().top; if (t >= 0 && t < innerHeight) mm.style.setProperty('max-height', Math.max(200, innerHeight - t) + 'px', 'important'); }
+    new MutationObserver(function () { requestAnimationFrame(fit); }).observe(mm, { attributes: true, attributeFilter: ['class', 'style', 'aria-hidden'] });
+    var hb = D.getElementById('hb'); if (hb) hb.addEventListener('click', function () { setTimeout(fit, 30); setTimeout(fit, 260); });
+    window.addEventListener('resize', fit);
+  }
+
+  /* ---------- Cookie button: visible for a few seconds after consent, then tucks away.
+     "Cookie Settings" in the footer brings it back any time. ---------- */
+  function cookieFade() {
+    function consented() { try { for (var i = 0; i < localStorage.length; i++) { if (/^stcm\.consent\./.test(localStorage.key(i))) return true; } } catch (e) {} return false; }
+    var timer;
+    function away(ms) { clearTimeout(timer); timer = setTimeout(function () { var ic = D.getElementById('stcm-icon'); if (ic && consented()) ic.classList.add('fz-cookie-away'); }, ms); }
+    function back() { var ic = D.getElementById('stcm-icon'); if (ic) ic.classList.remove('fz-cookie-away'); }
+    if (consented()) away(3000);
+    D.addEventListener('click', function (e) {
+      if (e.target.closest && e.target.closest('#stcm-wrapper button, #stcm-modal button, .stcm-accept-all, .stcm-reject-all')) setTimeout(function () { back(); away(3000); }, 60);
+    });
+    var bot = D.querySelector('footer.ft-std .fb-bot');
+    if (bot) {
+      var b = D.createElement('button'); b.type = 'button'; b.className = 'fz-motion fz-cookie-link'; b.textContent = 'Cookie Settings';
+      b.addEventListener('click', function () { back(); var ic = D.getElementById('stcm-icon'); if (ic) ic.click(); track('cookie_settings_open', {}); });
+      (bot.querySelector('div:last-child') || bot).appendChild(b);
+    }
+  }
+
+  /* ---------- Hero H1: keep each designed line on one row on wide screens ---------- */
+  function h1fit() {
+    var h = D.querySelector('main h1'); if (!h) return;
+    var lines = [].filter.call(h.children, function (c) { return /boxed|\bbx\b|h1l|h1-line|hero-h1-line|hero-line|acc/.test(c.className) && !/fz-h1-sub/.test(c.className); });
+    if (lines.length < 2) return;
+    function width(c) { var ws = c.style.whiteSpace; c.style.whiteSpace = 'nowrap'; var r = D.createRange(); r.selectNodeContents(c); var w = r.getBoundingClientRect().width; c.style.whiteSpace = ws; return w; }
+    function fit() {
+      h.style.removeProperty('font-size'); lines.forEach(function (c) { c.style.removeProperty('font-size'); });
+      if (innerWidth < 1024) return;
+      var avail = h.clientWidth, max = 0;
+      lines.forEach(function (c) { max = Math.max(max, width(c)); });
+      if (max <= avail) return;
+      var k = avail / max * 0.97;
+      lines.forEach(function (c) { c.style.setProperty('font-size', Math.max(36, Math.floor(parseFloat(getComputedStyle(c).fontSize) * k)) + 'px', 'important'); });
+    }
+    fit(); if (D.fonts && D.fonts.ready) D.fonts.ready.then(fit);
+    var t; window.addEventListener('resize', function () { clearTimeout(t); t = setTimeout(fit, 120); });
+  }
+
+  /* ---------- Reading progress bar on every page (matches the About page bar) ---------- */
+  function progress() {
+    if (D.querySelector('.scroll-progress, #scrollProgress, .fz-progress')) return;
+    var bar = D.createElement('div'); bar.className = 'fz-progress'; bar.setAttribute('aria-hidden', 'true'); D.body.appendChild(bar);
+    var tick = false;
+    function upd() { tick = false; var max = H.scrollHeight - innerHeight; bar.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, scrollY / max) : 0) + ')'; }
+    window.addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(upd); } }, { passive: true });
+    window.addEventListener('resize', upd); upd();
   }
 
   /* ---------- "Why are you looking?" picks: tracked, and carried to the consultation page ---------- */
@@ -119,14 +220,19 @@
       var a = e.target.closest && e.target.closest('a[data-sm-entry]'); if (!a) return;
       track('service_match_entry', { sm_entry: a.getAttribute('data-sm-entry') });
     });
+    D.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a.fz-gl-link, a[data-cta]'); if (!a) return;
+      if (a.classList.contains('fz-gl-link')) track('glossary_link_click', { term: a.textContent.trim(), glossary: a.pathname.replace(/^\//, '') });
+      else if (!a.closest('#smApp')) track('cta_click', { cta: a.getAttribute('data-cta'), link_url: a.href });
+    });
     if (!/free-consultation/.test(location.pathname)) return;
-    var q = new URLSearchParams(location.search), reason = q.get('reason'), service = q.get('service');
+    var q = new URLSearchParams(location.search), reason = q.get('reason'), service = q.get('service'), industry = q.get('industry'), ref = q.get('ref');
     if (!reason && !service) return;
     var label = (q.get('why') || reason || '').replace(/[-_]/g, ' ');
     var svc = (service || '').replace(/[-_]/g, ' ');
     D.querySelectorAll('iframe[data-tally-src*="aQjrzb"]').forEach(function (fr) {
       var src = fr.getAttribute('data-tally-src');
-      var add = (service ? '&service=' + encodeURIComponent(service) : '') + (reason ? '&reason=' + encodeURIComponent(reason) : '');
+      var add = (service ? '&service=' + encodeURIComponent(service) : '') + (reason ? '&reason=' + encodeURIComponent(q.get('why') || reason) : '') + (industry ? '&industry=' + encodeURIComponent(industry) : '') + (ref ? '&ref=' + encodeURIComponent(ref) : '');
       fr.setAttribute('data-tally-src', src + add);
       if (fr.src) fr.src = fr.src + add;
     });
@@ -134,6 +240,7 @@
     if (card && label) {
       var p = D.createElement('p'); p.className = 'fz-picked';
       p.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0A89A3" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>You picked <b>' + label.replace(/</g, '&lt;') + '</b>' + (svc ? ' for <b>' + svc.replace(/</g, '&lt;') + '</b>' : '') + '. Riley will start there.</span>';
+      if (ref === 'service-match') p.innerHTML = p.innerHTML.replace('You picked', 'Your Service Match plan is attached:').replace('. Riley will start there.', (industry ? ' for your ' + industry.replace(/</g, '&lt;').toLowerCase() : '') + '. Riley will review it before your call.');
       card.insertBefore(p, card.firstChild);
     }
   }
@@ -353,6 +460,8 @@
     calc: { mode: 'sway', d: 'M24 4h52a9 9 0 0 1 9 9v74a9 9 0 0 1-9 9H24a9 9 0 0 1-9-9V13a9 9 0 0 1 9-9z', fx: '<rect x="24" y="13" width="52" height="20" rx="5" fill="#fff"/><path d="M58 23h12M64 17v12" stroke="#0A89A3" stroke-width="3" stroke-linecap="round"/>' + [0, 1, 2].map(function (r) { return [0, 1, 2].map(function (c) { return '<rect x="' + (24 + c * 18) + '" y="' + (42 + r * 16) + '" width="14" height="11" rx="3" fill="#fff" opacity="' + (c === 2 && r === 2 ? 1 : .85) + '"/>'; }).join(''); }).join('') },
     chip: { mode: 'spin', d: 'M30 20h40a10 10 0 0 1 10 10v40a10 10 0 0 1-10 10H30a10 10 0 0 1-10-10V30a10 10 0 0 1 10-10zM34 6h6v12h-6zM47 6h6v12h-6zM60 6h6v12h-6zM34 82h6v12h-6zM47 82h6v12h-6zM60 82h6v12h-6zM6 34h12v6H6zM6 47h12v6H6zM6 60h12v6H6zM82 34h12v6H82zM82 47h12v6H82zM82 60h12v6H82z', fx: '<rect x="32" y="32" width="36" height="36" rx="6" fill="none" stroke="#fff" stroke-width="3"/><path d="M50 38c1.6 7 5 10.4 12 12-7 1.6-10.4 5-12 12-1.6-7-5-10.4-12-12 7-1.6 10.4-5 12-12z" fill="#fff"/>', both: 1 },
     compass: { mode: 'spin', d: 'M50 4a46 46 0 1 0 0 92 46 46 0 1 0 0-92zm0 10a36 36 0 1 1 0 72 36 36 0 1 1 0-72z', fx: '<path d="M50 20 59 50H41z" fill="#fff"/><path d="M41 50h18L50 80z" fill="#fff" opacity=".45"/><circle cx="50" cy="50" r="5" fill="#0A89A3" stroke="#fff" stroke-width="2.5"/><path d="M50 8v6M50 86v6M8 50h6M86 50h6" stroke="#fff" stroke-width="3" stroke-linecap="round"/>', both: 1 },
+    medal: { mode: 'sway', shine: 1, nz: 1, d: 'M50.0 11.0Q57.4 2.9 61.1 13.2Q71.0 8.6 70.5 19.5Q81.4 19.0 76.8 28.9Q87.1 32.6 79.0 40.0Q87.1 47.4 76.8 51.1Q81.4 61.0 70.5 60.5Q71.0 71.4 61.1 66.8Q57.4 77.1 50.0 69.0Q42.6 77.1 38.9 66.8Q29.0 71.4 29.5 60.5Q18.6 61.0 23.2 51.1Q12.9 47.4 21.0 40.0Q12.9 32.6 23.2 28.9Q18.6 19.0 29.5 19.5Q29.0 8.6 38.9 13.2Q42.6 2.9 50.0 11.0ZM37 62L45 68L39 95L33 87L25 91ZM55 68L63 62L75 91L67 87L61 95Z', fx: '<circle cx="50" cy="40" r="22" fill="none" stroke="#fff" stroke-width="2.2" opacity=".85"/><path class="fz-beat" d="M50 53C39 45 34 39 34 33C34 28 38 25 42 25C45.5 25 48.3 27 50 30.4C51.7 27 54.5 25 58 25C62 25 66 28 66 33C66 39 61 45 50 53Z" fill="#fff"/><path d="M84 6c.9 5 3.2 7.4 8 8.4-4.8 1-7.1 3.4-8 8.4-.9-5-3.2-7.4-8-8.4 4.8-1 7.1-3.4 8-8.4z" fill="#fff"/>', both: 1 },
+    like: { mode: 'sway', build: 'like' },
     target: { mode: 'sway', build: 'rings' },
     atom: { mode: 'spin', build: 'atom' },
     cube: { mode: 'cube', build: 'cube' },
@@ -361,15 +470,16 @@
   };
   var TOY_PAGE = { 'local-seo': 'pin', 'search-engine-optimization': 'bars', 'email-marketing': 'mail', 'short-message-service-sms': 'sms',
     'social-media-marketing': 'heart', 'paid-search-ads': 'glass', 'answer-engine-optimization': 'ask', 'generative-engine-optimization': 'spark',
-    'hubspot-setup': 'funnel', 'paid-social-media-ads': 'target', 'ai-optimization': 'atom', 'services': 'cube', 'website-design': 'site', 'about': 'photo', 'marketing-glossary': 'book', 'marketing-kpis-glossary': 'calc', 'ai-glossary': 'chip', 'service-match': 'compass' };
+    'hubspot-setup': 'funnel', 'paid-social-media-ads': 'target', 'ai-optimization': 'atom', 'services': 'like', 'website-design': 'site', 'about': 'medal', 'marketing-glossary': 'book', 'marketing-kpis-glossary': 'calc', 'ai-glossary': 'chip', 'service-match': 'compass' };
   function el(tag, cls, css) { var e = D.createElement(tag); if (cls) e.className = cls; if (css) e.style.cssText = css; return e; }
   function gradDefs() {
     if (D.getElementById('fzToyDefs')) return;
     var s = D.createElementNS(SVGNS, 'svg'); s.id = 'fzToyDefs'; s.setAttribute('aria-hidden', 'true');
     s.setAttribute('width', '0'); s.setAttribute('height', '0'); s.style.cssText = 'position:absolute;width:0;height:0;overflow:hidden';
-    s.innerHTML = '<defs><linearGradient id="fzTg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2fb6cf"/><stop offset=".55" stop-color="#0A89A3"/><stop offset="1" stop-color="#064187"/></linearGradient></defs>';
+    s.innerHTML = '<defs><linearGradient id="fzTg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2fb6cf"/><stop offset=".55" stop-color="#0A89A3"/><stop offset="1" stop-color="#064187"/></linearGradient><linearGradient id="fzShine" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient></defs>';
     D.body.appendChild(s);
   }
+  var clipN = 0;
   function extrude(rot, t) {
     var n = 18, gap = 1.15;
     for (var i = 0; i < n; i++) {
@@ -377,7 +487,8 @@
       var fill = front || back ? 'url(#fzTg)' : (i > n - 4 ? '#0b6f93' : '#053a78');
       var s = D.createElementNS(SVGNS, 'svg'); s.setAttribute('class', 'fz-ly'); s.setAttribute('viewBox', '0 0 100 100');
       s.style.transform = 'translateZ(' + z.toFixed(2) + 'px)' + (back ? ' rotateY(180deg)' : '');
-      var body = '<path d="' + t.d + '" fill="' + fill + '" fill-rule="evenodd"' + (front || back ? ' stroke="rgba(255,255,255,.35)" stroke-width=".8"' : '') + '/>';
+      var body = '<path d="' + t.d + '" fill="' + fill + '" fill-rule="' + (t.nz ? 'nonzero' : 'evenodd') + '"' + (front || back ? ' stroke="rgba(255,255,255,.35)" stroke-width=".8"' : '') + '/>';
+      if (front && t.shine) { var cid = 'fzc' + (++clipN); body += '<clipPath id="' + cid + '"><path d="' + t.d + '"/></clipPath><g clip-path="url(#' + cid + ')"><ellipse cx="30" cy="16" rx="52" ry="26" fill="url(#fzShine)"/></g>'; }
       if (front || (back && t.both)) body += t.fx;
       s.innerHTML = t.beat ? '<g class="fz-beat">' + body + '</g>' : body;
       rot.appendChild(s);
@@ -415,6 +526,17 @@
         if (k === 2) c.innerHTML = bar + '<span style="margin:10px 10px 6px;height:9px;width:70%;border-radius:4px;background:#064187"></span><span style="margin:0 10px 8px;height:6px;width:52%;border-radius:4px;background:#b8c2cc"></span><span style="margin:0 10px;height:16px;width:44px;border-radius:999px;background:linear-gradient(135deg,#064187,#0A89A3)"></span>';
         rot.appendChild(c);
       });
+    },
+    like: function (rot) {
+      function sub(css) { var x = el('span', 'fz-sub', 'position:absolute;inset:0;' + css); rot.appendChild(x); return x; }
+      var btn = sub('transform:translate3d(-14px,10px,0) scale(.92)');
+      extrude(btn, { shine: 1, d: 'M24 8h52a16 16 0 0 1 16 16v52a16 16 0 0 1-16 16H24A16 16 0 0 1 8 76V24A16 16 0 0 1 24 8z',
+        fx: '<path class="fz-beat" d="M50 74C33 62 26 53 26 44C26 36.5 32 31 38.5 31C43.5 31 47.5 34 50 38.5C52.5 34 56.5 31 61.5 31C68 31 74 36.5 74 44C74 53 67 62 50 74Z" fill="#fff"/>', both: 1 });
+      var save = sub('transform:translate3d(46px,-38px,34px) scale(.5) rotateZ(8deg)');
+      extrude(save, { shine: 1, d: 'M26 6h48a8 8 0 0 1 8 8v80L50 74 18 94V14a8 8 0 0 1 8-8z',
+        fx: '<path d="M50 24l5.6 11.4 12.6 1.8-9.1 8.9 2.1 12.5L50 52.7l-11.2 5.9 2.1-12.5-9.1-8.9 12.6-1.8z" fill="#fff"/>', both: 1 });
+      var pop = sub('transform:translate3d(-66px,-46px,22px) scale(.32)');
+      extrude(pop, { d: 'M50 88C24 70 12 56 12 40C12 26 23 16 35 16C42 16 47 20 50 26C53 20 58 16 65 16C77 16 88 26 88 40C88 56 76 70 50 88Z', fx: '', both: 0 });
     },
     photo: function (rot) {
       [[-26, '#064187', -8, 'rotateZ(-9deg)'], [-12, '#0A89A3', 8, 'rotateZ(7deg)']].forEach(function (p) {
@@ -507,7 +629,7 @@
   /* ---------- Tap-to-chat lead assistant (no typing, no AI, no cost) ---------- */
   var FLOW = {
     start: { say: ['Hi! I’m the Favze assistant. Tap an answer and I’ll point you to the right place.', 'What brings you here today?'],
-      opts: [['I need more leads', 'leads'], ['Customers can’t find me on Google', 'google'], ['I want a better website', 'web'], ['Help with social media', 'social'], ['Show up in ChatGPT and AI', 'ai'], ['How much does it cost?', 'cost'], ['Just looking around', 'explore']] },
+      opts: [['I need more leads', 'leads'], ['Customers can’t find me on Google', 'google'], ['I want a better website', 'web'], ['Help with social media', 'social'], ['Show up in ChatGPT and AI', 'ai'], ['How much does it cost?', 'cost'], ['Help me choose a service', 'match'], ['Just looking around', 'explore']] },
     leads: { say: ['Got it. More leads usually comes from two things: being found when people search, and following up fast when they reach out.', 'Here is where Favze would start:'],
       links: [['Paid Search Ads: show up at the top today', 'services/paid-search-ads'], ['Local SEO: get calls from Google Maps', 'services/local-seo'], ['Website Design: turn visitors into calls', 'services/website-design']], next: 'close' },
     google: { say: ['That one is fixable. It often comes down to a few Google Business Profile and website basics.', 'These two pages explain how Favze gets you into the Map Pack and search results:'],
@@ -524,6 +646,8 @@
     found: { say: ['Getting found covers Google, Google Maps, and AI tools.'], links: [['SEO', 'services/search-engine-optimization'], ['Local SEO', 'services/local-seo'], ['AI Optimization', 'services/ai-optimization']], next: 'close' },
     convert: { say: ['Turning visitors into leads is about ads and a website that makes people act.'], links: [['Website Design', 'services/website-design'], ['Paid Search Ads', 'services/paid-search-ads'], ['Paid Social Ads', 'services/paid-social-media-ads']], next: 'close' },
     keep: { say: ['Keeping customers is follow-up: emails, texts, and a CRM that remembers everyone.'], links: [['Email Marketing', 'services/email-marketing'], ['SMS Marketing', 'services/short-message-service-sms'], ['HubSpot Setup', 'services/hubspot-setup']], next: 'close' },
+    match: { say: ['Great place to start. Service Match asks 3 quick questions about your business, industry, and goals.', 'It takes about a minute and gives you a phased plan:'],
+      links: [['Take the free Service Match quiz', 'service-match?from=chat']], next: 'close' },
     close: { say: ['Want to talk it through with Riley? It’s free, and there’s no pressure.'], end: true }
   };
   function chat() {
@@ -608,6 +732,6 @@
     });
   }
   run(areaMarquee);
-  run(philo); run(sidenav); run(reasons); run(minis); run(three); run(dials); run(toys); run(glow); run(chat); run(hiddenFocus);
+  run(philo); run(h1fit); run(cookieFade); run(mmFit); run(progress); run(sidenav); run(reasons); run(minis); run(three); run(dials); run(toys); run(glow); run(chat); run(hiddenFocus);
   window.addEventListener('load', function () { run(hiddenFocus); setTimeout(function () { run(hiddenFocus); }, 1500); });
 })();

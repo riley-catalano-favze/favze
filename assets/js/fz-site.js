@@ -202,13 +202,14 @@
   var ARROW_L = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>';
   var ARROW_R = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>';
   function buildRails() {
-    D.querySelectorAll('.other-grid').forEach(function (grid) {
+    D.querySelectorAll('.other-grid, [data-fz-rail]').forEach(function (grid) {
       if (grid.closest('.fz-rail')) return;
       var cards = [].slice.call(grid.children);
       if (cards.length < 3) return;
       var rail = D.createElement('div'); rail.className = 'fz-rail';
       var vp = D.createElement('div'); vp.className = 'fz-rail-viewport';
-      vp.setAttribute('role', 'region'); vp.setAttribute('aria-label', 'More Favze services'); vp.tabIndex = 0;
+      var lbl = grid.getAttribute('data-fz-rail') || 'More Favze services';
+      vp.setAttribute('role', 'region'); vp.setAttribute('aria-label', lbl); vp.tabIndex = 0;
       grid.parentNode.insertBefore(rail, grid);
       vp.appendChild(grid); rail.appendChild(vp);
       cards.forEach(function (c) {
@@ -217,7 +218,7 @@
         grid.appendChild(k);
       });
       var btns = D.createElement('div'); btns.className = 'fz-rail-btns';
-      btns.innerHTML = '<button type="button" class="fz-rail-btn" aria-label="Previous services">' + ARROW_L + '</button><button type="button" class="fz-rail-btn" aria-label="Next services">' + ARROW_R + '</button>';
+      btns.innerHTML = '<button type="button" class="fz-rail-btn" aria-label="Previous: ' + lbl + '">' + ARROW_L + '</button><button type="button" class="fz-rail-btn" aria-label="Next: ' + lbl + '">' + ARROW_R + '</button>';
       rail.appendChild(btns);
       var pos = 0, hover = false, anim = null, holdUntil = 0;
       function half() { return grid.scrollWidth / 2; }

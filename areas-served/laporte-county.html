@@ -671,7 +671,7 @@ html body .fw-badge,
 html body .fw-loop-icon,
 html body .hab-card-icon,
 html body .hci,
-html body .icard-full > div,
+html body .icard-full > div:first-child,
 html body .ici-icon,
 html body .inbox-row-icon,
 html body .ind-icon,
@@ -682,7 +682,7 @@ html body .mock-card-icon,
 html body .phase-num,
 html body .pi,
 html body .pillar-back-icon,
-html body .pillar-card > div,
+html body .pillar-card > div:first-child,
 html body .pl-icon,
 html body .plat-detail-icon,
 html body .plat-icon,
@@ -1204,7 +1204,7 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
 
     <div class="svc-card">
       <div class="svc-head"><div class="svc-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 2C5.69 2 3 4.69 3 8c0 4.5 6 10 6 10s6-5.5 6-10c0-3.31-2.69-6-6-6z" stroke="currentColor" stroke-width="1.4"/><circle cx="9" cy="8" r="2.2" stroke="currentColor" stroke-width="1.3"/></svg></div><div><div class="svc-name">Local SEO</div></div></div>
-      <p class="svc-desc">When a Chicago day-tripper searches &ldquo;restaurants near Washington Park Beach&rdquo; or a La Porte homeowner Googles &ldquo;plumber near me,&rdquo; <a href="https://favze.com/services/local-seo">Local SEO</a> decides which business gets the call. We optimize your Google Business Profile, build directory citations, and deploy community-specific landing pages that put your business in the Google Map Pack. In Michigan City, seasonal restaurant and hospitality categories are genuinely competitive. In La Crosse, Kingsbury, or Rolling Prairie, the first business to claim Local SEO dominance in any category holds it for years. Pairs naturally with <a href="https://favze.com/services/search-engine-optimization">organic SEO</a>.</p>
+      <p class="svc-desc">When a Chicago day-tripper searches &ldquo;restaurants near Washington Park Beach&rdquo; or a La Porte homeowner Googles &ldquo;plumber near me,&rdquo; <a href="https://favze.com/services/local-seo">Local SEO</a> decides which business gets the call. We optimize your <a class="fz-gl-link" href="https://favze.com/marketing-glossary#google-business-profile">Google Business Profile</a>, build directory citations, and deploy community-specific landing pages that put your business in the Google Map Pack. In Michigan City, seasonal restaurant and hospitality categories are genuinely competitive. In La Crosse, Kingsbury, or Rolling Prairie, the first business to claim Local SEO dominance in any category holds it for years. Pairs naturally with <a href="https://favze.com/services/search-engine-optimization">organic SEO</a>.</p>
       <a href="https://favze.com/services/local-seo" class="svc-link">Learn More <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5h7M6 2.5l3 3-3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
 
@@ -1222,7 +1222,7 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
 
     <div class="svc-card">
       <div class="svc-head"><div class="svc-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="2" y="3" width="14" height="12" rx="2.5" stroke="currentColor" stroke-width="1.3"/><path d="M5 8h8M5 11h5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></div><div><div class="svc-name">Answer Engine Optimization (AEO)</div></div></div>
-      <p class="svc-desc">Michigan City visitors, largely coming from one of the most digitally sophisticated metro areas in the country, ask voice assistants and Google AI Overviews for recommendations before they arrive. &ldquo;Best seafood restaurant in Michigan City Indiana,&rdquo; &ldquo;things to do in Michigan City this weekend&rdquo;: your business needs to answer these directly in AI-powered search results. <a href="https://favze.com/services/answer-engine-optimization">AEO</a> structures your content so Siri, Google, and Alexa pull from you rather than a competitor. Works best alongside <a href="https://favze.com/services/generative-engine-optimization">GEO</a> and <a href="https://favze.com/services/ai-optimization">AI Optimization</a>.</p>
+      <p class="svc-desc">Michigan City visitors, largely coming from one of the most digitally sophisticated metro areas in the country, ask voice assistants and Google <a class="fz-gl-link" href="https://favze.com/marketing-glossary#ai-overviews">AI Overviews</a> for recommendations before they arrive. &ldquo;Best seafood restaurant in Michigan City Indiana,&rdquo; &ldquo;things to do in Michigan City this weekend&rdquo;: your business needs to answer these directly in AI-powered search results. <a href="https://favze.com/services/answer-engine-optimization">AEO</a> structures your content so Siri, Google, and Alexa pull from you rather than a competitor. Works best alongside <a href="https://favze.com/services/generative-engine-optimization">GEO</a> and <a href="https://favze.com/services/ai-optimization">AI Optimization</a>.</p>
       <a href="https://favze.com/services/answer-engine-optimization" class="svc-link">Learn More <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 5.5h7M6 2.5l3 3-3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
 
@@ -1529,7 +1529,9 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
       <details class="faq-item"><summary><span class="fq-q">Does Favze require long-term contracts?</span><span class="fq-icon"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 2v7M2 5.5h7" stroke="#666" stroke-width="1.7" stroke-linecap="round"/></svg></span></summary><div class="fq-ans"><p><strong>No long-term contracts.</strong> Favze earns your business every month by producing real results. If we are not delivering, you should be free to move on. More on our <a href="https://favze.com/why-us">Why Us</a> and <a href="https://favze.com/our-process">Our Process</a> pages.</p></div></details>
       <details class="faq-item"><summary><span class="fq-q">How do I get started with Favze as a LaPorte County business?</span><span class="fq-icon"><svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 2v7M2 5.5h7" stroke="#666" stroke-width="1.7" stroke-linecap="round"/></svg></span></summary><div class="fq-ans"><p>Book a free consultation at <a href="https://favze.com/free-consultation"><strong>favze.com/free-consultation</strong></a> or call Riley directly at <a href="tel:+15747475012"><strong>574-747-5012</strong></a>. You don&rsquo;t need to know what services you want. The call runs about 30 minutes. By the end you&rsquo;ll know exactly where your business stands digitally, what your biggest opportunities are in your specific community, and what it would realistically take to capture them. Completely free with no obligation. Read our <a href="https://favze.com/our-process">Our Process page</a> to see exactly what happens after you reach out.</p></div></details>
     </div>
-  </div>
+  
+  <p class="fz-text-cta">Have a question that is not answered here? <a href="https://favze.com/free-consultation?reason=faq-question" data-cta="faq-ask-riley">Ask Riley in a free consultation</a>, or <a href="https://favze.com/service-match?from=faq-laporte-county" data-sm-entry="faq-laporte-county">see which services fit your business in 60 seconds</a>.</p>
+</div>
 </section>
 
 <div class="final-cta" id="start">
@@ -1594,10 +1596,17 @@ footer.ft-std .ft-dot{color:rgba(255,255,255,.18);padding:0 6px}
 </div>
 </section>
 </main>
+<section class="fz-smband fz-blk" aria-labelledby="fzSmBand-laporte-county">
+<div class="fz-smband-inner">
+<div class="fz-smband-ico" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9.5" stroke="currentColor" stroke-width="2"/><path d="M15.6 8.4l-2.1 5.1-5.1 2.1 2.1-5.1z" fill="currentColor"/></svg></div>
+<div class="fz-smband-copy"><p class="fz-smband-kick">Free Service Match &middot; 60 seconds</p><h2 id="fzSmBand-laporte-county" class="fz-smband-title">Not Sure Which Service Fits Your Business?</h2><p class="fz-smband-sub">Answer 3 quick questions about your business type, industry, and goals. Service Match builds a phased plan showing which Favze services to start with and why.</p><ul class="fz-smband-steps"><li><b>1</b>Your business</li><li><b>2</b>Your industry</li><li><b>3</b>Your goals</li></ul></div>
+<div class="fz-smband-acts"><a class="fz-smband-btn" href="https://favze.com/service-match?from=laporte-county" data-sm-entry="band-laporte-county">Find My Service <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="fz-smband-alt" href="https://favze.com/free-consultation" data-cta="smband-consult">Or talk it through with Riley</a></div>
+</div>
+</section>
 <section class="fz-form-sec" id="free-consultation-form" aria-labelledby="fzFormTitle">
   <div class="fz-form-inner">
     <div class="fz-form-copy">
-      <div class="fz-founder"><span class="fz-av" aria-hidden="true"><img src="https://favze.com/assets/img/riley-avatar.webp" alt="" width="64" height="64" loading="lazy" decoding="async"></span><div><p class="fz-founder-name">Riley Catalano</p><p class="fz-founder-role">Founder of Favze. You talk to me, the person doing the work.</p></div></div>
+      <div class="fz-founder"><span class="fz-av" aria-hidden="true"><img src="https://favze.com/assets/img/riley-avatar.webp" alt="" width="64" height="64" loading="lazy" decoding="async"></span><div><p class="fz-founder-name">Riley Catalano</p><p class="fz-founder-role">Founder of Favze, Your LaPorte County Digital Marketing Specialist</p></div></div>
       <h2 id="fzFormTitle">Become the Local <span>Favorite</span></h2>
       <p>Tell Riley about your business and goals. You&rsquo;ll get a clear, honest look at what&rsquo;s working, what to focus on first, and what it costs, all built around your budget.</p>
       <ul class="fz-form-list">

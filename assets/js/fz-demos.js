@@ -663,6 +663,11 @@
       if (hdr) { if (icon && hdr.contains(icon)) icon.style.display = 'none'; hdr.parentNode.insertBefore(r, hdr); }
       else if (icon && !card.classList.contains('service-row')) { icon.style.display = 'none'; icon.parentNode.insertBefore(r, icon); }
       else h.parentNode.insertBefore(r, h);
+      /* One visual per card: the demo replaces any small icon badge in the same card */
+      [].slice.call(card.querySelectorAll('[class*="icon"]')).forEach(function (ic) {
+        if (r.contains(ic) || ic.contains(h) || ic.querySelector('h3, p')) return;
+        ic.classList.add('fzd-icon-off');
+      });
       live.push(r);
     });
     if (!live.length) return;
