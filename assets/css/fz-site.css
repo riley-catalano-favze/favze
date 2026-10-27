@@ -133,6 +133,7 @@ footer.ft-std .fz-news-card iframe{display:block;width:100%;border:0;min-height:
 /* ---- Readability ---- */
 html body footer.ft-std .fb-desc,html body footer.ft-std .fc ul li a,html body footer.ft-std .fcon a{color:rgba(255,255,255,.72)!important}
 html body footer.ft-std .fc ul li a:hover,html body footer.ft-std .fcon a:hover{color:#fff!important}
+@media(min-width:1025px){html body footer.ft-std .ft-top{grid-template-columns:1.15fr 1fr 1fr 1fr 1fr!important;gap:28px!important}}
 /* ---- Generated: former Barlow elements now DM Sans ---- */
 html body .about-mini-name > a,
 html body .article-body > h3,
