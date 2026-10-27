@@ -666,3 +666,19 @@ html body section.fz-goals h2.fz-goals-title{color:#064187!important;-webkit-tex
 html body .fz-related-eyebrow,html body .fz-goals-kick,html body .fz-nl-card.is-articles .fz-nl-kick,html body .fz-cl-go{color:#0A6F86!important}
 html body .pstack .pl{color:#555b66!important}
 @media(min-width:769px){html body .fz-sidenav ol a.is-on span{color:#0A6F86}}
+/* Mobile bottom bar: shorter, sits lower, words lower */
+@media(max-width:768px){
+  :root{--fz-bar-safe:max(0px,calc(env(safe-area-inset-bottom) - 14px));--fz-bar-h:calc(42px + var(--fz-bar-safe))}
+  html body .fz-mbar a{min-height:var(--fz-bar-h)!important;padding:4px 16px var(--fz-bar-safe)!important;align-items:center!important}
+  body:has(.fz-mbar){padding-bottom:var(--fz-bar-h)!important}
+  html body .fz-chat-launch{bottom:calc(var(--fz-bar-h) + 10px)!important}
+  html body #stcm-icon{bottom:calc(var(--fz-bar-h) + 12px)!important}
+}
+/* Mobile hero H1: highlighted line never overlaps the line above */
+@media(max-width:768px){
+  html body main h1 .boxed,html body main h1 .bx,html body main h1 .hero-line.boxed,html body main h1 .hero-h1-line.boxed,html body main h1 .h1-line.boxed,html body main h1 .h1l.bx{display:inline-block!important;line-height:1!important;margin:.22em 0 .12em!important;padding:.06em .22em .08em!important;max-width:100%}
+  html body main h1 span.fz-h1-sub{display:block!important;margin-top:14px!important}
+}
+/* Mobile menu open: only the menu scrolls */
+html:has(#mm.open),html:has(#mm.open) body{overflow:hidden!important;overscroll-behavior:none}
+html body #mm{scrollbar-width:thin;scrollbar-color:rgba(6,65,135,.35) transparent}
