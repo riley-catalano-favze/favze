@@ -678,3 +678,10 @@ footer.ft-std .fc-ind-all:hover,footer.ft-std .fc-ind-all:focus-visible{color:#f
 /* Footer: use more of the width on large screens so the six columns breathe */
 @media(min-width:1280px){html body footer.ft-std .ft-inner{max-width:1360px!important}}
 @media(min-width:1600px){html body footer.ft-std .ft-inner{max-width:1600px!important}}
+
+/* Footer on phones: show Contact right after the brand block */
+@media(max-width:768px){
+  footer.ft-std .ft-top>div:first-child{order:-2}
+  footer.ft-std .ft-top>.fc:last-child{display:contents}
+  footer.ft-std .ft-top>.fc:last-child>div:last-child{order:-1;margin-top:0!important}
+}
