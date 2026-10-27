@@ -1,13 +1,14 @@
 # Rebuilds search-index.json whenever pages change, so site search always
 # includes every page and every word. Runs on GitHub after each push to main.
-name: Update search index
+name: Update search index and asset versions
 
 on:
   push:
     branches: [main]
     paths:
       - '**.html'
-      - 'tools/build-search-index.py'
+      - 'assets/**'
+      - 'tools/**'
   workflow_dispatch:
 
 permissions:
@@ -25,16 +26,18 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Fingerprint CSS and JS so browsers load the newest version
+        run: python3 tools/version-assets.py
       - name: Build search index
         run: python3 tools/build-search-index.py
       - name: Commit updated index
         run: |
-          if git diff --quiet -- search-index.json; then
-            echo "Search index already up to date."
+          if git diff --quiet; then
+            echo "Search index and asset versions already up to date."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add search-index.json
-          git commit -m "Update search index"
+          git add -A
+          git commit -m "Update search index and asset versions"
           git push
