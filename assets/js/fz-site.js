@@ -19,7 +19,7 @@
   }
 
   /* ---------- Section backgrounds: white / grey / black rhythm on dark-heavy pages ---------- */
-  var SKIP_BLOCK = '.fz-own,.fz-goals,.vis-sec,.fz-smband,.fz-nl-duo,.fz-cta-band,.fz-cluster,.rs-sec,.rs-hero,.fz-about-band,.svc-grid,.sm-wrap,.fz-org,.fzd,nav,footer,script,style,noscript,link,template,.mm,.fz-mbar,#stcm-wrapper,.fz-form-sec,.fz-dot,.fz-ring,.fz-blk,.fz-philo,.fz-areas,.fz-related,.fz-sidenav,.fz-chat,.fz-chat-launch';
+  var SKIP_BLOCK = '.fz-own,.fz-gl-more,.fz-goals,.vis-sec,.fz-smband,.fz-nl-duo,.fz-cta-band,.fz-cluster,.rs-sec,.rs-hero,.fz-about-band,.svc-grid,.sm-wrap,.fz-org,.fzd,nav,footer,script,style,noscript,link,template,.mm,.fz-mbar,#stcm-wrapper,.fz-form-sec,.fz-dot,.fz-ring,.fz-blk,.fz-philo,.fz-areas,.fz-related,.fz-sidenav,.fz-chat,.fz-chat-launch';
   function blockTone(el) {
     for (var e = el; e && e !== D.documentElement; e = e.parentElement) {
       var cs = getComputedStyle(e);
@@ -167,7 +167,7 @@
     var els = D.body.querySelectorAll('p,li,span,div,a,small,dd,dt,td,label');
     for (var i = 0; i < els.length; i++) {
       var el = els[i];
-      if (!ownText(el) || el.closest('.fz-lit,#stcm-wrapper,.fz-mbar,nav,.mm,.fz-own,.fz-goals,.vis-sec,.fz-smband,.fz-nl-duo,.fz-cta-band,.fz-cluster,.rs-sec,.rs-hero,.fz-about-band,.svc-grid,.sm-wrap,.fz-org')) continue;
+      if (!ownText(el) || el.closest('.fz-lit,#stcm-wrapper,.fz-mbar,nav,.mm,.fz-own,.fz-gl-more,.fz-goals,.vis-sec,.fz-smband,.fz-nl-duo,.fz-cta-band,.fz-cluster,.rs-sec,.rs-hero,.fz-about-band,.svc-grid,.sm-wrap,.fz-org')) continue;
       var cs = getComputedStyle(el), c = parse(cs.color);
       if (!c || c.a === 0 || !neutral(c) || parseFloat(cs.fontSize) >= 24) continue;
       var L = lum(c);
@@ -446,7 +446,7 @@
     var els = D.body.querySelectorAll('body *:not(script):not(style):not(svg):not(svg *)');
     for (var i = 0; i < els.length; i++) {
       var el = els[i];
-      if (!ownText(el) || el.closest('#stcm-wrapper,.fz-mbar,.fz-skip,.fzd,.fz-own,.fz-goals,.vis-sec,.fz-smband,.fz-nl-duo,.fz-cta-band,.fz-cluster,.rs-sec,.rs-hero,.fz-about-band,.svc-grid,.sm-wrap,.fz-org')) continue;
+      if (!ownText(el) || el.closest('#stcm-wrapper,.fz-mbar,.fz-skip,.fzd,.fz-own,.fz-gl-more,.fz-goals,.vis-sec,.fz-smband,.fz-nl-duo,.fz-cta-band,.fz-cluster,.rs-sec,.rs-hero,.fz-about-band,.svc-grid,.sm-wrap,.fz-org')) continue;
       var cs = getComputedStyle(el);
       var fg = parse(cs.color); if (!fg || fg.a === 0) continue;
       var bg = effectiveBg(el); if (!bg) continue;
