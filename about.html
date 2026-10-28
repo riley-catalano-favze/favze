@@ -182,9 +182,9 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-behavior:smooth}
 .cursor-dot,.cursor-ring{position:fixed;top:0;left:0;border-radius:50%;pointer-events:none;z-index:998;transform:translate(-50%,-50%);will-change:transform}
 .cursor-dot{width:4px;height:4px;background:#38BDF8;opacity:0;transition:opacity .2s}
 .cursor-ring{width:22px;height:22px;border:1.5px solid rgba(56,189,248,.85);opacity:0;transition:opacity .2s,width .25s ease,height .25s ease,border-color .25s ease,background .25s ease}
-.has-custom-cursor .cursor-dot,.has-custom-cursor .cursor-ring{opacity:1}
+. .cursor-dot,. .cursor-ring{opacity:1}
 .cursor-ring.cursor-hover{width:36px;height:36px;background:rgba(56,189,248,.14);border-color:#38BDF8}
-.has-custom-cursor,.has-custom-cursor a,.has-custom-cursor button,.has-custom-cursor .bp,.has-custom-cursor .bs,.has-custom-cursor .svc-card,.has-custom-cursor .bcard{cursor:none}
+.,. a,. button,. .bp,. .bs,. .svc-card,. .bcard{cursor:none}
 .spotlight{position:absolute;inset:0;pointer-events:none;background:radial-gradient(650px circle at var(--x,50%) var(--y,50%),rgba(10,137,163,.14),transparent 45%);z-index:0;opacity:0;transition:opacity .4s ease}
 .spotlight.active{opacity:1}
 @keyframes heroRise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
@@ -1788,14 +1788,13 @@ html body .hero h1 .hero-line{display:block!important;margin:0!important;padding
 html body .hero h1 .hero-line.boxed{display:inline-block!important;margin:6px 0 0!important;padding:4px 14px!important;line-height:1!important}
 html body .hero h1 .fz-h1-sub{margin-top:18px!important}
 </style>
+<style id="fz-no-cursor">html body .cursor-dot,html body .cursor-ring{display:none!important}</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe title="Google Tag Manager" src="https://www.googletagmanager.com/ns.html?id=GTM-PTG2KZ6K" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <div class="scroll-progress" id="scrollProgress"></div>
-<div class="cursor-dot" id="cursorDot"></div>
-<div class="cursor-ring" id="cursorRing"></div>
 <!-- NAV -->
 <nav>
   <a class="fz-skip" href="#main">Skip to main content</a>
@@ -2831,7 +2830,7 @@ footer.ft-std .ft-dot{color:rgba(255,255,255,.18);padding:0 6px}
 
   // Custom cursor (mouse devices only, never on touch)
   if (window.matchMedia && window.matchMedia('(pointer: fine)').matches) {
-    document.body.classList.add('has-custom-cursor');
+    document.body.classList.add('');
     var cursorDot = document.getElementById('cursorDot');
     var cursorRing = document.getElementById('cursorRing');
     var mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
