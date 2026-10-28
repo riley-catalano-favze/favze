@@ -1409,6 +1409,14 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
 <script>
 (function(){try{window.dataLayer=window.dataLayer||[];var r=new URLSearchParams(location.search).get('reason')||'gbp-audit';dataLayer.push({event:'gbp_audit_request',audit_reason:r,page_path:'/thank-you'});}catch(e){}})();
 </script>
+<style id="ty-buttons">
+.ty-btns{display:grid;grid-template-columns:1fr;gap:12px;max-width:420px;margin:20px auto 0}
+.ty-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:8px}
+.ty-btn{width:100%;min-height:54px;box-sizing:border-box;text-align:center;padding:14px 20px!important;white-space:normal}
+@media (min-width:600px){.ty-btns{grid-template-columns:repeat(2,minmax(0,1fr));max-width:560px}}
+@media (min-width:768px){.ty-links{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (min-width:1024px){.ty-links{grid-template-columns:repeat(6,minmax(0,1fr))}}
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -1454,8 +1462,8 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
       </div>
       <div class="drop-divider"></div>
       <div class="fz-res-cta">
-        <a href="https://favze.com/services" style="display:inline-flex;align-items:center;justify-content:center;padding:15px 24px;border-radius:999px;font-family:'DM Sans',sans-serif;font-size:.98rem;font-weight:800;text-decoration:none;background:#eef4fb;color:#064187;border:1.5px solid #064187" role="menuitem">View All Services &rarr;</a>
-        <a href="https://favze.com/resources/marketing-tools/service-match" style="display:inline-flex;align-items:center;justify-content:center;padding:15px 24px;border-radius:999px;font-family:'DM Sans',sans-serif;font-size:.98rem;font-weight:800;text-decoration:none;background:#064187;color:#fff;border:1.5px solid #064187;box-shadow:0 6px 18px rgba(6,65,135,.22)" role="menuitem" data-sm-entry="nav">Take the Service Match &rarr;</a>
+        <a href="https://favze.com/services" class="ty-btn" style="display:inline-flex;align-items:center;justify-content:center;padding:15px 24px;border-radius:999px;font-family:'DM Sans',sans-serif;font-size:.98rem;font-weight:800;text-decoration:none;background:#eef4fb;color:#064187;border:1.5px solid #064187" role="menuitem">View All Services &rarr;</a>
+        <a href="https://favze.com/resources/marketing-tools/service-match" class="ty-btn" style="display:inline-flex;align-items:center;justify-content:center;padding:15px 24px;border-radius:999px;font-family:'DM Sans',sans-serif;font-size:.98rem;font-weight:800;text-decoration:none;background:#064187;color:#fff;border:1.5px solid #064187;box-shadow:0 6px 18px rgba(6,65,135,.22)" role="menuitem" data-sm-entry="nav">Take the Service Match &rarr;</a>
       </div>
       </div>
     </li>
@@ -1495,7 +1503,7 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
       </div>
       <div class="drop-divider"></div>
       <div class="fz-res-cta fz-res-cta-one">
-        <a href="https://favze.com/resources" style="display:inline-flex;align-items:center;justify-content:center;padding:15px 24px;border-radius:999px;font-family:'DM Sans',sans-serif;font-size:.98rem;font-weight:800;text-decoration:none;background:#064187;color:#fff;border:1.5px solid #064187;box-shadow:0 6px 18px rgba(6,65,135,.22)" role="menuitem">All Resources &rarr;</a>
+        <a href="https://favze.com/resources" class="ty-btn" style="display:inline-flex;align-items:center;justify-content:center;padding:15px 24px;border-radius:999px;font-family:'DM Sans',sans-serif;font-size:.98rem;font-weight:800;text-decoration:none;background:#064187;color:#fff;border:1.5px solid #064187;box-shadow:0 6px 18px rgba(6,65,135,.22)" role="menuitem">All Resources &rarr;</a>
       </div>
       </div>
     </li>
@@ -1561,9 +1569,9 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
       <span class="fc-lbl">Request received</span>
       <h1>Thanks, your request is in</h1>
       <p>Riley will review your free Google Business Profile audit request and reach out soon. While you wait, here is where to learn more.</p>
-      <div class="hero-ctas" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:20px">
-        <a href="https://favze.com/" style="display:inline-flex;align-items:center;justify-content:center;padding:15px 24px;border-radius:999px;font-family:'DM Sans',sans-serif;font-size:.98rem;font-weight:800;text-decoration:none;background:#064187;color:#fff;border:1.5px solid #064187;box-shadow:0 6px 18px rgba(6,65,135,.22)">Back to Homepage</a>
-        <a href="https://favze.com/services" style="display:inline-flex;align-items:center;justify-content:center;padding:15px 24px;border-radius:999px;font-family:'DM Sans',sans-serif;font-size:.98rem;font-weight:800;text-decoration:none;background:#eef4fb;color:#064187;border:1.5px solid #064187">Explore Our Services</a>
+      <div class="ty-btns">
+        <a href="https://favze.com/" class="ty-btn" style="display:inline-flex;align-items:center;justify-content:center;padding:15px 24px;border-radius:999px;font-family:'DM Sans',sans-serif;font-size:.98rem;font-weight:800;text-decoration:none;background:#064187;color:#fff;border:1.5px solid #064187;box-shadow:0 6px 18px rgba(6,65,135,.22)">Back to Homepage</a>
+        <a href="https://favze.com/services" class="ty-btn" style="display:inline-flex;align-items:center;justify-content:center;padding:15px 24px;border-radius:999px;font-family:'DM Sans',sans-serif;font-size:.98rem;font-weight:800;text-decoration:none;background:#eef4fb;color:#064187;border:1.5px solid #064187">Explore Our Services</a>
       </div>
     </div>
   </div>
@@ -1572,13 +1580,13 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
   <div style="max-width:1160px;margin:0 auto">
     <h2 style="margin:0 0 8px">Keep exploring</h2>
     <p style="margin:0 0 24px">Plain-English guides and tools for local businesses.</p>
-    <div style="display:flex;flex-wrap:wrap;gap:12px">
-      <a href="https://favze.com/resources/comparisons" style="display:inline-flex;align-items:center;justify-content:center;padding:15px 24px;border-radius:999px;font-family:'DM Sans',sans-serif;font-size:.98rem;font-weight:800;text-decoration:none;background:#eef4fb;color:#064187;border:1.5px solid #064187">Comparisons</a>
-      <a href="https://favze.com/resources/glossary" style="display:inline-flex;align-items:center;justify-content:center;padding:15px 24px;border-radius:999px;font-family:'DM Sans',sans-serif;font-size:.98rem;font-weight:800;text-decoration:none;background:#eef4fb;color:#064187;border:1.5px solid #064187">Glossary</a>
-      <a href="https://favze.com/resources/articles" style="display:inline-flex;align-items:center;justify-content:center;padding:15px 24px;border-radius:999px;font-family:'DM Sans',sans-serif;font-size:.98rem;font-weight:800;text-decoration:none;background:#eef4fb;color:#064187;border:1.5px solid #064187">Articles</a>
-      <a href="https://favze.com/our-process" style="display:inline-flex;align-items:center;justify-content:center;padding:15px 24px;border-radius:999px;font-family:'DM Sans',sans-serif;font-size:.98rem;font-weight:800;text-decoration:none;background:#eef4fb;color:#064187;border:1.5px solid #064187">Our Process</a>
-      <a href="https://favze.com/about" style="display:inline-flex;align-items:center;justify-content:center;padding:15px 24px;border-radius:999px;font-family:'DM Sans',sans-serif;font-size:.98rem;font-weight:800;text-decoration:none;background:#eef4fb;color:#064187;border:1.5px solid #064187">About Riley</a>
-      <a href="https://favze.com/areas-served" style="display:inline-flex;align-items:center;justify-content:center;padding:15px 24px;border-radius:999px;font-family:'DM Sans',sans-serif;font-size:.98rem;font-weight:800;text-decoration:none;background:#eef4fb;color:#064187;border:1.5px solid #064187">Areas We Serve</a>
+    <div class="ty-links">
+      <a href="https://favze.com/resources/comparisons" class="ty-btn" style="display:inline-flex;align-items:center;justify-content:center;padding:15px 24px;border-radius:999px;font-family:'DM Sans',sans-serif;font-size:.98rem;font-weight:800;text-decoration:none;background:#eef4fb;color:#064187;border:1.5px solid #064187">Comparisons</a>
+      <a href="https://favze.com/resources/glossary" class="ty-btn" style="display:inline-flex;align-items:center;justify-content:center;padding:15px 24px;border-radius:999px;font-family:'DM Sans',sans-serif;font-size:.98rem;font-weight:800;text-decoration:none;background:#eef4fb;color:#064187;border:1.5px solid #064187">Glossary</a>
+      <a href="https://favze.com/resources/articles" class="ty-btn" style="display:inline-flex;align-items:center;justify-content:center;padding:15px 24px;border-radius:999px;font-family:'DM Sans',sans-serif;font-size:.98rem;font-weight:800;text-decoration:none;background:#eef4fb;color:#064187;border:1.5px solid #064187">Articles</a>
+      <a href="https://favze.com/our-process" class="ty-btn" style="display:inline-flex;align-items:center;justify-content:center;padding:15px 24px;border-radius:999px;font-family:'DM Sans',sans-serif;font-size:.98rem;font-weight:800;text-decoration:none;background:#eef4fb;color:#064187;border:1.5px solid #064187">Our Process</a>
+      <a href="https://favze.com/about" class="ty-btn" style="display:inline-flex;align-items:center;justify-content:center;padding:15px 24px;border-radius:999px;font-family:'DM Sans',sans-serif;font-size:.98rem;font-weight:800;text-decoration:none;background:#eef4fb;color:#064187;border:1.5px solid #064187">About Riley</a>
+      <a href="https://favze.com/areas-served" class="ty-btn" style="display:inline-flex;align-items:center;justify-content:center;padding:15px 24px;border-radius:999px;font-family:'DM Sans',sans-serif;font-size:.98rem;font-weight:800;text-decoration:none;background:#eef4fb;color:#064187;border:1.5px solid #064187">Areas We Serve</a>
     </div>
   </div>
 </section>
