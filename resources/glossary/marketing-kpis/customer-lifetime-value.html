@@ -1480,6 +1480,15 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
   ]
 }
 </script>
+<style id="fz-layout-fix">
+.gl-grid,.gl-svc-grid,.cp-grid,.fz-res-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr));gap:20px;align-items:stretch}
+.gl-svc-card,.cp-card,.fz-gl-more-card{display:flex;flex-direction:column;height:100%;box-sizing:border-box}
+.gl-svc-card>*:last-child,.cp-card>*:last-child,.fz-gl-more-card>*:last-child{margin-top:auto}
+.cp-card-go,.gl-svc-card a.btn,.fz-gl-more-card a{display:inline-flex;align-items:center;justify-content:center;gap:6px;box-sizing:border-box}
+@media (min-width:600px){.cp-card-go,.gl-svc-card a.btn,.fz-gl-more-card a{white-space:nowrap;min-width:max-content;padding-left:22px;padding-right:22px}}
+@media (max-width:599px){.cp-card-go,.gl-svc-card a.btn,.fz-gl-more-card a{white-space:normal;width:100%;text-align:center;padding-left:16px;padding-right:16px}}
+main section,.gl-wrap,.cp-wrap,.gl-hero,.cp-hero{padding-left:clamp(20px,5%,48px)!important;padding-right:clamp(20px,5%,48px)!important}
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
