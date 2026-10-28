@@ -1417,6 +1417,132 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
 @media (min-width:768px){.ty-links{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media (min-width:1024px){.ty-links{grid-template-columns:repeat(6,minmax(0,1fr))}}
 </style>
+<style id="ty-dest">
+/* ============================================================
+   DESTINATIONS
+   ============================================================ */
+.dest{padding:72px 5%}
+.dest-in{max-width:1200px;margin:0 auto}
+.dest-head{text-align:center;margin-bottom:40px}
+.dest-head h2{font-family:'Barlow Condensed',sans-serif;font-weight:900;text-transform:uppercase;font-size:clamp(26px,3.8vw,38px);line-height:.92;color:var(--ink)}
+.dest-head p{color:var(--muted);margin-top:10px;font-size:16px}
+.dest-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.dest-card{
+  display:block;background:#fff;border:1px solid var(--line);border-radius:14px;
+  padding:26px 22px;transition:transform .25s,box-shadow .25s,border-color .25s;
+  position:relative;overflow:hidden;
+}
+.dest-card::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--navy),var(--teal));
+  transform:scaleX(0);transform-origin:left;transition:transform .28s;
+}
+.dest-card:hover{transform:translateY(-5px);box-shadow:0 16px 36px rgba(6,65,135,.11);border-color:transparent}
+.dest-card:hover::before{transform:scaleX(1)}
+.dest-ic{width:44px;height:44px;border-radius:10px;background:rgba(10,137,163,.09);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.dest-ic svg{width:22px;height:22px;stroke:var(--navy);fill:none;stroke-width:1.8}
+.dest-card h3{font-family:'Barlow Condensed',sans-serif;font-weight:900;text-transform:uppercase;font-size:20px;line-height:.92;color:var(--ink);margin-bottom:8px}
+.dest-card p{font-size:14px;color:var(--muted);line-height:1.55}
+.dest-card .go{margin-top:14px;font-weight:700;font-size:13px;color:var(--teal);display:inline-flex;align-items:center;gap:5px}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer{background:#04305f;color:#cdd8e6}
+
+/* Scrolling city strip */
+.ft-scroll-strip{
+  border-bottom:1px solid rgba(255,255,255,.07);
+  padding:0;overflow:hidden;
+  display:flex;align-items:center;
+}
+.ft-scroll-track-wrap{
+  flex:1;overflow:hidden;position:relative;padding:11px 0;
+}
+.ft-scroll-track-wrap::before,.ft-scroll-track-wrap::after{
+  content:"";position:absolute;top:0;bottom:0;width:40px;z-index:2;pointer-events:none;
+}
+.ft-scroll-track-wrap::before{left:0;background:linear-gradient(to right,#04305f,transparent)}
+.ft-scroll-track-wrap::after{right:0;background:linear-gradient(to left,#04305f,transparent)}
+.ft-scroll-track{
+  display:flex;align-items:center;gap:0;white-space:nowrap;
+  animation:ftScroll 44s linear infinite;
+}
+.ft-scroll-track:hover{animation-play-state:paused}
+.ft-scroll-track a{font-size:.78rem;color:rgba(255,255,255,.4)!important;padding:0 4px;transition:color .2s;flex-shrink:0}
+.ft-scroll-track a:hover{color:rgba(255,255,255,.8)!important}
+.ft-scroll-dot{font-size:.78rem;color:rgba(255,255,255,.18)!important;padding:0 5px;flex-shrink:0}
+@keyframes ftScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ft-scroll-right{display:flex;align-items:center;gap:6px;white-space:nowrap;flex-shrink:0;padding:0 5% 0 16px;font-size:.62rem;font-weight:700;letter-spacing:.1em;color:var(--teal)!important;text-transform:uppercase}
+
+/* Trust bar */
+.ft-trust-bar{border-bottom:1px solid rgba(255,255,255,.07);padding:11px 5%}
+.ft-trust-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;flex-wrap:wrap;justify-content:center}
+.ft-trust-item{display:flex;align-items:center;gap:7px;font-size:.72rem;font-weight:600;color:rgba(255,255,255,.45)!important;padding:4px 20px}
+.ft-trust-sep{width:1px;height:16px;background:rgba(255,255,255,.1);flex-shrink:0}
+
+/* Footer grid */
+.ft-inner{padding:52px 5% 0}
+.ft-top{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:44px}
+.fb-logo-wrap{display:inline-flex;align-items:center;background:#fff;border-radius:8px;padding:5px 12px;margin-bottom:14px}
+.fb-logo-wrap img{height:26px;width:auto}
+.fb-desc{font-size:.85rem;color:rgba(255,255,255,.45)!important;line-height:1.65;max-width:300px}
+
+/* Social icons */
+.ft-social{display:grid;grid-template-columns:repeat(3,34px);gap:8px;margin-top:18px}
+.ft-social a{
+  width:34px;height:34px;border-radius:8px;
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);
+  display:flex;align-items:center;justify-content:center;
+  color:rgba(255,255,255,.45)!important;transition:background .2s,color .2s,border-color .2s;
+}
+.ft-social a:hover{background:var(--teal);border-color:var(--teal);color:#fff!important}
+.ft-social svg{width:16px;height:16px;fill:currentColor;stroke:none}
+
+/* Footer cols */
+.ft-col h4{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35)!important;margin-bottom:14px}
+.ft-col a{display:block;font-size:.85rem;color:rgba(255,255,255,.55)!important;padding:5px 0;transition:color .2s}
+.ft-col a:hover{color:#fff!important}
+.fcon{display:flex;flex-direction:column;gap:2px;margin-top:4px}
+.fcon a{display:flex;align-items:center;gap:8px;font-size:.83rem;color:rgba(255,255,255,.5)!important;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.fcon a:hover{color:#fff!important}
+.fcon svg{flex-shrink:0;opacity:.6}
+
+/* Bottom bar */
+.fb-bot{
+  max-width:1200px;margin:0 auto;
+  padding:18px 0 24px;display:flex;flex-wrap:wrap;align-items:center;
+  justify-content:space-between;gap:10px;
+  border-top:1px solid rgba(255,255,255,.07);
+}
+.fb-bot p{font-size:.78rem;color:rgba(255,255,255,.3)!important}
+.fb-bot-links{display:flex;gap:18px;flex-wrap:wrap}
+.fb-bot-links a{font-size:.78rem;color:rgba(255,255,255,.35)!important;transition:color .2s}
+.fb-bot-links a:hover{color:#fff!important}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media(max-width:1024px){
+  .dest-grid{grid-template-columns:repeat(3,1fr)}
+  .ft-top{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .nl{display:none}
+  .hb{display:flex}
+  .dest-grid{grid-template-columns:repeat(2,1fr)}
+  .ft-top{grid-template-columns:1fr}
+  .ft-scroll-right{display:none}
+}
+@media(max-width:480px){
+  .dest-grid{grid-template-columns:1fr}
+  .hero{padding:60px 5% 72px}
+}
+
+.dest-card{border:1px solid #d7e3ee!important;background:#fff!important}
+@media (max-width:1023px){.dest-grid{grid-template-columns:repeat(2,1fr)!important}}
+@media (max-width:599px){.dest-grid{grid-template-columns:1fr!important}}
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -1576,20 +1702,53 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
     </div>
   </div>
 </section>
-<section class="fz-blk" style="padding:clamp(48px,6vw,80px) 5%">
-  <div style="max-width:1160px;margin:0 auto">
-    <h2 style="margin:0 0 8px">Keep exploring</h2>
-    <p style="margin:0 0 24px">Plain-English guides and tools for local businesses.</p>
-    <div class="ty-links">
-      <a href="https://favze.com/resources/comparisons" class="ty-btn" style="display:inline-flex;align-items:center;justify-content:center;padding:15px 24px;border-radius:999px;font-family:'DM Sans',sans-serif;font-size:.98rem;font-weight:800;text-decoration:none;background:#eef4fb;color:#064187;border:1.5px solid #064187">Comparisons</a>
-      <a href="https://favze.com/resources/glossary" class="ty-btn" style="display:inline-flex;align-items:center;justify-content:center;padding:15px 24px;border-radius:999px;font-family:'DM Sans',sans-serif;font-size:.98rem;font-weight:800;text-decoration:none;background:#eef4fb;color:#064187;border:1.5px solid #064187">Glossary</a>
-      <a href="https://favze.com/resources/articles" class="ty-btn" style="display:inline-flex;align-items:center;justify-content:center;padding:15px 24px;border-radius:999px;font-family:'DM Sans',sans-serif;font-size:.98rem;font-weight:800;text-decoration:none;background:#eef4fb;color:#064187;border:1.5px solid #064187">Articles</a>
-      <a href="https://favze.com/our-process" class="ty-btn" style="display:inline-flex;align-items:center;justify-content:center;padding:15px 24px;border-radius:999px;font-family:'DM Sans',sans-serif;font-size:.98rem;font-weight:800;text-decoration:none;background:#eef4fb;color:#064187;border:1.5px solid #064187">Our Process</a>
-      <a href="https://favze.com/about" class="ty-btn" style="display:inline-flex;align-items:center;justify-content:center;padding:15px 24px;border-radius:999px;font-family:'DM Sans',sans-serif;font-size:.98rem;font-weight:800;text-decoration:none;background:#eef4fb;color:#064187;border:1.5px solid #064187">About Riley</a>
-      <a href="https://favze.com/areas-served" class="ty-btn" style="display:inline-flex;align-items:center;justify-content:center;padding:15px 24px;border-radius:999px;font-family:'DM Sans',sans-serif;font-size:.98rem;font-weight:800;text-decoration:none;background:#eef4fb;color:#064187;border:1.5px solid #064187">Areas We Serve</a>
+<section class="dest" aria-label="Keep exploring">
+  <div class="dest-in">
+    <div class="dest-head">
+      <h2>Keep Exploring</h2>
+      <p>Plain-English guides and tools for local businesses.</p>
+    </div>
+    <div class="dest-grid">
+      <a href="https://favze.com/resources/comparisons" class="dest-card">
+        <div class="dest-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg></div>
+        <h3>Comparisons</h3>
+        <p>Side-by-side answers on SEO, Google Ads, AEO, GEO, and more.</p>
+        <span class="go">Browse comparisons &rarr;</span>
+      </a>
+      <a href="https://favze.com/resources/glossary" class="dest-card">
+        <div class="dest-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5L21 21"/></svg></div>
+        <h3>Glossary</h3>
+        <p>Marketing terms explained in plain English.</p>
+        <span class="go">Browse glossary &rarr;</span>
+      </a>
+      <a href="https://favze.com/resources/articles" class="dest-card">
+        <div class="dest-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+        <h3>Articles</h3>
+        <p>Practical guides for local business owners.</p>
+        <span class="go">Read articles &rarr;</span>
+      </a>
+      <a href="https://favze.com/our-process" class="dest-card">
+        <div class="dest-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8c0-1.1 1-2 2-1.7a2 2 0 0 1 0 3.7C13 10.5 12 11.4 12 12.5"/><circle cx="12" cy="16" r=".8" fill="currentColor" stroke="none"/></svg></div>
+        <h3>Our Process</h3>
+        <p>How we work with you, from the first call to results.</p>
+        <span class="go">See our process &rarr;</span>
+      </a>
+      <a href="https://favze.com/about" class="dest-card">
+        <div class="dest-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+        <h3>About Riley</h3>
+        <p>Who is behind Favze and the work behind it.</p>
+        <span class="go">Meet Riley &rarr;</span>
+      </a>
+      <a href="https://favze.com/areas-served" class="dest-card">
+        <div class="dest-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11l3 3v13H5z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg></div>
+        <h3>Areas We Serve</h3>
+        <p>Northern Indiana and Michiana businesses we help.</p>
+        <span class="go">See areas served &rarr;</span>
+      </a>
     </div>
   </div>
 </section>
+
 </main>
 <footer class="ft-std">
   <div class="ft-inner">
