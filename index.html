@@ -3364,20 +3364,6 @@ footer.ft-std .ft-dot{color:rgba(255,255,255,.18);padding:0 6px}
     window.addEventListener('resize', function() { samPositionTo(samCurrent); });
   }
 
-  // ── CURSOR GLOW (everywhere, always on) ──
-  var cursorGlow = document.createElement('div');
-  cursorGlow.className = 'cursor-glow';
-  cursorGlow.id = 'cursorGlow';
-  document.body.appendChild(cursorGlow);
-  document.addEventListener('mousemove', function(e) {
-    cursorGlow.style.left = e.clientX + 'px';
-    cursorGlow.style.top = e.clientY + 'px';
-    cursorGlow.style.opacity = '1';
-  }, { passive: true });
-  document.addEventListener('mouseleave', function() {
-    cursorGlow.style.opacity = '0';
-  });
-
   // ── 3D TILT ON FAVZE CARDS ──
   var tiltCards = document.querySelectorAll('.favze-grid .ct');
   tiltCards.forEach(function(card) {

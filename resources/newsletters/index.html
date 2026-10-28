@@ -1943,19 +1943,6 @@ footer.ft-std .ft-dot{color:rgba(255,255,255,.18);padding:0 6px}
 </footer>
 <script>
 (function() {
-  // ── CURSOR GLOW ──
-  var cursorGlow = document.createElement('div');
-  cursorGlow.className = 'cursor-glow';
-  document.body.appendChild(cursorGlow);
-  document.addEventListener('mousemove', function(e) {
-    cursorGlow.style.left = e.clientX + 'px';
-    cursorGlow.style.top = e.clientY + 'px';
-    cursorGlow.style.opacity = '1';
-  }, { passive: true });
-  document.addEventListener('mouseleave', function() {
-    cursorGlow.style.opacity = '0';
-  });
-
   // ── 3D TILT ON CARDS ──
   var tiltCards = document.querySelectorAll('.nc-card, .why-card');
   tiltCards.forEach(function(card) {
