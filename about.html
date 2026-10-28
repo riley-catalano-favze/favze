@@ -2828,32 +2828,6 @@ footer.ft-std .ft-dot{color:rgba(255,255,255,.18);padding:0 6px}
     }
   });
 
-  // Custom cursor (mouse devices only, never on touch)
-  if (window.matchMedia && window.matchMedia('(pointer: fine)').matches) {
-    document.body.classList.add('');
-    var cursorDot = document.getElementById('cursorDot');
-    var cursorRing = document.getElementById('cursorRing');
-    var mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
-    window.addEventListener('mousemove', function(e) {
-      mouseX = e.clientX; mouseY = e.clientY;
-      cursorDot.style.transform = 'translate(' + mouseX + 'px,' + mouseY + 'px) translate(-50%,-50%)';
-    });
-    function ringLoop() {
-      ringX += (mouseX - ringX) * 0.18;
-      ringY += (mouseY - ringY) * 0.18;
-      cursorRing.style.transform = 'translate(' + ringX + 'px,' + ringY + 'px) translate(-50%,-50%)';
-      requestAnimationFrame(ringLoop);
-    }
-    requestAnimationFrame(ringLoop);
-    var hoverTargets = 'a, button, .bp, .bs, .bgh, .bw, .bs-wh, .svc-card, .bcard, .fw-step, .art-card';
-    document.addEventListener('mouseover', function(e) {
-      if (e.target.closest(hoverTargets)) cursorRing.classList.add('cursor-hover');
-    });
-    document.addEventListener('mouseout', function(e) {
-      if (e.target.closest(hoverTargets)) cursorRing.classList.remove('cursor-hover');
-    });
-  }
-
   // Framework section color burst (matches homepage visual direction)
   var visFlash = document.getElementById('visFlash');
   var frameworkSec = document.getElementById('frameworkSec');
