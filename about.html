@@ -1768,6 +1768,20 @@ html body section.hero{padding:80px 5%}
 @media (min-width:769px){.hero h1{font-size:clamp(2.8rem,6vw,5.2rem)!important}}
 @media (max-width:768px){html body section.hero{padding:48px 5% 52px!important}}
 </style>
+<style id="fz-about-cta">
+.fz-ab-cta{max-width:1160px;margin:48px auto;padding:0 5%}
+.fz-ab-cta-in{background:#0a0a0a;border-radius:18px;padding:clamp(28px,4vw,44px);display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between;position:relative;overflow:hidden}
+.fz-ab-cta-in::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 0%,rgba(10,137,163,.22),transparent 60%);pointer-events:none}
+.fz-ab-cta-copy{position:relative;max-width:620px;flex:1 1 320px}
+.fz-ab-cta-t{font-family:'Barlow Condensed','Arial Black',sans-serif;font-weight:900;text-transform:uppercase;font-size:clamp(28px,3.4vw,44px);line-height:1;color:#fff;margin:0 0 12px}
+.fz-ab-cta-d{color:rgba(255,255,255,.72);font-size:1rem;line-height:1.6;margin:0}
+.fz-ab-cta-acts{position:relative;display:flex;flex-wrap:wrap;gap:12px}
+.fz-ab-btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:999px;font-family:'DM Sans',sans-serif;font-weight:700;font-size:.98rem;text-decoration:none;white-space:nowrap;background:#064187;color:#fff;border:1.5px solid #064187;box-shadow:0 6px 18px rgba(6,65,135,.3);transition:background .2s,border-color .2s}
+.fz-ab-btn:hover{background:#0A89A3;border-color:#0A89A3}
+.fz-ab-btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4);box-shadow:none}
+.fz-ab-btn-ghost:hover{background:#fff;color:#0a0a0a;border-color:#fff}
+@media (max-width:600px){.fz-ab-cta-acts{width:100%}.fz-ab-btn{width:100%;justify-content:center;white-space:normal}}
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -2085,7 +2099,7 @@ html body section.hero{padding:80px 5%}
     </div>
     
   </div>
-<div class="ab-cta" style="max-width:1000px;margin:40px auto;padding:0 5%"><div style="background:#064187;color:#fff;padding:32px 36px;display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between"><div style="min-width:220px;flex:1 1 300px"><p style="font-family:'Barlow Condensed','Arial Black',sans-serif;font-weight:900;text-transform:uppercase;font-size:clamp(1.4rem,2.6vw,1.9rem);margin:0 0 6px;line-height:1.1">Ready to be the business people find?</p><p style="margin:0;opacity:.88;font-size:.98rem;line-height:1.6">Book a free consultation with Riley. You talk to the person doing the work, and you leave with a plan.</p></div><div style="display:flex;gap:12px;flex-wrap:wrap"><a href="https://favze.com/free-consultation" style="display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:999px;font-weight:700;text-decoration:none;background:#0A89A3;color:#fff;font-family:'DM Sans',sans-serif">Book a Free Consultation &rarr;</a></div></div></div>
+<div class="fz-ab-cta"><div class="fz-ab-cta-in"><div class="fz-ab-cta-copy"><h2 class="fz-ab-cta-t">Ready to be the business people find?</h2><p class="fz-ab-cta-d">Book a free consultation with Riley. You talk to the person doing the work, and you leave with a plan.</p></div><div class="fz-ab-cta-acts"><a class="fz-ab-btn" href="https://favze.com/free-consultation">Book a Free Consultation &rarr; &rarr;</a></div></div></div>
 </section>
 
 <!-- COMPARISON -->
@@ -2117,7 +2131,7 @@ html body section.hero{padding:80px 5%}
       </table>
     </div>
   </div>
-<div class="ab-cta" style="max-width:1000px;margin:40px auto;padding:0 5%"><div style="background:#064187;color:#fff;padding:32px 36px;display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between"><div style="min-width:220px;flex:1 1 300px"><p style="font-family:'Barlow Condensed','Arial Black',sans-serif;font-weight:900;text-transform:uppercase;font-size:clamp(1.4rem,2.6vw,1.9rem);margin:0 0 6px;line-height:1.1">Ready to be the business people find?</p><p style="margin:0;opacity:.88;font-size:.98rem;line-height:1.6">Book a free consultation with Riley. You talk to the person doing the work, and you leave with a plan.</p></div><div style="display:flex;gap:12px;flex-wrap:wrap"><a href="https://favze.com/free-consultation" style="display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:999px;font-weight:700;text-decoration:none;background:#0A89A3;color:#fff;font-family:'DM Sans',sans-serif">Book a Free Consultation &rarr;</a></div></div></div>
+<div class="fz-ab-cta"><div class="fz-ab-cta-in"><div class="fz-ab-cta-copy"><h2 class="fz-ab-cta-t">Ready to be the business people find?</h2><p class="fz-ab-cta-d">Book a free consultation with Riley. You talk to the person doing the work, and you leave with a plan.</p></div><div class="fz-ab-cta-acts"><a class="fz-ab-btn" href="https://favze.com/free-consultation">Book a Free Consultation &rarr; &rarr;</a></div></div></div>
 </section>
 
 <section class="success-sec" aria-labelledby="successTitle" style="background:#fff;padding:72px 5%;text-align:center">
@@ -2255,7 +2269,7 @@ html body section.hero{padding:80px 5%}
     </div>
   </div>
 </section>
-<div class="ab-cta" style="max-width:1000px;margin:40px auto;padding:0 5%"><div style="background:#064187;color:#fff;padding:32px 36px;display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between"><div style="min-width:220px;flex:1 1 300px"><p style="font-family:'Barlow Condensed','Arial Black',sans-serif;font-weight:900;text-transform:uppercase;font-size:clamp(1.4rem,2.6vw,1.9rem);margin:0 0 6px;line-height:1.1">See the whole journey, step by step</p><p style="margin:0;opacity:.88;font-size:.98rem;line-height:1.6">Every step is laid out, from your first call to your first results. No hidden fees along the way.</p></div><div style="display:flex;gap:12px;flex-wrap:wrap"><a href="https://favze.com/our-process" style="display:inline-block;padding:14px 26px;border-radius:0;font-weight:700;text-decoration:none;background:#fff;color:#064187">See Our Process</a><a href="https://favze.com/free-consultation" style="display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:999px;font-weight:700;text-decoration:none;background:#0A89A3;color:#fff;font-family:'DM Sans',sans-serif">Book a Free Consultation &rarr;</a></div></div></div>
+<div class="fz-ab-cta"><div class="fz-ab-cta-in"><div class="fz-ab-cta-copy"><h2 class="fz-ab-cta-t">See the whole journey, step by step</h2><p class="fz-ab-cta-d">Every step is laid out, from your first call to your first results. No hidden fees along the way.</p></div><div class="fz-ab-cta-acts"><a class="fz-ab-btn" href="https://favze.com/our-process">See Our Process &rarr;</a><a class="fz-ab-btn fz-ab-btn-ghost" href="https://favze.com/free-consultation">Book a Free Consultation &rarr; &rarr;</a></div></div></div>
 
 <!-- CERTIFICATIONS & LEARNING -->
 <section class="who-sec" id="certifications">
@@ -2588,7 +2602,7 @@ footer.ft-std .ft-dot{color:rgba(255,255,255,.18);padding:0 6px}
   <style>@media (max-width:768px){.fz-home-map-grid{grid-template-columns:1fr!important}}</style>
   <div class="fz-home-map-grid" style="max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center">
     <div>
-      <h2 id="fzHomeMapTitle" style="font-family:'Barlow Condensed','Arial Black',sans-serif;font-size:clamp(1.8rem,3vw,2.4rem);font-weight:900;text-transform:uppercase;color:#0a0a0a;margin:0 0 12px;line-height:1">Middlebury, Indiana is our home</h2>
+      <h2 id="fzHomeMapTitle" style="font-family:'Barlow Condensed','Arial Black',sans-serif;font-size:clamp(1.8rem,3vw,2.4rem);font-weight:900;text-transform:uppercase;color:#0a0a0a;margin:0 0 12px;line-height:1">Middlebury, Elkhart County, Indiana is our home</h2>
       <p style="color:#555;line-height:1.7;margin:0 0 20px">We may be based in <a href="https://favze.com/areas-served/elkhart-county/middlebury" style="color:#064187;text-decoration:underline;text-underline-offset:2px">Middlebury</a>, Indiana, but we serve far more than that, from <a href="https://favze.com/areas-served/berrien-county" style="color:#064187;text-decoration:underline;text-underline-offset:2px">Berrien County, Michigan</a> to <a href="https://favze.com/areas-served/porter-county" style="color:#064187;text-decoration:underline;text-underline-offset:2px">Porter County</a> and beyond across <a href="https://favze.com/areas-served/northern-indiana" style="color:#064187;text-decoration:underline;text-underline-offset:2px">Northern Indiana</a> and <a href="https://favze.com/areas-served/michiana" style="color:#064187;text-decoration:underline;text-underline-offset:2px">Michiana</a>.</p>
       <div style="display:flex;flex-wrap:wrap;gap:12px"><a href="https://favze.com/areas-served" style="display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:999px;font-weight:700;text-decoration:none;background:#064187;color:#fff;font-family:'DM Sans',sans-serif">See the Areas We Serve &rarr;</a></div>
     </div>
