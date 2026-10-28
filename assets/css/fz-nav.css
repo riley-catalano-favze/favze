@@ -58,3 +58,6 @@ html body nav ul.fz-nl .drop-panel a.fz-cta-solid:hover{background:#0A89A3;borde
 
 /* Body sits flush under the sticky header on every page (some legacy pages carry the browser default 8px top margin) */
 html body{margin-top:0!important}
+
+/* Mobile menu open: keep the sticky header in place (scroll lock on body breaks sticky) */
+html body:has(#mm.open){overflow:visible!important}
