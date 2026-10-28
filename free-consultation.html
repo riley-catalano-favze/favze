@@ -1574,7 +1574,11 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
       <div class="fc-title">Claim Your Free Consultation</div>
       <p class="fc-sub">Fill this out and Riley will reach out within one business day to schedule your call. No commitment required.</p>
 
-      <div class="tally-wrap">
+      <div class="gbp-audit-note" id="gbp-audit" style="border:1px solid #cfe6ec;border-radius:12px;padding:14px 16px;margin:0 0 16px;background:#f3fbfd">
+          <strong style="display:block;margin-bottom:4px">Want a free Google Business Profile audit?</strong>
+          <span style="font-size:14px;line-height:1.5">Choose the consultation below and mention the audit in your message. Riley will review your Google listing and reach out to walk you through it.</span>
+        </div>
+        <div class="tally-wrap">
         <iframe
           data-tally-src="https://tally.so/embed/aQjrzb?alignLeft=1&hideTitle=1&transparentBackground=1&formEventsForwarding=1"
           loading="lazy"
@@ -1585,6 +1589,9 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
           marginwidth="0"
           title="Claim Your Free Consultation Hero">
         </iframe>
+        <script>
+(function(){try{var p=new URLSearchParams(location.search);if(p.get('reason')==='gbp-audit'){var t=document.querySelector('#consultation-form .fc-title');if(t)t.textContent='Request Your Free Google Business Profile Audit';var f=document.querySelector('[data-tally-src*="aQjrzb"]');if(f){f.setAttribute('data-tally-src',f.getAttribute('data-tally-src')+'&reason=gbp-audit');}var n=document.getElementById('gbp-audit');if(n)n.querySelector('strong').textContent='You are requesting your free Google Business Profile audit.';}}catch(e){}})();
+</script>
       </div>
     </div>
   </div>
@@ -1924,7 +1931,6 @@ footer.ft-std .ft-dot{color:rgba(255,255,255,.18);padding:0 6px}
 </main>
 <footer class="ft-std">
   <div class="ft-inner">
-    <p class="ft-audit" style="margin:0 0 12px"><a href="https://favze.com/free-consultation?reason=gbp-audit" style="color:inherit;text-decoration:underline">Get a Free Google Business Profile Audit</a></p>
     <div class="ft-top">
       <div>
         <a href="https://favze.com/"><div style="display:inline-flex;align-items:center;background:#fff;border-radius:8px;padding:5px 12px">
@@ -2036,6 +2042,9 @@ footer.ft-std .ft-dot{color:rgba(255,255,255,.18);padding:0 6px}
             <a href="https://favze.com/full-digital-marketing-audit">
               <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M4.5 1.5h4M4 2.5H3a1 1 0 0 0-1 1v7.5a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V3.5a1 1 0 0 0-1-1H9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><path d="M4.3 7.2l1.4 1.4 2.9-2.9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               Free Full Digital Marketing Audit
+            </a>
+            <a href="https://favze.com/free-consultation?reason=gbp-audit">
+              Free Google Business Profile Audit
             </a>
           </div>
         </div>
