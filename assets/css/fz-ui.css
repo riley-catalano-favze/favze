@@ -756,3 +756,15 @@ footer .ft-cols > div:nth-child(1) {
 footer .ft-cols > div:nth-child(2) {  
   grid-column: 2 / 3;
 }
+
+/* Shared section spacing scale (landing pages).
+   Content sections: 96px desktop, 64px phone. Bands, forms and resource rows: 72px desktop, 48px phone.
+   Phone gutter is 16px. Hero sections are not changed here. */
+@media (min-width:769px){
+  .sec,.fz-blk.fz-3d-sec,.fz-blk.fz-cmo,.fz-blk.fz-price,.fz-blk.fz-why,.fz-blk.fz-goals,.fz-sec-white.fz-lit{padding-top:96px!important;padding-bottom:96px!important}
+  .ct-band,.fz-smband,.fz-duo-sec,.fz-form-sec,.fz-related.fz-cluster,.fz-blk.rs-sec{padding-top:72px!important;padding-bottom:72px!important}
+}
+@media (max-width:768px){
+  .sec,.fz-blk.fz-3d-sec,.fz-blk.fz-cmo,.fz-blk.fz-price,.fz-blk.fz-why,.fz-blk.fz-goals,.fz-sec-white.fz-lit{padding-top:64px!important;padding-bottom:64px!important;padding-left:16px!important;padding-right:16px!important}
+  .ct-band,.fz-smband,.fz-duo-sec,.fz-form-sec,.fz-related.fz-cluster,.fz-blk.rs-sec{padding-top:48px!important;padding-bottom:48px!important;padding-left:16px!important;padding-right:16px!important}
+}
