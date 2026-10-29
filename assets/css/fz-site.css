@@ -42,15 +42,13 @@ html body .fz-icon-btn svg{display:block}
   html body nav .fz-nav-mob{display:flex;align-items:center;margin-left:auto;margin-right:4px}
 }
 
-/* ---- Cursor: dot and ring (mouse and trackpad only) ---- */
+/* ---- Cursor: small dot (mouse and trackpad only) ---- */
 html body .fz-cursor,html body .cursor-glow,html body .cursor-dot,html body .cursor-ring{display:none!important}
-@media(hover:none),(pointer:coarse){html body .fz-dot,html body .fz-ring{display:none!important}}
-.fz-dot,.fz-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:2147483646;border-radius:50%;opacity:0;will-change:transform}
+@media(hover:none),(pointer:coarse){html body .fz-dot{display:none!important}}
+.fz-dot{position:fixed;top:0;left:0;pointer-events:none;z-index:2147483646;border-radius:50%;opacity:0;will-change:transform}
 .fz-dot{width:7px;height:7px;margin:-3.5px 0 0 -3.5px;background:#0A89A3;transition:opacity .2s}
-.fz-ring{width:36px;height:36px;margin:-18px 0 0 -18px;border:1.5px solid rgba(10,137,163,.55);transition:opacity .2s,width .25s ease,height .25s ease,margin .25s ease,background-color .25s,border-color .25s}
-html.fz-cur-on .fz-dot,html.fz-cur-on .fz-ring{opacity:1}
-.fz-ring.is-hover{width:56px;height:56px;margin:-28px 0 0 -28px;background-color:rgba(10,137,163,.10);border-color:#0A89A3}
-.fz-ring.is-down{width:26px;height:26px;margin:-13px 0 0 -13px}
+html.fz-cur .fz-dot.on-blue{background:#fff;box-shadow:0 0 0 1px rgba(6,65,135,.45)}
+html.fz-cur-on .fz-dot{opacity:1}
 @media(hover:hover) and (pointer:fine){
   html.fz-cur,html.fz-cur *{cursor:none!important}
   html.fz-cur input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]),html.fz-cur textarea,html.fz-cur [contenteditable="true"]{cursor:text!important}
