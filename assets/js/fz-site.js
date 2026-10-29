@@ -19,7 +19,7 @@
   }
 
   /* ---------- Section backgrounds: white / grey / black rhythm on dark-heavy pages ---------- */
-  var SKIP_BLOCK = '.fz-own,.fz-gl-more,.fz-goals,.vis-sec,.fz-smband,.fz-nl-duo,.fz-cta-band,.fz-cluster,.rs-sec,.rs-hero,.fz-about-band,.svc-grid,.sm-wrap,.fz-org,.fzd,nav,footer,script,style,noscript,link,template,.mm,.fz-mbar,#stcm-wrapper,.fz-form-sec,.fz-dot,.fz-ring,.fz-blk,.fz-philo,.fz-areas,.fz-related,.fz-sidenav,.fz-chat,.fz-chat-launch';
+  var SKIP_BLOCK = '.fz-own,.fz-gl-more,.fz-goals,.vis-sec,.fz-smband,.fz-nl-duo,.fz-cta-band,.fz-cluster,.rs-sec,.rs-hero,.fz-about-band,.svc-grid,.sm-wrap,.fz-org,.fzd,nav,footer,script,style,noscript,link,template,.mm,.fz-mbar,#stcm-wrapper,.fz-form-sec,.fz-dot,.fz-blk,.fz-philo,.fz-areas,.fz-related,.fz-sidenav,.fz-chat,.fz-chat-launch';
   function blockTone(el) {
     for (var e = el; e && e !== D.documentElement; e = e.parentElement) {
       var cs = getComputedStyle(e);
@@ -256,33 +256,42 @@
   /* ---------- Cursor: dot and ring ---------- */
   function cursor() {
     if (!window.matchMedia || !matchMedia('(hover:hover) and (pointer:fine)').matches) return;
-    var dot = D.createElement('div'), ring = D.createElement('div');
-    dot.className = 'fz-dot'; ring.className = 'fz-ring';
-    dot.setAttribute('aria-hidden', 'true'); ring.setAttribute('aria-hidden', 'true');
-    D.body.appendChild(ring); D.body.appendChild(dot); H.classList.add('fz-cur');
-    var x = -100, y = -100, rx = -100, ry = -100;
-    var HOVER = 'a,button,[role="button"],input,select,textarea,label,summary,.other-card,.fz-rail-btn';
+    var dot = D.createElement('div');
+    dot.className = 'fz-dot';
+    dot.setAttribute('aria-hidden', 'true');
+    D.body.appendChild(dot); H.classList.add('fz-cur');
+    var x = -100, y = -100, lastEl = null;
+    /* Blue sits in the Favze palette: navy #064187 and teal #0A89A3 (plus gradients of both). */
+    function isBlue(rgb) {
+      var m = rgb.match(/\d+(\.\d+)?/g); if (!m || m.length < 3) return false;
+      var r = +m[0], g = +m[1], b = +m[2];
+      return b > 90 && b > r + 40 && b > g * 0.8 && r < 120;
+    }
+    function onBlue(el) {
+      /* Walk up to the nearest element that paints a background. */
+      for (var n = el, i = 0; n && n.nodeType === 1 && i < 12; n = n.parentElement, i++) {
+        var cs = getComputedStyle(n);
+        var bg = cs.backgroundColor;
+        if (bg && bg !== 'rgba(0, 0, 0, 0)' && bg !== 'transparent') return isBlue(bg);
+        if (/gradient/.test(cs.backgroundImage)) return /6,\s*65,\s*135|10,\s*137,\s*163/.test(cs.backgroundImage);
+      }
+      return false;
+    }
     D.addEventListener('mousemove', function (e) {
       x = e.clientX; y = e.clientY;
       dot.style.transform = 'translate3d(' + x + 'px,' + y + 'px,0)';
-      if (!H.classList.contains('fz-cur-on')) { rx = x; ry = y; H.classList.add('fz-cur-on'); }
+      if (!H.classList.contains('fz-cur-on')) H.classList.add('fz-cur-on');
     }, { passive: true });
     D.addEventListener('mouseover', function (e) {
       var t = e.target;
+      if (t === lastEl) return;
+      lastEl = t;
       if (t.tagName === 'IFRAME') { H.classList.remove('fz-cur-on'); return; }
-      ring.classList.toggle('is-hover', !!(t.closest && t.closest(HOVER)));
+      dot.classList.toggle('on-blue', onBlue(t));
     }, { passive: true });
-    D.addEventListener('mousedown', function () { ring.classList.add('is-down'); });
-    D.addEventListener('mouseup', function () { ring.classList.remove('is-down'); });
     H.addEventListener('mouseleave', function () { H.classList.remove('fz-cur-on'); });
     D.addEventListener('touchstart', function () { H.classList.remove('fz-cur-on'); }, { passive: true });
     D.addEventListener('pointerdown', function (e) { if (e.pointerType !== 'mouse') H.classList.remove('fz-cur-on'); }, { passive: true });
-    (function loop() {
-      var k = reduceMotion ? 1 : 0.2;
-      rx += (x - rx) * k; ry += (y - ry) * k;
-      ring.style.transform = 'translate3d(' + rx.toFixed(2) + 'px,' + ry.toFixed(2) + 'px,0)';
-      requestAnimationFrame(loop);
-    })();
   }
 
   /* ---------- Tally forms ---------- */
