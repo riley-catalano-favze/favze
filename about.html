@@ -1852,39 +1852,6 @@ html body .hero h1 .fz-h1-sub{margin-top:18px!important}
 
 
 <!-- SERVICES -->
-<section class="services-sec" style="background:linear-gradient(180deg,#eef6f8 0%,#f7fafc 100%)">
-  <div class="orb-field" aria-hidden="true">
-    <div class="orb" style="width:240px;height:240px;top:-50px;left:4%;background:radial-gradient(circle,rgba(10,137,163,.4) 0%,transparent 70%);animation-duration:17s,7s"></div>
-    <div class="orb" style="width:170px;height:170px;top:20%;right:6%;background:radial-gradient(circle,rgba(6,65,135,.38) 0%,transparent 70%);animation-duration:20s,6s;animation-delay:-5s,-2s"></div>
-    <div class="orb" style="width:110px;height:110px;bottom:12%;left:30%;background:radial-gradient(circle,rgba(10,137,163,.35) 0%,transparent 70%);animation-duration:13s,5.5s;animation-delay:-3s,-1.5s"></div>
-    <div class="orb" style="width:200px;height:200px;bottom:-50px;right:20%;background:radial-gradient(circle,rgba(6,65,135,.3) 0%,transparent 70%);animation-duration:22s,7.5s;animation-delay:-8s,-3s"></div>
-    <div class="orb" style="width:90px;height:90px;top:55%;left:10%;background:radial-gradient(circle,rgba(10,137,163,.4) 0%,transparent 70%);animation-duration:11s,4.5s;animation-delay:-2s,-1s"></div>
-  </div>
-  <div class="services-inner">
-    <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:20px">
-      <div class="services-top">
-        <span class="lbl">What Favze Does</span>
-        <h2 class="who-hl fh">12 Digital Marketing Services.<br><span>One Connected Strategy.</span></h2>
-        <p class="sub" style="margin-top:14px">Most agencies sell you services one at a time. You end up with a website team that's never met your ad team, and when nothing adds up, nobody's job to fix it. Every service below plugs into the same <a href="https://favze.com/favze-framework">FAVZE Framework</a>. Start with one. Run all twelve. Either way, it's built to work together.</p>
-      </div>
-      <a href="https://favze.com/services" class="bs" style="flex-shrink:0;white-space:nowrap">All Services <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6.5 2.5l3.5 3.5-3.5 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-    </div>
-
-    <!-- SCROLLING SERVICES STRIP -->
-    <div class="svc-scroll-outer">
-      <div class="svc-scroll-fade svc-scroll-fade-l"></div>
-      <div class="svc-scroll-fade svc-scroll-fade-r"></div>
-      <div class="svc-scroll-track" id="svcScrollTrack">
-        <!-- Populated by JS from SERVICES_DATA -->
-      </div>
-    </div>
-
-    <div class="services-cta">
-      <p><strong>Not sure which services you need?</strong> That's what the <a class="fz-il" href="https://favze.com/free-consultation">free consultation</a> is for. Favze figures out the right mix for your business and your budget.</p>
-      
-    </div>
-  </div>
-</section>
 
 <!-- AT A GLANCE -->
 <section class="glance-sec" id="at-a-glance">
@@ -2024,6 +1991,17 @@ html body .hero h1 .fz-h1-sub{margin-top:18px!important}
 </section>
 
 <!-- BELIEFS -->
+<style id="beliefs-row-css">
+#beliefs .beliefs-grid{display:flex!important;align-items:flex-start;grid-template-columns:none!important;overflow-x:auto;scroll-snap-type:x mandatory;gap:16px;padding:6px 2px 14px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+#beliefs .beliefs-grid::-webkit-scrollbar{display:none}
+#beliefs .beliefs-grid>.bcard{flex:0 0 min(420px,84vw);scroll-snap-align:start;min-width:0}
+#beliefs .beliefs-grid>.bcard-wide{flex:0 0 min(520px,86vw);display:grid!important;grid-template-columns:1fr!important;gap:18px}
+#beliefs .bl-wide-wrap{margin-top:28px}
+#beliefs .bl-nav{display:flex;justify-content:center;gap:12px;margin-top:18px}
+#beliefs .bl-nav button{width:44px;height:44px;border-radius:50%;border:1.5px solid #064187;background:#fff;color:#064187;font-size:20px;line-height:1;cursor:pointer}
+#beliefs .bl-nav button:disabled{opacity:.35;cursor:default}
+#beliefs .bl-nav button:focus-visible{outline:2px solid #0A89A3;outline-offset:2px}
+</style>
 <section class="beliefs-sec" id="beliefs">
   <div class="spotlight" data-spotlight></div>
   <div class="orb-field" aria-hidden="true">
@@ -2092,7 +2070,11 @@ html body .hero h1 .fz-h1-sub{margin-top:18px!important}
         <div class="bcard-toggle" role="button" tabindex="0">See it in practice <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 1v8M1 5h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
         <div class="bcard-more"><div class="bcard-more-inner">If results dip, you get a call within 48 hours explaining what changed and what happens next, not silence.<br><a href="https://favze.com/faq" class="bcard-cta">Read the Full FAQ <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6.5 2.5l3.5 3.5-3.5 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div>
       </div>
-      <div class="bcard bcard-wide">
+      
+    </div>
+<div class="bl-nav" role="group" aria-label="Scroll the beliefs"><button type="button" class="bl-prev" aria-label="Previous belief">&larr;</button><button type="button" class="bl-next" aria-label="Next belief">&rarr;</button></div>
+<script>(function(){var r=document.querySelector('#beliefs .beliefs-grid');if(!r)return;var pv=document.querySelector('#beliefs .bl-prev'),nx=document.querySelector('#beliefs .bl-next');function step(){var c=r.firstElementChild;return c?c.getBoundingClientRect().width+16:320;}function upd(){var max=r.scrollWidth-r.clientWidth-2;pv.disabled=r.scrollLeft<=2;nx.disabled=r.scrollLeft>=max;}pv.addEventListener('click',function(){r.scrollBy({left:-step(),behavior:'smooth'});});nx.addEventListener('click',function(){r.scrollBy({left:step(),behavior:'smooth'});});r.addEventListener('scroll',upd,{passive:true});window.addEventListener('resize',upd);upd();})();</script>
+<div class="bl-wide-wrap"><div class="bcard bcard-wide">
         <div>
           <div class="bcard-num">07 The Community Belief</div>
           <div class="bcard-icon" style="margin-bottom:16px;background:rgba(6,65,135,.35);border-color:rgba(6,65,135,.6)"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 17C10 17 3 12.5 3 7.5A4.5 4.5 0 0110 4a4.5 4.5 0 017 3.5C17 12.5 10 17 10 17z" fill="rgba(255,255,255,.15)" stroke="white" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
@@ -2112,8 +2094,7 @@ html body .hero h1 .fz-h1-sub{margin-top:18px!important}
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </div></div>
     <div class="fw-quote" style="margin-top:44px">
       <div class="fw-quote-mark" aria-hidden="true">"</div>
       <p class="fw-quote-text">These beliefs aren't values I picked off a template because they sounded good in a pitch deck. I've worked at an agency, and I've walked into local businesses that had already been burned by one: guessed-at audiences, buried numbers, contracts they couldn't escape. I know how hard and terrible that feels for a small business owner. Every one of these beliefs exists so Favze is never the reason it happens to someone else.</p>
@@ -2146,70 +2127,7 @@ html body .hero h1 .fz-h1-sub{margin-top:18px!important}
 </section>
 
 <!-- FAVZE INSIGHTS -->
-<section class="insights-sec">
-  <div class="orb-field" aria-hidden="true">
-    <div class="orb" style="width:220px;height:220px;top:-50px;right:5%;background:radial-gradient(circle,rgba(10,137,163,.35) 0%,transparent 70%);animation-duration:19s,7s"></div>
-    <div class="orb" style="width:140px;height:140px;bottom:8%;left:8%;background:radial-gradient(circle,rgba(6,65,135,.32) 0%,transparent 70%);animation-duration:22s,6.5s;animation-delay:-6s,-2s"></div>
-  </div>
-  <div class="insights-inner">
-    <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:20px;margin-bottom:36px">
-      <div>
-        <span class="lbl">Favze Insights</span>
-        <h2 class="fh" style="font-size:clamp(1.9rem,3.5vw,2.9rem);line-height:1.05;margin:10px 0 10px">Free Marketing Advice From Riley</h2>
-        <p class="sub" style="margin-top:0;max-width:560px">SEO, AEO, GEO, local visibility, and AI search, written for local business owners, not marketers. Even if you're not a client, you deserve to succeed online.</p>
-      </div>
-      <a href="https://favze.com/resources/articles" class="bs" style="flex-shrink:0;white-space:nowrap">All Articles <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6.5 2.5l3.5 3.5-3.5 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-    </div>
-
-    <div class="fw-quote quote-light" style="margin-top:0;margin-bottom:36px">
-      <div class="fw-quote-mark" aria-hidden="true">"</div>
-      <p class="fw-quote-text">Impact doesn't start the moment someone signs a contract. It starts the moment a business owner reads one article and stops guessing about their own marketing. That's why Favze Insights is free for everyone, not gated behind a login. If one business in this county gets found because of something they read here, the whole idea behind Favze is already working.</p>
-      <div class="fw-quote-attr">
-        <div class="fw-quote-avatar">RC</div>
-        <div>
-          <div class="fw-quote-attr-name">Riley Catalano</div>
-          <div class="fw-quote-attr-role">Founder, Favze Digital Marketing</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SCROLLING ARTICLES STRIP -->
-    <div class="art-scroll-outer">
-      <div class="art-scroll-fade art-scroll-fade-l"></div>
-      <div class="art-scroll-fade art-scroll-fade-r"></div>
-      <div class="art-scroll-track" id="artScrollTrack">
-        <!-- Populated by JS from articles.json -->
-      </div>
-    </div>
-
-    <!-- PILLAR LINKS -->
-    <div class="art-pillars" style="margin-top:24px">
-      <a href="https://favze.com/resources/articles/content-marketing" class="art-pillar" data-pillar="content-marketing">
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="1" y="2" width="12" height="10" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M3.5 5h7M3.5 7.5h5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
-        Content Marketing
-      </a>
-      <a href="https://favze.com/resources/articles/search-visibility" class="art-pillar" data-pillar="search-visibility">
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="6" cy="6" r="4.5" stroke="currentColor" stroke-width="1.3"/><path d="M9.5 9.5l3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
-        Search Visibility &amp; Local Discovery
-      </a>
-      <a href="https://favze.com/resources/articles/social-media-strategy" class="art-pillar" data-pillar="social-media-strategy">
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="3" cy="7" r="2" stroke="currentColor" stroke-width="1.3"/><circle cx="11" cy="3" r="2" stroke="currentColor" stroke-width="1.3"/><circle cx="11" cy="11" r="2" stroke="currentColor" stroke-width="1.3"/><path d="M5 6.3l4-2.6M5 7.7l4 2.6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
-        Social Media Strategy
-      </a>
-      <a href="https://favze.com/resources/articles/brand-positioning" class="art-pillar" data-pillar="brand-positioning">
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1l1.5 3.5H12l-2.8 2.1 1 3.4L7 8l-3.2 2 1-3.4L2 4.5h3.5z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>
-        Brand Positioning &amp; Community Authority
-      </a>
-    </div>
-
-    <div style="height:1px;background:#d8d8d8;margin:56px 0 40px"></div>
-
-    <!-- Newsletter CTAs -->
-    <link rel="stylesheet" href="assets/css/fz-shared-cards.css?v=581cc907">
-
-<section class="fz-duo-sec fz-own" aria-labelledby="fzDuoTitle"><div class="fz-duo-in"><div class="fz-duo-head"><span class="fz-duo-k">Keep Learning, Free</span><h2 id="fzDuoTitle" class="fz-duo-t">Turn These Terms Into Results</h2><p class="fz-duo-d">Read free plain-English guides, look up the terms, and compare your options side by side.</p></div><div class="fz-nl-duo gc-row" role="region" aria-label="Keep learning, glossary, comparisons and service match" tabindex="0"><a class="fz-nl-card is-articles" href="https://favze.com/resources/articles" data-cta="articles"><span class="fz-nl-art" aria-hidden="true"><i>Search Visibility</i><i>Content Marketing</i><i>Social Media</i></span><span class="fz-nl-kick">Favze Insights</span><span class="fz-nl-title">Read the Free Guides</span><span class="fz-nl-sub">Plain-English guides on SEO, AI search, social media, and content for local business owners. Free to read, no login.</span><span class="fz-nl-btn">Browse the Guides <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="fz-nl-card is-email" href="https://favze.com/resources/newsletters" data-cta="newsletter"><span class="fz-nl-art nlx" aria-hidden="true"><span class="nlx-sheet s1"></span><span class="nlx-sheet s2"><i></i><i></i><i></i></span><span class="nlx-env"><span class="nlx-flap"></span></span><span class="nlx-at">@</span><em>New issue</em></span><span class="fz-nl-kick">Email Newsletters</span><span class="fz-nl-title">Get Favze Insider &amp; Intel</span><span class="fz-nl-sub">One free signup, two monthly newsletters. Insider keeps you current. Intel makes you sharper.</span><span class="fz-nl-btn">Subscribe Free <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="fz-nl-card gc-glos" href="https://favze.com/resources/glossary" data-cta="glossary"><span class="fz-nl-art gc-art" aria-hidden="true"><span class="gc-t gc-g1">Local Pack</span><span class="gc-t gc-g2">NAP</span><span class="gc-t gc-g3">AEO</span></span><span class="fz-nl-kick">Glossary</span><span class="fz-nl-title">Learn the Terms</span><span class="fz-nl-sub">Plain-English definitions for the marketing terms you will hear, from local pack to AEO.</span><span class="fz-nl-btn">Browse the Glossary <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="fz-nl-card is-li" href="https://favze.com/resources/comparisons" data-cta="comparisons"><span class="fz-nl-art gc-art gc-cmp" aria-hidden="true"><span class="gc-side gc-a"><small>Option A</small>SEO</span><span class="gc-side gc-b"><small>Option B</small>Ads</span><span class="gc-vs">VS</span></span><span class="fz-nl-kick">Comparisons</span><span class="fz-nl-title">Compare Your Options</span><span class="fz-nl-sub">Side-by-side breakdowns of SEO, ads, email, and social, so you can see what fits your business.</span><span class="fz-nl-btn">See All Comparisons <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="fz-nl-card is-articles" href="https://favze.com/resources/marketing-tools/service-match?from=tools-row" data-cta="tools-quiz" data-sm-entry="tools-row"><span class="fz-nl-art tl-x gc-art" aria-hidden="true"><span class="tl-q q1">Local business</span><span class="tl-q q2">Service business</span><span class="tl-q q3">Online sales</span></span><span class="fz-nl-kick">FREE MARKETING TOOLS</span><span class="fz-nl-title">Build Your Plan</span><span class="fz-nl-sub">Answer a few questions about your business and get a phased plan showing what to launch first.</span><span class="fz-nl-btn">Start the Quiz <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="fz-nl-card is-articles" href="https://favze.com/areas-served" data-cta="local-guides"><span class="fz-nl-art gc-art lg-art" aria-hidden="true"><span class="lg-grid"></span><span class="lg-route"></span><span class="lg-dot d1"></span><span class="lg-chip c1">Elkhart</span><span class="lg-dot d2"></span><span class="lg-chip c2">South Bend</span><span class="lg-dot d3"></span><span class="lg-chip c3">Fort Wayne</span></span><span class="fz-nl-kick">Free Local Guides</span><span class="fz-nl-title">Local Marketing Guides</span><span class="fz-nl-sub">Local SEO pages for the towns and counties across Northern Indiana and Michiana, each with its own guide.</span><span class="fz-nl-btn">View Guides <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div><div class="gc-nav" role="group" aria-label="Scroll the cards"><button type="button" class="gc-prev" aria-label="Scroll cards left">&larr;</button><button type="button" class="gc-next" aria-label="Scroll cards right">&rarr;</button></div><script>(function(){var r=document.querySelector(".gc-row");if(!r)return;var p=document.querySelector(".gc-prev"),n=document.querySelector(".gc-next");function step(d){r.scrollBy({left:d*(r.firstElementChild.getBoundingClientRect().width+20),behavior:"smooth"});}if(p)p.addEventListener("click",function(){step(-1)});if(n)n.addEventListener("click",function(){step(1)});function upd(){var max=r.scrollWidth-r.clientWidth-2;if(p)p.disabled=r.scrollLeft<=2;if(n)n.disabled=r.scrollLeft>=max;}r.addEventListener("scroll",upd,{passive:true});window.addEventListener("resize",upd);upd();})();</script></div></section>
-  </div>
-</section>
+>
 
 
 
