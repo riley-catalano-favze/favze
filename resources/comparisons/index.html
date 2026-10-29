@@ -1632,6 +1632,33 @@ footer.ft-std .ft-dot{color:rgba(255,255,255,.18);padding:0 6px}
 @media(max-width:768px){footer.ft-std .ft-top{grid-template-columns:1fr;gap:28px;padding:0 5% 40px}footer.ft-std .fb-bot{padding:16px 5%}footer.ft-std div[style*="width:1px;height:16px"]{display:none!important}}
 </style>
 </main>
+<style id="cmp-disk-play">
+.cmp-play{padding:0 5% 56px}
+.cmp-play-in{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1fr 1.1fr;gap:36px;align-items:center;background:linear-gradient(135deg,#064187,#0A89A3);border-radius:24px;padding:40px 44px;color:#fff;overflow:hidden}
+.cmp-play-k{font:700 .75rem var(--font-body,"DM Sans",sans-serif);letter-spacing:.14em;text-transform:uppercase;opacity:.85;margin:0 0 10px}
+.cmp-play-t{font-family:"Barlow Condensed",sans-serif;font-weight:900;font-size:2.1rem;line-height:1.05;margin:0 0 12px}
+.cmp-play-d{font-size:1rem;line-height:1.6;opacity:.92;margin:0 0 18px}
+.cmp-play-link{color:#fff;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.cmp-stage{position:relative;height:220px;border-radius:18px;background:rgba(255,255,255,.08);border:1px dashed rgba(255,255,255,.35);cursor:default;touch-action:pan-y}
+.cmp-disk{position:absolute;left:0;top:0;width:118px;height:118px;margin:-59px 0 0 -59px;border-radius:50%;background:#fff;color:#064187;display:flex;align-items:center;justify-content:center;flex-direction:column;text-decoration:none;font:900 1.25rem "Barlow Condensed",sans-serif;text-align:center;line-height:1.05;box-shadow:0 14px 30px rgba(0,0,0,.25);transform:translate(var(--dx,50%),var(--dy,50%));transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+.cmp-disk small{display:block;font:700 .62rem "DM Sans",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#0A89A3;margin-top:4px}
+.cmp-disk-in{display:flex;flex-direction:column;align-items:center;animation:cmpBob 3.2s ease-in-out infinite}
+@keyframes cmpBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.cmp-stage-hint{position:absolute;left:14px;bottom:10px;font-size:.78rem;opacity:.8;pointer-events:none}
+@media(max-width:768px){.cmp-play-in{grid-template-columns:1fr;padding:28px 22px;gap:22px}.cmp-play-t{font-size:1.7rem}.cmp-stage{height:190px}.cmp-disk{width:100px;height:100px;margin:-50px 0 0 -50px;font-size:1.05rem}}
+@media(prefers-reduced-motion:reduce){.cmp-disk,.cmp-disk-in{animation:none;transition:none}}
+@media(hover:none),(pointer:coarse){.cmp-stage-hint{display:none}}
+</style>
+<section class="cmp-play fz-blk" aria-labelledby="cmpPlayT"><div class="cmp-play-in"><div><p class="cmp-play-k">Compare Side by Side</p><h2 class="cmp-play-t" id="cmpPlayT">Chase the disk to find your match</h2><p class="cmp-play-d">Every comparison breaks down what each option does best, when it fits, and how the two work together. Pick one and see the full breakdown.</p><a class="cmp-play-link" href="https://favze.com/resources/comparisons/seo-vs-google-ads" data-cta="compare-disk">Start with SEO vs. Google Ads &rarr;</a></div><div class="cmp-stage" id="cmpStage"><span class="cmp-stage-hint">Move your cursor here</span><a class="cmp-disk" href="#search" id="cmpDisk" aria-label="Browse all comparisons"><span class="cmp-disk-in">VS<small>Compare</small></span></a></div></div></div></section>
+<script>
+(function(){var st=document.getElementById('cmpStage'),d=document.getElementById('cmpDisk');if(!st||!d)return;
+if(!matchMedia('(hover:hover) and (pointer:fine)').matches)return;
+function place(x,y){d.style.setProperty('--dx',x+'px');d.style.setProperty('--dy',y+'px');}
+var r=st.getBoundingClientRect();place(r.width/2,r.height/2);
+st.addEventListener('pointermove',function(e){var b=st.getBoundingClientRect();place(e.clientX-b.left,e.clientY-b.top);},{passive:true});
+st.addEventListener('pointerleave',function(){var b=st.getBoundingClientRect();place(b.width/2,b.height/2);});
+})();
+</script>
 <section class="fz-duo-sec fz-own" aria-labelledby="fzDuoTitle"><div class="fz-duo-in"><div class="fz-duo-head"><span class="fz-duo-k">Keep Learning, Free</span><h2 id="fzDuoTitle" class="fz-duo-t">Turn These Terms Into Results</h2><p class="fz-duo-d">Go deeper with free plain-English guides, and get two monthly newsletters that keep you current and sharper.</p></div><div class="fz-nl-duo"><a class="fz-nl-card is-articles" href="https://favze.com/resources/articles" data-cta="articles"><span class="fz-nl-art" aria-hidden="true"><i>Search Visibility</i><i>Content Marketing</i><i>Social Media</i></span><span class="fz-nl-kick">Favze Insights</span><span class="fz-nl-title">Read the Free Guides</span><span class="fz-nl-sub">Plain-English guides on SEO, AI search, social media, and content for local business owners. Free to read, no login.</span><span class="fz-nl-btn">Browse the Guides <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a><a class="fz-nl-card is-email" href="https://favze.com/resources/newsletters" data-cta="newsletter"><span class="fz-nl-art" aria-hidden="true"><b class="fz-nl-env"></b><em>New issue</em></span><span class="fz-nl-kick">Email Newsletters</span><span class="fz-nl-title">Get Favze Insider &amp; Intel</span><span class="fz-nl-sub">One free signup, two monthly newsletters. Insider keeps you current. Intel makes you sharper.</span><span class="fz-nl-btn">Subscribe Free <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5L11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></div></div></section>
 <section class="fz-smband fz-blk" aria-labelledby="fzSmBand-faq">
 <div class="fz-smband-inner">
