@@ -543,7 +543,7 @@
         rot.appendChild(el('span', 'fz-panel', 'width:112px;height:132px;margin:-66px 0 0 -56px;background:' + p[1] + ';transform:translateZ(' + p[0] + 'px) translateX(' + p[2] + 'px) ' + p[3]));
       });
       var c = el('span', 'fz-panel', 'width:112px;height:132px;margin:-66px 0 0 -56px;background:#fff;padding:7px 7px 24px;box-sizing:border-box;transform:translateZ(14px) rotateZ(-2deg)');
-      c.innerHTML = '<img src="' + B + 'assets/img/riley-avatar.webp" alt="" width="98" height="101" loading="lazy" decoding="async">';
+      c.innerHTML = '<img src="' + B + 'assets/img/riley-avatar.webp" alt="Riley Catalano, founder of Favze" width="98" height="101" loading="lazy" decoding="async">';
       rot.appendChild(c);
     }
   };
@@ -654,10 +654,10 @@
     if (D.querySelector('.fz-chat-launch')) return;
     var launch = D.createElement('button');
     launch.type = 'button'; launch.className = 'fz-chat-launch'; launch.setAttribute('data-nosnippet', ''); launch.setAttribute('aria-haspopup', 'dialog'); launch.setAttribute('aria-label', 'Open the Favze chat assistant');
-    launch.innerHTML = '<span class="fz-av" aria-hidden="true"><img src="https://favze.com/assets/img/riley-avatar.webp" alt="" width="64" height="64" loading="lazy" decoding="async"></span><span class="fz-dotlive" aria-hidden="true"></span><span class="fz-chat-lbl">Questions? Tap to chat</span>';
+    launch.innerHTML = '<span class="fz-av" aria-hidden="true"><img src="https://favze.com/assets/img/riley-avatar.webp" alt="Riley Catalano, founder of Favze" width="64" height="64" loading="lazy" decoding="async"></span><span class="fz-dotlive" aria-hidden="true"></span><span class="fz-chat-lbl">Questions? Tap to chat</span>';
     var box = D.createElement('div');
     box.className = 'fz-chat'; box.setAttribute('data-nosnippet', ''); box.setAttribute('role', 'dialog'); box.setAttribute('aria-modal', 'true'); box.setAttribute('aria-label', 'Favze chat assistant'); box.hidden = true;
-    box.innerHTML = '<div class="fz-chat-head"><span class="fz-av" aria-hidden="true"><img src="https://favze.com/assets/img/riley-avatar.webp" alt="" width="64" height="64" loading="lazy" decoding="async"></span><div><b>Favze</b><small>Tap an answer. Riley follows up personally.</small></div><button type="button" class="fz-chat-x" aria-label="Close chat">&times;</button></div>' +
+    box.innerHTML = '<div class="fz-chat-head"><span class="fz-av" aria-hidden="true"><img src="https://favze.com/assets/img/riley-avatar.webp" alt="Riley Catalano, founder of Favze" width="64" height="64" loading="lazy" decoding="async"></span><div><b>Favze</b><small>Tap an answer. Riley follows up personally.</small></div><button type="button" class="fz-chat-x" aria-label="Close chat">&times;</button></div>' +
       '<div class="fz-chat-log" role="log" aria-live="polite"></div><div class="fz-chat-opts"></div><p class="fz-chat-note">This assistant uses set answers. To reach a person, call or text 574-747-5012.</p>';
     D.body.appendChild(launch); D.body.appendChild(box);
     /* A one-time friendly hint after a few seconds */
