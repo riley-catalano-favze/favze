@@ -1637,6 +1637,17 @@ html body .nl-cta,html body .nc,html body .nav-cta,html body .mm-cta,html body .
 <div class="principle-card"><div class="principle-num">03</div><div class="principle-title">Conversion</div><div class="principle-desc">Every design decision guides visitors toward the action that grows your business: a call, a booking, a form fill, or a sale. Beautiful design that actually performs.</div></div>
 </div></div></section>
 <section class="sec cro-section" aria-labelledby="cro-heading"><div class="sec-inner">
+<style id="cro-money-css">
+.cro-money{position:relative;width:64px;height:64px;margin:0 0 18px;perspective:400px}
+.cro-coin{width:44px;height:44px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#7fe0f5,#0A89A3 55%,#064187);box-shadow:0 0 0 3px rgba(56,189,248,.25),0 6px 18px rgba(10,137,163,.35);display:flex;align-items:center;justify-content:center;color:#fff;font:900 22px/1 var(--font-display,sans-serif);animation:croSpin 4s linear infinite;transform-style:preserve-3d}
+.cro-up{position:absolute;left:50%;bottom:50%;color:#38BDF8;font:900 16px/1 var(--font-display,sans-serif);opacity:0;animation:croRise 3s ease-out infinite}
+.cro-up.u2{left:12%;animation-delay:1s}
+.cro-up.u3{left:82%;animation-delay:2s}
+@keyframes croSpin{0%{transform:rotateY(0)}100%{transform:rotateY(360deg)}}
+@keyframes croRise{0%{opacity:0;transform:translateY(0) scale(.8)}20%{opacity:1}100%{opacity:0;transform:translateY(-44px) scale(1.1)}}
+@media (prefers-reduced-motion:reduce){.cro-coin,.cro-up{animation:none}.cro-up{opacity:.6}}
+</style>
+<div class="cro-money" aria-hidden="true"><div class="cro-coin">$</div><span class="cro-up">$</span><span class="cro-up u2">$</span><span class="cro-up u3">$</span></div>
 <span class="lbl">Conversion</span>
 <h2 class="ttl" id="cro-heading" style="color:#fff;max-width:760px">Website Conversion Optimization: Turn Visitors Into Calls and Quote Requests</h2>
 <p class="sub" style="margin-top:14px">A good-looking site is not enough. We build conversion into the structure of every page so more of the people who find you take the next step.</p>
