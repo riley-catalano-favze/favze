@@ -2136,33 +2136,39 @@ html body .hero h1 .fz-h1-sub{margin-top:18px!important}
 
 <!-- COMPARISON -->
 <section class="fz-brand-cta"><span class="cta-eyebrow">Free Consultation</span><h2>See how Favze compares to big agencies</h2><p>Clear pricing, no long-term lock-in, and direct access to Riley. Read the full side-by-side comparison, including where a big agency is the better fit.</p><div class="cta-bs"><a class="bw" href="https://favze.com/resources/comparisons/favze-vs-big-agencies">Favze vs. Big Agencies &rarr;</a><a class="bs-wh" href="https://favze.com/free-consultation?reason=cmp-favze-vs-big-agencies">Book a Free Consultation</a></div></section>
-<style id="cmp-disk-play">
-.cmp-play{padding:0 5% 56px}
-.cmp-play-in{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1fr 1.1fr;gap:36px;align-items:center;background:linear-gradient(135deg,#064187,#0A89A3);border-radius:24px;padding:40px 44px;color:#fff;overflow:hidden}
-.cmp-play-k{font:700 .75rem var(--font-body,"DM Sans",sans-serif);letter-spacing:.14em;text-transform:uppercase;opacity:.85;margin:0 0 10px}
-.cmp-play-t{font-family:"Barlow Condensed",sans-serif;font-weight:900;font-size:2.1rem;line-height:1.05;margin:0 0 12px}
-.cmp-play-d{font-size:1rem;line-height:1.6;opacity:.92;margin:0 0 18px}
-.cmp-play-link{color:#fff;font-weight:700;text-decoration:underline;text-underline-offset:3px}
-.cmp-stage{position:relative;height:220px;border-radius:18px;background:rgba(255,255,255,.08);border:1px dashed rgba(255,255,255,.35);cursor:default;touch-action:pan-y}
-.cmp-disk{position:absolute;left:0;top:0;width:118px;height:118px;margin:-59px 0 0 -59px;border-radius:50%;background:#fff;color:#064187;display:flex;align-items:center;justify-content:center;flex-direction:column;text-decoration:none;font:900 1.25rem "Barlow Condensed",sans-serif;text-align:center;line-height:1.05;box-shadow:0 14px 30px rgba(0,0,0,.25);transform:translate(var(--dx,50%),var(--dy,50%));transition:transform .45s cubic-bezier(.2,.7,.2,1)}
-.cmp-disk small{display:block;font:700 .62rem "DM Sans",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#0A89A3;margin-top:4px}
-.cmp-disk-in{display:flex;flex-direction:column;align-items:center;animation:cmpBob 3.2s ease-in-out infinite}
-@keyframes cmpBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
-.cmp-stage-hint{position:absolute;left:14px;bottom:10px;font-size:.78rem;opacity:.8;pointer-events:none}
-@media(max-width:768px){.cmp-play-in{grid-template-columns:1fr;padding:28px 22px;gap:22px}.cmp-play-t{font-size:1.7rem}.cmp-stage{height:190px}.cmp-disk{width:100px;height:100px;margin:-50px 0 0 -50px;font-size:1.05rem}}
-@media(prefers-reduced-motion:reduce){.cmp-disk,.cmp-disk-in{animation:none;transition:none}}
-@media(hover:none),(pointer:coarse){.cmp-stage-hint{display:none}}
+<style id="cmp-mock">
+.cmp-mock{padding:8px 5% 56px}
+.cmp-mock-in{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1fr 1.15fr;gap:40px;align-items:center}
+.cmp-mock-k{font:700 .75rem "DM Sans",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#0A89A3;margin:0 0 10px}
+.cmp-mock-t{font-family:"Barlow Condensed",sans-serif;font-weight:900;font-size:2.1rem;line-height:1.05;text-transform:uppercase;color:#064187;margin:0 0 12px}
+.cmp-mock-d{font-size:1rem;line-height:1.65;color:#3b4a5a;margin:0 0 18px}
+.cmp-mock-link{color:#064187;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.cmp-win{position:relative;display:block;background:#fff;border:1px solid #d7e2ec;border-radius:16px;overflow:hidden;box-shadow:0 22px 50px rgba(6,65,135,.14);text-decoration:none;color:#1d2b3a;transition:transform .3s ease}
+.cmp-win:hover{transform:translateY(-4px)}
+.cmp-bar{display:flex;align-items:center;gap:6px;padding:10px 14px;background:#eef3f8;border-bottom:1px solid #d7e2ec}
+.cmp-bar i{width:9px;height:9px;border-radius:50%;background:#c3cfdb;display:block}
+.cmp-url{margin-left:10px;font:500 .78rem "DM Sans",sans-serif;color:#5a6b7d;white-space:nowrap;overflow:hidden}
+.cmp-url b{font-weight:700;color:#064187;display:inline-block;overflow:hidden;white-space:nowrap;vertical-align:bottom;max-width:0;animation:cmpType 9s steps(26,end) infinite}
+@keyframes cmpType{0%{max-width:0}22%,92%{max-width:30ch}100%{max-width:0}}
+.cmp-table{padding:6px 0 14px}
+.cmp-head,.cmp-row{display:grid;grid-template-columns:.9fr 1.25fr 1.25fr;gap:10px;padding:10px 18px;align-items:center;font:500 .86rem/1.35 "DM Sans",sans-serif}
+.cmp-head{font:700 .72rem "DM Sans",sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#5a6b7d;border-bottom:1px solid #e3ebf2}
+.cmp-head span:nth-child(2){color:#0A89A3}
+.cmp-row{border-bottom:1px solid #eef3f8;opacity:0;animation:cmpIn 9s ease-in-out infinite}
+.cmp-row:last-child{border-bottom:0}
+.cmp-row:nth-child(2){animation-delay:.5s}.cmp-row:nth-child(3){animation-delay:1s}.cmp-row:nth-child(4){animation-delay:1.5s}.cmp-row:nth-child(5){animation-delay:2s}
+@keyframes cmpIn{0%{opacity:0;transform:translateX(-8px)}8%,88%{opacity:1;transform:none}100%{opacity:0;transform:none}}
+.cmp-row span:first-child{font-weight:700;color:#064187}
+.cmp-row .ok{color:#0A6F84;background:rgba(10,137,163,.09);border-radius:8px;padding:4px 8px}
+.cmp-row .no{color:#8a5a5a;padding:4px 8px}
+.cmp-pointer{position:absolute;width:26px;height:26px;border-radius:50%;background:rgba(6,65,135,.18);border:2px solid #064187;pointer-events:none;left:72%;top:58%;animation:cmpPtr 9s ease-in-out infinite}
+@keyframes cmpPtr{0%{left:72%;top:88%;opacity:0}12%{opacity:1}40%{left:52%;top:52%}55%{transform:scale(.8)}60%{transform:scale(1)}78%{left:52%;top:52%;opacity:1}90%,100%{left:72%;top:88%;opacity:0}}
+@media(max-width:768px){.cmp-mock-in{grid-template-columns:1fr;gap:24px}.cmp-mock-t{font-size:1.7rem}.cmp-head,.cmp-row{font-size:.78rem;padding:9px 12px;gap:6px}.cmp-pointer{display:none}}
+@media(prefers-reduced-motion:reduce){.cmp-row,.cmp-url b,.cmp-pointer{animation:none}.cmp-row{opacity:1}.cmp-url b{max-width:30ch}.cmp-pointer{display:none}}
 </style>
-<section class="cmp-play fz-blk" aria-labelledby="cmpPlayT"><div class="cmp-play-in"><div><p class="cmp-play-k">Compare Side by Side</p><h2 class="cmp-play-t" id="cmpPlayT">See how Favze stacks up</h2><p class="cmp-play-d">Big agencies and Favze do the same work in different ways. Move the disk around, then read the side-by-side breakdown.</p><a class="cmp-play-link" href="https://favze.com/resources/comparisons/favze-vs-big-agencies" data-cta="about-compare-disk">See the full comparison &rarr;</a></div><div class="cmp-stage" id="cmpStage"><span class="cmp-stage-hint">Move your cursor here</span><a class="cmp-disk" href="https://favze.com/resources/comparisons" id="cmpDisk" aria-label="See how Favze compares"><span class="cmp-disk-in">VS<small>Compare</small></span></a></div></div></div></section>
-<script>
-(function(){var st=document.getElementById('cmpStage'),d=document.getElementById('cmpDisk');if(!st||!d)return;
-if(!matchMedia('(hover:hover) and (pointer:fine)').matches)return;
-function place(x,y){d.style.setProperty('--dx',x+'px');d.style.setProperty('--dy',y+'px');}
-var r=st.getBoundingClientRect();place(r.width/2,r.height/2);
-st.addEventListener('pointermove',function(e){var b=st.getBoundingClientRect();place(e.clientX-b.left,e.clientY-b.top);},{passive:true});
-st.addEventListener('pointerleave',function(){var b=st.getBoundingClientRect();place(b.width/2,b.height/2);});
-})();
-</script>
+<section class="cmp-mock fz-blk" aria-labelledby="cmpMockT"><div class="cmp-mock-in"><div><p class="cmp-mock-k">Preview the comparison</p><h2 class="cmp-mock-t" id="cmpMockT">Here is what you will see</h2><p class="cmp-mock-d">Every comparison lays both options side by side, row by row: pricing, contracts, who you work with, and where each one is based. Nothing is hidden behind a form.</p><a class="cmp-mock-link" href="https://favze.com/resources/comparisons/favze-vs-big-agencies" data-cta="compare-mock">Open the full comparison &rarr;</a></div><a class="cmp-win" href="https://favze.com/resources/comparisons/favze-vs-big-agencies" aria-label="Preview of the Favze vs. Big Agencies comparison page"><div class="cmp-bar"><i></i><i></i><i></i><span class="cmp-url">favze.com/resources/comparisons/<b>favze-vs-big-agencies</b></span></div><div class="cmp-table"><div class="cmp-head"><span>Topic</span><span>Favze</span><span>Big agency</span></div><div class="cmp-row"><span>Pricing</span><span class="ok">Every cost shown up front</span><span class="no">Hidden fees</span></div><div class="cmp-row"><span>Contracts</span><span class="ok">No long-term lock-in</span><span class="no">12-month contracts</span></div><div class="cmp-row"><span>Access</span><span class="ok">Direct to the person doing the work</span><span class="no">Routed through account managers</span></div><div class="cmp-row"><span>Local focus</span><span class="ok">Northern Indiana and Michiana</span><span class="no">National focus</span></div></div><span class="cmp-pointer" aria-hidden="true"></span></a></div></section>
+
+
 
 
 
