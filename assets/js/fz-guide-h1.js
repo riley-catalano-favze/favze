@@ -21,11 +21,18 @@
     } catch (e) { return false; }
   }
 
+  // Guide mode only carries through the section's own listing (the areas
+  // index and the industries hub). Nav, footer, and side or related lists
+  // never pass the mode on, so those links keep the normal heading.
+  function inSection(a) {
+    return !!a.closest('main') && !a.closest('nav, footer, header, aside, .ft-std, .tp-box, .tp-rel, .ct-near, .ind-related');
+  }
+
   function carryMode(root) {
-    var links = (root || document).querySelectorAll('a[href]');
+    var links = (root || document).querySelectorAll('main a[href]');
     for (var i = 0; i < links.length; i++) {
       var a = links[i];
-      if (!isTownLink(a)) continue;
+      if (!isTownLink(a) || !inSection(a)) continue;
       try {
         var u = new URL(a.getAttribute('href'), location.href);
         if (u.searchParams.get('view') === 'guides') continue;
@@ -65,7 +72,8 @@
   var isHub = /^\/industries\/?(index\.html)?$/.test(path);
 
   function run() {
-    carryMode(document);
+    if (isTown || isIndustry) { /* detail pages: heading only, no link carrying */ }
+    else carryMode(document);
     if (isTown) townH1();
     if (isIndustry) industryH1();
     if (isHub) hubH1();
