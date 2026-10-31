@@ -41,6 +41,7 @@ html body #mm .mm-cta:hover{background:#0A89A3!important}
   html body nav ul.fz-nl .drop-panel.fz-res-panel.open{transform:translateX(-50%) translateY(0)}
   html body nav ul.fz-nl .fz-res-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:0 20px}
 html body nav ul.fz-nl #fzPanRes .fz-res-grid{grid-template-columns:repeat(7,minmax(0,1fr));gap:0 16px}
+@media (max-width:1279px){html body nav ul.fz-nl #fzPanRes .fz-res-grid{grid-template-columns:repeat(auto-fit,minmax(128px,1fr))}}
   html body nav ul.fz-nl .fz-res-col{min-width:0}
   html body nav ul.fz-nl .drop-panel .fz-res-head{font-family:'DM Sans',sans-serif;font-size:.66rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#064187;padding:0 8px 8px;margin-bottom:6px;border-bottom:1px solid #e5ecf5;border-radius:0;background:none}
   html body nav ul.fz-nl .drop-panel a.fz-res-head:hover,html body nav ul.fz-nl .drop-panel a.fz-res-head:focus-visible{background:none;color:#0A89A3}
