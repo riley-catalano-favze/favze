@@ -79,3 +79,13 @@
 .tl-card i:nth-of-type(2){width:58%}
 .tl-nav{display:flex;justify-content:center;gap:12px;margin-top:4px}
 @media(max-width:768px){.tl-q{height:34px;line-height:34px;font-size:.8rem}.tl-pin{width:44px;height:44px;margin:-36px 0 0 -22px}.tl-pin:after{left:13px;top:13px;width:18px;height:18px}}
+
+/* Industry Marketing Guides card art (Keep Learning row) */
+.ig-art{background:linear-gradient(160deg,#f6fafc,#e4f3f8);border:1.5px solid #cfe6ee;border-radius:16px;box-shadow:0 14px 26px rgba(6,65,135,.14);overflow:hidden}
+.ig-t{position:absolute;width:34%;height:40%;border-radius:10px;display:flex;align-items:center;justify-content:center;padding:4px;box-sizing:border-box;font:900 .8rem/1 "Barlow Condensed",sans-serif;letter-spacing:.03em;text-transform:uppercase;white-space:nowrap;color:#fff;box-shadow:0 6px 12px rgba(6,65,135,.18)}
+.ig-t.t1{left:5%;top:9%;background:#064187}
+.ig-t.t2{left:33%;top:4%;background:#0A89A3;transform:rotate(3deg)}
+.ig-t.t3{left:61%;top:10%;background:#38BDF8;color:#064187}
+.ig-t.t4{left:5%;top:53%;background:#0A89A3;transform:rotate(-2deg)}
+.ig-t.t5{left:33%;top:55%;background:#064187}
+.ig-t.t6{left:61%;top:50%;background:#38BDF8;color:#064187;transform:rotate(2deg)}
