@@ -65,20 +65,8 @@
 .tl-q{position:absolute;left:0;right:0;height:38px;line-height:38px;padding:0 16px;border-radius:999px;background:#eaf6f9;color:#064187;font:700 .85rem "DM Sans",sans-serif;border:1.5px solid #cfe6ee;box-sizing:border-box;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .tl-q.q1{top:4%}.tl-q.q2{top:36%;background:#38BDF8;border-color:#38BDF8;left:12%;right:-4%}.tl-q.q3{top:68%;right:14%}
 .tl-q.q2:after{content:"\2713";float:right;font-weight:900}
-.tl-sheet{position:absolute;left:14%;right:14%;top:6%;bottom:6%;background:#fff;border-radius:12px;box-shadow:0 12px 24px rgba(0,10,30,.25);padding:16px 14px;box-sizing:border-box}
-.tl-row{position:relative;height:9px;margin:0 0 12px;border-radius:4px;background:#e4eef4}
-.tl-row:before{content:"";position:absolute;left:0;top:0;bottom:0;width:72%;border-radius:4px;background:#0A89A3}
-.tl-sheet .tl-line{display:block;height:8px;border-radius:4px;background:#d6e6ee;margin:0 0 14px}
 .tl-sheet .tl-line.c{background:#38BDF8;width:55%}
-.tl-sheet .tl-line.w1{width:88%}.tl-sheet .tl-line.w2{width:70%}
-.tl-pin{position:absolute;left:50%;top:50%;width:54px;height:54px;margin:-44px 0 0 -27px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:#38BDF8;box-shadow:0 12px 22px rgba(0,0,0,.3)}
-.tl-pin:after{content:"";position:absolute;left:17px;top:17px;width:20px;height:20px;border-radius:50%;background:#064187}
-.tl-card{position:absolute;left:8%;right:8%;bottom:6%;height:52%;background:#fff;border-radius:12px;box-shadow:0 12px 24px rgba(0,0,0,.3);padding:12px;box-sizing:border-box}
-.tl-stars{display:block;color:#F5A524;font-size:.8rem;letter-spacing:2px;margin-bottom:8px}
-.tl-card i{display:block;height:7px;border-radius:4px;background:#d6e6ee;margin:0 0 7px;width:80%}
-.tl-card i:nth-of-type(2){width:58%}
-.tl-nav{display:flex;justify-content:center;gap:12px;margin-top:4px}
-@media(max-width:768px){.tl-q{height:34px;line-height:34px;font-size:.8rem}.tl-pin{width:44px;height:44px;margin:-36px 0 0 -22px}.tl-pin:after{left:13px;top:13px;width:18px;height:18px}}
+@media(max-width:768px){.tl-q{height:34px;line-height:34px;font-size:.8rem}}
 
 /* Industry Marketing Guides card art (Keep Learning row) */
 .ig-art{background:linear-gradient(160deg,#f6fafc,#e4f3f8);border:1.5px solid #cfe6ee;border-radius:16px;box-shadow:0 14px 26px rgba(6,65,135,.14);overflow:hidden}

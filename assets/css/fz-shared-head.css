@@ -4,8 +4,7 @@
 .nav-phone{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;padding:0;border:0;border-radius:10px;background:transparent;color:#064187!important;text-decoration:none!important;transition:color .2s,background .2s;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 .nav-phone:hover,.nav-phone:focus-visible{color:#000!important;background:rgba(6,65,135,.08)}
 .nav-phone svg{display:block}
-.nav-phone-m{display:none!important}
-@media(max-width:768px){.nav-phone-d{display:none!important}.nav-phone-m{display:inline-flex!important;margin-left:auto;margin-right:6px}}
+@media(max-width:768px){}
 /* Mobile bottom bar: full-width Book Free Consultation button */
 .fz-mbar{display:none}
 @media(max-width:768px){
