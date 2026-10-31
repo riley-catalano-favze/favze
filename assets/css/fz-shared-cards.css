@@ -89,3 +89,6 @@
 .ig-t.t4{left:5%;top:53%;background:#0A89A3;transform:rotate(-2deg)}
 .ig-t.t5{left:33%;top:55%;background:#064187}
 .ig-t.t6{left:61%;top:50%;background:#38BDF8;color:#064187;transform:rotate(2deg)}
+
+/* Keep the Industry Guides button on one line */
+.fz-nl-card[data-cta="industry-guides"] .fz-nl-btn{white-space:nowrap}
