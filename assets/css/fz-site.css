@@ -50,9 +50,6 @@ html body .fz-cursor,html body .cursor-glow,html body .cursor-dot,html body .cur
 html.fz-cur .fz-dot.on-blue{background:#fff;box-shadow:0 0 0 1px rgba(6,65,135,.45)}
 html.fz-cur-on .fz-dot{opacity:1}
 @media(hover:hover) and (pointer:fine){
-  html.fz-cur,html.fz-cur *{cursor:none!important}
-  html.fz-cur input:not([type=checkbox]):not([type=radio]):not([type=submit]):not([type=button]),html.fz-cur textarea,html.fz-cur [contenteditable="true"]{cursor:text!important}
-  html.fz-cur select{cursor:pointer!important}
 }
 
 /* ---- Mobile booking bar: thinner, on every page ---- */
@@ -600,9 +597,6 @@ html body .fz-search-title{position:absolute;width:1px;height:1px;overflow:hidde
 .fz-search-box input::-webkit-search-cancel-button{display:none}
 .fz-search-box:focus-within{box-shadow:0 0 0 3px rgba(6,65,135,.25)}
 .fz-search-close{border:0;background:#fff;color:#3d4148;font:700 12px 'DM Sans',sans-serif;padding:8px 12px;border-radius:999px;cursor:pointer;min-height:32px}
-.fz-search-modes{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:12px}
-.fz-search-modes button{border:1.5px solid rgba(6,65,135,.2);background:#fff;color:#064187;font:700 13px 'DM Sans',sans-serif;padding:7px 14px;border-radius:999px;cursor:pointer;min-height:34px;transition:background .15s,color .15s}
-.fz-search-modes button[aria-checked="true"]{background:linear-gradient(135deg,#064187,#0A89A3);border-color:transparent;color:#fff}
 .fz-search-help{flex-basis:100%;font-size:13px;color:#4a4f57;line-height:1.5;margin-top:2px}
 .fz-search-status{margin:0;padding:12px 22px 6px;font-size:13px;font-weight:700;color:#4a4f57}
 .fz-search-list{list-style:none;margin:0;padding:4px 10px 14px;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
