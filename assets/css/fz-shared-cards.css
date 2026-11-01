@@ -18,7 +18,6 @@
 .gbp-card p{margin:0;color:#444;line-height:1.6;font-size:.96rem}
 .gbp-steps{list-style:none;padding:0;margin:24px 0 0;counter-reset:gbps;max-width:760px}
 .gbp-steps li{counter-increment:gbps;position:relative;padding:16px 0 16px 52px;border-bottom:1px solid #dfe7f2;line-height:1.7;color:#333}
-.gbp-steps li::before{content:counter(gbps);position:absolute;left:0;top:14px;width:34px;height:34px;border-radius:50
 /* Google Business Profile service page */
 .gbp-crumb{font-size:.85rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#7fd8ea;margin:0 0 12px}
 .gbp-crumb a{color:inherit}
@@ -40,3 +39,19 @@
 .gbp-faq summary{font-weight:800;cursor:pointer;color:#0a0a0a;font-size:1.02rem}
 .gbp-faq details p{margin:10px 0 0;color:#333;line-height:1.7}
 @media(max-width:600px){.gbp-body{padding:0 16px}.gbp-body>p{font-size:1rem}}
+
+/* Local SEO service area: wrapped city pills and a swipeable county row */
+.areas-section .city-grid{display:flex;flex-wrap:wrap;gap:10px;overflow:visible}
+.areas-section .areas-right{display:flex;flex-direction:row;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding:4px 2px 14px;-webkit-overflow-scrolling:touch}
+.areas-section .areas-right .county-card{flex:0 0 min(340px,82vw);scroll-snap-align:start;margin:0}
+.areas-section .county-cities a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:900px){.areas-section .areas-right{flex-direction:row}}
+html body .areas-section .city-grid{display:flex!important;flex-wrap:wrap!important;overflow:visible!important;grid-template-columns:none!important;gap:10px!important}
+html body .areas-section .city-grid{width:100%!important;max-width:100%!important;min-width:0!important;box-sizing:border-box}
+html body .areas-section .areas-left{min-width:0!important;max-width:100%!important}
+html body .areas-section .city-grid .city-pill{width:auto!important;flex:0 1 auto!important;max-width:100%}
+html body .areas-section .fz-cg-rail{display:block!important;overflow:visible!important;animation:none!important;transform:none!important;-webkit-mask:none!important;mask:none!important;width:100%!important}
+html body .areas-section .fz-cg-rail [aria-hidden="true"]{display:none!important}
+/* Local SEO service area: county cards sit under the body copy as a swipeable row */
+html body .areas-section .areas-grid{display:block!important}
+html body .areas-section .areas-left{margin-bottom:28px}
