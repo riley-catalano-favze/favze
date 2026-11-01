@@ -2,3 +2,41 @@
 
 /* Resources page: "Browse all articles" arrow link. Underline the text only and tighten the gap before the arrow. */
 .rs-links .fz-arrow-link{gap:4px;border-bottom:0;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px}
+
+/* Google Business Profile service page */
+.gbp-crumb{font-size:.85rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#7fd8ea;margin:0 0 12px}
+.gbp-crumb a{color:inherit}
+.gbp-body{max-width:1160px;margin:0 auto}
+.gbp-body>p{max-width:760px;color:#333;line-height:1.7;font-size:1.05rem}
+.gbp-body p a,.gbp-body li a{color:#064187;font-weight:700}
+.gbp-alt{background:#f3f6fb}
+.gbp-body h2{font-size:clamp(1.8rem,3.4vw,2.6rem);font-weight:900;text-transform:uppercase;line-height:1.05;color:#0a0a0a;margin:0 0 18px}
+.gbp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:28px}
+.gbp-card{display:block;background:#fff;border:1px solid #e5ecf5;border-radius:16px;padding:22px;text-decoration:none;color:#0a0a0a;transition:border-color .2s,box-shadow .2s}
+.gbp-card:hover,.gbp-card:focus-visible{border-color:#064187;box-shadow:0 8px 22px rgba(6,65,135,.12)}
+.gbp-card h3{font-size:1.05rem;margin:0 0 8px;color:#064187}
+.gbp-card p{margin:0;color:#444;line-height:1.6;font-size:.96rem}
+.gbp-steps{list-style:none;padding:0;margin:24px 0 0;counter-reset:gbps;max-width:760px}
+.gbp-steps li{counter-increment:gbps;position:relative;padding:16px 0 16px 52px;border-bottom:1px solid #dfe7f2;line-height:1.7;color:#333}
+.gbp-steps li::before{content:counter(gbps);position:absolute;left:0;top:14px;width:34px;height:34px;border-radius:50
+/* Google Business Profile service page */
+.gbp-crumb{font-size:.85rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#7fd8ea;margin:0 0 12px}
+.gbp-crumb a{color:inherit}
+.gbp-body{max-width:1160px;margin:0 auto}
+.gbp-body>p{max-width:760px;color:#333;line-height:1.7;font-size:1.05rem}
+.gbp-body p a,.gbp-body li a{color:#064187;font-weight:700}
+.gbp-alt{background:#f3f6fb}
+.gbp-body h2{font-size:clamp(1.8rem,3.4vw,2.6rem);font-weight:900;text-transform:uppercase;line-height:1.05;color:#0a0a0a;margin:0 0 18px}
+.gbp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:28px}
+.gbp-card{display:block;background:#fff;border:1px solid #e5ecf5;border-radius:16px;padding:22px;text-decoration:none;color:#0a0a0a;transition:border-color .2s,box-shadow .2s}
+.gbp-card:hover,.gbp-card:focus-visible{border-color:#064187;box-shadow:0 8px 22px rgba(6,65,135,.12)}
+.gbp-card h3{font-size:1.05rem;margin:0 0 8px;color:#064187}
+.gbp-card p{margin:0;color:#444;line-height:1.6;font-size:.96rem}
+.gbp-steps{list-style:none;padding:0;margin:24px 0 0;counter-reset:gbps;max-width:760px}
+.gbp-steps li{counter-increment:gbps;position:relative;padding:16px 0 16px 52px;border-bottom:1px solid #dfe7f2;line-height:1.7;color:#333}
+.gbp-steps li::before{content:counter(gbps);position:absolute;left:0;top:14px;width:34px;height:34px;border-radius:50%;background:#064187;color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center}
+.gbp-faq{max-width:760px}
+.gbp-faq details{border-bottom:1px solid #dfe7f2;padding:16px 0}
+.gbp-faq summary{font-weight:800;cursor:pointer;color:#0a0a0a;font-size:1.02rem}
+.gbp-faq details p{margin:10px 0 0;color:#333;line-height:1.7}
+@media(max-width:600px){.gbp-body{padding:0 16px}.gbp-body>p{font-size:1rem}}
