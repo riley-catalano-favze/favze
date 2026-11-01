@@ -397,7 +397,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div id="emptyState" style="display:none;" class="empty-state">
         <h4>Brand Positioning Topics In Progress</h4>
         <p>Frameworks on category creation, reputation systems, community strategy, digital PR, and building a brand that customers choose by name.</p>
-        <a href="https://favze.com/free-consultation" class="empty-cta">Get Notified <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="https://favze.com/free-consultation" class="empty-cta">Get Notified <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
     </div>
   </div>
@@ -691,7 +691,7 @@ function renderFeed(){
   feed.innerHTML='<div class="articles-list">'+arts.map(function(a){
     var initials=a.author.split(' ').map(function(w){return w[0];}).join('');
     var url='https://favze.com/resources/articles/'+a.pillar+'/'+a.slug;
-    return '<a href="'+url+'" class="article-card"><div class="article-card-top"><span class="a-tag">Brand Positioning</span><span class="a-dot"></span><span class="a-read-time">'+a.readTime+' min read</span></div><h3>'+a.title+'</h3><p class="desc">'+a.description+'</p><div class="a-footer"><div class="a-author"><div class="a-author-avatar">'+initials+'</div><span class="a-author-name">'+a.author+'</span></div><span class="a-read-link">Read Article <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div></a>';
+    return '<a href="'+url+'" class="article-card"><div class="article-card-top"><span class="a-tag">Brand Positioning</span><span class="a-dot"></span><span class="a-read-time">'+a.readTime+' min read</span></div><h3>'+a.title+'</h3><p class="desc">'+a.description+'</p><div class="a-footer"><div class="a-author"><div class="a-author-avatar">'+initials+'</div><span class="a-author-name">'+a.author+'</span></div><span class="a-read-link">Read Article <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div></a>';
   }).join('')+'</div>';
   if(coming)coming.style.display='flex';
 }

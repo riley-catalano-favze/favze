@@ -775,7 +775,7 @@ function render() {
       html += sectionHeaderHTML(cfg.label, arts.length, p);
       if (arts.length > 0) {
         html += '<div class="articles-list">' + arts.map(cardHTML).join('') + '</div>';
-        html += '<a href="https://favze.com/resources/articles/' + p + '" class="view-all-link">View all ' + cfg.label + ' articles <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>';
+        html += '<a href="https://favze.com/resources/articles/' + p + '" class="view-all-link">View all ' + cfg.label + ' articles <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>';
       } else {
         html += emptyHTML(cfg.empty.title, cfg.empty.body);
       }
@@ -806,7 +806,7 @@ function cardHTML(a) {
     + '<p>' + a.description + '</p>'
     + '<div class="a-footer">'
     + '<div class="a-author"><div class="a-author-avatar">' + initials + '</div><span class="a-author-name">' + a.author + '</span></div>'
-    + '<span class="a-read-link">Read Article <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>'
+    + '<span class="a-read-link">Read Article <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>'
     + '</div></a>';
 }
 function sectionHeaderHTML(label, count, pillar) {
@@ -830,7 +830,7 @@ function emptyHTML(title, body) {
   return '<div class="empty-state">'
     + '<div class="empty-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 4h14M4 8h10M4 12h12M4 16h8" stroke="#aaa" stroke-width="1.6" stroke-linecap="round"/></svg></div>'
     + '<h4>' + title + '</h4><p>' + body + '</p>'
-    + '<a href="https://favze.com/free-consultation" class="empty-cta">Get Notified <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>'
+    + '<a href="https://favze.com/free-consultation" class="empty-cta">Get Notified <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3 7.5h9M8 3.5l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>'
     + '</div>';
 }
 
