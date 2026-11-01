@@ -52,3 +52,6 @@ html body .areas-section .areas-left{min-width:0!important;max-width:100%!import
 html body .areas-section .city-grid .city-pill{width:auto!important;flex:0 1 auto!important;max-width:100%}
 html body .areas-section .fz-cg-rail{display:block!important;overflow:visible!important;animation:none!important;transform:none!important;-webkit-mask:none!important;mask:none!important;width:100%!important}
 html body .areas-section .fz-cg-rail [aria-hidden="true"]{display:none!important}
+/* Local SEO service area: county cards sit under the body copy as a swipeable row */
+html body .areas-section .areas-grid{display:block!important}
+html body .areas-section .areas-left{margin-bottom:28px}
