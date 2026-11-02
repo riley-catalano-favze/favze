@@ -59,3 +59,7 @@ html body .areas-section .areas-left{margin-bottom:28px}
 /* fz-wide-rails: county cards run edge to edge, first card lines up with the heading */
 html body .areas-section .areas-right{box-sizing:border-box;width:100vw;max-width:100vw;margin-left:calc(50% - 50vw);margin-right:0;padding:6px max(4vw,calc((100vw - 1160px)/2)) 16px;scroll-padding-left:max(4vw,calc((100vw - 1160px)/2));scrollbar-width:none;overscroll-behavior-x:contain;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 clamp(14px,4vw,64px),#000 calc(100% - clamp(14px,4vw,64px)),transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 clamp(14px,4vw,64px),#000 calc(100% - clamp(14px,4vw,64px)),transparent 100%)}
 html body .areas-section .areas-right::-webkit-scrollbar{display:none}
+
+/* fz-wide-rails: the Learn More row runs edge to edge, first card lines up with the heading */
+html body .fz-duo-sec .gc-row{box-sizing:border-box;width:100vw;max-width:100vw;margin-left:calc(50% - 50vw);margin-right:0;padding-left:max(4vw,calc((100vw - 1180px)/2));padding-right:max(4vw,calc((100vw - 1180px)/2));scroll-padding-left:max(4vw,calc((100vw - 1180px)/2));scrollbar-width:none;overscroll-behavior-x:contain;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 clamp(14px,4vw,64px),#000 calc(100% - clamp(14px,4vw,64px)),transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 clamp(14px,4vw,64px),#000 calc(100% - clamp(14px,4vw,64px)),transparent 100%)}
+html body .fz-duo-sec .gc-row::-webkit-scrollbar{display:none}
