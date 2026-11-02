@@ -17,7 +17,49 @@ function gtag(){dataLayer.push(arguments);}
 </script>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" id="silktide-consent-manager-css" href="https://cdn.jsdelivr.net/gh/silktide/consent-manager@v2.0.1/silktide-consent-manager.css" integrity="sha384-EdMq+R+YOnsbelo08wPenoTlnxbAyxI11NMIxzugx/qAsbh64KcOkqxYqq6pfvO/" crossorigin="anonymous" media="print" onload="this.media='all'">
-<style id="silktide-consent-manager-overrides">#stcm-wrapper{--boxShadow: -5px 5px 10px 0px #00000012, 0px 0px 50px 0px #0000001a;--fontFamily: Helvetica Neue, Segoe UI, Arial, sans-serif;--primaryColor: #064187;--backgroundColor: #FFFFFF;--textColor: #4B494B;--backdropBackgroundColor: #00000033;--backdropBackgroundBlur: 0px;--iconColor: #064187;--iconBackgroundColor: #FFFFFF}#stcm-wrapper .stcm-button{border-radius:999px!important}@media(max-width:768px){#stcm-icon{bottom:calc(66px + env(safe-area-inset-bottom))!important;left:14px!important;width:48px!important;height:48px!important}}</style>
+<style id="silktide-consent-manager-overrides">#stcm-wrapper{--boxShadow: -5px 5px 10px 0px #00000012, 0px 0px 50px 0px #0000001a;--fontFamily: Helvetica Neue, Segoe UI, Arial, sans-serif;--primaryColor: #064187;--backgroundColor: #FFFFFF;--textColor: #4B494B;--backdropBackgroundColor: #00000033;--backdropBackgroundBlur: 0px;--iconColor: #064187;--iconBackgroundColor: #FFFFFF}#stcm-wrapper .stcm-button{border-radius:999px!important}@media(max-width:768px){#stcm-icon{bottom:calc(66px + env(safe-area-inset-bottom))!important;left:14px!important;width:48px!important;height:48px!important}}.fq-list{display:flex;flex-direction:column}
+.fq-item{border-bottom:1.5px solid #ddd}
+.fq-item:first-child{border-top:1.5px solid #ddd}
+.fqb{width:100%;background:none;border:none;text-align:left;padding:20px 0;font-weight:700;font-size:.95rem;color:#0a0a0a;cursor:pointer;display:flex;align-items:flex-start;justify-content:space-between;gap:18px;font-family:var(--font-body);line-height:1.5}
+.fqb>span:first-child{flex:1}
+.fqb:hover{color:var(--navy)}
+.fq-ic{flex-shrink:0;width:26px;height:26px;min-width:26px;border-radius:50%;background:#e2e2e2;display:flex;align-items:center;justify-content:center;transition:background .2s,transform .2s;margin-top:1px}
+.fq-ans{display:none;padding:0 0 22px;font-size:.91rem;color:#555;line-height:1.8}
+.fqb{font-size:.9rem;padding:18px 0;gap:12px}
+.fq-ans{font-size:.87rem;padding:0 0 18px}
+.fq-ic{width:24px;height:24px;min-width:24px}
+.hero-right{perspective:1400px;display:flex;align-items:center;justify-content:center;min-height:340px}
+.hf-card{width:100%;max-width:440px;background:linear-gradient(160deg,#17263d 0%,#0b1322 100%);border:1px solid rgba(127,216,234,.22);border-radius:22px;padding:24px;color:#fff;transform:rotateX(8deg) rotateY(-14deg);transform-style:preserve-3d;box-shadow:0 40px 80px -20px rgba(0,0,0,.65),0 0 70px rgba(10,137,163,.22);transition:transform .6s ease}
+.hf-card:hover{transform:rotateX(3deg) rotateY(-6deg)}
+.hf-top{display:flex;align-items:center;gap:12px;margin-bottom:18px;transform:translateZ(24px)}
+.hf-av{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,#064187,#0A89A3);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.8rem;letter-spacing:.04em;box-shadow:0 10px 22px rgba(10,137,163,.4);flex-shrink:0}
+.hf-title{font-weight:700;font-size:1rem;line-height:1.25}
+.hf-sub{font-size:.78rem;color:rgba(255,255,255,.6);margin-top:2px}
+.hf-stars{margin-left:auto;color:#fbbf24;font-size:.8rem;letter-spacing:.05em}
+.hf-label{display:flex;justify-content:space-between;font-size:.78rem;color:rgba(255,255,255,.72);margin-bottom:8px}
+.hf-bar{height:8px;border-radius:99px;background:rgba(255,255,255,.08);overflow:hidden;margin-bottom:16px}
+.hf-bar i{display:block;height:100%;width:72%;background:linear-gradient(90deg,#0A89A3,#7fd8ea);border-radius:99px;animation:hfGrow 1.6s ease-out both}
+@keyframes hfGrow{from{width:0}}
+.hf-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.hf-chip{font-size:.74rem;padding:6px 10px;border-radius:99px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.72)}
+.hf-chip.on{background:rgba(10,137,163,.26);border-color:rgba(127,216,234,.55);color:#fff}
+.hf-row{display:flex;align-items:center;gap:10px;padding:11px 12px;border-radius:12px;background:rgba(255,255,255,.05);font-size:.85rem;margin-bottom:8px;border:1px solid rgba(255,255,255,.06);transform:translateZ(12px)}
+.hf-tick{width:20px;height:20px;border-radius:50%;background:#0A89A3;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:.7rem;flex-shrink:0}
+.hf-tag{margin-left:auto;font-size:.7rem;padding:3px 9px;border-radius:99px;background:rgba(127,216,234,.16);color:#7fd8ea;white-space:nowrap}
+.hf-pop{animation:hfPop .6s ease-out both}
+.hf-pop.d2{animation-delay:.3s}
+@keyframes hfPop{from{opacity:0;transform:translateY(10px)}}
+.hf-cta{display:inline-block;margin-top:8px;padding:10px 16px;border-radius:99px;background:#0A89A3;color:#fff;font-weight:700;font-size:.82rem;box-shadow:0 12px 26px rgba(10,137,163,.45);transform:translateZ(36px)}
+.hf-map{position:relative;width:100%;max-width:440px;aspect-ratio:1/1;border-radius:24px;background:radial-gradient(circle at 50% 45%,#1a3a5a 0%,#0b1322 72%);border:1px solid rgba(127,216,234,.22);transform:rotateX(52deg) rotateZ(-12deg);transform-style:preserve-3d;box-shadow:0 50px 80px -30px rgba(0,0,0,.75),0 0 80px rgba(10,137,163,.2)}
+.hf-map::before{content:"";position:absolute;inset:14%;border-radius:50%;border:1px dashed rgba(127,216,234,.3)}
+.hf-pin{position:absolute;width:18px;height:18px;border-radius:50% 50% 50% 0;background:#0A89A3;transform:rotate(-45deg);box-shadow:0 10px 18px rgba(10,137,163,.55);animation:hfBounce 2.4s ease-in-out infinite}
+.hf-pin.p1{left:22%;top:30%}.hf-pin.p2{left:68%;top:24%;animation-delay:.4s}.hf-pin.p3{left:58%;top:66%;animation-delay:.8s}
+.hf-pin.you{left:44%;top:44%;width:24px;height:24px;background:#fff;animation-delay:.2s}
+@keyframes hfBounce{0%,100%{transform:rotate(-45deg) translateY(0)}50%{transform:rotate(-45deg) translateY(-8px)}}
+.hf-callout{position:absolute;left:50%;top:16%;transform:translateX(-50%) translateZ(40px);background:#fff;color:#0a0a0a;font-size:.75rem;font-weight:700;padding:8px 12px;border-radius:10px;box-shadow:0 14px 30px rgba(0,0,0,.4);white-space:nowrap}
+@media(max-width:900px){.hero-right{min-height:0;margin-top:28px}.hf-card,.hf-map{transform:none}.hf-card{max-width:100%}.hf-map{max-width:320px;margin:0 auto}}
+@media(prefers-reduced-motion:reduce){.hf-card,.hf-map,.hf-pin,.hf-pop,.hf-bar i{animation:none!important;transition:none!important}}
+.pw-band{background:#f3f6fb;padding:56px 5%}.pw-in{max-width:1160px;margin:0 auto}.pw-band h2{font-size:1.25rem;font-weight:900;text-transform:uppercase;color:#0a0a0a;margin-bottom:16px}.pw-row{display:flex;flex-wrap:wrap;gap:10px}.pw-pill{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:999px;background:#fff;border:1.5px solid #cfdcec;color:#064187;font-weight:700;font-size:.92rem;text-decoration:none}.pw-pill:hover{border-color:#064187;box-shadow:0 6px 16px rgba(6,65,135,.12)}@media(max-width:600px){.pw-band{padding:44px 5%}}</style>
 <script src="https://cdn.jsdelivr.net/gh/silktide/consent-manager@v2.0.1/silktide-consent-manager.js" integrity="sha384-5Pt34uiIbCsvfiiZXoLi4HRf/YBXjr9c8e+gYeVo9smUaInNHYVtc8NZ8wUnXJIq" crossorigin="anonymous" defer></script>
 
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -31,12 +73,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script>gtag('js',new Date());gtag('config','G-79E26LS14F');</script>
 
 <title>Microsoft Advertising (Bing Ads) Management - Favze</title>
-<meta name="description" content="Favze sets up and manages Microsoft Advertising, formerly Bing Ads, for Northern Indiana and Michiana businesses, with imports, conversion tracking, and reporting.">
+<meta name="description" content="Favze sets up Microsoft Advertising, formerly Bing Ads, for Northern Indiana and Michiana businesses, with imports, conversion tracking, and reporting.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Favze">
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="Microsoft Advertising (Bing Ads) Management - Favze">
-<meta property="og:description" content="Favze sets up and manages Microsoft Advertising, formerly Bing Ads, for Northern Indiana and Michiana businesses, with imports, conversion tracking, and reporting.">
+<meta property="og:description" content="Favze sets up Microsoft Advertising, formerly Bing Ads, for Northern Indiana and Michiana businesses, with imports, conversion tracking, and reporting.">
 <meta property="og:url" content="https://favze.com/services/paid-search-ads/microsoft-bing-ads">
 <meta property="og:image" content="https://favze.com/assets/brand/favze-social-preview.jpg">
 <meta property="og:image:width" content="1200">
@@ -44,7 +86,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:image:alt" content="Favze logo">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Microsoft Advertising (Bing Ads) Management - Favze">
-<meta name="twitter:description" content="Favze sets up and manages Microsoft Advertising, formerly Bing Ads, for Northern Indiana and Michiana businesses, with imports, conversion tracking, and reporting.">
+<meta name="twitter:description" content="Favze sets up Microsoft Advertising, formerly Bing Ads, for Northern Indiana and Michiana businesses, with imports, conversion tracking, and reporting.">
 <meta name="twitter:image" content="https://favze.com/assets/brand/favze-social-preview.jpg">
 <meta name="twitter:image:alt" content="Favze logo">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -288,10 +330,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <h2 class="ttl" id="bingLocal-h" style="color:#fff;margin-top:8px;max-width:820px">Targeting by Town and by Industry</h2>
     <p class="sub" style="margin-top:14px;color:rgba(255,255,255,.72);max-width:820px">Bing and Edge users are spread across every kind of business, so local targeting matters more than the platform itself. We set location targeting around the communities you serve, including <a href="https://favze.com/areas-served/elkhart-county/goshen">Goshen</a>, <a href="https://favze.com/areas-served/st-joseph-county/south-bend">South Bend</a>, and <a href="https://favze.com/areas-served/kosciusko-county/warsaw">Warsaw</a>.</p><p class="sub" style="margin-top:14px;color:rgba(255,255,255,.72);max-width:820px">We also adjust by category. <a href="https://favze.com/industries/auto-dealerships">Auto dealerships</a> often need inventory-driven ads and test drive conversions, while <a href="https://favze.com/industries/professional-services">professional services</a> usually focus on consultations and quote requests.</p>
   </div></section>
+<section class="sec" id="bingReach" style="background:var(--dark)" aria-labelledby="bingReach-h"><div class="sec-inner">
+    <span class="lbl">Local Reach</span>
+    <h2 class="ttl" id="bingReach-h" style="color:#fff;margin-top:8px;max-width:820px">Campaign Splits by Community</h2>
+    <p class="sub" style="margin-top:14px;color:rgba(255,255,255,.72);max-width:820px">We often split Microsoft Advertising campaigns by community so the budget follows demand. Northwest Indiana campaigns might target <a href="https://favze.com/areas-served/lake-county/merrillville">Merrillville</a>, <a href="https://favze.com/areas-served/porter-county/chesterton">Chesterton</a>, and <a href="https://favze.com/areas-served/laporte-county/westville">Westville</a>, while a separate set covers <a href="https://favze.com/areas-served/porter-county/kouts">Kouts</a> and the rural areas around it. Customers in <a href="https://favze.com/areas-served/berrien-county/union-pier">Union Pier</a> and across the Michigan line can be targeted separately, and <a href="https://favze.com/areas-served/howard-county/kokomo">Kokomo</a> can be its own campaign if you serve central Indiana.</p><p class="sub" style="margin-top:14px;color:rgba(255,255,255,.72);max-width:820px">Separate campaigns make reporting clearer. You can see which community produces calls and bookings, and move budget without changing the whole account.</p>
+  </div></section>
 <section class="sec" id="faq" style="background:var(--dark)" aria-labelledby="faq-h"><div class="sec-inner">
     <span class="lbl">FAQ</span>
     <h2 class="ttl" id="faq-h" style="color:#fff;margin-top:8px;max-width:820px">Questions Customers Ask</h2>
-    <div style="margin-top:28px;max-width:860px"><div class="fqi"><button class="fqb" type="button" aria-expanded="false">What is Microsoft Advertising?<span class="fqi-ic" aria-hidden="true"></span></button><div class="fqa">Microsoft's pay-per-click platform, formerly called Bing Ads. Ads appear on Bing, Microsoft Edge, and partner sites that show Microsoft search results.</div></div><div class="fqi"><button class="fqb" type="button" aria-expanded="false">Can you import my Google Ads account?<span class="fqi-ic" aria-hidden="true"></span></button><div class="fqa">Yes, and it is often the fastest start. We review every imported item, since settings can differ between the two platforms.</div></div><div class="fqi"><button class="fqb" type="button" aria-expanded="false">Is it worth running alongside Google Search Ads?<span class="fqi-ic" aria-hidden="true"></span></button><div class="fqa">Often it can be, since the audiences differ and costs can be lower. We test the split against your own results. See our <a href="https://favze.com/services/paid-search-ads/google-search-ads">Google Search Ads</a> page.</div></div><div class="fqi"><button class="fqb" type="button" aria-expanded="false">Do you track conversions?<span class="fqi-ic" aria-hidden="true"></span></button><div class="fqa">Yes. We set up tracking for calls, forms, bookings, and purchases so you can see what each campaign produces.</div></div><div class="fqi"><button class="fqb" type="button" aria-expanded="false">How long before I know if it works?<span class="fqi-ic" aria-hidden="true"></span></button><div class="fqa">Usually several weeks of data. We set the test period and success measures in advance, so the decision rests on evidence.</div></div><div class="fqi"><button class="fqb" type="button" aria-expanded="false">Will this replace Google Ads?<span class="fqi-ic" aria-hidden="true"></span></button><div class="fqa">Usually not. It works best as a complement, and we help you split the budget based on results.</div></div></div>
+    <div class="fq-list" style="margin-top:28px;max-width:860px"><div class="fq-item"><button class="fqb" type="button" aria-expanded="false"><span>What is Microsoft Advertising?</span><span class="fq-ic" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button><div class="fq-ans">Microsoft's pay-per-click platform, formerly called Bing Ads. Ads appear on Bing, Microsoft Edge, and partner sites that show Microsoft search results.</div></div><div class="fq-item"><button class="fqb" type="button" aria-expanded="false"><span>Can you import my Google Ads account?</span><span class="fq-ic" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button><div class="fq-ans">Yes, and it is often the fastest start. We review every imported item, since settings can differ between the two platforms.</div></div><div class="fq-item"><button class="fqb" type="button" aria-expanded="false"><span>Is it worth running alongside Google Search Ads?</span><span class="fq-ic" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button><div class="fq-ans">Often it can be, since the audiences differ and costs can be lower. We test the split against your own results. See our <a href="https://favze.com/services/paid-search-ads/google-search-ads">Google Search Ads</a> page.</div></div><div class="fq-item"><button class="fqb" type="button" aria-expanded="false"><span>Do you track conversions?</span><span class="fq-ic" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button><div class="fq-ans">Yes. We set up tracking for calls, forms, bookings, and purchases so you can see what each campaign produces.</div></div><div class="fq-item"><button class="fqb" type="button" aria-expanded="false"><span>How long before I know if it works?</span><span class="fq-ic" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button><div class="fq-ans">Usually several weeks of data. We set the test period and success measures in advance, so the decision rests on evidence.</div></div><div class="fq-item"><button class="fqb" type="button" aria-expanded="false"><span>Will this replace Google Ads?</span><span class="fq-ic" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button><div class="fq-ans">Usually not. It works best as a complement, and we help you split the budget based on results.</div></div></div>
   </div></section>
 <section class="sec" id="bingRel" style="background:var(--dark)" aria-labelledby="bingRel-h"><div class="sec-inner">
     <span class="lbl">Related</span>
@@ -322,6 +369,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </div>
 </section>
 <section class="fz-blk gbp-alt" aria-labelledby="relatedGuides"><div class="fz-blk-in gbp-body"><h2 id="relatedGuides">Part of Our Local SEO Services</h2><p>This page goes deeper on one part of our Local SEO services. Explore the other parts below, or start with the full Local SEO overview.</p><div class="gbp-grid"><a class="gbp-card" href="https://favze.com/services/local-seo"><h3>Local SEO Services</h3><p>The full picture: Map Pack visibility, local profiles, reviews, and local authority working together.</p></a><a class="gbp-card" href="https://favze.com/services/local-seo/reviews-generation"><h3>Review Generation &amp; Reputation Management</h3><p>A simple request system that brings in real reviews, plus replies that build trust with future customers.</p></a><a class="gbp-card" href="https://favze.com/services/local-seo/backlinks"><h3>Local Authority &amp; Backlink Strategy</h3><p>Trusted local links from chambers, directories, partners, and community sources.</p></a></div></div></section>
+<section class="pw-band" aria-labelledby="pw-h"><div class="pw-in"><h2 id="pw-h">Pairs Well With</h2><div class="pw-row"><a class="pw-pill" href="https://favze.com/services/local-seo/google-business-profile">Google Business Profile <span aria-hidden="true">&rarr;</span></a></div></div></section>
 <section class="fz-form-sec" id="free-consultation-form" aria-labelledby="fzFormTitle">
   <div class="fz-form-inner">
     <div class="fz-form-copy">
@@ -712,5 +760,6 @@ document.addEventListener('DOMContentLoaded',function(){if(!window.silktideConse
 <script src="../../assets/js/fz-search.js?v=3ad4dfe6" defer></script>
 
 
+<script>document.querySelectorAll(".fq-item .fqb").forEach(function(b){b.addEventListener("click",function(){var it=b.parentNode,o=!it.classList.contains("open");it.classList.toggle("open",o);b.setAttribute("aria-expanded",String(o));var a=it.querySelector(".fq-ans");if(a)a.style.display=o?"block":"none";var ic=it.querySelector(".fq-ic");if(ic)ic.style.transform=o?"rotate(45deg)":""})});</script>
 </body>
 </html>

@@ -17,7 +17,49 @@ function gtag(){dataLayer.push(arguments);}
 </script>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" id="silktide-consent-manager-css" href="https://cdn.jsdelivr.net/gh/silktide/consent-manager@v2.0.1/silktide-consent-manager.css" integrity="sha384-EdMq+R+YOnsbelo08wPenoTlnxbAyxI11NMIxzugx/qAsbh64KcOkqxYqq6pfvO/" crossorigin="anonymous" media="print" onload="this.media='all'">
-<style id="silktide-consent-manager-overrides">#stcm-wrapper{--boxShadow: -5px 5px 10px 0px #00000012, 0px 0px 50px 0px #0000001a;--fontFamily: Helvetica Neue, Segoe UI, Arial, sans-serif;--primaryColor: #064187;--backgroundColor: #FFFFFF;--textColor: #4B494B;--backdropBackgroundColor: #00000033;--backdropBackgroundBlur: 0px;--iconColor: #064187;--iconBackgroundColor: #FFFFFF}#stcm-wrapper .stcm-button{border-radius:999px!important}@media(max-width:768px){#stcm-icon{bottom:calc(66px + env(safe-area-inset-bottom))!important;left:14px!important;width:48px!important;height:48px!important}}</style>
+<style id="silktide-consent-manager-overrides">#stcm-wrapper{--boxShadow: -5px 5px 10px 0px #00000012, 0px 0px 50px 0px #0000001a;--fontFamily: Helvetica Neue, Segoe UI, Arial, sans-serif;--primaryColor: #064187;--backgroundColor: #FFFFFF;--textColor: #4B494B;--backdropBackgroundColor: #00000033;--backdropBackgroundBlur: 0px;--iconColor: #064187;--iconBackgroundColor: #FFFFFF}#stcm-wrapper .stcm-button{border-radius:999px!important}@media(max-width:768px){#stcm-icon{bottom:calc(66px + env(safe-area-inset-bottom))!important;left:14px!important;width:48px!important;height:48px!important}}.fq-list{display:flex;flex-direction:column}
+.fq-item{border-bottom:1.5px solid #ddd}
+.fq-item:first-child{border-top:1.5px solid #ddd}
+.fqb{width:100%;background:none;border:none;text-align:left;padding:20px 0;font-weight:700;font-size:.95rem;color:#0a0a0a;cursor:pointer;display:flex;align-items:flex-start;justify-content:space-between;gap:18px;font-family:var(--font-body);line-height:1.5}
+.fqb>span:first-child{flex:1}
+.fqb:hover{color:var(--navy)}
+.fq-ic{flex-shrink:0;width:26px;height:26px;min-width:26px;border-radius:50%;background:#e2e2e2;display:flex;align-items:center;justify-content:center;transition:background .2s,transform .2s;margin-top:1px}
+.fq-ans{display:none;padding:0 0 22px;font-size:.91rem;color:#555;line-height:1.8}
+.fqb{font-size:.9rem;padding:18px 0;gap:12px}
+.fq-ans{font-size:.87rem;padding:0 0 18px}
+.fq-ic{width:24px;height:24px;min-width:24px}
+.hero-right{perspective:1400px;display:flex;align-items:center;justify-content:center;min-height:340px}
+.hf-card{width:100%;max-width:440px;background:linear-gradient(160deg,#17263d 0%,#0b1322 100%);border:1px solid rgba(127,216,234,.22);border-radius:22px;padding:24px;color:#fff;transform:rotateX(8deg) rotateY(-14deg);transform-style:preserve-3d;box-shadow:0 40px 80px -20px rgba(0,0,0,.65),0 0 70px rgba(10,137,163,.22);transition:transform .6s ease}
+.hf-card:hover{transform:rotateX(3deg) rotateY(-6deg)}
+.hf-top{display:flex;align-items:center;gap:12px;margin-bottom:18px;transform:translateZ(24px)}
+.hf-av{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,#064187,#0A89A3);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.8rem;letter-spacing:.04em;box-shadow:0 10px 22px rgba(10,137,163,.4);flex-shrink:0}
+.hf-title{font-weight:700;font-size:1rem;line-height:1.25}
+.hf-sub{font-size:.78rem;color:rgba(255,255,255,.6);margin-top:2px}
+.hf-stars{margin-left:auto;color:#fbbf24;font-size:.8rem;letter-spacing:.05em}
+.hf-label{display:flex;justify-content:space-between;font-size:.78rem;color:rgba(255,255,255,.72);margin-bottom:8px}
+.hf-bar{height:8px;border-radius:99px;background:rgba(255,255,255,.08);overflow:hidden;margin-bottom:16px}
+.hf-bar i{display:block;height:100%;width:72%;background:linear-gradient(90deg,#0A89A3,#7fd8ea);border-radius:99px;animation:hfGrow 1.6s ease-out both}
+@keyframes hfGrow{from{width:0}}
+.hf-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.hf-chip{font-size:.74rem;padding:6px 10px;border-radius:99px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.72)}
+.hf-chip.on{background:rgba(10,137,163,.26);border-color:rgba(127,216,234,.55);color:#fff}
+.hf-row{display:flex;align-items:center;gap:10px;padding:11px 12px;border-radius:12px;background:rgba(255,255,255,.05);font-size:.85rem;margin-bottom:8px;border:1px solid rgba(255,255,255,.06);transform:translateZ(12px)}
+.hf-tick{width:20px;height:20px;border-radius:50%;background:#0A89A3;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:.7rem;flex-shrink:0}
+.hf-tag{margin-left:auto;font-size:.7rem;padding:3px 9px;border-radius:99px;background:rgba(127,216,234,.16);color:#7fd8ea;white-space:nowrap}
+.hf-pop{animation:hfPop .6s ease-out both}
+.hf-pop.d2{animation-delay:.3s}
+@keyframes hfPop{from{opacity:0;transform:translateY(10px)}}
+.hf-cta{display:inline-block;margin-top:8px;padding:10px 16px;border-radius:99px;background:#0A89A3;color:#fff;font-weight:700;font-size:.82rem;box-shadow:0 12px 26px rgba(10,137,163,.45);transform:translateZ(36px)}
+.hf-map{position:relative;width:100%;max-width:440px;aspect-ratio:1/1;border-radius:24px;background:radial-gradient(circle at 50% 45%,#1a3a5a 0%,#0b1322 72%);border:1px solid rgba(127,216,234,.22);transform:rotateX(52deg) rotateZ(-12deg);transform-style:preserve-3d;box-shadow:0 50px 80px -30px rgba(0,0,0,.75),0 0 80px rgba(10,137,163,.2)}
+.hf-map::before{content:"";position:absolute;inset:14%;border-radius:50%;border:1px dashed rgba(127,216,234,.3)}
+.hf-pin{position:absolute;width:18px;height:18px;border-radius:50% 50% 50% 0;background:#0A89A3;transform:rotate(-45deg);box-shadow:0 10px 18px rgba(10,137,163,.55);animation:hfBounce 2.4s ease-in-out infinite}
+.hf-pin.p1{left:22%;top:30%}.hf-pin.p2{left:68%;top:24%;animation-delay:.4s}.hf-pin.p3{left:58%;top:66%;animation-delay:.8s}
+.hf-pin.you{left:44%;top:44%;width:24px;height:24px;background:#fff;animation-delay:.2s}
+@keyframes hfBounce{0%,100%{transform:rotate(-45deg) translateY(0)}50%{transform:rotate(-45deg) translateY(-8px)}}
+.hf-callout{position:absolute;left:50%;top:16%;transform:translateX(-50%) translateZ(40px);background:#fff;color:#0a0a0a;font-size:.75rem;font-weight:700;padding:8px 12px;border-radius:10px;box-shadow:0 14px 30px rgba(0,0,0,.4);white-space:nowrap}
+@media(max-width:900px){.hero-right{min-height:0;margin-top:28px}.hf-card,.hf-map{transform:none}.hf-card{max-width:100%}.hf-map{max-width:320px;margin:0 auto}}
+@media(prefers-reduced-motion:reduce){.hf-card,.hf-map,.hf-pin,.hf-pop,.hf-bar i{animation:none!important;transition:none!important}}
+</style>
 <script src="https://cdn.jsdelivr.net/gh/silktide/consent-manager@v2.0.1/silktide-consent-manager.js" integrity="sha384-5Pt34uiIbCsvfiiZXoLi4HRf/YBXjr9c8e+gYeVo9smUaInNHYVtc8NZ8wUnXJIq" crossorigin="anonymous" defer></script>
 
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -31,12 +73,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script>gtag('js',new Date());gtag('config','G-79E26LS14F');</script>
 
 <title>Apple Maps Ads Management - Favze</title>
-<meta name="description" content="Favze sets up and manages Apple Maps Ads for Northern Indiana and Michiana businesses, with a corrected Apple Business listing, location targeting, and call and direction tracking.">
+<meta name="description" content="Favze sets up Apple Maps Ads for Northern Indiana and Michiana businesses, with a corrected Apple Business listing and call and direction tracking.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Favze">
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="Apple Maps Ads Management - Favze">
-<meta property="og:description" content="Favze sets up and manages Apple Maps Ads for Northern Indiana and Michiana businesses, with a corrected Apple Business listing, location targeting, and call and direction tracking.">
+<meta property="og:description" content="Favze sets up Apple Maps Ads for Northern Indiana and Michiana businesses, with a corrected Apple Business listing and call and direction tracking.">
 <meta property="og:url" content="https://favze.com/services/paid-search-ads/apple-maps-ads">
 <meta property="og:image" content="https://favze.com/assets/brand/favze-social-preview.jpg">
 <meta property="og:image:width" content="1200">
@@ -44,7 +86,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:image:alt" content="Favze logo">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Apple Maps Ads Management - Favze">
-<meta name="twitter:description" content="Favze sets up and manages Apple Maps Ads for Northern Indiana and Michiana businesses, with a corrected Apple Business listing, location targeting, and call and direction tracking.">
+<meta name="twitter:description" content="Favze sets up Apple Maps Ads for Northern Indiana and Michiana businesses, with a corrected Apple Business listing and call and direction tracking.">
 <meta name="twitter:image" content="https://favze.com/assets/brand/favze-social-preview.jpg">
 <meta name="twitter:image:alt" content="Favze logo">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -286,10 +328,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <h2 class="ttl" id="appleLocal-h" style="color:#fff;margin-top:8px;max-width:820px">Where Apple Maps Fits in Our Area</h2>
     <p class="sub" style="margin-top:14px;color:rgba(255,255,255,.72);max-width:820px">Many people use Apple Maps while already traveling between towns, so the channel can help businesses that draw from a wider area. In Northern Indiana we often focus on the corridor between <a href="https://favze.com/areas-served/elkhart-county/goshen">Goshen</a> and <a href="https://favze.com/areas-served/st-joseph-county/south-bend">South Bend</a>, plus the towns along it such as <a href="https://favze.com/areas-served/elkhart-county/middlebury">Middlebury</a>, and adjust by category.</p><p class="sub" style="margin-top:14px;color:rgba(255,255,255,.72);max-width:820px">For <a href="https://favze.com/industries/hospitality-food">restaurants and food businesses</a>, hours and directions in the listing matter most. For <a href="https://favze.com/industries/auto-dealerships">auto dealerships</a>, the listing details and location targeting usually drive the results.</p>
   </div></section>
+<section class="sec" id="appleReach" style="background:var(--dark)" aria-labelledby="appleReach-h"><div class="sec-inner">
+    <span class="lbl">Local Reach</span>
+    <h2 class="ttl" id="appleReach-h" style="color:#fff;margin-top:8px;max-width:820px">Targeting Along the Commuter Routes</h2>
+    <p class="sub" style="margin-top:14px;color:rgba(255,255,255,.72);max-width:820px">Apple Maps users move between towns during the day, so targeting often follows the commute. We look at the routes around <a href="https://favze.com/areas-served/st-joseph-county/lakeville">Lakeville</a> and <a href="https://favze.com/areas-served/st-joseph-county/granger">Granger</a>, the area near <a href="https://favze.com/areas-served/st-joseph-county/notre-dame">Notre Dame</a>, and <a href="https://favze.com/areas-served/berrien-county/berrien-springs">Berrien Springs</a> across the Michigan line. Customers in <a href="https://favze.com/areas-served/marshall-county/culver">Culver</a> can be targeted separately, and we set the geography to match where your customers actually travel from.</p><p class="sub" style="margin-top:14px;color:rgba(255,255,255,.72);max-width:820px">For businesses that also draw from further out, <a href="https://favze.com/areas-served/cass-county-indiana/logansport">Logansport</a> can be a useful secondary target. We test each area separately so the results show which towns actually produce calls and directions.</p>
+  </div></section>
 <section class="sec" id="faq" style="background:var(--dark)" aria-labelledby="faq-h"><div class="sec-inner">
     <span class="lbl">FAQ</span>
     <h2 class="ttl" id="faq-h" style="color:#fff;margin-top:8px;max-width:820px">Questions Customers Ask</h2>
-    <div style="margin-top:28px;max-width:860px"><div class="fqi"><button class="fqb" type="button" aria-expanded="false">Is Apple Maps Ads the same as Apple Business Connect?<span class="fqi-ic" aria-hidden="true"></span></button><div class="fqa">No. Apple Business Connect is where you manage your Apple listing, and it is free. Apple Maps Ads is a paid placement. The listing has to be right first, and we handle both.</div></div><div class="fqi"><button class="fqb" type="button" aria-expanded="false">Which businesses benefit most?<span class="fqi-ic" aria-hidden="true"></span></button><div class="fqa">Businesses that depend on calls, directions, and walk-in visits often see the most value. Online-only businesses may find other channels work better, and we will say so if that is the case.</div></div><div class="fqi"><button class="fqb" type="button" aria-expanded="false">How is it different from Google Search Ads?<span class="fqi-ic" aria-hidden="true"></span></button><div class="fqa">Apple Maps Ads reach people inside Apple Maps on Apple devices. Google Search Ads reach people searching on Google. Many businesses run both, and we plan the split. See our <a href="https://favze.com/services/paid-search-ads/google-search-ads">Google Search Ads</a> page.</div></div><div class="fqi"><button class="fqb" type="button" aria-expanded="false">Will you track calls and directions?<span class="fqi-ic" aria-hidden="true"></span></button><div class="fqa">Yes. Calls, direction requests, and website visits are part of the reporting, so you can see what the channel brings in.</div></div><div class="fqi"><button class="fqb" type="button" aria-expanded="false">Is this a good test for a small budget?<span class="fqi-ic" aria-hidden="true"></span></button><div class="fqa">It can be, if the budget is set for a fair test period with clear goals. We recommend a limited test before committing to more spend.</div></div><div class="fqi"><button class="fqb" type="button" aria-expanded="false">Do I need Apple devices to run it?<span class="fqi-ic" aria-hidden="true"></span></button><div class="fqa">No. You do not need to own Apple products. We manage the account and the listing for you.</div></div></div>
+    <div class="fq-list" style="margin-top:28px;max-width:860px"><div class="fq-item"><button class="fqb" type="button" aria-expanded="false"><span>Is Apple Maps Ads the same as Apple Business Connect?</span><span class="fq-ic" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button><div class="fq-ans">No. Apple Business Connect is where you manage your Apple listing, and it is free. Apple Maps Ads is a paid placement. The listing has to be right first, and we handle both.</div></div><div class="fq-item"><button class="fqb" type="button" aria-expanded="false"><span>Which businesses benefit most?</span><span class="fq-ic" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button><div class="fq-ans">Businesses that depend on calls, directions, and walk-in visits often see the most value. Online-only businesses may find other channels work better, and we will say so if that is the case.</div></div><div class="fq-item"><button class="fqb" type="button" aria-expanded="false"><span>How is it different from Google Search Ads?</span><span class="fq-ic" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button><div class="fq-ans">Apple Maps Ads reach people inside Apple Maps on Apple devices. Google Search Ads reach people searching on Google. Many businesses run both, and we plan the split. See our <a href="https://favze.com/services/paid-search-ads/google-search-ads">Google Search Ads</a> page.</div></div><div class="fq-item"><button class="fqb" type="button" aria-expanded="false"><span>Will you track calls and directions?</span><span class="fq-ic" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button><div class="fq-ans">Yes. Calls, direction requests, and website visits are part of the reporting, so you can see what the channel brings in.</div></div><div class="fq-item"><button class="fqb" type="button" aria-expanded="false"><span>Is this a good test for a small budget?</span><span class="fq-ic" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button><div class="fq-ans">It can be, if the budget is set for a fair test period with clear goals. We recommend a limited test before committing to more spend.</div></div><div class="fq-item"><button class="fqb" type="button" aria-expanded="false"><span>Do I need Apple devices to run it?</span><span class="fq-ic" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span></button><div class="fq-ans">No. You do not need to own Apple products. We manage the account and the listing for you.</div></div></div>
   </div></section>
 <section class="sec" id="appleRel" style="background:var(--dark)" aria-labelledby="appleRel-h"><div class="sec-inner">
     <span class="lbl">Related</span>
@@ -710,5 +757,6 @@ document.addEventListener('DOMContentLoaded',function(){if(!window.silktideConse
 <script src="../../assets/js/fz-search.js?v=3ad4dfe6" defer></script>
 
 
+<script>document.querySelectorAll(".fq-item .fqb").forEach(function(b){b.addEventListener("click",function(){var it=b.parentNode,o=!it.classList.contains("open");it.classList.toggle("open",o);b.setAttribute("aria-expanded",String(o));var a=it.querySelector(".fq-ans");if(a)a.style.display=o?"block":"none";var ic=it.querySelector(".fq-ic");if(ic)ic.style.transform=o?"rotate(45deg)":""})});</script>
 </body>
 </html>
