@@ -9,3 +9,10 @@ html body .fz-rail{width:100vw;max-width:100vw;margin-left:calc(50% - 50vw);marg
 html body .fz-rail .fz-rail-viewport{margin:0;padding-left:max(4vw,calc((100vw - 1160px)/2));padding-right:max(4vw,calc((100vw - 1160px)/2));overscroll-behavior-x:contain;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 clamp(14px,4vw,64px),#000 calc(100% - clamp(14px,4vw,64px)),transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 clamp(14px,4vw,64px),#000 calc(100% - clamp(14px,4vw,64px)),transparent 100%)}
 html body .fz-rail .fz-rail-btns{padding:0 4vw}
 @media(max-width:600px){html body .fz-rail .fz-rail-viewport{padding-top:6px;padding-bottom:14px}html body .fz-rail [data-fz-rail]>*,html body .fz-rail .other-card{flex-basis:min(78vw,300px)!important;width:min(78vw,300px)!important;max-width:min(78vw,300px)!important}html body .fz-rail-btn{width:48px;height:48px}}
+
+/* fz-tap-targets: 44px mobile menu button (Apple HIG) */
+html body nav .hb{min-width:44px;min-height:44px;padding:0 10px;align-items:center;justify-content:center}
+html body nav a[aria-label^="Search the Favze"],html body nav a[aria-label^="Call Favze"],html body nav a[aria-label^="Text Favze"],html body nav button[aria-label^="Search the Favze"]{min-width:44px;min-height:44px}
+html body nav .hb{flex-shrink:0}
+@media(max-width:340px){html body nav a[aria-label^="Text Favze"]{display:none}}
+@media(max-width:340px){html body nav a[aria-label^="Text Favze"]{display:none!important}}
