@@ -13,6 +13,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 concurrency:
   group: search-index
@@ -30,14 +31,19 @@ jobs:
         run: python3 tools/version-assets.py
       - name: Build search index
         run: python3 tools/build-search-index.py
-      - name: Commit updated index
+      - name: Open a pull request with the updates
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           if git diff --quiet; then
             echo "Search index and asset versions already up to date."
             exit 0
           fi
+          BR="auto/search-index-${GITHUB_RUN_ID}"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BR"
           git add -A
           git commit -m "Update search index and asset versions"
-          git push
+          git push origin "$BR"
+          gh pr create --base main --head "$BR" --title "Update search index and asset versions" --body "Automatic refresh of search-index.json and CSS/JS version fingerprints."
