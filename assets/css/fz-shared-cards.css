@@ -63,3 +63,7 @@ html body .areas-section .areas-right::-webkit-scrollbar{display:none}
 /* fz-wide-rails: the Learn More row runs edge to edge, first card lines up with the heading */
 html body .fz-duo-sec .gc-row{box-sizing:border-box;width:100vw;max-width:100vw;margin-left:calc(50% - 50vw);margin-right:0;padding-left:max(4vw,calc((100vw - 1180px)/2));padding-right:max(4vw,calc((100vw - 1180px)/2));scroll-padding-left:max(4vw,calc((100vw - 1180px)/2));scrollbar-width:none;overscroll-behavior-x:contain;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 clamp(14px,4vw,64px),#000 calc(100% - clamp(14px,4vw,64px)),transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 clamp(14px,4vw,64px),#000 calc(100% - clamp(14px,4vw,64px)),transparent 100%)}
 html body .fz-duo-sec .gc-row::-webkit-scrollbar{display:none}
+
+/* fz-center-rail: Learn More cards snap to the center; arrows and swipe move one card at a time */
+html body .fz-duo-sec .gc-row{--fz-cw:min(560px,86vw);padding-left:calc((100vw - var(--fz-cw))/2);padding-right:calc((100vw - var(--fz-cw))/2);scroll-padding-left:0;scroll-padding-right:0;scroll-snap-type:x mandatory}
+html body .fz-duo-sec .gc-row>.fz-nl-card{flex:0 0 var(--fz-cw);width:var(--fz-cw);min-width:0;scroll-snap-align:center;scroll-snap-stop:always}
