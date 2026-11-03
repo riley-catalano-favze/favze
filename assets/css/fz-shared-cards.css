@@ -67,3 +67,14 @@ html body .fz-duo-sec .gc-row::-webkit-scrollbar{display:none}
 /* fz-center-rail: Learn More cards snap to the center; arrows and swipe move one card at a time */
 html body .fz-duo-sec .gc-row{--fz-cw:min(560px,86vw);padding-left:calc((100vw - var(--fz-cw))/2);padding-right:calc((100vw - var(--fz-cw))/2);scroll-padding-left:0;scroll-padding-right:0;scroll-snap-type:x mandatory}
 html body .fz-duo-sec .gc-row>.fz-nl-card{flex:0 0 var(--fz-cw);width:var(--fz-cw);min-width:0;scroll-snap-align:center;scroll-snap-stop:always}
+
+/* fz-steps-five: five-step timelines sit in one row on desktop, with the connector line spanning all five */
+@media(min-width:1025px){
+html body .steps:has(>.step:nth-child(5):last-child){grid-template-columns:repeat(5,1fr)}
+html body .steps:has(>.step:nth-child(5):last-child)::before{left:calc(10% + 28px);right:calc(10% + 28px)}
+html body .steps:has(>.step:nth-child(5):last-child)>.step{padding:0 14px}
+html body .steps:has(>.step:nth-child(5):last-child)>.step h3{font-size:.95rem}
+}
+@media(min-width:769px) and (max-width:1024px){
+html body .steps:has(>.step:nth-child(5):last-child)>.step:last-child{grid-column:1/-1;justify-self:center;max-width:50%}
+}
